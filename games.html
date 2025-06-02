@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>23-Steps | Games</title>
+
+    <link rel="icon" type="image/png" href="icon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        .game-list {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .game-item {
+            background-color: #101824;
+            border: 1px solid #222a33;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .game-header {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .game-header img {
+            width: 300px;
+            object-fit: cover;
+        }
+
+        .game-info {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: #c8d1e1;
+        }
+
+        .game-info h2 {
+            margin: 0 0 10px;
+            font-size: 1.5em;
+            color: #6ab0f3;
+        }
+
+        .game-info button {
+            margin-top: 10px;
+            padding: 8px 16px;
+            background-color: #2b3a59;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            width: fit-content;
+        }
+
+        .game-info button:hover {
+            background-color: #3c4f7c;
+        }
+
+        .game-details {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 20px;
+            background-color: #0f1624;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+            font-size: 0.95em;
+            color: #c8d1e1;
+            line-height: 1.6;
+        }
+
+        .game-details.open {
+            padding: 20px;
+            max-height: 2000px;
+        }
+
+        .store-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 18px;
+            background-color: #3ddc84;
+            color: #000;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.95em;
+            transition: background-color 0.2s ease;
+        }
+
+        .store-button i {
+            margin-right: 8px;
+        }
+
+        .store-button:hover {
+            background-color: #2ebd70;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .game-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .game-header img {
+                width: 100%;
+            }
+        }
+
+        .google-play-badge img {
+            width: 155px;
+            height: auto;
+            transition: transform 0.2s ease;
+        }
+
+        .google-play-badge img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>
+            <a href="index.html">
+                <img src="images/logo.png" alt="23-Steps" class="logo" />
+                <span class="sr-only">23-Steps</span>
+            </a>
+        </h1>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="games.html" class="active">GAMES</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="game-list">
+            <!-- Tap Miner Game -->
+            <div class="game-item">
+                <div class="game-header">
+                    <img src="images/tap-miner.png" alt="Tap Miner" />
+                    <div class="game-info">
+                        <h2>Tap Miner</h2>
+                        <p>Tap to dig, collect resources, and automate your mining empire in this voxel-style idle game.
+                        </p>
+                        <button onclick="toggleDetails(this)">View Details</button>
+                    </div>
+                </div>
+                <div class="game-details">
+                    <div style="margin-bottom: 1em;">
+                        <p style="margin: 0 0 10px;"><strong>Tap Miner</strong> is a <span
+                                style="color: #6ab0f3;">blocky idle mining game</span>. Dig into layers of stone, unlock
+                            powerful upgrades, and automate your tools to progress even while offline.</p>
+                    </div>
+
+                    <div
+                        style="background-color: #141e30; border: 1px solid #26354a; border-radius: 8px; padding: 15px; margin-bottom: 1em;">
+                        <h3 style="color: #79aaff; margin-top: 0; font-size: 1.1em;"><i class="fas fa-tools"></i>
+                            Features</h3>
+                        <ul style="padding-left: 20px; margin: 0;">
+                            <li>Voxel-inspired pixel art</li>
+                            <li>Enchanted tool system</li>
+                            <li>Offline earnings & automation</li>
+                            <li>Upgrade system for pickaxes and workers</li>
+                            <li>Multiplayer mining events <em>(coming soon)</em></li>
+                        </ul>
+                    </div>
+
+                    <div style="margin-bottom: 1.2em;">
+                        <strong>Platforms:</strong>
+                        <span
+                            style="background-color: #2a3a5c; color: #c8e6ff; padding: 4px 10px; border-radius: 5px; margin-left: 8px;">Android</span>
+                        <span
+                            style="background-color: #2a3a5c; color: #c8e6ff; padding: 4px 10px; border-radius: 5px; margin-left: 8px;">iOS</span>
+                    </div>
+
+                    <a href="https://play.google.com/store/apps/details?id=com.yourcompany.tapminer" target="_blank"
+                        class="google-play-badge">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                            alt="Get it on Google Play" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy;2025 23-Steps. All rights reserved |
+        <a href="privacy-policy.html">Privacy Policy</a> |
+        <a href="terms-of-service.html">Terms of Service</a>
+    </footer>
+
+    <script>
+        function toggleDetails(button) {
+            const details = button.closest('.game-item').querySelector('.game-details');
+            const isOpen = details.classList.contains('open');
+
+            if (isOpen) {
+                details.classList.remove('open');
+                button.textContent = 'View Details';
+            } else {
+                details.classList.add('open');
+                button.textContent = 'Hide Details';
+            }
+        }
+    </script>
+</body>
+
+</html>
