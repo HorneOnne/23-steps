@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wiki | 23-Steps</title>
+    <link rel="icon" type="image/png" href="../icon2.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('../background-loop.png');
+            background-repeat: repeat;
+            background-size: 256px 256px;
+            background-color: #2b2b2b;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        main {
+            flex: 1;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Header */
+        header {
+            background-color: #1f1f2e;
+            height: 60px;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            border-bottom: 1px solid #333;
+            position: relative;
+            z-index: 10;
+        }
+
+        header h1 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1.4em;
+            color: #99ccff;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        header h1 a {
+            color: inherit;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            height: 50px;
+            object-fit: contain;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            color: #ccc;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0 20px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            font-size: 0.85em;
+        }
+
+        nav a.active {
+            background-color: #2b3a59;
+            color: white;
+        }
+
+        nav a:hover:not(.active) {
+            color: #fff;
+            text-shadow: 0 0 2px #aaa;
+        }
+
+        /* Page title */
+        .page-title {
+            text-align: center;
+            padding: 36px 20px 28px;
+            background-color: #161825;
+            border-bottom: 2px solid #2b3a59;
+        }
+
+        .page-title h2 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: clamp(0.85rem, 2.5vw, 1.3rem);
+            color: #99ccff;
+            margin-bottom: 8px;
+        }
+
+        .page-title p {
+            color: #6a7f9e;
+            font-size: 0.85em;
+        }
+
+        /* Game grid */
+        .game-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+            padding: 48px 24px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .game-card {
+            background-color: #101824;
+            border: 1px solid #222a33;
+            border-radius: 10px;
+            width: 280px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: border-color .18s, transform .15s, box-shadow .18s;
+            position: relative;
+        }
+
+        .game-card:hover {
+            border-color: #3a7ee0;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+        }
+
+        .game-card.no-wiki {
+            opacity: 0.55;
+            cursor: default;
+            pointer-events: none;
+        }
+
+        .game-card-thumb {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            display: block;
+            background: #0d1420;
+        }
+
+        .game-card-thumb-placeholder {
+            width: 100%;
+            height: 140px;
+            background: #0d1420;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #2a3a54;
+        }
+
+        .game-card-body {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            flex: 1;
+        }
+
+        .game-card-name {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 0.65rem;
+            color: #6ab0f3;
+            line-height: 1.5;
+        }
+
+        .game-card-desc {
+            font-size: 0.8em;
+            color: #8fa3c8;
+            line-height: 1.5;
+            flex: 1;
+        }
+
+        .wiki-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background-color: #2b3a59;
+            color: white;
+            font-weight: bold;
+            font-size: 0.8em;
+            padding: 8px 14px;
+            border-radius: 6px;
+            text-decoration: none;
+            width: fit-content;
+            transition: background-color .18s;
+        }
+
+        .wiki-link:hover {
+            background-color: #3c4f7c;
+            color: white;
+            text-decoration: none;
+        }
+
+        .coming-soon-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background-color: #1a2332;
+            border: 1px solid #2b3a59;
+            color: #4a576b;
+            font-size: 0.75em;
+            padding: 7px 12px;
+            border-radius: 6px;
+            width: fit-content;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            font-size: 0.8em;
+            color: #ccc;
+            background-color: #1f1f2e;
+            border-top: 1px solid #333;
+            font-weight: bold;
+            position: relative;
+            z-index: 2;
+        }
+
+        footer a {
+            color: #79aaff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>
+            <a href="../index.html">
+                <img src="../images/logo.png" alt="23-Steps" class="logo" />
+                <span class="sr-only">23-Steps</span>
+            </a>
+        </h1>
+        <nav>
+            <a href="../index.html">HOME</a>
+            <a href="../games.html">GAMES</a>
+            <a href="index.html" class="active">WIKI</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="page-title">
+            <h2><i class="fas fa-book-open"></i>&nbsp; Game Wikis</h2>
+            <p>Choose a game to browse its wiki</p>
+        </div>
+
+        <div class="game-grid">
+
+            <!-- Mine & Dungeon — has wiki -->
+            <a href="items.html" class="game-card" style="text-decoration:none;color:inherit;">
+                <img class="game-card-thumb" src="../images/mine-dungeon.png" alt="Mine &amp; Dungeon"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+                <div class="game-card-thumb-placeholder" style="display:none;">⛏️</div>
+                <div class="game-card-body">
+                    <div class="game-card-name">Mine &amp; Dungeon</div>
+                    <p class="game-card-desc">Browse all items, weapons, armor, potions, kits and more.</p>
+                    <span class="wiki-link">
+                        <i class="fas fa-book"></i> Open Wiki
+                    </span>
+                </div>
+            </a>
+
+            <!-- Tap Miner — no wiki yet -->
+            <div class="game-card no-wiki">
+                <img class="game-card-thumb" src="../images/tap-miner.png" alt="Tap Miner"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+                <div class="game-card-thumb-placeholder" style="display:none;">⛏</div>
+                <div class="game-card-body">
+                    <div class="game-card-name">Tap Miner</div>
+                    <p class="game-card-desc">Wiki not yet available for this game.</p>
+                    <span class="coming-soon-badge">
+                        <i class="fas fa-clock"></i> Coming Soon
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        &copy;2026 23-Steps. All rights reserved |
+        <a href="../privacy-policy.html">Privacy Policy</a> |
+        <a href="../terms-of-service.html">Terms of Service</a> |
+        <a href="../delete-account.html">Delete Account</a>
+    </footer>
+</body>
+
+</html>
