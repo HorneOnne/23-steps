@@ -1,2819 +1,2555 @@
 {
   "MobConfigs": [
     {
-      "MobID": "BlueSlime",
-      "MobName": "Blue Slime",
-      "Level": 1,
-      "HealthConfig": {
-        "MaxHealth": 100.0,
-        "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 10.0
-      },
-      "CombatConfig": {
-        "Damage": 10.0,
-        "MoveSpeed": 1.0,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 0.5,
-        "KnockbackForce": 1.0,
-        "KnockbackResistance": 0.0,
-        "CritChance": 0.05,
-        "CritMultiplier": 1.5,
-        "PhysicalResistance": 0.0,
-        "FireResistance": 0.0,
-        "IceResistance": 0.0,
-        "LightningResistance": 0.0,
-        "PoisonResistance": 0.0,
-        "MagicResistance": 0.0,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 2.0
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 10.0,
-        "DeAggressionRange": 15.0,
-        "PatrolRadius": 5.0
-      },
       "MovementConfig": {
         "CanBeStunned": true
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 10,
-        "ExperiencePerLevel": 5.0,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 2,
-            "MaxQuantity": 4,
+            "ItemID": "Gel", 
+            "MinQuantity": 2, 
+            "MaxQuantity": 4, 
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
+        ], 
         "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
+          "ItemID": "None", 
+          "MinQuantity": 0, 
+          "MaxQuantity": 0, 
           "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        }, 
+        "RareDropChance": 0.0, 
+        "ExperiencePerLevel": 5.0, 
+        "HasRareDrop": false, 
+        "BaseExperience": 10, 
+        "DropsLoot": true
+      }, 
+      "Level": 1, 
+      "MobName": "Blue Slime", 
+      "AIConfig": {
+        "PatrolRadius": 5.0, 
+        "DeAggressionRange": 15.0, 
+        "DetectionRange": 10.0, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "BlueSlime", 
+      "CombatConfig": {
+        "KnockbackResistance": 0.0, 
+        "KnockbackForce": 1.0, 
+        "CritChance": 0.05, 
+        "FlightSpeedMultiplier": 1.0, 
+        "Damage": 10.0, 
+        "AttackRange": 0.5, 
+        "MoveSpeed": 1.0, 
+        "Defense": 0.0, 
+        "AttackSpeed": 1.0, 
+        "CritMultiplier": 1.5, 
+        "DamagePerLevel": 2.0, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 10.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 100.0, 
+        "RegenerationRate": 1.0, 
+        "CanRegenerate": false, 
+        "RegenerationDelay": 5.0, 
+        "InvulnerabilityDuration": 0.1
       }
-    },
+    }, 
     {
-      "MobID": "GreenSlime",
-      "MobName": "Green Slime",
-      "Level": 2,
-      "HealthConfig": {
-        "MaxHealth": 120.0,
-        "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": true,
-        "RegenerationRate": 2.0,
-        "RegenerationDelay": 4.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 12.0
-      },
-      "CombatConfig": {
-        "Damage": 12.0,
-        "MoveSpeed": 1.2,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 2.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 0.5,
-        "KnockbackForce": 2.0,
-        "KnockbackResistance": 0.1,
-        "CritChance": 0.05,
-        "CritMultiplier": 1.5,
-        "PhysicalResistance": 0.0,
-        "FireResistance": 0.1,
-        "IceResistance": 0.0,
-        "LightningResistance": 0.0,
-        "PoisonResistance": 0.5,
-        "MagicResistance": 0.0,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 2.5
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 10.0,
-        "DeAggressionRange": 16.0,
-        "PatrolRadius": 5.0
-      },
       "MovementConfig": {
         "CanBeStunned": true
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 15,
-        "ExperiencePerLevel": 6.0,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 3,
-            "MaxQuantity": 5,
+            "ItemID": "Gel", 
+            "MinQuantity": 3, 
+            "MaxQuantity": 5, 
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
+        ], 
         "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
+          "ItemID": "None", 
+          "MinQuantity": 0, 
+          "MaxQuantity": 0, 
           "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        }, 
+        "RareDropChance": 0.0, 
+        "ExperiencePerLevel": 6.0, 
+        "HasRareDrop": false, 
+        "BaseExperience": 15, 
+        "DropsLoot": true
+      }, 
+      "Level": 2, 
+      "MobName": "Green Slime", 
+      "AIConfig": {
+        "PatrolRadius": 5.0, 
+        "DeAggressionRange": 16.0, 
+        "DetectionRange": 10.0, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "GreenSlime", 
+      "CombatConfig": {
+        "KnockbackResistance": 0.1, 
+        "KnockbackForce": 2.0, 
+        "CritChance": 0.05, 
+        "FlightSpeedMultiplier": 1.0, 
+        "Damage": 12.0, 
+        "AttackRange": 0.5, 
+        "MoveSpeed": 1.2, 
+        "Defense": 2.0, 
+        "AttackSpeed": 1.0, 
+        "CritMultiplier": 1.5, 
+        "DamagePerLevel": 2.5, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 12.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 120.0, 
+        "RegenerationRate": 2.0, 
+        "CanRegenerate": true, 
+        "RegenerationDelay": 4.0, 
+        "InvulnerabilityDuration": 0.1
       }
-    },
+    }, 
     {
-      "MobID": "RedSlime",
-      "MobName": "Red Slime",
-      "Level": 3,
-      "HealthConfig": {
-        "MaxHealth": 140.0,
-        "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 15.0
-      },
-      "CombatConfig": {
-        "Damage": 18.0,
-        "MoveSpeed": 1.3,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 3.0,
-        "AttackSpeed": 1.2,
-        "AttackRange": 0.6,
-        "KnockbackForce": 2.0,
-        "KnockbackResistance": 0.15,
-        "CritChance": 0.08,
-        "CritMultiplier": 1.6,
-        "PhysicalResistance": 0.1,
-        "FireResistance": 0.5,
-        "IceResistance": -0.2,
-        "LightningResistance": 0.0,
-        "PoisonResistance": 0.0,
-        "MagicResistance": 0.0,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 3.0
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 10.0,
-        "DeAggressionRange": 17.0,
-        "PatrolRadius": 6.0
-      },
       "MovementConfig": {
         "CanBeStunned": true
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 20,
-        "ExperiencePerLevel": 7.0,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 4,
-            "MaxQuantity": 6,
+            "ItemID": "Gel", 
+            "MinQuantity": 4, 
+            "MaxQuantity": 6, 
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
+        ], 
         "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
+          "ItemID": "None", 
+          "MinQuantity": 0, 
+          "MaxQuantity": 0, 
           "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        }, 
+        "RareDropChance": 0.0, 
+        "ExperiencePerLevel": 7.0, 
+        "HasRareDrop": false, 
+        "BaseExperience": 20, 
+        "DropsLoot": true
+      }, 
+      "Level": 3, 
+      "MobName": "Red Slime", 
+      "AIConfig": {
+        "PatrolRadius": 6.0, 
+        "DeAggressionRange": 17.0, 
+        "DetectionRange": 10.0, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "RedSlime", 
+      "CombatConfig": {
+        "KnockbackResistance": 0.15, 
+        "KnockbackForce": 2.0, 
+        "CritChance": 0.08, 
+        "FlightSpeedMultiplier": 1.0, 
+        "Damage": 18.0, 
+        "AttackRange": 0.6, 
+        "MoveSpeed": 1.3, 
+        "Defense": 3.0, 
+        "AttackSpeed": 1.2, 
+        "CritMultiplier": 1.6, 
+        "DamagePerLevel": 3.0, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 15.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 140.0, 
+        "RegenerationRate": 1.0, 
+        "CanRegenerate": false, 
+        "RegenerationDelay": 5.0, 
+        "InvulnerabilityDuration": 0.1
       }
-    },
+    }, 
     {
-      "MobID": "BlackSlime",
-      "MobName": "Black Slime",
-      "Level": 5,
-      "HealthConfig": {
-        "MaxHealth": 250.0,
-        "InvulnerabilityDuration": 0.4,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 25.0
-      },
-      "CombatConfig": {
-        "Damage": 20.0,
-        "MoveSpeed": 1.5,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 8.0,
-        "AttackSpeed": 0.8,
-        "AttackRange": 0.8,
-        "KnockbackForce": 2.0,
-        "KnockbackResistance": 0.5,
-        "CritChance": 0.1,
-        "CritMultiplier": 2.0,
-        "PhysicalResistance": 0.3,
-        "FireResistance": 0.0,
-        "IceResistance": 0.0,
-        "LightningResistance": -0.2,
-        "PoisonResistance": 0.2,
-        "MagicResistance": 0.2,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 5.0
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 10.0,
-        "DeAggressionRange": 20.0,
-        "PatrolRadius": 8.0
-      },
       "MovementConfig": {
         "CanBeStunned": true
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 50,
-        "ExperiencePerLevel": 12.0,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 8,
-            "MaxQuantity": 12,
+            "ItemID": "Gel", 
+            "MinQuantity": 8, 
+            "MaxQuantity": 12, 
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
+        ], 
         "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
+          "ItemID": "None", 
+          "MinQuantity": 0, 
+          "MaxQuantity": 0, 
           "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        }, 
+        "RareDropChance": 0.0, 
+        "ExperiencePerLevel": 12.0, 
+        "HasRareDrop": false, 
+        "BaseExperience": 50, 
+        "DropsLoot": true
+      }, 
+      "Level": 5, 
+      "MobName": "Black Slime", 
+      "AIConfig": {
+        "PatrolRadius": 8.0, 
+        "DeAggressionRange": 20.0, 
+        "DetectionRange": 10.0, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "BlackSlime", 
+      "CombatConfig": {
+        "KnockbackResistance": 0.5, 
+        "KnockbackForce": 2.0, 
+        "CritChance": 0.1, 
+        "FlightSpeedMultiplier": 1.0, 
+        "Damage": 20.0, 
+        "AttackRange": 0.8, 
+        "MoveSpeed": 1.5, 
+        "Defense": 8.0, 
+        "AttackSpeed": 0.8, 
+        "CritMultiplier": 2.0, 
+        "DamagePerLevel": 5.0, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 25.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 250.0, 
+        "RegenerationRate": 1.0, 
+        "CanRegenerate": false, 
+        "RegenerationDelay": 5.0, 
+        "InvulnerabilityDuration": 0.4
       }
-    },
+    }, 
     {
-      "MobID": "TinyBlackSlime",
-      "MobName": "Tiny Black Slime",
-      "Level": 1,
-      "HealthConfig": {
-        "MaxHealth": 50.0,
-        "InvulnerabilityDuration": 0.3,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 5.0
-      },
-      "CombatConfig": {
-        "Damage": 8.0,
-        "MoveSpeed": 1.4,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.5,
-        "AttackRange": 0.3,
-        "KnockbackForce": 1.2,
-        "KnockbackResistance": 0.0,
-        "CritChance": 0.15,
-        "CritMultiplier": 1.8,
-        "PhysicalResistance": -0.1,
-        "FireResistance": 0.0,
-        "IceResistance": 0.0,
-        "LightningResistance": -0.1,
-        "PoisonResistance": 0.1,
-        "MagicResistance": 0.1,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 1.5
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 8.0,
-        "DeAggressionRange": 12.0,
-        "PatrolRadius": 4.0
-      },
       "MovementConfig": {
         "CanBeStunned": true
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 5,
-        "ExperiencePerLevel": 3.0,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
-            "MaxQuantity": 2,
+            "ItemID": "Gel", 
+            "MinQuantity": 1, 
+            "MaxQuantity": 2, 
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
+        ], 
         "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
+          "ItemID": "None", 
+          "MinQuantity": 0, 
+          "MaxQuantity": 0, 
           "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        }, 
+        "RareDropChance": 0.0, 
+        "ExperiencePerLevel": 3.0, 
+        "HasRareDrop": false, 
+        "BaseExperience": 5, 
+        "DropsLoot": true
+      }, 
+      "Level": 1, 
+      "MobName": "Tiny Black Slime", 
+      "AIConfig": {
+        "PatrolRadius": 4.0, 
+        "DeAggressionRange": 12.0, 
+        "DetectionRange": 8.0, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "TinyBlackSlime", 
+      "CombatConfig": {
+        "KnockbackResistance": 0.0, 
+        "KnockbackForce": 1.2, 
+        "CritChance": 0.15, 
+        "FlightSpeedMultiplier": 1.0, 
+        "Damage": 8.0, 
+        "AttackRange": 0.3, 
+        "MoveSpeed": 1.4, 
+        "Defense": 0.0, 
+        "AttackSpeed": 1.5, 
+        "CritMultiplier": 1.8, 
+        "DamagePerLevel": 1.5, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 5.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 50.0, 
+        "RegenerationRate": 1.0, 
+        "CanRegenerate": false, 
+        "RegenerationDelay": 5.0, 
+        "InvulnerabilityDuration": 0.3
       }
-    },
+    }, 
     {
-      "MobID": "Orc",
-      "MobName": "Orc",
-      "Level": 5,
-      "HealthConfig": {
-        "MaxHealth": 250.0,
-        "InvulnerabilityDuration": 0.4,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 25.0
-      },
-      "CombatConfig": {
-        "Damage": 25.0,
-        "MoveSpeed": 1.5,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 8.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 1.5,
-        "KnockbackForce": 3.5,
-        "KnockbackResistance": 0.5,
-        "CritChance": 0.1,
-        "CritMultiplier": 2.0,
-        "PhysicalResistance": 0.3,
-        "FireResistance": 0.0,
-        "IceResistance": 0.0,
-        "LightningResistance": -0.2,
-        "PoisonResistance": 0.2,
-        "MagicResistance": 0.2,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 5.0
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 15.0,
-        "DeAggressionRange": 20.0,
-        "PatrolRadius": 8.0
-      },
       "MovementConfig": {
         "CanBeStunned": true
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 50,
-        "ExperiencePerLevel": 12.0,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 8,
-            "MaxQuantity": 12,
+            "ItemID": "Gel", 
+            "MinQuantity": 8, 
+            "MaxQuantity": 12, 
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
+        ], 
         "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
+          "ItemID": "None", 
+          "MinQuantity": 0, 
+          "MaxQuantity": 0, 
           "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        }, 
+        "RareDropChance": 0.0, 
+        "ExperiencePerLevel": 12.0, 
+        "HasRareDrop": false, 
+        "BaseExperience": 50, 
+        "DropsLoot": true
+      }, 
+      "Level": 5, 
+      "MobName": "Orc", 
+      "AIConfig": {
+        "PatrolRadius": 8.0, 
+        "DeAggressionRange": 20.0, 
+        "DetectionRange": 15.0, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "Orc", 
+      "CombatConfig": {
+        "KnockbackResistance": 0.5, 
+        "KnockbackForce": 3.5, 
+        "CritChance": 0.1, 
+        "FlightSpeedMultiplier": 1.0, 
+        "Damage": 25.0, 
+        "AttackRange": 1.5, 
+        "MoveSpeed": 1.5, 
+        "Defense": 8.0, 
+        "AttackSpeed": 1.0, 
+        "CritMultiplier": 2.0, 
+        "DamagePerLevel": 5.0, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 25.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 250.0, 
+        "RegenerationRate": 1.0, 
+        "CanRegenerate": false, 
+        "RegenerationDelay": 5.0, 
+        "InvulnerabilityDuration": 0.4
       }
-    },
+    }, 
     {
-      "MobID": "ArmoredAxeman",
-      "MobName": "Armored Axeman",
-      "Level": 5,
-      "HealthConfig": {
-        "MaxHealth": 250.0,
-        "InvulnerabilityDuration": 0.4,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 25.0
-      },
-      "CombatConfig": {
-        "Damage": 25.0,
-        "MoveSpeed": 1.5,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 8.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 1.5,
-        "KnockbackForce": 3.5,
-        "KnockbackResistance": 0.5,
-        "CritChance": 0.1,
-        "CritMultiplier": 2.0,
-        "PhysicalResistance": 0.3,
-        "FireResistance": 0.0,
-        "IceResistance": 0.0,
-        "LightningResistance": -0.2,
-        "PoisonResistance": 0.2,
-        "MagicResistance": 0.2,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 5.0
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 15.0,
-        "DeAggressionRange": 20.0,
-        "PatrolRadius": 8.0
-      },
       "MovementConfig": {
         "CanBeStunned": true
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 50,
-        "ExperiencePerLevel": 12.0,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 8,
-            "MaxQuantity": 12,
+            "ItemID": "Gel", 
+            "MinQuantity": 8, 
+            "MaxQuantity": 12, 
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
+        ], 
         "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
+          "ItemID": "None", 
+          "MinQuantity": 0, 
+          "MaxQuantity": 0, 
           "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        }, 
+        "RareDropChance": 0.0, 
+        "ExperiencePerLevel": 12.0, 
+        "HasRareDrop": false, 
+        "BaseExperience": 50, 
+        "DropsLoot": true
+      }, 
+      "Level": 5, 
+      "MobName": "Armored Axeman", 
+      "AIConfig": {
+        "PatrolRadius": 8.0, 
+        "DeAggressionRange": 20.0, 
+        "DetectionRange": 15.0, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "ArmoredAxeman", 
+      "CombatConfig": {
+        "KnockbackResistance": 0.5, 
+        "KnockbackForce": 3.5, 
+        "CritChance": 0.1, 
+        "FlightSpeedMultiplier": 1.0, 
+        "Damage": 25.0, 
+        "AttackRange": 1.5, 
+        "MoveSpeed": 1.5, 
+        "Defense": 8.0, 
+        "AttackSpeed": 1.0, 
+        "CritMultiplier": 2.0, 
+        "DamagePerLevel": 5.0, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 25.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 250.0, 
+        "RegenerationRate": 1.0, 
+        "CanRegenerate": false, 
+        "RegenerationDelay": 5.0, 
+        "InvulnerabilityDuration": 0.4
       }
-    },
+    }, 
     {
-      "MobID": "ArmoredOrc",
-      "MobName": "Armored Orc",
-      "Level": 5,
-      "HealthConfig": {
-        "MaxHealth": 250.0,
-        "InvulnerabilityDuration": 0.4,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 25.0
-      },
-      "CombatConfig": {
-        "Damage": 25.0,
-        "MoveSpeed": 1.5,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 8.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 1.5,
-        "KnockbackForce": 3.5,
-        "KnockbackResistance": 0.5,
-        "CritChance": 0.1,
-        "CritMultiplier": 2.0,
-        "PhysicalResistance": 0.3,
-        "FireResistance": 0.0,
-        "IceResistance": 0.0,
-        "LightningResistance": -0.2,
-        "PoisonResistance": 0.2,
-        "MagicResistance": 0.2,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 5.0
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 15.0,
-        "DeAggressionRange": 20.0,
-        "PatrolRadius": 8.0
-      },
       "MovementConfig": {
         "CanBeStunned": true
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 50,
-        "ExperiencePerLevel": 12.0,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 8,
-            "MaxQuantity": 12,
+            "ItemID": "Gel", 
+            "MinQuantity": 8, 
+            "MaxQuantity": 12, 
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
+        ], 
         "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
+          "ItemID": "None", 
+          "MinQuantity": 0, 
+          "MaxQuantity": 0, 
           "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        }, 
+        "RareDropChance": 0.0, 
+        "ExperiencePerLevel": 12.0, 
+        "HasRareDrop": false, 
+        "BaseExperience": 50, 
+        "DropsLoot": true
+      }, 
+      "Level": 5, 
+      "MobName": "Armored Orc", 
+      "AIConfig": {
+        "PatrolRadius": 8.0, 
+        "DeAggressionRange": 20.0, 
+        "DetectionRange": 15.0, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "ArmoredOrc", 
+      "CombatConfig": {
+        "KnockbackResistance": 0.5, 
+        "KnockbackForce": 3.5, 
+        "CritChance": 0.1, 
+        "FlightSpeedMultiplier": 1.0, 
+        "Damage": 25.0, 
+        "AttackRange": 1.5, 
+        "MoveSpeed": 1.5, 
+        "Defense": 8.0, 
+        "AttackSpeed": 1.0, 
+        "CritMultiplier": 2.0, 
+        "DamagePerLevel": 5.0, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 25.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 250.0, 
+        "RegenerationRate": 1.0, 
+        "CanRegenerate": false, 
+        "RegenerationDelay": 5.0, 
+        "InvulnerabilityDuration": 0.4
       }
-    },
+    }, 
     {
-      "MobID": "ArmoredSkeleton",
-      "MobName": "Armored Skeleton",
-      "Level": 5,
-      "HealthConfig": {
-        "MaxHealth": 250.0,
-        "InvulnerabilityDuration": 0.4,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 25.0
-      },
-      "CombatConfig": {
-        "Damage": 25.0,
-        "MoveSpeed": 1.5,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 8.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 1.55,
-        "KnockbackForce": 3.5,
-        "KnockbackResistance": 0.5,
-        "CritChance": 0.1,
-        "CritMultiplier": 2.0,
-        "PhysicalResistance": 0.3,
-        "FireResistance": 0.0,
-        "IceResistance": 0.0,
-        "LightningResistance": -0.2,
-        "PoisonResistance": 0.2,
-        "MagicResistance": 0.2,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 5.0
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 15.0,
-        "DeAggressionRange": 20.0,
-        "PatrolRadius": 8.0
-      },
       "MovementConfig": {
         "CanBeStunned": true
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 50,
-        "ExperiencePerLevel": 12.0,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 8,
-            "MaxQuantity": 12,
+            "ItemID": "Gel", 
+            "MinQuantity": 8, 
+            "MaxQuantity": 12, 
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
+        ], 
         "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
+          "ItemID": "None", 
+          "MinQuantity": 0, 
+          "MaxQuantity": 0, 
           "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        }, 
+        "RareDropChance": 0.0, 
+        "ExperiencePerLevel": 12.0, 
+        "HasRareDrop": false, 
+        "BaseExperience": 50, 
+        "DropsLoot": true
+      }, 
+      "Level": 5, 
+      "MobName": "Armored Skeleton", 
+      "AIConfig": {
+        "PatrolRadius": 8.0, 
+        "DeAggressionRange": 20.0, 
+        "DetectionRange": 15.0, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "ArmoredSkeleton", 
+      "CombatConfig": {
+        "KnockbackResistance": 0.5, 
+        "KnockbackForce": 3.5, 
+        "CritChance": 0.1, 
+        "FlightSpeedMultiplier": 1.0, 
+        "Damage": 25.0, 
+        "AttackRange": 1.55, 
+        "MoveSpeed": 1.5, 
+        "Defense": 8.0, 
+        "AttackSpeed": 1.0, 
+        "CritMultiplier": 2.0, 
+        "DamagePerLevel": 5.0, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 25.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 250.0, 
+        "RegenerationRate": 1.0, 
+        "CanRegenerate": false, 
+        "RegenerationDelay": 5.0, 
+        "InvulnerabilityDuration": 0.4
       }
-    },
+    }, 
     {
-      "MobID": "EliteOrc",
-      "MobName": "Elite Orc",
-      "Level": 5,
-      "HealthConfig": {
-        "MaxHealth": 250.0,
-        "InvulnerabilityDuration": 0.4,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 25.0
-      },
-      "CombatConfig": {
-        "Damage": 25.0,
-        "MoveSpeed": 1.5,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 8.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 1.75,
-        "KnockbackForce": 3.5,
-        "KnockbackResistance": 0.5,
-        "CritChance": 0.1,
-        "CritMultiplier": 2.0,
-        "PhysicalResistance": 0.3,
-        "FireResistance": 0.0,
-        "IceResistance": 0.0,
-        "LightningResistance": -0.2,
-        "PoisonResistance": 0.2,
-        "MagicResistance": 0.2,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 5.0
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 15.0,
-        "DeAggressionRange": 20.0,
-        "PatrolRadius": 8.0
-      },
       "MovementConfig": {
         "CanBeStunned": true
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 50,
-        "ExperiencePerLevel": 12.0,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 8,
-            "MaxQuantity": 12,
+            "ItemID": "Gel", 
+            "MinQuantity": 8, 
+            "MaxQuantity": 12, 
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
+        ], 
         "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
+          "ItemID": "None", 
+          "MinQuantity": 0, 
+          "MaxQuantity": 0, 
           "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        }, 
+        "RareDropChance": 0.0, 
+        "ExperiencePerLevel": 12.0, 
+        "HasRareDrop": false, 
+        "BaseExperience": 50, 
+        "DropsLoot": true
+      }, 
+      "Level": 5, 
+      "MobName": "Elite Orc", 
+      "AIConfig": {
+        "PatrolRadius": 8.0, 
+        "DeAggressionRange": 20.0, 
+        "DetectionRange": 15.0, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "EliteOrc", 
+      "CombatConfig": {
+        "KnockbackResistance": 0.5, 
+        "KnockbackForce": 3.5, 
+        "CritChance": 0.1, 
+        "FlightSpeedMultiplier": 1.0, 
+        "Damage": 25.0, 
+        "AttackRange": 1.75, 
+        "MoveSpeed": 1.5, 
+        "Defense": 8.0, 
+        "AttackSpeed": 1.0, 
+        "CritMultiplier": 2.0, 
+        "DamagePerLevel": 5.0, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 25.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 250.0, 
+        "RegenerationRate": 1.0, 
+        "CanRegenerate": false, 
+        "RegenerationDelay": 5.0, 
+        "InvulnerabilityDuration": 0.4
       }
-    },
+    }, 
     {
-      "MobID": "Werebear",
-      "MobName": "Werebear",
-      "Level": 5,
-      "HealthConfig": {
-        "MaxHealth": 250.0,
-        "InvulnerabilityDuration": 0.4,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 25.0
-      },
-      "CombatConfig": {
-        "Damage": 25.0,
-        "MoveSpeed": 1.5,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 8.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 1.5,
-        "KnockbackForce": 1.0,
-        "KnockbackResistance": 0.5,
-        "CritChance": 0.1,
-        "CritMultiplier": 2.0,
-        "PhysicalResistance": 0.3,
-        "FireResistance": 0.0,
-        "IceResistance": 0.0,
-        "LightningResistance": -0.2,
-        "PoisonResistance": 0.2,
-        "MagicResistance": 0.2,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 5.0
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 15.0,
-        "DeAggressionRange": 20.0,
-        "PatrolRadius": 8.0
-      },
       "MovementConfig": {
         "CanBeStunned": true
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 50,
-        "ExperiencePerLevel": 12.0,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 8,
-            "MaxQuantity": 12,
+            "ItemID": "Gel", 
+            "MinQuantity": 8, 
+            "MaxQuantity": 12, 
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
+        ], 
         "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
+          "ItemID": "None", 
+          "MinQuantity": 0, 
+          "MaxQuantity": 0, 
           "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        }, 
+        "RareDropChance": 0.0, 
+        "ExperiencePerLevel": 12.0, 
+        "HasRareDrop": false, 
+        "BaseExperience": 50, 
+        "DropsLoot": true
+      }, 
+      "Level": 5, 
+      "MobName": "Werebear", 
+      "AIConfig": {
+        "PatrolRadius": 8.0, 
+        "DeAggressionRange": 20.0, 
+        "DetectionRange": 15.0, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "Werebear", 
+      "CombatConfig": {
+        "KnockbackResistance": 0.5, 
+        "KnockbackForce": 1.0, 
+        "CritChance": 0.1, 
+        "FlightSpeedMultiplier": 1.0, 
+        "Damage": 25.0, 
+        "AttackRange": 1.5, 
+        "MoveSpeed": 1.5, 
+        "Defense": 8.0, 
+        "AttackSpeed": 1.0, 
+        "CritMultiplier": 2.0, 
+        "DamagePerLevel": 5.0, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 25.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 250.0, 
+        "RegenerationRate": 1.0, 
+        "CanRegenerate": false, 
+        "RegenerationDelay": 5.0, 
+        "InvulnerabilityDuration": 0.4
       }
-    },
+    }, 
     {
-      "MobID": "Werewolf",
-      "MobName": "Werewolf",
-      "Level": 5,
-      "HealthConfig": {
-        "MaxHealth": 250.0,
-        "InvulnerabilityDuration": 0.4,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 25.0
-      },
-      "CombatConfig": {
-        "Damage": 25.0,
-        "MoveSpeed": 1.5,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 8.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 1.75,
-        "KnockbackForce": 3.5,
-        "KnockbackResistance": 0.5,
-        "CritChance": 0.1,
-        "CritMultiplier": 2.0,
-        "PhysicalResistance": 0.3,
-        "FireResistance": 0.0,
-        "IceResistance": 0.0,
-        "LightningResistance": -0.2,
-        "PoisonResistance": 0.2,
-        "MagicResistance": 0.2,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 5.0
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 15.0,
-        "DeAggressionRange": 20.0,
-        "PatrolRadius": 8.0
-      },
       "MovementConfig": {
         "CanBeStunned": true
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 50,
-        "ExperiencePerLevel": 12.0,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 8,
-            "MaxQuantity": 12,
+            "ItemID": "Gel", 
+            "MinQuantity": 8, 
+            "MaxQuantity": 12, 
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
+        ], 
         "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
+          "ItemID": "None", 
+          "MinQuantity": 0, 
+          "MaxQuantity": 0, 
           "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
-      }
-    },
-     {
-      "MobID": "RedMushroom",
-      "MobName": "Red Mushroom",
-      "Level": 1,
-      "HealthConfig": {
-        "MaxHealth": 80.0,
-        "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 8.0
-      },
-      "CombatConfig": {
-        "Damage": 8.0,
-        "MoveSpeed": 1.2,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 1.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 0.6,
-        "KnockbackForce": 0.8,
-        "KnockbackResistance": 0.0,
-        "CritChance": 0.03,
-        "CritMultiplier": 1.4,
-        "PhysicalResistance": 0.0,
-        "FireResistance": 0.3,
-        "IceResistance": -0.1,
-        "LightningResistance": 0.0,
-        "PoisonResistance": 0.0,
-        "MagicResistance": 0.1,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 1.5
-      },
+        }, 
+        "RareDropChance": 0.0, 
+        "ExperiencePerLevel": 12.0, 
+        "HasRareDrop": false, 
+        "BaseExperience": 50, 
+        "DropsLoot": true
+      }, 
+      "Level": 5, 
+      "MobName": "Werewolf", 
       "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 9.0,
-        "DeAggressionRange": 14.0,
-        "PatrolRadius": 4.0
-      },
-      "MovementConfig": {
-        "CanBeStunned": true
-      },
-      "LootConfig": {
-        "BaseExperience": 8,
-        "ExperiencePerLevel": 4.0,
-        "DropsLoot": true,
-        "LootDrops": [
-          {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
-            "MaxQuantity": 3,
-            "DropChance": 1.0
-          }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        "PatrolRadius": 8.0, 
+        "DeAggressionRange": 20.0, 
+        "DetectionRange": 15.0, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "Werewolf", 
+      "CombatConfig": {
+        "KnockbackResistance": 0.5, 
+        "KnockbackForce": 3.5, 
+        "CritChance": 0.1, 
+        "FlightSpeedMultiplier": 1.0, 
+        "Damage": 25.0, 
+        "AttackRange": 1.75, 
+        "MoveSpeed": 1.5, 
+        "Defense": 8.0, 
+        "AttackSpeed": 1.0, 
+        "CritMultiplier": 2.0, 
+        "DamagePerLevel": 5.0, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 25.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 250.0, 
+        "RegenerationRate": 1.0, 
+        "CanRegenerate": false, 
+        "RegenerationDelay": 5.0, 
+        "InvulnerabilityDuration": 0.4
       }
-    },
+    }, 
     {
-      "MobID": "GreenMushroom",
-      "MobName": "Green Mushroom",
-      "Level": 1,
-      "HealthConfig": {
-        "MaxHealth": 85.0,
-        "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": true,
-        "RegenerationRate": 1.5,
-        "RegenerationDelay": 4.5,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 9.0
-      },
-      "CombatConfig": {
-        "Damage": 9.0,
-        "MoveSpeed": 1.3,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 1.5,
-        "AttackSpeed": 1.1,
-        "AttackRange": 0.5,
-        "KnockbackForce": 0.9,
-        "KnockbackResistance": 0.05,
-        "CritChance": 0.04,
-        "CritMultiplier": 1.45,
-        "PhysicalResistance": 0.05,
-        "FireResistance": 0.0,
-        "IceResistance": 0.0,
-        "LightningResistance": 0.0,
-        "PoisonResistance": 0.4,
-        "MagicResistance": 0.0,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 1.8
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 9.5,
-        "DeAggressionRange": 14.5,
-        "PatrolRadius": 4.5
-      },
       "MovementConfig": {
         "CanBeStunned": true
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 9,
-        "ExperiencePerLevel": 4.5,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
-            "MaxQuantity": 3,
+            "ItemID": "Gel", 
+            "MinQuantity": 1, 
+            "MaxQuantity": 3, 
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
+        ], 
         "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
+          "ItemID": "None", 
+          "MinQuantity": 0, 
+          "MaxQuantity": 0, 
           "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        }, 
+        "RareDropChance": 0.0, 
+        "ExperiencePerLevel": 4.0, 
+        "HasRareDrop": false, 
+        "BaseExperience": 8, 
+        "DropsLoot": true
+      }, 
+      "Level": 1, 
+      "MobName": "Red Mushroom", 
+      "AIConfig": {
+        "PatrolRadius": 4.0, 
+        "DeAggressionRange": 14.0, 
+        "DetectionRange": 9.0, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "RedMushroom", 
+      "CombatConfig": {
+        "KnockbackResistance": 0.0, 
+        "KnockbackForce": 0.8, 
+        "CritChance": 0.03, 
+        "FlightSpeedMultiplier": 1.0, 
+        "Damage": 8.0, 
+        "AttackRange": 0.6, 
+        "MoveSpeed": 1.2, 
+        "Defense": 1.0, 
+        "AttackSpeed": 1.0, 
+        "CritMultiplier": 1.4, 
+        "DamagePerLevel": 1.5, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 8.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 80.0, 
+        "RegenerationRate": 1.0, 
+        "CanRegenerate": false, 
+        "RegenerationDelay": 5.0, 
+        "InvulnerabilityDuration": 0.1
       }
-    },
+    }, 
     {
-      "MobID": "BlueMushroom",
-      "MobName": "Blue Mushroom",
-      "Level": 1,
-      "HealthConfig": {
-        "MaxHealth": 75.0,
-        "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 7.5
-      },
-      "CombatConfig": {
-        "Damage": 7.0,
-        "MoveSpeed": 1.0,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.5,
-        "AttackSpeed": 1.2,
-        "AttackRange":0.5,
-        "KnockbackForce": 0.7,
-        "KnockbackResistance": 0.0,
-        "CritChance": 0.02,
-        "CritMultiplier": 1.3,
-        "PhysicalResistance": 0.0,
-        "FireResistance": -0.1,
-        "IceResistance": 0.2,
-        "LightningResistance": 0.1,
-        "PoisonResistance": 0.0,
-        "MagicResistance": 0.2,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 1.2
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 8.5,
-        "DeAggressionRange": 13.5,
-        "PatrolRadius": 3.5
-      },
       "MovementConfig": {
         "CanBeStunned": true
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 7,
-        "ExperiencePerLevel": 3.5,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
-            "MaxQuantity": 2,
+            "ItemID": "Gel", 
+            "MinQuantity": 1, 
+            "MaxQuantity": 3, 
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
+        ], 
         "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
+          "ItemID": "None", 
+          "MinQuantity": 0, 
+          "MaxQuantity": 0, 
           "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        }, 
+        "RareDropChance": 0.0, 
+        "ExperiencePerLevel": 4.5, 
+        "HasRareDrop": false, 
+        "BaseExperience": 9, 
+        "DropsLoot": true
+      }, 
+      "Level": 1, 
+      "MobName": "Green Mushroom", 
+      "AIConfig": {
+        "PatrolRadius": 4.5, 
+        "DeAggressionRange": 14.5, 
+        "DetectionRange": 9.5, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "GreenMushroom", 
+      "CombatConfig": {
+        "KnockbackResistance": 0.05, 
+        "KnockbackForce": 0.9, 
+        "CritChance": 0.04, 
+        "FlightSpeedMultiplier": 1.0, 
+        "Damage": 9.0, 
+        "AttackRange": 0.5, 
+        "MoveSpeed": 1.3, 
+        "Defense": 1.5, 
+        "AttackSpeed": 1.1, 
+        "CritMultiplier": 1.45, 
+        "DamagePerLevel": 1.8, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 9.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 85.0, 
+        "RegenerationRate": 1.5, 
+        "CanRegenerate": true, 
+        "RegenerationDelay": 4.5, 
+        "InvulnerabilityDuration": 0.1
       }
-    },
+    }, 
     {
-      "MobID": "Bloodcap",
-      "MobName": "Bloodcap",
-      "Level": 1,
-      "HealthConfig": {
-        "MaxHealth": 80.0,
-        "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 8.0
-      },
-      "CombatConfig": {
-        "Damage": 8.0,
-        "MoveSpeed": 1.2,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 1.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 1.0,
-        "KnockbackForce": 0.8,
-        "KnockbackResistance": 0.0,
-        "CritChance": 0.03,
-        "CritMultiplier": 1.4,
-        "PhysicalResistance": 0.0,
-        "FireResistance": 0.3,
-        "IceResistance": -0.1,
-        "LightningResistance": 0.0,
-        "PoisonResistance": 0.0,
-        "MagicResistance": 0.1,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 1.5
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 9.0,
-        "DeAggressionRange": 14.0,
-        "PatrolRadius": 4.0
-      },
       "MovementConfig": {
         "CanBeStunned": true
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 8,
-        "ExperiencePerLevel": 4.0,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Mushroom",
-            "MinQuantity": 1,
-            "MaxQuantity": 3,
+            "ItemID": "Gel", 
+            "MinQuantity": 1, 
+            "MaxQuantity": 2, 
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
+        ], 
         "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
+          "ItemID": "None", 
+          "MinQuantity": 0, 
+          "MaxQuantity": 0, 
           "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        }, 
+        "RareDropChance": 0.0, 
+        "ExperiencePerLevel": 3.5, 
+        "HasRareDrop": false, 
+        "BaseExperience": 7, 
+        "DropsLoot": true
+      }, 
+      "Level": 1, 
+      "MobName": "Blue Mushroom", 
+      "AIConfig": {
+        "PatrolRadius": 3.5, 
+        "DeAggressionRange": 13.5, 
+        "DetectionRange": 8.5, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "BlueMushroom", 
+      "CombatConfig": {
+        "KnockbackResistance": 0.0, 
+        "KnockbackForce": 0.7, 
+        "CritChance": 0.02, 
+        "FlightSpeedMultiplier": 1.0, 
+        "Damage": 7.0, 
+        "AttackRange": 0.5, 
+        "MoveSpeed": 1.0, 
+        "Defense": 0.5, 
+        "AttackSpeed": 1.2, 
+        "CritMultiplier": 1.3, 
+        "DamagePerLevel": 1.2, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 7.5, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 75.0, 
+        "RegenerationRate": 1.0, 
+        "CanRegenerate": false, 
+        "RegenerationDelay": 5.0, 
+        "InvulnerabilityDuration": 0.1
       }
-    },
+    }, 
     {
-      "MobID": "Venomcap",
-      "MobName": "Venomcap",
-      "Level": 1,
-      "HealthConfig": {
-        "MaxHealth": 85.0,
-        "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": true,
-        "RegenerationRate": 1.5,
-        "RegenerationDelay": 4.5,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 9.0
-      },
-      "CombatConfig": {
-        "Damage": 9.0,
-        "MoveSpeed": 1.3,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 1.5,
-        "AttackSpeed": 1.1,
-        "AttackRange": 1.0,
-        "KnockbackForce": 0.9,
-        "KnockbackResistance": 0.05,
-        "CritChance": 0.04,
-        "CritMultiplier": 1.45,
-        "PhysicalResistance": 0.05,
-        "FireResistance": 0.0,
-        "IceResistance": 0.0,
-        "LightningResistance": 0.0,
-        "PoisonResistance": 0.4,
-        "MagicResistance": 0.0,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 1.8
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 9.5,
-        "DeAggressionRange": 14.5,
-        "PatrolRadius": 4.5
-      },
       "MovementConfig": {
         "CanBeStunned": true
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 9,
-        "ExperiencePerLevel": 4.5,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Mushroom",
-            "MinQuantity": 1,
-            "MaxQuantity": 3,
+            "ItemID": "Mushroom", 
+            "MinQuantity": 1, 
+            "MaxQuantity": 3, 
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
+        ], 
         "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
+          "ItemID": "None", 
+          "MinQuantity": 0, 
+          "MaxQuantity": 0, 
           "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        }, 
+        "RareDropChance": 0.0, 
+        "ExperiencePerLevel": 4.0, 
+        "HasRareDrop": false, 
+        "BaseExperience": 8, 
+        "DropsLoot": true
+      }, 
+      "Level": 1, 
+      "MobName": "Bloodcap", 
+      "AIConfig": {
+        "PatrolRadius": 4.0, 
+        "DeAggressionRange": 14.0, 
+        "DetectionRange": 9.0, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "Bloodcap", 
+      "CombatConfig": {
+        "KnockbackResistance": 0.0, 
+        "KnockbackForce": 0.8, 
+        "CritChance": 0.03, 
+        "FlightSpeedMultiplier": 1.0, 
+        "Damage": 8.0, 
+        "AttackRange": 1.0, 
+        "MoveSpeed": 1.2, 
+        "Defense": 1.0, 
+        "AttackSpeed": 1.0, 
+        "CritMultiplier": 1.4, 
+        "DamagePerLevel": 1.5, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 8.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 80.0, 
+        "RegenerationRate": 1.0, 
+        "CanRegenerate": false, 
+        "RegenerationDelay": 5.0, 
+        "InvulnerabilityDuration": 0.1
       }
-    },
+    }, 
     {
-      "MobID": "Gloopcap",
-      "MobName": "Gloopcap",
-      "Level": 1,
-      "HealthConfig": {
-        "MaxHealth": 75.0,
-        "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 7.5
-      },
-      "CombatConfig": {
-        "Damage": 7.0,
-        "MoveSpeed": 1.0,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.5,
-        "AttackSpeed": 1.2,
-        "AttackRange":1.0,
-        "KnockbackForce": 0.7,
-        "KnockbackResistance": 0.0,
-        "CritChance": 0.02,
-        "CritMultiplier": 1.3,
-        "PhysicalResistance": 0.0,
-        "FireResistance": -0.1,
-        "IceResistance": 0.2,
-        "LightningResistance": 0.1,
-        "PoisonResistance": 0.0,
-        "MagicResistance": 0.2,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 1.2
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 8.5,
-        "DeAggressionRange": 13.5,
-        "PatrolRadius": 3.5
-      },
       "MovementConfig": {
         "CanBeStunned": true
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 7,
-        "ExperiencePerLevel": 3.5,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Mushroom",
-            "MinQuantity": 1,
-            "MaxQuantity": 2,
+            "ItemID": "Mushroom", 
+            "MinQuantity": 1, 
+            "MaxQuantity": 3, 
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
+        ], 
         "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
+          "ItemID": "None", 
+          "MinQuantity": 0, 
+          "MaxQuantity": 0, 
           "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
-      }
-    },
-     {
-      "MobID": "Sandworm",
-      "MobName": "Sandworm",
-      "Level": 2,
-      "HealthConfig": {
-        "MaxHealth": 120.0,
-        "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 12.0
-      },
-      "CombatConfig": {
-        "Damage": 12.0,
-        "MoveSpeed": 1.5,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 2.0,
-        "AttackSpeed": 0.9,
-        "AttackRange": 0.7,
-        "KnockbackForce": 1.5,
-        "KnockbackResistance": 1,
-        "CritChance": 0.05,
-        "CritMultiplier": 1.5,
-        "PhysicalResistance": 0.1,
-        "FireResistance": 0.2,
-        "IceResistance": -0.1,
-        "LightningResistance": 0.0,
-        "PoisonResistance": 0.3,
-        "MagicResistance": 0.0,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 2.0
-      },
+        }, 
+        "RareDropChance": 0.0, 
+        "ExperiencePerLevel": 4.5, 
+        "HasRareDrop": false, 
+        "BaseExperience": 9, 
+        "DropsLoot": true
+      }, 
+      "Level": 1, 
+      "MobName": "Venomcap", 
       "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 10.0,
-        "DeAggressionRange": 15.0,
-        "PatrolRadius": 5.0
-      },
-      "MovementConfig": {
-        "CanBeStunned": true
-      },
-      "LootConfig": {
-        "BaseExperience": 12,
-        "ExperiencePerLevel": 5.0,
-        "DropsLoot": true,
-        "LootDrops": [
-          {
-            "ItemID": "Gel",
-            "MinQuantity": 2,
-            "MaxQuantity": 4,
-            "DropChance": 1.0
-          }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        "PatrolRadius": 4.5, 
+        "DeAggressionRange": 14.5, 
+        "DetectionRange": 9.5, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "Venomcap", 
+      "CombatConfig": {
+        "KnockbackResistance": 0.05, 
+        "KnockbackForce": 0.9, 
+        "CritChance": 0.04, 
+        "FlightSpeedMultiplier": 1.0, 
+        "Damage": 9.0, 
+        "AttackRange": 1.0, 
+        "MoveSpeed": 1.3, 
+        "Defense": 1.5, 
+        "AttackSpeed": 1.1, 
+        "CritMultiplier": 1.45, 
+        "DamagePerLevel": 1.8, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 9.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 85.0, 
+        "RegenerationRate": 1.5, 
+        "CanRegenerate": true, 
+        "RegenerationDelay": 4.5, 
+        "InvulnerabilityDuration": 0.1
       }
-    },
+    }, 
     {
-      "MobID": "Dirtworm",
-      "MobName": "Dirtworm",
-      "Level": 1,
-      "HealthConfig": {
-        "MaxHealth": 90.0,
-        "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 9.0
-      },
-      "CombatConfig": {
-        "Damage": 9.0,
-        "MoveSpeed": 1.1,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 1.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 0.6,
-        "KnockbackForce": 5.0,
-        "KnockbackResistance": 1,
-        "CritChance": 0.04,
-        "CritMultiplier": 1.4,
-        "PhysicalResistance": 0.0,
-        "FireResistance": 0.0,
-        "IceResistance": 0.1,
-        "LightningResistance": 0.0,
-        "PoisonResistance": 0.2,
-        "MagicResistance": 0.0,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 1.5
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 9.0,
-        "DeAggressionRange": 14.0,
-        "PatrolRadius": 4.0
-      },
       "MovementConfig": {
         "CanBeStunned": true
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 9,
-        "ExperiencePerLevel": 4.0,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
-            "MaxQuantity": 3,
+            "ItemID": "Mushroom", 
+            "MinQuantity": 1, 
+            "MaxQuantity": 2, 
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
+        ], 
         "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
+          "ItemID": "None", 
+          "MinQuantity": 0, 
+          "MaxQuantity": 0, 
           "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
-      }
-    },
-     {
-      "MobID": "Pig",
-      "MobName": "Pig",
-      "Level": 1,
-      "HealthConfig": {
-        "MaxHealth": 60.0,
-        "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 6.0
-      },
-      "CombatConfig": {
-        "Damage": 5.0,
-        "MoveSpeed": 1.5,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 0.55,
-        "KnockbackForce": 0.5,
-        "KnockbackResistance": 0.0,
-        "CritChance": 0.02,
-        "CritMultiplier": 1.3,
-        "PhysicalResistance": 0.0,
-        "FireResistance": 0.0,
-        "IceResistance": 0.0,
-        "LightningResistance": 0.0,
-        "PoisonResistance": 0.0,
-        "MagicResistance": 0.0,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 1.0
-      },
+        }, 
+        "RareDropChance": 0.0, 
+        "ExperiencePerLevel": 3.5, 
+        "HasRareDrop": false, 
+        "BaseExperience": 7, 
+        "DropsLoot": true
+      }, 
+      "Level": 1, 
+      "MobName": "Gloopcap", 
       "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 5.0,
-        "DeAggressionRange": 10.0,
-        "PatrolRadius": 3.0
-      },
-      "MovementConfig": {
-        "CanBeStunned": true
-      },
-      "LootConfig": {
-        "BaseExperience": 5,
-        "ExperiencePerLevel": 2.5,
-        "DropsLoot": true,
-        "LootDrops": [
-          {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
-            "MaxQuantity": 2,
-            "DropChance": 1.0
-          }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        "PatrolRadius": 3.5, 
+        "DeAggressionRange": 13.5, 
+        "DetectionRange": 8.5, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "Gloopcap", 
+      "CombatConfig": {
+        "KnockbackResistance": 0.0, 
+        "KnockbackForce": 0.7, 
+        "CritChance": 0.02, 
+        "FlightSpeedMultiplier": 1.0, 
+        "Damage": 7.0, 
+        "AttackRange": 1.0, 
+        "MoveSpeed": 1.0, 
+        "Defense": 0.5, 
+        "AttackSpeed": 1.2, 
+        "CritMultiplier": 1.3, 
+        "DamagePerLevel": 1.2, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 7.5, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 75.0, 
+        "RegenerationRate": 1.0, 
+        "CanRegenerate": false, 
+        "RegenerationDelay": 5.0, 
+        "InvulnerabilityDuration": 0.1
       }
-    },
+    }, 
     {
-      "MobID": "Boar",
-      "MobName": "Boar",
-      "Level": 2,
-      "HealthConfig": {
-        "MaxHealth": 4000.0,
-        "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 10.0
-      },
-      "CombatConfig": {
-        "Damage": 50.0,
-        "MoveSpeed": 1.3,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 2.0,
-        "AttackSpeed": 0.5,
-        "AttackRange": 1.5,
-        "KnockbackForce": 7.0,
-        "KnockbackResistance": 1.0,
-        "CritChance": 0.0,
-        "CritMultiplier": 1.5,
-        "PhysicalResistance": 0.1,
-        "FireResistance": 0.0,
-        "IceResistance": 0.0,
-        "LightningResistance": 0.0,
-        "PoisonResistance": 0.0,
-        "MagicResistance": 0.0,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 2.5
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 12.0,
-        "DeAggressionRange": 17.0,
-        "PatrolRadius": 6.0
-      },
       "MovementConfig": {
         "CanBeStunned": true
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 15,
-        "ExperiencePerLevel": 6.0,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 2,
-            "MaxQuantity": 4,
+            "ItemID": "Gel", 
+            "MinQuantity": 2, 
+            "MaxQuantity": 4, 
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
+        ], 
         "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
+          "ItemID": "None", 
+          "MinQuantity": 0, 
+          "MaxQuantity": 0, 
           "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
-      }
-    },
-    {
-      "MobID": "Leaf",
-      "MobName": "Leaf",
-      "Level": 1,
-      "HealthConfig": {
-        "MaxHealth": 40.0,
-        "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 4.0
-      },
-      "CombatConfig": {
-        "Damage": 4.0,
-        "MoveSpeed": 1.2,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 0.4,
-        "KnockbackForce": 0.3,
-        "KnockbackResistance": 0.0,
-        "CritChance": 0.01,
-        "CritMultiplier": 1.2,
-        "PhysicalResistance": 0.0,
-        "FireResistance": -0.5,
-        "IceResistance": 0.0,
-        "LightningResistance": 0.0,
-        "PoisonResistance": 0.0,
-        "MagicResistance": 0.0,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 0.8
-      },
+        }, 
+        "RareDropChance": 0.0, 
+        "ExperiencePerLevel": 5.0, 
+        "HasRareDrop": false, 
+        "BaseExperience": 12, 
+        "DropsLoot": true
+      }, 
+      "Level": 2, 
+      "MobName": "Sandworm", 
       "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 6.0,
-        "DeAggressionRange": 11.0,
-        "PatrolRadius": 2.0
-      },
+        "PatrolRadius": 5.0, 
+        "DeAggressionRange": 15.0, 
+        "DetectionRange": 10.0, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "Sandworm", 
+      "CombatConfig": {
+        "KnockbackResistance": 1, 
+        "KnockbackForce": 1.5, 
+        "CritChance": 0.05, 
+        "FlightSpeedMultiplier": 1.0, 
+        "Damage": 12.0, 
+        "AttackRange": 0.7, 
+        "MoveSpeed": 1.5, 
+        "Defense": 2.0, 
+        "AttackSpeed": 0.9, 
+        "CritMultiplier": 1.5, 
+        "DamagePerLevel": 2.0, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 12.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 120.0, 
+        "RegenerationRate": 1.0, 
+        "CanRegenerate": false, 
+        "RegenerationDelay": 5.0, 
+        "InvulnerabilityDuration": 0.1
+      }
+    }, 
+    {
       "MovementConfig": {
         "CanBeStunned": true
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 3,
-        "ExperiencePerLevel": 1.5,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
-            "MaxQuantity": 1,
+            "ItemID": "Gel", 
+            "MinQuantity": 1, 
+            "MaxQuantity": 3, 
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
+        ], 
         "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
+          "ItemID": "None", 
+          "MinQuantity": 0, 
+          "MaxQuantity": 0, 
           "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
-      }
-    },
-    {
-      "MobID": "Leafer",
-      "MobName": "Leafer",
-      "Level": 2,
-      "HealthConfig": {
-        "MaxHealth": 80.0,
-        "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 8.0
-      },
-      "CombatConfig": {
-        "Damage": 10.0,
-        "MoveSpeed": 1.2,
-        "FlightSpeedMultiplier": 2.0,
-        "Defense": 1.0,
-        "AttackSpeed": 0.2,
-        "AttackRange": 5.0,
-        "KnockbackForce": 1.0,
-        "KnockbackResistance": 0.1,
-        "CritChance": 0.03,
-        "CritMultiplier": 1.4,
-        "PhysicalResistance": 0.0,
-        "FireResistance": -0.3,
-        "IceResistance": 0.1,
-        "LightningResistance": 0.0,
-        "PoisonResistance": 0.0,
-        "MagicResistance": 0.0,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 1.5
-      },
+        }, 
+        "RareDropChance": 0.0, 
+        "ExperiencePerLevel": 4.0, 
+        "HasRareDrop": false, 
+        "BaseExperience": 9, 
+        "DropsLoot": true
+      }, 
+      "Level": 1, 
+      "MobName": "Dirtworm", 
       "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 8.0,
-        "DeAggressionRange": 13.0,
-        "PatrolRadius": 4.0
-      },
+        "PatrolRadius": 4.0, 
+        "DeAggressionRange": 14.0, 
+        "DetectionRange": 9.0, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "Dirtworm", 
+      "CombatConfig": {
+        "KnockbackResistance": 1, 
+        "KnockbackForce": 5.0, 
+        "CritChance": 0.04, 
+        "FlightSpeedMultiplier": 1.0, 
+        "Damage": 9.0, 
+        "AttackRange": 0.6, 
+        "MoveSpeed": 1.1, 
+        "Defense": 1.0, 
+        "AttackSpeed": 1.0, 
+        "CritMultiplier": 1.4, 
+        "DamagePerLevel": 1.5, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 9.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 90.0, 
+        "RegenerationRate": 1.0, 
+        "CanRegenerate": false, 
+        "RegenerationDelay": 5.0, 
+        "InvulnerabilityDuration": 0.1
+      }
+    }, 
+    {
       "MovementConfig": {
         "CanBeStunned": true
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 8,
-        "ExperiencePerLevel": 4.0,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
-            "MaxQuantity": 2,
+            "ItemID": "Gel", 
+            "MinQuantity": 1, 
+            "MaxQuantity": 2, 
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
+        ], 
         "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
+          "ItemID": "None", 
+          "MinQuantity": 0, 
+          "MaxQuantity": 0, 
           "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
-      }
-    },
-    {
-      "MobID": "Bat",
-      "MobName": "Bat",
-      "Level": 1,
-      "HealthConfig": {
-        "MaxHealth": 30.0,
-        "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 3.0
-      },
-      "CombatConfig": {
-        "Damage": 3.0,
-        "MoveSpeed": 1.4,
-        "FlightSpeedMultiplier": 1.5,
-        "Defense": 0.0,
-        "AttackSpeed": 0.2,
-        "AttackRange": 0.4,
-        "KnockbackForce": 0.2,
-        "KnockbackResistance": 0.0,
-        "CritChance": 0.01,
-        "CritMultiplier": 1.2,
-        "PhysicalResistance": 0.0,
-        "FireResistance": 0.0,
-        "IceResistance": 0.0,
-        "LightningResistance": 0.0,
-        "PoisonResistance": 0.0,
-        "MagicResistance": 0.0,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 0.6
-      },
+        }, 
+        "RareDropChance": 0.0, 
+        "ExperiencePerLevel": 2.5, 
+        "HasRareDrop": false, 
+        "BaseExperience": 5, 
+        "DropsLoot": true
+      }, 
+      "Level": 1, 
+      "MobName": "Pig", 
       "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 7.0,
-        "DeAggressionRange": 12.0,
-        "PatrolRadius": 3.0
-      },
+        "PatrolRadius": 3.0, 
+        "DeAggressionRange": 10.0, 
+        "DetectionRange": 5.0, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "Pig", 
+      "CombatConfig": {
+        "KnockbackResistance": 0.0, 
+        "KnockbackForce": 0.5, 
+        "CritChance": 0.02, 
+        "FlightSpeedMultiplier": 1.0, 
+        "Damage": 5.0, 
+        "AttackRange": 0.55, 
+        "MoveSpeed": 1.5, 
+        "Defense": 0.0, 
+        "AttackSpeed": 1.0, 
+        "CritMultiplier": 1.3, 
+        "DamagePerLevel": 1.0, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 6.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 60.0, 
+        "RegenerationRate": 1.0, 
+        "CanRegenerate": false, 
+        "RegenerationDelay": 5.0, 
+        "InvulnerabilityDuration": 0.1
+      }
+    }, 
+    {
       "MovementConfig": {
         "CanBeStunned": true
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 2,
-        "ExperiencePerLevel": 1.0,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
-            "MaxQuantity": 1,
+            "ItemID": "Gel", 
+            "MinQuantity": 2, 
+            "MaxQuantity": 4, 
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
+        ], 
         "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
+          "ItemID": "None", 
+          "MinQuantity": 0, 
+          "MaxQuantity": 0, 
           "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
-      }
-    },
-    {
-      "MobID": "TinyBee",
-      "MobName": "Tiny Bee",
-      "Level": 1,
-      "HealthConfig": {
-        "MaxHealth": 25.0,
-        "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 2.5
-      },
-      "CombatConfig": {
-        "Damage": 2.0,
-        "MoveSpeed": 1.5,
-        "FlightSpeedMultiplier": 2.0,
-        "Defense": 0.0,
-        "AttackSpeed": 0.1,
-        "AttackRange": 0.3,
-        "KnockbackForce": 0.1,
-        "KnockbackResistance": 0.0,
-        "CritChance": 0.005,
-        "CritMultiplier": 1.1,
-        "PhysicalResistance": 0.0,
-        "FireResistance": 0.0,
-        "IceResistance": 0.0,
-        "LightningResistance": 0.0,
-        "PoisonResistance": 0.1,
-        "MagicResistance": 0.0,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 0.4
-      },
+        }, 
+        "RareDropChance": 0.0, 
+        "ExperiencePerLevel": 6.0, 
+        "HasRareDrop": false, 
+        "BaseExperience": 15, 
+        "DropsLoot": true
+      }, 
+      "Level": 2, 
+      "MobName": "Boar", 
       "AIConfig": {
-        "IsHostileToPlayer": false,
-        "DetectionRange": 6.0,
-        "DeAggressionRange": 11.0,
-        "PatrolRadius": 2.0
-      },
+        "PatrolRadius": 6.0, 
+        "DeAggressionRange": 17.0, 
+        "DetectionRange": 12.0, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "Boar", 
+      "CombatConfig": {
+        "KnockbackResistance": 1.0, 
+        "KnockbackForce": 7.0, 
+        "CritChance": 0.0, 
+        "FlightSpeedMultiplier": 1.0, 
+        "Damage": 50.0, 
+        "AttackRange": 1.5, 
+        "MoveSpeed": 1.3, 
+        "Defense": 2.0, 
+        "AttackSpeed": 0.5, 
+        "CritMultiplier": 1.5, 
+        "DamagePerLevel": 2.5, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 10.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 4000.0, 
+        "RegenerationRate": 1.0, 
+        "CanRegenerate": false, 
+        "RegenerationDelay": 5.0, 
+        "InvulnerabilityDuration": 0.1
+      }
+    }, 
+    {
       "MovementConfig": {
         "CanBeStunned": true
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 1,
-        "ExperiencePerLevel": 0.5,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
-            "MaxQuantity": 1,
+            "ItemID": "Gel", 
+            "MinQuantity": 1, 
+            "MaxQuantity": 1, 
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
+        ], 
         "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
+          "ItemID": "None", 
+          "MinQuantity": 0, 
+          "MaxQuantity": 0, 
           "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
-      }
-    },
-    {
-      "MobID": "WorkerBee",
-      "MobName": "Worker Bee",
-      "Level": 2,
-      "HealthConfig": {
-        "MaxHealth": 50.0,
-        "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": true,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 2.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 5.0
-      },
-      "CombatConfig": {
-        "Damage": 6.0,
-        "MoveSpeed": 1.4,
-        "FlightSpeedMultiplier": 2.5,
-        "Defense": 1.0,
-        "AttackSpeed": 1.2,
-        "AttackRange": 0.4,
-        "KnockbackForce": 0.5,
-        "KnockbackResistance": 0.1,
-        "CritChance": 0.02,
-        "CritMultiplier": 1.3,
-        "PhysicalResistance": 0.0,
-        "FireResistance": 0.0,
-        "IceResistance": 0.0,
-        "LightningResistance": 0.0,
-        "PoisonResistance": 0.2,
-        "MagicResistance": 0.0,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 1.0
-      },
+        }, 
+        "RareDropChance": 0.0, 
+        "ExperiencePerLevel": 1.5, 
+        "HasRareDrop": false, 
+        "BaseExperience": 3, 
+        "DropsLoot": true
+      }, 
+      "Level": 1, 
+      "MobName": "Leaf", 
       "AIConfig": {
-        "IsHostileToPlayer": false,
-        "DetectionRange": 8.0,
-        "DeAggressionRange": 13.0,
-        "PatrolRadius": 4.0
-      },
+        "PatrolRadius": 2.0, 
+        "DeAggressionRange": 11.0, 
+        "DetectionRange": 6.0, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "Leaf", 
+      "CombatConfig": {
+        "KnockbackResistance": 0.0, 
+        "KnockbackForce": 0.3, 
+        "CritChance": 0.01, 
+        "FlightSpeedMultiplier": 1.0, 
+        "Damage": 4.0, 
+        "AttackRange": 0.4, 
+        "MoveSpeed": 1.2, 
+        "Defense": 0.0, 
+        "AttackSpeed": 1.0, 
+        "CritMultiplier": 1.2, 
+        "DamagePerLevel": 0.8, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 4.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 40.0, 
+        "RegenerationRate": 1.0, 
+        "CanRegenerate": false, 
+        "RegenerationDelay": 5.0, 
+        "InvulnerabilityDuration": 0.1
+      }
+    }, 
+    {
       "MovementConfig": {
         "CanBeStunned": true
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 4,
-        "ExperiencePerLevel": 2.0,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
-            "MaxQuantity": 2,
+            "ItemID": "Gel", 
+            "MinQuantity": 1, 
+            "MaxQuantity": 2, 
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
+        ], 
         "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
+          "ItemID": "None", 
+          "MinQuantity": 0, 
+          "MaxQuantity": 0, 
           "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
-      }
-    },
-    {
-      "MobID": "MechanicalBee",
-      "MobName": "Mechanical Bee",
-      "Level": 3,
-      "HealthConfig": {
-        "MaxHealth": 80.0,
-        "InvulnerabilityDuration": 0.4,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 8.0
-      },
-      "CombatConfig": {
-        "Damage": 10.0,
-        "MoveSpeed": 1.0,
-        "FlightSpeedMultiplier": 1.8,
-        "Defense": 5.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 0.5,
-        "KnockbackForce": 1.0,
-        "KnockbackResistance": 0.5,
-        "CritChance": 0.05,
-        "CritMultiplier": 1.5,
-        "PhysicalResistance": 0.3,
-        "FireResistance": 0.2,
-        "IceResistance": -0.1,
-        "LightningResistance": 0.1,
-        "PoisonResistance": 0.0,
-        "MagicResistance": -0.1,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 1.5
-      },
+        }, 
+        "RareDropChance": 0.0, 
+        "ExperiencePerLevel": 4.0, 
+        "HasRareDrop": false, 
+        "BaseExperience": 8, 
+        "DropsLoot": true
+      }, 
+      "Level": 2, 
+      "MobName": "Leafer", 
       "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 10.0,
-        "DeAggressionRange": 15.0,
-        "PatrolRadius": 5.0
-      },
+        "PatrolRadius": 4.0, 
+        "DeAggressionRange": 13.0, 
+        "DetectionRange": 8.0, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "Leafer", 
+      "CombatConfig": {
+        "KnockbackResistance": 0.1, 
+        "KnockbackForce": 1.0, 
+        "CritChance": 0.03, 
+        "FlightSpeedMultiplier": 2.0, 
+        "Damage": 10.0, 
+        "AttackRange": 5.0, 
+        "MoveSpeed": 1.2, 
+        "Defense": 1.0, 
+        "AttackSpeed": 0.2, 
+        "CritMultiplier": 1.4, 
+        "DamagePerLevel": 1.5, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 8.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 80.0, 
+        "RegenerationRate": 1.0, 
+        "CanRegenerate": false, 
+        "RegenerationDelay": 5.0, 
+        "InvulnerabilityDuration": 0.1
+      }
+    }, 
+    {
+      "MovementConfig": {
+        "CanBeStunned": true
+      }, 
+      "LootConfig": {
+        "LootDrops": [
+          {
+            "ItemID": "Gel", 
+            "MinQuantity": 1, 
+            "MaxQuantity": 1, 
+            "DropChance": 1.0
+          }
+        ], 
+        "RareDrop": {
+          "ItemID": "None", 
+          "MinQuantity": 0, 
+          "MaxQuantity": 0, 
+          "DropChance": 0.0
+        }, 
+        "RareDropChance": 0.0, 
+        "ExperiencePerLevel": 1.0, 
+        "HasRareDrop": false, 
+        "BaseExperience": 2, 
+        "DropsLoot": true
+      }, 
+      "Level": 1, 
+      "MobName": "Bat", 
+      "AIConfig": {
+        "PatrolRadius": 3.0, 
+        "DeAggressionRange": 12.0, 
+        "DetectionRange": 7.0, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "Bat", 
+      "CombatConfig": {
+        "KnockbackResistance": 0.0, 
+        "KnockbackForce": 0.2, 
+        "CritChance": 0.01, 
+        "FlightSpeedMultiplier": 1.5, 
+        "Damage": 3.0, 
+        "AttackRange": 0.4, 
+        "MoveSpeed": 1.4, 
+        "Defense": 0.0, 
+        "AttackSpeed": 0.2, 
+        "CritMultiplier": 1.2, 
+        "DamagePerLevel": 0.6, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 3.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 30.0, 
+        "RegenerationRate": 1.0, 
+        "CanRegenerate": false, 
+        "RegenerationDelay": 5.0, 
+        "InvulnerabilityDuration": 0.1
+      }
+    }, 
+    {
+      "MovementConfig": {
+        "CanBeStunned": true
+      }, 
+      "LootConfig": {
+        "LootDrops": [
+          {
+            "ItemID": "Gel", 
+            "MinQuantity": 1, 
+            "MaxQuantity": 1, 
+            "DropChance": 1.0
+          }
+        ], 
+        "RareDrop": {
+          "ItemID": "None", 
+          "MinQuantity": 0, 
+          "MaxQuantity": 0, 
+          "DropChance": 0.0
+        }, 
+        "RareDropChance": 0.0, 
+        "ExperiencePerLevel": 0.5, 
+        "HasRareDrop": false, 
+        "BaseExperience": 1, 
+        "DropsLoot": true
+      }, 
+      "Level": 1, 
+      "MobName": "Tiny Bee", 
+      "AIConfig": {
+        "PatrolRadius": 2.0, 
+        "DeAggressionRange": 11.0, 
+        "DetectionRange": 6.0, 
+        "IsHostileToPlayer": false
+      }, 
+      "MobID": "TinyBee", 
+      "CombatConfig": {
+        "KnockbackResistance": 0.0, 
+        "KnockbackForce": 0.1, 
+        "CritChance": 0.005, 
+        "FlightSpeedMultiplier": 2.0, 
+        "Damage": 2.0, 
+        "AttackRange": 0.3, 
+        "MoveSpeed": 1.5, 
+        "Defense": 0.0, 
+        "AttackSpeed": 0.1, 
+        "CritMultiplier": 1.1, 
+        "DamagePerLevel": 0.4, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 2.5, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 25.0, 
+        "RegenerationRate": 1.0, 
+        "CanRegenerate": false, 
+        "RegenerationDelay": 5.0, 
+        "InvulnerabilityDuration": 0.1
+      }
+    }, 
+    {
+      "MovementConfig": {
+        "CanBeStunned": true
+      }, 
+      "LootConfig": {
+        "LootDrops": [
+          {
+            "ItemID": "Gel", 
+            "MinQuantity": 1, 
+            "MaxQuantity": 2, 
+            "DropChance": 1.0
+          }
+        ], 
+        "RareDrop": {
+          "ItemID": "None", 
+          "MinQuantity": 0, 
+          "MaxQuantity": 0, 
+          "DropChance": 0.0
+        }, 
+        "RareDropChance": 0.0, 
+        "ExperiencePerLevel": 2.0, 
+        "HasRareDrop": false, 
+        "BaseExperience": 4, 
+        "DropsLoot": true
+      }, 
+      "Level": 2, 
+      "MobName": "Worker Bee", 
+      "AIConfig": {
+        "PatrolRadius": 4.0, 
+        "DeAggressionRange": 13.0, 
+        "DetectionRange": 8.0, 
+        "IsHostileToPlayer": false
+      }, 
+      "MobID": "WorkerBee", 
+      "CombatConfig": {
+        "KnockbackResistance": 0.1, 
+        "KnockbackForce": 0.5, 
+        "CritChance": 0.02, 
+        "FlightSpeedMultiplier": 2.5, 
+        "Damage": 6.0, 
+        "AttackRange": 0.4, 
+        "MoveSpeed": 1.4, 
+        "Defense": 1.0, 
+        "AttackSpeed": 1.2, 
+        "CritMultiplier": 1.3, 
+        "DamagePerLevel": 1.0, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 5.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 50.0, 
+        "RegenerationRate": 1.0, 
+        "CanRegenerate": true, 
+        "RegenerationDelay": 2.0, 
+        "InvulnerabilityDuration": 0.1
+      }
+    }, 
+    {
       "MovementConfig": {
         "CanBeStunned": false
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 8,
-        "ExperiencePerLevel": 4.0,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 2,
-            "MaxQuantity": 3,
+            "ItemID": "Gel", 
+            "MinQuantity": 2, 
+            "MaxQuantity": 3, 
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
+        ], 
         "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
+          "ItemID": "None", 
+          "MinQuantity": 0, 
+          "MaxQuantity": 0, 
           "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
-      }
-    },
-    {
-      "MobID": "SpiritBee",
-      "MobName": "Spirit Bee",
-      "Level": 4,
-      "HealthConfig": {
-        "MaxHealth": 60.0,
-        "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": true,
-        "RegenerationRate": 2.0,
-        "RegenerationDelay": 3.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 6.0
-      },
-      "CombatConfig": {
-        "Damage": 8.0,
-        "MoveSpeed": 1.5,
-        "FlightSpeedMultiplier": 3.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.5,
-        "AttackRange": 0.3,
-        "KnockbackForce": 0.3,
-        "KnockbackResistance": 0.0,
-        "CritChance": 0.03,
-        "CritMultiplier": 1.4,
-        "PhysicalResistance": -0.2,
-        "FireResistance": 0.0,
-        "IceResistance": 0.0,
-        "LightningResistance": 0.0,
-        "PoisonResistance": 0.0,
-        "MagicResistance": 0.5,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 1.2
-      },
+        }, 
+        "RareDropChance": 0.0, 
+        "ExperiencePerLevel": 4.0, 
+        "HasRareDrop": false, 
+        "BaseExperience": 8, 
+        "DropsLoot": true
+      }, 
+      "Level": 3, 
+      "MobName": "Mechanical Bee", 
       "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 9.0,
-        "DeAggressionRange": 14.0,
-        "PatrolRadius": 4.0
-      },
+        "PatrolRadius": 5.0, 
+        "DeAggressionRange": 15.0, 
+        "DetectionRange": 10.0, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "MechanicalBee", 
+      "CombatConfig": {
+        "KnockbackResistance": 0.5, 
+        "KnockbackForce": 1.0, 
+        "CritChance": 0.05, 
+        "FlightSpeedMultiplier": 1.8, 
+        "Damage": 10.0, 
+        "AttackRange": 0.5, 
+        "MoveSpeed": 1.0, 
+        "Defense": 5.0, 
+        "AttackSpeed": 1.0, 
+        "CritMultiplier": 1.5, 
+        "DamagePerLevel": 1.5, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 8.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 80.0, 
+        "RegenerationRate": 1.0, 
+        "CanRegenerate": false, 
+        "RegenerationDelay": 5.0, 
+        "InvulnerabilityDuration": 0.4
+      }
+    }, 
+    {
       "MovementConfig": {
         "CanBeStunned": true
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 6,
-        "ExperiencePerLevel": 3.0,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
-            "MaxQuantity": 2,
+            "ItemID": "Gel", 
+            "MinQuantity": 1, 
+            "MaxQuantity": 2, 
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
+        ], 
         "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
+          "ItemID": "None", 
+          "MinQuantity": 0, 
+          "MaxQuantity": 0, 
           "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
-      }
-    },
-    {
-      "MobID": "WallCreeper",
-      "MobName": "Wall Creeper",
-      "Level": 2,
-      "HealthConfig": {
-        "MaxHealth": 70.0,
-        "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 7.0
-      },
-      "CombatConfig": {
-        "Damage": 8.0,
-        "MoveSpeed": 1.6,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.5,
-        "AttackSpeed": 1.5,
-        "AttackRange": 0.4,
-        "KnockbackForce": 0.5,
-        "KnockbackResistance": 0.0,
-        "CritChance": 0.03,
-        "CritMultiplier": 1.4,
-        "PhysicalResistance": 0.0,
-        "FireResistance": 0.0,
-        "IceResistance": 0.0,
-        "LightningResistance": 0.0,
-        "PoisonResistance": 0.1,
-        "MagicResistance": 0.0,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 1.2
-      },
+        }, 
+        "RareDropChance": 0.0, 
+        "ExperiencePerLevel": 3.0, 
+        "HasRareDrop": false, 
+        "BaseExperience": 6, 
+        "DropsLoot": true
+      }, 
+      "Level": 4, 
+      "MobName": "Spirit Bee", 
       "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 8.0,
-        "DeAggressionRange": 13.0,
-        "PatrolRadius": 4.0
-      },
+        "PatrolRadius": 4.0, 
+        "DeAggressionRange": 14.0, 
+        "DetectionRange": 9.0, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "SpiritBee", 
+      "CombatConfig": {
+        "KnockbackResistance": 0.0, 
+        "KnockbackForce": 0.3, 
+        "CritChance": 0.03, 
+        "FlightSpeedMultiplier": 3.0, 
+        "Damage": 8.0, 
+        "AttackRange": 0.3, 
+        "MoveSpeed": 1.5, 
+        "Defense": 0.0, 
+        "AttackSpeed": 1.5, 
+        "CritMultiplier": 1.4, 
+        "DamagePerLevel": 1.2, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 6.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 60.0, 
+        "RegenerationRate": 2.0, 
+        "CanRegenerate": true, 
+        "RegenerationDelay": 3.0, 
+        "InvulnerabilityDuration": 0.1
+      }
+    }, 
+    {
       "MovementConfig": {
         "CanBeStunned": true
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 6,
-        "ExperiencePerLevel": 3.0,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
-            "MaxQuantity": 2,
+            "ItemID": "Gel", 
+            "MinQuantity": 1, 
+            "MaxQuantity": 2, 
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
+        ], 
         "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
+          "ItemID": "None", 
+          "MinQuantity": 0, 
+          "MaxQuantity": 0, 
           "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
-      }
-    },
-    {
-      "MobID": "VileHatcher",
-      "MobName": "Vile Hatcher",
-      "Level": 3,
-      "HealthConfig": {
-        "MaxHealth": 100.0,
-        "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 10.0
-      },
-      "CombatConfig": {
-        "Damage": 12.0,
-        "MoveSpeed": 1.0,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 1.0,
-        "AttackSpeed": 0.8,
-        "AttackRange": 0.6,
-        "KnockbackForce": 1.0,
-        "KnockbackResistance": 0.2,
-        "CritChance": 0.04,
-        "CritMultiplier": 1.5,
-        "PhysicalResistance": 0.0,
-        "FireResistance": 0.0,
-        "IceResistance": 0.0,
-        "LightningResistance": 0.0,
-        "PoisonResistance": 0.5,
-        "MagicResistance": 0.0,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 2.0
-      },
+        }, 
+        "RareDropChance": 0.0, 
+        "ExperiencePerLevel": 3.0, 
+        "HasRareDrop": false, 
+        "BaseExperience": 6, 
+        "DropsLoot": true
+      }, 
+      "Level": 2, 
+      "MobName": "Wall Creeper", 
       "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 10.0,
-        "DeAggressionRange": 15.0,
-        "PatrolRadius": 5.0
-      },
+        "PatrolRadius": 4.0, 
+        "DeAggressionRange": 13.0, 
+        "DetectionRange": 8.0, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "WallCreeper", 
+      "CombatConfig": {
+        "KnockbackResistance": 0.0, 
+        "KnockbackForce": 0.5, 
+        "CritChance": 0.03, 
+        "FlightSpeedMultiplier": 1.0, 
+        "Damage": 8.0, 
+        "AttackRange": 0.4, 
+        "MoveSpeed": 1.6, 
+        "Defense": 0.5, 
+        "AttackSpeed": 1.5, 
+        "CritMultiplier": 1.4, 
+        "DamagePerLevel": 1.2, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 7.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 70.0, 
+        "RegenerationRate": 1.0, 
+        "CanRegenerate": false, 
+        "RegenerationDelay": 5.0, 
+        "InvulnerabilityDuration": 0.1
+      }
+    }, 
+    {
       "MovementConfig": {
         "CanBeStunned": true
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 10,
-        "ExperiencePerLevel": 5.0,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 2,
-            "MaxQuantity": 4,
+            "ItemID": "Gel", 
+            "MinQuantity": 2, 
+            "MaxQuantity": 4, 
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
+        ], 
         "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
+          "ItemID": "None", 
+          "MinQuantity": 0, 
+          "MaxQuantity": 0, 
           "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
-      }
-    },
-    {
-      "MobID": "WebSpinner",
-      "MobName": "Web Spinner",
-      "Level": 2,
-      "HealthConfig": {
-        "MaxHealth": 60.0,
-        "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 6.0
-      },
-      "CombatConfig": {
-        "Damage": 6.0,
-        "MoveSpeed": 1.5,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 0.5,
-        "KnockbackForce": 0.5,
-        "KnockbackResistance": 0.0,
-        "CritChance": 0.02,
-        "CritMultiplier": 1.3,
-        "PhysicalResistance": 0.0,
-        "FireResistance": -0.2,
-        "IceResistance": 0.0,
-        "LightningResistance": 0.0,
-        "PoisonResistance": 0.2,
-        "MagicResistance": 0.0,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 1.0
-      },
+        }, 
+        "RareDropChance": 0.0, 
+        "ExperiencePerLevel": 5.0, 
+        "HasRareDrop": false, 
+        "BaseExperience": 10, 
+        "DropsLoot": true
+      }, 
+      "Level": 3, 
+      "MobName": "Vile Hatcher", 
       "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 7.0,
-        "DeAggressionRange": 12.0,
-        "PatrolRadius": 3.0
-      },
+        "PatrolRadius": 5.0, 
+        "DeAggressionRange": 15.0, 
+        "DetectionRange": 10.0, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "VileHatcher", 
+      "CombatConfig": {
+        "KnockbackResistance": 0.2, 
+        "KnockbackForce": 1.0, 
+        "CritChance": 0.04, 
+        "FlightSpeedMultiplier": 1.0, 
+        "Damage": 12.0, 
+        "AttackRange": 0.6, 
+        "MoveSpeed": 1.0, 
+        "Defense": 1.0, 
+        "AttackSpeed": 0.8, 
+        "CritMultiplier": 1.5, 
+        "DamagePerLevel": 2.0, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 10.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 100.0, 
+        "RegenerationRate": 1.0, 
+        "CanRegenerate": false, 
+        "RegenerationDelay": 5.0, 
+        "InvulnerabilityDuration": 0.1
+      }
+    }, 
+    {
       "MovementConfig": {
         "CanBeStunned": true
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 5,
-        "ExperiencePerLevel": 2.5,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
-            "MaxQuantity": 2,
+            "ItemID": "Gel", 
+            "MinQuantity": 1, 
+            "MaxQuantity": 2, 
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
+        ], 
         "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
+          "ItemID": "None", 
+          "MinQuantity": 0, 
+          "MaxQuantity": 0, 
           "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
-      }
-    },
-    {
-      "MobID": "Carapace",
-      "MobName": "Carapace",
-      "Level": 4,
-      "HealthConfig": {
-        "MaxHealth": 150.0,
-        "InvulnerabilityDuration": 0.4,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 15.0
-      },
-      "CombatConfig": {
-        "Damage": 15.0,
-        "MoveSpeed": 1.0,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 10.0,
-        "AttackSpeed": 0.8,
-        "AttackRange": 0.7,
-        "KnockbackForce": 2.0,
-        "KnockbackResistance": 0.8,
-        "CritChance": 0.05,
-        "CritMultiplier": 1.6,
-        "PhysicalResistance": 0.5,
-        "FireResistance": 0.0,
-        "IceResistance": 0.0,
-        "LightningResistance": 0.0,
-        "PoisonResistance": 0.0,
-        "MagicResistance": 0.0,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 2.5
-      },
+        }, 
+        "RareDropChance": 0.0, 
+        "ExperiencePerLevel": 2.5, 
+        "HasRareDrop": false, 
+        "BaseExperience": 5, 
+        "DropsLoot": true
+      }, 
+      "Level": 2, 
+      "MobName": "Web Spinner", 
       "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 12.0,
-        "DeAggressionRange": 17.0,
-        "PatrolRadius": 6.0
-      },
+        "PatrolRadius": 3.0, 
+        "DeAggressionRange": 12.0, 
+        "DetectionRange": 7.0, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "WebSpinner", 
+      "CombatConfig": {
+        "KnockbackResistance": 0.0, 
+        "KnockbackForce": 0.5, 
+        "CritChance": 0.02, 
+        "FlightSpeedMultiplier": 1.0, 
+        "Damage": 6.0, 
+        "AttackRange": 0.5, 
+        "MoveSpeed": 1.5, 
+        "Defense": 0.0, 
+        "AttackSpeed": 1.0, 
+        "CritMultiplier": 1.3, 
+        "DamagePerLevel": 1.0, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 6.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 60.0, 
+        "RegenerationRate": 1.0, 
+        "CanRegenerate": false, 
+        "RegenerationDelay": 5.0, 
+        "InvulnerabilityDuration": 0.1
+      }
+    }, 
+    {
       "MovementConfig": {
         "CanBeStunned": false
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 15,
-        "ExperiencePerLevel": 7.5,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 3,
-            "MaxQuantity": 5,
+            "ItemID": "Gel", 
+            "MinQuantity": 3, 
+            "MaxQuantity": 5, 
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
+        ], 
         "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
+          "ItemID": "None", 
+          "MinQuantity": 0, 
+          "MaxQuantity": 0, 
           "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
-      }
-    },
-    {
-      "MobID": "NightfangWeaver",
-      "MobName": "Nightfang Weaver",
-      "Level": 3,
-      "HealthConfig": {
-        "MaxHealth": 90.0,
-        "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": true,
-        "RegenerationRate": 1.5,
-        "RegenerationDelay": 4.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 9.0
-      },
-      "CombatConfig": {
-        "Damage": 10.0,
-        "MoveSpeed": 1.0,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 1.0,
-        "AttackSpeed": 1.2,
-        "AttackRange": 0.5,
-        "KnockbackForce": 1.0,
-        "KnockbackResistance": 0.1,
-        "CritChance": 0.04,
-        "CritMultiplier": 1.5,
-        "PhysicalResistance": 0.0,
-        "FireResistance": 0.0,
-        "IceResistance": 0.0,
-        "LightningResistance": 0.0,
-        "PoisonResistance": 0.0,
-        "MagicResistance": 0.3,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 1.5
-      },
+        }, 
+        "RareDropChance": 0.0, 
+        "ExperiencePerLevel": 7.5, 
+        "HasRareDrop": false, 
+        "BaseExperience": 15, 
+        "DropsLoot": true
+      }, 
+      "Level": 4, 
+      "MobName": "Carapace", 
       "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 9.0,
-        "DeAggressionRange": 14.0,
-        "PatrolRadius": 4.0
-      },
+        "PatrolRadius": 6.0, 
+        "DeAggressionRange": 17.0, 
+        "DetectionRange": 12.0, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "Carapace", 
+      "CombatConfig": {
+        "KnockbackResistance": 0.8, 
+        "KnockbackForce": 2.0, 
+        "CritChance": 0.05, 
+        "FlightSpeedMultiplier": 1.0, 
+        "Damage": 15.0, 
+        "AttackRange": 0.7, 
+        "MoveSpeed": 1.0, 
+        "Defense": 10.0, 
+        "AttackSpeed": 0.8, 
+        "CritMultiplier": 1.6, 
+        "DamagePerLevel": 2.5, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 15.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 150.0, 
+        "RegenerationRate": 1.0, 
+        "CanRegenerate": false, 
+        "RegenerationDelay": 5.0, 
+        "InvulnerabilityDuration": 0.4
+      }
+    }, 
+    {
       "MovementConfig": {
         "CanBeStunned": true
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 9,
-        "ExperiencePerLevel": 4.5,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 2,
-            "MaxQuantity": 3,
+            "ItemID": "Gel", 
+            "MinQuantity": 2, 
+            "MaxQuantity": 3, 
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
+        ], 
         "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
+          "ItemID": "None", 
+          "MinQuantity": 0, 
+          "MaxQuantity": 0, 
           "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
-      }
-    },
-    {
-      "MobID": "Ghost",
-      "MobName": "Ghost",
-      "Level": 3,
-      "HealthConfig": {
-        "MaxHealth": 80.0,
-        "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 8.0
-      },
-      "CombatConfig": {
-        "Damage": 12.0,
-        "MoveSpeed": 1.3,
-        "FlightSpeedMultiplier": 1.5,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 0.4,
-        "KnockbackForce": 0.5,
-        "KnockbackResistance": 0.0,
-        "CritChance": 0.03,
-        "CritMultiplier": 1.4,
-        "PhysicalResistance": -0.5,
-        "FireResistance": 0.0,
-        "IceResistance": 0.0,
-        "LightningResistance": 0.0,
-        "PoisonResistance": 0.0,
-        "MagicResistance": 0.8,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 2.0
-      },
+        }, 
+        "RareDropChance": 0.0, 
+        "ExperiencePerLevel": 4.5, 
+        "HasRareDrop": false, 
+        "BaseExperience": 9, 
+        "DropsLoot": true
+      }, 
+      "Level": 3, 
+      "MobName": "Nightfang Weaver", 
       "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 10.0,
-        "DeAggressionRange": 15.0,
-        "PatrolRadius": 5.0
-      },
+        "PatrolRadius": 4.0, 
+        "DeAggressionRange": 14.0, 
+        "DetectionRange": 9.0, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "NightfangWeaver", 
+      "CombatConfig": {
+        "KnockbackResistance": 0.1, 
+        "KnockbackForce": 1.0, 
+        "CritChance": 0.04, 
+        "FlightSpeedMultiplier": 1.0, 
+        "Damage": 10.0, 
+        "AttackRange": 0.5, 
+        "MoveSpeed": 1.0, 
+        "Defense": 1.0, 
+        "AttackSpeed": 1.2, 
+        "CritMultiplier": 1.5, 
+        "DamagePerLevel": 1.5, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 9.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 90.0, 
+        "RegenerationRate": 1.5, 
+        "CanRegenerate": true, 
+        "RegenerationDelay": 4.0, 
+        "InvulnerabilityDuration": 0.1
+      }
+    }, 
+    {
       "MovementConfig": {
         "CanBeStunned": true
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 8,
-        "ExperiencePerLevel": 4.0,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
-            "MaxQuantity": 2,
+            "ItemID": "Gel", 
+            "MinQuantity": 1, 
+            "MaxQuantity": 2, 
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
+        ], 
         "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
+          "ItemID": "None", 
+          "MinQuantity": 0, 
+          "MaxQuantity": 0, 
           "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
-      }
-    },
-    {
-      "MobID": "Snowman",
-      "MobName": "Snowman",
-      "Level": 2,
-      "HealthConfig": {
-        "MaxHealth": 100.0,
-        "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 10.0
-      },
-      "CombatConfig": {
-        "Damage": 10.0,
-        "MoveSpeed": 1.0,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 2.0,
-        "AttackSpeed": 0.8,
-        "AttackRange": 0.6,
-        "KnockbackForce": 1.5,
-        "KnockbackResistance": 0.2,
-        "CritChance": 0.02,
-        "CritMultiplier": 1.3,
-        "PhysicalResistance": 0.0,
-        "FireResistance": -0.5,
-        "IceResistance": 0.5,
-        "LightningResistance": 0.0,
-        "PoisonResistance": 0.0,
-        "MagicResistance": 0.0,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 1.5
-      },
+        }, 
+        "RareDropChance": 0.0, 
+        "ExperiencePerLevel": 4.0, 
+        "HasRareDrop": false, 
+        "BaseExperience": 8, 
+        "DropsLoot": true
+      }, 
+      "Level": 3, 
+      "MobName": "Ghost", 
       "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 8.0,
-        "DeAggressionRange": 13.0,
-        "PatrolRadius": 4.0
-      },
+        "PatrolRadius": 5.0, 
+        "DeAggressionRange": 15.0, 
+        "DetectionRange": 10.0, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "Ghost", 
+      "CombatConfig": {
+        "KnockbackResistance": 0.0, 
+        "KnockbackForce": 0.5, 
+        "CritChance": 0.03, 
+        "FlightSpeedMultiplier": 1.5, 
+        "Damage": 12.0, 
+        "AttackRange": 0.4, 
+        "MoveSpeed": 1.3, 
+        "Defense": 0.0, 
+        "AttackSpeed": 1.0, 
+        "CritMultiplier": 1.4, 
+        "DamagePerLevel": 2.0, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 8.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 80.0, 
+        "RegenerationRate": 1.0, 
+        "CanRegenerate": false, 
+        "RegenerationDelay": 5.0, 
+        "InvulnerabilityDuration": 0.1
+      }
+    }, 
+    {
       "MovementConfig": {
         "CanBeStunned": true
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 8,
-        "ExperiencePerLevel": 4.0,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 2,
-            "MaxQuantity": 3,
+            "ItemID": "Gel", 
+            "MinQuantity": 2, 
+            "MaxQuantity": 3, 
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
+        ], 
         "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
+          "ItemID": "None", 
+          "MinQuantity": 0, 
+          "MaxQuantity": 0, 
           "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
-      }
-    },
-    {
-      "MobID": "Penguin",
-      "MobName": "Penguin",
-      "Level": 1,
-      "HealthConfig": {
-        "MaxHealth": 50.0,
-        "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 5.0
-      },
-      "CombatConfig": {
-        "Damage": 4.0,
-        "MoveSpeed": 1.5,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 0.4,
-        "KnockbackForce": 0.5,
-        "KnockbackResistance": 0.0,
-        "CritChance": 0.01,
-        "CritMultiplier": 1.2,
-        "PhysicalResistance": 0.0,
-        "FireResistance": 0.0,
-        "IceResistance": 0.2,
-        "LightningResistance": 0.0,
-        "PoisonResistance": 0.0,
-        "MagicResistance": 0.0,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 0.8
-      },
+        }, 
+        "RareDropChance": 0.0, 
+        "ExperiencePerLevel": 4.0, 
+        "HasRareDrop": false, 
+        "BaseExperience": 8, 
+        "DropsLoot": true
+      }, 
+      "Level": 2, 
+      "MobName": "Snowman", 
       "AIConfig": {
-        "IsHostileToPlayer": false,
-        "DetectionRange": 5.0,
-        "DeAggressionRange": 10.0,
-        "PatrolRadius": 3.0
-      },
+        "PatrolRadius": 4.0, 
+        "DeAggressionRange": 13.0, 
+        "DetectionRange": 8.0, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "Snowman", 
+      "CombatConfig": {
+        "KnockbackResistance": 0.2, 
+        "KnockbackForce": 1.5, 
+        "CritChance": 0.02, 
+        "FlightSpeedMultiplier": 1.0, 
+        "Damage": 10.0, 
+        "AttackRange": 0.6, 
+        "MoveSpeed": 1.0, 
+        "Defense": 2.0, 
+        "AttackSpeed": 0.8, 
+        "CritMultiplier": 1.3, 
+        "DamagePerLevel": 1.5, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 10.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 100.0, 
+        "RegenerationRate": 1.0, 
+        "CanRegenerate": false, 
+        "RegenerationDelay": 5.0, 
+        "InvulnerabilityDuration": 0.1
+      }
+    }, 
+    {
       "MovementConfig": {
         "CanBeStunned": true
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 3,
-        "ExperiencePerLevel": 1.5,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
-            "MaxQuantity": 1,
+            "ItemID": "Gel", 
+            "MinQuantity": 1, 
+            "MaxQuantity": 1, 
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
+        ], 
         "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
+          "ItemID": "None", 
+          "MinQuantity": 0, 
+          "MaxQuantity": 0, 
           "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
-      }
-    },
-    {
-      "MobID": "Vulture",
-      "MobName": "Vulture",
-      "Level": 2,
-      "HealthConfig": {
-        "MaxHealth": 60.0,
-        "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 6.0
-      },
-      "CombatConfig": {
-        "Damage": 8.0,
-        "MoveSpeed": 1.0,
-        "FlightSpeedMultiplier": 2.0,
-        "Defense": 0.5,
-        "AttackSpeed": 1.2,
-        "AttackRange": 0.5,
-        "KnockbackForce": 0.8,
-        "KnockbackResistance": 0.0,
-        "CritChance": 0.03,
-        "CritMultiplier": 1.4,
-        "PhysicalResistance": 0.0,
-        "FireResistance": 0.0,
-        "IceResistance": 0.0,
-        "LightningResistance": 0.0,
-        "PoisonResistance": 0.0,
-        "MagicResistance": 0.0,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 1.2
-      },
+        }, 
+        "RareDropChance": 0.0, 
+        "ExperiencePerLevel": 1.5, 
+        "HasRareDrop": false, 
+        "BaseExperience": 3, 
+        "DropsLoot": true
+      }, 
+      "Level": 1, 
+      "MobName": "Penguin", 
       "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 9.0,
-        "DeAggressionRange": 14.0,
-        "PatrolRadius": 4.0
-      },
+        "PatrolRadius": 3.0, 
+        "DeAggressionRange": 10.0, 
+        "DetectionRange": 5.0, 
+        "IsHostileToPlayer": false
+      }, 
+      "MobID": "Penguin", 
+      "CombatConfig": {
+        "KnockbackResistance": 0.0, 
+        "KnockbackForce": 0.5, 
+        "CritChance": 0.01, 
+        "FlightSpeedMultiplier": 1.0, 
+        "Damage": 4.0, 
+        "AttackRange": 0.4, 
+        "MoveSpeed": 1.5, 
+        "Defense": 0.0, 
+        "AttackSpeed": 1.0, 
+        "CritMultiplier": 1.2, 
+        "DamagePerLevel": 0.8, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 5.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 50.0, 
+        "RegenerationRate": 1.0, 
+        "CanRegenerate": false, 
+        "RegenerationDelay": 5.0, 
+        "InvulnerabilityDuration": 0.1
+      }
+    }, 
+    {
       "MovementConfig": {
         "CanBeStunned": true
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 5,
-        "ExperiencePerLevel": 2.5,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
-            "MaxQuantity": 2,
+            "ItemID": "Gel", 
+            "MinQuantity": 1, 
+            "MaxQuantity": 2, 
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
+        ], 
         "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
+          "ItemID": "None", 
+          "MinQuantity": 0, 
+          "MaxQuantity": 0, 
           "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
-      }
-    },
-    {
-      "MobID": "Zombie",
-      "MobName": "Zombie",
-      "Level": 2,
-      "HealthConfig": {
-        "MaxHealth": 120.0,
-        "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": false,
-        "RegenerationRate": 0.0,
-        "RegenerationDelay": 0.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 12.0
-      },
-      "CombatConfig": {
-        "Damage": 14.0,
-        "MoveSpeed": 1.2,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 2.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 1.0,
-        "KnockbackForce": 2.0,
-        "KnockbackResistance": 0.2,
-        "CritChance": 0.05,
-        "CritMultiplier": 1.5,
-        "PhysicalResistance": 0.1,
-        "FireResistance": 0.0,
-        "IceResistance": 0.0,
-        "LightningResistance": 0.0,
-        "PoisonResistance": 0.0,
-        "MagicResistance": 0.0,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 2.0
-      },
+        }, 
+        "RareDropChance": 0.0, 
+        "ExperiencePerLevel": 2.5, 
+        "HasRareDrop": false, 
+        "BaseExperience": 5, 
+        "DropsLoot": true
+      }, 
+      "Level": 2, 
+      "MobName": "Vulture", 
       "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 12.0,
-        "DeAggressionRange": 16.0,
-        "PatrolRadius": 5.0
-      },
+        "PatrolRadius": 4.0, 
+        "DeAggressionRange": 14.0, 
+        "DetectionRange": 9.0, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "Vulture", 
+      "CombatConfig": {
+        "KnockbackResistance": 0.0, 
+        "KnockbackForce": 0.8, 
+        "CritChance": 0.03, 
+        "FlightSpeedMultiplier": 2.0, 
+        "Damage": 8.0, 
+        "AttackRange": 0.5, 
+        "MoveSpeed": 1.0, 
+        "Defense": 0.5, 
+        "AttackSpeed": 1.2, 
+        "CritMultiplier": 1.4, 
+        "DamagePerLevel": 1.2, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 6.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 60.0, 
+        "RegenerationRate": 1.0, 
+        "CanRegenerate": false, 
+        "RegenerationDelay": 5.0, 
+        "InvulnerabilityDuration": 0.1
+      }
+    }, 
+    {
       "MovementConfig": {
         "CanBeStunned": true
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 12,
-        "ExperiencePerLevel": 5.0,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
-            "MaxQuantity": 2,
+            "ItemID": "Gel", 
+            "MinQuantity": 1, 
+            "MaxQuantity": 2, 
             "DropChance": 0.6
           }
-        ],
-        "HasRareDrop": false,
+        ], 
         "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
+          "ItemID": "None", 
+          "MinQuantity": 0, 
+          "MaxQuantity": 0, 
           "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
-      }
-    },
-     {
-      "MobID": "PrinceSlime",
-      "MobName": "Prince Slime",
-      "Level": 1,
-      "HealthConfig": {
-        "MaxHealth": 500.0,
-        "InvulnerabilityDuration": 0.5,
-        "CanRegenerate": true,
-        "RegenerationRate": 5.0,
-        "RegenerationDelay": 2.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 200.0
-      },
-      "CombatConfig": {
-        "Damage": 15.0,
-        "MoveSpeed": 1.4,
-        "FlightSpeedMultiplier": 2.0,
-        "Defense": 5.0,
-        "AttackSpeed": 1.5,
-        "AttackRange": 1.25,
-        "KnockbackForce": 0.5,
-        "KnockbackResistance": 0.9,
-        "CritChance": 0.15,
-        "CritMultiplier": 2.0,
-        "PhysicalResistance": 0.3,
-        "FireResistance": 0.2,
-        "IceResistance": 0.1,
-        "LightningResistance": 0.1,
-        "PoisonResistance": 0.4,
-        "MagicResistance": 0.2,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 1.0
-      },
+        }, 
+        "RareDropChance": 0.0, 
+        "ExperiencePerLevel": 5.0, 
+        "HasRareDrop": false, 
+        "BaseExperience": 12, 
+        "DropsLoot": true
+      }, 
+      "Level": 2, 
+      "MobName": "Zombie", 
       "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 10.0,
-        "DeAggressionRange": 75.0,
-        "PatrolRadius": 10.0
-      },
+        "PatrolRadius": 5.0, 
+        "DeAggressionRange": 16.0, 
+        "DetectionRange": 12.0, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "Zombie", 
+      "CombatConfig": {
+        "KnockbackResistance": 0.2, 
+        "KnockbackForce": 2.0, 
+        "CritChance": 0.05, 
+        "FlightSpeedMultiplier": 1.0, 
+        "Damage": 14.0, 
+        "AttackRange": 1.0, 
+        "MoveSpeed": 1.2, 
+        "Defense": 2.0, 
+        "AttackSpeed": 1.0, 
+        "CritMultiplier": 1.5, 
+        "DamagePerLevel": 2.0, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 12.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 120.0, 
+        "RegenerationRate": 0.0, 
+        "CanRegenerate": false, 
+        "RegenerationDelay": 0.0, 
+        "InvulnerabilityDuration": 0.1
+      }
+    }, 
+    {
       "MovementConfig": {
         "CanBeStunned": false
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 500,
-        "ExperiencePerLevel": 50.0,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 50,
-            "MaxQuantity": 100,
+            "ItemID": "Gel", 
+            "MinQuantity": 50, 
+            "MaxQuantity": 100, 
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": true,
+        ], 
         "RareDrop": {
-          "ItemID": "Gel",
-          "MinQuantity": 1,
-          "MaxQuantity": 1,
+          "ItemID": "Gel", 
+          "MinQuantity": 1, 
+          "MaxQuantity": 1, 
           "DropChance": 1.0
-        },
-        "RareDropChance": 0.1
-      }
-    },
-    {
-      "MobID": "ShroomletTyrant",
-      "MobName": "Shroomlet Tyrant",
-      "Level": 1,
-      "HealthConfig": {
-        "MaxHealth": 1000.0,
-        "InvulnerabilityDuration": 0.5,
-        "CanRegenerate": true,
-        "RegenerationRate": 5.0,
-        "RegenerationDelay": 2.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 200.0
-      },
-      "CombatConfig": {
-        "Damage": 2.0,
-        "MoveSpeed": 1.4,
-        "FlightSpeedMultiplier": 2.0,
-        "Defense": 5.0,
-        "AttackSpeed": 1.5,
-        "AttackRange": 1.25,
-        "KnockbackForce": 0.5,
-        "KnockbackResistance": 0.9,
-        "CritChance": 0.15,
-        "CritMultiplier": 2.0,
-        "PhysicalResistance": 0.3,
-        "FireResistance": 0.2,
-        "IceResistance": 0.1,
-        "LightningResistance": 0.1,
-        "PoisonResistance": 0.4,
-        "MagicResistance": 0.2,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 1.0
-      },
+        }, 
+        "RareDropChance": 0.1, 
+        "ExperiencePerLevel": 50.0, 
+        "HasRareDrop": true, 
+        "BaseExperience": 500, 
+        "DropsLoot": true
+      }, 
+      "Level": 1, 
+      "MobName": "Prince Slime", 
       "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 10.0,
-        "DeAggressionRange": 75.0,
-        "PatrolRadius": 10.0
-      },
+        "PatrolRadius": 10.0, 
+        "DeAggressionRange": 75.0, 
+        "DetectionRange": 10.0, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "PrinceSlime", 
+      "CombatConfig": {
+        "KnockbackResistance": 0.9, 
+        "KnockbackForce": 0.5, 
+        "CritChance": 0.15, 
+        "FlightSpeedMultiplier": 2.0, 
+        "Damage": 15.0, 
+        "AttackRange": 1.25, 
+        "MoveSpeed": 1.4, 
+        "Defense": 5.0, 
+        "AttackSpeed": 1.5, 
+        "CritMultiplier": 2.0, 
+        "DamagePerLevel": 1.0, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 200.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 500.0, 
+        "RegenerationRate": 5.0, 
+        "CanRegenerate": true, 
+        "RegenerationDelay": 2.0, 
+        "InvulnerabilityDuration": 0.5
+      }
+    }, 
+    {
       "MovementConfig": {
         "CanBeStunned": false
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 500,
-        "ExperiencePerLevel": 50.0,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 50,
-            "MaxQuantity": 100,
+            "ItemID": "Gel", 
+            "MinQuantity": 50, 
+            "MaxQuantity": 100, 
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": true,
+        ], 
         "RareDrop": {
-          "ItemID": "Gel",
-          "MinQuantity": 1,
-          "MaxQuantity": 1,
+          "ItemID": "Gel", 
+          "MinQuantity": 1, 
+          "MaxQuantity": 1, 
           "DropChance": 1.0
-        },
-        "RareDropChance": 0.1
-      }
-    },
-    {
-      "MobID": "Centipede",
-      "MobName": "Centipede",
-      "Level": 10,
-      "HealthConfig": {
-        "MaxHealth": 1800.0,
-        "InvulnerabilityDuration": 0.3,
-        "CanRegenerate": true,
-        "RegenerationRate": 4.0,
-        "RegenerationDelay": 3.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 180.0
-      },
-      "CombatConfig": {
-        "Damage": 45.0,
-        "MoveSpeed": 1.6,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 15.0,
-        "AttackSpeed": 2.0,
-        "AttackRange": 1.5,
-        "KnockbackForce": 1.0,
-        "KnockbackResistance": 1.0,
-        "CritChance": 0.12,
-        "CritMultiplier": 1.8,
-        "PhysicalResistance": 0.2,
-        "FireResistance": 0.1,
-        "IceResistance": 0.3,
-        "LightningResistance": 0.2,
-        "PoisonResistance": 0.8,
-        "MagicResistance": 0.1,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 8.0
-      },
+        }, 
+        "RareDropChance": 0.1, 
+        "ExperiencePerLevel": 50.0, 
+        "HasRareDrop": true, 
+        "BaseExperience": 500, 
+        "DropsLoot": true
+      }, 
+      "Level": 1, 
+      "MobName": "Shroomlet Tyrant", 
       "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 50.0,
-        "DeAggressionRange": 75.0,
-        "PatrolRadius": 10.0
-      },
+        "PatrolRadius": 10.0, 
+        "DeAggressionRange": 75.0, 
+        "DetectionRange": 10.0, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "ShroomletTyrant", 
+      "CombatConfig": {
+        "KnockbackResistance": 0.9, 
+        "KnockbackForce": 0.5, 
+        "CritChance": 0.15, 
+        "FlightSpeedMultiplier": 2.0, 
+        "Damage": 2.0, 
+        "AttackRange": 1.25, 
+        "MoveSpeed": 1.4, 
+        "Defense": 5.0, 
+        "AttackSpeed": 1.5, 
+        "CritMultiplier": 2.0, 
+        "DamagePerLevel": 1.0, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 200.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 1000.0, 
+        "RegenerationRate": 5.0, 
+        "CanRegenerate": true, 
+        "RegenerationDelay": 2.0, 
+        "InvulnerabilityDuration": 0.5
+      }
+    }, 
+    {
       "MovementConfig": {
         "CanBeStunned": false
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 450,
-        "ExperiencePerLevel": 45.0,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 40,
-            "MaxQuantity": 80,
+            "ItemID": "Gel", 
+            "MinQuantity": 40, 
+            "MaxQuantity": 80, 
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": true,
+        ], 
         "RareDrop": {
-          "ItemID": "Gel",
-          "MinQuantity": 1,
-          "MaxQuantity": 1,
+          "ItemID": "Gel", 
+          "MinQuantity": 1, 
+          "MaxQuantity": 1, 
           "DropChance": 1.0
-        },
-        "RareDropChance": 0.1
-      }
-    },
-    {
-      "MobID": "Vinefang",
-      "MobName": "Vinefang",
-      "Level": 7,
-      "HealthConfig": {
-        "MaxHealth": 900.0,
-        "InvulnerabilityDuration": 0.3,
-        "CanRegenerate": true,
-        "RegenerationRate": 3.0,
-        "RegenerationDelay": 3.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 90.0
-      },
-      "CombatConfig": {
-        "Damage": 0.350,
-        "MoveSpeed": 1.4,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 10.0,
-        "AttackSpeed": 1.5,
-        "AttackRange": 1.0,
-        "KnockbackForce": 1.5,
-        "KnockbackResistance": 0.4,
-        "CritChance": 0.08,
-        "CritMultiplier": 1.7,
-        "PhysicalResistance": 0.2,
-        "FireResistance": 0.3,
-        "IceResistance": -0.2,
-        "LightningResistance": 0.0,
-        "PoisonResistance": 0.5,
-        "MagicResistance": 0.1,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 4.0
-      },
+        }, 
+        "RareDropChance": 0.1, 
+        "ExperiencePerLevel": 45.0, 
+        "HasRareDrop": true, 
+        "BaseExperience": 450, 
+        "DropsLoot": true
+      }, 
+      "Level": 10, 
+      "MobName": "Centipede", 
       "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 1.0,
-        "DeAggressionRange": 20.0,
-        "PatrolRadius": 0.0
-      },
+        "PatrolRadius": 10.0, 
+        "DeAggressionRange": 75.0, 
+        "DetectionRange": 50.0, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "Centipede", 
+      "CombatConfig": {
+        "KnockbackResistance": 1.0, 
+        "KnockbackForce": 1.0, 
+        "CritChance": 0.12, 
+        "FlightSpeedMultiplier": 1.0, 
+        "Damage": 45.0, 
+        "AttackRange": 1.5, 
+        "MoveSpeed": 1.6, 
+        "Defense": 15.0, 
+        "AttackSpeed": 2.0, 
+        "CritMultiplier": 1.8, 
+        "DamagePerLevel": 8.0, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 180.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 1800.0, 
+        "RegenerationRate": 4.0, 
+        "CanRegenerate": true, 
+        "RegenerationDelay": 3.0, 
+        "InvulnerabilityDuration": 0.3
+      }
+    }, 
+    {
       "MovementConfig": {
         "CanBeStunned": false
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 300,
-        "ExperiencePerLevel": 30.0,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
-            "MaxQuantity": 3,
+            "ItemID": "Gel", 
+            "MinQuantity": 1, 
+            "MaxQuantity": 3, 
             "DropChance": 0.8
           }
-        ],
-        "HasRareDrop": true,
+        ], 
         "RareDrop": {
-          "ItemID": "Gel",
-          "MinQuantity": 1,
-          "MaxQuantity": 1,
+          "ItemID": "Gel", 
+          "MinQuantity": 1, 
+          "MaxQuantity": 1, 
           "DropChance": 0.2
-        },
-        "RareDropChance": 0.05
-      }
-    },
-    {
-      "MobID": "Thorncoil",
-      "MobName": "Thorncoil",
-      "Level": 12,
-      "HealthConfig": {
-        "MaxHealth": 2200.0,
-        "InvulnerabilityDuration": 0.4,
-        "CanRegenerate": false,
-        "RegenerationRate": 2.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 180.0
-      },
-      "CombatConfig": {
-        "Damage": 60.0,
-        "MoveSpeed": 1.2,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 20.0,
-        "AttackSpeed": 1.2,
-        "AttackRange": 1.8,
-        "KnockbackForce": 2.0,
-        "KnockbackResistance": 0.8,
-        "CritChance": 0.12,
-        "CritMultiplier": 1.9,
-        "PhysicalResistance": 0.4,
-        "FireResistance": 0.1,
-        "IceResistance": 0.2,
-        "LightningResistance": 0.0,
-        "PoisonResistance": 0.7,
-        "MagicResistance": 0.3,
-        "ScaleWithLevel": true,
-        "DamagePerLevel": 10.0
-      },
+        }, 
+        "RareDropChance": 0.05, 
+        "ExperiencePerLevel": 30.0, 
+        "HasRareDrop": true, 
+        "BaseExperience": 300, 
+        "DropsLoot": true
+      }, 
+      "Level": 7, 
+      "MobName": "Vinefang", 
       "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 60.0,
-        "DeAggressionRange": 90.0,
-        "PatrolRadius": 12.0
-      },
+        "PatrolRadius": 0.0, 
+        "DeAggressionRange": 20.0, 
+        "DetectionRange": 1.0, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "Vinefang", 
+      "CombatConfig": {
+        "KnockbackResistance": 0.4, 
+        "KnockbackForce": 1.5, 
+        "CritChance": 0.08, 
+        "FlightSpeedMultiplier": 1.0, 
+        "Damage": 0.35, 
+        "AttackRange": 1.0, 
+        "MoveSpeed": 1.4, 
+        "Defense": 10.0, 
+        "AttackSpeed": 1.5, 
+        "CritMultiplier": 1.7, 
+        "DamagePerLevel": 4.0, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 90.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 900.0, 
+        "RegenerationRate": 3.0, 
+        "CanRegenerate": true, 
+        "RegenerationDelay": 3.0, 
+        "InvulnerabilityDuration": 0.3
+      }
+    }, 
+    {
       "MovementConfig": {
         "CanBeStunned": false
-      },
+      }, 
       "LootConfig": {
-        "BaseExperience": 700,
-        "ExperiencePerLevel": 70.0,
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 2,
-            "MaxQuantity": 5,
+            "ItemID": "Gel", 
+            "MinQuantity": 2, 
+            "MaxQuantity": 5, 
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": true,
+        ], 
         "RareDrop": {
-          "ItemID": "Gel",
-          "MinQuantity": 1,
-          "MaxQuantity": 1,
+          "ItemID": "Gel", 
+          "MinQuantity": 1, 
+          "MaxQuantity": 1, 
           "DropChance": 0.2
-        },
-        "RareDropChance": 0.12
+        }, 
+        "RareDropChance": 0.12, 
+        "ExperiencePerLevel": 70.0, 
+        "HasRareDrop": true, 
+        "BaseExperience": 700, 
+        "DropsLoot": true
+      }, 
+      "Level": 12, 
+      "MobName": "Thorncoil", 
+      "AIConfig": {
+        "PatrolRadius": 12.0, 
+        "DeAggressionRange": 90.0, 
+        "DetectionRange": 60.0, 
+        "IsHostileToPlayer": true
+      }, 
+      "MobID": "Thorncoil", 
+      "CombatConfig": {
+        "KnockbackResistance": 0.8, 
+        "KnockbackForce": 2.0, 
+        "CritChance": 0.12, 
+        "FlightSpeedMultiplier": 1.0, 
+        "Damage": 60.0, 
+        "AttackRange": 1.8, 
+        "MoveSpeed": 1.2, 
+        "Defense": 20.0, 
+        "AttackSpeed": 1.2, 
+        "CritMultiplier": 1.9, 
+        "DamagePerLevel": 10.0, 
+        "ScaleWithLevel": true
+      }, 
+      "HealthConfig": {
+        "HealthPerLevel": 180.0, 
+        "ScaleWithLevel": true, 
+        "MaxHealth": 2200.0, 
+        "RegenerationRate": 2.0, 
+        "CanRegenerate": false, 
+        "RegenerationDelay": 5.0, 
+        "InvulnerabilityDuration": 0.4
       }
     }
   ]

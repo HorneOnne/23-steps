@@ -1,0 +1,325 @@
+import json, re
+
+data = json.load(open(r'd:\23-steps\wiki\mob_configs.json'))
+js   = json.dumps(data, separators=(',', ':'))
+
+# ── mob.html template ──────────────────────────────────────────
+MOB_HTML = r'''<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="pageTitle">Mob — Mine &amp; Dungeon Wiki | 23-Steps</title>
+  <link rel="icon" type="image/png" href="../icon2.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html,body{font-family:'Inter',sans-serif;background-image:url('../background-loop.png');background-repeat:repeat;background-size:256px 256px;background-color:#2b2b2b;color:white;display:flex;flex-direction:column;min-height:100vh;position:relative}
+    body::before{content:"";position:fixed;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,0.2));pointer-events:none;z-index:1}
+    main{flex:1;position:relative;z-index:2}
+    header{background-color:#1f1f2e;height:60px;padding:0 20px;display:flex;justify-content:space-between;align-items:stretch;border-bottom:1px solid #333;position:relative;z-index:10}
+    header h1{font-family:'Press Start 2P',cursive;font-size:1.4em;color:#99ccff;margin:0;display:flex;align-items:center;gap:10px}
+    header h1 a{color:inherit;text-decoration:none;display:flex;align-items:center;gap:10px}
+    .logo{height:50px;object-fit:contain}
+    nav{display:flex;align-items:center}
+    nav a{color:#ccc;text-decoration:none;font-weight:bold;padding:0 20px;height:100%;display:flex;align-items:center;font-size:0.85em;transition:color .15s}
+    nav a.active{background-color:#2b3a59;color:white}
+    nav a:hover:not(.active){color:#fff}
+
+    /* ── Page Header ── */
+    .wiki-page-header{background-color:#161825;border-bottom:2px solid #2b3a59;padding:24px 24px 0}
+    .breadcrumb{font-size:0.7em;color:#6ab0f3;margin-bottom:10px}
+    .breadcrumb a{color:#6ab0f3;text-decoration:none}
+    .breadcrumb a:hover{text-decoration:underline}
+    .wiki-page-header h2{font-family:'Press Start 2P',cursive;font-size:clamp(0.85rem,2.5vw,1.3rem);color:#99ccff;margin-bottom:5px}
+    .wiki-page-header p{color:#8fa3c8;font-size:0.83em;margin-bottom:18px}
+    .tab-bar{display:flex;border-top:1px solid #2b3a59;overflow-x:auto}
+    .tab-bar::-webkit-scrollbar{height:0}
+    .tab-btn{display:flex;align-items:center;gap:7px;padding:11px 20px;color:#8fa3c8;font-weight:600;font-size:0.82em;cursor:pointer;border:none;background:transparent;border-bottom:3px solid transparent;white-space:nowrap;transition:color .15s,border-color .15s,background .15s;text-decoration:none;font-family:inherit}
+    .tab-btn:hover{color:#c8d1e1;background:rgba(255,255,255,.04)}
+    .tab-btn.active{color:#6ab0f3;border-bottom-color:#6ab0f3;background:rgba(106,176,243,.06)}
+    .tab-btn.disabled{opacity:.4;cursor:default;pointer-events:none}
+    .tab-badge{font-size:.6em;background:#1a2332;border:1px solid #2b3a59;color:#4a576b;padding:1px 5px;border-radius:3px}
+
+    /* ── Content ── */
+    .content-wrap{max-width:860px;margin:0 auto;padding:28px 20px}
+
+    /* ── Mob Header Card ── */
+    .mob-header-card{
+      background:#0d1420;border:1px solid #2b3a59;border-radius:12px;
+      display:flex;align-items:center;gap:24px;
+      padding:24px 28px;margin-bottom:24px;
+    }
+    .mob-header-img{
+      width:100px;height:100px;flex-shrink:0;
+      background:#111827;border:1px solid #2b3a59;border-radius:10px;
+      display:flex;align-items:center;justify-content:center;overflow:hidden;
+    }
+    .mob-header-img img{width:100px;height:100px;object-fit:contain;image-rendering:pixelated}
+    .mob-header-img .ph{font-size:3rem;opacity:.3}
+    .mob-header-info{flex:1;min-width:0}
+    .mob-header-name{font-family:'Press Start 2P',cursive;font-size:clamp(0.9rem,2vw,1.2rem);color:#99ccff;margin-bottom:10px;line-height:1.5}
+    .mob-header-badges{display:flex;flex-wrap:wrap;gap:6px}
+    .badge{font-size:0.65em;font-weight:700;padding:3px 9px;border-radius:4px}
+    .badge-hostile{background:rgba(220,38,38,.18);border:1px solid rgba(220,38,38,.35);color:#f87171}
+    .badge-neutral{background:rgba(234,179,8,.13);border:1px solid rgba(234,179,8,.28);color:#fbbf24}
+    .badge-level{background:#1a2332;border:1px solid #2b3a59;color:#6ab0f3}
+    .badge-regen{background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.28);color:#4ade80}
+    .badge-stun{background:rgba(167,139,250,.12);border:1px solid rgba(167,139,250,.25);color:#a78bfa}
+
+    /* ── Sections ── */
+    .section{background:#0d1420;border:1px solid #1e2a3a;border-radius:10px;padding:20px 22px;margin-bottom:16px}
+    .section-title{font-family:'Press Start 2P',cursive;font-size:0.62rem;color:#6ab0f3;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+    .section-title i{font-size:0.9em}
+
+    /* ── Stat Grid ── */
+    .stat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:8px}
+    .stat-item{background:#111827;border:1px solid #1a2535;border-radius:6px;padding:10px 12px}
+    .stat-label{font-size:0.58em;color:#4a576b;text-transform:uppercase;letter-spacing:.05em;margin-bottom:3px}
+    .stat-value{font-size:0.9em;font-weight:700;color:#c8d1e1}
+    .stat-value.green{color:#4ade80}
+    .stat-value.red{color:#f87171}
+    .stat-value.yellow{color:#fbbf24}
+    .stat-value.blue{color:#60a5fa}
+    .stat-value.purple{color:#a78bfa}
+
+    /* ── Loot ── */
+    .loot-grid{display:flex;flex-direction:column;gap:8px}
+    .loot-row{
+      display:flex;align-items:center;gap:12px;
+      background:#111827;border:1px solid #1a2535;border-radius:6px;
+      padding:10px 14px;
+    }
+    .loot-icon-wrap{
+      width:40px;height:40px;flex-shrink:0;
+      background:#0d1420;border:1px solid #2b3a59;border-radius:6px;
+      display:flex;align-items:center;justify-content:center;overflow:hidden;
+    }
+    .loot-icon-wrap img{width:36px;height:36px;object-fit:contain;image-rendering:pixelated}
+    .loot-icon-wrap .loot-ph{font-size:1.2rem;opacity:.4}
+    .loot-info{flex:1;min-width:0}
+    .loot-name{font-size:0.82em;font-weight:700;color:#c8d1e1}
+    .loot-meta{font-size:0.7em;color:#6a7f9e;margin-top:2px}
+    .loot-right{display:flex;flex-direction:column;align-items:flex-end;gap:3px}
+    .loot-qty{font-size:0.75em;color:#8fa3c8;font-weight:600}
+    .loot-chance{font-size:0.82em;font-weight:700;color:#fbbf24}
+    .loot-rare-tag{font-size:0.55em;font-weight:700;padding:2px 6px;border-radius:3px;background:rgba(251,146,60,.15);border:1px solid rgba(251,146,60,.3);color:#fb923c;margin-top:2px}
+    .no-loot{font-size:0.78em;color:#4a576b;padding:4px 0}
+
+    /* ── Back button ── */
+    .back-btn{
+      display:inline-flex;align-items:center;gap:7px;
+      background:#111827;border:1px solid #2b3a59;border-radius:6px;
+      color:#6ab0f3;font-size:0.78em;font-weight:600;
+      padding:7px 14px;text-decoration:none;margin-bottom:20px;
+      transition:background .15s,border-color .15s;
+    }
+    .back-btn:hover{background:#1e2d4a;border-color:#6ab0f3}
+
+    /* ── Not found ── */
+    .not-found{text-align:center;padding:80px 20px;color:#4a576b}
+    .not-found i{font-size:3rem;margin-bottom:16px;display:block}
+
+    /* ── Footer ── */
+    footer{text-align:center;padding:10px;font-size:0.8em;color:#ccc;background-color:#1f1f2e;border-top:1px solid #333;font-weight:bold;position:relative;z-index:2}
+    footer a{color:#79aaff;text-decoration:none}
+    footer a:hover{text-decoration:underline}
+
+    @media(max-width:600px){
+      .mob-header-card{flex-direction:column;align-items:flex-start;gap:16px}
+      .stat-grid{grid-template-columns:1fr 1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>
+      <a href="../index.html">
+        <img src="../images/logo.png" alt="23-Steps" class="logo" />
+        <span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">23-Steps</span>
+      </a>
+    </h1>
+    <nav>
+      <a href="../index.html">HOME</a>
+      <a href="../games.html">GAMES</a>
+      <a href="mine-dungeon.html" class="active">WIKI</a>
+    </nav>
+  </header>
+
+  <div class="wiki-page-header">
+    <div class="breadcrumb">
+      <a href="../index.html">23-Steps</a> &rsaquo;
+      <a href="index.html">Wiki</a> &rsaquo;
+      <a href="mine-dungeon.html">Mine &amp; Dungeon</a> &rsaquo;
+      <a href="mobs.html">Mobs</a> &rsaquo;
+      <span id="breadcrumbName">...</span>
+    </div>
+    <h2 id="pageHeading"><i class="fas fa-skull"></i>&nbsp; Mob</h2>
+    <p id="pageSubtitle">Loading...</p>
+    <div class="tab-bar">
+      <a class="tab-btn active" href="mobs.html"><i class="fas fa-skull"></i> Mobs</a>
+      <a class="tab-btn" href="items.html"><i class="fas fa-boxes"></i> Items</a>
+      <span class="tab-btn disabled"><i class="fas fa-map"></i> Maps <span class="tab-badge">Soon</span></span>
+      <span class="tab-btn disabled"><i class="fas fa-scroll"></i> Quests <span class="tab-badge">Soon</span></span>
+      <span class="tab-btn disabled"><i class="fas fa-hat-wizard"></i> Bosses <span class="tab-badge">Soon</span></span>
+      <span class="tab-btn disabled"><i class="fas fa-hammer"></i> Crafting <span class="tab-badge">Soon</span></span>
+    </div>
+  </div>
+
+  <main>
+    <div class="content-wrap" id="pageContent">
+      <div class="not-found"><i class="fas fa-spinner fa-spin"></i><p>Loading...</p></div>
+    </div>
+  </main>
+
+  <footer>
+    &copy;2026 23-Steps. All rights reserved |
+    <a href="../privacy-policy.html">Privacy Policy</a> |
+    <a href="../terms-of-service.html">Terms of Service</a> |
+    <a href="../delete-account.html">Delete Account</a>
+  </footer>
+
+  <script id="mob-data" type="application/json">MOB_JSON_PLACEHOLDER</script>
+  <script>
+    /* ── Helpers ── */
+    function fmt(v) { return (v % 1 === 0) ? v : parseFloat(v.toFixed(2)); }
+    function pct(v) { return Math.round(v * 100) + '%'; }
+    function stat(label, value, cls) {
+      return '<div class="stat-item"><div class="stat-label">' + label + '</div>' +
+        '<div class="stat-value' + (cls ? ' ' + cls : '') + '">' + value + '</div></div>';
+    }
+
+    /* ── Try to load mob from inline data ── */
+    var allMobs = [];
+    (function () {
+      var s = document.getElementById('mob-data');
+      if (s) { var d = JSON.parse(s.textContent); allMobs = d.MobConfigs || []; }
+    })();
+
+    /* ── Get mob id from URL query string ── */
+    var params = {};
+    location.search.replace(/[?&]([^=]+)=([^&]*)/g, function (_, k, v) { params[k] = decodeURIComponent(v); });
+    var mobId = params.id || '';
+    var mob = allMobs.find(function (m) { return m.MobID === mobId; });
+
+    /* ── Item icon lookup (case-insensitive first-letter lowercase fallback) ── */
+    function itemIconSrc(itemId) {
+      return 'assets/items/' + itemId + '.png';
+    }
+
+    /* ── Build the page ── */
+    if (!mob) {
+      document.getElementById('pageContent').innerHTML =
+        '<div class="not-found"><i class="fas fa-ghost"></i><p>Mob not found.</p><a class="back-btn" href="mobs.html"><i class="fas fa-arrow-left"></i> Back to Mobs</a></div>';
+    } else {
+      var c = mob.CombatConfig, h = mob.HealthConfig, loot = mob.LootConfig, mv = mob.MovementConfig;
+      var ai = mob.AIConfig;
+      var hostile = ai.IsHostileToPlayer;
+      var mobName = mob.MobName;
+
+      /* page title */
+      document.title = mobName + ' \u2014 Mine & Dungeon Wiki | 23-Steps';
+      document.getElementById('breadcrumbName').textContent = mobName;
+      document.getElementById('pageHeading').innerHTML = '<i class="fas fa-skull"></i>&nbsp; ' + mobName;
+      document.getElementById('pageSubtitle').textContent = (hostile ? 'Hostile mob' : 'Neutral mob') + ' \u2014 Level ' + mob.Level;
+
+      /* badges */
+      var badges =
+        '<span class="badge ' + (hostile ? 'badge-hostile' : 'badge-neutral') + '">' + (hostile ? '&#128308; Hostile' : '&#128992; Neutral') + '</span>' +
+        '<span class="badge badge-level">Lv. ' + mob.Level + '</span>';
+      if (h.CanRegenerate) badges += '<span class="badge badge-regen">&#9829; Regenerates</span>';
+      if (mv && mv.CanBeStunned) badges += '<span class="badge badge-stun">&#128165; Stunnable</span>';
+
+      /* ── Health section ── */
+      var healthHtml = '<div class="stat-grid">';
+      healthHtml += stat('Max HP', fmt(h.MaxHealth), 'green');
+      healthHtml += stat('HP per Level', '+' + fmt(h.HealthPerLevel), 'green');
+      healthHtml += stat('I-Frames', h.InvulnerabilityDuration + 's', '');
+      if (h.CanRegenerate) {
+        healthHtml += stat('Regen Rate', fmt(h.RegenerationRate) + '/s', 'green');
+        healthHtml += stat('Regen Delay', h.RegenerationDelay + 's', '');
+      }
+      healthHtml += '</div>';
+
+      /* ── Combat section ── */
+      var combatHtml = '<div class="stat-grid">';
+      combatHtml += stat('Damage', fmt(c.Damage), 'red');
+      combatHtml += stat('DMG per Level', '+' + fmt(c.DamagePerLevel), 'red');
+      combatHtml += stat('Defense', fmt(c.Defense), 'blue');
+      combatHtml += stat('Attack Speed', fmt(c.AttackSpeed) + 'x', '');
+      combatHtml += stat('Attack Range', fmt(c.AttackRange), '');
+      combatHtml += stat('Move Speed', fmt(c.MoveSpeed) + 'x', 'yellow');
+      combatHtml += stat('Knockback', fmt(c.KnockbackForce), '');
+      combatHtml += stat('KB Resistance', fmt(c.KnockbackResistance), '');
+      combatHtml += stat('Crit Chance', pct(c.CritChance), 'yellow');
+      combatHtml += stat('Crit Multiplier', c.CritMultiplier + 'x', 'yellow');
+      combatHtml += '</div>';
+
+      /* ── Loot section ── */
+      var lootHtml = '';
+      if (loot.DropsLoot && loot.LootDrops && loot.LootDrops.length) {
+        lootHtml += '<div class="loot-grid">';
+        loot.LootDrops.forEach(function (d) {
+          var qty = d.MinQuantity === d.MaxQuantity ? 'x' + d.MinQuantity : 'x' + d.MinQuantity + ' \u2013 x' + d.MaxQuantity;
+          var chance = pct(d.DropChance);
+          var src = itemIconSrc(d.ItemID);
+          lootHtml += '<div class="loot-row">';
+          lootHtml += '<div class="loot-icon-wrap"><img src="' + src + '" alt="' + d.ItemID + '"' +
+            ' onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'" />' +
+            '<span class="loot-ph" style="display:none">&#128142;</span></div>';
+          lootHtml += '<div class="loot-info"><div class="loot-name">' + d.ItemID + '</div></div>';
+          lootHtml += '<div class="loot-right"><span class="loot-qty">' + qty + '</span><span class="loot-chance">' + chance + '</span></div>';
+          lootHtml += '</div>';
+        });
+        if (loot.HasRareDrop && loot.RareDrop && loot.RareDrop.ItemID !== 'None') {
+          var rd = loot.RareDrop;
+          var rqty = rd.MinQuantity === rd.MaxQuantity ? 'x' + rd.MinQuantity : 'x' + rd.MinQuantity + ' \u2013 x' + rd.MaxQuantity;
+          var rsrc = itemIconSrc(rd.ItemID);
+          lootHtml += '<div class="loot-row">';
+          lootHtml += '<div class="loot-icon-wrap"><img src="' + rsrc + '" alt="' + rd.ItemID + '"' +
+            ' onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'" />' +
+            '<span class="loot-ph" style="display:none">&#128142;</span></div>';
+          lootHtml += '<div class="loot-info"><div class="loot-name">' + rd.ItemID + ' <span class="loot-rare-tag">RARE</span></div></div>';
+          lootHtml += '<div class="loot-right"><span class="loot-qty">' + rqty + '</span><span class="loot-chance">' + pct(loot.RareDropChance) + '</span></div>';
+          lootHtml += '</div>';
+        }
+        lootHtml += '</div>';
+      } else {
+        lootHtml = '<div class="no-loot">No loot drops.</div>';
+      }
+
+      /* ── Assemble page ── */
+      document.getElementById('pageContent').innerHTML =
+        '<a class="back-btn" href="mobs.html"><i class="fas fa-arrow-left"></i> Back to Mobs</a>' +
+        '<div class="mob-header-card">' +
+          '<div class="mob-header-img">' +
+            '<img src="assets/' + mob.MobID + '.png" alt="' + mobName + '"' +
+            ' onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'" />' +
+            '<span class="ph" style="display:none">&#128128;</span>' +
+          '</div>' +
+          '<div class="mob-header-info">' +
+            '<div class="mob-header-name">' + mobName + '</div>' +
+            '<div class="mob-header-badges">' + badges + '</div>' +
+          '</div>' +
+        '</div>' +
+        '<div class="section">' +
+          '<div class="section-title"><i class="fas fa-heart"></i> Health</div>' +
+          healthHtml +
+        '</div>' +
+        '<div class="section">' +
+          '<div class="section-title"><i class="fas fa-sword"></i> Combat</div>' +
+          combatHtml +
+        '</div>' +
+        '<div class="section">' +
+          '<div class="section-title"><i class="fas fa-gift"></i> Loot Drops</div>' +
+          lootHtml +
+        '</div>';
+    }
+  </script>
+</body>
+</html>'''
+
+html = MOB_HTML.replace('MOB_JSON_PLACEHOLDER', js)
+open(r'd:\23-steps\wiki\mob.html', 'w').write(html)
+print('Created mob.html,', len(html), 'bytes')
