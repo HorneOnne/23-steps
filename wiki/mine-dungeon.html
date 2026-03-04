@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mine &amp; Dungeon Wiki | 23-Steps</title>
+    <link rel="icon" type="image/png" href="../icon2.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Press+Start+2P&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        /* ── Base ─────────────────────────────────────────── */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            font-family: 'Inter', sans-serif;
+            background-image: url('../background-loop.png');
+            background-repeat: repeat;
+            background-size: 256px 256px;
+            background-color: #2b2b2b;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        main {
+            flex: 1;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* ── Header ───────────────────────────────────────── */
+        header {
+            background-color: #1f1f2e;
+            height: 60px;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            border-bottom: 1px solid #333;
+            position: relative;
+            z-index: 10;
+        }
+
+        header h1 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1.4em;
+            color: #99ccff;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        header h1 a {
+            color: inherit;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        header .logo {
+            height: 50px;
+            object-fit: contain;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            color: #ccc;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0 20px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            font-size: 0.85em;
+        }
+
+        nav a.active {
+            background-color: #2b3a59;
+            color: white;
+        }
+
+        nav a:hover:not(.active) {
+            color: #fff;
+        }
+
+        /* ── Wiki Page Header ─────────────────────────────── */
+        .wiki-page-header {
+            background-color: #161825;
+            border-bottom: 2px solid #2b3a59;
+            padding: 28px 24px 0;
+        }
+
+        .wiki-page-header .breadcrumb {
+            font-size: 0.7em;
+            color: #6ab0f3;
+            margin-bottom: 12px;
+            letter-spacing: 0.04em;
+        }
+
+        .wiki-page-header .breadcrumb a {
+            color: #6ab0f3;
+            text-decoration: none;
+        }
+
+        .wiki-page-header .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .wiki-page-header h2 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: clamp(0.9rem, 2.5vw, 1.4rem);
+            color: #99ccff;
+            margin-bottom: 6px;
+        }
+
+        .wiki-page-header p {
+            color: #8fa3c8;
+            font-size: 0.85em;
+            margin-bottom: 22px;
+        }
+
+        /* ── Tab Bar ──────────────────────────────────────── */
+        .tab-bar {
+            display: flex;
+            gap: 0;
+            margin-top: 4px;
+            border-top: 1px solid #2b3a59;
+            overflow-x: auto;
+        }
+
+        .tab-bar::-webkit-scrollbar {
+            height: 0;
+        }
+
+        .tab-btn {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            padding: 12px 22px;
+            color: #8fa3c8;
+            font-weight: 600;
+            font-size: 0.82em;
+            cursor: pointer;
+            border: none;
+            background: transparent;
+            border-bottom: 3px solid transparent;
+            white-space: nowrap;
+            transition: color .15s, border-color .15s, background .15s;
+            text-decoration: none;
+            font-family: inherit;
+        }
+
+        .tab-btn:hover {
+            color: #c8d1e1;
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .tab-btn.active {
+            color: #6ab0f3;
+            border-bottom-color: #6ab0f3;
+            background: rgba(106, 176, 243, 0.06);
+        }
+
+        .tab-btn.coming-soon {
+            opacity: 0.4;
+            cursor: default;
+            pointer-events: none;
+        }
+
+        .tab-btn .tab-badge {
+            font-size: 0.62em;
+            background: #1a2332;
+            border: 1px solid #2b3a59;
+            color: #4a576b;
+            padding: 1px 5px;
+            border-radius: 3px;
+        }
+
+        /* ── Tab Content ──────────────────────────────────── */
+        .content-wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 32px 20px 48px;
+        }
+
+        /* ── Section cards grid ───────────────────────────── */
+        .section-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .section-card {
+            background: #101824;
+            border: 1px solid #222a33;
+            border-radius: 10px;
+            padding: 22px;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            text-decoration: none;
+            color: inherit;
+            transition: border-color .18s, transform .15s, box-shadow .18s;
+        }
+
+        .section-card:hover {
+            border-color: #3a7ee0;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
+        }
+
+        .section-card-icon {
+            width: 52px;
+            height: 52px;
+            background: #1a2535;
+            border: 1px solid #2b3a59;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .section-card-body .section-card-title {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 0.6rem;
+            color: #6ab0f3;
+            margin-bottom: 6px;
+        }
+
+        .section-card-body p {
+            font-size: 0.78em;
+            color: #8fa3c8;
+            line-height: 1.5;
+        }
+
+        /* ── Footer ───────────────────────────────────────── */
+        footer {
+            text-align: center;
+            padding: 10px;
+            font-size: 0.8em;
+            color: #ccc;
+            background-color: #1f1f2e;
+            border-top: 1px solid #333;
+            font-weight: bold;
+            position: relative;
+            z-index: 2;
+        }
+
+        footer a {
+            color: #79aaff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>
+            <a href="../index.html">
+                <img src="../images/logo.png" alt="23-Steps" class="logo" />
+                <span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">23-Steps</span>
+            </a>
+        </h1>
+        <nav>
+            <a href="../index.html">HOME</a>
+            <a href="../games.html">GAMES</a>
+            <a href="index.html" class="active">WIKI</a>
+        </nav>
+    </header>
+
+    <div class="wiki-page-header">
+        <div class="breadcrumb">
+            <a href="../index.html">23-Steps</a> &rsaquo;
+            <a href="index.html">Wiki</a> &rsaquo;
+            Mine &amp; Dungeon
+        </div>
+        <h2>⛏️ Mine &amp; Dungeon</h2>
+        <p>The complete Mine &amp; Dungeon encyclopedia — mobs, items, and more</p>
+
+        <!-- Tab Bar -->
+        <div class="tab-bar">
+            <a class="tab-btn active" href="mobs.html"><i class="fas fa-skull"></i> Mobs</a>
+            <a class="tab-btn" href="items.html"><i class="fas fa-boxes"></i> Items</a>
+            <span class="tab-btn coming-soon"><i class="fas fa-map"></i> Maps <span class="tab-badge">Soon</span></span>
+            <span class="tab-btn coming-soon"><i class="fas fa-scroll"></i> Quests <span
+                    class="tab-badge">Soon</span></span>
+            <span class="tab-btn coming-soon"><i class="fas fa-hat-wizard"></i> Bosses <span
+                    class="tab-badge">Soon</span></span>
+            <span class="tab-btn coming-soon"><i class="fas fa-hammer"></i> Crafting <span
+                    class="tab-badge">Soon</span></span>
+        </div>
+    </div>
+
+    <main>
+        <div class="content-wrap">
+            <div class="section-grid">
+                <a href="mobs.html" class="section-card">
+                    <div class="section-card-icon">💀</div>
+                    <div class="section-card-body">
+                        <div class="section-card-title">Mobs</div>
+                        <p>All enemy creatures — stats, resistances, loot drops, and AI behaviour.</p>
+                    </div>
+                </a>
+                <a href="items.html" class="section-card">
+                    <div class="section-card-icon">🗡️</div>
+                    <div class="section-card-body">
+                        <div class="section-card-title">Items</div>
+                        <p>Every weapon, armor, tool, and resource with full stats and crafting info.</p>
+                    </div>
+                </a>
+                <div class="section-card" style="opacity:0.4;cursor:default;pointer-events:none;">
+                    <div class="section-card-icon">🗺️</div>
+                    <div class="section-card-body">
+                        <div class="section-card-title">Maps</div>
+                        <p>Coming soon — dungeon floors, biomes, and exploration maps.</p>
+                    </div>
+                </div>
+                <div class="section-card" style="opacity:0.4;cursor:default;pointer-events:none;">
+                    <div class="section-card-icon">📜</div>
+                    <div class="section-card-body">
+                        <div class="section-card-title">Quests</div>
+                        <p>Coming soon — quest chains, rewards, and requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy;2026 23-Steps. All rights reserved |
+        <a href="../privacy-policy.html">Privacy Policy</a> |
+        <a href="../terms-of-service.html">Terms of Service</a> |
+        <a href="../delete-account.html">Delete Account</a>
+    </footer>
+
+</body>
+
+</html>

@@ -113,8 +113,7 @@
     .wiki-page-header {
       background-color: #161825;
       border-bottom: 2px solid #2b3a59;
-      padding: 28px 24px 20px;
-      text-align: center;
+      padding: 24px 24px 0;
     }
 
     .wiki-page-header .breadcrumb {
@@ -135,14 +134,70 @@
 
     .wiki-page-header h2 {
       font-family: 'Press Start 2P', cursive;
-      font-size: clamp(0.9rem, 2.5vw, 1.5rem);
+      font-size: clamp(0.9rem, 2.5vw, 1.4rem);
       color: #99ccff;
-      margin-bottom: 8px;
+      margin-bottom: 5px;
     }
 
     .wiki-page-header p {
       color: #8fa3c8;
-      font-size: 0.85em;
+      font-size: 0.83em;
+      margin-bottom: 18px;
+    }
+
+    /* ── Tab bar ──────────────────────────────────────── */
+    .tab-bar {
+      display: flex;
+      border-top: 1px solid #2b3a59;
+      overflow-x: auto;
+    }
+
+    .tab-bar::-webkit-scrollbar {
+      height: 0;
+    }
+
+    .tab-btn {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 11px 20px;
+      color: #8fa3c8;
+      font-weight: 600;
+      font-size: 0.82em;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      border-bottom: 3px solid transparent;
+      white-space: nowrap;
+      transition: color .15s, border-color .15s, background .15s;
+      text-decoration: none;
+      font-family: inherit;
+    }
+
+    .tab-btn:hover {
+      color: #c8d1e1;
+      background: rgba(255, 255, 255, .04);
+    }
+
+    .tab-btn.active {
+      color: #6ab0f3;
+      border-bottom-color: #6ab0f3;
+      background: rgba(106, 176, 243, .06);
+    }
+
+    .tab-btn.disabled {
+      opacity: .4;
+      cursor: default;
+      pointer-events: none;
+    }
+
+    .tab-badge {
+      font-size: .6em;
+      background: #1a2332;
+      border: 1px solid #2b3a59;
+      color: #4a576b;
+      padding: 1px 5px;
+      border-radius: 3px;
     }
 
     /* ── Controls bar ─────────────────────────────────── */
@@ -460,18 +515,27 @@
     <nav>
       <a href="../index.html">HOME</a>
       <a href="../games.html">GAMES</a>
-      <a href="items.html" class="active">WIKI</a>
+      <a href="mine-dungeon.html" class="active">WIKI</a>
     </nav>
   </header>
 
   <div class="wiki-page-header">
     <div class="breadcrumb">
       <a href="../index.html">23-Steps</a> &rsaquo;
-      <a href="../games.html">Games</a> &rsaquo;
-      Mine &amp; Dungeon Wiki &rsaquo; Items
+      <a href="index.html">Wiki</a> &rsaquo;
+      <a href="mine-dungeon.html">Mine &amp; Dungeon</a> &rsaquo;
+      Items
     </div>
     <h2><i class="fas fa-boxes"></i>&nbsp; Items</h2>
     <p>All items with game data &mdash; click any item for full details</p>
+    <div class="tab-bar">
+      <a class="tab-btn" href="mobs.html"><i class="fas fa-skull"></i> Mobs</a>
+      <a class="tab-btn active" href="items.html"><i class="fas fa-boxes"></i> Items</a>
+      <span class="tab-btn disabled"><i class="fas fa-map"></i> Maps <span class="tab-badge">Soon</span></span>
+      <span class="tab-btn disabled"><i class="fas fa-scroll"></i> Quests <span class="tab-badge">Soon</span></span>
+      <span class="tab-btn disabled"><i class="fas fa-hat-wizard"></i> Bosses <span class="tab-badge">Soon</span></span>
+      <span class="tab-btn disabled"><i class="fas fa-hammer"></i> Crafting <span class="tab-badge">Soon</span></span>
+    </div>
   </div>
 
   <div class="controls-wrap">
