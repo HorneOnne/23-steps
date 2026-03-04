@@ -1,484 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Items — Mine &amp; Dungeon Wiki | 23-Steps</title>
-    <link rel="icon" type="image/png" href="../icon2.png" />
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <style>
-        /* ── Base ─────────────────────────────────────────── */
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html,
-        body {
-            font-family: Arial, sans-serif;
-            background-image: url('../background-loop.png');
-            background-repeat: repeat;
-            background-size: 256px 256px;
-            background-color: #2b2b2b;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            position: relative;
-        }
-
-        body::before {
-            content: "";
-            position: fixed;
-            inset: 0;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        main {
-            flex: 1;
-            position: relative;
-            z-index: 2;
-        }
-
-        /* ── Header ───────────────────────────────────────── */
-        header {
-            background-color: #1f1f2e;
-            height: 60px;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: stretch;
-            border-bottom: 1px solid #333;
-            position: relative;
-            z-index: 10;
-        }
-
-        header h1 {
-            font-family: 'Press Start 2P', cursive;
-            font-size: 1.4em;
-            color: #99ccff;
-            margin: 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        header h1 a {
-            color: inherit;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        header .logo {
-            height: 50px;
-            object-fit: contain;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-        }
-
-        nav a {
-            color: #ccc;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 0 20px;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            font-size: 0.85em;
-        }
-
-        nav a.active {
-            background-color: #2b3a59;
-            color: white;
-        }
-
-        nav a:hover:not(.active) {
-            color: #fff;
-        }
-
-        /* ── Page header ──────────────────────────────────── */
-        .wiki-page-header {
-            background-color: #161825;
-            border-bottom: 2px solid #2b3a59;
-            padding: 28px 24px 20px;
-            text-align: center;
-        }
-
-        .wiki-page-header .breadcrumb {
-            font-size: 0.7em;
-            color: #6ab0f3;
-            margin-bottom: 10px;
-            letter-spacing: 0.04em;
-        }
-
-        .wiki-page-header .breadcrumb a {
-            color: #6ab0f3;
-            text-decoration: none;
-        }
-
-        .wiki-page-header .breadcrumb a:hover {
-            text-decoration: underline;
-        }
-
-        .wiki-page-header h2 {
-            font-family: 'Press Start 2P', cursive;
-            font-size: clamp(0.9rem, 2.5vw, 1.5rem);
-            color: #99ccff;
-            margin-bottom: 8px;
-        }
-
-        .wiki-page-header p {
-            color: #8fa3c8;
-            font-size: 0.85em;
-        }
-
-        /* ── Controls bar ─────────────────────────────────── */
-        .controls-wrap {
-            position: sticky;
-            top: 0;
-            z-index: 9;
-            background-color: #1a1d2e;
-            border-bottom: 1px solid #2b3a59;
-            padding: 10px 20px;
-        }
-
-        .controls {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            align-items: center;
-        }
-
-        .search-box {
-            flex: 1;
-            min-width: 200px;
-            background: #101824;
-            border: 1px solid #2b3a59;
-            border-radius: 5px;
-            padding: 7px 12px;
-            color: #c8d1e1;
-            font-size: 0.85em;
-            outline: none;
-            transition: border-color .2s;
-            font-family: inherit;
-        }
-
-        .search-box:focus {
-            border-color: #6ab0f3;
-        }
-
-        .search-box::placeholder {
-            color: #4a576b;
-        }
-
-        .cat-filters {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 5px;
-        }
-
-        .cat-btn {
-            background: #101824;
-            border: 1px solid #2b3a59;
-            border-radius: 4px;
-            padding: 5px 10px;
-            color: #8fa3c8;
-            font-size: 0.72em;
-            cursor: pointer;
-            transition: all .15s;
-            font-family: inherit;
-            font-weight: bold;
-        }
-
-        .cat-btn:hover {
-            background: #1e2d4a;
-            border-color: #6ab0f3;
-            color: #c8d1e1;
-        }
-
-        .cat-btn.active {
-            background: #2b3a59;
-            border-color: #6ab0f3;
-            color: #fff;
-        }
-
-        /* ── Content wrap ─────────────────────────────────── */
-        .content-wrap {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 24px 20px;
-        }
-
-        /* ── Category sections ────────────────────────────── */
-        .category {
-            margin-bottom: 36px;
-        }
-
-        .cat-header {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 14px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid #2b3a59;
-        }
-
-        .cat-badge {
-            font-size: 0.6em;
-            font-weight: bold;
-            padding: 3px 8px;
-            border-radius: 3px;
-            letter-spacing: 0.07em;
-        }
-
-        .cat-title {
-            font-family: 'Press Start 2P', cursive;
-            font-size: 0.75rem;
-            color: #6ab0f3;
-        }
-
-        .cat-count {
-            margin-left: auto;
-            color: #4a576b;
-            font-size: 0.75em;
-        }
-
-        /* ── Item Grid ────────────────────────────────────── */
-        .item-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
-            gap: 8px;
-        }
-
-        /* ── Item Card (Terraria wiki style) ──────────────── */
-        .item-card {
-            background-color: #0d1420;
-            border: 1px solid #222a33;
-            border-radius: 6px;
-            padding: 8px 6px 7px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 6px;
-            cursor: pointer;
-            transition: border-color .15s, background-color .15s, transform .12s;
-            position: relative;
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .item-card:hover {
-            border-color: var(--rarity-color, #3a7ee0);
-            background-color: #141e30;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
-        }
-
-        /* rarity left border accent */
-        .item-card::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 3px;
-            border-radius: 6px 0 0 6px;
-            background: var(--rarity-color, #555);
-        }
-
-        .item-icon-wrap {
-            width: 48px;
-            height: 48px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #080e18;
-            border: 1px solid #1a2535;
-            border-radius: 4px;
-            overflow: hidden;
-            flex-shrink: 0;
-        }
-
-        .item-icon-wrap img {
-            width: 48px;
-            height: 48px;
-            object-fit: contain;
-            image-rendering: pixelated;
-            image-rendering: crisp-edges;
-        }
-
-        .icon-missing {
-            font-size: 1.4rem;
-            opacity: 0.25;
-        }
-
-        .item-name {
-            font-size: 0.58rem;
-            text-align: center;
-            color: var(--rarity-color, #c8d1e1);
-            line-height: 1.35;
-            word-break: break-word;
-        }
-
-        .item-type-label {
-            font-size: 0.5rem;
-            color: #4a576b;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .item-card.hidden {
-            display: none !important;
-        }
-
-        .category.hidden {
-            display: none !important;
-        }
-
-        /* ── Rarity colours ───────────────────────────────── */
-        .rarity-Common {
-            --rarity-color: #b0bec5;
-        }
-
-        .rarity-Uncommon {
-            --rarity-color: #4ade80;
-        }
-
-        .rarity-Rare {
-            --rarity-color: #60a5fa;
-        }
-
-        .rarity-Epic {
-            --rarity-color: #c084fc;
-        }
-
-        .rarity-Legendary {
-            --rarity-color: #fb923c;
-        }
-
-        /* ── Loading / error ──────────────────────────────── */
-        .loading-state {
-            text-align: center;
-            padding: 60px 20px;
-            color: #6a7f9e;
-            font-size: 0.9em;
-        }
-
-        .loading-state i {
-            font-size: 2rem;
-            margin-bottom: 14px;
-            display: block;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        /* ── Footer ───────────────────────────────────────── */
-        footer {
-            text-align: center;
-            padding: 10px;
-            font-size: 0.8em;
-            color: #ccc;
-            background-color: #1f1f2e;
-            border-top: 1px solid #333;
-            font-weight: bold;
-            position: relative;
-            z-index: 2;
-        }
-
-        footer a {
-            color: #79aaff;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 600px) {
-            .item-grid {
-                grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-            }
-
-            .wiki-page-header h2 {
-                font-size: 0.8rem;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-    <header>
-        <h1>
-            <a href="../index.html">
-                <img src="../images/logo.png" alt="23-Steps" class="logo" />
-                <span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">23-Steps</span>
-            </a>
-        </h1>
-        <nav>
-            <a href="../index.html">HOME</a>
-            <a href="../games.html">GAMES</a>
-            <a href="items.html" class="active">WIKI</a>
-        </nav>
-    </header>
-
-    <div class="wiki-page-header">
-        <div class="breadcrumb">
-            <a href="../index.html">23-Steps</a> &rsaquo;
-            <a href="../games.html">Games</a> &rsaquo;
-            Mine &amp; Dungeon Wiki &rsaquo; Items
-        </div>
-        <h2><i class="fas fa-boxes"></i>&nbsp; Items</h2>
-        <p>All items with game data &mdash; click any item for full details</p>
-    </div>
-
-    <div class="controls-wrap">
-        <div class="controls">
-            <input class="search-box" type="text" id="searchInput" placeholder="&#128269;  Search by name or type..."
-                oninput="applyFilters()" />
-            <div class="cat-filters" id="catFilters">
-                <button class="cat-btn active" data-cat="all" onclick="filterCat(this,'all')">All</button>
-            </div>
-        </div>
-    </div>
-
-    <main>
-        <div class="content-wrap">
-            <div id="itemCatalog">
-                <div class="loading-state">
-                    <i class="fas fa-spinner"></i>
-                    Loading item data…
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        &copy;2026 23-Steps. All rights reserved |
-        <a href="../privacy-policy.html">Privacy Policy</a> |
-        <a href="../terms-of-service.html">Terms of Service</a> |
-        <a href="../delete-account.html">Delete Account</a>
-    </footer>
-<script id="item-data">var ITEM_CONFIGS = {
+var ITEM_CONFIGS = {
   "ItemConfigs": [
     {
       "ItemID": "Dirt",
@@ -610,7 +130,9 @@
       "ItemID": "WoodenSword",
       "ItemType": "Sword",
       "Name": "Wooden Sword",
-      "Description": "4 damage\n2% critical strike chance\n1 knockback",
+      "Description": "4 damage
+2% critical strike chance
+1 knockback",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Common",
@@ -633,7 +155,9 @@
       "ItemID": "CopperSword",
       "ItemType": "Sword",
       "Name": "Copper Sword",
-      "Description": "7 damage\n3% critical strike chance\n3.5 knockback",
+      "Description": "7 damage
+3% critical strike chance
+3.5 knockback",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Common",
@@ -656,7 +180,9 @@
       "ItemID": "TinSword",
       "ItemType": "Sword",
       "Name": "Tin Sword",
-      "Description": "8 damage\n4% critical strike chance\n3.6 knockback",
+      "Description": "8 damage
+4% critical strike chance
+3.6 knockback",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Common",
@@ -679,7 +205,9 @@
       "ItemID": "LeadSword",
       "ItemType": "Sword",
       "Name": "Lead Sword",
-      "Description": "9 damage\n4.5% critical strike chance\n3.7 knockback",
+      "Description": "9 damage
+4.5% critical strike chance
+3.7 knockback",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Uncommon",
@@ -702,7 +230,9 @@
       "ItemID": "IronSword",
       "ItemType": "Sword",
       "Name": "Iron Sword",
-      "Description": "11 damage\n5% critical strike chance\n4 knockback",
+      "Description": "11 damage
+5% critical strike chance
+4 knockback",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Uncommon",
@@ -725,7 +255,9 @@
       "ItemID": "SilverSword",
       "ItemType": "Sword",
       "Name": "Silver Sword",
-      "Description": "15 damage\n7% critical strike chance\n4.5 knockback",
+      "Description": "15 damage
+7% critical strike chance
+4.5 knockback",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Rare",
@@ -748,7 +280,9 @@
       "ItemID": "TungstenSword",
       "ItemType": "Sword",
       "Name": "Tungsten Sword",
-      "Description": "19 damage\n8% critical strike chance\n4.8 knockback",
+      "Description": "19 damage
+8% critical strike chance
+4.8 knockback",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Rare",
@@ -771,7 +305,9 @@
       "ItemID": "GoldSword",
       "ItemType": "Sword",
       "Name": "Gold Sword",
-      "Description": "18 damage\n10% critical strike chance\n4.75 knockback",
+      "Description": "18 damage
+10% critical strike chance
+4.75 knockback",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Epic",
@@ -794,7 +330,9 @@
       "ItemID": "PlatinumSword",
       "ItemType": "Sword",
       "Name": "Platinum Sword",
-      "Description": "22 damage\n12% critical strike chance\n5 knockback",
+      "Description": "22 damage
+12% critical strike chance
+5 knockback",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Epic",
@@ -839,7 +377,9 @@
       "ItemID": "WoodenPickaxe",
       "ItemType": "Pickaxe",
       "Name": "Wooden Pickaxe",
-      "Description": "1 damage\n1 knockback\n2 mining power",
+      "Description": "1 damage
+1 knockback
+2 mining power",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Common",
@@ -861,7 +401,9 @@
       "ItemID": "CopperPickaxe",
       "ItemType": "Pickaxe",
       "Name": "Copper Pickaxe",
-      "Description": "2 damage\n1.5 knockback\n4 mining power",
+      "Description": "2 damage
+1.5 knockback
+4 mining power",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Common",
@@ -883,7 +425,9 @@
       "ItemID": "TinPickaxe",
       "ItemType": "Pickaxe",
       "Name": "Tin Pickaxe",
-      "Description": "2.5 damage\n1.75 knockback\n5 mining power",
+      "Description": "2.5 damage
+1.75 knockback
+5 mining power",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Common",
@@ -905,7 +449,9 @@
       "ItemID": "LeadPickaxe",
       "ItemType": "Pickaxe",
       "Name": "Lead Pickaxe",
-      "Description": "3.5 damage\n2.25 knockback\n7 mining power",
+      "Description": "3.5 damage
+2.25 knockback
+7 mining power",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Uncommon",
@@ -927,7 +473,9 @@
       "ItemID": "IronPickaxe",
       "ItemType": "Pickaxe",
       "Name": "Iron Pickaxe",
-      "Description": "3 damage\n2 knockback\n6 mining power",
+      "Description": "3 damage
+2 knockback
+6 mining power",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Uncommon",
@@ -949,7 +497,9 @@
       "ItemID": "SilverPickaxe",
       "ItemType": "Pickaxe",
       "Name": "Silver Pickaxe",
-      "Description": "4 damage\n2.5 knockback\n8 mining power",
+      "Description": "4 damage
+2.5 knockback
+8 mining power",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Rare",
@@ -971,7 +521,9 @@
       "ItemID": "TungstenPickaxe",
       "ItemType": "Pickaxe",
       "Name": "Tungsten Pickaxe",
-      "Description": "4.5 damage\n2.75 knockback\n9 mining power",
+      "Description": "4.5 damage
+2.75 knockback
+9 mining power",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Rare",
@@ -993,7 +545,9 @@
       "ItemID": "GoldPickaxe",
       "ItemType": "Pickaxe",
       "Name": "Gold Pickaxe",
-      "Description": "5 damage\n3 knockback\n10 mining power",
+      "Description": "5 damage
+3 knockback
+10 mining power",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Epic",
@@ -1015,7 +569,9 @@
       "ItemID": "PlatinumPickaxe",
       "ItemType": "Pickaxe",
       "Name": "Platinum Pickaxe",
-      "Description": "5.5 damage\n3.25 knockback\n11 mining power",
+      "Description": "5.5 damage
+3.25 knockback
+11 mining power",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Epic",
@@ -1037,7 +593,9 @@
       "ItemID": "WoodenBow",
       "ItemType": "Bow",
       "Name": "Wooden Bow",
-      "Description": "5 damage\n2% critical strike chance\n2 knockback",
+      "Description": "5 damage
+2% critical strike chance
+2 knockback",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Common",
@@ -1062,7 +620,9 @@
       "ItemID": "CopperBow",
       "ItemType": "Bow",
       "Name": "Copper Bow",
-      "Description": "7 damage\n3% critical strike chance\n2 knockback",
+      "Description": "7 damage
+3% critical strike chance
+2 knockback",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Common",
@@ -1087,7 +647,9 @@
       "ItemID": "TinBow",
       "ItemType": "Bow",
       "Name": "Tin Bow",
-      "Description": "8 damage\n4% critical strike chance\n2 knockback",
+      "Description": "8 damage
+4% critical strike chance
+2 knockback",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Common",
@@ -1112,7 +674,9 @@
       "ItemID": "LeadBow",
       "ItemType": "Bow",
       "Name": "Lead Bow",
-      "Description": "9 damage\n4.5% critical strike chance\n2 knockback",
+      "Description": "9 damage
+4.5% critical strike chance
+2 knockback",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Uncommon",
@@ -1137,7 +701,9 @@
       "ItemID": "IronBow",
       "ItemType": "Bow",
       "Name": "Iron Bow",
-      "Description": "11 damage\n5% critical strike chance\n2 knockback",
+      "Description": "11 damage
+5% critical strike chance
+2 knockback",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Uncommon",
@@ -1162,7 +728,9 @@
       "ItemID": "SilverBow",
       "ItemType": "Bow",
       "Name": "Silver Bow",
-      "Description": "15 damage\n7% critical strike chance\n2 knockback",
+      "Description": "15 damage
+7% critical strike chance
+2 knockback",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Rare",
@@ -1187,7 +755,9 @@
       "ItemID": "TungstenBow",
       "ItemType": "Bow",
       "Name": "Tungsten Bow",
-      "Description": "19 damage\n8% critical strike chance\n2 knockback",
+      "Description": "19 damage
+8% critical strike chance
+2 knockback",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Rare",
@@ -1212,7 +782,9 @@
       "ItemID": "GoldBow",
       "ItemType": "Bow",
       "Name": "Gold Bow",
-      "Description": "18 damage\n10% critical strike chance\n2 knockback",
+      "Description": "18 damage
+10% critical strike chance
+2 knockback",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Epic",
@@ -1237,7 +809,9 @@
       "ItemID": "PlatinumBow",
       "ItemType": "Bow",
       "Name": "Platinum Bow",
-      "Description": "22 damage\n12% critical strike chance\n2 knockback",
+      "Description": "22 damage
+12% critical strike chance
+2 knockback",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Epic",
@@ -1325,7 +899,8 @@
       "ItemID": "CopperHelmet",
       "ItemType": "Armor",
       "Name": "Copper Helmet",
-      "Description": "Equiptable\n3 defense",
+      "Description": "Equiptable
+3 defense",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Common",
@@ -1348,7 +923,8 @@
       "ItemID": "CopperChestplate",
       "ItemType": "Armor",
       "Name": "Copper Chestplate",
-      "Description": "Equiptable\n5 defense",
+      "Description": "Equiptable
+5 defense",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Common",
@@ -1371,7 +947,8 @@
       "ItemID": "CopperLeggings",
       "ItemType": "Armor",
       "Name": "Copper Leggings",
-      "Description": "Equiptable\n2 defense",
+      "Description": "Equiptable
+2 defense",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Common",
@@ -1394,7 +971,8 @@
       "ItemID": "TinHelmet",
       "ItemType": "Armor",
       "Name": "Tin Helmet",
-      "Description": "Equiptable\n3.5 defense",
+      "Description": "Equiptable
+3.5 defense",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Common",
@@ -1417,7 +995,8 @@
       "ItemID": "TinChestplate",
       "ItemType": "Armor",
       "Name": "Tin Chestplate",
-      "Description": "Equiptable\n5.5 defense",
+      "Description": "Equiptable
+5.5 defense",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Common",
@@ -1440,7 +1019,8 @@
       "ItemID": "TinLeggings",
       "ItemType": "Armor",
       "Name": "Tin Leggings",
-      "Description": "Equiptable\n2.5 defense",
+      "Description": "Equiptable
+2.5 defense",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Common",
@@ -1463,7 +1043,8 @@
       "ItemID": "LeadHelmet",
       "ItemType": "Armor",
       "Name": "Lead Helmet",
-      "Description": "Equiptable\n4 defense",
+      "Description": "Equiptable
+4 defense",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Uncommon",
@@ -1486,7 +1067,8 @@
       "ItemID": "LeadChestplate",
       "ItemType": "Armor",
       "Name": "Lead Chestplate",
-      "Description": "Equiptable\n6 defense",
+      "Description": "Equiptable
+6 defense",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Uncommon",
@@ -1509,7 +1091,8 @@
       "ItemID": "LeadLeggings",
       "ItemType": "Armor",
       "Name": "Lead Leggings",
-      "Description": "Equiptable\n3 defense",
+      "Description": "Equiptable
+3 defense",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Uncommon",
@@ -1532,7 +1115,8 @@
       "ItemID": "IronHelmet",
       "ItemType": "Armor",
       "Name": "Iron Helmet",
-      "Description": "Equiptable\n4.5 defense",
+      "Description": "Equiptable
+4.5 defense",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Uncommon",
@@ -1555,7 +1139,8 @@
       "ItemID": "IronChestplate",
       "ItemType": "Armor",
       "Name": "Iron Chestplate",
-      "Description": "Equiptable\n6.5 defense",
+      "Description": "Equiptable
+6.5 defense",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Uncommon",
@@ -1578,7 +1163,8 @@
       "ItemID": "IronLeggings",
       "ItemType": "Armor",
       "Name": "Iron Leggings",
-      "Description": "Equiptable\n3.5 defense",
+      "Description": "Equiptable
+3.5 defense",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Uncommon",
@@ -1601,7 +1187,8 @@
       "ItemID": "AmberstoneHelmet",
       "ItemType": "Armor",
       "Name": "Amberstone Helmet",
-      "Description": "Equiptable\n5 defense",
+      "Description": "Equiptable
+5 defense",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Uncommon",
@@ -1624,7 +1211,8 @@
       "ItemID": "AmberstoneChestplate",
       "ItemType": "Armor",
       "Name": "Amberstone Chestplate",
-      "Description": "Equiptable\n7 defense",
+      "Description": "Equiptable
+7 defense",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Uncommon",
@@ -1647,7 +1235,8 @@
       "ItemID": "AmberstoneLeggings",
       "ItemType": "Armor",
       "Name": "Amberstone Leggings",
-      "Description": "Equiptable\n4 defense",
+      "Description": "Equiptable
+4 defense",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Uncommon",
@@ -1670,7 +1259,8 @@
       "ItemID": "SilverHelmet",
       "ItemType": "Armor",
       "Name": "Silver Helmet",
-      "Description": "Equiptable\n5.5 defense",
+      "Description": "Equiptable
+5.5 defense",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Rare",
@@ -1693,7 +1283,8 @@
       "ItemID": "SilverChestplate",
       "ItemType": "Armor",
       "Name": "Silver Chestplate",
-      "Description": "Equiptable\n7.5 defense",
+      "Description": "Equiptable
+7.5 defense",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Rare",
@@ -1716,7 +1307,8 @@
       "ItemID": "SilverLeggings",
       "ItemType": "Armor",
       "Name": "Silver Leggings",
-      "Description": "Equiptable\n4.5 defense",
+      "Description": "Equiptable
+4.5 defense",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Rare",
@@ -1739,7 +1331,8 @@
       "ItemID": "TungstenHelmet",
       "ItemType": "Armor",
       "Name": "Tungsten Helmet",
-      "Description": "Equiptable\n6 defense",
+      "Description": "Equiptable
+6 defense",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Rare",
@@ -1762,7 +1355,8 @@
       "ItemID": "TungstenChestplate",
       "ItemType": "Armor",
       "Name": "Tungsten Chestplate",
-      "Description": "Equiptable\n8 defense",
+      "Description": "Equiptable
+8 defense",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Rare",
@@ -1785,7 +1379,8 @@
       "ItemID": "TungstenLeggings",
       "ItemType": "Armor",
       "Name": "Tungsten Leggings",
-      "Description": "Equiptable\n5 defense",
+      "Description": "Equiptable
+5 defense",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Rare",
@@ -1808,7 +1403,8 @@
       "ItemID": "GoldHelmet",
       "ItemType": "Armor",
       "Name": "Gold Helmet",
-      "Description": "Equiptable\n6.5 defense",
+      "Description": "Equiptable
+6.5 defense",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Epic",
@@ -1831,7 +1427,8 @@
       "ItemID": "GoldChestplate",
       "ItemType": "Armor",
       "Name": "Gold Chestplate",
-      "Description": "Equiptable\n8.5 defense",
+      "Description": "Equiptable
+8.5 defense",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Epic",
@@ -1854,7 +1451,8 @@
       "ItemID": "GoldLeggings",
       "ItemType": "Armor",
       "Name": "Gold Leggings",
-      "Description": "Equiptable\n5.5 defense",
+      "Description": "Equiptable
+5.5 defense",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Epic",
@@ -1877,7 +1475,8 @@
       "ItemID": "PlatinumHelmet",
       "ItemType": "Armor",
       "Name": "Platinum Helmet",
-      "Description": "Equiptable\n7 defense",
+      "Description": "Equiptable
+7 defense",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Epic",
@@ -1900,7 +1499,8 @@
       "ItemID": "PlatinumChestplate",
       "ItemType": "Armor",
       "Name": "Platinum Chestplate",
-      "Description": "Equiptable\n9 defense",
+      "Description": "Equiptable
+9 defense",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Epic",
@@ -1923,7 +1523,8 @@
       "ItemID": "PlatinumLeggings",
       "ItemType": "Armor",
       "Name": "Platinum Leggings",
-      "Description": "Equiptable\n6 defense",
+      "Description": "Equiptable
+6 defense",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Epic",
@@ -2766,7 +2367,9 @@
       "ItemID": "Cobalt_Trident",
       "ItemType": "Sword",
       "Name": "Cobalt_Trident",
-      "Description": "150 damage\n50% critical strike chance\n3 knockback",
+      "Description": "150 damage
+50% critical strike chance
+3 knockback",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Legendary",
@@ -3178,7 +2781,9 @@
       "ItemID": "SlimelingCore",
       "ItemType": "Resource",
       "Name": "Slimeling Core",
-      "Description": "Material\nA pulsing core dropped by the Prince Slime\nUsed to exchange for rank upgrade certificates",
+      "Description": "Material
+A pulsing core dropped by the Prince Slime
+Used to exchange for rank upgrade certificates",
       "MaxStackSize": 1,
       "CanBeEnchanted": false,
       "Rarity": "Common",
@@ -5416,7 +5021,10 @@
       "ItemID": "RookieCertificate",
       "ItemType": "Consumable",
       "Name": "Rookie Certificate",
-      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>Unranked</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>Rookie</B></Color><Color=#Ffffff>.</Color>\r\n\r\n<Color=#Ffaa00><B>Requirement:</B></Color>\r\n<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>Unranked</B></Color><Color=#Ffffff>.</Color>",
+      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>Unranked</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>Rookie</B></Color><Color=#Ffffff>.</Color>
+
+<Color=#Ffaa00><B>Requirement:</B></Color>
+<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>Unranked</B></Color><Color=#Ffffff>.</Color>",
       "MaxStackSize": 1,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
@@ -5445,7 +5053,10 @@
       "ItemID": "MinerCertificate",
       "ItemType": "Consumable",
       "Name": "Miner Certificate",
-      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>Rookie</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>Miner</B></Color><Color=#Ffffff>.</Color>\r\n\r\n<Color=#Ffaa00><B>Requirement:</B></Color>\r\n<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>Rookie</B></Color><Color=#Ffffff>.</Color>",
+      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>Rookie</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>Miner</B></Color><Color=#Ffffff>.</Color>
+
+<Color=#Ffaa00><B>Requirement:</B></Color>
+<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>Rookie</B></Color><Color=#Ffffff>.</Color>",
       "MaxStackSize": 1,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
@@ -5474,7 +5085,10 @@
       "ItemID": "ScoutCertificate",
       "ItemType": "Consumable",
       "Name": "Scout Certificate",
-      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>Miner</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>Scout</B></Color><Color=#Ffffff>.</Color>\r\n\r\n<Color=#Ffaa00><B>Requirement:</B></Color>\r\n<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>Miner</B></Color><Color=#Ffffff>.</Color>",
+      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>Miner</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>Scout</B></Color><Color=#Ffffff>.</Color>
+
+<Color=#Ffaa00><B>Requirement:</B></Color>
+<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>Miner</B></Color><Color=#Ffffff>.</Color>",
       "MaxStackSize": 1,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
@@ -5503,7 +5117,10 @@
       "ItemID": "HunterCertificate",
       "ItemType": "Consumable",
       "Name": "Hunter Certificate",
-      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>Scout</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>Hunter</B></Color><Color=#Ffffff>.</Color>\r\n\r\n<Color=#Ffaa00><B>Requirement:</B></Color>\r\n<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>Scout</B></Color><Color=#Ffffff>.</Color>",
+      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>Scout</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>Hunter</B></Color><Color=#Ffffff>.</Color>
+
+<Color=#Ffaa00><B>Requirement:</B></Color>
+<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>Scout</B></Color><Color=#Ffffff>.</Color>",
       "MaxStackSize": 1,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
@@ -5532,7 +5149,10 @@
       "ItemID": "EliteCertificate",
       "ItemType": "Consumable",
       "Name": "Elite Certificate",
-      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>Hunter</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>Elite</B></Color><Color=#Ffffff>.</Color>\r\n\r\n<Color=#Ffaa00><B>Requirement:</B></Color>\r\n<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>Hunter</B></Color><Color=#Ffffff>.</Color>",
+      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>Hunter</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>Elite</B></Color><Color=#Ffffff>.</Color>
+
+<Color=#Ffaa00><B>Requirement:</B></Color>
+<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>Hunter</B></Color><Color=#Ffffff>.</Color>",
       "MaxStackSize": 1,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
@@ -5561,7 +5181,10 @@
       "ItemID": "VeteranCertificate",
       "ItemType": "Consumable",
       "Name": "Veteran Certificate",
-      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>Elite</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>Veteran</B></Color><Color=#Ffffff>.</Color>\r\n\r\n<Color=#Ffaa00><B>Requirement:</B></Color>\r\n<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>Elite</B></Color><Color=#Ffffff>.</Color>",
+      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>Elite</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>Veteran</B></Color><Color=#Ffffff>.</Color>
+
+<Color=#Ffaa00><B>Requirement:</B></Color>
+<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>Elite</B></Color><Color=#Ffffff>.</Color>",
       "MaxStackSize": 1,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
@@ -5590,7 +5213,10 @@
       "ItemID": "ShadowCertificate",
       "ItemType": "Consumable",
       "Name": "Shadow Certificate",
-      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>Veteran</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>Shadow</B></Color><Color=#Ffffff>.</Color>\r\n\r\n<Color=#Ffaa00><B>Requirement:</B></Color>\r\n<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>Veteran</B></Color><Color=#Ffffff>.</Color>",
+      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>Veteran</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>Shadow</B></Color><Color=#Ffffff>.</Color>
+
+<Color=#Ffaa00><B>Requirement:</B></Color>
+<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>Veteran</B></Color><Color=#Ffffff>.</Color>",
       "MaxStackSize": 1,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
@@ -5619,7 +5245,10 @@
       "ItemID": "ConquerorCertificate",
       "ItemType": "Consumable",
       "Name": "Conqueror Certificate",
-      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>Shadow</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>Conqueror</B></Color><Color=#Ffffff>.</Color>\r\n\r\n<Color=#Ffaa00><B>Requirement:</B></Color>\r\n<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>Shadow</B></Color><Color=#Ffffff>.</Color>",
+      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>Shadow</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>Conqueror</B></Color><Color=#Ffffff>.</Color>
+
+<Color=#Ffaa00><B>Requirement:</B></Color>
+<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>Shadow</B></Color><Color=#Ffffff>.</Color>",
       "MaxStackSize": 1,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
@@ -5648,7 +5277,10 @@
       "ItemID": "KingCertificate",
       "ItemType": "Consumable",
       "Name": "King Certificate",
-      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>Conqueror</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>King</B></Color><Color=#Ffffff>.</Color>\r\n\r\n<Color=#Ffaa00><B>Requirement:</B></Color>\r\n<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>Conqueror</B></Color><Color=#Ffffff>.</Color>",
+      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>Conqueror</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>King</B></Color><Color=#Ffffff>.</Color>
+
+<Color=#Ffaa00><B>Requirement:</B></Color>
+<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>Conqueror</B></Color><Color=#Ffffff>.</Color>",
       "MaxStackSize": 1,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
@@ -5677,7 +5309,10 @@
       "ItemID": "OverlordCertificate",
       "ItemType": "Consumable",
       "Name": "Overlord Certificate",
-      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>King</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>Overlord</B></Color><Color=#Ffffff>.</Color>\r\n\r\n<Color=#Ffaa00><B>Requirement:</B></Color>\r\n<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>King</B></Color><Color=#Ffffff>.</Color>",
+      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>King</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>Overlord</B></Color><Color=#Ffffff>.</Color>
+
+<Color=#Ffaa00><B>Requirement:</B></Color>
+<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>King</B></Color><Color=#Ffffff>.</Color>",
       "MaxStackSize": 1,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
@@ -5706,7 +5341,10 @@
       "ItemID": "EternalCertificate",
       "ItemType": "Consumable",
       "Name": "Eternal Certificate",
-      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>Overlord</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>Eternal</B></Color><Color=#Ffffff>.</Color>\r\n\r\n<Color=#Ffaa00><B>Requirement:</B></Color>\r\n<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>Overlord</B></Color><Color=#Ffffff>.</Color>",
+      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>Overlord</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>Eternal</B></Color><Color=#Ffffff>.</Color>
+
+<Color=#Ffaa00><B>Requirement:</B></Color>
+<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>Overlord</B></Color><Color=#Ffffff>.</Color>",
       "MaxStackSize": 1,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
@@ -5906,298 +5544,4 @@
       }
     }
   ]
-};</script>
-
-
-        <script>
-        // ── Config ────────────────────────────────────────────────────────────────────
-        const ICON_PATH = "assets/items/";
-        const DETAIL_PAGE = "item.html";
-
-        // Map itemConfig ItemID → icon filename from the old ITEMS array
-        const ICON_MAP = {
-            "Dirt": "dirt", "Stone": "stone", "Sand": "sand", "IronOre": "ironore", "Coal": "coal", "CopperOre": "copperore",
-            "GoldOre": "goldore", "Grass": "dirtgrass", "WaterBucket": "water", "LavaBucket": "lava", "SilverOre": "silverore",
-            "DiamondOre": "diamond", "Ice": "ice", "Gel": "gel", "Arrow": "arrow", "CopperIngot": "CopperIngot",
-            "IronIngot": "IronIngot", "SilverIngot": "SilverIngot", "GoldIngot": "GoldIngot",
-            "Diamond": "diamond", "Ruby": "ruby", "Emerald": "emerald", "Sapphire": "sapphire", "Topaz": "topaz",
-            "Aquamarine": "aquamarine", "SpessartiteGarnet": "spessartiteGarnet", "Amethyst": "amethyst",
-            "Morganite": "morganite", "Onyx": "onyx", "Moss": "moss", "Snow": "snow", "Glass": "glass",
-            "OakLeaves": "oakleaves", "MangroveLeaves": "mangroveleaves", "PineLeaves": "pineleaves",
-            "CherryBlossomLeaves": "cherryblossomleaves", "BeechLeaves": "beechleaves",
-            "OnyxBrick": "onyxbrick", "MorganiteBrick": "morganitebrick", "AmethystBrick": "amethystbrick",
-            "SpessartiteBrick": "spessartitegarnetbrick", "AquamarineBrick": "aquamarinebrick",
-            "TopazBrick": "topazbrick", "SapphireBrick": "sapphirebrick", "EmeraldBrick": "emeraldbrick",
-            "RubyBrick": "rubybrick", "DiamondBrick": "diamondbrick", "Lilypad": "lilypad",
-            "MorganiteLightstone": "morganitelightstone", "AmethystLightstone": "amethystlightstone",
-            "SpessartiteLightstone": "spessartitegarnetlightstone", "AquamarineLightstone": "aquamarinelightstone",
-            "TopazLightstone": "topazlightstone", "SapphireLightstone": "sapphirelightstone",
-            "EmeraldLightstone": "emeraldlightstone", "RubyLightstone": "rubylightstone",
-            "TinOre": "tinore", "LeadOre": "leadore", "Amberstone": "amberstone", "TungstenOre": "tungstenore",
-            "PlatinumOre": "platinumore", "CobaltOre": "cobaltore", "MythrilOre": "mythrilore",
-            "Cobweb": "cobweb", "TinIngot": "TinIngot", "LeadIngot": "LeadIngot", "TungstenIngot": "TungstenIngot",
-            "PlatinumIngot": "PlatinumIngot", "AmberstoneIngot": "AmberstoneIngot", "Strings": "strings",
-            "BlueRose": "bluerose", "Flowstone": "flowstone", "Cactus": "cactus", "Rail": "rail",
-            "SlimelingCore": "SlimelingCore", "DemonMushroom": "DemonMushroom", "Mushroom": "Mushroom",
-            "BoneFragment": "bone", "GoldenFeather": "feather", "Log": "Log",
-            // Accessories
-            "BandOfRegeneration": "BandOfRegeneration", "WoodenShield": "WoodenShield",
-            "ReinforcedWoodShield": "ReinforcedWoodShield", "CopperPlatedGuard": "CopperPlatedGuard",
-            "GladiatorsRoundshield": "GladiatorsRoundshield", "IronHeaterShield": "IronHeaterShield",
-            "GoldLayeredBulwark": "GoldLayeredBulwark", "CobaltStuddedShield": "CobaltStuddedShield",
-            "RoyalCrest": "RoyalCrest", "EmeraldTarge": "EmeraldTarge", "CrimsonHeater": "CrimsonHeater",
-            "CopperKiteShield": "CopperKiteShield", "SapphireSparkShield": "SapphireSparkShield",
-            "HerosHeraldry": "HerosHeraldry", "GildedVisage": "GildedVisage", "MoltenAegis": "MoltenAegis",
-            "LivingWoodDefender": "LivingWoodDefender", "BlueMoonCrest": "BlueMoonCrest",
-            "CultistWard": "CultistWard", "PlatinumShield": "PlatinumShield", "HornetCarapace": "HornetCarapace",
-            "PlagueBringerGuard": "PlagueBringerGuard", "VoidBarrier": "VoidBarrier",
-            "HallowedAegis": "HallowedAegis", "CrimtaneTowerShield": "CrimtaneTowerShield",
-            "VampireCountGuard": "VampireCountGuard", "ShadowScaleMailPiece": "ShadowScaleMailPiece",
-            "CelestialCross": "CelestialCross", "MaskoftheSaints": "MaskoftheSaints",
-            "SerratedScraper": "SerratedScraper", "RoughHewnCleaver": "RoughHewnCleaver", "PebblePounder": "PebblePounder",
-            // Tools
-            "WoodenPickaxe": "woodenpickaxe", "CopperPickaxe": "copperpickaxe", "IronPickaxe": "ironpickaxe",
-            "SilverPickaxe": "silverpickaxe", "GoldPickaxe": "goldpickaxe", "TinPickaxe": "tinpickaxe",
-            "LeadPickaxe": "leadpickaxe", "TungstenPickaxe": "tungstenpickaxe", "PlatinumPickaxe": "platinumpickaxe",
-            // Weapons
-            "WoodenSword": "woodensword", "CopperSword": "coppersword", "IronSword": "ironsword",
-            "SilverSword": "silversword", "GoldSword": "goldsword", "WoodenBow": "woodenbow",
-            "CopperBow": "copperbow", "TinBow": "tinbow", "LeadBow": "leadbow", "IronBow": "ironbow",
-            "SilverBow": "silverbow", "TungstenBow": "tungstenbow", "GoldBow": "goldbow",
-            "PlatinumBow": "platinumbow", "TinSword": "tinsword", "LeadSword": "leadsword",
-            "TungstenSword": "tungstensword", "PlatinumSword": "platinumsword",
-            "CobaltTrident": "cobalt_trident", "WoodenWand": "woodenwand", "OnyxWand": "onyxwand",
-            "MorganiteStaff": "morganitewand", "AmethystStaff": "AmethystStaff",
-            "SpessartiteStaff": "spessartitegarnetstaff", "AquamarineStaff": "aquamarinestaff",
-            "TopazStaff": "topazstaff", "SapphireStaff": "sapphirestaff", "EmeraldStaff": "emeraldstaff",
-            "RubyStaff": "rubystaff",
-            // Armor
-            "CopperHelmet": "copperhelmet", "CopperChestplate": "copperchestplate", "CopperLeggings": "copperleggings",
-            "IronHelmet": "ironhelmet", "IronChestplate": "ironchestplate", "IronLeggings": "ironleggings",
-            "SilverHelmet": "silverhelmet", "SilverChestplate": "silverchestplate", "SilverLeggings": "silverleggings",
-            "GoldHelmet": "goldhelmet", "GoldChestplate": "goldchestplate", "GoldLeggings": "goldleggings",
-            "TinHelmet": "tinhelmet", "TinChestplate": "tinchestplate", "TinLeggings": "tinleggings",
-            "LeadHelmet": "leadhelmet", "LeadChestplate": "leadchestplate", "LeadLeggings": "leadleggings",
-            "TungstenHelmet": "tungstenhelmet", "TungstenChestplate": "tungstenchestplate", "TungstenLeggings": "tungstenleggings",
-            "PlatinumHelmet": "platinumhelmet", "PlatinumChestplate": "platinumchestplate", "PlatinumLeggings": "platinumleggings",
-            "AmberstoneHelmet": "amberstonehelmet", "AmberstoneChestplate": "amberstonechestplate", "AmberstoneLeggings": "amberstoneleggings",
-            // Wings
-            "NatureWings": "naturewings", "ThornwoodWings": "thornwoodwings",
-            // Food
-            "Onion": "onion", "Garlic": "garlic", "Pumpkin": "pumpkin", "Carrot": "carrot",
-            "Potato": "potato", "Tomato": "tomato", "Strawberry": "strawberry", "Corn": "corn", "Eggplant": "eggplant",
-            // Potions
-            "HealthPotionI": "HealthPotionI", "HealthPotionII": "healthpotionii", "HealthPotionIII": "healthpotioniii",
-            "HealthPotionIV": "healthpotioniv", "HealthPotionV": "healthpotionv",
-            "RegeneratePotionI": "regeneratepotioni", "RegeneratePotionII": "regeneratepotionii",
-            "RegeneratePotionIII": "regeneratepotioniii", "RegeneratePotionIV": "regeneratepotioniv",
-            "RegeneratePotionV": "regeneratepotionv", "SwiftnessPotionI": "swiftnesspotioni",
-            "SwiftnessPotionII": "swiftnesspotionii", "ManaPotionI": "manapotioni", "ManaPotionII": "manapotionii",
-            "ManaPotionIII": "manapotioniii", "ManaPotionIV": "manapotioniv", "ManaPotionV": "manapotionv",
-            "StrengthPotion": "strengthpotion", "ResistancePotion": "resistancepotion",
-            // Utility
-            "Torch": "torch", "Chest": "chest", "GoldCoins": "goldcoin",
-            // Kits & Vouchers
-            "StarterKit": "StarterKit", "RookieKit": "RookieKit", "MinerKit": "MinerKit", "ScoutKit": "ScoutKit",
-            "HunterKit": "HunterKit", "EliteKit": "EliteKit", "VeteranKit": "VeteranKit", "ShadowKit": "ShadowKit",
-            "ConquerorKit": "ConquerorKit", "KingKit": "KingKit", "OverlordKit": "OverlordKit", "EternalKit": "EternalKit",
-            "StarterVoucher": "StarterVoucher", "RookieVoucher": "RookieVoucher", "MinerVoucher": "MinerVoucher",
-            "ScoutVoucher": "ScoutVoucher", "HunterVoucher": "HunterVoucher", "EliteVoucher": "EliteVoucher",
-            "VeteranVoucher": "VeteranVoucher", "ShadowVoucher": "ShadowVoucher", "ConquerorVoucher": "ConquerorVoucher",
-            "KingVoucher": "KingVoucher", "OverlordVoucher": "OverlordVoucher", "EternalVoucher": "EternalVoucher",
-            "RookieCertificate": "RookieCertificate", "MinerCertificate": "MinerCertificate",
-            "ScoutCertificate": "ScoutCertificate", "HunterCertificate": "HunterCertificate",
-            "EliteCertificate": "EliteCertificate", "VeteranCertificate": "VeteranCertificate",
-            "ShadowCertificate": "ShadowCertificate", "ConquerorCertificate": "ConquerorCertificate",
-            "KingCertificate": "KingCertificate", "OverlordCertificate": "OverlordCertificate",
-            "EternalCertificate": "EternalCertificate",
-            // Keys
-            "AdKey": "adKey", "RareKey": "RareKey", "MythicKey": "MythicKey", "DivineKey": "DivineKey",
-        };
-
-        // ── Category mapping from ItemType ────────────────────────────────────────────
-        const TYPE_TO_CAT = {
-            "Sword": "Weapons",
-            "Bow": "Weapons",
-            "Staff": "Weapons",
-            "Wand": "Weapons",
-            "Trident": "Weapons",
-            "Pickaxe": "Tools",
-            "Axe": "Tools",
-            "Armor": "Armor",
-            "Accessory": "Accessories",
-            "Shield": "Accessories",
-            "Wings": "Wings",
-            "Utility": "Utility",
-        };
-
-        // ItemID prefix/suffix patterns for Resource & Consumable disambiguation
-        const KEY_IDS = ['AdKey', 'RareKey', 'MythicKey', 'DivineKey'];
-        const KIT_IDS = ['Kit', 'Voucher', 'Certificate'];
-        const FOOD_IDS = ['Onion', 'Garlic', 'Pumpkin', 'Carrot', 'Potato', 'Tomato', 'Strawberry', 'Corn', 'Eggplant', 'Apple', 'Donut', 'CookedMeat', 'WaterBottle'];
-        const POTION_IDS = ['Potion', 'Mana', 'Stamina', 'Strength', 'Resistance']; // substring match
-
-        const CAT_META = {
-            Resources: { color: '#4ade80', label: 'Resources' },
-            Accessories: { color: '#f472b6', label: 'Accessories' },
-            Tools: { color: '#60a5fa', label: 'Tools' },
-            Weapons: { color: '#f87171', label: 'Weapons' },
-            Armor: { color: '#fbbf24', label: 'Armor' },
-            Wings: { color: '#a78bfa', label: 'Wings' },
-            Food: { color: '#fb923c', label: 'Food' },
-            Potions: { color: '#34d399', label: 'Potions' },
-            Utility: { color: '#94a3b8', label: 'Utility' },
-            Kits: { color: '#e2e8f0', label: 'Kits & Vouchers' },
-            Keys: { color: '#fde68a', label: 'Keys' },
-        };
-
-        const CAT_ORDER = ['Resources', 'Accessories', 'Tools', 'Weapons', 'Armor', 'Wings', 'Food', 'Potions', 'Utility', 'Kits', 'Keys'];
-
-        const RARITY_COLOR = {
-            Common: '#b0bec5',
-            Uncommon: '#4ade80',
-            Rare: '#60a5fa',
-            Epic: '#c084fc',
-            Legendary: '#fb923c',
-        };
-
-        // ── Helpers ───────────────────────────────────────────────────────────────────
-        function iconUrl(itemID) {
-            const file = ICON_MAP[itemID];
-            return file ? ICON_PATH + file + '.png' : null;
-        }
-
-        function guessCategory(cfg) {
-            const id = String(cfg.ItemID || '');
-            // Direct ItemType mapping (covers most non-resource types)
-            if (TYPE_TO_CAT[cfg.ItemType]) return TYPE_TO_CAT[cfg.ItemType];
-
-            // Resource items: figure out actual category by ItemID
-            if (cfg.ItemType === 'Resource') {
-                if (KEY_IDS.includes(id)) return 'Keys';
-                if (KIT_IDS.some(k => id.endsWith(k))) return 'Kits';
-                if (FOOD_IDS.some(f => id.includes(f))) return 'Food';
-                return 'Resources';
-            }
-
-            // Consumable items: figure out by ItemID patterns
-            if (cfg.ItemType === 'Consumable') {
-                if (KIT_IDS.some(k => id.endsWith(k))) return 'Kits';
-                if (FOOD_IDS.some(f => id.includes(f))) return 'Food';
-                if (POTION_IDS.some(p => id.includes(p))) return 'Potions';
-                return 'Potions'; // default consumable fallback
-            }
-
-            return 'Resources';
-        }
-
-        // ── Build page ────────────────────────────────────────────────────────────────
-        let allCards = [];
-        let activeCat = 'all';
-
-        async function init() {
-            const data = (typeof ITEM_CONFIGS !== 'undefined') ? ITEM_CONFIGS : await fetch('item_configs.json').then(r => r.json());
-            const configs = data.ItemConfigs || data;
-
-            // Group by category
-            const groups = {};
-            CAT_ORDER.forEach(c => groups[c] = []);
-
-            configs.forEach(cfg => {
-                const cat = guessCategory(cfg);
-                if (!groups[cat]) groups[cat] = [];
-                groups[cat].push(cfg);
-            });
-
-            // Build category filter buttons
-            const filterBar = document.getElementById('catFilters');
-            CAT_ORDER.forEach(cat => {
-                if (!groups[cat] || !groups[cat].length) return;
-                const meta = CAT_META[cat];
-                const btn = document.createElement('button');
-                btn.className = 'cat-btn';
-                btn.dataset.cat = cat;
-                btn.textContent = meta.label;
-                btn.onclick = () => filterCat(btn, cat);
-                btn.style.setProperty('--btn-color', meta.color);
-                filterBar.appendChild(btn);
-            });
-
-            // Build catalog
-            const catalog = document.getElementById('itemCatalog');
-            catalog.innerHTML = '';
-
-            CAT_ORDER.forEach(cat => {
-                const items = groups[cat];
-                if (!items || !items.length) return;
-                const meta = CAT_META[cat];
-
-                const section = document.createElement('section');
-                section.className = 'category';
-                section.dataset.cat = cat;
-                section.innerHTML = `
-          <div class="cat-header">
-            <span class="cat-badge" style="background:${meta.color}22;color:${meta.color};border:1px solid ${meta.color}55">${meta.label}</span>
-            <h3 class="cat-title">${meta.label}</h3>
-            <span class="cat-count">${items.length} items</span>
-          </div>
-          <div class="item-grid"></div>`;
-
-                const grid = section.querySelector('.item-grid');
-
-                items.forEach(cfg => {
-                    const url = iconUrl(cfg.ItemID);
-                    const iconHtml = url
-                        ? `<img src="${url}" alt="${cfg.Name}" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\\'icon-missing\\'>📦</span>'" />`
-                        : `<span class="icon-missing">📦</span>`;
-
-                    const rarityColor = RARITY_COLOR[cfg.Rarity] || '#b0bec5';
-                    const card = document.createElement('a');
-                    card.className = `item-card rarity-${cfg.Rarity}`;
-                    card.href = `${DETAIL_PAGE}?id=${encodeURIComponent(cfg.ItemID)}`;
-                    card.dataset.cat = cat;
-                    card.dataset.name = cfg.Name.toLowerCase();
-                    card.dataset.type = cfg.ItemType.toLowerCase();
-                    card.style.setProperty('--rarity-color', rarityColor);
-
-                    card.innerHTML = `
-          <div class="item-icon-wrap">${iconHtml}</div>
-          <span class="item-name">${cfg.Name}</span>
-          <span class="item-type-label">${cfg.ItemType}</span>`;
-
-                    grid.appendChild(card);
-                    allCards.push(card);
-                });
-
-                catalog.appendChild(section);
-            });
-        }
-
-        // ── Filter ─────────────────────────────────────────────────────────────────────
-        function filterCat(btn, cat) {
-            document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            activeCat = cat;
-            applyFilters();
-        }
-
-        function applyFilters() {
-            const q = document.getElementById('searchInput').value.toLowerCase().trim();
-            allCards.forEach(card => {
-                const matchCat = activeCat === 'all' || card.dataset.cat === activeCat;
-                const matchQ = !q || card.dataset.name.includes(q) || card.dataset.type.includes(q);
-                card.classList.toggle('hidden', !(matchCat && matchQ));
-            });
-            document.querySelectorAll('.category').forEach(sec => {
-                sec.classList.toggle('hidden', !sec.querySelectorAll('.item-card:not(.hidden)').length);
-            });
-        }
-
-        init().catch(err => {
-            document.getElementById('itemCatalog').innerHTML =
-                `<div class="loading-state"><i class="fas fa-exclamation-triangle" style="animation:none;color:#f87171;"></i>Failed to load item data.<br/><small>${err.message}</small></div>`;
-        });
-    </script>
-</body>
-
-</html>
+};

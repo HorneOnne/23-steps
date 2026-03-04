@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Items — Mine &amp; Dungeon Wiki | 23-Steps</title>
+    <title>Item — Mine &amp; Dungeon Wiki | 23-Steps</title>
     <link rel="icon" type="image/png" href="../icon2.png" />
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -36,7 +36,7 @@
             content: "";
             position: fixed;
             inset: 0;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25));
             pointer-events: none;
             z-index: 1;
         }
@@ -108,279 +108,285 @@
             color: #fff;
         }
 
-        /* ── Page header ──────────────────────────────────── */
-        .wiki-page-header {
-            background-color: #161825;
-            border-bottom: 2px solid #2b3a59;
-            padding: 28px 24px 20px;
-            text-align: center;
+        /* ── Content wrapper ──────────────────────────────── */
+        .content-wrap {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 28px 20px 48px;
         }
 
-        .wiki-page-header .breadcrumb {
+        /* ── Breadcrumb ───────────────────────────────────── */
+        .breadcrumb {
             font-size: 0.7em;
             color: #6ab0f3;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             letter-spacing: 0.04em;
         }
 
-        .wiki-page-header .breadcrumb a {
+        .breadcrumb a {
             color: #6ab0f3;
             text-decoration: none;
         }
 
-        .wiki-page-header .breadcrumb a:hover {
+        .breadcrumb a:hover {
             text-decoration: underline;
         }
 
-        .wiki-page-header h2 {
-            font-family: 'Press Start 2P', cursive;
-            font-size: clamp(0.9rem, 2.5vw, 1.5rem);
-            color: #99ccff;
-            margin-bottom: 8px;
-        }
-
-        .wiki-page-header p {
-            color: #8fa3c8;
-            font-size: 0.85em;
-        }
-
-        /* ── Controls bar ─────────────────────────────────── */
-        .controls-wrap {
-            position: sticky;
-            top: 0;
-            z-index: 9;
-            background-color: #1a1d2e;
-            border-bottom: 1px solid #2b3a59;
-            padding: 10px 20px;
-        }
-
-        .controls {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            align-items: center;
-        }
-
-        .search-box {
-            flex: 1;
-            min-width: 200px;
-            background: #101824;
-            border: 1px solid #2b3a59;
-            border-radius: 5px;
-            padding: 7px 12px;
-            color: #c8d1e1;
-            font-size: 0.85em;
-            outline: none;
-            transition: border-color .2s;
-            font-family: inherit;
-        }
-
-        .search-box:focus {
-            border-color: #6ab0f3;
-        }
-
-        .search-box::placeholder {
-            color: #4a576b;
-        }
-
-        .cat-filters {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 5px;
-        }
-
-        .cat-btn {
-            background: #101824;
-            border: 1px solid #2b3a59;
-            border-radius: 4px;
-            padding: 5px 10px;
-            color: #8fa3c8;
-            font-size: 0.72em;
-            cursor: pointer;
-            transition: all .15s;
-            font-family: inherit;
-            font-weight: bold;
-        }
-
-        .cat-btn:hover {
-            background: #1e2d4a;
-            border-color: #6ab0f3;
-            color: #c8d1e1;
-        }
-
-        .cat-btn.active {
-            background: #2b3a59;
-            border-color: #6ab0f3;
-            color: #fff;
-        }
-
-        /* ── Content wrap ─────────────────────────────────── */
-        .content-wrap {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 24px 20px;
-        }
-
-        /* ── Category sections ────────────────────────────── */
-        .category {
-            margin-bottom: 36px;
-        }
-
-        .cat-header {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 14px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid #2b3a59;
-        }
-
-        .cat-badge {
-            font-size: 0.6em;
-            font-weight: bold;
-            padding: 3px 8px;
-            border-radius: 3px;
-            letter-spacing: 0.07em;
-        }
-
-        .cat-title {
-            font-family: 'Press Start 2P', cursive;
-            font-size: 0.75rem;
-            color: #6ab0f3;
-        }
-
-        .cat-count {
-            margin-left: auto;
-            color: #4a576b;
-            font-size: 0.75em;
-        }
-
-        /* ── Item Grid ────────────────────────────────────── */
-        .item-grid {
+        /* ── Article layout (sidebar + body) ──────────────── */
+        .article {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
-            gap: 8px;
+            grid-template-columns: 240px 1fr;
+            gap: 28px;
+            align-items: start;
         }
 
-        /* ── Item Card (Terraria wiki style) ──────────────── */
-        .item-card {
+        @media (max-width: 680px) {
+            .article {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ── Infobox (right sidebar, Terraria style) ──────── */
+        .infobox {
             background-color: #0d1420;
-            border: 1px solid #222a33;
+            border: 1px solid #2b3a59;
+            border-top: 3px solid var(--rarity-color, #6ab0f3);
+            border-radius: 4px;
+            overflow: hidden;
+            position: sticky;
+            top: 12px;
+        }
+
+        .infobox-header {
+            background: #111927;
+            padding: 14px;
+            text-align: center;
+            border-bottom: 1px solid #1e2d40;
+        }
+
+        .infobox-icon {
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 10px;
+            background: #080e18;
+            border: 2px solid var(--rarity-color, #2b3a59);
             border-radius: 6px;
-            padding: 8px 6px 7px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 6px;
-            cursor: pointer;
-            transition: border-color .15s, background-color .15s, transform .12s;
-            position: relative;
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .item-card:hover {
-            border-color: var(--rarity-color, #3a7ee0);
-            background-color: #141e30;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
-        }
-
-        /* rarity left border accent */
-        .item-card::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 3px;
-            border-radius: 6px 0 0 6px;
-            background: var(--rarity-color, #555);
-        }
-
-        .item-icon-wrap {
-            width: 48px;
-            height: 48px;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #080e18;
-            border: 1px solid #1a2535;
-            border-radius: 4px;
             overflow: hidden;
-            flex-shrink: 0;
         }
 
-        .item-icon-wrap img {
-            width: 48px;
-            height: 48px;
+        .infobox-icon img {
+            width: 64px;
+            height: 64px;
             object-fit: contain;
             image-rendering: pixelated;
             image-rendering: crisp-edges;
         }
 
-        .icon-missing {
-            font-size: 1.4rem;
+        .infobox-icon .icon-missing {
+            font-size: 2rem;
             opacity: 0.25;
         }
 
-        .item-name {
-            font-size: 0.58rem;
-            text-align: center;
-            color: var(--rarity-color, #c8d1e1);
-            line-height: 1.35;
-            word-break: break-word;
+        .infobox-name {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 0.65rem;
+            color: var(--rarity-color, #99ccff);
+            line-height: 1.5;
+            margin-bottom: 4px;
         }
 
-        .item-type-label {
-            font-size: 0.5rem;
-            color: #4a576b;
+        .infobox-type {
+            font-size: 0.7em;
+            color: #6a7f9e;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .infobox-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.78em;
+        }
+
+        .infobox-table tr {
+            border-bottom: 1px solid #1a2535;
+        }
+
+        .infobox-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .infobox-table td {
+            padding: 7px 12px;
+            vertical-align: top;
+        }
+
+        .infobox-table td:first-child {
+            color: #6a7f9e;
+            white-space: nowrap;
+            width: 50%;
+            font-size: 0.9em;
+        }
+
+        .infobox-table td:last-child {
+            color: #c8d1e1;
+            font-weight: bold;
+        }
+
+        /* ── Rarity pill ──────────────────────────────────── */
+        .rarity-pill {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.85em;
+            font-weight: bold;
+            background: var(--rarity-bg, #1e2d40);
+            color: var(--rarity-color, #b0bec5);
+            border: 1px solid var(--rarity-color, #2b3a59);
+        }
+
+        /* ── Article body ─────────────────────────────────── */
+        .article-body h1 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: clamp(0.85rem, 2.5vw, 1.2rem);
+            color: var(--rarity-color, #99ccff);
+            line-height: 1.5;
+            margin-bottom: 8px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #2b3a59;
+        }
+
+        .item-subtitle {
+            font-size: 0.8em;
+            color: #6a7f9e;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        /* ── Type icon row ────────────────────────────────── */
+        .type-badge-row {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 22px;
+        }
+
+        .type-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: #111927;
+            border: 1px solid #2b3a59;
+            border-radius: 4px;
+            padding: 4px 10px;
+            font-size: 0.75em;
+            color: #8fa3c8;
+        }
+
+        .type-badge i {
+            color: var(--rarity-color, #6ab0f3);
+        }
+
+        /* ── Description ──────────────────────────────────── */
+        .desc-section {
+            margin-bottom: 28px;
+        }
+
+        .desc-section p {
+            font-size: 0.85em;
+            color: #a8bcdc;
+            line-height: 1.7;
+        }
+
+        /* ── Stat section ─────────────────────────────────── */
+        .stats-section {
+            margin-bottom: 28px;
+        }
+
+        .section-title {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 0.65rem;
+            color: #6ab0f3;
+            margin-bottom: 12px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #2b3a59;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 8px;
+        }
+
+        .stat-card {
+            background: #0d1420;
+            border: 1px solid #1e2d40;
+            border-radius: 5px;
+            padding: 10px 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        .stat-label {
+            font-size: 0.65em;
+            color: #6a7f9e;
             text-transform: uppercase;
             letter-spacing: 0.05em;
         }
 
-        .item-card.hidden {
-            display: none !important;
+        .stat-value {
+            font-size: 1.05em;
+            font-weight: bold;
+            color: #c8d1e1;
         }
 
-        .category.hidden {
-            display: none !important;
+        .stat-value.highlight {
+            color: var(--rarity-color, #6ab0f3);
         }
 
-        /* ── Rarity colours ───────────────────────────────── */
-        .rarity-Common {
-            --rarity-color: #b0bec5;
+        /* ── Enchantable tag ──────────────────────────────── */
+        .enchant-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: #1a1026;
+            border: 1px solid #7c3aed44;
+            color: #c084fc;
+            border-radius: 4px;
+            padding: 4px 10px;
+            font-size: 0.75em;
+            margin-top: 8px;
         }
 
-        .rarity-Uncommon {
-            --rarity-color: #4ade80;
-        }
-
-        .rarity-Rare {
-            --rarity-color: #60a5fa;
-        }
-
-        .rarity-Epic {
-            --rarity-color: #c084fc;
-        }
-
-        .rarity-Legendary {
-            --rarity-color: #fb923c;
+        .no-enchant-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: #101824;
+            border: 1px solid #2b3a59;
+            color: #4a576b;
+            border-radius: 4px;
+            padding: 4px 10px;
+            font-size: 0.75em;
+            margin-top: 8px;
         }
 
         /* ── Loading / error ──────────────────────────────── */
         .loading-state {
             text-align: center;
-            padding: 60px 20px;
+            padding: 80px 20px;
             color: #6a7f9e;
             font-size: 0.9em;
         }
 
         .loading-state i {
-            font-size: 2rem;
-            margin-bottom: 14px;
+            font-size: 2.5rem;
+            margin-bottom: 18px;
             display: block;
             animation: spin 1s linear infinite;
         }
@@ -413,14 +419,93 @@
             text-decoration: underline;
         }
 
-        @media (max-width: 600px) {
-            .item-grid {
-                grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-            }
+        /* ── Back button ──────────────────────────────────── */
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #0d1420;
+            border: 1px solid #2b3a59;
+            color: #8fa3c8;
+            border-radius: 4px;
+            padding: 6px 12px;
+            font-size: 0.78em;
+            text-decoration: none;
+            margin-bottom: 20px;
+            transition: background .15s, color .15s;
+        }
 
-            .wiki-page-header h2 {
-                font-size: 0.8rem;
-            }
+        .back-btn:hover {
+            background: #141e30;
+            color: #c8d1e1;
+        }
+
+        /* ── Prev/Next nav ────────────────────────────────── */
+        .item-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 36px;
+            gap: 12px;
+        }
+
+        .nav-item-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #0d1420;
+            border: 1px solid #2b3a59;
+            border-radius: 6px;
+            padding: 10px 14px;
+            text-decoration: none;
+            color: #8fa3c8;
+            font-size: 0.75em;
+            flex: 1;
+            transition: background .15s, border-color .15s;
+            max-width: 48%;
+        }
+
+        .nav-item-btn:hover {
+            background: #141e30;
+            border-color: #6ab0f3;
+            color: #c8d1e1;
+        }
+
+        .nav-item-btn.next {
+            justify-content: flex-end;
+            text-align: right;
+        }
+
+        .nav-item-btn .nav-label {
+            font-size: 0.8em;
+            color: #4a576b;
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .nav-item-btn .nav-icon {
+            width: 32px;
+            height: 32px;
+            image-rendering: pixelated;
+            flex-shrink: 0;
+        }
+
+        /* ── Not found ────────────────────────────────────── */
+        .not-found {
+            text-align: center;
+            padding: 80px 20px;
+            color: #6a7f9e;
+        }
+
+        .not-found h2 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1rem;
+            color: #f87171;
+            margin-bottom: 14px;
+        }
+
+        .not-found p {
+            font-size: 0.85em;
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -441,32 +526,12 @@
         </nav>
     </header>
 
-    <div class="wiki-page-header">
-        <div class="breadcrumb">
-            <a href="../index.html">23-Steps</a> &rsaquo;
-            <a href="../games.html">Games</a> &rsaquo;
-            Mine &amp; Dungeon Wiki &rsaquo; Items
-        </div>
-        <h2><i class="fas fa-boxes"></i>&nbsp; Items</h2>
-        <p>All items with game data &mdash; click any item for full details</p>
-    </div>
-
-    <div class="controls-wrap">
-        <div class="controls">
-            <input class="search-box" type="text" id="searchInput" placeholder="&#128269;  Search by name or type..."
-                oninput="applyFilters()" />
-            <div class="cat-filters" id="catFilters">
-                <button class="cat-btn active" data-cat="all" onclick="filterCat(this,'all')">All</button>
-            </div>
-        </div>
-    </div>
-
     <main>
         <div class="content-wrap">
-            <div id="itemCatalog">
+            <div id="page-root">
                 <div class="loading-state">
                     <i class="fas fa-spinner"></i>
-                    Loading item data…
+                    Loading item…
                 </div>
             </div>
         </div>
@@ -5912,9 +5977,7 @@
         <script>
         // ── Config ────────────────────────────────────────────────────────────────────
         const ICON_PATH = "assets/items/";
-        const DETAIL_PAGE = "item.html";
 
-        // Map itemConfig ItemID → icon filename from the old ITEMS array
         const ICON_MAP = {
             "Dirt": "dirt", "Stone": "stone", "Sand": "sand", "IronOre": "ironore", "Coal": "coal", "CopperOre": "copperore",
             "GoldOre": "goldore", "Grass": "dirtgrass", "WaterBucket": "water", "LavaBucket": "lava", "SilverOre": "silverore",
@@ -5940,7 +6003,6 @@
             "BlueRose": "bluerose", "Flowstone": "flowstone", "Cactus": "cactus", "Rail": "rail",
             "SlimelingCore": "SlimelingCore", "DemonMushroom": "DemonMushroom", "Mushroom": "Mushroom",
             "BoneFragment": "bone", "GoldenFeather": "feather", "Log": "Log",
-            // Accessories
             "BandOfRegeneration": "BandOfRegeneration", "WoodenShield": "WoodenShield",
             "ReinforcedWoodShield": "ReinforcedWoodShield", "CopperPlatedGuard": "CopperPlatedGuard",
             "GladiatorsRoundshield": "GladiatorsRoundshield", "IronHeaterShield": "IronHeaterShield",
@@ -5955,11 +6017,9 @@
             "VampireCountGuard": "VampireCountGuard", "ShadowScaleMailPiece": "ShadowScaleMailPiece",
             "CelestialCross": "CelestialCross", "MaskoftheSaints": "MaskoftheSaints",
             "SerratedScraper": "SerratedScraper", "RoughHewnCleaver": "RoughHewnCleaver", "PebblePounder": "PebblePounder",
-            // Tools
             "WoodenPickaxe": "woodenpickaxe", "CopperPickaxe": "copperpickaxe", "IronPickaxe": "ironpickaxe",
             "SilverPickaxe": "silverpickaxe", "GoldPickaxe": "goldpickaxe", "TinPickaxe": "tinpickaxe",
             "LeadPickaxe": "leadpickaxe", "TungstenPickaxe": "tungstenpickaxe", "PlatinumPickaxe": "platinumpickaxe",
-            // Weapons
             "WoodenSword": "woodensword", "CopperSword": "coppersword", "IronSword": "ironsword",
             "SilverSword": "silversword", "GoldSword": "goldsword", "WoodenBow": "woodenbow",
             "CopperBow": "copperbow", "TinBow": "tinbow", "LeadBow": "leadbow", "IronBow": "ironbow",
@@ -5971,7 +6031,6 @@
             "SpessartiteStaff": "spessartitegarnetstaff", "AquamarineStaff": "aquamarinestaff",
             "TopazStaff": "topazstaff", "SapphireStaff": "sapphirestaff", "EmeraldStaff": "emeraldstaff",
             "RubyStaff": "rubystaff",
-            // Armor
             "CopperHelmet": "copperhelmet", "CopperChestplate": "copperchestplate", "CopperLeggings": "copperleggings",
             "IronHelmet": "ironhelmet", "IronChestplate": "ironchestplate", "IronLeggings": "ironleggings",
             "SilverHelmet": "silverhelmet", "SilverChestplate": "silverchestplate", "SilverLeggings": "silverleggings",
@@ -5981,12 +6040,9 @@
             "TungstenHelmet": "tungstenhelmet", "TungstenChestplate": "tungstenchestplate", "TungstenLeggings": "tungstenleggings",
             "PlatinumHelmet": "platinumhelmet", "PlatinumChestplate": "platinumchestplate", "PlatinumLeggings": "platinumleggings",
             "AmberstoneHelmet": "amberstonehelmet", "AmberstoneChestplate": "amberstonechestplate", "AmberstoneLeggings": "amberstoneleggings",
-            // Wings
             "NatureWings": "naturewings", "ThornwoodWings": "thornwoodwings",
-            // Food
             "Onion": "onion", "Garlic": "garlic", "Pumpkin": "pumpkin", "Carrot": "carrot",
             "Potato": "potato", "Tomato": "tomato", "Strawberry": "strawberry", "Corn": "corn", "Eggplant": "eggplant",
-            // Potions
             "HealthPotionI": "HealthPotionI", "HealthPotionII": "healthpotionii", "HealthPotionIII": "healthpotioniii",
             "HealthPotionIV": "healthpotioniv", "HealthPotionV": "healthpotionv",
             "RegeneratePotionI": "regeneratepotioni", "RegeneratePotionII": "regeneratepotionii",
@@ -5995,9 +6051,7 @@
             "SwiftnessPotionII": "swiftnesspotionii", "ManaPotionI": "manapotioni", "ManaPotionII": "manapotionii",
             "ManaPotionIII": "manapotioniii", "ManaPotionIV": "manapotioniv", "ManaPotionV": "manapotionv",
             "StrengthPotion": "strengthpotion", "ResistancePotion": "resistancepotion",
-            // Utility
             "Torch": "torch", "Chest": "chest", "GoldCoins": "goldcoin",
-            // Kits & Vouchers
             "StarterKit": "StarterKit", "RookieKit": "RookieKit", "MinerKit": "MinerKit", "ScoutKit": "ScoutKit",
             "HunterKit": "HunterKit", "EliteKit": "EliteKit", "VeteranKit": "VeteranKit", "ShadowKit": "ShadowKit",
             "ConquerorKit": "ConquerorKit", "KingKit": "KingKit", "OverlordKit": "OverlordKit", "EternalKit": "EternalKit",
@@ -6011,47 +6065,8 @@
             "ShadowCertificate": "ShadowCertificate", "ConquerorCertificate": "ConquerorCertificate",
             "KingCertificate": "KingCertificate", "OverlordCertificate": "OverlordCertificate",
             "EternalCertificate": "EternalCertificate",
-            // Keys
             "AdKey": "adKey", "RareKey": "RareKey", "MythicKey": "MythicKey", "DivineKey": "DivineKey",
         };
-
-        // ── Category mapping from ItemType ────────────────────────────────────────────
-        const TYPE_TO_CAT = {
-            "Sword": "Weapons",
-            "Bow": "Weapons",
-            "Staff": "Weapons",
-            "Wand": "Weapons",
-            "Trident": "Weapons",
-            "Pickaxe": "Tools",
-            "Axe": "Tools",
-            "Armor": "Armor",
-            "Accessory": "Accessories",
-            "Shield": "Accessories",
-            "Wings": "Wings",
-            "Utility": "Utility",
-        };
-
-        // ItemID prefix/suffix patterns for Resource & Consumable disambiguation
-        const KEY_IDS = ['AdKey', 'RareKey', 'MythicKey', 'DivineKey'];
-        const KIT_IDS = ['Kit', 'Voucher', 'Certificate'];
-        const FOOD_IDS = ['Onion', 'Garlic', 'Pumpkin', 'Carrot', 'Potato', 'Tomato', 'Strawberry', 'Corn', 'Eggplant', 'Apple', 'Donut', 'CookedMeat', 'WaterBottle'];
-        const POTION_IDS = ['Potion', 'Mana', 'Stamina', 'Strength', 'Resistance']; // substring match
-
-        const CAT_META = {
-            Resources: { color: '#4ade80', label: 'Resources' },
-            Accessories: { color: '#f472b6', label: 'Accessories' },
-            Tools: { color: '#60a5fa', label: 'Tools' },
-            Weapons: { color: '#f87171', label: 'Weapons' },
-            Armor: { color: '#fbbf24', label: 'Armor' },
-            Wings: { color: '#a78bfa', label: 'Wings' },
-            Food: { color: '#fb923c', label: 'Food' },
-            Potions: { color: '#34d399', label: 'Potions' },
-            Utility: { color: '#94a3b8', label: 'Utility' },
-            Kits: { color: '#e2e8f0', label: 'Kits & Vouchers' },
-            Keys: { color: '#fde68a', label: 'Keys' },
-        };
-
-        const CAT_ORDER = ['Resources', 'Accessories', 'Tools', 'Weapons', 'Armor', 'Wings', 'Food', 'Potions', 'Utility', 'Kits', 'Keys'];
 
         const RARITY_COLOR = {
             Common: '#b0bec5',
@@ -6061,141 +6076,297 @@
             Legendary: '#fb923c',
         };
 
-        // ── Helpers ───────────────────────────────────────────────────────────────────
-        function iconUrl(itemID) {
-            const file = ICON_MAP[itemID];
-            return file ? ICON_PATH + file + '.png' : null;
-        }
+        const RARITY_BG = {
+            Common: '#1e2d40',
+            Uncommon: '#0d2a1a',
+            Rare: '#0d1e3a',
+            Epic: '#1a0d2e',
+            Legendary: '#2e1a0d',
+        };
 
-        function guessCategory(cfg) {
-            const id = String(cfg.ItemID || '');
-            // Direct ItemType mapping (covers most non-resource types)
-            if (TYPE_TO_CAT[cfg.ItemType]) return TYPE_TO_CAT[cfg.ItemType];
+        const TYPE_ICON = {
+            Sword: 'fa-khanda',
+            Bow: 'fa-bullseye',
+            Staff: 'fa-wand-magic-sparkles',
+            Wand: 'fa-wand-magic-sparkles',
+            Trident: 'fa-anchor',
+            Pickaxe: 'fa-hammer',
+            Axe: 'fa-axe',
+            Armor: 'fa-shield',
+            Accessory: 'fa-ring',
+            Shield: 'fa-shield',
+            Wings: 'fa-feather-pointed',
+            Food: 'fa-apple-whole',
+            Potion: 'fa-flask',
+            Resource: 'fa-cubes',
+            Utility: 'fa-toolbox',
+            Key: 'fa-key',
+            Kit: 'fa-box-open',
+            Voucher: 'fa-ticket',
+            Certificate: 'fa-scroll',
+        };
 
-            // Resource items: figure out actual category by ItemID
-            if (cfg.ItemType === 'Resource') {
-                if (KEY_IDS.includes(id)) return 'Keys';
-                if (KIT_IDS.some(k => id.endsWith(k))) return 'Kits';
-                if (FOOD_IDS.some(f => id.includes(f))) return 'Food';
-                return 'Resources';
+        // ── Stat renderers ────────────────────────────────────────────────────────────
+        function renderStats(cfg) {
+            const stats = [];
+
+            if (cfg.SwordConfig) {
+                const s = cfg.SwordConfig;
+                stats.push({ label: 'Damage', value: s.AttackDamage, fmt: v => v, hi: true });
+                stats.push({ label: 'Knockback', value: s.KnockbackForce, fmt: v => v });
+                stats.push({ label: 'Crit Chance', value: s.CritChance, fmt: v => (v * 100).toFixed(1) + '%' });
+                stats.push({ label: 'Crit Multiplier', value: s.CritDamageMultiplier, fmt: v => v + 'x' });
+                stats.push({ label: 'Use Speed', value: cfg.UseSpeed, fmt: v => v + '/s' });
+            }
+            if (cfg.BowConfig) {
+                const s = cfg.BowConfig;
+                stats.push({ label: 'Damage', value: s.AttackDamage, fmt: v => v, hi: true });
+                stats.push({ label: 'Range', value: s.Range, fmt: v => v });
+                stats.push({ label: 'Proj. Speed', value: s.ProjectileSpeed, fmt: v => v });
+                stats.push({ label: 'Knockback', value: s.KnockbackForce, fmt: v => v });
+                stats.push({ label: 'Crit Chance', value: s.CritChance, fmt: v => (v * 100).toFixed(1) + '%' });
+                stats.push({ label: 'Crit Multiplier', value: s.CritMultiplier, fmt: v => v + 'x' });
+                stats.push({ label: 'Use Speed', value: cfg.UseSpeed, fmt: v => v + '/s' });
+            }
+            if (cfg.PickaxeConfig) {
+                const s = cfg.PickaxeConfig;
+                stats.push({ label: 'Mining Power', value: s.MiningPower, fmt: v => v, hi: true });
+                stats.push({ label: 'Damage', value: s.AttackDamage, fmt: v => v });
+                stats.push({ label: 'Knockback', value: s.KnockbackForce, fmt: v => v });
+                stats.push({ label: 'Use Speed', value: cfg.UseSpeed, fmt: v => v + '/s' });
+            }
+            if (cfg.ArmorConfig) {
+                const s = cfg.ArmorConfig;
+                const armorTypes = ['Helmet', 'Chestplate', 'Leggings'];
+                stats.push({ label: 'Defense', value: s.Defense, fmt: v => v, hi: true });
+                if (s.MagicDefense) stats.push({ label: 'Mag. Defense', value: s.MagicDefense, fmt: v => v });
+                stats.push({ label: 'Slot', value: s.ArmorType, fmt: v => armorTypes[v] || v });
+                if (s.SetName) stats.push({ label: 'Set', value: s.SetName, fmt: v => v.charAt(0).toUpperCase() + v.slice(1) });
+            }
+            if (cfg.ShieldConfig) {
+                const s = cfg.ShieldConfig;
+                Object.entries(s).forEach(([k, v]) => stats.push({ label: k, value: v, fmt: x => x }));
+            }
+            if (cfg.AccessoryConfig) {
+                const s = cfg.AccessoryConfig;
+                if (s.AccessoryType) stats.push({ label: 'Slot Type', value: s.AccessoryType, fmt: v => v });
+                if (s.StatBonuses && s.StatBonuses.length) {
+                    s.StatBonuses.forEach(b => {
+                        const label = b.StatType ? b.StatType.replace(/([A-Z])/g, ' $1').trim() : 'Bonus';
+                        const mod = b.ModifierType === 'Percent' ? '%' : '';
+                        stats.push({ label, value: b.Value, fmt: v => '+' + v + mod, hi: true });
+                    });
+                }
+                if (s.HasSpecialEffect && s.SpecialEffectDescription) {
+                    stats.push({ label: 'Special Effect', value: s.SpecialEffectDescription, fmt: v => v });
+                }
+            }
+            if (cfg.WingsConfig) {
+                const s = cfg.WingsConfig;
+                stats.push({ label: 'Flight Speed', value: s.FlightSpeed, fmt: v => v, hi: true });
+                stats.push({ label: 'Acceleration', value: s.FlightAcceleration, fmt: v => v });
+                stats.push({ label: 'Deceleration', value: s.FlightDeceleration, fmt: v => v });
+                if (s.EnergyCapacityBonus) stats.push({ label: 'Energy Bonus', value: s.EnergyCapacityBonus, fmt: v => '+' + v, hi: true });
+                stats.push({ label: 'Energy Drain', value: s.EnergyDrainModifier, fmt: v => v + 'x' });
+            }
+            if (cfg.StaffConfig) {
+                const s = cfg.StaffConfig;
+                if (s.MagicDamage !== undefined) stats.push({ label: 'Magic Damage', value: s.MagicDamage, fmt: v => v, hi: true });
+                if (s.ManaCost !== undefined) stats.push({ label: 'Mana Cost', value: s.ManaCost, fmt: v => v });
+                if (s.Range !== undefined) stats.push({ label: 'Range', value: s.Range, fmt: v => v });
+                if (s.KnockbackForce !== undefined) stats.push({ label: 'Knockback', value: s.KnockbackForce, fmt: v => v });
+                if (s.ProjectileSpeed !== undefined) stats.push({ label: 'Proj. Speed', value: s.ProjectileSpeed, fmt: v => v });
+                if (s.CritChance !== undefined) stats.push({ label: 'Crit Chance', value: s.CritChance, fmt: v => (v * 100).toFixed(1) + '%' });
+                if (s.CritMultiplier !== undefined) stats.push({ label: 'Crit Multiplier', value: s.CritMultiplier, fmt: v => v + 'x' });
+                stats.push({ label: 'Use Speed', value: cfg.UseSpeed, fmt: v => v + '/s' });
+            }
+            if (cfg.ConsumableConfig) {
+                const s = cfg.ConsumableConfig;
+                if (s.HealthRestore) stats.push({ label: 'Heal Amount', value: s.HealthRestore, fmt: v => v, hi: true });
+                if (s.ManaRestore) stats.push({ label: 'Mana Restore', value: s.ManaRestore, fmt: v => v, hi: true });
+                if (s.EnergyRestore) stats.push({ label: 'Energy Restore', value: s.EnergyRestore, fmt: v => v });
+                if (s.StaminaRestore) stats.push({ label: 'Stamina Restore', value: s.StaminaRestore, fmt: v => v });
+                if (s.UseDuration) stats.push({ label: 'Use Time', value: s.UseDuration, fmt: v => v + 's' });
+                if (s.HasStatusEffect && s.StatusEffectType) stats.push({ label: 'Status Effect', value: s.StatusEffectType.replace(/([A-Z])/g, ' $1').trim(), fmt: v => v });
+                if (s.EffectDuration) stats.push({ label: 'Effect Duration', value: s.EffectDuration, fmt: v => v + 's' });
+            }
+            if (cfg.PotionConfig) {
+                const s = cfg.PotionConfig;
+                Object.entries(s).forEach(([k, v]) => {
+                    if (typeof v === 'number') stats.push({ label: k, value: v, fmt: x => x, hi: k.toLowerCase().includes('heal') });
+                });
+            }
+            if (cfg.FoodConfig) {
+                const s = cfg.FoodConfig;
+                Object.entries(s).forEach(([k, v]) => {
+                    if (typeof v === 'number') stats.push({ label: k, value: v, fmt: x => x });
+                });
+            }
+            if (cfg.ResourceConfig) {
+                const s = cfg.ResourceConfig;
+                if (s.IsRaw !== undefined) stats.push({ label: 'Raw Material', value: s.IsRaw, fmt: v => v ? 'Yes' : 'No' });
+                if (s.IsCraftingMaterial !== undefined) stats.push({ label: 'Crafting Mat.', value: s.IsCraftingMaterial, fmt: v => v ? 'Yes' : 'No' });
+            }
+            if (cfg.UtilityConfig) {
+                const s = cfg.UtilityConfig;
+                if (s.IsPlaceable !== undefined) stats.push({ label: 'Placeable', value: s.IsPlaceable, fmt: v => v ? 'Yes' : 'No' });
             }
 
-            // Consumable items: figure out by ItemID patterns
-            if (cfg.ItemType === 'Consumable') {
-                if (KIT_IDS.some(k => id.endsWith(k))) return 'Kits';
-                if (FOOD_IDS.some(f => id.includes(f))) return 'Food';
-                if (POTION_IDS.some(p => id.includes(p))) return 'Potions';
-                return 'Potions'; // default consumable fallback
-            }
+            if (!stats.length) return '';
 
-            return 'Resources';
+            return `
+        <div class="stats-section">
+            <div class="section-title"><i class="fas fa-chart-bar"></i>&nbsp; Statistics</div>
+            <div class="stats-grid">
+                ${stats.map(s => `
+                <div class="stat-card">
+                    <span class="stat-label">${s.label}</span>
+                    <span class="stat-value${s.hi ? ' highlight' : ''}">${s.fmt(s.value)}</span>
+                </div>`).join('')}
+            </div>
+        </div>`;
         }
 
-        // ── Build page ────────────────────────────────────────────────────────────────
-        let allCards = [];
-        let activeCat = 'all';
+        function iconUrl(id) {
+            const f = ICON_MAP[id];
+            return f ? ICON_PATH + f + '.png' : null;
+        }
 
+        function iconHtml(id, size) {
+            const url = iconUrl(id);
+            return url
+                ? `<img src="${url}" alt="" style="width:${size}px;height:${size}px;image-rendering:pixelated;" onerror="this.outerHTML='<span class=\\'icon-missing\\'>📦</span>'" />`
+                : `<span class="icon-missing">📦</span>`;
+        }
+
+        // ── Main ──────────────────────────────────────────────────────────────────────
         async function init() {
+            const params = new URLSearchParams(location.search);
+            const itemId = params.get('id');
+            if (!itemId) { showNotFound('No item ID specified.'); return; }
+
             const data = (typeof ITEM_CONFIGS !== 'undefined') ? ITEM_CONFIGS : await fetch('item_configs.json').then(r => r.json());
             const configs = data.ItemConfigs || data;
 
-            // Group by category
-            const groups = {};
-            CAT_ORDER.forEach(c => groups[c] = []);
+            const idx = configs.findIndex(c => c.ItemID === itemId);
+            if (idx === -1) { showNotFound(`Item "${itemId}" not found.`); return; }
 
-            configs.forEach(cfg => {
-                const cat = guessCategory(cfg);
-                if (!groups[cat]) groups[cat] = [];
-                groups[cat].push(cfg);
-            });
+            const cfg = configs[idx];
+            const prevCfg = idx > 0 ? configs[idx - 1] : null;
+            const nextCfg = idx < configs.length - 1 ? configs[idx + 1] : null;
 
-            // Build category filter buttons
-            const filterBar = document.getElementById('catFilters');
-            CAT_ORDER.forEach(cat => {
-                if (!groups[cat] || !groups[cat].length) return;
-                const meta = CAT_META[cat];
-                const btn = document.createElement('button');
-                btn.className = 'cat-btn';
-                btn.dataset.cat = cat;
-                btn.textContent = meta.label;
-                btn.onclick = () => filterCat(btn, cat);
-                btn.style.setProperty('--btn-color', meta.color);
-                filterBar.appendChild(btn);
-            });
+            // Set page title
+            document.title = `${cfg.Name} — Mine & Dungeon Wiki | 23-Steps`;
 
-            // Build catalog
-            const catalog = document.getElementById('itemCatalog');
-            catalog.innerHTML = '';
+            const rarityColor = RARITY_COLOR[cfg.Rarity] || '#b0bec5';
+            const rarityBg = RARITY_BG[cfg.Rarity] || '#1e2d40';
+            const url = iconUrl(cfg.ItemID);
+            const typeIcon = TYPE_ICON[cfg.ItemType] || 'fa-box';
 
-            CAT_ORDER.forEach(cat => {
-                const items = groups[cat];
-                if (!items || !items.length) return;
-                const meta = CAT_META[cat];
+            const infoboxIconHtml = url
+                ? `<img src="${url}" alt="${cfg.Name}" style="width:64px;height:64px;image-rendering:pixelated;" onerror="this.outerHTML='<span class=\\'icon-missing\\'>📦</span>'" />`
+                : `<span class="icon-missing">📦</span>`;
 
-                const section = document.createElement('section');
-                section.className = 'category';
-                section.dataset.cat = cat;
-                section.innerHTML = `
-          <div class="cat-header">
-            <span class="cat-badge" style="background:${meta.color}22;color:${meta.color};border:1px solid ${meta.color}55">${meta.label}</span>
-            <h3 class="cat-title">${meta.label}</h3>
-            <span class="cat-count">${items.length} items</span>
-          </div>
-          <div class="item-grid"></div>`;
+            // Build infobox rows
+            const infoRows = [
+                ['Type', cfg.ItemType],
+                ['Rarity', `<span class="rarity-pill" style="--rarity-color:${rarityColor};--rarity-bg:${rarityBg}">${cfg.Rarity}</span>`],
+                ['Max Stack', cfg.MaxStackSize >= 9999 ? '9,999' : cfg.MaxStackSize],
+                ['Use Speed', cfg.UseSpeed && cfg.UseSpeed < 900 ? cfg.UseSpeed + '/s' : '—'],
+            ];
 
-                const grid = section.querySelector('.item-grid');
+            if (cfg.SwordConfig) infoRows.push(['Damage', cfg.SwordConfig.AttackDamage]);
+            if (cfg.BowConfig) infoRows.push(['Damage', cfg.BowConfig.AttackDamage]);
+            if (cfg.PickaxeConfig) { infoRows.push(['Damage', cfg.PickaxeConfig.AttackDamage]); infoRows.push(['Mining Pwr', cfg.PickaxeConfig.MiningPower]); }
+            if (cfg.ArmorConfig) infoRows.push(['Defense', cfg.ArmorConfig.Defense]);
 
-                items.forEach(cfg => {
-                    const url = iconUrl(cfg.ItemID);
-                    const iconHtml = url
-                        ? `<img src="${url}" alt="${cfg.Name}" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\\'icon-missing\\'>📦</span>'" />`
-                        : `<span class="icon-missing">📦</span>`;
+            const descLines = (cfg.Description || '').split('\n').filter(Boolean);
+            const enchantHtml = cfg.CanBeEnchanted
+                ? `<span class="enchant-tag"><i class="fas fa-magic"></i> Enchantable</span>`
+                : `<span class="no-enchant-tag"><i class="fas fa-ban"></i> Not Enchantable</span>`;
 
-                    const rarityColor = RARITY_COLOR[cfg.Rarity] || '#b0bec5';
-                    const card = document.createElement('a');
-                    card.className = `item-card rarity-${cfg.Rarity}`;
-                    card.href = `${DETAIL_PAGE}?id=${encodeURIComponent(cfg.ItemID)}`;
-                    card.dataset.cat = cat;
-                    card.dataset.name = cfg.Name.toLowerCase();
-                    card.dataset.type = cfg.ItemType.toLowerCase();
-                    card.style.setProperty('--rarity-color', rarityColor);
+            const statsHtml = renderStats(cfg);
 
-                    card.innerHTML = `
-          <div class="item-icon-wrap">${iconHtml}</div>
-          <span class="item-name">${cfg.Name}</span>
-          <span class="item-type-label">${cfg.ItemType}</span>`;
+            const root = document.getElementById('page-root');
+            root.innerHTML = `
+        <a class="back-btn" href="items.html"><i class="fas fa-arrow-left"></i> Back to Items</a>
 
-                    grid.appendChild(card);
-                    allCards.push(card);
-                });
+        <div class="breadcrumb">
+            <a href="../index.html">23-Steps</a> &rsaquo;
+            <a href="../games.html">Games</a> &rsaquo;
+            <a href="items.html">Mine &amp; Dungeon Wiki</a> &rsaquo;
+            ${cfg.Name}
+        </div>
 
-                catalog.appendChild(section);
-            });
+        <div class="article" style="--rarity-color:${rarityColor}">
+
+            <!-- LEFT: Infobox -->
+            <aside>
+                <div class="infobox" style="--rarity-color:${rarityColor}">
+                    <div class="infobox-header">
+                        <div class="infobox-icon">${infoboxIconHtml}</div>
+                        <div class="infobox-name">${cfg.Name}</div>
+                        <div class="infobox-type">${cfg.ItemType}</div>
+                    </div>
+                    <table class="infobox-table">
+                        ${infoRows.map(([k, v]) => `<tr><td>${k}</td><td>${v}</td></tr>`).join('')}
+                    </table>
+                </div>
+            </aside>
+
+            <!-- RIGHT: Article body -->
+            <div class="article-body">
+                <h1 style="--rarity-color:${rarityColor}">${cfg.Name}</h1>
+                <div class="item-subtitle">${cfg.ItemType}</div>
+
+                <div class="type-badge-row">
+                    <span class="type-badge" style="--rarity-color:${rarityColor}">
+                        <i class="fas ${typeIcon}"></i> ${cfg.ItemType}
+                    </span>
+                    <span class="rarity-pill" style="--rarity-color:${rarityColor};--rarity-bg:${rarityBg}">
+                        ${cfg.Rarity}
+                    </span>
+                    ${enchantHtml}
+                </div>
+
+                ${descLines.length ? `
+                <div class="desc-section">
+                    <div class="section-title"><i class="fas fa-scroll"></i>&nbsp; Description</div>
+                    ${descLines.map(l => `<p>${l}</p>`).join('')}
+                </div>` : ''}
+
+                ${statsHtml}
+            </div>
+        </div>
+
+        <!-- Prev / Next nav -->
+        <div class="item-nav">
+            ${prevCfg ? `
+            <a class="nav-item-btn" href="item.html?id=${encodeURIComponent(prevCfg.ItemID)}">
+                ${iconHtml(prevCfg.ItemID, 32)}
+                <div><span class="nav-label">Previous</span>${prevCfg.Name}</div>
+            </a>` : '<div></div>'}
+            ${nextCfg ? `
+            <a class="nav-item-btn next" href="item.html?id=${encodeURIComponent(nextCfg.ItemID)}">
+                <div><span class="nav-label">Next</span>${nextCfg.Name}</div>
+                ${iconHtml(nextCfg.ItemID, 32)}
+            </a>` : '<div></div>'}
+        </div>`;
         }
 
-        // ── Filter ─────────────────────────────────────────────────────────────────────
-        function filterCat(btn, cat) {
-            document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            activeCat = cat;
-            applyFilters();
-        }
-
-        function applyFilters() {
-            const q = document.getElementById('searchInput').value.toLowerCase().trim();
-            allCards.forEach(card => {
-                const matchCat = activeCat === 'all' || card.dataset.cat === activeCat;
-                const matchQ = !q || card.dataset.name.includes(q) || card.dataset.type.includes(q);
-                card.classList.toggle('hidden', !(matchCat && matchQ));
-            });
-            document.querySelectorAll('.category').forEach(sec => {
-                sec.classList.toggle('hidden', !sec.querySelectorAll('.item-card:not(.hidden)').length);
-            });
+        function showNotFound(msg) {
+            document.getElementById('page-root').innerHTML = `
+        <div class="not-found">
+            <h2>Item Not Found</h2>
+            <p>${msg}</p>
+            <a class="back-btn" href="items.html"><i class="fas fa-arrow-left"></i> Back to Items</a>
+        </div>`;
         }
 
         init().catch(err => {
-            document.getElementById('itemCatalog').innerHTML =
-                `<div class="loading-state"><i class="fas fa-exclamation-triangle" style="animation:none;color:#f87171;"></i>Failed to load item data.<br/><small>${err.message}</small></div>`;
+            document.getElementById('page-root').innerHTML =
+                `<div class="not-found"><h2>Error</h2><p>${err.message}</p>
+                <a class="back-btn" href="items.html"><i class="fas fa-arrow-left"></i> Back</a></div>`;
         });
     </script>
 </body>
