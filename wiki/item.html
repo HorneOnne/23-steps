@@ -528,17 +528,11 @@
 
     .recipe-grid {
       display: flex;
-      flex-direction: column;
-      gap: 6px;
-      align-items: center;
-    }
-
-    .recipe-ingredients-row {
-      display: flex;
+      flex-direction: row;
       flex-wrap: wrap;
-      gap: 6px;
+      gap: 5px;
+      align-items: center;
       justify-content: center;
-      width: 100%;
     }
 
     .recipe-ingredient {
@@ -546,21 +540,19 @@
       flex-direction: column;
       align-items: center;
       gap: 3px;
-      background: #0a1018;
-      border: 1px solid #1e2d40;
+      background: color-mix(in srgb, var(--ing-color, #6ab0f3) 10%, #0d1420);
+      border: 1px solid color-mix(in srgb, var(--ing-color, #6ab0f3) 25%, #1e2d40);
       border-radius: 5px;
       padding: 6px 8px 5px;
       text-decoration: none;
       color: inherit;
-      min-width: 60px;
-      flex: 1;
-      max-width: 90px;
+      min-width: 56px;
       transition: border-color .15s, background .15s;
     }
 
     .recipe-ingredient:hover {
       border-color: #6ab0f3;
-      background: #141e30;
+      background: color-mix(in srgb, var(--ing-color, #6ab0f3) 20%, #141e30);
     }
 
     .recipe-ingredient img {
@@ -583,15 +575,16 @@
 
     .recipe-ing-name {
       font-size: 0.5em;
-      color: #6a7f9e;
+      color: #8fa3c8;
       text-align: center;
       line-height: 1.2;
     }
 
     .recipe-arrow {
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       color: #4a576b;
-      padding: 2px 0;
+      padding: 0 2px;
+      flex-shrink: 0;
     }
 
     .recipe-result {
@@ -6438,14 +6431,11 @@
             <!-- RIGHT: Article body -->
             <div class="article-body">
                 <h1 style="--rarity-color:${rarityColor}">${cfg.Name}</h1>
-                <div class="item-subtitle">${cfg.ItemType}</div>
+
 
                 <div class="type-badge-row">
                     <span class="type-badge" style="--rarity-color:${rarityColor}">
                         <i class="fas ${typeIcon}"></i> ${cfg.ItemType}
-                    </span>
-                    <span class="rarity-pill" style="--rarity-color:${rarityColor};--rarity-bg:${rarityBg}">
-                        ${cfg.Rarity}
                     </span>
                     ${enchantHtml}
                 </div>
@@ -6494,11 +6484,12 @@
       const ingredientCards = recipe.Ingredients.map(ing => {
         const ingCfg = allConfigs.find(c => c.ItemID === ing.ItemID);
         const ingName = ingCfg ? ingCfg.Name : ing.ItemID;
+        const ingRarityColor = RARITY_COLOR[(ingCfg && ingCfg.Rarity) || 'Common'] || '#b0bec5';
         const ingIcon = iconUrl(ing.ItemID);
         const imgHtml = ingIcon
           ? `<img src="${ingIcon}" alt="${ingName}" onerror="this.outerHTML='<span class=\\'icon-missing\\'>📦</span>'" />`
           : `<span class="icon-missing">📦</span>`;
-        return `<a class="recipe-ingredient" href="item.html?id=${encodeURIComponent(ing.ItemID)}">
+        return `<a class="recipe-ingredient" href="item.html?id=${encodeURIComponent(ing.ItemID)}" style="--ing-color:${ingRarityColor}">
                     ${imgHtml}
                     <span class="recipe-qty">×${ing.Quantity}</span>
                     <span class="recipe-ing-name">${ingName}</span>
@@ -6514,9 +6505,9 @@
       return `
         <div class="recipe-section">
             <div class="section-title"><i class="fas fa-hammer"></i>&nbsp; Crafting</div>
-            <div class="recipe-grid">
-                <div class="recipe-ingredients-row">${ingredientCards}</div>
-                <span class="recipe-arrow"><i class="fas fa-arrow-down"></i></span>
+            <div class="recipe-grid" style="--rarity-color:${RARITY_COLOR[cfg.Rarity] || '#b0bec5'}">
+                ${ingredientCards}
+                <span class="recipe-arrow"><i class="fas fa-chevron-right"></i></span>
                 <div class="recipe-result" style="--rarity-color:${RARITY_COLOR[cfg.Rarity] || '#b0bec5'}">
                     ${resultImgHtml}
                     <span class="recipe-result-name">${resultQtyLabel}${cfg.Name}</span>
