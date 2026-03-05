@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Press+Start+2P&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="wiki-theme.css" />
+    <script src="wiki-theme.js"></script>
     <style>
         /* ── Base ─────────────────────────────────────────── */
         *,
@@ -22,11 +24,11 @@
         html,
         body {
             font-family: 'Inter', sans-serif;
-            background-image: url('../background-loop.png');
+            background-image: var(--wiki-body-bg-image);
             background-repeat: repeat;
             background-size: 256px 256px;
-            background-color: #2b2b2b;
-            color: white;
+            background-color: var(--wiki-bg);
+            color: var(--wiki-text);
             display: flex;
             flex-direction: column;
             min-height: 100vh;
@@ -37,7 +39,7 @@
             content: "";
             position: fixed;
             inset: 0;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+            background: var(--wiki-bg-overlay);
             pointer-events: none;
             z-index: 1;
         }
@@ -50,13 +52,13 @@
 
         /* ── Header ───────────────────────────────────────── */
         header {
-            background-color: #1f1f2e;
+            background-color: var(--wiki-header-bg);
             height: 60px;
             padding: 0 20px;
             display: flex;
             justify-content: space-between;
             align-items: stretch;
-            border-bottom: 1px solid #333;
+            border-bottom: 1px solid var(--wiki-header-border);
             position: relative;
             z-index: 10;
         }
@@ -64,7 +66,7 @@
         header h1 {
             font-family: 'Press Start 2P', cursive;
             font-size: 1.4em;
-            color: #99ccff;
+            color: var(--wiki-header-title);
             margin: 0;
             display: flex;
             align-items: center;
@@ -90,7 +92,7 @@
         }
 
         nav a {
-            color: #ccc;
+            color: var(--wiki-nav-text);
             text-decoration: none;
             font-weight: bold;
             padding: 0 20px;
@@ -101,30 +103,30 @@
         }
 
         nav a.active {
-            background-color: #2b3a59;
-            color: white;
+            background-color: var(--wiki-nav-active-bg);
+            color: var(--wiki-nav-active-text);
         }
 
         nav a:hover:not(.active) {
-            color: #fff;
+            color: var(--wiki-nav-active-text);
         }
 
         /* ── Wiki Page Header ─────────────────────────────── */
         .wiki-page-header {
-            background-color: #161825;
-            border-bottom: 2px solid #2b3a59;
+            background-color: var(--wiki-page-header-bg);
+            border-bottom: 2px solid var(--wiki-page-header-border);
             padding: 28px 24px 0;
         }
 
         .wiki-page-header .breadcrumb {
             font-size: 0.7em;
-            color: #6ab0f3;
+            color: var(--wiki-breadcrumb);
             margin-bottom: 12px;
             letter-spacing: 0.04em;
         }
 
         .wiki-page-header .breadcrumb a {
-            color: #6ab0f3;
+            color: var(--wiki-breadcrumb);
             text-decoration: none;
         }
 
@@ -135,12 +137,12 @@
         .wiki-page-header h2 {
             font-family: 'Press Start 2P', cursive;
             font-size: clamp(0.9rem, 2.5vw, 1.4rem);
-            color: #99ccff;
+            color: var(--wiki-heading);
             margin-bottom: 6px;
         }
 
         .wiki-page-header p {
-            color: #8fa3c8;
+            color: var(--wiki-subheading);
             font-size: 0.85em;
             margin-bottom: 22px;
         }
@@ -150,7 +152,7 @@
             display: flex;
             gap: 0;
             margin-top: 4px;
-            border-top: 1px solid #2b3a59;
+            border-top: 1px solid var(--wiki-tab-border);
             overflow-x: auto;
         }
 
@@ -163,7 +165,7 @@
             align-items: center;
             gap: 7px;
             padding: 12px 22px;
-            color: #8fa3c8;
+            color: var(--wiki-tab-text);
             font-weight: 600;
             font-size: 0.82em;
             cursor: pointer;
@@ -177,14 +179,14 @@
         }
 
         .tab-btn:hover {
-            color: #c8d1e1;
-            background: rgba(255, 255, 255, 0.04);
+            color: var(--wiki-tab-hover-text);
+            background: var(--wiki-tab-hover-bg);
         }
 
         .tab-btn.active {
-            color: #6ab0f3;
-            border-bottom-color: #6ab0f3;
-            background: rgba(106, 176, 243, 0.06);
+            color: var(--wiki-tab-active-text);
+            border-bottom-color: var(--wiki-tab-active-border);
+            background: var(--wiki-tab-active-bg);
         }
 
         .tab-btn.coming-soon {
@@ -195,9 +197,9 @@
 
         .tab-btn .tab-badge {
             font-size: 0.62em;
-            background: #1a2332;
-            border: 1px solid #2b3a59;
-            color: #4a576b;
+            background: var(--wiki-tab-badge-bg);
+            border: 1px solid var(--wiki-tab-badge-border);
+            color: var(--wiki-tab-badge-text);
             padding: 1px 5px;
             border-radius: 3px;
         }
@@ -217,8 +219,8 @@
         }
 
         .section-card {
-            background: #101824;
-            border: 1px solid #222a33;
+            background: var(--wiki-section-card-bg);
+            border: 1px solid var(--wiki-section-card-border);
             border-radius: 10px;
             padding: 22px;
             display: flex;
@@ -230,16 +232,16 @@
         }
 
         .section-card:hover {
-            border-color: #3a7ee0;
+            border-color: var(--wiki-section-card-hover);
             transform: translateY(-3px);
-            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
+            box-shadow: var(--wiki-panel-shadow);
         }
 
         .section-card-icon {
             width: 52px;
             height: 52px;
-            background: #1a2535;
-            border: 1px solid #2b3a59;
+            background: var(--wiki-section-card-icon-bg);
+            border: 1px solid var(--wiki-section-card-icon-border);
             border-radius: 10px;
             display: flex;
             align-items: center;
@@ -251,13 +253,13 @@
         .section-card-body .section-card-title {
             font-family: 'Press Start 2P', cursive;
             font-size: 0.6rem;
-            color: #6ab0f3;
+            color: var(--wiki-section-title);
             margin-bottom: 6px;
         }
 
         .section-card-body p {
             font-size: 0.78em;
-            color: #8fa3c8;
+            color: var(--wiki-subheading);
             line-height: 1.5;
         }
 
@@ -266,16 +268,16 @@
             text-align: center;
             padding: 10px;
             font-size: 0.8em;
-            color: #ccc;
-            background-color: #1f1f2e;
-            border-top: 1px solid #333;
+            color: var(--wiki-footer-text);
+            background-color: var(--wiki-footer-bg);
+            border-top: 1px solid var(--wiki-footer-border);
             font-weight: bold;
             position: relative;
             z-index: 2;
         }
 
         footer a {
-            color: #79aaff;
+            color: var(--wiki-footer-link);
             text-decoration: none;
         }
 
@@ -298,6 +300,10 @@
             <a href="../index.html">HOME</a>
             <a href="../games.html">GAMES</a>
             <a href="index.html" class="active">WIKI</a>
+            <button class="theme-toggle" title="Toggle light/dark mode" aria-label="Toggle theme">
+                <i class="fas fa-sun icon-sun"></i>
+                <i class="fas fa-moon icon-moon"></i>
+            </button>
         </nav>
     </header>
 

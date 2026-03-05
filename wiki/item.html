@@ -10,6 +10,8 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Press+Start+2P&family=Cinzel:wght@400;600&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="wiki-theme.css" />
+  <script src="wiki-theme.js"></script>
   <style>
     /* ── Base ─────────────────────────────────────────── */
     *,
@@ -23,11 +25,11 @@
     html,
     body {
       font-family: 'Inter', sans-serif;
-      background-image: url('../background-loop.png');
+      background-image: var(--wiki-body-bg-image);
       background-repeat: repeat;
       background-size: 256px 256px;
-      background-color: #2b2b2b;
-      color: white;
+      background-color: var(--wiki-bg);
+      color: var(--wiki-text);
       display: flex;
       flex-direction: column;
       min-height: 100vh;
@@ -38,7 +40,7 @@
       content: "";
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.15);
+      background: var(--wiki-bg-overlay);
       pointer-events: none;
       z-index: 1;
     }
@@ -51,13 +53,13 @@
 
     /* ── Header ───────────────────────────────────────── */
     header {
-      background-color: #1f1f2e;
+      background-color: var(--wiki-header-bg);
       height: 60px;
       padding: 0 20px;
       display: flex;
       justify-content: space-between;
       align-items: stretch;
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid var(--wiki-header-border);
       position: relative;
       z-index: 10;
     }
@@ -65,7 +67,7 @@
     header h1 {
       font-family: 'Press Start 2P', cursive;
       font-size: 1.4em;
-      color: #99ccff;
+      color: var(--wiki-header-title);
       margin: 0;
       display: flex;
       align-items: center;
@@ -91,7 +93,7 @@
     }
 
     nav a {
-      color: #ccc;
+      color: var(--wiki-nav-text);
       text-decoration: none;
       font-weight: bold;
       padding: 0 20px;
@@ -102,12 +104,12 @@
     }
 
     nav a.active {
-      background-color: #2b3a59;
-      color: white;
+      background-color: var(--wiki-nav-active-bg);
+      color: var(--wiki-nav-active-text);
     }
 
     nav a:hover:not(.active) {
-      color: #fff;
+      color: var(--wiki-nav-active-text);
     }
 
     /* ── Content wrapper ──────────────────────────────── */
@@ -115,24 +117,24 @@
       max-width: 900px;
       margin: 24px auto;
       padding: 28px 24px 48px;
-      background: rgba(15, 22, 40, 0.65);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
+      background: var(--wiki-panel-bg);
+      backdrop-filter: var(--wiki-panel-blur);
+      -webkit-backdrop-filter: var(--wiki-panel-blur);
       border-radius: 10px;
-      border: 1px solid rgba(43, 58, 89, 0.5);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--wiki-panel-border);
+      box-shadow: var(--wiki-panel-shadow);
     }
 
     /* ── Breadcrumb ───────────────────────────────────── */
     .breadcrumb {
       font-size: 0.7em;
-      color: #6ab0f3;
+      color: var(--wiki-breadcrumb);
       margin-bottom: 20px;
       letter-spacing: 0.04em;
     }
 
     .breadcrumb a {
-      color: #6ab0f3;
+      color: var(--wiki-breadcrumb);
       text-decoration: none;
     }
 
@@ -156,33 +158,31 @@
 
     /* ── Infobox (right sidebar, Terraria style) ──────── */
     .infobox {
-      background-color: #0d1420;
-      border: 1px solid #2b3a59;
+      background-color: var(--wiki-infobox-bg);
+      border: 1px solid var(--wiki-infobox-border);
       border-top: 3px solid var(--rarity-color, #6ab0f3);
       border-radius: 4px;
       overflow: hidden;
     }
 
     .infobox-header {
-      background: #111927;
+      background: var(--wiki-infobox-header-bg);
       padding: 14px;
       text-align: center;
-      border-bottom: 1px solid #1e2d40;
+      border-bottom: 1px solid var(--wiki-infobox-header-border);
     }
 
     .infobox-icon {
       width: 72px;
       height: 72px;
       margin: 0 auto 10px;
-      background: color-mix(in srgb, var(--rarity-color, #2b3a59) 12%, #111827);
-      border: 2px solid color-mix(in srgb, var(--rarity-color, #2b3a59) 35%, #1e293b);
+      background: var(--wiki-card-icon-bg);
+      border: 2px solid var(--wiki-card-icon-border);
       border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      box-shadow: 0 0 12px color-mix(in srgb, var(--rarity-color, #555) 25%, transparent),
-        inset 0 0 16px color-mix(in srgb, var(--rarity-color, #555) 10%, transparent);
     }
 
     .infobox-icon img {
@@ -208,7 +208,7 @@
 
     .infobox-type {
       font-size: 0.7em;
-      color: #6a7f9e;
+      color: var(--wiki-text-dim);
       letter-spacing: 0.04em;
       text-transform: uppercase;
     }
@@ -220,7 +220,7 @@
     }
 
     .infobox-table tr {
-      border-bottom: 1px solid #1a2535;
+      border-bottom: 1px solid var(--wiki-infobox-row-border);
     }
 
     .infobox-table tr:last-child {
@@ -233,14 +233,14 @@
     }
 
     .infobox-table td:first-child {
-      color: #6a7f9e;
+      color: var(--wiki-infobox-label);
       white-space: nowrap;
       width: 50%;
       font-size: 0.9em;
     }
 
     .infobox-table td:last-child {
-      color: #c8d1e1;
+      color: var(--wiki-infobox-value);
       font-weight: bold;
     }
 
@@ -260,16 +260,16 @@
     .article-body h1 {
       font-family: 'Press Start 2P', cursive;
       font-size: clamp(0.85rem, 2.5vw, 1.2rem);
-      color: var(--rarity-color, #99ccff);
+      color: var(--rarity-color, var(--wiki-heading));
       line-height: 1.5;
       margin-bottom: 8px;
       padding-bottom: 10px;
-      border-bottom: 2px solid #2b3a59;
+      border-bottom: 2px solid var(--wiki-section-border);
     }
 
     .item-subtitle {
       font-size: 0.8em;
-      color: #6a7f9e;
+      color: var(--wiki-text-dim);
       margin-bottom: 24px;
       text-transform: uppercase;
       letter-spacing: 0.08em;
@@ -287,12 +287,12 @@
       display: inline-flex;
       align-items: center;
       gap: 5px;
-      background: #111927;
-      border: 1px solid #2b3a59;
+      background: var(--wiki-stat-bg);
+      border: 1px solid var(--wiki-stat-border);
       border-radius: 4px;
       padding: 4px 10px;
       font-size: 0.75em;
-      color: #8fa3c8;
+      color: var(--wiki-text-muted);
     }
 
     .type-badge i {
@@ -308,10 +308,10 @@
       font-family: 'Cinzel', Georgia, serif;
       font-size: 0.82em;
       font-style: italic;
-      color: #f0d080;
+      color: var(--wiki-desc-color);
       line-height: 1.85;
       letter-spacing: 0.03em;
-      text-shadow: 0 0 14px rgba(240, 208, 128, 0.4);
+      text-shadow: 0 0 14px var(--wiki-desc-shadow);
     }
 
     /* ── Stat section ─────────────────────────────────── */
@@ -322,10 +322,10 @@
     .section-title {
       font-family: 'Press Start 2P', cursive;
       font-size: 0.65rem;
-      color: #6ab0f3;
+      color: var(--wiki-section-title);
       margin-bottom: 12px;
       padding-bottom: 6px;
-      border-bottom: 1px solid #2b3a59;
+      border-bottom: 1px solid var(--wiki-section-border);
     }
 
     .stats-grid {
@@ -335,8 +335,8 @@
     }
 
     .stat-card {
-      background: #0d1420;
-      border: 1px solid #1e2d40;
+      background: var(--wiki-stat-bg);
+      border: 1px solid var(--wiki-stat-border);
       border-radius: 5px;
       padding: 10px 12px;
       display: flex;
@@ -346,7 +346,7 @@
 
     .stat-label {
       font-size: 0.65em;
-      color: #6a7f9e;
+      color: var(--wiki-stat-label);
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
@@ -354,7 +354,7 @@
     .stat-value {
       font-size: 1.05em;
       font-weight: bold;
-      color: #c8d1e1;
+      color: var(--wiki-stat-value);
     }
 
     .stat-value.highlight {
@@ -366,9 +366,9 @@
       display: inline-flex;
       align-items: center;
       gap: 5px;
-      background: #1a1026;
-      border: 1px solid #7c3aed44;
-      color: #c084fc;
+      background: var(--wiki-enchant-bg);
+      border: 1px solid var(--wiki-enchant-border);
+      color: var(--wiki-enchant-text);
       border-radius: 4px;
       padding: 4px 10px;
       font-size: 0.75em;
@@ -379,9 +379,9 @@
       display: inline-flex;
       align-items: center;
       gap: 5px;
-      background: #101824;
-      border: 1px solid #2b3a59;
-      color: #4a576b;
+      background: var(--wiki-no-enchant-bg);
+      border: 1px solid var(--wiki-no-enchant-border);
+      color: var(--wiki-no-enchant-text);
       border-radius: 4px;
       padding: 4px 10px;
       font-size: 0.75em;
@@ -392,7 +392,7 @@
     .loading-state {
       text-align: center;
       padding: 80px 20px;
-      color: #6a7f9e;
+      color: var(--wiki-loading);
       font-size: 0.9em;
     }
 
@@ -414,16 +414,16 @@
       text-align: center;
       padding: 10px;
       font-size: 0.8em;
-      color: #ccc;
-      background-color: #1f1f2e;
-      border-top: 1px solid #333;
+      color: var(--wiki-footer-text);
+      background-color: var(--wiki-footer-bg);
+      border-top: 1px solid var(--wiki-footer-border);
       font-weight: bold;
       position: relative;
       z-index: 2;
     }
 
     footer a {
-      color: #79aaff;
+      color: var(--wiki-footer-link);
       text-decoration: none;
     }
 
@@ -436,9 +436,9 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: #0d1420;
-      border: 1px solid #2b3a59;
-      color: #8fa3c8;
+      background: var(--wiki-btn-bg);
+      border: 1px solid var(--wiki-btn-border);
+      color: var(--wiki-btn-text);
       border-radius: 4px;
       padding: 6px 12px;
       font-size: 0.78em;
@@ -448,8 +448,8 @@
     }
 
     .back-btn:hover {
-      background: #141e30;
-      color: #c8d1e1;
+      background: var(--wiki-btn-hover-bg);
+      color: var(--wiki-btn-hover-text);
     }
 
     /* ── Prev/Next nav ────────────────────────────────── */
@@ -464,12 +464,12 @@
       display: flex;
       align-items: center;
       gap: 8px;
-      background: #0d1420;
-      border: 1px solid #2b3a59;
+      background: var(--wiki-btn-bg);
+      border: 1px solid var(--wiki-btn-border);
       border-radius: 6px;
       padding: 10px 14px;
       text-decoration: none;
-      color: #8fa3c8;
+      color: var(--wiki-btn-text);
       font-size: 0.75em;
       flex: 1;
       transition: background .15s, border-color .15s;
@@ -477,9 +477,9 @@
     }
 
     .nav-item-btn:hover {
-      background: #141e30;
-      border-color: #6ab0f3;
-      color: #c8d1e1;
+      background: var(--wiki-btn-hover-bg);
+      border-color: var(--wiki-input-focus, #6ab0f3);
+      color: var(--wiki-btn-hover-text);
     }
 
     .nav-item-btn.next {
@@ -489,7 +489,7 @@
 
     .nav-item-btn .nav-label {
       font-size: 0.8em;
-      color: #4a576b;
+      color: var(--wiki-text-dimmer);
       display: block;
       margin-bottom: 3px;
     }
@@ -505,13 +505,13 @@
     .not-found {
       text-align: center;
       padding: 80px 20px;
-      color: #6a7f9e;
+      color: var(--wiki-text-dim);
     }
 
     .not-found h2 {
       font-family: 'Press Start 2P', cursive;
       font-size: 1rem;
-      color: #f87171;
+      color: var(--wiki-error);
       margin-bottom: 14px;
     }
 
@@ -523,16 +523,16 @@
     /* ── Crafting recipe (infobox) ───────────────── */
     .recipe-section {
       padding: 10px 12px 12px;
-      border-top: 1px solid #1a2535;
+      border-top: 1px solid var(--wiki-recipe-border);
     }
 
     .recipe-section .section-title {
       font-family: 'Press Start 2P', cursive;
       font-size: 0.5rem;
-      color: #6ab0f3;
+      color: var(--wiki-section-title);
       margin-bottom: 8px;
       padding-bottom: 4px;
-      border-bottom: 1px solid #1e2d40;
+      border-bottom: 1px solid var(--wiki-stat-border);
     }
 
     /* 5-per-row grid */
@@ -585,7 +585,7 @@
     .recipe-qty {
       font-size: 0.6em;
       font-weight: 700;
-      color: #fbbf24;
+      color: var(--wiki-recipe-qty);
       white-space: nowrap;
     }
 
@@ -630,16 +630,16 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #0d1420;
-      border: 1px solid #1e2d40;
+      background: var(--wiki-usedin-slot-bg);
+      border: 1px solid var(--wiki-usedin-slot-border);
       border-radius: 6px;
       text-decoration: none;
       transition: border-color .15s, background .15s;
     }
 
     .usedin-slot-box:hover {
-      border-color: #6ab0f3;
-      background: #141e30;
+      border-color: var(--wiki-usedin-slot-hover-border);
+      background: var(--wiki-usedin-slot-hover-bg);
     }
 
     .usedin-slot-box img {
@@ -660,9 +660,9 @@
       position: absolute;
       top: -6px;
       left: -6px;
-      background: #1a1a2e;
-      border: 1.5px solid #3b4a6b;
-      color: #e2e8f0;
+      background: var(--wiki-badge-bg);
+      border: 1.5px solid var(--wiki-badge-border);
+      color: var(--wiki-badge-text);
       font-size: 0.58em;
       font-weight: 700;
       border-radius: 50%;
@@ -694,7 +694,7 @@
 
     /* arrow between ingredients and result */
     .usedin-arrow {
-      color: #4a5a78;
+      color: var(--wiki-arrow);
       font-size: 1.1rem;
       flex-shrink: 0;
     }
@@ -714,6 +714,10 @@
       <a href="../index.html">HOME</a>
       <a href="../games.html">GAMES</a>
       <a href="items.html" class="active">WIKI</a>
+      <button class="theme-toggle" title="Toggle light/dark mode" aria-label="Toggle theme">
+        <i class="fas fa-sun icon-sun"></i>
+        <i class="fas fa-moon icon-moon"></i>
+      </button>
     </nav>
   </header>
 

@@ -1,0 +1,439 @@
+/* ═══════════════════════════════════════════════════════════════════════════════
+   wiki-theme.css — Shared Light / Dark theme for 23-Steps Wiki
+   Inspired by Minecraft Wiki (light) & existing dark design
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+/* ── Theme Tokens ──────────────────────────────────────────────────────────── */
+
+:root {
+  /* Default = dark */
+  --wiki-bg: #2b2b2b;
+  --wiki-bg-overlay: rgba(0, 0, 0, 0.15);
+  --wiki-text: #e2e8f0;
+  --wiki-text-muted: #8fa3c8;
+  --wiki-text-dim: #6a7f9e;
+  --wiki-text-dimmer: #4a576b;
+
+  /* Header */
+  --wiki-header-bg: #1f1f2e;
+  --wiki-header-border: #333;
+  --wiki-header-title: #99ccff;
+  --wiki-nav-text: #ccc;
+  --wiki-nav-active-bg: #2b3a59;
+  --wiki-nav-active-text: #fff;
+
+  /* Main content panel */
+  --wiki-panel-bg: rgba(15, 22, 40, 0.65);
+  --wiki-panel-border: rgba(43, 58, 89, 0.5);
+  --wiki-panel-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --wiki-panel-blur: blur(14px);
+
+  /* Page header / breadcrumb area */
+  --wiki-page-header-bg: #161825;
+  --wiki-page-header-border: #2b3a59;
+  --wiki-breadcrumb: #6ab0f3;
+  --wiki-heading: #99ccff;
+  --wiki-subheading: #8fa3c8;
+
+  /* Tab bar */
+  --wiki-tab-border: #2b3a59;
+  --wiki-tab-text: #8fa3c8;
+  --wiki-tab-hover-text: #c8d1e1;
+  --wiki-tab-hover-bg: rgba(255, 255, 255, 0.04);
+  --wiki-tab-active-text: #6ab0f3;
+  --wiki-tab-active-border: #6ab0f3;
+  --wiki-tab-active-bg: rgba(106, 176, 243, 0.06);
+  --wiki-tab-badge-bg: #1a2332;
+  --wiki-tab-badge-border: #2b3a59;
+  --wiki-tab-badge-text: #4a576b;
+
+  /* Controls bar */
+  --wiki-controls-bg: #1a1d2e;
+  --wiki-controls-border: #2b3a59;
+  --wiki-input-bg: #101824;
+  --wiki-input-border: #2b3a59;
+  --wiki-input-text: #c8d1e1;
+  --wiki-input-placeholder: #4a576b;
+  --wiki-input-focus: #6ab0f3;
+  --wiki-filter-bg: #101824;
+  --wiki-filter-border: #2b3a59;
+  --wiki-filter-text: #8fa3c8;
+  --wiki-filter-hover-bg: #1e2d4a;
+  --wiki-filter-active-bg: #2b3a59;
+  --wiki-filter-active-text: #fff;
+
+  /* Cards */
+  --wiki-card-bg: #0d1420;
+  --wiki-card-border: #222a33;
+  --wiki-card-hover-border: #3a7ee0;
+  --wiki-card-hover-bg: #141e30;
+  --wiki-card-hover-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --wiki-card-icon-bg: #111827;
+  --wiki-card-icon-border: #1e293b;
+  --wiki-card-name: #e2e8f0;
+
+  /* Infobox */
+  --wiki-infobox-bg: #0d1420;
+  --wiki-infobox-border: #2b3a59;
+  --wiki-infobox-header-bg: #111927;
+  --wiki-infobox-header-border: #1e2d40;
+  --wiki-infobox-row-border: #1a2535;
+  --wiki-infobox-label: #6a7f9e;
+  --wiki-infobox-value: #c8d1e1;
+
+  /* Stats */
+  --wiki-stat-bg: #0d1420;
+  --wiki-stat-border: #1e2d40;
+  --wiki-stat-label: #6a7f9e;
+  --wiki-stat-value: #c8d1e1;
+
+  /* Section cards (mine-dungeon hub) */
+  --wiki-section-card-bg: #101824;
+  --wiki-section-card-border: #222a33;
+  --wiki-section-card-hover: #3a7ee0;
+  --wiki-section-card-icon-bg: #1a2535;
+  --wiki-section-card-icon-border: #2b3a59;
+
+  /* Section titles */
+  --wiki-section-title: #6ab0f3;
+  --wiki-section-border: #2b3a59;
+
+  /* Buttons */
+  --wiki-btn-bg: #0d1420;
+  --wiki-btn-border: #2b3a59;
+  --wiki-btn-text: #8fa3c8;
+  --wiki-btn-hover-bg: #141e30;
+  --wiki-btn-hover-text: #c8d1e1;
+  --wiki-link-btn-bg: #2b3a59;
+  --wiki-link-btn-text: #fff;
+  --wiki-link-btn-hover: #3c4f7c;
+
+  /* Description */
+  --wiki-desc-color: #f0d080;
+  --wiki-desc-shadow: rgba(240, 208, 128, 0.4);
+
+  /* Footer */
+  --wiki-footer-bg: #1f1f2e;
+  --wiki-footer-border: #333;
+  --wiki-footer-text: #ccc;
+  --wiki-footer-link: #79aaff;
+
+  /* Enchant tags */
+  --wiki-enchant-bg: #1a1026;
+  --wiki-enchant-border: #7c3aed44;
+  --wiki-enchant-text: #c084fc;
+  --wiki-no-enchant-bg: #101824;
+  --wiki-no-enchant-border: #2b3a59;
+  --wiki-no-enchant-text: #4a576b;
+
+  /* Recipe */
+  --wiki-recipe-border: #1a2535;
+  --wiki-recipe-qty: #fbbf24;
+
+  /* Badge */
+  --wiki-badge-bg: #1a1a2e;
+  --wiki-badge-border: #3b4a6b;
+  --wiki-badge-text: #e2e8f0;
+
+  /* Arrow */
+  --wiki-arrow: #4a5a78;
+
+  /* Used-in */
+  --wiki-usedin-slot-bg: #0d1420;
+  --wiki-usedin-slot-border: #1e2d40;
+  --wiki-usedin-slot-hover-bg: #141e30;
+  --wiki-usedin-slot-hover-border: #6ab0f3;
+
+  /* Loading */
+  --wiki-loading: #6a7f9e;
+
+  /* Not found */
+  --wiki-error: #f87171;
+
+  /* Game card (index) */
+  --wiki-game-card-bg: #101824;
+  --wiki-game-card-border: #222a33;
+  --wiki-game-card-thumb-bg: #0d1420;
+  --wiki-game-card-name: #6ab0f3;
+  --wiki-game-card-desc: #8fa3c8;
+  --wiki-coming-soon-bg: #1a2332;
+  --wiki-coming-soon-border: #2b3a59;
+  --wiki-coming-soon-text: #4a576b;
+
+  /* Page title (index page) */
+  --wiki-page-title-bg: #161825;
+  --wiki-page-title-border: #2b3a59;
+
+  /* Modal */
+  --wiki-modal-overlay: rgba(0, 0, 0, 0.72);
+  --wiki-modal-bg: #0d1420;
+  --wiki-modal-border: #2b3a59;
+  --wiki-modal-header-bg: #0d1420;
+  --wiki-modal-header-border: #1e2a3a;
+
+  /* Mob card */
+  --wiki-mob-bg: #0d1420;
+  --wiki-mob-border: #222a33;
+  --wiki-mob-hover-bg: #111e30;
+  --wiki-mob-level-bg: #0e1926;
+  --wiki-mob-level-border: #2b3a59;
+  --wiki-mob-level-text: #6ab0f3;
+  --wiki-mob-name: #c8d1e1;
+
+  /* Loot */
+  --wiki-loot-bg: #111827;
+  --wiki-loot-border: #1a2535;
+  --wiki-loot-name: #c8d1e1;
+  --wiki-loot-qty: #8fa3c8;
+  --wiki-loot-chance: #fbbf24;
+
+  /* Misc */
+  --wiki-cat-header-border: #2b3a59;
+
+  /* Theme toggle */
+  --wiki-toggle-bg: #1a2535;
+  --wiki-toggle-border: #2b3a59;
+  --wiki-toggle-hover: #2b3a59;
+  --wiki-toggle-icon: #fbbf24;
+
+  /* Show background image in dark mode */
+  --wiki-show-bg-image: block;
+  --wiki-body-bg-image: url('../background-loop.png');
+}
+
+/* ── LIGHT MODE ────────────────────────────────────────────────────────────── */
+/* Inspired by Minecraft Wiki: clean white/cream panels, green header,
+   structured content areas, soft shadows, and readable dark text. */
+
+[data-theme="light"] {
+  --wiki-bg: #e8e4d4;
+  --wiki-bg-overlay: transparent;
+  --wiki-text: #333;
+  --wiki-text-muted: #555;
+  --wiki-text-dim: #666;
+  --wiki-text-dimmer: #888;
+
+  /* Header — Minecraft Wiki green header bar */
+  --wiki-header-bg: #2E6B2E;
+  --wiki-header-border: #1d4d1d;
+  --wiki-header-title: #fff;
+  --wiki-nav-text: rgba(255,255,255,0.85);
+  --wiki-nav-active-bg: rgba(0,0,0,0.2);
+  --wiki-nav-active-text: #fff;
+
+  /* Main content panel */
+  --wiki-panel-bg: #fff;
+  --wiki-panel-border: #c8c0a8;
+  --wiki-panel-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  --wiki-panel-blur: none;
+
+  /* Page header / breadcrumb area */
+  --wiki-page-header-bg: #f0ede0;
+  --wiki-page-header-border: #c8c0a8;
+  --wiki-breadcrumb: #2c6e2c;
+  --wiki-heading: #333;
+  --wiki-subheading: #555;
+
+  /* Tab bar */
+  --wiki-tab-border: #d4cdb8;
+  --wiki-tab-text: #666;
+  --wiki-tab-hover-text: #333;
+  --wiki-tab-hover-bg: rgba(0,0,0,0.04);
+  --wiki-tab-active-text: #2c6e2c;
+  --wiki-tab-active-border: #2c6e2c;
+  --wiki-tab-active-bg: rgba(46,107,46,0.06);
+  --wiki-tab-badge-bg: #eee;
+  --wiki-tab-badge-border: #ccc;
+  --wiki-tab-badge-text: #999;
+
+  /* Controls bar */
+  --wiki-controls-bg: #f5f2e8;
+  --wiki-controls-border: #d4cdb8;
+  --wiki-input-bg: #fff;
+  --wiki-input-border: #c8c0a8;
+  --wiki-input-text: #333;
+  --wiki-input-placeholder: #aaa;
+  --wiki-input-focus: #2c6e2c;
+  --wiki-filter-bg: #fff;
+  --wiki-filter-border: #c8c0a8;
+  --wiki-filter-text: #555;
+  --wiki-filter-hover-bg: #e8f5e8;
+  --wiki-filter-active-bg: #2c6e2c;
+  --wiki-filter-active-text: #fff;
+
+  /* Cards */
+  --wiki-card-bg: #fff;
+  --wiki-card-border: #d4cdb8;
+  --wiki-card-hover-border: #2c6e2c;
+  --wiki-card-hover-bg: #f8fdf8;
+  --wiki-card-hover-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  --wiki-card-icon-bg: #f5f2e8;
+  --wiki-card-icon-border: #d4cdb8;
+  --wiki-card-name: #333;
+
+  /* Infobox */
+  --wiki-infobox-bg: #f9f7f0;
+  --wiki-infobox-border: #c8c0a8;
+  --wiki-infobox-header-bg: #f0ede0;
+  --wiki-infobox-header-border: #d4cdb8;
+  --wiki-infobox-row-border: #e0dbc8;
+  --wiki-infobox-label: #666;
+  --wiki-infobox-value: #333;
+
+  /* Stats */
+  --wiki-stat-bg: #f5f2e8;
+  --wiki-stat-border: #d4cdb8;
+  --wiki-stat-label: #666;
+  --wiki-stat-value: #333;
+
+  /* Section cards */
+  --wiki-section-card-bg: #fff;
+  --wiki-section-card-border: #d4cdb8;
+  --wiki-section-card-hover: #2c6e2c;
+  --wiki-section-card-icon-bg: #f0ede0;
+  --wiki-section-card-icon-border: #d4cdb8;
+
+  /* Section titles */
+  --wiki-section-title: #2c6e2c;
+  --wiki-section-border: #c8c0a8;
+
+  /* Buttons */
+  --wiki-btn-bg: #f5f2e8;
+  --wiki-btn-border: #c8c0a8;
+  --wiki-btn-text: #555;
+  --wiki-btn-hover-bg: #e8f5e8;
+  --wiki-btn-hover-text: #333;
+  --wiki-link-btn-bg: #2c6e2c;
+  --wiki-link-btn-text: #fff;
+  --wiki-link-btn-hover: #3d8e3d;
+
+  /* Description */
+  --wiki-desc-color: #8b6914;
+  --wiki-desc-shadow: none;
+
+  /* Footer */
+  --wiki-footer-bg: #2E6B2E;
+  --wiki-footer-border: #1d4d1d;
+  --wiki-footer-text: rgba(255,255,255,0.85);
+  --wiki-footer-link: #c3f0c3;
+
+  /* Enchant tags */
+  --wiki-enchant-bg: #f3eafa;
+  --wiki-enchant-border: #c4a5f3;
+  --wiki-enchant-text: #7c3aed;
+  --wiki-no-enchant-bg: #f0f0f0;
+  --wiki-no-enchant-border: #ccc;
+  --wiki-no-enchant-text: #999;
+
+  /* Recipe */
+  --wiki-recipe-border: #d4cdb8;
+  --wiki-recipe-qty: #b88a00;
+
+  /* Badge */
+  --wiki-badge-bg: #eee;
+  --wiki-badge-border: #ccc;
+  --wiki-badge-text: #333;
+
+  /* Arrow */
+  --wiki-arrow: #999;
+
+  /* Used-in */
+  --wiki-usedin-slot-bg: #f5f2e8;
+  --wiki-usedin-slot-border: #d4cdb8;
+  --wiki-usedin-slot-hover-bg: #e8f5e8;
+  --wiki-usedin-slot-hover-border: #2c6e2c;
+
+  /* Loading */
+  --wiki-loading: #888;
+
+  /* Not found */
+  --wiki-error: #d32f2f;
+
+  /* Game card (index) */
+  --wiki-game-card-bg: #fff;
+  --wiki-game-card-border: #d4cdb8;
+  --wiki-game-card-thumb-bg: #f0ede0;
+  --wiki-game-card-name: #2c6e2c;
+  --wiki-game-card-desc: #555;
+  --wiki-coming-soon-bg: #f0f0f0;
+  --wiki-coming-soon-border: #ccc;
+  --wiki-coming-soon-text: #aaa;
+
+  /* Page title (index) */
+  --wiki-page-title-bg: #f0ede0;
+  --wiki-page-title-border: #c8c0a8;
+
+  /* Modal */
+  --wiki-modal-overlay: rgba(0, 0, 0, 0.45);
+  --wiki-modal-bg: #fff;
+  --wiki-modal-border: #c8c0a8;
+  --wiki-modal-header-bg: #f9f7f0;
+  --wiki-modal-header-border: #d4cdb8;
+
+  /* Mob card */
+  --wiki-mob-bg: #fff;
+  --wiki-mob-border: #d4cdb8;
+  --wiki-mob-hover-bg: #f8fdf8;
+  --wiki-mob-level-bg: #eef8ee;
+  --wiki-mob-level-border: #b0d8b0;
+  --wiki-mob-level-text: #2c6e2c;
+  --wiki-mob-name: #333;
+
+  /* Loot */
+  --wiki-loot-bg: #f5f2e8;
+  --wiki-loot-border: #d4cdb8;
+  --wiki-loot-name: #333;
+  --wiki-loot-qty: #555;
+  --wiki-loot-chance: #b88a00;
+
+  /* Misc */
+  --wiki-cat-header-border: #c8c0a8;
+
+  /* Theme toggle */
+  --wiki-toggle-bg: rgba(255,255,255,0.2);
+  --wiki-toggle-border: rgba(255,255,255,0.3);
+  --wiki-toggle-hover: rgba(255,255,255,0.35);
+  --wiki-toggle-icon: #fff;
+
+  /* Hide background image in light mode */
+  --wiki-show-bg-image: none;
+  --wiki-body-bg-image: none;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   THEME TOGGLE BUTTON
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  border: 1px solid var(--wiki-toggle-border);
+  background: var(--wiki-toggle-bg);
+  color: var(--wiki-toggle-icon);
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+.theme-toggle:hover {
+  background: var(--wiki-toggle-hover);
+  transform: scale(1.08);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+/* Show/hide icons */
+.theme-toggle .icon-sun { display: none; }
+.theme-toggle .icon-moon { display: inline; }
+
+[data-theme="light"] .theme-toggle .icon-sun { display: inline; }
+[data-theme="light"] .theme-toggle .icon-moon { display: none; }
