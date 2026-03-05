@@ -62,6 +62,10 @@
   --wiki-filter-active-bg: #2b3a59;
   --wiki-filter-active-text: #fff;
 
+  /* Rarity icon base (for color-mix tinting) */
+  --wiki-rarity-icon-base: #111827;
+  --wiki-rarity-icon-border-base: #1e293b;
+
   /* Cards */
   --wiki-card-bg: #0d1420;
   --wiki-card-border: #222a33;
@@ -217,14 +221,14 @@
   --wiki-header-bg: #2E6B2E;
   --wiki-header-border: #1d4d1d;
   --wiki-header-title: #fff;
-  --wiki-nav-text: rgba(255,255,255,0.85);
-  --wiki-nav-active-bg: rgba(0,0,0,0.2);
+  --wiki-nav-text: rgba(255, 255, 255, 0.85);
+  --wiki-nav-active-bg: rgba(0, 0, 0, 0.2);
   --wiki-nav-active-text: #fff;
 
   /* Main content panel */
   --wiki-panel-bg: #fff;
   --wiki-panel-border: #c8c0a8;
-  --wiki-panel-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  --wiki-panel-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   --wiki-panel-blur: none;
 
   /* Page header / breadcrumb area */
@@ -238,10 +242,10 @@
   --wiki-tab-border: #d4cdb8;
   --wiki-tab-text: #666;
   --wiki-tab-hover-text: #333;
-  --wiki-tab-hover-bg: rgba(0,0,0,0.04);
+  --wiki-tab-hover-bg: rgba(0, 0, 0, 0.04);
   --wiki-tab-active-text: #2c6e2c;
   --wiki-tab-active-border: #2c6e2c;
-  --wiki-tab-active-bg: rgba(46,107,46,0.06);
+  --wiki-tab-active-bg: rgba(46, 107, 46, 0.06);
   --wiki-tab-badge-bg: #eee;
   --wiki-tab-badge-border: #ccc;
   --wiki-tab-badge-text: #999;
@@ -261,12 +265,16 @@
   --wiki-filter-active-bg: #2c6e2c;
   --wiki-filter-active-text: #fff;
 
+  /* Rarity icon base (for color-mix tinting) */
+  --wiki-rarity-icon-base: #f0ede0;
+  --wiki-rarity-icon-border-base: #d4cdb8;
+
   /* Cards */
   --wiki-card-bg: #fff;
   --wiki-card-border: #d4cdb8;
   --wiki-card-hover-border: #2c6e2c;
   --wiki-card-hover-bg: #f8fdf8;
-  --wiki-card-hover-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  --wiki-card-hover-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   --wiki-card-icon-bg: #f5f2e8;
   --wiki-card-icon-border: #d4cdb8;
   --wiki-card-name: #333;
@@ -314,7 +322,7 @@
   /* Footer */
   --wiki-footer-bg: #2E6B2E;
   --wiki-footer-border: #1d4d1d;
-  --wiki-footer-text: rgba(255,255,255,0.85);
+  --wiki-footer-text: rgba(255, 255, 255, 0.85);
   --wiki-footer-link: #c3f0c3;
 
   /* Enchant tags */
@@ -390,9 +398,9 @@
   --wiki-cat-header-border: #c8c0a8;
 
   /* Theme toggle */
-  --wiki-toggle-bg: rgba(255,255,255,0.2);
-  --wiki-toggle-border: rgba(255,255,255,0.3);
-  --wiki-toggle-hover: rgba(255,255,255,0.35);
+  --wiki-toggle-bg: rgba(255, 255, 255, 0.2);
+  --wiki-toggle-border: rgba(255, 255, 255, 0.3);
+  --wiki-toggle-hover: rgba(255, 255, 255, 0.35);
   --wiki-toggle-icon: #fff;
 
   /* Hide background image in light mode */
@@ -432,8 +440,18 @@
 }
 
 /* Show/hide icons */
-.theme-toggle .icon-sun { display: none; }
-.theme-toggle .icon-moon { display: inline; }
+.theme-toggle .icon-sun {
+  display: none;
+}
 
-[data-theme="light"] .theme-toggle .icon-sun { display: inline; }
-[data-theme="light"] .theme-toggle .icon-moon { display: none; }
+.theme-toggle .icon-moon {
+  display: inline;
+}
+
+[data-theme="light"] .theme-toggle .icon-sun {
+  display: inline;
+}
+
+[data-theme="light"] .theme-toggle .icon-moon {
+  display: none;
+}

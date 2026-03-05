@@ -176,13 +176,15 @@
       width: 72px;
       height: 72px;
       margin: 0 auto 10px;
-      background: var(--wiki-card-icon-bg);
-      border: 2px solid var(--wiki-card-icon-border);
+      background: color-mix(in srgb, var(--rarity-color, #2b3a59) 12%, var(--wiki-rarity-icon-base));
+      border: 2px solid color-mix(in srgb, var(--rarity-color, #2b3a59) 35%, var(--wiki-rarity-icon-border-base));
       border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
+      box-shadow: 0 0 12px color-mix(in srgb, var(--rarity-color, #555) 25%, transparent),
+        inset 0 0 16px color-mix(in srgb, var(--rarity-color, #555) 10%, transparent);
     }
 
     .infobox-icon img {
@@ -558,16 +560,16 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: color-mix(in srgb, var(--ing-color, #6ab0f3) 10%, #0d1420);
-      border: 1px solid color-mix(in srgb, var(--ing-color, #6ab0f3) 30%, #2b3a59);
+      background: color-mix(in srgb, var(--ing-color, #6ab0f3) 10%, var(--wiki-rarity-icon-base));
+      border: 1px solid color-mix(in srgb, var(--ing-color, #6ab0f3) 30%, var(--wiki-rarity-icon-border-base));
       border-radius: 5px;
       box-shadow: inset 0 0 6px color-mix(in srgb, var(--ing-color, #6ab0f3) 8%, transparent);
       transition: border-color .15s, background .15s;
     }
 
     .recipe-ingredient:hover .recipe-ing-box {
-      border-color: #6ab0f3;
-      background: color-mix(in srgb, var(--ing-color, #6ab0f3) 20%, #141e30);
+      border-color: var(--wiki-input-focus);
+      background: color-mix(in srgb, var(--ing-color, #6ab0f3) 20%, var(--wiki-rarity-icon-base));
     }
 
     .recipe-ing-box img {
@@ -630,8 +632,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: var(--wiki-usedin-slot-bg);
-      border: 1px solid var(--wiki-usedin-slot-border);
+      background: color-mix(in srgb, var(--slot-color, #555) 10%, var(--wiki-rarity-icon-base));
+      border: 1px solid color-mix(in srgb, var(--slot-color, #555) 25%, var(--wiki-rarity-icon-border-base));
       border-radius: 6px;
       text-decoration: none;
       transition: border-color .15s, background .15s;
@@ -639,7 +641,7 @@
 
     .usedin-slot-box:hover {
       border-color: var(--wiki-usedin-slot-hover-border);
-      background: var(--wiki-usedin-slot-hover-bg);
+      background: color-mix(in srgb, var(--slot-color, #555) 20%, var(--wiki-rarity-icon-base));
     }
 
     .usedin-slot-box img {
@@ -683,8 +685,8 @@
     }
 
     .usedin-slot.result .usedin-slot-box {
-      border-color: color-mix(in srgb, var(--res-color, #6ab0f3) 40%, #1e2d40);
-      background: color-mix(in srgb, var(--res-color, #6ab0f3) 8%, #0d1420);
+      border-color: color-mix(in srgb, var(--res-color, #6ab0f3) 40%, var(--wiki-rarity-icon-border-base));
+      background: color-mix(in srgb, var(--res-color, #6ab0f3) 12%, var(--wiki-rarity-icon-base));
     }
 
     .usedin-slot.result .usedin-slot-box img {
@@ -1181,7 +1183,8 @@
         const img = icon
           ? `<img src="${icon}" alt="${name}" onerror="this.outerHTML='<span class=\'icon-missing\'>📦</span>'" />`
           : `<span class="icon-missing">📦</span>`;
-        const styleAttr = isResult ? `style="--res-color:${resColor}"` : '';
+        const slotColor = isResult ? resColor : RARITY_COLOR[(slotCfg && slotCfg.Rarity) || 'Common'] || '#b0bec5';
+        const styleAttr = `style="--slot-color:${slotColor}${isResult ? ';--res-color:' + resColor : ''}"`;
         return `
           <div class="usedin-slot${isResult ? ' result' : ''}" ${styleAttr}>
             <a class="usedin-slot-box" href="item.html?id=${encodeURIComponent(itemId)}" title="${name}">${img}</a>
@@ -1206,15 +1209,15 @@
 
       return `
         <div class="usedin-section">
-            <div class="section-title"><i class="fas fa-wrench"></i>&nbsp; Used In</div>
-            <div class="usedin-rows">${rows}</div>
+          <div class="section-title"><i class="fas fa-wrench"></i>&nbsp; Used In</div>
+          <div class="usedin-rows">${rows}</div>
         </div>`;
     }
 
     init().catch(err => {
       document.getElementById('page-root').innerHTML =
-        `<div class="not-found"><h2>Error</h2><p>${err.message}</p>
-                <a class="back-btn" href="items.html"><i class="fas fa-arrow-left"></i> Back</a></div>`;
+        `< div class="not-found" ><h2>Error</h2><p>${err.message}</p>
+                <a class="back-btn" href="items.html"><i class="fas fa-arrow-left"></i> Back</a></div >`;
     });
   </script>
 </body>
