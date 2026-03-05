@@ -526,96 +526,63 @@
       font-family: 'Press Start 2P', cursive;
       font-size: 0.5rem;
       color: #6ab0f3;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       padding-bottom: 4px;
       border-bottom: 1px solid #1e2d40;
     }
 
+    /* 5-per-row grid */
     .recipe-grid {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
       gap: 5px;
-      align-items: center;
-      justify-content: center;
     }
 
+    /* each chip: icon on top, ×qty below */
     .recipe-ingredient {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 3px;
-      background: color-mix(in srgb, var(--ing-color, #6ab0f3) 10%, #0d1420);
-      border: 1px solid color-mix(in srgb, var(--ing-color, #6ab0f3) 25%, #1e2d40);
-      border-radius: 5px;
-      padding: 6px 8px 5px;
       text-decoration: none;
       color: inherit;
-      min-width: 56px;
+    }
+
+    .recipe-ing-box {
+      width: 100%;
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: color-mix(in srgb, var(--ing-color, #6ab0f3) 10%, #0d1420);
+      border: 1px solid color-mix(in srgb, var(--ing-color, #6ab0f3) 30%, #2b3a59);
+      border-radius: 5px;
+      box-shadow: inset 0 0 6px color-mix(in srgb, var(--ing-color, #6ab0f3) 8%, transparent);
       transition: border-color .15s, background .15s;
     }
 
-    .recipe-ingredient:hover {
+    .recipe-ingredient:hover .recipe-ing-box {
       border-color: #6ab0f3;
       background: color-mix(in srgb, var(--ing-color, #6ab0f3) 20%, #141e30);
     }
 
-    .recipe-ingredient img {
-      width: 28px;
-      height: 28px;
+    .recipe-ing-box img {
+      width: 70%;
+      height: 70%;
       image-rendering: pixelated;
       image-rendering: crisp-edges;
     }
 
-    .recipe-ingredient .icon-missing {
-      font-size: 1.1rem;
+    .recipe-ing-box .icon-missing {
+      font-size: 0.85rem;
       opacity: 0.3;
     }
 
     .recipe-qty {
-      font-size: 0.65em;
+      font-size: 0.6em;
       font-weight: 700;
       color: #fbbf24;
-    }
-
-    .recipe-ing-name {
-      font-size: 0.5em;
-      color: #8fa3c8;
-      text-align: center;
-      line-height: 1.2;
-    }
-
-    .recipe-arrow {
-      font-size: 0.75rem;
-      color: #4a576b;
-      padding: 0 2px;
-      flex-shrink: 0;
-    }
-
-    .recipe-result {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 3px;
-      background: color-mix(in srgb, var(--rarity-color, #555) 10%, #0d1420);
-      border: 2px solid var(--rarity-color, #2b3a59);
-      border-radius: 5px;
-      padding: 6px 10px 5px;
-      min-width: 70px;
-    }
-
-    .recipe-result img {
-      width: 32px;
-      height: 32px;
-      image-rendering: pixelated;
-      image-rendering: crisp-edges;
-    }
-
-    .recipe-result-name {
-      font-size: 0.55em;
-      font-weight: 700;
-      color: var(--rarity-color, #c8d1e1);
-      text-align: center;
+      white-space: nowrap;
     }
   </style>
 </head>
@@ -1058,38 +1025,24 @@
       const recipe = recipes.find(r => r.ResultItem === cfg.ItemID);
       if (!recipe) return '';
 
-      const ingredientCards = recipe.Ingredients.map(ing => {
+      const ingredientChips = recipe.Ingredients.map(ing => {
         const ingCfg = allConfigs.find(c => c.ItemID === ing.ItemID);
         const ingName = ingCfg ? ingCfg.Name : ing.ItemID;
         const ingRarityColor = RARITY_COLOR[(ingCfg && ingCfg.Rarity) || 'Common'] || '#b0bec5';
         const ingIcon = iconUrl(ing.ItemID);
         const imgHtml = ingIcon
-          ? `<img src="${ingIcon}" alt="${ingName}" onerror="this.outerHTML='<span class=\\'icon-missing\\'>📦</span>'" />`
+          ? `<img src="${ingIcon}" alt="${ingName}" onerror="this.outerHTML='<span class=\'icon-missing\'>📦</span>'" />`
           : `<span class="icon-missing">📦</span>`;
-        return `<a class="recipe-ingredient" href="item.html?id=${encodeURIComponent(ing.ItemID)}" style="--ing-color:${ingRarityColor}">
-                    ${imgHtml}
+        return `<a class="recipe-ingredient" href="item.html?id=${encodeURIComponent(ing.ItemID)}" style="--ing-color:${ingRarityColor}" title="${ingName}">
+                    <div class="recipe-ing-box">${imgHtml}</div>
                     <span class="recipe-qty">×${ing.Quantity}</span>
-                    <span class="recipe-ing-name">${ingName}</span>
                 </a>`;
       }).join('');
-
-      const resultIcon = iconUrl(cfg.ItemID);
-      const resultImgHtml = resultIcon
-        ? `<img src="${resultIcon}" alt="${cfg.Name}" onerror="this.outerHTML='<span class=\\'icon-missing\\'>📦</span>'" />`
-        : `<span class="icon-missing">📦</span>`;
-      const resultQtyLabel = recipe.ResultQuantity > 1 ? `×${recipe.ResultQuantity} ` : '';
 
       return `
         <div class="recipe-section">
             <div class="section-title"><i class="fas fa-hammer"></i>&nbsp; Crafting</div>
-            <div class="recipe-grid" style="--rarity-color:${RARITY_COLOR[cfg.Rarity] || '#b0bec5'}">
-                ${ingredientCards}
-                <span class="recipe-arrow"><i class="fas fa-chevron-right"></i></span>
-                <div class="recipe-result" style="--rarity-color:${RARITY_COLOR[cfg.Rarity] || '#b0bec5'}">
-                    ${resultImgHtml}
-                    <span class="recipe-result-name">${resultQtyLabel}${cfg.Name}</span>
-                </div>
-            </div>
+            <div class="recipe-grid">${ingredientChips}</div>
         </div>`;
     }
 
