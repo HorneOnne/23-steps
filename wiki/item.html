@@ -5,6 +5,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Item — Mine &amp; Dungeon Wiki | 23-Steps</title>
+  <meta name="description"
+    content="Look up item details in Mine & Dungeon — stats, rarity, crafting recipe, used-in recipes and more. Powered by the official 23-Steps wiki." />
+  <meta name="keywords" content="Mine and Dungeon item, item stats, crafting recipe, 23-Steps wiki" />
+  <link rel="canonical" href="https://23-steps.com/wiki/item.html" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Item — Mine &amp; Dungeon Wiki | 23-Steps" />
+  <meta property="og:description"
+    content="Look up item details in Mine & Dungeon — stats, rarity, crafting recipe and more." />
+  <meta property="og:url" content="https://23-steps.com/wiki/item.html" />
+  <meta property="og:site_name" content="23-Steps" />
+  <meta property="og:image" content="https://23-steps.com/images/mine-dungeon.png" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Item — Mine &amp; Dungeon Wiki | 23-Steps" />
+  <meta name="twitter:description"
+    content="Look up item details in Mine & Dungeon — stats, rarity, crafting recipe and more." />
+  <meta name="twitter:image" content="https://23-steps.com/images/mine-dungeon.png" />
   <link rel="icon" type="image/png" href="../icon2.png" />
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Press+Start+2P&family=Cinzel:wght@400;600&display=swap"
@@ -1028,8 +1046,21 @@
       const prevCfg = idx > 0 ? configs[idx - 1] : null;
       const nextCfg = idx < configs.length - 1 ? configs[idx + 1] : null;
 
-      // Set page title
-      document.title = `${cfg.Name} — Mine & Dungeon Wiki | 23-Steps`;
+      // Set page title + SEO meta
+      const pageTitle = `${cfg.Name} \u2014 Mine & Dungeon Wiki | 23-Steps`;
+      const pageUrl = `https://23-steps.com/wiki/item.html?id=${encodeURIComponent(cfg.ItemID)}`;
+      const descParts = [cfg.Rarity ? `${cfg.Rarity} ${cfg.ItemType}` : cfg.ItemType];
+      if (cfg.Description) descParts.push(cfg.Description);
+      descParts.push('Full stats and crafting info on the Mine & Dungeon Wiki.');
+      const pageDesc = descParts.join(' \u2014 ');
+      document.title = pageTitle;
+      document.querySelectorAll('meta[name="description"]').forEach(m => m.setAttribute('content', pageDesc));
+      document.querySelectorAll('link[rel="canonical"]').forEach(m => m.setAttribute('href', pageUrl));
+      document.querySelectorAll('meta[property="og:title"]').forEach(m => m.setAttribute('content', pageTitle));
+      document.querySelectorAll('meta[property="og:description"]').forEach(m => m.setAttribute('content', pageDesc));
+      document.querySelectorAll('meta[property="og:url"]').forEach(m => m.setAttribute('content', pageUrl));
+      document.querySelectorAll('meta[name="twitter:title"]').forEach(m => m.setAttribute('content', pageTitle));
+      document.querySelectorAll('meta[name="twitter:description"]').forEach(m => m.setAttribute('content', pageDesc));
 
       const rarityColor = RARITY_COLOR[cfg.Rarity] || '#b0bec5';
       const rarityBg = RARITY_BG[cfg.Rarity] || '#1e2d40';
