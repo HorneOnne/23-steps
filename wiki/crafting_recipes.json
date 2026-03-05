@@ -11,16 +11,30 @@
       ]
     },
     {
+      "ResultItem": "Arrow",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "Log",
+          "Quantity": 1
+        },
+        {
+          "ItemID": "Stone",
+          "Quantity": 1
+        }
+      ]
+    },
+    {
       "ResultItem": "CopperIngot",
       "ResultQuantity": 1,
       "Ingredients": [
         {
           "ItemID": "CopperOre",
-          "Quantity": 10
+          "Quantity": 1
         },
         {
           "ItemID": "Coal",
-          "Quantity": 5
+          "Quantity": 1
         }
       ]
     },
@@ -30,11 +44,11 @@
       "Ingredients": [
         {
           "ItemID": "IronOre",
-          "Quantity": 10
+          "Quantity": 1
         },
         {
           "ItemID": "Coal",
-          "Quantity": 5
+          "Quantity": 1
         }
       ]
     },
@@ -44,11 +58,11 @@
       "Ingredients": [
         {
           "ItemID": "SilverOre",
-          "Quantity": 10
+          "Quantity": 1
         },
         {
           "ItemID": "Coal",
-          "Quantity": 5
+          "Quantity": 1
         }
       ]
     },
@@ -58,11 +72,11 @@
       "Ingredients": [
         {
           "ItemID": "GoldOre",
-          "Quantity": 10
+          "Quantity": 1
         },
         {
           "ItemID": "Coal",
-          "Quantity": 5
+          "Quantity": 1
         }
       ]
     },
@@ -272,11 +286,11 @@
       "Ingredients": [
         {
           "ItemID": "TinOre",
-          "Quantity": 10
+          "Quantity": 1
         },
         {
           "ItemID": "Coal",
-          "Quantity": 5
+          "Quantity": 1
         }
       ]
     },
@@ -286,11 +300,11 @@
       "Ingredients": [
         {
           "ItemID": "LeadOre",
-          "Quantity": 10
+          "Quantity": 1
         },
         {
           "ItemID": "Coal",
-          "Quantity": 5
+          "Quantity": 1
         }
       ]
     },
@@ -300,11 +314,11 @@
       "Ingredients": [
         {
           "ItemID": "Amberstone",
-          "Quantity": 10
+          "Quantity": 1
         },
         {
           "ItemID": "Coal",
-          "Quantity": 5
+          "Quantity": 1
         }
       ]
     },
@@ -314,11 +328,11 @@
       "Ingredients": [
         {
           "ItemID": "TungstenOre",
-          "Quantity": 10
+          "Quantity": 1
         },
         {
           "ItemID": "Coal",
-          "Quantity": 5
+          "Quantity": 1
         }
       ]
     },
@@ -328,11 +342,11 @@
       "Ingredients": [
         {
           "ItemID": "PlatinumOre",
-          "Quantity": 10
+          "Quantity": 1
         },
         {
           "ItemID": "Coal",
-          "Quantity": 5
+          "Quantity": 1
         }
       ]
     },
