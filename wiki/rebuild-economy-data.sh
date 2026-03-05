@@ -1,6 +1,6 @@
 #!/bin/bash
 # rebuild-economy-data.sh
-# Run this whenever crafting_recipes.json, item_values.json, or mob_configs.json changes.
+# Run this whenever crafting_recipes.json, item_values.json, item_configs.json, or mob_configs.json changes.
 # Usage: bash rebuild-economy-data.sh
 
 set -e

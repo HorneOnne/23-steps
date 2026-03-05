@@ -7,7 +7,8 @@ $dest = "d:\23-steps\wiki"
 $filesToCopy = @(
     "ItemConfigs\item_configs.json",
     "MobConfigs\mob_configs.json",
-    "Recipes\crafting_recipes.json"
+    "Recipes\crafting_recipes.json",
+    "ItemValues\item_values.json"
 )
 
 # Create destination if it doesn't exist

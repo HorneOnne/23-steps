@@ -1531,7 +1531,7 @@ var ITEM_VALUES = {
       }
     },
     {
-      "itemID": "BoneWings",
+      "itemID":"BoneWings",
       "value": {
         "BuyPrice": 3500.0,
         "SellPrice": 700.0,

@@ -19,16 +19,18 @@ This file documents all the custom terminal commands (aliases and scripts) creat
   - `ItemConfigs\item_configs.json`
   - `MobConfigs\mob_configs.json`
   - `Recipes\crafting_recipes.json`
+  - `ItemValues\item_values.json`
 - **Destination:** `d:\23-steps\wiki`
 - **How to run:** Just type `fetch_all` in any bash terminal (Git Bash). You can be inside any folder.
 - **How it works:** This is an alias defined in your `~/.bashrc` which points to `d:/23-steps/wiki/fetch_all.ps1`.
 
 ---
 
-## 3. `rebuild-economy-data.sh`
+## 3. `rebuild_economy`
 - **Description:** Rebuilds the JS data wrapper files (`crafting_recipes.js`, `item_values.js`, `mob_configs.js`) from their corresponding `.json` files. Run this after any of those JSONs change so the `economy.html` page picks up updated data.
 - **Location:** `d:\23-steps\wiki\rebuild-economy-data.sh`
-- **How to run:** `bash wiki/rebuild-economy-data.sh` from the `d:\23-steps` root, or `bash rebuild-economy-data.sh` from inside the `wiki/` folder.
+- **How to run:** Just type `rebuild_economy` in any bash terminal (Git Bash). You can be inside any folder.
+- **How it works:** This is an alias defined in your `~/.bashrc` which points to `d:/23-steps/wiki/rebuild-economy-data.sh`.
 - **What it regenerates:**
   | Output file | Source JSON | JS variable |
   |---|---|---|
@@ -60,8 +62,8 @@ This file documents all the custom terminal commands (aliases and scripts) creat
 After making changes to Unity configs, run these commands in order:
 
 ```bash
-fetch_all                          # 1. Pull latest JSONs from Unity project
-sync_item_icons                    # 2. Sync item icons
-bash wiki/rebuild-economy-data.sh  # 3. Rebuild JS wrappers for economy.html
-python wiki/gen_mob_page.py        # 4. Regenerate mob detail page
+fetch_all                       # 1. Pull latest JSONs from Unity project
+sync_item_icons                 # 2. Sync item icons
+rebuild_economy                 # 3. Rebuild JS wrappers for economy.html
+python wiki/gen_mob_page.py     # 4. Regenerate mob detail page
 ```
