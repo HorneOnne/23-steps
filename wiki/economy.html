@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Economy Balance — Mine &amp; Dungeon Wiki | 23-Steps</title>
+    <meta name="description"
+        content="Economy balance testing tool for Mine & Dungeon. Analyze item prices, crafting costs, weapon efficiency, and mob loot values." />
+    <link rel="icon" type="image/png" href="../icon2.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Press+Start+2P&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="wiki-theme.css" />
+    <script src="wiki-theme.js"></script>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        html,
+        body {
+            font-family: 'Inter', sans-serif;
+            background-image: var(--wiki-body-bg-image);
+            background-repeat: repeat;
+            background-size: 256px;
+            background-color: var(--wiki-bg);
+            color: var(--wiki-text);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: var(--wiki-bg-overlay);
+            pointer-events: none;
+            z-index: 1
+        }
+
+        main {
+            flex: 1;
+            position: relative;
+            z-index: 2
+        }
+
+        header {
+            background-color: var(--wiki-header-bg);
+            height: 60px;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            border-bottom: 1px solid var(--wiki-header-border);
+            position: relative;
+            z-index: 10
+        }
+
+        header h1 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1.4em;
+            color: var(--wiki-header-title);
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px
+        }
+
+        header h1 a {
+            color: inherit;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px
+        }
+
+        header .logo {
+            height: 50px;
+            object-fit: contain
+        }
+
+        nav {
+            display: flex;
+            align-items: center
+        }
+
+        nav a {
+            color: var(--wiki-nav-text);
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0 20px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            font-size: .85em
+        }
+
+        nav a.active {
+            background-color: var(--wiki-nav-active-bg);
+            color: var(--wiki-nav-active-text)
+        }
+
+        nav a:hover:not(.active) {
+            color: var(--wiki-nav-active-text)
+        }
+
+        .wiki-page-header {
+            background-color: var(--wiki-page-header-bg);
+            border-bottom: 2px solid var(--wiki-page-header-border);
+            padding: 24px 24px 0
+        }
+
+        .wiki-page-header .breadcrumb {
+            font-size: .7em;
+            color: var(--wiki-breadcrumb);
+            margin-bottom: 10px;
+            letter-spacing: .04em
+        }
+
+        .wiki-page-header .breadcrumb a {
+            color: var(--wiki-breadcrumb);
+            text-decoration: none
+        }
+
+        .wiki-page-header h2 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: clamp(.9rem, 2.5vw, 1.4rem);
+            color: var(--wiki-heading);
+            margin-bottom: 5px
+        }
+
+        .wiki-page-header p {
+            color: var(--wiki-subheading);
+            font-size: .83em;
+            margin-bottom: 18px
+        }
+
+        .tab-bar {
+            display: flex;
+            border-top: 1px solid var(--wiki-tab-border);
+            overflow-x: auto
+        }
+
+        .tab-btn {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            padding: 11px 20px;
+            color: var(--wiki-tab-text);
+            font-weight: 600;
+            font-size: .82em;
+            cursor: pointer;
+            border: none;
+            background: transparent;
+            border-bottom: 3px solid transparent;
+            white-space: nowrap;
+            transition: color .15s, border-color .15s, background .15s;
+            text-decoration: none;
+            font-family: inherit
+        }
+
+        .tab-btn:hover {
+            color: var(--wiki-tab-hover-text);
+            background: var(--wiki-tab-hover-bg)
+        }
+
+        .tab-btn.active {
+            color: var(--wiki-tab-active-text);
+            border-bottom-color: var(--wiki-tab-active-border);
+            background: var(--wiki-tab-active-bg)
+        }
+
+        .tab-btn.disabled {
+            opacity: .4;
+            cursor: default;
+            pointer-events: none
+        }
+
+        .tab-badge {
+            font-size: .6em;
+            background: var(--wiki-tab-badge-bg);
+            border: 1px solid var(--wiki-tab-badge-border);
+            color: var(--wiki-tab-badge-text);
+            padding: 1px 5px;
+            border-radius: 3px
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            font-size: .8em;
+            color: var(--wiki-footer-text);
+            background-color: var(--wiki-footer-bg);
+            border-top: 1px solid var(--wiki-footer-border);
+            font-weight: bold;
+            position: relative;
+            z-index: 2
+        }
+
+        footer a {
+            color: var(--wiki-footer-link);
+            text-decoration: none
+        }
+
+        /* Economy-specific styles */
+        .content-wrap {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 24px 20px
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px
+        }
+
+        .panel {
+            background: var(--wiki-panel-bg);
+            border: 1px solid var(--wiki-panel-border);
+            border-radius: 10px;
+            overflow: hidden;
+            backdrop-filter: var(--wiki-panel-blur)
+        }
+
+        .panel-header {
+            background: var(--wiki-infobox-header-bg);
+            border-bottom: 1px solid var(--wiki-infobox-header-border);
+            padding: 14px 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px
+        }
+
+        .panel-header h3 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: .7rem;
+            color: var(--wiki-section-title)
+        }
+
+        .panel-header i {
+            color: var(--wiki-section-title);
+            font-size: 1rem
+        }
+
+        .panel-body {
+            padding: 16px 18px;
+            overflow-x: auto
+        }
+
+        .eco-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: .78rem
+        }
+
+        .eco-table th {
+            text-align: left;
+            padding: 8px 10px;
+            color: var(--wiki-infobox-label);
+            font-weight: 600;
+            border-bottom: 2px solid var(--wiki-infobox-row-border);
+            white-space: nowrap;
+            position: sticky;
+            top: 0;
+            background: var(--wiki-infobox-header-bg);
+            cursor: pointer;
+            user-select: none
+        }
+
+        .eco-table th:hover {
+            color: var(--wiki-section-title)
+        }
+
+        .eco-table td {
+            padding: 6px 10px;
+            border-bottom: 1px solid var(--wiki-infobox-row-border);
+            color: var(--wiki-infobox-value);
+            white-space: nowrap
+        }
+
+        .eco-table tr:hover td {
+            background: rgba(106, 176, 243, .04)
+        }
+
+        .eco-table .num {
+            text-align: right;
+            font-variant-numeric: tabular-nums
+        }
+
+        .eco-table .gold {
+            color: #f5c842
+        }
+
+        .eco-table .good {
+            color: #4ade80
+        }
+
+        .eco-table .bad {
+            color: #f87171
+        }
+
+        .eco-table .warn {
+            color: #fbbf24
+        }
+
+        .eco-table .muted {
+            color: var(--wiki-text-dimmer)
+        }
+
+        .rarity-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-right: 6px;
+            vertical-align: middle
+        }
+
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            margin-bottom: 20px
+        }
+
+        .summary-card {
+            background: var(--wiki-stat-bg);
+            border: 1px solid var(--wiki-stat-border);
+            border-radius: 8px;
+            padding: 14px 16px;
+            text-align: center
+        }
+
+        .summary-card .val {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--wiki-section-title)
+        }
+
+        .summary-card .lbl {
+            font-size: .7rem;
+            color: var(--wiki-stat-label);
+            margin-top: 4px
+        }
+
+        .warning-list {
+            list-style: none;
+            padding: 0
+        }
+
+        .warning-list li {
+            padding: 10px 14px;
+            border-left: 3px solid;
+            margin-bottom: 6px;
+            border-radius: 0 6px 6px 0;
+            font-size: .8rem;
+            background: var(--wiki-stat-bg)
+        }
+
+        .warning-list li.warn-high {
+            border-color: #f87171;
+            color: #f87171
+        }
+
+        .warning-list li.warn-med {
+            border-color: #fbbf24;
+            color: #fbbf24
+        }
+
+        .warning-list li.warn-low {
+            border-color: #60a5fa;
+            color: #60a5fa
+        }
+
+        .warning-list li .detail {
+            color: var(--wiki-text-muted);
+            font-size: .72rem;
+            margin-top: 2px
+        }
+
+        .section-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 20px
+        }
+
+        .section-nav button {
+            background: var(--wiki-filter-bg);
+            border: 1px solid var(--wiki-filter-border);
+            border-radius: 4px;
+            padding: 6px 12px;
+            color: var(--wiki-filter-text);
+            font-size: .75em;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: 600;
+            transition: all .15s
+        }
+
+        .section-nav button:hover {
+            background: var(--wiki-filter-hover-bg);
+            border-color: var(--wiki-input-focus);
+            color: var(--wiki-tab-hover-text)
+        }
+
+        .section-nav button.active {
+            background: var(--wiki-filter-active-bg);
+            border-color: var(--wiki-input-focus);
+            color: var(--wiki-filter-active-text)
+        }
+
+        .panel.hidden {
+            display: none
+        }
+
+        .bar-cell {
+            display: flex;
+            align-items: center;
+            gap: 6px
+        }
+
+        .bar {
+            height: 6px;
+            border-radius: 3px;
+            background: var(--wiki-section-title);
+            min-width: 2px;
+            transition: width .3s
+        }
+
+        @media(max-width:600px) {
+            .summary-cards {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .eco-table {
+                font-size: .7rem
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1><a href="../index.html"><img src="../images/logo.png" alt="23-Steps" class="logo" /><span
+                    style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">23-Steps</span></a>
+        </h1>
+        <nav>
+            <a href="../index.html">HOME</a>
+            <a href="../games.html">GAMES</a>
+            <a href="mine-dungeon.html" class="active">WIKI</a>
+            <button class="theme-toggle" title="Toggle light/dark mode" aria-label="Toggle theme"><i
+                    class="fas fa-sun icon-sun"></i><i class="fas fa-moon icon-moon"></i></button>
+        </nav>
+    </header>
+    <div class="wiki-page-header">
+        <div class="breadcrumb"><a href="../index.html">23-Steps</a> &rsaquo; <a href="index.html">Wiki</a> &rsaquo; <a
+                href="mine-dungeon.html">Mine &amp; Dungeon</a> &rsaquo; Economy</div>
+        <h2><i class="fas fa-chart-line"></i>&nbsp; Economy Balance Tool</h2>
+        <p>Analyze pricing, crafting costs, combat efficiency, and loot values to find balance issues</p>
+        <div class="tab-bar">
+            <a class="tab-btn" href="mobs.html"><i class="fas fa-skull"></i> Mobs</a>
+            <a class="tab-btn" href="items.html"><i class="fas fa-boxes"></i> Items</a>
+            <a class="tab-btn active" href="economy.html"><i class="fas fa-chart-line"></i> Economy</a>
+            <span class="tab-btn disabled"><i class="fas fa-map"></i> Maps <span class="tab-badge">Soon</span></span>
+            <span class="tab-btn disabled"><i class="fas fa-scroll"></i> Quests <span
+                    class="tab-badge">Soon</span></span>
+        </div>
+    </div>
+
+    <main>
+        <div class="content-wrap">
+            <div id="summaryCards" class="summary-cards"></div>
+            <div class="section-nav" id="sectionNav"></div>
+            <div class="dashboard-grid" id="dashboard"></div>
+        </div>
+    </main>
+    <footer>&copy;2026 23-Steps. All rights reserved | <a href="../privacy-policy.html">Privacy Policy</a> | <a
+            href="../terms-of-service.html">Terms of Service</a></footer>
+
+    <script src="item_configs.js"></script>
+    <script src="crafting_recipes.js"></script>
+    <script src="item_values.js"></script>
+    <script src="mob_configs.js"></script>
+    <script>
+        (function () {
+            // Load data from inlined script variables
+            const itemConfigs = (typeof ITEM_CONFIGS !== 'undefined' ? ITEM_CONFIGS : {}).ItemConfigs || [];
+            const recipes = (typeof CRAFTING_RECIPES !== 'undefined' ? CRAFTING_RECIPES : {}).Recipes || [];
+            const itemValues = (typeof ITEM_VALUES !== 'undefined' ? ITEM_VALUES : {}).ItemValues || [];
+            const mobConfigs = (typeof MOB_CONFIGS !== 'undefined' ? MOB_CONFIGS : {}).MobConfigs || [];
+
+            // Build lookups
+            const valMap = {}, cfgMap = {};
+            itemValues.forEach(v => valMap[v.itemID] = v.value);
+            itemConfigs.forEach(c => cfgMap[c.ItemID] = c);
+
+            const RARITY_COLORS = { Common: '#b0bec5', Uncommon: '#4ade80', Rare: '#60a5fa', Epic: '#c084fc', Legendary: '#fb923c' };
+            const coin = '<i class="fas fa-coins" style="color:#f5c842;margin-right:3px"></i>';
+
+            // ── Section definitions ──
+            const sections = [
+                { id: 'warnings', icon: 'fa-exclamation-triangle', title: 'Balance Warnings', build: buildWarnings },
+                { id: 'prices', icon: 'fa-tags', title: 'Price Overview', build: buildPrices },
+                { id: 'crafting', icon: 'fa-hammer', title: 'Crafting Profit Analysis', build: buildCrafting },
+                { id: 'weapons', icon: 'fa-sword', title: 'Weapon Efficiency (DPS/Gold)', build: buildWeapons },
+                { id: 'armor', icon: 'fa-shield-halved', title: 'Armor Efficiency (Defense/Gold)', build: buildArmor },
+                { id: 'mobs', icon: 'fa-skull', title: 'Mob Loot Value', build: buildMobs },
+            ];
+
+            // Build section nav
+            const navEl = document.getElementById('sectionNav');
+            sections.forEach((s, i) => {
+                const btn = document.createElement('button');
+                btn.innerHTML = `<i class="fas ${s.icon}"></i> ${s.title}`;
+                btn.className = i === 0 ? 'active' : '';
+                btn.onclick = () => {
+                    navEl.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    document.querySelectorAll('.panel').forEach(p => p.classList.toggle('hidden', p.id !== 'panel-' + s.id));
+                };
+                navEl.appendChild(btn);
+            });
+
+            // Build all panels
+            const dashEl = document.getElementById('dashboard');
+            sections.forEach((s, i) => {
+                const panel = document.createElement('div');
+                panel.className = 'panel' + (i > 0 ? ' hidden' : '');
+                panel.id = 'panel-' + s.id;
+                panel.innerHTML = `<div class="panel-header"><i class="fas ${s.icon}"></i><h3>${s.title}</h3></div><div class="panel-body" id="body-${s.id}"></div>`;
+                dashEl.appendChild(panel);
+            });
+
+            // Build each section
+            sections.forEach(s => s.build(document.getElementById('body-' + s.id)));
+
+            // ── Summary cards ──
+            const totalItems = itemConfigs.length, pricedItems = itemValues.length, totalRecipes = recipes.length, totalMobs = mobConfigs.length;
+            const avgMargin = itemValues.reduce((s, v) => s + (v.value.BuyPrice > 0 ? (v.value.SellPrice / v.value.BuyPrice) * 100 : 0), 0) / pricedItems;
+            const summaryEl = document.getElementById('summaryCards');
+            [{ v: totalItems, l: 'Total Items' }, { v: pricedItems, l: 'Priced Items' }, { v: totalRecipes, l: 'Recipes' }, { v: totalMobs, l: 'Mobs' }, { v: avgMargin.toFixed(1) + '%', l: 'Avg Sell/Buy Ratio' }].forEach(d => {
+                summaryEl.innerHTML += `<div class="summary-card"><div class="val">${d.v}</div><div class="lbl">${d.l}</div></div>`;
+            });
+
+            // ── Build Functions ──
+            function buildWarnings(el) {
+                const warnings = [];
+                // Check crafting profit/loss
+                recipes.forEach(r => {
+                    const resultVal = valMap[r.ResultItem];
+                    if (!resultVal) return;
+                    const sellTotal = resultVal.SellPrice * r.ResultQuantity;
+                    let buyCost = 0, missing = false;
+                    r.Ingredients.forEach(ing => {
+                        const iv = valMap[ing.ItemID];
+                        if (!iv) { missing = true; return; }
+                        buyCost += iv.BuyPrice * ing.Quantity;
+                    });
+                    if (missing) return;
+                    const profit = sellTotal - buyCost;
+                    const margin = buyCost > 0 ? (profit / buyCost * 100) : 0;
+                    if (margin > 50) warnings.push({ sev: 'high', msg: `${cfgMap[r.ResultItem]?.Name || r.ResultItem}: Crafting arbitrage! Buy mats for ${buyCost.toFixed(0)}g, sell result for ${sellTotal.toFixed(0)}g (+${margin.toFixed(0)}%)`, detail: 'Players can profit by buying raw mats and selling crafted items' });
+                    if (margin < -80) warnings.push({ sev: 'med', msg: `${cfgMap[r.ResultItem]?.Name || r.ResultItem}: Very unprofitable craft. Mats cost ${buyCost.toFixed(0)}g, result sells for ${sellTotal.toFixed(0)}g (${margin.toFixed(0)}%)`, detail: 'Crafting this item destroys significant value' });
+                });
+                // Check weapon DPS anomalies
+                const weaponData = [];
+                itemConfigs.forEach(c => {
+                    const s = c.SwordConfig || c.BowConfig;
+                    if (!s) return;
+                    const v = valMap[c.ItemID]; if (!v) return;
+                    const dps = s.AttackDamage * (1 + (s.CritChance || 0) * ((s.CritDamageMultiplier || s.CritMultiplier || 2) - 1)) / (c.UseSpeed || 1);
+                    weaponData.push({ name: c.Name, dps, buy: v.BuyPrice, eff: v.BuyPrice > 0 ? dps / v.BuyPrice : 0, rarity: c.Rarity });
+                });
+                weaponData.sort((a, b) => b.eff - a.eff);
+                if (weaponData.length > 1) {
+                    const best = weaponData[0], worst = weaponData[weaponData.length - 1];
+                    if (best.eff > worst.eff * 5) warnings.push({ sev: 'med', msg: `Weapon efficiency gap: ${best.name} (${best.eff.toFixed(3)} DPS/g) is ${(best.eff / worst.eff).toFixed(1)}x more efficient than ${worst.name}`, detail: 'Large gaps may make some weapons feel pointless to buy' });
+                }
+                // Check mob with very high HP
+                mobConfigs.forEach(m => {
+                    if (m.HealthConfig.MaxHealth > 2000) warnings.push({ sev: 'low', msg: `${m.MobName}: Very high HP (${m.HealthConfig.MaxHealth}). May be a boss or intentionally tanky.`, detail: `Level ${m.Level}, Damage: ${m.CombatConfig.Damage}, Defense: ${m.CombatConfig.Defense}` });
+                });
+                // Check items with no price
+                const unpricedEquip = itemConfigs.filter(c => !valMap[c.ItemID] && ['Sword', 'Bow', 'Pickaxe', 'Armor', 'Staff', 'Wand', 'Wings', 'Shield', 'Accessory'].includes(c.ItemType));
+                if (unpricedEquip.length > 0) warnings.push({ sev: 'med', msg: `${unpricedEquip.length} equipment items have no buy/sell price`, detail: unpricedEquip.slice(0, 8).map(c => c.Name).join(', ') + (unpricedEquip.length > 8 ? '...' : '') });
+
+                if (warnings.length === 0) warnings.push({ sev: 'low', msg: 'No major balance issues detected!', detail: '' });
+                const ul = document.createElement('ul'); ul.className = 'warning-list';
+                warnings.sort((a, b) => ({ high: 0, med: 1, low: 2 }[a.sev]) - ({ high: 0, med: 1, low: 2 }[b.sev]));
+                warnings.forEach(w => {
+                    ul.innerHTML += `<li class="warn-${w.sev}"><i class="fas fa-${w.sev === 'high' ? 'circle-exclamation' : w.sev === 'med' ? 'triangle-exclamation' : 'info-circle'}"></i> ${w.msg}${w.detail ? `<div class="detail">${w.detail}</div>` : ''}</li>`;
+                });
+                el.appendChild(ul);
+            }
+
+            function buildPrices(el) {
+                const rows = itemValues.map(v => {
+                    const cfg = cfgMap[v.itemID] || {};
+                    const ratio = v.value.BuyPrice > 0 ? (v.value.SellPrice / v.value.BuyPrice * 100).toFixed(1) : '-';
+                    return { id: v.itemID, name: cfg.Name || v.itemID, type: cfg.ItemType || '?', rarity: cfg.Rarity || 'Common', buy: v.value.BuyPrice, sell: v.value.SellPrice, ratio: parseFloat(ratio) || 0, ratioStr: ratio };
+                });
+                rows.sort((a, b) => b.buy - a.buy);
+                const maxBuy = Math.max(...rows.map(r => r.buy));
+                el.innerHTML = `<table class="eco-table" id="priceTable"><thead><tr><th data-col="name">Item ↕</th><th data-col="type">Type</th><th data-col="rarity">Rarity</th><th data-col="buy" class="num">Buy ${coin} ↕</th><th data-col="sell" class="num">Sell ${coin}</th><th data-col="ratio" class="num">Sell/Buy %</th><th>Relative</th></tr></thead><tbody>${rows.map(r => `<tr><td><span class="rarity-dot" style="background:${RARITY_COLORS[r.rarity] || '#888'}"></span>${r.name}</td><td class="muted">${r.type}</td><td style="color:${RARITY_COLORS[r.rarity] || '#888'}">${r.rarity}</td><td class="num gold">${r.buy}</td><td class="num gold">${r.sell}</td><td class="num ${r.ratio >= 25 ? 'good' : r.ratio >= 15 ? 'warn' : 'bad'}">${r.ratioStr}%</td><td><div class="bar-cell"><div class="bar" style="width:${(r.buy / maxBuy * 120).toFixed(0)}px"></div></div></td></tr>`).join('')}</tbody></table>`;
+                makeSortable(document.getElementById('priceTable'), rows, r => `<tr><td><span class="rarity-dot" style="background:${RARITY_COLORS[r.rarity] || '#888'}"></span>${r.name}</td><td class="muted">${r.type}</td><td style="color:${RARITY_COLORS[r.rarity] || '#888'}">${r.rarity}</td><td class="num gold">${r.buy}</td><td class="num gold">${r.sell}</td><td class="num ${r.ratio >= 25 ? 'good' : r.ratio >= 15 ? 'warn' : 'bad'}">${r.ratioStr}%</td><td><div class="bar-cell"><div class="bar" style="width:${(r.buy / maxBuy * 120).toFixed(0)}px"></div></div></td></tr>`);
+            }
+
+            function buildCrafting(el) {
+                const rows = [];
+                recipes.forEach(r => {
+                    const resultVal = valMap[r.ResultItem];
+                    const resultCfg = cfgMap[r.ResultItem] || {};
+                    const sellTotal = resultVal ? (resultVal.SellPrice * r.ResultQuantity) : 0;
+                    const buyTotal = resultVal ? (resultVal.BuyPrice * r.ResultQuantity) : 0;
+                    let matCost = 0, matDetail = [], missing = false;
+                    r.Ingredients.forEach(ing => {
+                        const iv = valMap[ing.ItemID];
+                        if (!iv) { missing = true; matDetail.push(`${ing.Quantity}x ${cfgMap[ing.ItemID]?.Name || ing.ItemID} (no price)`); return; }
+                        const c = iv.BuyPrice * ing.Quantity;
+                        matCost += c;
+                        matDetail.push(`${ing.Quantity}x ${cfgMap[ing.ItemID]?.Name || ing.ItemID} = ${c.toFixed(0)}g`);
+                    });
+                    const profit = sellTotal - matCost;
+                    const margin = matCost > 0 ? (profit / matCost * 100) : 0;
+                    rows.push({ name: resultCfg.Name || r.ResultItem, qty: r.ResultQuantity, rarity: resultCfg.Rarity || 'Common', matCost, sellTotal, buyTotal, profit, margin, mats: matDetail.join(', '), missing });
+                });
+                rows.sort((a, b) => b.margin - a.margin);
+                el.innerHTML = `<table class="eco-table"><thead><tr><th>Result</th><th class="num">Qty</th><th class="num">Mat Cost ${coin}</th><th class="num">Sell Value ${coin}</th><th class="num">Buy Value ${coin}</th><th class="num">Craft Profit</th><th class="num">Margin %</th><th>Materials</th></tr></thead><tbody>${rows.map(r => `<tr><td><span class="rarity-dot" style="background:${RARITY_COLORS[r.rarity] || '#888'}"></span>${r.name}</td><td class="num">${r.qty}</td><td class="num gold">${r.missing ? '<span class="muted">partial</span>' : r.matCost.toFixed(0)}</td><td class="num gold">${r.sellTotal.toFixed(0)}</td><td class="num gold">${r.buyTotal.toFixed(0)}</td><td class="num ${r.profit >= 0 ? 'good' : 'bad'}">${r.profit >= 0 ? '+' : ''}${r.profit.toFixed(0)}</td><td class="num ${r.margin > 0 ? 'good' : r.margin > -30 ? 'warn' : 'bad'}">${r.margin.toFixed(1)}%</td><td class="muted" style="white-space:normal;max-width:300px;font-size:.7rem">${r.mats}</td></tr>`).join('')}</tbody></table>`;
+            }
+
+            function buildWeapons(el) {
+                const rows = [];
+                itemConfigs.forEach(c => {
+                    const sc = c.SwordConfig, bc = c.BowConfig, wc = c.WandConfig || c.StaffConfig;
+                    const cfg = sc || bc || wc; if (!cfg) return;
+                    const v = valMap[c.ItemID];
+                    const dmg = cfg.AttackDamage || cfg.Damage || 0;
+                    const spd = c.UseSpeed || 1;
+                    const crit = cfg.CritChance || 0;
+                    const critMul = (cfg.CritDamageMultiplier || cfg.CritMultiplier || 2);
+                    const dps = dmg * (1 + crit * (critMul - 1)) / spd;
+                    const type = sc ? 'Sword' : bc ? 'Bow' : 'Staff';
+                    rows.push({ name: c.Name, type, rarity: c.Rarity, dmg, spd, crit, dps, buy: v ? v.BuyPrice : 0, sell: v ? v.SellPrice : 0, eff: v && v.BuyPrice > 0 ? (dps / v.BuyPrice) : 0, kb: cfg.KnockbackForce || 0 });
+                });
+                rows.sort((a, b) => b.dps - a.dps);
+                const maxDps = Math.max(...rows.map(r => r.dps));
+                el.innerHTML = `<table class="eco-table"><thead><tr><th>Weapon</th><th>Type</th><th>Rarity</th><th class="num">Damage</th><th class="num">Speed</th><th class="num">Crit%</th><th class="num">DPS</th><th class="num">Buy ${coin}</th><th class="num">DPS/Gold</th><th>DPS Bar</th></tr></thead><tbody>${rows.map(r => `<tr><td><span class="rarity-dot" style="background:${RARITY_COLORS[r.rarity] || '#888'}"></span>${r.name}</td><td class="muted">${r.type}</td><td style="color:${RARITY_COLORS[r.rarity] || '#888'}">${r.rarity}</td><td class="num">${r.dmg}</td><td class="num">${r.spd.toFixed(1)}</td><td class="num">${(r.crit * 100).toFixed(1)}%</td><td class="num gold">${r.dps.toFixed(2)}</td><td class="num gold">${r.buy || '-'}</td><td class="num ${r.eff > 0.1 ? 'good' : r.eff > 0.05 ? 'warn' : 'bad'}">${r.eff ? r.eff.toFixed(4) : '-'}</td><td><div class="bar-cell"><div class="bar" style="width:${(r.dps / maxDps * 100).toFixed(0)}px;background:${RARITY_COLORS[r.rarity] || '#888'}"></div></div></td></tr>`).join('')}</tbody></table>`;
+            }
+
+            function buildArmor(el) {
+                const rows = [];
+                itemConfigs.forEach(c => {
+                    if (!c.ArmorConfig) return;
+                    const v = valMap[c.ItemID];
+                    const def = c.ArmorConfig.Defense;
+                    const mdef = c.ArmorConfig.MagicDefense || 0;
+                    const armorTypes = ['Helmet', 'Chestplate', 'Leggings'];
+                    const slot = armorTypes[c.ArmorConfig.ArmorType] || '?';
+                    rows.push({ name: c.Name, slot, set: c.ArmorConfig.SetName, rarity: c.Rarity, def, mdef, buy: v ? v.BuyPrice : 0, sell: v ? v.SellPrice : 0, eff: v && v.BuyPrice > 0 ? (def / v.BuyPrice) : 0 });
+                });
+                rows.sort((a, b) => b.def - a.def);
+                const maxDef = Math.max(...rows.map(r => r.def));
+                el.innerHTML = `<table class="eco-table"><thead><tr><th>Armor</th><th>Slot</th><th>Set</th><th>Rarity</th><th class="num">Defense</th><th class="num">M.Def</th><th class="num">Buy ${coin}</th><th class="num">Sell ${coin}</th><th class="num">Def/Gold</th><th>Defense Bar</th></tr></thead><tbody>${rows.map(r => `<tr><td><span class="rarity-dot" style="background:${RARITY_COLORS[r.rarity] || '#888'}"></span>${r.name}</td><td class="muted">${r.slot}</td><td class="muted">${r.set}</td><td style="color:${RARITY_COLORS[r.rarity] || '#888'}">${r.rarity}</td><td class="num">${r.def}</td><td class="num">${r.mdef}</td><td class="num gold">${r.buy || '-'}</td><td class="num gold">${r.sell || '-'}</td><td class="num ${r.eff > 0.05 ? 'good' : r.eff > 0.02 ? 'warn' : 'bad'}">${r.eff ? r.eff.toFixed(4) : '-'}</td><td><div class="bar-cell"><div class="bar" style="width:${(r.def / maxDef * 100).toFixed(0)}px;background:${RARITY_COLORS[r.rarity] || '#888'}"></div></div></td></tr>`).join('')}</tbody></table>`;
+            }
+
+            function buildMobs(el) {
+                const rows = mobConfigs.map(m => {
+                    const loot = m.LootConfig;
+                    const drops = loot.LootDrops || [];
+                    let avgLootValue = 0, lootNames = [];
+                    drops.forEach(d => {
+                        const iv = valMap[d.ItemID];
+                        const avgQty = (d.MinQuantity + d.MaxQuantity) / 2;
+                        const val = iv ? (iv.SellPrice * avgQty * d.DropChance) : 0;
+                        avgLootValue += val;
+                        lootNames.push(`${d.ItemID} (${d.MinQuantity}-${d.MaxQuantity})`);
+                    });
+                    const xp = loot.BaseExperience;
+                    const hp = m.HealthConfig.MaxHealth;
+                    const dmg = m.CombatConfig.Damage;
+                    const def = m.CombatConfig.Defense;
+                    const threat = dmg * (1 + m.CombatConfig.CritChance * (m.CombatConfig.CritMultiplier - 1));
+                    return { name: m.MobName, level: m.Level, hp, dmg, def, xp, threat: threat.toFixed(1), lootVal: avgLootValue, goldPerHp: hp > 0 ? (avgLootValue / hp) : 0, drops: lootNames.join(', '), hostile: m.AIConfig.IsHostileToPlayer };
+                });
+                rows.sort((a, b) => b.lootVal - a.lootVal);
+                const maxLoot = Math.max(...rows.map(r => r.lootVal));
+                el.innerHTML = `<table class="eco-table"><thead><tr><th>Mob</th><th class="num">Lvl</th><th class="num">HP</th><th class="num">Damage</th><th class="num">Defense</th><th class="num">Threat</th><th class="num">XP</th><th class="num">Avg Loot ${coin}</th><th class="num">Gold/HP</th><th>Drops</th><th>Loot Bar</th></tr></thead><tbody>${rows.map(r => `<tr><td>${r.hostile ? '⚔️' : '🕊️'} ${r.name}</td><td class="num">${r.level}</td><td class="num">${r.hp}</td><td class="num">${r.dmg}</td><td class="num">${r.def}</td><td class="num warn">${r.threat}</td><td class="num">${r.xp}</td><td class="num gold">${r.lootVal.toFixed(1)}</td><td class="num ${r.goldPerHp > 0.05 ? 'good' : r.goldPerHp > 0.01 ? 'warn' : 'bad'}">${r.goldPerHp.toFixed(4)}</td><td class="muted" style="white-space:normal;font-size:.7rem">${r.drops}</td><td><div class="bar-cell"><div class="bar" style="width:${maxLoot > 0 ? (r.lootVal / maxLoot * 100).toFixed(0) : 0}px;background:#f5c842"></div></div></td></tr>`).join('')}</tbody></table>`;
+            }
+
+            function makeSortable(table, data, renderRow) {
+                let sortCol = null, sortDir = 1;
+                table.querySelectorAll('th').forEach(th => {
+                    th.addEventListener('click', () => {
+                        const col = th.dataset.col; if (!col) return;
+                        if (sortCol === col) sortDir *= -1; else { sortCol = col; sortDir = 1; }
+                        data.sort((a, b) => {
+                            const va = a[col], vb = b[col];
+                            if (typeof va === 'number') return (va - vb) * sortDir;
+                            return String(va).localeCompare(String(vb)) * sortDir;
+                        });
+                        table.querySelector('tbody').innerHTML = data.map(renderRow).join('');
+                    });
+                });
+            }
+        })();
+    </script>
+</body>
+
+</html>
