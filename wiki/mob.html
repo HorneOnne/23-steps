@@ -644,7 +644,7 @@
       /* page title + SEO meta */
       var pageUrl = 'https://23-steps.com/wiki/mob.html?id=' + encodeURIComponent(mobId);
       var metaTitle = mobName + ' \u2014 Mine & Dungeon Wiki | 23-Steps';
-      var metaDescription = (hostile ? 'Hostile' : 'Neutral') + ' mob \u2014 Level ' + mob.Level + '. ' +
+      var metaDescription = (hostile ? 'Hostile' : 'Neutral') + ' mob. ' +
         'HP: ' + mob.HealthConfig.MaxHealth + ', Damage: ' + mob.CombatConfig.Damage + '. ' +
         'Full stats, loot drops, and AI data on the Mine & Dungeon Wiki.';
       document.title = metaTitle;
@@ -658,19 +658,18 @@
       el = document.getElementById('twDesc'); if (el) el.setAttribute('content', metaDescription);
       document.getElementById('breadcrumbName').textContent = mobName;
       document.getElementById('pageHeading').innerHTML = '<i class="fas fa-skull"></i>&nbsp; ' + mobName;
-      document.getElementById('pageSubtitle').textContent = (hostile ? 'Hostile mob' : 'Neutral mob') + ' \u2014 Level ' + mob.Level;
+      document.getElementById('pageSubtitle').textContent = (hostile ? 'Hostile mob' : 'Neutral mob');
 
       /* badges */
       var badges =
-        '<span class="badge ' + (hostile ? 'badge-hostile' : 'badge-neutral') + '">' + (hostile ? '&#128308; Hostile' : '&#128992; Neutral') + '</span>' +
-        '<span class="badge badge-level">Lv. ' + mob.Level + '</span>';
+        '<span class="badge ' + (hostile ? 'badge-hostile' : 'badge-neutral') + '">' + (hostile ? '&#128308; Hostile' : '&#128992; Neutral') + '</span>';
       if (h.CanRegenerate) badges += '<span class="badge badge-regen">&#9829; Regenerates</span>';
       if (mv && mv.CanBeStunned) badges += '<span class="badge badge-stun">&#128165; Stunnable</span>';
 
       /* ── Health section ── */
       var healthHtml = '<div class="stat-grid">';
       healthHtml += stat('Max HP', fmt(h.MaxHealth), 'green');
-      healthHtml += stat('HP per Level', '+' + fmt(h.HealthPerLevel), 'green');
+
       healthHtml += stat('I-Frames', h.InvulnerabilityDuration + 's', '');
       if (h.CanRegenerate) {
         healthHtml += stat('Regen Rate', fmt(h.RegenerationRate) + '/s', 'green');
@@ -681,7 +680,7 @@
       /* ── Combat section ── */
       var combatHtml = '<div class="stat-grid">';
       combatHtml += stat('Damage', fmt(c.Damage), 'red');
-      combatHtml += stat('DMG per Level', '+' + fmt(c.DamagePerLevel), 'red');
+
       combatHtml += stat('Defense', fmt(c.Defense), 'blue');
       combatHtml += stat('Attack Speed', fmt(c.AttackSpeed) + 'x', '');
       combatHtml += stat('Attack Range', fmt(c.AttackRange), '');
