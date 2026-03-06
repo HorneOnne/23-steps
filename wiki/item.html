@@ -821,6 +821,19 @@
       flex-shrink: 0;
     }
 
+    .cattable-item-icon-link {
+      display: inline-flex;
+      flex-shrink: 0;
+      border-radius: 4px;
+      border: 1px solid transparent;
+      transition: border-color .15s, box-shadow .15s;
+    }
+
+    .cattable-item-icon-link:hover {
+      border-color: var(--wiki-tab-active-border, #6ab0f3);
+      box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.2);
+    }
+
     .cattable-item-cell .icon-missing {
       font-size: 1.1rem;
       opacity: 0.35;
@@ -1521,6 +1534,7 @@
           const imgHtml = iUrl
             ? `<img src="${iUrl}" alt="" onerror="this.style.display='none'" />`
             : `<span class="icon-missing">📦</span>`;
+          const iconLinked = `<a class="cattable-item-icon-link" href="item.html?id=${encodeURIComponent(item.ItemID)}" title="${item.Name}">${imgHtml}</a>`;
           const statCells = statCols.map(col => {
             const val = col.get(item);
             const display = val != null ? (col.fmt ? col.fmt(val) : val) : '—';
@@ -1532,7 +1546,7 @@
           const rarityLabel = item.Rarity || '—';
           return `<tr class="${isActive ? 'active-row' : ''}" data-id="${item.ItemID}">
             <td><div class="cattable-item-cell">
-              ${imgHtml}
+              ${iconLinked}
               <span class="cattable-rarity-dot" style="--dot-color:${rc}"></span>
               <a class="cattable-item-link" href="item.html?id=${encodeURIComponent(item.ItemID)}">${item.Name}</a>
             </div></td>
