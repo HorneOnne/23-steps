@@ -887,7 +887,7 @@
     function buildCard(m) {
       var hostile = m.AIConfig.IsHostileToPlayer;
       var cls = hostile ? 'hostile-card' : 'neutral-card';
-      var imgSrc = 'assets/' + m.MobID + '.png';
+      var imgSrc = 'assets/mobs/' + m.MobID + '.png';
       return [
         '<div class="mob-card ' + cls + '" onclick="location.href=\'mob.html?id=' + m.MobID + '\'" style="cursor:pointer">',
         '<div class="mob-icon-wrap">',

@@ -4,12 +4,16 @@ This file documents all the custom terminal commands (aliases and scripts) creat
 
 ---
 
-## 1. `sync_item_icons`
-- **Description:** Automatically copies all new or updated `.png` item icons from the main Unity project directly into the wiki's asset folder. It safely ignores any Unity `.meta` files.
-- **Source Folder:** `d:\UnityProject\1PercentGameStudio\Mine&Dungeon\Assets\Resources\Items`
-- **Destination:** `d:\23-steps\wiki\assets\items`
-- **How to run:** Just type `sync_item_icons` in any bash terminal (Git Bash). You can be inside any folder.
-- **How it works:** This is an alias defined in your `~/.bashrc` which points to `d:/23-steps/wiki/sync_item_icons.ps1`.
+## 1. `sync_icons`
+- **Description:** Automatically copies all new or updated `.png` item and mob icons from the main Unity project directly into the wiki's asset folders. It safely ignores any Unity `.meta` files.
+- **Source Folders:**
+  - Items: `d:\UnityProject\1PercentGameStudio\Mine&Dungeon\Assets\Resources\Items`
+  - Mobs: `d:\UnityProject\1PercentGameStudio\Mine&Dungeon\Assets\Resources\MobIcons`
+- **Destination Folders:**
+  - Items: `d:\23-steps\wiki\assets\items`
+  - Mobs: `d:\23-steps\wiki\assets\mobs`
+- **How to run:** Just type `sync_icons` in any bash terminal (Git Bash). You can be inside any folder.
+- **How it works:** This is an alias defined in your `~/.bashrc` which points to `d:/23-steps/wiki/sync_icons.ps1`.
 
 ---
 
@@ -63,7 +67,7 @@ After making changes to Unity configs, run these commands in order:
 
 ```bash
 fetch_all                       # 1. Pull latest JSONs from Unity project
-sync_item_icons                 # 2. Sync item icons
+sync_icons                      # 2. Sync item and mob icons
 rebuild_economy                 # 3. Rebuild JS wrappers for economy.html
 python wiki/gen_mob_page.py     # 4. Regenerate mob detail page
 ```

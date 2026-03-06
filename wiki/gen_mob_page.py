@@ -1,6 +1,6 @@
 import json, re
 
-data = json.load(open(r'd:\23-steps\wiki\mob_configs.json'))
+data = json.load(open(r'd:\23-steps\wiki\mob_configs.json', encoding='utf-8'))
 js   = json.dumps(data, separators=(',', ':'))
 
 # ── mob.html template ──────────────────────────────────────────
@@ -294,7 +294,7 @@ MOB_HTML = r'''<!DOCTYPE html>
         '<a class="back-btn" href="mobs.html"><i class="fas fa-arrow-left"></i> Back to Mobs</a>' +
         '<div class="mob-header-card">' +
           '<div class="mob-header-img">' +
-            '<img src="assets/' + mob.MobID + '.png" alt="' + mobName + '"' +
+            '<img src="assets/mobs/' + mob.MobID + '.png" alt="' + mobName + '"' +
             ' onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'" />' +
             '<span class="ph" style="display:none">&#128128;</span>' +
           '</div>' +
@@ -321,5 +321,5 @@ MOB_HTML = r'''<!DOCTYPE html>
 </html>'''
 
 html = MOB_HTML.replace('MOB_JSON_PLACEHOLDER', js)
-open(r'd:\23-steps\wiki\mob.html', 'w').write(html)
+open(r'd:\23-steps\wiki\mob.html', 'w', encoding='utf-8').write(html)
 print('Created mob.html,', len(html), 'bytes')

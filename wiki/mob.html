@@ -1,594 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title id="pageTitle">Mob — Mine &amp; Dungeon Wiki | 23-Steps</title>
-  <meta id="metaDesc" name="description"
-    content="Look up mob details in Mine & Dungeon — combat stats, HP, loot drops, AI behaviour and more. Powered by the official 23-Steps wiki." />
-  <meta name="keywords" content="Mine and Dungeon mob, enemy stats, loot drops, combat, 23-Steps wiki" />
-  <link id="canonicalLink" rel="canonical" href="https://23-steps.com/wiki/mob.html" />
-  <!-- Open Graph -->
-  <meta property="og:type" content="article" />
-  <meta id="ogTitle" property="og:title" content="Mob — Mine &amp; Dungeon Wiki | 23-Steps" />
-  <meta id="ogDesc" property="og:description"
-    content="Look up mob details in Mine & Dungeon — combat stats, HP, loot drops and more." />
-  <meta id="ogUrl" property="og:url" content="https://23-steps.com/wiki/mob.html" />
-  <meta property="og:site_name" content="23-Steps" />
-  <meta property="og:image" content="https://23-steps.com/images/mine-dungeon.png" />
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary" />
-  <meta id="twTitle" name="twitter:title" content="Mob — Mine &amp; Dungeon Wiki | 23-Steps" />
-  <meta id="twDesc" name="twitter:description"
-    content="Look up mob details in Mine & Dungeon — combat stats, HP, loot drops and more." />
-  <meta name="twitter:image" content="https://23-steps.com/images/mine-dungeon.png" />
+  <meta name="description" content="Look up mob details in Mine &amp; Dungeon — combat stats, loot drops and more. Powered by the official 23-Steps wiki." />
   <link rel="icon" type="image/png" href="../icon2.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Press+Start+2P&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="wiki-theme.css" />
   <script src="wiki-theme.js"></script>
   <style>
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0
-    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html,
-    body {
+    html, body {
       font-family: 'Inter', sans-serif;
       background-image: var(--wiki-body-bg-image);
       background-repeat: repeat;
       background-size: 256px 256px;
       background-color: var(--wiki-bg);
       color: var(--wiki-text);
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      position: relative
+      display: flex; flex-direction: column; min-height: 100vh; position: relative;
     }
-
     body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background: var(--wiki-bg-overlay);
-      pointer-events: none;
-      z-index: 1
+      content: ""; position: fixed; inset: 0;
+      background: var(--wiki-bg-overlay); pointer-events: none; z-index: 1;
     }
+    main { flex: 1; position: relative; z-index: 2; }
 
-    main {
-      flex: 1;
-      position: relative;
-      z-index: 2
-    }
-
+    /* Header */
     header {
-      background-color: var(--wiki-header-bg);
-      height: 60px;
-      padding: 0 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: stretch;
-      border-bottom: 1px solid var(--wiki-header-border);
-      position: relative;
-      z-index: 10
+      background-color: var(--wiki-header-bg); height: 60px; padding: 0 20px;
+      display: flex; justify-content: space-between; align-items: stretch;
+      border-bottom: 1px solid var(--wiki-header-border); position: relative; z-index: 10;
     }
-
     header h1 {
-      font-family: 'Press Start 2P', cursive;
-      font-size: 1.4em;
-      color: var(--wiki-header-title);
-      margin: 0;
-      display: flex;
-      align-items: center;
-      gap: 10px
+      font-family: 'Press Start 2P', cursive; font-size: 1.4em;
+      color: var(--wiki-header-title); margin: 0; display: flex; align-items: center; gap: 10px;
     }
-
-    header h1 a {
-      color: inherit;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 10px
-    }
-
-    .logo {
-      height: 50px;
-      object-fit: contain
-    }
-
-    nav {
-      display: flex;
-      align-items: center
-    }
-
+    header h1 a { color: inherit; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+    .logo { height: 50px; object-fit: contain; }
+    nav { display: flex; align-items: center; }
     nav a {
-      color: var(--wiki-nav-text);
-      text-decoration: none;
-      font-weight: bold;
-      padding: 0 20px;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      font-size: 0.85em;
-      transition: color .15s
+      color: var(--wiki-nav-text); text-decoration: none; font-weight: bold;
+      padding: 0 20px; height: 100%; display: flex; align-items: center;
+      font-size: 0.85em; transition: color .15s;
     }
+    nav a.active { background-color: var(--wiki-nav-active-bg); color: var(--wiki-nav-active-text); }
+    nav a:hover:not(.active) { color: var(--wiki-nav-active-text); }
 
-    nav a.active {
-      background-color: var(--wiki-nav-active-bg);
-      color: var(--wiki-nav-active-text)
-    }
-
-    nav a:hover:not(.active) {
-      color: var(--wiki-nav-active-text)
-    }
-
-    /* ── Page Header ── */
+    /* Page Header */
     .wiki-page-header {
       background-color: var(--wiki-page-header-bg);
       border-bottom: 2px solid var(--wiki-page-header-border);
-      padding: 24px 24px 0
+      padding: 24px 24px 0;
     }
-
-    .breadcrumb {
-      font-size: 0.7em;
-      color: var(--wiki-breadcrumb);
-      margin-bottom: 10px
-    }
-
-    .breadcrumb a {
-      color: var(--wiki-breadcrumb);
-      text-decoration: none
-    }
-
-    .breadcrumb a:hover {
-      text-decoration: underline
-    }
-
+    .breadcrumb { font-size: 0.7em; color: var(--wiki-breadcrumb); margin-bottom: 10px; }
+    .breadcrumb a { color: var(--wiki-breadcrumb); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
     .wiki-page-header h2 {
       font-family: 'Press Start 2P', cursive;
       font-size: clamp(0.85rem, 2.5vw, 1.3rem);
-      color: var(--wiki-heading);
-      margin-bottom: 5px
+      color: var(--wiki-heading); margin-bottom: 5px;
     }
-
-    .wiki-page-header p {
-      color: var(--wiki-subheading);
-      font-size: 0.83em;
-      margin-bottom: 18px
-    }
-
-    .tab-bar {
-      display: flex;
-      border-top: 1px solid var(--wiki-tab-border);
-      overflow-x: auto
-    }
-
-    .tab-bar::-webkit-scrollbar {
-      height: 0
-    }
-
+    .wiki-page-header p { color: var(--wiki-subheading); font-size: 0.83em; margin-bottom: 18px; }
+    .tab-bar { display: flex; border-top: 1px solid var(--wiki-tab-border); overflow-x: auto; }
+    .tab-bar::-webkit-scrollbar { height: 0; }
     .tab-btn {
-      display: flex;
-      align-items: center;
-      gap: 7px;
-      padding: 11px 20px;
-      color: var(--wiki-tab-text);
-      font-weight: 600;
-      font-size: 0.82em;
-      cursor: pointer;
-      border: none;
-      background: transparent;
-      border-bottom: 3px solid transparent;
-      white-space: nowrap;
+      display: flex; align-items: center; gap: 7px; padding: 11px 20px;
+      color: var(--wiki-tab-text); font-weight: 600; font-size: 0.82em;
+      cursor: pointer; border: none; background: transparent;
+      border-bottom: 3px solid transparent; white-space: nowrap;
       transition: color .15s, border-color .15s, background .15s;
-      text-decoration: none;
-      font-family: inherit
+      text-decoration: none; font-family: inherit;
     }
-
-    .tab-btn:hover {
-      color: var(--wiki-tab-hover-text);
-      background: var(--wiki-tab-hover-bg)
-    }
-
+    .tab-btn:hover { color: var(--wiki-tab-hover-text); background: var(--wiki-tab-hover-bg); }
     .tab-btn.active {
       color: var(--wiki-tab-active-text);
       border-bottom-color: var(--wiki-tab-active-border);
-      background: var(--wiki-tab-active-bg)
+      background: var(--wiki-tab-active-bg);
     }
-
-    .tab-btn.disabled {
-      opacity: .4;
-      cursor: default;
-      pointer-events: none
-    }
-
+    .tab-btn.disabled { opacity: .4; cursor: default; pointer-events: none; }
     .tab-badge {
-      font-size: .6em;
-      background: var(--wiki-tab-badge-bg);
+      font-size: .6em; background: var(--wiki-tab-badge-bg);
       border: 1px solid var(--wiki-tab-badge-border);
-      color: var(--wiki-tab-badge-text);
-      padding: 1px 5px;
-      border-radius: 3px
+      color: var(--wiki-tab-badge-text); padding: 1px 5px; border-radius: 3px;
     }
 
-    /* ── Content ── */
+    /* Content wrapper */
     .content-wrap {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 28px 20px
-    }
-
-    /* ── Mob Header Card ── */
-    .mob-header-card {
+      max-width: 860px; margin: 24px auto; padding: 28px 24px 48px;
       background: var(--wiki-panel-bg);
-      border: 1px solid var(--wiki-panel-border);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      padding: 24px 28px;
-      margin-bottom: 24px;
-    }
-
-    .mob-header-img {
-      width: 100px;
-      height: 100px;
-      flex-shrink: 0;
-      background: var(--wiki-card-icon-bg);
-      border: 1px solid var(--wiki-panel-border);
+      backdrop-filter: var(--wiki-panel-blur);
+      -webkit-backdrop-filter: var(--wiki-panel-blur);
       border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
+      border: 1px solid var(--wiki-panel-border);
+      box-shadow: var(--wiki-panel-shadow);
     }
 
-    .mob-header-img img {
-      width: 100px;
-      height: 100px;
-      object-fit: contain;
-      image-rendering: pixelated
+    /* Mob header card */
+    .mob-header-card {
+      background: var(--wiki-infobox-bg); border: 1px solid var(--wiki-infobox-border);
+      border-radius: 12px; display: flex; align-items: center; gap: 24px;
+      padding: 24px 28px; margin-bottom: 24px;
     }
-
-    .mob-header-img .ph {
-      font-size: 3rem;
-      opacity: .3
+    .mob-header-img {
+      width: 100px; height: 100px; flex-shrink: 0;
+      background: var(--wiki-card-icon-bg); border: 1px solid var(--wiki-infobox-border);
+      border-radius: 10px; display: flex; align-items: center; justify-content: center; overflow: hidden;
     }
-
-    .mob-header-info {
-      flex: 1;
-      min-width: 0
-    }
-
+    .mob-header-img img { width: 100px; height: 100px; object-fit: contain; image-rendering: pixelated; }
+    .mob-header-img .ph { font-size: 3rem; opacity: .3; }
+    .mob-header-info { flex: 1; min-width: 0; }
     .mob-header-name {
       font-family: 'Press Start 2P', cursive;
       font-size: clamp(0.9rem, 2vw, 1.2rem);
-      color: var(--wiki-heading);
-      margin-bottom: 10px;
-      line-height: 1.5
+      color: var(--wiki-heading); margin-bottom: 10px; line-height: 1.5;
     }
+    .mob-header-badges { display: flex; flex-wrap: wrap; gap: 6px; }
 
-    .mob-header-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px
-    }
+    /* Badges */
+    .badge { font-size: 0.65em; font-weight: 700; padding: 3px 9px; border-radius: 4px; }
+    .badge-hostile { background: rgba(220,38,38,.18); border: 1px solid rgba(220,38,38,.35); color: #f87171; }
+    .badge-neutral { background: rgba(234,179,8,.13); border: 1px solid rgba(234,179,8,.28); color: #fbbf24; }
+    .badge-level { background: var(--wiki-mob-level-bg); border: 1px solid var(--wiki-mob-level-border); color: var(--wiki-mob-level-text); }
+    .badge-regen { background: rgba(74,222,128,.12); border: 1px solid rgba(74,222,128,.28); color: #4ade80; }
+    .badge-stun { background: rgba(167,139,250,.12); border: 1px solid rgba(167,139,250,.25); color: #a78bfa; }
 
-    .badge {
-      font-size: 0.65em;
-      font-weight: 700;
-      padding: 3px 9px;
-      border-radius: 4px
-    }
-
-    .badge-hostile {
-      background: rgba(220, 38, 38, .18);
-      border: 1px solid rgba(220, 38, 38, .35);
-      color: #f87171
-    }
-
-    .badge-neutral {
-      background: rgba(234, 179, 8, .13);
-      border: 1px solid rgba(234, 179, 8, .28);
-      color: #fbbf24
-    }
-
-    .badge-level {
-      background: #1a2332;
-      border: 1px solid #2b3a59;
-      color: #6ab0f3
-    }
-
-    .badge-regen {
-      background: rgba(74, 222, 128, .12);
-      border: 1px solid rgba(74, 222, 128, .28);
-      color: #4ade80
-    }
-
-    .badge-stun {
-      background: rgba(167, 139, 250, .12);
-      border: 1px solid rgba(167, 139, 250, .25);
-      color: #a78bfa
-    }
-
-    /* ── Sections ── */
+    /* Sections */
     .section {
-      background: var(--wiki-panel-bg);
-      border: 1px solid var(--wiki-panel-border);
-      border-radius: 10px;
-      padding: 20px 22px;
-      margin-bottom: 16px
+      background: var(--wiki-stat-bg); border: 1px solid var(--wiki-stat-border);
+      border-radius: 10px; padding: 20px 22px; margin-bottom: 16px;
     }
-
     .section-title {
-      font-family: 'Press Start 2P', cursive;
-      font-size: 0.62rem;
-      color: var(--wiki-section-title);
-      margin-bottom: 16px;
-      display: flex;
-      align-items: center;
-      gap: 8px
+      font-family: 'Press Start 2P', cursive; font-size: 0.62rem;
+      color: var(--wiki-section-title); margin-bottom: 16px;
+      padding-bottom: 8px; border-bottom: 1px solid var(--wiki-section-border);
+      display: flex; align-items: center; gap: 8px;
     }
 
-    .section-title i {
-      font-size: 0.9em
-    }
-
-    /* ── Stat Grid ── */
-    .stat-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-      gap: 8px
-    }
-
+    /* Stat grid */
+    .stat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 8px; }
     .stat-item {
-      background: var(--wiki-stat-bg);
-      border: 1px solid var(--wiki-stat-border);
-      border-radius: 6px;
-      padding: 10px 12px
+      background: var(--wiki-card-bg); border: 1px solid var(--wiki-infobox-row-border);
+      border-radius: 6px; padding: 10px 12px;
     }
+    .stat-label { font-size: 0.58em; color: var(--wiki-stat-label); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 3px; }
+    .stat-value { font-size: 0.9em; font-weight: 700; color: var(--wiki-stat-value); }
+    .stat-value.green { color: #4ade80; }
+    .stat-value.red { color: #f87171; }
+    .stat-value.yellow { color: #fbbf24; }
+    .stat-value.blue { color: #60a5fa; }
+    .stat-value.purple { color: #a78bfa; }
 
-    .stat-label {
-      font-size: 0.58em;
-      color: var(--wiki-text-dimmer);
-      text-transform: uppercase;
-      letter-spacing: .05em;
-      margin-bottom: 3px
-    }
-
-    .stat-value {
-      font-size: 0.9em;
-      font-weight: 700;
-      color: var(--wiki-text)
-    }
-
-    .stat-value.green {
-      color: #4ade80
-    }
-
-    .stat-value.red {
-      color: #f87171
-    }
-
-    .stat-value.yellow {
-      color: #fbbf24
-    }
-
-    .stat-value.blue {
-      color: #60a5fa
-    }
-
-    .stat-value.purple {
-      color: #a78bfa
-    }
-
-    /* ── Loot ── */
-    .loot-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 8px
-    }
-
+    /* Loot */
+    .loot-grid { display: flex; flex-direction: column; gap: 8px; }
     .loot-row {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      background: var(--wiki-loot-bg);
-      border: 1px solid var(--wiki-loot-border);
-      border-radius: 6px;
-      padding: 10px 14px;
+      display: flex; align-items: center; gap: 12px;
+      background: var(--wiki-loot-bg); border: 1px solid var(--wiki-loot-border);
+      border-radius: 6px; padding: 10px 14px;
     }
-
     .loot-icon-wrap {
-      width: 40px;
-      height: 40px;
-      flex-shrink: 0;
-      background: var(--wiki-card-icon-bg);
-      border: 1px solid var(--wiki-panel-border);
-      border-radius: 6px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
+      width: 40px; height: 40px; flex-shrink: 0;
+      background: var(--wiki-card-bg); border: 1px solid var(--wiki-infobox-border);
+      border-radius: 6px; display: flex; align-items: center; justify-content: center; overflow: hidden;
     }
-
-    .loot-icon-wrap img {
-      width: 36px;
-      height: 36px;
-      object-fit: contain;
-      image-rendering: pixelated
-    }
-
-    .loot-icon-wrap .loot-ph {
-      font-size: 1.2rem;
-      opacity: .4
-    }
-
-    .loot-info {
-      flex: 1;
-      min-width: 0
-    }
-
-    .loot-name {
-      font-size: 0.82em;
-      font-weight: 700;
-      color: var(--wiki-loot-name)
-    }
-
-    .loot-meta {
-      font-size: 0.7em;
-      color: var(--wiki-text-dimmer);
-      margin-top: 2px
-    }
-
-    .loot-right {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 3px
-    }
-
-    .loot-qty {
-      font-size: 0.75em;
-      color: var(--wiki-loot-qty);
-      font-weight: 600
-    }
-
-    .loot-chance {
-      font-size: 0.82em;
-      font-weight: 700;
-      color: #fbbf24
-    }
-
+    .loot-icon-wrap img { width: 36px; height: 36px; object-fit: contain; image-rendering: pixelated; }
+    .loot-icon-wrap .loot-ph { font-size: 1.2rem; opacity: .4; }
+    .loot-info { flex: 1; min-width: 0; }
+    .loot-name { font-size: 0.82em; font-weight: 700; color: var(--wiki-loot-name); }
+    .loot-right { display: flex; flex-direction: column; align-items: flex-end; gap: 3px; }
+    .loot-qty { font-size: 0.75em; color: var(--wiki-loot-qty); font-weight: 600; }
+    .loot-chance { font-size: 0.82em; font-weight: 700; color: var(--wiki-loot-chance); }
     .loot-rare-tag {
-      font-size: 0.55em;
-      font-weight: 700;
-      padding: 2px 6px;
-      border-radius: 3px;
-      background: rgba(251, 146, 60, .15);
-      border: 1px solid rgba(251, 146, 60, .3);
-      color: #fb923c;
-      margin-top: 2px
+      font-size: 0.55em; font-weight: 700; padding: 2px 6px; border-radius: 3px;
+      background: rgba(251,146,60,.15); border: 1px solid rgba(251,146,60,.3); color: #fb923c; margin-top: 2px;
     }
+    .no-loot { font-size: 0.78em; color: var(--wiki-text-dimmer); padding: 4px 0; }
 
-    .no-loot {
-      font-size: 0.78em;
-      color: #4a576b;
-      padding: 4px 0
-    }
-
-    /* ── Back button ── */
+    /* Back button */
     .back-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      background: var(--wiki-btn-bg);
-      border: 1px solid var(--wiki-btn-border);
-      border-radius: 6px;
-      color: var(--wiki-btn-text);
-      font-size: 0.78em;
-      font-weight: 600;
-      padding: 7px 14px;
-      text-decoration: none;
-      margin-bottom: 20px;
-      transition: background .15s, border-color .15s;
+      display: inline-flex; align-items: center; gap: 7px;
+      background: var(--wiki-btn-bg); border: 1px solid var(--wiki-btn-border);
+      border-radius: 6px; color: var(--wiki-btn-text);
+      font-size: 0.78em; font-weight: 600; padding: 7px 14px;
+      text-decoration: none; margin-bottom: 20px;
+      transition: background .15s, border-color .15s, color .15s;
     }
+    .back-btn:hover { background: var(--wiki-btn-hover-bg); color: var(--wiki-btn-hover-text); border-color: var(--wiki-input-focus); }
 
-    .back-btn:hover {
-      background: var(--wiki-btn-hover-bg);
-      border-color: var(--wiki-input-focus)
-    }
+    /* Not found */
+    .not-found { text-align: center; padding: 80px 20px; color: var(--wiki-text-dim); }
+    .not-found i { font-size: 3rem; margin-bottom: 16px; display: block; }
 
-    /* ── Not found ── */
-    .not-found {
-      text-align: center;
-      padding: 80px 20px;
-      color: var(--wiki-text-dimmer)
-    }
-
-    .not-found i {
-      font-size: 3rem;
-      margin-bottom: 16px;
-      display: block
-    }
-
-    /* ── Footer ── */
+    /* Footer */
     footer {
-      text-align: center;
-      padding: 10px;
-      font-size: 0.8em;
-      color: var(--wiki-footer-text);
-      background-color: var(--wiki-footer-bg);
+      text-align: center; padding: 10px; font-size: 0.8em;
+      color: var(--wiki-footer-text); background-color: var(--wiki-footer-bg);
       border-top: 1px solid var(--wiki-footer-border);
-      font-weight: bold;
-      position: relative;
-      z-index: 2
+      font-weight: bold; position: relative; z-index: 2;
     }
+    footer a { color: var(--wiki-footer-link); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
 
-    footer a {
-      color: var(--wiki-footer-link);
-      text-decoration: none
-    }
-
-    footer a:hover {
-      text-decoration: underline
-    }
-
-    @media(max-width:600px) {
-      header {
-        height: auto;
-        flex-direction: column;
-        align-items: stretch;
-        padding: 0
-      }
-
-      header h1 {
-        justify-content: center;
-        padding: 8px 12px 4px
-      }
-
-      .logo {
-        height: 40px
-      }
-
-      nav {
-        justify-content: center;
-        flex-wrap: wrap;
-        border-top: 1px solid var(--wiki-header-border);
-        padding: 0 4px
-      }
-
-      nav a {
-        padding: 8px 12px;
-        font-size: 0.75em;
-        height: auto
-      }
-
-      .theme-toggle {
-        width: 32px;
-        height: 32px;
-        font-size: 0.9rem
-      }
-
-      .mob-header-card {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px
-      }
-
-      .stat-grid {
-        grid-template-columns: 1fr 1fr
-      }
+    @media (max-width: 600px) {
+      header { height: auto; flex-direction: column; align-items: stretch; padding: 0; }
+      header h1 { justify-content: center; padding: 8px 12px 4px; }
+      .logo { height: 40px; }
+      nav { justify-content: center; flex-wrap: wrap; border-top: 1px solid var(--wiki-header-border); padding: 0 4px; }
+      nav a { padding: 8px 12px; font-size: 0.75em; height: auto; }
+      .theme-toggle { width: 32px; height: 32px; font-size: 0.9rem; }
+      .mob-header-card { flex-direction: column; align-items: flex-start; gap: 16px; }
+      .stat-grid { grid-template-columns: 1fr 1fr; }
+      .content-wrap { margin: 12px; padding: 20px 16px; }
     }
   </style>
 </head>
-
 <body>
   <header>
     <h1>
@@ -632,9 +259,7 @@
 
   <main>
     <div class="content-wrap" id="pageContent">
-      <div class="not-found"><i class="fas fa-spinner fa-spin"></i>
-        <p>Loading...</p>
-      </div>
+      <div class="not-found"><i class="fas fa-spinner fa-spin"></i><p>Loading...</p></div>
     </div>
   </main>
 
@@ -644,11 +269,9 @@
     <a href="../terms-of-service.html">Terms of Service</a> |
     <a href="../delete-account.html">Delete Account</a>
   </footer>
-
-  <script id="mob-data"
-    type="application/json">{"MobConfigs":[{"MovementConfig":{"CanBeStunned":true},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":2,"MaxQuantity":4,"DropChance":1.0}],"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0,"ExperiencePerLevel":5.0,"HasRareDrop":false,"BaseExperience":10,"DropsLoot":true},"Level":1,"MobName":"Blue Slime","AIConfig":{"PatrolRadius":5.0,"DeAggressionRange":15.0,"DetectionRange":10.0,"IsHostileToPlayer":true},"MobID":"BlueSlime","CombatConfig":{"KnockbackResistance":0.0,"KnockbackForce":1.0,"CritChance":0.05,"FlightSpeedMultiplier":1.0,"Damage":10.0,"AttackRange":0.5,"MoveSpeed":1.0,"Defense":0.0,"AttackSpeed":1.0,"CritMultiplier":1.5,"DamagePerLevel":2.0,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":10.0,"ScaleWithLevel":true,"MaxHealth":100.0,"RegenerationRate":1.0,"CanRegenerate":false,"RegenerationDelay":5.0,"InvulnerabilityDuration":0.1}},{"MovementConfig":{"CanBeStunned":true},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":3,"MaxQuantity":5,"DropChance":1.0}],"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0,"ExperiencePerLevel":6.0,"HasRareDrop":false,"BaseExperience":15,"DropsLoot":true},"Level":2,"MobName":"Green Slime","AIConfig":{"PatrolRadius":5.0,"DeAggressionRange":16.0,"DetectionRange":10.0,"IsHostileToPlayer":true},"MobID":"GreenSlime","CombatConfig":{"KnockbackResistance":0.1,"KnockbackForce":2.0,"CritChance":0.05,"FlightSpeedMultiplier":1.0,"Damage":12.0,"AttackRange":0.5,"MoveSpeed":1.2,"Defense":2.0,"AttackSpeed":1.0,"CritMultiplier":1.5,"DamagePerLevel":2.5,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":12.0,"ScaleWithLevel":true,"MaxHealth":120.0,"RegenerationRate":2.0,"CanRegenerate":true,"RegenerationDelay":4.0,"InvulnerabilityDuration":0.1}},{"MovementConfig":{"CanBeStunned":true},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":4,"MaxQuantity":6,"DropChance":1.0}],"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0,"ExperiencePerLevel":7.0,"HasRareDrop":false,"BaseExperience":20,"DropsLoot":true},"Level":3,"MobName":"Red Slime","AIConfig":{"PatrolRadius":6.0,"DeAggressionRange":17.0,"DetectionRange":10.0,"IsHostileToPlayer":true},"MobID":"RedSlime","CombatConfig":{"KnockbackResistance":0.15,"KnockbackForce":2.0,"CritChance":0.08,"FlightSpeedMultiplier":1.0,"Damage":18.0,"AttackRange":0.6,"MoveSpeed":1.3,"Defense":3.0,"AttackSpeed":1.2,"CritMultiplier":1.6,"DamagePerLevel":3.0,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":15.0,"ScaleWithLevel":true,"MaxHealth":140.0,"RegenerationRate":1.0,"CanRegenerate":false,"RegenerationDelay":5.0,"InvulnerabilityDuration":0.1}},{"MovementConfig":{"CanBeStunned":true},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":8,"MaxQuantity":12,"DropChance":1.0}],"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0,"ExperiencePerLevel":12.0,"HasRareDrop":false,"BaseExperience":50,"DropsLoot":true},"Level":5,"MobName":"Black Slime","AIConfig":{"PatrolRadius":8.0,"DeAggressionRange":20.0,"DetectionRange":10.0,"IsHostileToPlayer":true},"MobID":"BlackSlime","CombatConfig":{"KnockbackResistance":0.5,"KnockbackForce":2.0,"CritChance":0.1,"FlightSpeedMultiplier":1.0,"Damage":20.0,"AttackRange":0.8,"MoveSpeed":1.5,"Defense":8.0,"AttackSpeed":0.8,"CritMultiplier":2.0,"DamagePerLevel":5.0,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":25.0,"ScaleWithLevel":true,"MaxHealth":250.0,"RegenerationRate":1.0,"CanRegenerate":false,"RegenerationDelay":5.0,"InvulnerabilityDuration":0.4}},{"MovementConfig":{"CanBeStunned":true},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":2,"DropChance":1.0}],"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0,"ExperiencePerLevel":3.0,"HasRareDrop":false,"BaseExperience":5,"DropsLoot":true},"Level":1,"MobName":"Tiny Black Slime","AIConfig":{"PatrolRadius":4.0,"DeAggressionRange":12.0,"DetectionRange":8.0,"IsHostileToPlayer":true},"MobID":"TinyBlackSlime","CombatConfig":{"KnockbackResistance":0.0,"KnockbackForce":1.2,"CritChance":0.15,"FlightSpeedMultiplier":1.0,"Damage":8.0,"AttackRange":0.3,"MoveSpeed":1.4,"Defense":0.0,"AttackSpeed":1.5,"CritMultiplier":1.8,"DamagePerLevel":1.5,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":5.0,"ScaleWithLevel":true,"MaxHealth":50.0,"RegenerationRate":1.0,"CanRegenerate":false,"RegenerationDelay":5.0,"InvulnerabilityDuration":0.3}},{"MovementConfig":{"CanBeStunned":true},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":8,"MaxQuantity":12,"DropChance":1.0}],"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0,"ExperiencePerLevel":12.0,"HasRareDrop":false,"BaseExperience":50,"DropsLoot":true},"Level":5,"MobName":"Orc","AIConfig":{"PatrolRadius":8.0,"DeAggressionRange":20.0,"DetectionRange":15.0,"IsHostileToPlayer":true},"MobID":"Orc","CombatConfig":{"KnockbackResistance":0.5,"KnockbackForce":3.5,"CritChance":0.1,"FlightSpeedMultiplier":1.0,"Damage":25.0,"AttackRange":1.5,"MoveSpeed":1.5,"Defense":8.0,"AttackSpeed":1.0,"CritMultiplier":2.0,"DamagePerLevel":5.0,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":25.0,"ScaleWithLevel":true,"MaxHealth":250.0,"RegenerationRate":1.0,"CanRegenerate":false,"RegenerationDelay":5.0,"InvulnerabilityDuration":0.4}},{"MovementConfig":{"CanBeStunned":true},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":8,"MaxQuantity":12,"DropChance":1.0}],"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0,"ExperiencePerLevel":12.0,"HasRareDrop":false,"BaseExperience":50,"DropsLoot":true},"Level":5,"MobName":"Armored Axeman","AIConfig":{"PatrolRadius":8.0,"DeAggressionRange":20.0,"DetectionRange":15.0,"IsHostileToPlayer":true},"MobID":"ArmoredAxeman","CombatConfig":{"KnockbackResistance":0.5,"KnockbackForce":3.5,"CritChance":0.1,"FlightSpeedMultiplier":1.0,"Damage":25.0,"AttackRange":1.5,"MoveSpeed":1.5,"Defense":8.0,"AttackSpeed":1.0,"CritMultiplier":2.0,"DamagePerLevel":5.0,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":25.0,"ScaleWithLevel":true,"MaxHealth":250.0,"RegenerationRate":1.0,"CanRegenerate":false,"RegenerationDelay":5.0,"InvulnerabilityDuration":0.4}},{"MovementConfig":{"CanBeStunned":true},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":8,"MaxQuantity":12,"DropChance":1.0}],"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0,"ExperiencePerLevel":12.0,"HasRareDrop":false,"BaseExperience":50,"DropsLoot":true},"Level":5,"MobName":"Armored Orc","AIConfig":{"PatrolRadius":8.0,"DeAggressionRange":20.0,"DetectionRange":15.0,"IsHostileToPlayer":true},"MobID":"ArmoredOrc","CombatConfig":{"KnockbackResistance":0.5,"KnockbackForce":3.5,"CritChance":0.1,"FlightSpeedMultiplier":1.0,"Damage":25.0,"AttackRange":1.5,"MoveSpeed":1.5,"Defense":8.0,"AttackSpeed":1.0,"CritMultiplier":2.0,"DamagePerLevel":5.0,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":25.0,"ScaleWithLevel":true,"MaxHealth":250.0,"RegenerationRate":1.0,"CanRegenerate":false,"RegenerationDelay":5.0,"InvulnerabilityDuration":0.4}},{"MovementConfig":{"CanBeStunned":true},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":8,"MaxQuantity":12,"DropChance":1.0}],"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0,"ExperiencePerLevel":12.0,"HasRareDrop":false,"BaseExperience":50,"DropsLoot":true},"Level":5,"MobName":"Armored Skeleton","AIConfig":{"PatrolRadius":8.0,"DeAggressionRange":20.0,"DetectionRange":15.0,"IsHostileToPlayer":true},"MobID":"ArmoredSkeleton","CombatConfig":{"KnockbackResistance":0.5,"KnockbackForce":3.5,"CritChance":0.1,"FlightSpeedMultiplier":1.0,"Damage":25.0,"AttackRange":1.55,"MoveSpeed":1.5,"Defense":8.0,"AttackSpeed":1.0,"CritMultiplier":2.0,"DamagePerLevel":5.0,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":25.0,"ScaleWithLevel":true,"MaxHealth":250.0,"RegenerationRate":1.0,"CanRegenerate":false,"RegenerationDelay":5.0,"InvulnerabilityDuration":0.4}},{"MovementConfig":{"CanBeStunned":true},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":8,"MaxQuantity":12,"DropChance":1.0}],"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0,"ExperiencePerLevel":12.0,"HasRareDrop":false,"BaseExperience":50,"DropsLoot":true},"Level":5,"MobName":"Elite Orc","AIConfig":{"PatrolRadius":8.0,"DeAggressionRange":20.0,"DetectionRange":15.0,"IsHostileToPlayer":true},"MobID":"EliteOrc","CombatConfig":{"KnockbackResistance":0.5,"KnockbackForce":3.5,"CritChance":0.1,"FlightSpeedMultiplier":1.0,"Damage":25.0,"AttackRange":1.75,"MoveSpeed":1.5,"Defense":8.0,"AttackSpeed":1.0,"CritMultiplier":2.0,"DamagePerLevel":5.0,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":25.0,"ScaleWithLevel":true,"MaxHealth":250.0,"RegenerationRate":1.0,"CanRegenerate":false,"RegenerationDelay":5.0,"InvulnerabilityDuration":0.4}},{"MovementConfig":{"CanBeStunned":true},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":8,"MaxQuantity":12,"DropChance":1.0}],"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0,"ExperiencePerLevel":12.0,"HasRareDrop":false,"BaseExperience":50,"DropsLoot":true},"Level":5,"MobName":"Werebear","AIConfig":{"PatrolRadius":8.0,"DeAggressionRange":20.0,"DetectionRange":15.0,"IsHostileToPlayer":true},"MobID":"Werebear","CombatConfig":{"KnockbackResistance":0.5,"KnockbackForce":1.0,"CritChance":0.1,"FlightSpeedMultiplier":1.0,"Damage":25.0,"AttackRange":1.5,"MoveSpeed":1.5,"Defense":8.0,"AttackSpeed":1.0,"CritMultiplier":2.0,"DamagePerLevel":5.0,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":25.0,"ScaleWithLevel":true,"MaxHealth":250.0,"RegenerationRate":1.0,"CanRegenerate":false,"RegenerationDelay":5.0,"InvulnerabilityDuration":0.4}},{"MovementConfig":{"CanBeStunned":true},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":8,"MaxQuantity":12,"DropChance":1.0}],"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0,"ExperiencePerLevel":12.0,"HasRareDrop":false,"BaseExperience":50,"DropsLoot":true},"Level":5,"MobName":"Werewolf","AIConfig":{"PatrolRadius":8.0,"DeAggressionRange":20.0,"DetectionRange":15.0,"IsHostileToPlayer":true},"MobID":"Werewolf","CombatConfig":{"KnockbackResistance":0.5,"KnockbackForce":3.5,"CritChance":0.1,"FlightSpeedMultiplier":1.0,"Damage":25.0,"AttackRange":1.75,"MoveSpeed":1.5,"Defense":8.0,"AttackSpeed":1.0,"CritMultiplier":2.0,"DamagePerLevel":5.0,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":25.0,"ScaleWithLevel":true,"MaxHealth":250.0,"RegenerationRate":1.0,"CanRegenerate":false,"RegenerationDelay":5.0,"InvulnerabilityDuration":0.4}},{"MovementConfig":{"CanBeStunned":true},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":3,"DropChance":1.0}],"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0,"ExperiencePerLevel":4.0,"HasRareDrop":false,"BaseExperience":8,"DropsLoot":true},"Level":1,"MobName":"Red Mushroom","AIConfig":{"PatrolRadius":4.0,"DeAggressionRange":14.0,"DetectionRange":9.0,"IsHostileToPlayer":true},"MobID":"RedMushroom","CombatConfig":{"KnockbackResistance":0.0,"KnockbackForce":0.8,"CritChance":0.03,"FlightSpeedMultiplier":1.0,"Damage":8.0,"AttackRange":0.6,"MoveSpeed":1.2,"Defense":1.0,"AttackSpeed":1.0,"CritMultiplier":1.4,"DamagePerLevel":1.5,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":8.0,"ScaleWithLevel":true,"MaxHealth":80.0,"RegenerationRate":1.0,"CanRegenerate":false,"RegenerationDelay":5.0,"InvulnerabilityDuration":0.1}},{"MovementConfig":{"CanBeStunned":true},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":3,"DropChance":1.0}],"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0,"ExperiencePerLevel":4.5,"HasRareDrop":false,"BaseExperience":9,"DropsLoot":true},"Level":1,"MobName":"Green Mushroom","AIConfig":{"PatrolRadius":4.5,"DeAggressionRange":14.5,"DetectionRange":9.5,"IsHostileToPlayer":true},"MobID":"GreenMushroom","CombatConfig":{"KnockbackResistance":0.05,"KnockbackForce":0.9,"CritChance":0.04,"FlightSpeedMultiplier":1.0,"Damage":9.0,"AttackRange":0.5,"MoveSpeed":1.3,"Defense":1.5,"AttackSpeed":1.1,"CritMultiplier":1.45,"DamagePerLevel":1.8,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":9.0,"ScaleWithLevel":true,"MaxHealth":85.0,"RegenerationRate":1.5,"CanRegenerate":true,"RegenerationDelay":4.5,"InvulnerabilityDuration":0.1}},{"MovementConfig":{"CanBeStunned":true},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":2,"DropChance":1.0}],"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0,"ExperiencePerLevel":3.5,"HasRareDrop":false,"BaseExperience":7,"DropsLoot":true},"Level":1,"MobName":"Blue Mushroom","AIConfig":{"PatrolRadius":3.5,"DeAggressionRange":13.5,"DetectionRange":8.5,"IsHostileToPlayer":true},"MobID":"BlueMushroom","CombatConfig":{"KnockbackResistance":0.0,"KnockbackForce":0.7,"CritChance":0.02,"FlightSpeedMultiplier":1.0,"Damage":7.0,"AttackRange":0.5,"MoveSpeed":1.0,"Defense":0.5,"AttackSpeed":1.2,"CritMultiplier":1.3,"DamagePerLevel":1.2,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":7.5,"ScaleWithLevel":true,"MaxHealth":75.0,"RegenerationRate":1.0,"CanRegenerate":false,"RegenerationDelay":5.0,"InvulnerabilityDuration":0.1}},{"MovementConfig":{"CanBeStunned":true},"LootConfig":{"LootDrops":[{"ItemID":"Mushroom","MinQuantity":1,"MaxQuantity":3,"DropChance":1.0}],"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0,"ExperiencePerLevel":4.0,"HasRareDrop":false,"BaseExperience":8,"DropsLoot":true},"Level":1,"MobName":"Bloodcap","AIConfig":{"PatrolRadius":4.0,"DeAggressionRange":14.0,"DetectionRange":9.0,"IsHostileToPlayer":true},"MobID":"Bloodcap","CombatConfig":{"KnockbackResistance":0.0,"KnockbackForce":0.8,"CritChance":0.03,"FlightSpeedMultiplier":1.0,"Damage":8.0,"AttackRange":1.0,"MoveSpeed":1.2,"Defense":1.0,"AttackSpeed":1.0,"CritMultiplier":1.4,"DamagePerLevel":1.5,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":8.0,"ScaleWithLevel":true,"MaxHealth":80.0,"RegenerationRate":1.0,"CanRegenerate":false,"RegenerationDelay":5.0,"InvulnerabilityDuration":0.1}},{"MovementConfig":{"CanBeStunned":true},"LootConfig":{"LootDrops":[{"ItemID":"Mushroom","MinQuantity":1,"MaxQuantity":3,"DropChance":1.0}],"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0,"ExperiencePerLevel":4.5,"HasRareDrop":false,"BaseExperience":9,"DropsLoot":true},"Level":1,"MobName":"Venomcap","AIConfig":{"PatrolRadius":4.5,"DeAggressionRange":14.5,"DetectionRange":9.5,"IsHostileToPlayer":true},"MobID":"Venomcap","CombatConfig":{"KnockbackResistance":0.05,"KnockbackForce":0.9,"CritChance":0.04,"FlightSpeedMultiplier":1.0,"Damage":9.0,"AttackRange":1.0,"MoveSpeed":1.3,"Defense":1.5,"AttackSpeed":1.1,"CritMultiplier":1.45,"DamagePerLevel":1.8,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":9.0,"ScaleWithLevel":true,"MaxHealth":85.0,"RegenerationRate":1.5,"CanRegenerate":true,"RegenerationDelay":4.5,"InvulnerabilityDuration":0.1}},{"MovementConfig":{"CanBeStunned":true},"LootConfig":{"LootDrops":[{"ItemID":"Mushroom","MinQuantity":1,"MaxQuantity":2,"DropChance":1.0}],"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0,"ExperiencePerLevel":3.5,"HasRareDrop":false,"BaseExperience":7,"DropsLoot":true},"Level":1,"MobName":"Gloopcap","AIConfig":{"PatrolRadius":3.5,"DeAggressionRange":13.5,"DetectionRange":8.5,"IsHostileToPlayer":true},"MobID":"Gloopcap","CombatConfig":{"KnockbackResistance":0.0,"KnockbackForce":0.7,"CritChance":0.02,"FlightSpeedMultiplier":1.0,"Damage":7.0,"AttackRange":1.0,"MoveSpeed":1.0,"Defense":0.5,"AttackSpeed":1.2,"CritMultiplier":1.3,"DamagePerLevel":1.2,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":7.5,"ScaleWithLevel":true,"MaxHealth":75.0,"RegenerationRate":1.0,"CanRegenerate":false,"RegenerationDelay":5.0,"InvulnerabilityDuration":0.1}},{"MovementConfig":{"CanBeStunned":true},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":2,"MaxQuantity":4,"DropChance":1.0}],"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0,"ExperiencePerLevel":5.0,"HasRareDrop":false,"BaseExperience":12,"DropsLoot":true},"Level":2,"MobName":"Sandworm","AIConfig":{"PatrolRadius":5.0,"DeAggressionRange":15.0,"DetectionRange":10.0,"IsHostileToPlayer":true},"MobID":"Sandworm","CombatConfig":{"KnockbackResistance":1,"KnockbackForce":1.5,"CritChance":0.05,"FlightSpeedMultiplier":1.0,"Damage":12.0,"AttackRange":0.7,"MoveSpeed":1.5,"Defense":2.0,"AttackSpeed":0.9,"CritMultiplier":1.5,"DamagePerLevel":2.0,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":12.0,"ScaleWithLevel":true,"MaxHealth":120.0,"RegenerationRate":1.0,"CanRegenerate":false,"RegenerationDelay":5.0,"InvulnerabilityDuration":0.1}},{"MovementConfig":{"CanBeStunned":true},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":3,"DropChance":1.0}],"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0,"ExperiencePerLevel":4.0,"HasRareDrop":false,"BaseExperience":9,"DropsLoot":true},"Level":1,"MobName":"Dirtworm","AIConfig":{"PatrolRadius":4.0,"DeAggressionRange":14.0,"DetectionRange":9.0,"IsHostileToPlayer":true},"MobID":"Dirtworm","CombatConfig":{"KnockbackResistance":1,"KnockbackForce":5.0,"CritChance":0.04,"FlightSpeedMultiplier":1.0,"Damage":9.0,"AttackRange":0.6,"MoveSpeed":1.1,"Defense":1.0,"AttackSpeed":1.0,"CritMultiplier":1.4,"DamagePerLevel":1.5,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":9.0,"ScaleWithLevel":true,"MaxHealth":90.0,"RegenerationRate":1.0,"CanRegenerate":false,"RegenerationDelay":5.0,"InvulnerabilityDuration":0.1}},{"MovementConfig":{"CanBeStunned":true},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":2,"DropChance":1.0}],"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0,"ExperiencePerLevel":2.5,"HasRareDrop":false,"BaseExperience":5,"DropsLoot":true},"Level":1,"MobName":"Pig","AIConfig":{"PatrolRadius":3.0,"DeAggressionRange":10.0,"DetectionRange":5.0,"IsHostileToPlayer":true},"MobID":"Pig","CombatConfig":{"KnockbackResistance":0.0,"KnockbackForce":0.5,"CritChance":0.02,"FlightSpeedMultiplier":1.0,"Damage":5.0,"AttackRange":0.55,"MoveSpeed":1.5,"Defense":0.0,"AttackSpeed":1.0,"CritMultiplier":1.3,"DamagePerLevel":1.0,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":6.0,"ScaleWithLevel":true,"MaxHealth":60.0,"RegenerationRate":1.0,"CanRegenerate":false,"RegenerationDelay":5.0,"InvulnerabilityDuration":0.1}},{"MovementConfig":{"CanBeStunned":true},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":2,"MaxQuantity":4,"DropChance":1.0}],"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0,"ExperiencePerLevel":6.0,"HasRareDrop":false,"BaseExperience":15,"DropsLoot":true},"Level":2,"MobName":"Boar","AIConfig":{"PatrolRadius":6.0,"DeAggressionRange":17.0,"DetectionRange":12.0,"IsHostileToPlayer":true},"MobID":"Boar","CombatConfig":{"KnockbackResistance":1.0,"KnockbackForce":7.0,"CritChance":0.0,"FlightSpeedMultiplier":1.0,"Damage":50.0,"AttackRange":1.5,"MoveSpeed":1.3,"Defense":2.0,"AttackSpeed":0.5,"CritMultiplier":1.5,"DamagePerLevel":2.5,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":10.0,"ScaleWithLevel":true,"MaxHealth":4000.0,"RegenerationRate":1.0,"CanRegenerate":false,"RegenerationDelay":5.0,"InvulnerabilityDuration":0.1}},{"MovementConfig":{"CanBeStunned":true},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":1,"DropChance":1.0}],"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0,"ExperiencePerLevel":1.5,"HasRareDrop":false,"BaseExperience":3,"DropsLoot":true},"Level":1,"MobName":"Leaf","AIConfig":{"PatrolRadius":2.0,"DeAggressionRange":11.0,"DetectionRange":6.0,"IsHostileToPlayer":true},"MobID":"Leaf","CombatConfig":{"KnockbackResistance":0.0,"KnockbackForce":0.3,"CritChance":0.01,"FlightSpeedMultiplier":1.0,"Damage":4.0,"AttackRange":0.4,"MoveSpeed":1.2,"Defense":0.0,"AttackSpeed":1.0,"CritMultiplier":1.2,"DamagePerLevel":0.8,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":4.0,"ScaleWithLevel":true,"MaxHealth":40.0,"RegenerationRate":1.0,"CanRegenerate":false,"RegenerationDelay":5.0,"InvulnerabilityDuration":0.1}},{"MovementConfig":{"CanBeStunned":true},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":2,"DropChance":1.0}],"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0,"ExperiencePerLevel":4.0,"HasRareDrop":false,"BaseExperience":8,"DropsLoot":true},"Level":2,"MobName":"Leafer","AIConfig":{"PatrolRadius":4.0,"DeAggressionRange":13.0,"DetectionRange":8.0,"IsHostileToPlayer":true},"MobID":"Leafer","CombatConfig":{"KnockbackResistance":0.1,"KnockbackForce":1.0,"CritChance":0.03,"FlightSpeedMultiplier":2.0,"Damage":10.0,"AttackRange":5.0,"MoveSpeed":1.2,"Defense":1.0,"AttackSpeed":0.2,"CritMultiplier":1.4,"DamagePerLevel":1.5,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":8.0,"ScaleWithLevel":true,"MaxHealth":80.0,"RegenerationRate":1.0,"CanRegenerate":false,"RegenerationDelay":5.0,"InvulnerabilityDuration":0.1}},{"MovementConfig":{"CanBeStunned":true},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":1,"DropChance":1.0}],"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0,"ExperiencePerLevel":1.0,"HasRareDrop":false,"BaseExperience":2,"DropsLoot":true},"Level":1,"MobName":"Bat","AIConfig":{"PatrolRadius":3.0,"DeAggressionRange":12.0,"DetectionRange":7.0,"IsHostileToPlayer":true},"MobID":"Bat","CombatConfig":{"KnockbackResistance":0.0,"KnockbackForce":0.2,"CritChance":0.01,"FlightSpeedMultiplier":1.5,"Damage":3.0,"AttackRange":0.4,"MoveSpeed":1.4,"Defense":0.0,"AttackSpeed":0.2,"CritMultiplier":1.2,"DamagePerLevel":0.6,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":3.0,"ScaleWithLevel":true,"MaxHealth":30.0,"RegenerationRate":1.0,"CanRegenerate":false,"RegenerationDelay":5.0,"InvulnerabilityDuration":0.1}},{"MovementConfig":{"CanBeStunned":true},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":1,"DropChance":1.0}],"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0,"ExperiencePerLevel":0.5,"HasRareDrop":false,"BaseExperience":1,"DropsLoot":true},"Level":1,"MobName":"Tiny Bee","AIConfig":{"PatrolRadius":2.0,"DeAggressionRange":11.0,"DetectionRange":6.0,"IsHostileToPlayer":false},"MobID":"TinyBee","CombatConfig":{"KnockbackResistance":0.0,"KnockbackForce":0.1,"CritChance":0.005,"FlightSpeedMultiplier":2.0,"Damage":2.0,"AttackRange":0.3,"MoveSpeed":1.5,"Defense":0.0,"AttackSpeed":0.1,"CritMultiplier":1.1,"DamagePerLevel":0.4,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":2.5,"ScaleWithLevel":true,"MaxHealth":25.0,"RegenerationRate":1.0,"CanRegenerate":false,"RegenerationDelay":5.0,"InvulnerabilityDuration":0.1}},{"MovementConfig":{"CanBeStunned":true},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":2,"DropChance":1.0}],"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0,"ExperiencePerLevel":2.0,"HasRareDrop":false,"BaseExperience":4,"DropsLoot":true},"Level":2,"MobName":"Worker Bee","AIConfig":{"PatrolRadius":4.0,"DeAggressionRange":13.0,"DetectionRange":8.0,"IsHostileToPlayer":false},"MobID":"WorkerBee","CombatConfig":{"KnockbackResistance":0.1,"KnockbackForce":0.5,"CritChance":0.02,"FlightSpeedMultiplier":2.5,"Damage":6.0,"AttackRange":0.4,"MoveSpeed":1.4,"Defense":1.0,"AttackSpeed":1.2,"CritMultiplier":1.3,"DamagePerLevel":1.0,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":5.0,"ScaleWithLevel":true,"MaxHealth":50.0,"RegenerationRate":1.0,"CanRegenerate":true,"RegenerationDelay":2.0,"InvulnerabilityDuration":0.1}},{"MovementConfig":{"CanBeStunned":false},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":2,"MaxQuantity":3,"DropChance":1.0}],"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0,"ExperiencePerLevel":4.0,"HasRareDrop":false,"BaseExperience":8,"DropsLoot":true},"Level":3,"MobName":"Mechanical Bee","AIConfig":{"PatrolRadius":5.0,"DeAggressionRange":15.0,"DetectionRange":10.0,"IsHostileToPlayer":true},"MobID":"MechanicalBee","CombatConfig":{"KnockbackResistance":0.5,"KnockbackForce":1.0,"CritChance":0.05,"FlightSpeedMultiplier":1.8,"Damage":10.0,"AttackRange":0.5,"MoveSpeed":1.0,"Defense":5.0,"AttackSpeed":1.0,"CritMultiplier":1.5,"DamagePerLevel":1.5,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":8.0,"ScaleWithLevel":true,"MaxHealth":80.0,"RegenerationRate":1.0,"CanRegenerate":false,"RegenerationDelay":5.0,"InvulnerabilityDuration":0.4}},{"MovementConfig":{"CanBeStunned":true},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":2,"DropChance":1.0}],"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0,"ExperiencePerLevel":3.0,"HasRareDrop":false,"BaseExperience":6,"DropsLoot":true},"Level":4,"MobName":"Spirit Bee","AIConfig":{"PatrolRadius":4.0,"DeAggressionRange":14.0,"DetectionRange":9.0,"IsHostileToPlayer":true},"MobID":"SpiritBee","CombatConfig":{"KnockbackResistance":0.0,"KnockbackForce":0.3,"CritChance":0.03,"FlightSpeedMultiplier":3.0,"Damage":8.0,"AttackRange":0.3,"MoveSpeed":1.5,"Defense":0.0,"AttackSpeed":1.5,"CritMultiplier":1.4,"DamagePerLevel":1.2,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":6.0,"ScaleWithLevel":true,"MaxHealth":60.0,"RegenerationRate":2.0,"CanRegenerate":true,"RegenerationDelay":3.0,"InvulnerabilityDuration":0.1}},{"MovementConfig":{"CanBeStunned":true},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":2,"DropChance":1.0}],"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0,"ExperiencePerLevel":3.0,"HasRareDrop":false,"BaseExperience":6,"DropsLoot":true},"Level":2,"MobName":"Wall Creeper","AIConfig":{"PatrolRadius":4.0,"DeAggressionRange":13.0,"DetectionRange":8.0,"IsHostileToPlayer":true},"MobID":"WallCreeper","CombatConfig":{"KnockbackResistance":0.0,"KnockbackForce":0.5,"CritChance":0.03,"FlightSpeedMultiplier":1.0,"Damage":8.0,"AttackRange":0.4,"MoveSpeed":1.6,"Defense":0.5,"AttackSpeed":1.5,"CritMultiplier":1.4,"DamagePerLevel":1.2,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":7.0,"ScaleWithLevel":true,"MaxHealth":70.0,"RegenerationRate":1.0,"CanRegenerate":false,"RegenerationDelay":5.0,"InvulnerabilityDuration":0.1}},{"MovementConfig":{"CanBeStunned":true},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":2,"MaxQuantity":4,"DropChance":1.0}],"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0,"ExperiencePerLevel":5.0,"HasRareDrop":false,"BaseExperience":10,"DropsLoot":true},"Level":3,"MobName":"Vile Hatcher","AIConfig":{"PatrolRadius":5.0,"DeAggressionRange":15.0,"DetectionRange":10.0,"IsHostileToPlayer":true},"MobID":"VileHatcher","CombatConfig":{"KnockbackResistance":0.2,"KnockbackForce":1.0,"CritChance":0.04,"FlightSpeedMultiplier":1.0,"Damage":12.0,"AttackRange":0.6,"MoveSpeed":1.0,"Defense":1.0,"AttackSpeed":0.8,"CritMultiplier":1.5,"DamagePerLevel":2.0,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":10.0,"ScaleWithLevel":true,"MaxHealth":100.0,"RegenerationRate":1.0,"CanRegenerate":false,"RegenerationDelay":5.0,"InvulnerabilityDuration":0.1}},{"MovementConfig":{"CanBeStunned":true},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":2,"DropChance":1.0}],"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0,"ExperiencePerLevel":2.5,"HasRareDrop":false,"BaseExperience":5,"DropsLoot":true},"Level":2,"MobName":"Web Spinner","AIConfig":{"PatrolRadius":3.0,"DeAggressionRange":12.0,"DetectionRange":7.0,"IsHostileToPlayer":true},"MobID":"WebSpinner","CombatConfig":{"KnockbackResistance":0.0,"KnockbackForce":0.5,"CritChance":0.02,"FlightSpeedMultiplier":1.0,"Damage":6.0,"AttackRange":0.5,"MoveSpeed":1.5,"Defense":0.0,"AttackSpeed":1.0,"CritMultiplier":1.3,"DamagePerLevel":1.0,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":6.0,"ScaleWithLevel":true,"MaxHealth":60.0,"RegenerationRate":1.0,"CanRegenerate":false,"RegenerationDelay":5.0,"InvulnerabilityDuration":0.1}},{"MovementConfig":{"CanBeStunned":false},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":3,"MaxQuantity":5,"DropChance":1.0}],"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0,"ExperiencePerLevel":7.5,"HasRareDrop":false,"BaseExperience":15,"DropsLoot":true},"Level":4,"MobName":"Carapace","AIConfig":{"PatrolRadius":6.0,"DeAggressionRange":17.0,"DetectionRange":12.0,"IsHostileToPlayer":true},"MobID":"Carapace","CombatConfig":{"KnockbackResistance":0.8,"KnockbackForce":2.0,"CritChance":0.05,"FlightSpeedMultiplier":1.0,"Damage":15.0,"AttackRange":0.7,"MoveSpeed":1.0,"Defense":10.0,"AttackSpeed":0.8,"CritMultiplier":1.6,"DamagePerLevel":2.5,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":15.0,"ScaleWithLevel":true,"MaxHealth":150.0,"RegenerationRate":1.0,"CanRegenerate":false,"RegenerationDelay":5.0,"InvulnerabilityDuration":0.4}},{"MovementConfig":{"CanBeStunned":true},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":2,"MaxQuantity":3,"DropChance":1.0}],"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0,"ExperiencePerLevel":4.5,"HasRareDrop":false,"BaseExperience":9,"DropsLoot":true},"Level":3,"MobName":"Nightfang Weaver","AIConfig":{"PatrolRadius":4.0,"DeAggressionRange":14.0,"DetectionRange":9.0,"IsHostileToPlayer":true},"MobID":"NightfangWeaver","CombatConfig":{"KnockbackResistance":0.1,"KnockbackForce":1.0,"CritChance":0.04,"FlightSpeedMultiplier":1.0,"Damage":10.0,"AttackRange":0.5,"MoveSpeed":1.0,"Defense":1.0,"AttackSpeed":1.2,"CritMultiplier":1.5,"DamagePerLevel":1.5,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":9.0,"ScaleWithLevel":true,"MaxHealth":90.0,"RegenerationRate":1.5,"CanRegenerate":true,"RegenerationDelay":4.0,"InvulnerabilityDuration":0.1}},{"MovementConfig":{"CanBeStunned":true},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":2,"DropChance":1.0}],"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0,"ExperiencePerLevel":4.0,"HasRareDrop":false,"BaseExperience":8,"DropsLoot":true},"Level":3,"MobName":"Ghost","AIConfig":{"PatrolRadius":5.0,"DeAggressionRange":15.0,"DetectionRange":10.0,"IsHostileToPlayer":true},"MobID":"Ghost","CombatConfig":{"KnockbackResistance":0.0,"KnockbackForce":0.5,"CritChance":0.03,"FlightSpeedMultiplier":1.5,"Damage":12.0,"AttackRange":0.4,"MoveSpeed":1.3,"Defense":0.0,"AttackSpeed":1.0,"CritMultiplier":1.4,"DamagePerLevel":2.0,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":8.0,"ScaleWithLevel":true,"MaxHealth":80.0,"RegenerationRate":1.0,"CanRegenerate":false,"RegenerationDelay":5.0,"InvulnerabilityDuration":0.1}},{"MovementConfig":{"CanBeStunned":true},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":2,"MaxQuantity":3,"DropChance":1.0}],"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0,"ExperiencePerLevel":4.0,"HasRareDrop":false,"BaseExperience":8,"DropsLoot":true},"Level":2,"MobName":"Snowman","AIConfig":{"PatrolRadius":4.0,"DeAggressionRange":13.0,"DetectionRange":8.0,"IsHostileToPlayer":true},"MobID":"Snowman","CombatConfig":{"KnockbackResistance":0.2,"KnockbackForce":1.5,"CritChance":0.02,"FlightSpeedMultiplier":1.0,"Damage":10.0,"AttackRange":0.6,"MoveSpeed":1.0,"Defense":2.0,"AttackSpeed":0.8,"CritMultiplier":1.3,"DamagePerLevel":1.5,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":10.0,"ScaleWithLevel":true,"MaxHealth":100.0,"RegenerationRate":1.0,"CanRegenerate":false,"RegenerationDelay":5.0,"InvulnerabilityDuration":0.1}},{"MovementConfig":{"CanBeStunned":true},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":1,"DropChance":1.0}],"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0,"ExperiencePerLevel":1.5,"HasRareDrop":false,"BaseExperience":3,"DropsLoot":true},"Level":1,"MobName":"Penguin","AIConfig":{"PatrolRadius":3.0,"DeAggressionRange":10.0,"DetectionRange":5.0,"IsHostileToPlayer":false},"MobID":"Penguin","CombatConfig":{"KnockbackResistance":0.0,"KnockbackForce":0.5,"CritChance":0.01,"FlightSpeedMultiplier":1.0,"Damage":4.0,"AttackRange":0.4,"MoveSpeed":1.5,"Defense":0.0,"AttackSpeed":1.0,"CritMultiplier":1.2,"DamagePerLevel":0.8,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":5.0,"ScaleWithLevel":true,"MaxHealth":50.0,"RegenerationRate":1.0,"CanRegenerate":false,"RegenerationDelay":5.0,"InvulnerabilityDuration":0.1}},{"MovementConfig":{"CanBeStunned":true},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":2,"DropChance":1.0}],"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0,"ExperiencePerLevel":2.5,"HasRareDrop":false,"BaseExperience":5,"DropsLoot":true},"Level":2,"MobName":"Vulture","AIConfig":{"PatrolRadius":4.0,"DeAggressionRange":14.0,"DetectionRange":9.0,"IsHostileToPlayer":true},"MobID":"Vulture","CombatConfig":{"KnockbackResistance":0.0,"KnockbackForce":0.8,"CritChance":0.03,"FlightSpeedMultiplier":2.0,"Damage":8.0,"AttackRange":0.5,"MoveSpeed":1.0,"Defense":0.5,"AttackSpeed":1.2,"CritMultiplier":1.4,"DamagePerLevel":1.2,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":6.0,"ScaleWithLevel":true,"MaxHealth":60.0,"RegenerationRate":1.0,"CanRegenerate":false,"RegenerationDelay":5.0,"InvulnerabilityDuration":0.1}},{"MovementConfig":{"CanBeStunned":true},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":2,"DropChance":0.6}],"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0,"ExperiencePerLevel":5.0,"HasRareDrop":false,"BaseExperience":12,"DropsLoot":true},"Level":2,"MobName":"Zombie","AIConfig":{"PatrolRadius":5.0,"DeAggressionRange":16.0,"DetectionRange":12.0,"IsHostileToPlayer":true},"MobID":"Zombie","CombatConfig":{"KnockbackResistance":0.2,"KnockbackForce":2.0,"CritChance":0.05,"FlightSpeedMultiplier":1.0,"Damage":14.0,"AttackRange":1.0,"MoveSpeed":1.2,"Defense":2.0,"AttackSpeed":1.0,"CritMultiplier":1.5,"DamagePerLevel":2.0,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":12.0,"ScaleWithLevel":true,"MaxHealth":120.0,"RegenerationRate":0.0,"CanRegenerate":false,"RegenerationDelay":0.0,"InvulnerabilityDuration":0.1}},{"MovementConfig":{"CanBeStunned":false},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":50,"MaxQuantity":100,"DropChance":1.0}],"RareDrop":{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":1,"DropChance":1.0},"RareDropChance":0.1,"ExperiencePerLevel":50.0,"HasRareDrop":true,"BaseExperience":500,"DropsLoot":true},"Level":1,"MobName":"Prince Slime","AIConfig":{"PatrolRadius":10.0,"DeAggressionRange":75.0,"DetectionRange":10.0,"IsHostileToPlayer":true},"MobID":"PrinceSlime","CombatConfig":{"KnockbackResistance":0.9,"KnockbackForce":0.5,"CritChance":0.15,"FlightSpeedMultiplier":2.0,"Damage":15.0,"AttackRange":1.25,"MoveSpeed":1.4,"Defense":5.0,"AttackSpeed":1.5,"CritMultiplier":2.0,"DamagePerLevel":1.0,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":200.0,"ScaleWithLevel":true,"MaxHealth":500.0,"RegenerationRate":5.0,"CanRegenerate":true,"RegenerationDelay":2.0,"InvulnerabilityDuration":0.5}},{"MovementConfig":{"CanBeStunned":false},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":50,"MaxQuantity":100,"DropChance":1.0}],"RareDrop":{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":1,"DropChance":1.0},"RareDropChance":0.1,"ExperiencePerLevel":50.0,"HasRareDrop":true,"BaseExperience":500,"DropsLoot":true},"Level":1,"MobName":"Shroomlet Tyrant","AIConfig":{"PatrolRadius":10.0,"DeAggressionRange":75.0,"DetectionRange":10.0,"IsHostileToPlayer":true},"MobID":"ShroomletTyrant","CombatConfig":{"KnockbackResistance":0.9,"KnockbackForce":0.5,"CritChance":0.15,"FlightSpeedMultiplier":2.0,"Damage":2.0,"AttackRange":1.25,"MoveSpeed":1.4,"Defense":5.0,"AttackSpeed":1.5,"CritMultiplier":2.0,"DamagePerLevel":1.0,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":200.0,"ScaleWithLevel":true,"MaxHealth":1000.0,"RegenerationRate":5.0,"CanRegenerate":true,"RegenerationDelay":2.0,"InvulnerabilityDuration":0.5}},{"MovementConfig":{"CanBeStunned":false},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":40,"MaxQuantity":80,"DropChance":1.0}],"RareDrop":{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":1,"DropChance":1.0},"RareDropChance":0.1,"ExperiencePerLevel":45.0,"HasRareDrop":true,"BaseExperience":450,"DropsLoot":true},"Level":10,"MobName":"Centipede","AIConfig":{"PatrolRadius":10.0,"DeAggressionRange":75.0,"DetectionRange":50.0,"IsHostileToPlayer":true},"MobID":"Centipede","CombatConfig":{"KnockbackResistance":1.0,"KnockbackForce":1.0,"CritChance":0.12,"FlightSpeedMultiplier":1.0,"Damage":45.0,"AttackRange":1.5,"MoveSpeed":1.6,"Defense":15.0,"AttackSpeed":2.0,"CritMultiplier":1.8,"DamagePerLevel":8.0,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":180.0,"ScaleWithLevel":true,"MaxHealth":1800.0,"RegenerationRate":4.0,"CanRegenerate":true,"RegenerationDelay":3.0,"InvulnerabilityDuration":0.3}},{"MovementConfig":{"CanBeStunned":false},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":3,"DropChance":0.8}],"RareDrop":{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":1,"DropChance":0.2},"RareDropChance":0.05,"ExperiencePerLevel":30.0,"HasRareDrop":true,"BaseExperience":300,"DropsLoot":true},"Level":7,"MobName":"Vinefang","AIConfig":{"PatrolRadius":0.0,"DeAggressionRange":20.0,"DetectionRange":1.0,"IsHostileToPlayer":true},"MobID":"Vinefang","CombatConfig":{"KnockbackResistance":0.4,"KnockbackForce":1.5,"CritChance":0.08,"FlightSpeedMultiplier":1.0,"Damage":0.35,"AttackRange":1.0,"MoveSpeed":1.4,"Defense":10.0,"AttackSpeed":1.5,"CritMultiplier":1.7,"DamagePerLevel":4.0,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":90.0,"ScaleWithLevel":true,"MaxHealth":900.0,"RegenerationRate":3.0,"CanRegenerate":true,"RegenerationDelay":3.0,"InvulnerabilityDuration":0.3}},{"MovementConfig":{"CanBeStunned":false},"LootConfig":{"LootDrops":[{"ItemID":"Gel","MinQuantity":2,"MaxQuantity":5,"DropChance":1.0}],"RareDrop":{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":1,"DropChance":0.2},"RareDropChance":0.12,"ExperiencePerLevel":70.0,"HasRareDrop":true,"BaseExperience":700,"DropsLoot":true},"Level":12,"MobName":"Thorncoil","AIConfig":{"PatrolRadius":12.0,"DeAggressionRange":90.0,"DetectionRange":60.0,"IsHostileToPlayer":true},"MobID":"Thorncoil","CombatConfig":{"KnockbackResistance":0.8,"KnockbackForce":2.0,"CritChance":0.12,"FlightSpeedMultiplier":1.0,"Damage":60.0,"AttackRange":1.8,"MoveSpeed":1.2,"Defense":20.0,"AttackSpeed":1.2,"CritMultiplier":1.9,"DamagePerLevel":10.0,"ScaleWithLevel":true},"HealthConfig":{"HealthPerLevel":180.0,"ScaleWithLevel":true,"MaxHealth":2200.0,"RegenerationRate":2.0,"CanRegenerate":false,"RegenerationDelay":5.0,"InvulnerabilityDuration":0.4}}]}</script>
+  <script id="mob-data" type="application/json">{"MobConfigs":[{"MobID":"BlueSlime","MobName":"Blue Slime","Level":1,"HealthConfig":{"MaxHealth":100.0,"InvulnerabilityDuration":0.1,"CanRegenerate":false,"RegenerationRate":1.0,"RegenerationDelay":5.0,"ScaleWithLevel":true,"HealthPerLevel":10.0},"CombatConfig":{"Damage":10.0,"MoveSpeed":1.0,"FlightSpeedMultiplier":1.0,"Defense":0.0,"AttackSpeed":1.0,"AttackRange":0.5,"KnockbackForce":1.0,"KnockbackResistance":0.0,"CritChance":0.05,"CritMultiplier":1.5},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":10.0,"DeAggressionRange":15.0,"PatrolRadius":5.0},"MovementConfig":{"CanBeStunned":true},"LootConfig":{"BaseExperience":10,"ExperiencePerLevel":5.0,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":2,"MaxQuantity":4,"DropChance":1.0}],"HasRareDrop":false,"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0}},{"MobID":"GreenSlime","MobName":"Green Slime","Level":2,"HealthConfig":{"MaxHealth":120.0,"InvulnerabilityDuration":0.1,"CanRegenerate":true,"RegenerationRate":2.0,"RegenerationDelay":4.0,"ScaleWithLevel":true,"HealthPerLevel":12.0},"CombatConfig":{"Damage":12.0,"MoveSpeed":1.2,"FlightSpeedMultiplier":1.0,"Defense":2.0,"AttackSpeed":1.0,"AttackRange":0.5,"KnockbackForce":2.0,"KnockbackResistance":0.1,"CritChance":0.05,"CritMultiplier":1.5},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":10.0,"DeAggressionRange":16.0,"PatrolRadius":5.0},"MovementConfig":{"CanBeStunned":true},"LootConfig":{"BaseExperience":15,"ExperiencePerLevel":6.0,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":3,"MaxQuantity":5,"DropChance":1.0}],"HasRareDrop":false,"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0}},{"MobID":"RedSlime","MobName":"Red Slime","Level":3,"HealthConfig":{"MaxHealth":140.0,"InvulnerabilityDuration":0.1,"CanRegenerate":false,"RegenerationRate":1.0,"RegenerationDelay":5.0,"ScaleWithLevel":true,"HealthPerLevel":15.0},"CombatConfig":{"Damage":18.0,"MoveSpeed":1.3,"FlightSpeedMultiplier":1.0,"Defense":3.0,"AttackSpeed":1.2,"AttackRange":0.6,"KnockbackForce":2.0,"KnockbackResistance":0.15,"CritChance":0.08,"CritMultiplier":1.6},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":10.0,"DeAggressionRange":17.0,"PatrolRadius":6.0},"MovementConfig":{"CanBeStunned":true},"LootConfig":{"BaseExperience":20,"ExperiencePerLevel":7.0,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":4,"MaxQuantity":6,"DropChance":1.0}],"HasRareDrop":false,"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0}},{"MobID":"BlackSlime","MobName":"Black Slime","Level":5,"HealthConfig":{"MaxHealth":250.0,"InvulnerabilityDuration":0.4,"CanRegenerate":false,"RegenerationRate":1.0,"RegenerationDelay":5.0,"ScaleWithLevel":true,"HealthPerLevel":25.0},"CombatConfig":{"Damage":20.0,"MoveSpeed":1.5,"FlightSpeedMultiplier":1.0,"Defense":8.0,"AttackSpeed":0.8,"AttackRange":0.8,"KnockbackForce":2.0,"KnockbackResistance":0.5,"CritChance":0.1,"CritMultiplier":2.0},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":10.0,"DeAggressionRange":20.0,"PatrolRadius":8.0},"MovementConfig":{"CanBeStunned":true},"LootConfig":{"BaseExperience":50,"ExperiencePerLevel":12.0,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":8,"MaxQuantity":12,"DropChance":1.0}],"HasRareDrop":false,"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0}},{"MobID":"TinyBlackSlime","MobName":"Tiny Black Slime","Level":1,"HealthConfig":{"MaxHealth":50.0,"InvulnerabilityDuration":0.3,"CanRegenerate":false,"RegenerationRate":1.0,"RegenerationDelay":5.0,"ScaleWithLevel":true,"HealthPerLevel":5.0},"CombatConfig":{"Damage":8.0,"MoveSpeed":1.4,"FlightSpeedMultiplier":1.0,"Defense":0.0,"AttackSpeed":1.5,"AttackRange":0.3,"KnockbackForce":1.2,"KnockbackResistance":0.0,"CritChance":0.15,"CritMultiplier":1.8},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":8.0,"DeAggressionRange":12.0,"PatrolRadius":4.0},"MovementConfig":{"CanBeStunned":true},"LootConfig":{"BaseExperience":5,"ExperiencePerLevel":3.0,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":2,"DropChance":1.0}],"HasRareDrop":false,"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0}},{"MobID":"Orc","MobName":"Orc","Level":5,"HealthConfig":{"MaxHealth":250.0,"InvulnerabilityDuration":0.4,"CanRegenerate":false,"RegenerationRate":1.0,"RegenerationDelay":5.0,"ScaleWithLevel":true,"HealthPerLevel":25.0},"CombatConfig":{"Damage":25.0,"MoveSpeed":1.5,"FlightSpeedMultiplier":1.0,"Defense":8.0,"AttackSpeed":1.0,"AttackRange":1.5,"KnockbackForce":3.5,"KnockbackResistance":0.5,"CritChance":0.1,"CritMultiplier":2.0},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":15.0,"DeAggressionRange":20.0,"PatrolRadius":8.0},"MovementConfig":{"CanBeStunned":true},"LootConfig":{"BaseExperience":50,"ExperiencePerLevel":12.0,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":8,"MaxQuantity":12,"DropChance":1.0}],"HasRareDrop":false,"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0}},{"MobID":"ArmoredAxeman","MobName":"Armored Axeman","Level":5,"HealthConfig":{"MaxHealth":250.0,"InvulnerabilityDuration":0.4,"CanRegenerate":false,"RegenerationRate":1.0,"RegenerationDelay":5.0,"ScaleWithLevel":true,"HealthPerLevel":25.0},"CombatConfig":{"Damage":25.0,"MoveSpeed":1.5,"FlightSpeedMultiplier":1.0,"Defense":8.0,"AttackSpeed":1.0,"AttackRange":1.5,"KnockbackForce":3.5,"KnockbackResistance":0.5,"CritChance":0.1,"CritMultiplier":2.0},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":15.0,"DeAggressionRange":20.0,"PatrolRadius":8.0},"MovementConfig":{"CanBeStunned":true},"LootConfig":{"BaseExperience":50,"ExperiencePerLevel":12.0,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":8,"MaxQuantity":12,"DropChance":1.0}],"HasRareDrop":false,"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0}},{"MobID":"ArmoredOrc","MobName":"Armored Orc","Level":5,"HealthConfig":{"MaxHealth":250.0,"InvulnerabilityDuration":0.4,"CanRegenerate":false,"RegenerationRate":1.0,"RegenerationDelay":5.0,"ScaleWithLevel":true,"HealthPerLevel":25.0},"CombatConfig":{"Damage":25.0,"MoveSpeed":1.5,"FlightSpeedMultiplier":1.0,"Defense":8.0,"AttackSpeed":1.0,"AttackRange":1.5,"KnockbackForce":3.5,"KnockbackResistance":0.5,"CritChance":0.1,"CritMultiplier":2.0},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":15.0,"DeAggressionRange":20.0,"PatrolRadius":8.0},"MovementConfig":{"CanBeStunned":true},"LootConfig":{"BaseExperience":50,"ExperiencePerLevel":12.0,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":8,"MaxQuantity":12,"DropChance":1.0}],"HasRareDrop":false,"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0}},{"MobID":"ArmoredSkeleton","MobName":"Armored Skeleton","Level":5,"HealthConfig":{"MaxHealth":250.0,"InvulnerabilityDuration":0.4,"CanRegenerate":false,"RegenerationRate":1.0,"RegenerationDelay":5.0,"ScaleWithLevel":true,"HealthPerLevel":25.0},"CombatConfig":{"Damage":25.0,"MoveSpeed":1.5,"FlightSpeedMultiplier":1.0,"Defense":8.0,"AttackSpeed":1.0,"AttackRange":1.55,"KnockbackForce":3.5,"KnockbackResistance":0.5,"CritChance":0.1,"CritMultiplier":2.0},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":15.0,"DeAggressionRange":20.0,"PatrolRadius":8.0},"MovementConfig":{"CanBeStunned":true},"LootConfig":{"BaseExperience":50,"ExperiencePerLevel":12.0,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":8,"MaxQuantity":12,"DropChance":1.0}],"HasRareDrop":false,"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0}},{"MobID":"EliteOrc","MobName":"Elite Orc","Level":5,"HealthConfig":{"MaxHealth":250.0,"InvulnerabilityDuration":0.4,"CanRegenerate":false,"RegenerationRate":1.0,"RegenerationDelay":5.0,"ScaleWithLevel":true,"HealthPerLevel":25.0},"CombatConfig":{"Damage":25.0,"MoveSpeed":1.5,"FlightSpeedMultiplier":1.0,"Defense":8.0,"AttackSpeed":1.0,"AttackRange":1.75,"KnockbackForce":3.5,"KnockbackResistance":0.5,"CritChance":0.1,"CritMultiplier":2.0},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":15.0,"DeAggressionRange":20.0,"PatrolRadius":8.0},"MovementConfig":{"CanBeStunned":true},"LootConfig":{"BaseExperience":50,"ExperiencePerLevel":12.0,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":8,"MaxQuantity":12,"DropChance":1.0}],"HasRareDrop":false,"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0}},{"MobID":"Werebear","MobName":"Werebear","Level":5,"HealthConfig":{"MaxHealth":250.0,"InvulnerabilityDuration":0.4,"CanRegenerate":false,"RegenerationRate":1.0,"RegenerationDelay":5.0,"ScaleWithLevel":true,"HealthPerLevel":25.0},"CombatConfig":{"Damage":25.0,"MoveSpeed":1.5,"FlightSpeedMultiplier":1.0,"Defense":8.0,"AttackSpeed":1.0,"AttackRange":1.5,"KnockbackForce":1.0,"KnockbackResistance":0.5,"CritChance":0.1,"CritMultiplier":2.0},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":15.0,"DeAggressionRange":20.0,"PatrolRadius":8.0},"MovementConfig":{"CanBeStunned":true},"LootConfig":{"BaseExperience":50,"ExperiencePerLevel":12.0,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":8,"MaxQuantity":12,"DropChance":1.0}],"HasRareDrop":false,"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0}},{"MobID":"Werewolf","MobName":"Werewolf","Level":5,"HealthConfig":{"MaxHealth":250.0,"InvulnerabilityDuration":0.4,"CanRegenerate":false,"RegenerationRate":1.0,"RegenerationDelay":5.0,"ScaleWithLevel":true,"HealthPerLevel":25.0},"CombatConfig":{"Damage":25.0,"MoveSpeed":1.5,"FlightSpeedMultiplier":1.0,"Defense":8.0,"AttackSpeed":1.0,"AttackRange":1.75,"KnockbackForce":3.5,"KnockbackResistance":0.5,"CritChance":0.1,"CritMultiplier":2.0},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":15.0,"DeAggressionRange":20.0,"PatrolRadius":8.0},"MovementConfig":{"CanBeStunned":true},"LootConfig":{"BaseExperience":50,"ExperiencePerLevel":12.0,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":8,"MaxQuantity":12,"DropChance":1.0}],"HasRareDrop":false,"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0}},{"MobID":"RedMushroom","MobName":"Red Mushroom","Level":1,"HealthConfig":{"MaxHealth":80.0,"InvulnerabilityDuration":0.1,"CanRegenerate":false,"RegenerationRate":1.0,"RegenerationDelay":5.0,"ScaleWithLevel":true,"HealthPerLevel":8.0},"CombatConfig":{"Damage":8.0,"MoveSpeed":1.2,"FlightSpeedMultiplier":1.0,"Defense":1.0,"AttackSpeed":1.0,"AttackRange":0.6,"KnockbackForce":0.8,"KnockbackResistance":0.0,"CritChance":0.03,"CritMultiplier":1.4},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":9.0,"DeAggressionRange":14.0,"PatrolRadius":4.0},"MovementConfig":{"CanBeStunned":true},"LootConfig":{"BaseExperience":8,"ExperiencePerLevel":4.0,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":3,"DropChance":1.0}],"HasRareDrop":false,"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0}},{"MobID":"GreenMushroom","MobName":"Green Mushroom","Level":1,"HealthConfig":{"MaxHealth":85.0,"InvulnerabilityDuration":0.1,"CanRegenerate":true,"RegenerationRate":1.5,"RegenerationDelay":4.5,"ScaleWithLevel":true,"HealthPerLevel":9.0},"CombatConfig":{"Damage":9.0,"MoveSpeed":1.3,"FlightSpeedMultiplier":1.0,"Defense":1.5,"AttackSpeed":1.1,"AttackRange":0.5,"KnockbackForce":0.9,"KnockbackResistance":0.05,"CritChance":0.04,"CritMultiplier":1.45},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":9.5,"DeAggressionRange":14.5,"PatrolRadius":4.5},"MovementConfig":{"CanBeStunned":true},"LootConfig":{"BaseExperience":9,"ExperiencePerLevel":4.5,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":3,"DropChance":1.0}],"HasRareDrop":false,"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0}},{"MobID":"BlueMushroom","MobName":"Blue Mushroom","Level":1,"HealthConfig":{"MaxHealth":75.0,"InvulnerabilityDuration":0.1,"CanRegenerate":false,"RegenerationRate":1.0,"RegenerationDelay":5.0,"ScaleWithLevel":true,"HealthPerLevel":7.5},"CombatConfig":{"Damage":7.0,"MoveSpeed":1.0,"FlightSpeedMultiplier":1.0,"Defense":0.5,"AttackSpeed":1.2,"AttackRange":0.5,"KnockbackForce":0.7,"KnockbackResistance":0.0,"CritChance":0.02,"CritMultiplier":1.3},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":8.5,"DeAggressionRange":13.5,"PatrolRadius":3.5},"MovementConfig":{"CanBeStunned":true},"LootConfig":{"BaseExperience":7,"ExperiencePerLevel":3.5,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":2,"DropChance":1.0}],"HasRareDrop":false,"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0}},{"MobID":"Bloodcap","MobName":"Bloodcap","Level":1,"HealthConfig":{"MaxHealth":80.0,"InvulnerabilityDuration":0.1,"CanRegenerate":false,"RegenerationRate":1.0,"RegenerationDelay":5.0,"ScaleWithLevel":true,"HealthPerLevel":8.0},"CombatConfig":{"Damage":8.0,"MoveSpeed":1.2,"FlightSpeedMultiplier":1.0,"Defense":1.0,"AttackSpeed":1.0,"AttackRange":1.0,"KnockbackForce":0.8,"KnockbackResistance":0.0,"CritChance":0.03,"CritMultiplier":1.4},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":9.0,"DeAggressionRange":14.0,"PatrolRadius":4.0},"MovementConfig":{"CanBeStunned":true},"LootConfig":{"BaseExperience":8,"ExperiencePerLevel":4.0,"DropsLoot":true,"LootDrops":[{"ItemID":"Mushroom","MinQuantity":1,"MaxQuantity":3,"DropChance":1.0}],"HasRareDrop":false,"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0}},{"MobID":"Venomcap","MobName":"Venomcap","Level":1,"HealthConfig":{"MaxHealth":85.0,"InvulnerabilityDuration":0.1,"CanRegenerate":true,"RegenerationRate":1.5,"RegenerationDelay":4.5,"ScaleWithLevel":true,"HealthPerLevel":9.0},"CombatConfig":{"Damage":9.0,"MoveSpeed":1.3,"FlightSpeedMultiplier":1.0,"Defense":1.5,"AttackSpeed":1.1,"AttackRange":1.0,"KnockbackForce":0.9,"KnockbackResistance":0.05,"CritChance":0.04,"CritMultiplier":1.45},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":9.5,"DeAggressionRange":14.5,"PatrolRadius":4.5},"MovementConfig":{"CanBeStunned":true},"LootConfig":{"BaseExperience":9,"ExperiencePerLevel":4.5,"DropsLoot":true,"LootDrops":[{"ItemID":"Mushroom","MinQuantity":1,"MaxQuantity":3,"DropChance":1.0}],"HasRareDrop":false,"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0}},{"MobID":"Gloopcap","MobName":"Gloopcap","Level":1,"HealthConfig":{"MaxHealth":75.0,"InvulnerabilityDuration":0.1,"CanRegenerate":false,"RegenerationRate":1.0,"RegenerationDelay":5.0,"ScaleWithLevel":true,"HealthPerLevel":7.5},"CombatConfig":{"Damage":7.0,"MoveSpeed":1.0,"FlightSpeedMultiplier":1.0,"Defense":0.5,"AttackSpeed":1.2,"AttackRange":1.0,"KnockbackForce":0.7,"KnockbackResistance":0.0,"CritChance":0.02,"CritMultiplier":1.3},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":8.5,"DeAggressionRange":13.5,"PatrolRadius":3.5},"MovementConfig":{"CanBeStunned":true},"LootConfig":{"BaseExperience":7,"ExperiencePerLevel":3.5,"DropsLoot":true,"LootDrops":[{"ItemID":"Mushroom","MinQuantity":1,"MaxQuantity":2,"DropChance":1.0}],"HasRareDrop":false,"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0}},{"MobID":"Sandworm","MobName":"Sandworm","Level":2,"HealthConfig":{"MaxHealth":120.0,"InvulnerabilityDuration":0.1,"CanRegenerate":false,"RegenerationRate":1.0,"RegenerationDelay":5.0,"ScaleWithLevel":true,"HealthPerLevel":12.0},"CombatConfig":{"Damage":12.0,"MoveSpeed":1.5,"FlightSpeedMultiplier":1.0,"Defense":2.0,"AttackSpeed":0.9,"AttackRange":0.7,"KnockbackForce":1.5,"KnockbackResistance":1,"CritChance":0.05,"CritMultiplier":1.5},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":10.0,"DeAggressionRange":15.0,"PatrolRadius":5.0},"MovementConfig":{"CanBeStunned":true},"LootConfig":{"BaseExperience":12,"ExperiencePerLevel":5.0,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":2,"MaxQuantity":4,"DropChance":1.0}],"HasRareDrop":false,"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0}},{"MobID":"Dirtworm","MobName":"Dirtworm","Level":1,"HealthConfig":{"MaxHealth":90.0,"InvulnerabilityDuration":0.1,"CanRegenerate":false,"RegenerationRate":1.0,"RegenerationDelay":5.0,"ScaleWithLevel":true,"HealthPerLevel":9.0},"CombatConfig":{"Damage":9.0,"MoveSpeed":1.1,"FlightSpeedMultiplier":1.0,"Defense":1.0,"AttackSpeed":1.0,"AttackRange":0.6,"KnockbackForce":5.0,"KnockbackResistance":1,"CritChance":0.04,"CritMultiplier":1.4},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":9.0,"DeAggressionRange":14.0,"PatrolRadius":4.0},"MovementConfig":{"CanBeStunned":true},"LootConfig":{"BaseExperience":9,"ExperiencePerLevel":4.0,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":3,"DropChance":1.0}],"HasRareDrop":false,"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0}},{"MobID":"Pig","MobName":"Pig","Level":1,"HealthConfig":{"MaxHealth":60.0,"InvulnerabilityDuration":0.1,"CanRegenerate":false,"RegenerationRate":1.0,"RegenerationDelay":5.0,"ScaleWithLevel":true,"HealthPerLevel":6.0},"CombatConfig":{"Damage":5.0,"MoveSpeed":1.5,"FlightSpeedMultiplier":1.0,"Defense":0.0,"AttackSpeed":1.0,"AttackRange":0.55,"KnockbackForce":0.5,"KnockbackResistance":0.0,"CritChance":0.02,"CritMultiplier":1.3},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":5.0,"DeAggressionRange":10.0,"PatrolRadius":3.0},"MovementConfig":{"CanBeStunned":true},"LootConfig":{"BaseExperience":5,"ExperiencePerLevel":2.5,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":2,"DropChance":1.0}],"HasRareDrop":false,"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0}},{"MobID":"Boar","MobName":"Boar","Level":2,"HealthConfig":{"MaxHealth":4000.0,"InvulnerabilityDuration":0.1,"CanRegenerate":false,"RegenerationRate":1.0,"RegenerationDelay":5.0,"ScaleWithLevel":true,"HealthPerLevel":10.0},"CombatConfig":{"Damage":50.0,"MoveSpeed":1.3,"FlightSpeedMultiplier":1.0,"Defense":2.0,"AttackSpeed":0.5,"AttackRange":1.5,"KnockbackForce":7.0,"KnockbackResistance":1.0,"CritChance":0.0,"CritMultiplier":1.5},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":12.0,"DeAggressionRange":17.0,"PatrolRadius":6.0},"MovementConfig":{"CanBeStunned":true},"LootConfig":{"BaseExperience":15,"ExperiencePerLevel":6.0,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":2,"MaxQuantity":4,"DropChance":1.0}],"HasRareDrop":false,"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0}},{"MobID":"Leaf","MobName":"Leaf","Level":1,"HealthConfig":{"MaxHealth":40.0,"InvulnerabilityDuration":0.1,"CanRegenerate":false,"RegenerationRate":1.0,"RegenerationDelay":5.0,"ScaleWithLevel":true,"HealthPerLevel":4.0},"CombatConfig":{"Damage":4.0,"MoveSpeed":1.2,"FlightSpeedMultiplier":1.0,"Defense":0.0,"AttackSpeed":1.0,"AttackRange":0.4,"KnockbackForce":0.3,"KnockbackResistance":0.0,"CritChance":0.01,"CritMultiplier":1.2},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":6.0,"DeAggressionRange":11.0,"PatrolRadius":2.0},"MovementConfig":{"CanBeStunned":true},"LootConfig":{"BaseExperience":3,"ExperiencePerLevel":1.5,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":1,"DropChance":1.0}],"HasRareDrop":false,"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0}},{"MobID":"Leafer","MobName":"Leafer","Level":2,"HealthConfig":{"MaxHealth":80.0,"InvulnerabilityDuration":0.1,"CanRegenerate":false,"RegenerationRate":1.0,"RegenerationDelay":5.0,"ScaleWithLevel":true,"HealthPerLevel":8.0},"CombatConfig":{"Damage":10.0,"MoveSpeed":1.2,"FlightSpeedMultiplier":2.0,"Defense":1.0,"AttackSpeed":0.2,"AttackRange":5.0,"KnockbackForce":1.0,"KnockbackResistance":0.1,"CritChance":0.03,"CritMultiplier":1.4},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":8.0,"DeAggressionRange":13.0,"PatrolRadius":4.0},"MovementConfig":{"CanBeStunned":true},"LootConfig":{"BaseExperience":8,"ExperiencePerLevel":4.0,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":2,"DropChance":1.0}],"HasRareDrop":false,"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0}},{"MobID":"Bat","MobName":"Bat","Level":1,"HealthConfig":{"MaxHealth":30.0,"InvulnerabilityDuration":0.1,"CanRegenerate":false,"RegenerationRate":1.0,"RegenerationDelay":5.0,"ScaleWithLevel":true,"HealthPerLevel":3.0},"CombatConfig":{"Damage":3.0,"MoveSpeed":1.4,"FlightSpeedMultiplier":1.5,"Defense":0.0,"AttackSpeed":0.2,"AttackRange":0.4,"KnockbackForce":0.2,"KnockbackResistance":0.0,"CritChance":0.01,"CritMultiplier":1.2},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":7.0,"DeAggressionRange":12.0,"PatrolRadius":3.0},"MovementConfig":{"CanBeStunned":true},"LootConfig":{"BaseExperience":2,"ExperiencePerLevel":1.0,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":1,"DropChance":1.0}],"HasRareDrop":false,"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0}},{"MobID":"TinyBee","MobName":"Tiny Bee","Level":1,"HealthConfig":{"MaxHealth":25.0,"InvulnerabilityDuration":0.1,"CanRegenerate":false,"RegenerationRate":1.0,"RegenerationDelay":5.0,"ScaleWithLevel":true,"HealthPerLevel":2.5},"CombatConfig":{"Damage":2.0,"MoveSpeed":1.5,"FlightSpeedMultiplier":2.0,"Defense":0.0,"AttackSpeed":0.1,"AttackRange":0.3,"KnockbackForce":0.1,"KnockbackResistance":0.0,"CritChance":0.005,"CritMultiplier":1.1},"AIConfig":{"IsHostileToPlayer":false,"DetectionRange":6.0,"DeAggressionRange":11.0,"PatrolRadius":2.0},"MovementConfig":{"CanBeStunned":true},"LootConfig":{"BaseExperience":1,"ExperiencePerLevel":0.5,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":1,"DropChance":1.0}],"HasRareDrop":false,"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0}},{"MobID":"WorkerBee","MobName":"Worker Bee","Level":2,"HealthConfig":{"MaxHealth":50.0,"InvulnerabilityDuration":0.1,"CanRegenerate":true,"RegenerationRate":1.0,"RegenerationDelay":2.0,"ScaleWithLevel":true,"HealthPerLevel":5.0},"CombatConfig":{"Damage":6.0,"MoveSpeed":1.4,"FlightSpeedMultiplier":2.5,"Defense":1.0,"AttackSpeed":1.2,"AttackRange":0.4,"KnockbackForce":0.5,"KnockbackResistance":0.1,"CritChance":0.02,"CritMultiplier":1.3},"AIConfig":{"IsHostileToPlayer":false,"DetectionRange":8.0,"DeAggressionRange":13.0,"PatrolRadius":4.0},"MovementConfig":{"CanBeStunned":true},"LootConfig":{"BaseExperience":4,"ExperiencePerLevel":2.0,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":2,"DropChance":1.0}],"HasRareDrop":false,"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0}},{"MobID":"MechanicalBee","MobName":"Mechanical Bee","Level":3,"HealthConfig":{"MaxHealth":80.0,"InvulnerabilityDuration":0.4,"CanRegenerate":false,"RegenerationRate":1.0,"RegenerationDelay":5.0,"ScaleWithLevel":true,"HealthPerLevel":8.0},"CombatConfig":{"Damage":10.0,"MoveSpeed":1.0,"FlightSpeedMultiplier":1.8,"Defense":5.0,"AttackSpeed":1.0,"AttackRange":0.5,"KnockbackForce":1.0,"KnockbackResistance":0.5,"CritChance":0.05,"CritMultiplier":1.5},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":10.0,"DeAggressionRange":15.0,"PatrolRadius":5.0},"MovementConfig":{"CanBeStunned":false},"LootConfig":{"BaseExperience":8,"ExperiencePerLevel":4.0,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":2,"MaxQuantity":3,"DropChance":1.0}],"HasRareDrop":false,"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0}},{"MobID":"SpiritBee","MobName":"Spirit Bee","Level":4,"HealthConfig":{"MaxHealth":60.0,"InvulnerabilityDuration":0.1,"CanRegenerate":true,"RegenerationRate":2.0,"RegenerationDelay":3.0,"ScaleWithLevel":true,"HealthPerLevel":6.0},"CombatConfig":{"Damage":8.0,"MoveSpeed":1.5,"FlightSpeedMultiplier":3.0,"Defense":0.0,"AttackSpeed":1.5,"AttackRange":0.3,"KnockbackForce":0.3,"KnockbackResistance":0.0,"CritChance":0.03,"CritMultiplier":1.4},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":9.0,"DeAggressionRange":14.0,"PatrolRadius":4.0},"MovementConfig":{"CanBeStunned":true},"LootConfig":{"BaseExperience":6,"ExperiencePerLevel":3.0,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":2,"DropChance":1.0}],"HasRareDrop":false,"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0}},{"MobID":"WallCreeper","MobName":"Wall Creeper","Level":2,"HealthConfig":{"MaxHealth":70.0,"InvulnerabilityDuration":0.1,"CanRegenerate":false,"RegenerationRate":1.0,"RegenerationDelay":5.0,"ScaleWithLevel":true,"HealthPerLevel":7.0},"CombatConfig":{"Damage":8.0,"MoveSpeed":1.6,"FlightSpeedMultiplier":1.0,"Defense":0.5,"AttackSpeed":1.5,"AttackRange":0.4,"KnockbackForce":0.5,"KnockbackResistance":0.0,"CritChance":0.03,"CritMultiplier":1.4},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":8.0,"DeAggressionRange":13.0,"PatrolRadius":4.0},"MovementConfig":{"CanBeStunned":true},"LootConfig":{"BaseExperience":6,"ExperiencePerLevel":3.0,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":2,"DropChance":1.0}],"HasRareDrop":false,"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0}},{"MobID":"VileHatcher","MobName":"Vile Hatcher","Level":3,"HealthConfig":{"MaxHealth":100.0,"InvulnerabilityDuration":0.1,"CanRegenerate":false,"RegenerationRate":1.0,"RegenerationDelay":5.0,"ScaleWithLevel":true,"HealthPerLevel":10.0},"CombatConfig":{"Damage":12.0,"MoveSpeed":1.0,"FlightSpeedMultiplier":1.0,"Defense":1.0,"AttackSpeed":0.8,"AttackRange":0.6,"KnockbackForce":1.0,"KnockbackResistance":0.2,"CritChance":0.04,"CritMultiplier":1.5},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":10.0,"DeAggressionRange":15.0,"PatrolRadius":5.0},"MovementConfig":{"CanBeStunned":true},"LootConfig":{"BaseExperience":10,"ExperiencePerLevel":5.0,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":2,"MaxQuantity":4,"DropChance":1.0}],"HasRareDrop":false,"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0}},{"MobID":"WebSpinner","MobName":"Web Spinner","Level":2,"HealthConfig":{"MaxHealth":60.0,"InvulnerabilityDuration":0.1,"CanRegenerate":false,"RegenerationRate":1.0,"RegenerationDelay":5.0,"ScaleWithLevel":true,"HealthPerLevel":6.0},"CombatConfig":{"Damage":6.0,"MoveSpeed":1.5,"FlightSpeedMultiplier":1.0,"Defense":0.0,"AttackSpeed":1.0,"AttackRange":0.5,"KnockbackForce":0.5,"KnockbackResistance":0.0,"CritChance":0.02,"CritMultiplier":1.3},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":7.0,"DeAggressionRange":12.0,"PatrolRadius":3.0},"MovementConfig":{"CanBeStunned":true},"LootConfig":{"BaseExperience":5,"ExperiencePerLevel":2.5,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":2,"DropChance":1.0}],"HasRareDrop":false,"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0}},{"MobID":"Carapace","MobName":"Carapace","Level":4,"HealthConfig":{"MaxHealth":150.0,"InvulnerabilityDuration":0.4,"CanRegenerate":false,"RegenerationRate":1.0,"RegenerationDelay":5.0,"ScaleWithLevel":true,"HealthPerLevel":15.0},"CombatConfig":{"Damage":15.0,"MoveSpeed":1.0,"FlightSpeedMultiplier":1.0,"Defense":10.0,"AttackSpeed":0.8,"AttackRange":0.7,"KnockbackForce":2.0,"KnockbackResistance":0.8,"CritChance":0.05,"CritMultiplier":1.6},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":12.0,"DeAggressionRange":17.0,"PatrolRadius":6.0},"MovementConfig":{"CanBeStunned":false},"LootConfig":{"BaseExperience":15,"ExperiencePerLevel":7.5,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":3,"MaxQuantity":5,"DropChance":1.0}],"HasRareDrop":false,"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0}},{"MobID":"NightfangWeaver","MobName":"Nightfang Weaver","Level":3,"HealthConfig":{"MaxHealth":90.0,"InvulnerabilityDuration":0.1,"CanRegenerate":true,"RegenerationRate":1.5,"RegenerationDelay":4.0,"ScaleWithLevel":true,"HealthPerLevel":9.0},"CombatConfig":{"Damage":10.0,"MoveSpeed":1.0,"FlightSpeedMultiplier":1.0,"Defense":1.0,"AttackSpeed":1.2,"AttackRange":0.5,"KnockbackForce":1.0,"KnockbackResistance":0.1,"CritChance":0.04,"CritMultiplier":1.5},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":9.0,"DeAggressionRange":14.0,"PatrolRadius":4.0},"MovementConfig":{"CanBeStunned":true},"LootConfig":{"BaseExperience":9,"ExperiencePerLevel":4.5,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":2,"MaxQuantity":3,"DropChance":1.0}],"HasRareDrop":false,"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0}},{"MobID":"Ghost","MobName":"Ghost","Level":3,"HealthConfig":{"MaxHealth":80.0,"InvulnerabilityDuration":0.1,"CanRegenerate":false,"RegenerationRate":1.0,"RegenerationDelay":5.0,"ScaleWithLevel":true,"HealthPerLevel":8.0},"CombatConfig":{"Damage":12.0,"MoveSpeed":1.3,"FlightSpeedMultiplier":1.5,"Defense":0.0,"AttackSpeed":1.0,"AttackRange":0.4,"KnockbackForce":0.5,"KnockbackResistance":0.0,"CritChance":0.03,"CritMultiplier":1.4},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":10.0,"DeAggressionRange":15.0,"PatrolRadius":5.0},"MovementConfig":{"CanBeStunned":true},"LootConfig":{"BaseExperience":8,"ExperiencePerLevel":4.0,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":2,"DropChance":1.0}],"HasRareDrop":false,"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0}},{"MobID":"Snowman","MobName":"Snowman","Level":2,"HealthConfig":{"MaxHealth":100.0,"InvulnerabilityDuration":0.1,"CanRegenerate":false,"RegenerationRate":1.0,"RegenerationDelay":5.0,"ScaleWithLevel":true,"HealthPerLevel":10.0},"CombatConfig":{"Damage":10.0,"MoveSpeed":1.0,"FlightSpeedMultiplier":1.0,"Defense":2.0,"AttackSpeed":0.8,"AttackRange":0.6,"KnockbackForce":1.5,"KnockbackResistance":0.2,"CritChance":0.02,"CritMultiplier":1.3},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":8.0,"DeAggressionRange":13.0,"PatrolRadius":4.0},"MovementConfig":{"CanBeStunned":true},"LootConfig":{"BaseExperience":8,"ExperiencePerLevel":4.0,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":2,"MaxQuantity":3,"DropChance":1.0}],"HasRareDrop":false,"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0}},{"MobID":"Penguin","MobName":"Penguin","Level":1,"HealthConfig":{"MaxHealth":50.0,"InvulnerabilityDuration":0.1,"CanRegenerate":false,"RegenerationRate":1.0,"RegenerationDelay":5.0,"ScaleWithLevel":true,"HealthPerLevel":5.0},"CombatConfig":{"Damage":4.0,"MoveSpeed":1.5,"FlightSpeedMultiplier":1.0,"Defense":0.0,"AttackSpeed":1.0,"AttackRange":0.4,"KnockbackForce":0.5,"KnockbackResistance":0.0,"CritChance":0.01,"CritMultiplier":1.2},"AIConfig":{"IsHostileToPlayer":false,"DetectionRange":5.0,"DeAggressionRange":10.0,"PatrolRadius":3.0},"MovementConfig":{"CanBeStunned":true},"LootConfig":{"BaseExperience":3,"ExperiencePerLevel":1.5,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":1,"DropChance":1.0}],"HasRareDrop":false,"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0}},{"MobID":"Vulture","MobName":"Vulture","Level":2,"HealthConfig":{"MaxHealth":60.0,"InvulnerabilityDuration":0.1,"CanRegenerate":false,"RegenerationRate":1.0,"RegenerationDelay":5.0,"ScaleWithLevel":true,"HealthPerLevel":6.0},"CombatConfig":{"Damage":8.0,"MoveSpeed":1.0,"FlightSpeedMultiplier":2.0,"Defense":0.5,"AttackSpeed":1.2,"AttackRange":0.5,"KnockbackForce":0.8,"KnockbackResistance":0.0,"CritChance":0.03,"CritMultiplier":1.4},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":9.0,"DeAggressionRange":14.0,"PatrolRadius":4.0},"MovementConfig":{"CanBeStunned":true},"LootConfig":{"BaseExperience":5,"ExperiencePerLevel":2.5,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":2,"DropChance":1.0}],"HasRareDrop":false,"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0}},{"MobID":"Zombie","MobName":"Zombie","Level":2,"HealthConfig":{"MaxHealth":120.0,"InvulnerabilityDuration":0.1,"CanRegenerate":false,"RegenerationRate":0.0,"RegenerationDelay":0.0,"ScaleWithLevel":true,"HealthPerLevel":12.0},"CombatConfig":{"Damage":14.0,"MoveSpeed":1.2,"FlightSpeedMultiplier":1.0,"Defense":2.0,"AttackSpeed":1.0,"AttackRange":1.0,"KnockbackForce":2.0,"KnockbackResistance":0.2,"CritChance":0.05,"CritMultiplier":1.5},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":12.0,"DeAggressionRange":16.0,"PatrolRadius":5.0},"MovementConfig":{"CanBeStunned":true},"LootConfig":{"BaseExperience":12,"ExperiencePerLevel":5.0,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":2,"DropChance":0.6}],"HasRareDrop":false,"RareDrop":{"ItemID":"None","MinQuantity":0,"MaxQuantity":0,"DropChance":0.0},"RareDropChance":0.0}},{"MobID":"PrinceSlime","MobName":"Prince Slime","Level":1,"HealthConfig":{"MaxHealth":500.0,"InvulnerabilityDuration":0.5,"CanRegenerate":true,"RegenerationRate":5.0,"RegenerationDelay":2.0,"ScaleWithLevel":true,"HealthPerLevel":200.0},"CombatConfig":{"Damage":15.0,"MoveSpeed":1.4,"FlightSpeedMultiplier":2.0,"Defense":5.0,"AttackSpeed":1.5,"AttackRange":1.25,"KnockbackForce":0.5,"KnockbackResistance":0.9,"CritChance":0.15,"CritMultiplier":2.0},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":10.0,"DeAggressionRange":75.0,"PatrolRadius":10.0},"MovementConfig":{"CanBeStunned":false},"LootConfig":{"BaseExperience":500,"ExperiencePerLevel":50.0,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":50,"MaxQuantity":100,"DropChance":1.0}],"HasRareDrop":true,"RareDrop":{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":1,"DropChance":1.0},"RareDropChance":0.1}},{"MobID":"ShroomletTyrant","MobName":"Shroomlet Tyrant","Level":1,"HealthConfig":{"MaxHealth":1000.0,"InvulnerabilityDuration":0.5,"CanRegenerate":true,"RegenerationRate":5.0,"RegenerationDelay":2.0,"ScaleWithLevel":true,"HealthPerLevel":200.0},"CombatConfig":{"Damage":2.0,"MoveSpeed":1.4,"FlightSpeedMultiplier":2.0,"Defense":5.0,"AttackSpeed":1.5,"AttackRange":1.25,"KnockbackForce":0.5,"KnockbackResistance":0.9,"CritChance":0.15,"CritMultiplier":2.0},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":10.0,"DeAggressionRange":75.0,"PatrolRadius":10.0},"MovementConfig":{"CanBeStunned":false},"LootConfig":{"BaseExperience":500,"ExperiencePerLevel":50.0,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":50,"MaxQuantity":100,"DropChance":1.0}],"HasRareDrop":true,"RareDrop":{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":1,"DropChance":1.0},"RareDropChance":0.1}},{"MobID":"Centipede","MobName":"Centipede","Level":10,"HealthConfig":{"MaxHealth":1800.0,"InvulnerabilityDuration":0.3,"CanRegenerate":true,"RegenerationRate":4.0,"RegenerationDelay":3.0,"ScaleWithLevel":true,"HealthPerLevel":180.0},"CombatConfig":{"Damage":45.0,"MoveSpeed":1.6,"FlightSpeedMultiplier":1.0,"Defense":15.0,"AttackSpeed":2.0,"AttackRange":1.5,"KnockbackForce":1.0,"KnockbackResistance":1.0,"CritChance":0.12,"CritMultiplier":1.8},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":50.0,"DeAggressionRange":75.0,"PatrolRadius":10.0},"MovementConfig":{"CanBeStunned":false},"LootConfig":{"BaseExperience":450,"ExperiencePerLevel":45.0,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":40,"MaxQuantity":80,"DropChance":1.0}],"HasRareDrop":true,"RareDrop":{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":1,"DropChance":1.0},"RareDropChance":0.1}},{"MobID":"Vinefang","MobName":"Vinefang","Level":7,"HealthConfig":{"MaxHealth":900.0,"InvulnerabilityDuration":0.3,"CanRegenerate":true,"RegenerationRate":3.0,"RegenerationDelay":3.0,"ScaleWithLevel":true,"HealthPerLevel":90.0},"CombatConfig":{"Damage":0.35,"MoveSpeed":1.4,"FlightSpeedMultiplier":1.0,"Defense":10.0,"AttackSpeed":1.5,"AttackRange":1.0,"KnockbackForce":1.5,"KnockbackResistance":0.4,"CritChance":0.08,"CritMultiplier":1.7},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":1.0,"DeAggressionRange":20.0,"PatrolRadius":0.0},"MovementConfig":{"CanBeStunned":false},"LootConfig":{"BaseExperience":300,"ExperiencePerLevel":30.0,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":3,"DropChance":0.8}],"HasRareDrop":true,"RareDrop":{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":1,"DropChance":0.2},"RareDropChance":0.05}},{"MobID":"Thorncoil","MobName":"Thorncoil","Level":12,"HealthConfig":{"MaxHealth":2200.0,"InvulnerabilityDuration":0.4,"CanRegenerate":false,"RegenerationRate":2.0,"RegenerationDelay":5.0,"ScaleWithLevel":true,"HealthPerLevel":180.0},"CombatConfig":{"Damage":60.0,"MoveSpeed":1.2,"FlightSpeedMultiplier":1.0,"Defense":20.0,"AttackSpeed":1.2,"AttackRange":1.8,"KnockbackForce":2.0,"KnockbackResistance":0.8,"CritChance":0.12,"CritMultiplier":1.9},"AIConfig":{"IsHostileToPlayer":true,"DetectionRange":60.0,"DeAggressionRange":90.0,"PatrolRadius":12.0},"MovementConfig":{"CanBeStunned":false},"LootConfig":{"BaseExperience":700,"ExperiencePerLevel":70.0,"DropsLoot":true,"LootDrops":[{"ItemID":"Gel","MinQuantity":2,"MaxQuantity":5,"DropChance":1.0}],"HasRareDrop":true,"RareDrop":{"ItemID":"Gel","MinQuantity":1,"MaxQuantity":1,"DropChance":0.2},"RareDropChance":0.12}}]}</script>
   <script>
-    /* ── Helpers ── */
+    /* Helpers */
     function fmt(v) { return (v % 1 === 0) ? v : parseFloat(v.toFixed(2)); }
     function pct(v) { return Math.round(v * 100) + '%'; }
     function stat(label, value, cls) {
@@ -656,25 +279,21 @@
         '<div class="stat-value' + (cls ? ' ' + cls : '') + '">' + value + '</div></div>';
     }
 
-    /* ── Try to load mob from inline data ── */
+    /* Load mob data */
     var allMobs = [];
     (function () {
       var s = document.getElementById('mob-data');
       if (s) { var d = JSON.parse(s.textContent); allMobs = d.MobConfigs || []; }
     })();
 
-    /* ── Get mob id from URL query string ── */
+    /* Get mob id from URL */
     var params = {};
     location.search.replace(/[?&]([^=]+)=([^&]*)/g, function (_, k, v) { params[k] = decodeURIComponent(v); });
     var mobId = params.id || '';
     var mob = allMobs.find(function (m) { return m.MobID === mobId; });
 
-    /* ── Item icon lookup (case-insensitive first-letter lowercase fallback) ── */
-    function itemIconSrc(itemId) {
-      return 'assets/items/' + itemId + '.png';
-    }
+    function itemIconSrc(itemId) { return 'assets/items/' + itemId + '.png'; }
 
-    /* ── Build the page ── */
     if (!mob) {
       document.getElementById('pageContent').innerHTML =
         '<div class="not-found"><i class="fas fa-ghost"></i><p>Mob not found.</p><a class="back-btn" href="mobs.html"><i class="fas fa-arrow-left"></i> Back to Mobs</a></div>';
@@ -684,35 +303,21 @@
       var hostile = ai.IsHostileToPlayer;
       var mobName = mob.MobName;
 
-      /* page title + SEO meta */
-      var pageUrl = 'https://23-steps.com/wiki/mob.html?id=' + encodeURIComponent(mobId);
-      var metaTitle = mobName + ' \u2014 Mine & Dungeon Wiki | 23-Steps';
-      var metaDescription = (hostile ? 'Hostile' : 'Neutral') + ' mob. ' +
-        'HP: ' + mob.HealthConfig.MaxHealth + ', Damage: ' + mob.CombatConfig.Damage + '. ' +
-        'Full stats, loot drops, and AI data on the Mine & Dungeon Wiki.';
-      document.title = metaTitle;
-      var el;
-      el = document.getElementById('metaDesc'); if (el) el.setAttribute('content', metaDescription);
-      el = document.getElementById('canonicalLink'); if (el) el.setAttribute('href', pageUrl);
-      el = document.getElementById('ogTitle'); if (el) el.setAttribute('content', metaTitle);
-      el = document.getElementById('ogDesc'); if (el) el.setAttribute('content', metaDescription);
-      el = document.getElementById('ogUrl'); if (el) el.setAttribute('content', pageUrl);
-      el = document.getElementById('twTitle'); if (el) el.setAttribute('content', metaTitle);
-      el = document.getElementById('twDesc'); if (el) el.setAttribute('content', metaDescription);
+      document.title = mobName + ' — Mine & Dungeon Wiki | 23-Steps';
       document.getElementById('breadcrumbName').textContent = mobName;
       document.getElementById('pageHeading').innerHTML = '<i class="fas fa-skull"></i>&nbsp; ' + mobName;
-      document.getElementById('pageSubtitle').textContent = (hostile ? 'Hostile mob' : 'Neutral mob');
+      document.getElementById('pageSubtitle').textContent = (hostile ? 'Hostile mob' : 'Neutral mob') + ' — Level ' + mob.Level;
 
-      /* badges */
       var badges =
-        '<span class="badge ' + (hostile ? 'badge-hostile' : 'badge-neutral') + '">' + (hostile ? '&#128308; Hostile' : '&#128992; Neutral') + '</span>';
+        '<span class="badge ' + (hostile ? 'badge-hostile' : 'badge-neutral') + '">' + (hostile ? '&#128308; Hostile' : '&#128992; Neutral') + '</span>' +
+        '<span class="badge badge-level">Lv. ' + mob.Level + '</span>';
       if (h.CanRegenerate) badges += '<span class="badge badge-regen">&#9829; Regenerates</span>';
       if (mv && mv.CanBeStunned) badges += '<span class="badge badge-stun">&#128165; Stunnable</span>';
 
-      /* ── Health section ── */
+      /* Health */
       var healthHtml = '<div class="stat-grid">';
       healthHtml += stat('Max HP', fmt(h.MaxHealth), 'green');
-
+      healthHtml += stat('HP per Level', '+' + fmt(h.HealthPerLevel), 'green');
       healthHtml += stat('I-Frames', h.InvulnerabilityDuration + 's', '');
       if (h.CanRegenerate) {
         healthHtml += stat('Regen Rate', fmt(h.RegenerationRate) + '/s', 'green');
@@ -720,43 +325,39 @@
       }
       healthHtml += '</div>';
 
-      /* ── Combat section ── */
+      /* Combat */
       var combatHtml = '<div class="stat-grid">';
       combatHtml += stat('Damage', fmt(c.Damage), 'red');
-
       combatHtml += stat('Defense', fmt(c.Defense), 'blue');
       combatHtml += stat('Attack Speed', fmt(c.AttackSpeed) + 'x', '');
       combatHtml += stat('Attack Range', fmt(c.AttackRange), '');
       combatHtml += stat('Move Speed', fmt(c.MoveSpeed) + 'x', 'yellow');
       combatHtml += stat('Knockback', fmt(c.KnockbackForce), '');
-      combatHtml += stat('KB Resistance', fmt(c.KnockbackResistance), '');
+      combatHtml += stat('KB Resist', pct(c.KnockbackResistance), '');
       combatHtml += stat('Crit Chance', pct(c.CritChance), 'yellow');
-      combatHtml += stat('Crit Multiplier', c.CritMultiplier + 'x', 'yellow');
+      combatHtml += stat('Crit Multi', c.CritMultiplier + 'x', 'yellow');
       combatHtml += '</div>';
 
-      /* ── Loot section ── */
+      /* Loot */
       var lootHtml = '';
       if (loot.DropsLoot && loot.LootDrops && loot.LootDrops.length) {
         lootHtml += '<div class="loot-grid">';
         loot.LootDrops.forEach(function (d) {
-          var qty = d.MinQuantity === d.MaxQuantity ? 'x' + d.MinQuantity : 'x' + d.MinQuantity + ' \u2013 x' + d.MaxQuantity;
-          var chance = pct(d.DropChance);
+          var qty = d.MinQuantity === d.MaxQuantity ? 'x' + d.MinQuantity : 'x' + d.MinQuantity + ' – x' + d.MaxQuantity;
           var src = itemIconSrc(d.ItemID);
           lootHtml += '<div class="loot-row">';
-          lootHtml += '<div class="loot-icon-wrap"><img src="' + src + '" alt="' + d.ItemID + '"' +
-            ' onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'" />' +
+          lootHtml += '<div class="loot-icon-wrap"><img src="' + src + '" alt="' + d.ItemID + '" onerror=\"this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'\" />' +
             '<span class="loot-ph" style="display:none">&#128142;</span></div>';
           lootHtml += '<div class="loot-info"><div class="loot-name">' + d.ItemID + '</div></div>';
-          lootHtml += '<div class="loot-right"><span class="loot-qty">' + qty + '</span><span class="loot-chance">' + chance + '</span></div>';
+          lootHtml += '<div class="loot-right"><span class="loot-qty">' + qty + '</span><span class="loot-chance">' + pct(d.DropChance) + '</span></div>';
           lootHtml += '</div>';
         });
         if (loot.HasRareDrop && loot.RareDrop && loot.RareDrop.ItemID !== 'None') {
           var rd = loot.RareDrop;
-          var rqty = rd.MinQuantity === rd.MaxQuantity ? 'x' + rd.MinQuantity : 'x' + rd.MinQuantity + ' \u2013 x' + rd.MaxQuantity;
+          var rqty = rd.MinQuantity === rd.MaxQuantity ? 'x' + rd.MinQuantity : 'x' + rd.MinQuantity + ' – x' + rd.MaxQuantity;
           var rsrc = itemIconSrc(rd.ItemID);
           lootHtml += '<div class="loot-row">';
-          lootHtml += '<div class="loot-icon-wrap"><img src="' + rsrc + '" alt="' + rd.ItemID + '"' +
-            ' onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'" />' +
+          lootHtml += '<div class="loot-icon-wrap"><img src="' + rsrc + '" alt="' + rd.ItemID + '" onerror=\"this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'\" />' +
             '<span class="loot-ph" style="display:none">&#128142;</span></div>';
           lootHtml += '<div class="loot-info"><div class="loot-name">' + rd.ItemID + ' <span class="loot-rare-tag">RARE</span></div></div>';
           lootHtml += '<div class="loot-right"><span class="loot-qty">' + rqty + '</span><span class="loot-chance">' + pct(loot.RareDropChance) + '</span></div>';
@@ -767,34 +368,23 @@
         lootHtml = '<div class="no-loot">No loot drops.</div>';
       }
 
-      /* ── Assemble page ── */
+      /* Assemble */
       document.getElementById('pageContent').innerHTML =
         '<a class="back-btn" href="mobs.html"><i class="fas fa-arrow-left"></i> Back to Mobs</a>' +
         '<div class="mob-header-card">' +
-        '<div class="mob-header-img">' +
-        '<img src="assets/' + mob.MobID + '.png" alt="' + mobName + '"' +
-        ' onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'" />' +
-        '<span class="ph" style="display:none">&#128128;</span>' +
+          '<div class="mob-header-img">' +
+            '<img src="assets/mobs/' + mob.MobID.toLowerCase() + '.png" alt="' + mobName + '" onerror=\"this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'\" />' +
+            '<span class="ph" style="display:none">&#128128;</span>' +
+          '</div>' +
+          '<div class="mob-header-info">' +
+            '<div class="mob-header-name">' + mobName + '</div>' +
+            '<div class="mob-header-badges">' + badges + '</div>' +
+          '</div>' +
         '</div>' +
-        '<div class="mob-header-info">' +
-        '<div class="mob-header-name">' + mobName + '</div>' +
-        '<div class="mob-header-badges">' + badges + '</div>' +
-        '</div>' +
-        '</div>' +
-        '<div class="section">' +
-        '<div class="section-title"><i class="fas fa-heart"></i> Health</div>' +
-        healthHtml +
-        '</div>' +
-        '<div class="section">' +
-        '<div class="section-title"><i class="fas fa-sword"></i> Combat</div>' +
-        combatHtml +
-        '</div>' +
-        '<div class="section">' +
-        '<div class="section-title"><i class="fas fa-gift"></i> Loot Drops</div>' +
-        lootHtml +
-        '</div>';
+        '<div class="section"><div class="section-title"><i class="fas fa-heart"></i> Health</div>' + healthHtml + '</div>' +
+        '<div class="section"><div class="section-title"><i class="fas fa-khanda"></i> Combat</div>' + combatHtml + '</div>' +
+        '<div class="section"><div class="section-title"><i class="fas fa-gift"></i> Loot Drops</div>' + lootHtml + '</div>';
     }
   </script>
 </body>
-
 </html>
