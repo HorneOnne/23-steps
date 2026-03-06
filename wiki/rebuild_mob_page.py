@@ -1,12 +1,8 @@
-import re, io
+import json, io
 
-# Read existing file to extract the inline JSON blob
-with io.open('mob.html', encoding='utf-8') as f:
-    content = f.read()
-
-# Extract the JSON data from the script tag
-m = re.search(r'<script id="mob-data" type="application/json">(.*?)</script>', content, re.DOTALL)
-json_blob = m.group(1).strip() if m else '{}'
+# Read fresh JSON data from mob_configs.json
+with io.open('mob_configs.json', encoding='utf-8') as f:
+    json_blob = f.read().strip()
 
 HEAD = '''<!DOCTYPE html>
 <html lang="en">
@@ -260,6 +256,8 @@ BODY_OPEN = '''<body>
     <div class="tab-bar">
       <a class="tab-btn active" href="mobs.html"><i class="fas fa-skull"></i> Mobs</a>
       <a class="tab-btn" href="items.html"><i class="fas fa-boxes-stacked"></i> Items</a>
+      <a class="tab-btn" href="merchants.html"><i class="fas fa-store"></i> Merchants</a>
+      <a class="tab-btn" href="economy.html"><i class="fas fa-chart-line"></i> Economy</a>
       <span class="tab-btn disabled"><i class="fas fa-map"></i> Maps <span class="tab-badge">Soon</span></span>
       <span class="tab-btn disabled"><i class="fas fa-scroll"></i> Quests <span class="tab-badge">Soon</span></span>
       <span class="tab-btn disabled"><i class="fas fa-hat-wizard"></i> Bosses <span class="tab-badge">Soon</span></span>
@@ -290,6 +288,7 @@ SCRIPT = '''  <script id="mob-data" type="application/json">''' + json_blob + ''
       return '<div class="stat-item"><div class="stat-label">' + label + '</div>' +
         '<div class="stat-value' + (cls ? ' ' + cls : '') + '">' + value + '</div></div>';
     }
+    function itemIconSrc(itemId) { return 'assets/items/' + itemId + '.png'; }
 
     /* Load mob data */
     var allMobs = [];
@@ -304,8 +303,6 @@ SCRIPT = '''  <script id="mob-data" type="application/json">''' + json_blob + ''
     var mobId = params.id || '';
     var mob = allMobs.find(function (m) { return m.MobID === mobId; });
 
-    function itemIconSrc(itemId) { return 'assets/items/' + itemId + '.png'; }
-
     if (!mob) {
       document.getElementById('pageContent').innerHTML =
         '<div class="not-found"><i class="fas fa-ghost"></i><p>Mob not found.</p><a class="back-btn" href="mobs.html"><i class="fas fa-arrow-left"></i> Back to Mobs</a></div>';
@@ -318,18 +315,17 @@ SCRIPT = '''  <script id="mob-data" type="application/json">''' + json_blob + ''
       document.title = mobName + ' \u2014 Mine & Dungeon Wiki | 23-Steps';
       document.getElementById('breadcrumbName').textContent = mobName;
       document.getElementById('pageHeading').innerHTML = '<i class="fas fa-skull"></i>&nbsp; ' + mobName;
-      document.getElementById('pageSubtitle').textContent = (hostile ? 'Hostile mob' : 'Neutral mob') + ' \u2014 Level ' + mob.Level;
+      document.getElementById('pageSubtitle').textContent = hostile ? 'Hostile mob' : 'Neutral mob';
 
       var badges =
-        '<span class="badge ' + (hostile ? 'badge-hostile' : 'badge-neutral') + '">' + (hostile ? '&#128308; Hostile' : '&#128992; Neutral') + '</span>' +
-        '<span class="badge badge-level">Lv. ' + mob.Level + '</span>';
+        '<span class="badge ' + (hostile ? 'badge-hostile' : 'badge-neutral') + '">' + (hostile ? '&#128308; Hostile' : '&#128992; Neutral') + '</span>';
       if (h.CanRegenerate) badges += '<span class="badge badge-regen">&#9829; Regenerates</span>';
       if (mv && mv.CanBeStunned) badges += '<span class="badge badge-stun">&#128165; Stunnable</span>';
+      if (mv && !mv.CanBeStunned) badges += '<span class="badge" style="background:rgba(148,163,184,.12);border:1px solid rgba(148,163,184,.25);color:#94a3b8">&#128683; Unstunnable</span>';
 
       /* Health */
       var healthHtml = '<div class="stat-grid">';
       healthHtml += stat('Max HP', fmt(h.MaxHealth), 'green');
-      healthHtml += stat('HP per Level', '+' + fmt(h.HealthPerLevel), 'green');
       healthHtml += stat('I-Frames', h.InvulnerabilityDuration + 's', '');
       if (h.CanRegenerate) {
         healthHtml += stat('Regen Rate', fmt(h.RegenerationRate) + '/s', 'green');
@@ -344,6 +340,9 @@ SCRIPT = '''  <script id="mob-data" type="application/json">''' + json_blob + ''
       combatHtml += stat('Attack Speed', fmt(c.AttackSpeed) + 'x', '');
       combatHtml += stat('Attack Range', fmt(c.AttackRange), '');
       combatHtml += stat('Move Speed', fmt(c.MoveSpeed) + 'x', 'yellow');
+      if (c.FlightSpeedMultiplier && c.FlightSpeedMultiplier !== 1.0) {
+        combatHtml += stat('Flight Speed', fmt(c.FlightSpeedMultiplier) + 'x', 'yellow');
+      }
       combatHtml += stat('Knockback', fmt(c.KnockbackForce), '');
       combatHtml += stat('KB Resist', pct(c.KnockbackResistance), '');
       combatHtml += stat('Crit Chance', pct(c.CritChance), 'yellow');
@@ -358,7 +357,7 @@ SCRIPT = '''  <script id="mob-data" type="application/json">''' + json_blob + ''
           var qty = d.MinQuantity === d.MaxQuantity ? 'x' + d.MinQuantity : 'x' + d.MinQuantity + ' \u2013 x' + d.MaxQuantity;
           var src = itemIconSrc(d.ItemID);
           lootHtml += '<div class="loot-row">';
-          lootHtml += '<div class="loot-icon-wrap"><img src="' + src + '" alt="' + d.ItemID + '" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'" />' +
+          lootHtml += '<div class="loot-icon-wrap"><img src="' + src + '" alt="' + d.ItemID + '" onerror="this.style.display=\\x27none\\x27;this.nextElementSibling.style.display=\\x27flex\\x27" />' +
             '<span class="loot-ph" style="display:none">&#128142;</span></div>';
           lootHtml += '<div class="loot-info"><div class="loot-name">' + d.ItemID + '</div></div>';
           lootHtml += '<div class="loot-right"><span class="loot-qty">' + qty + '</span><span class="loot-chance">' + pct(d.DropChance) + '</span></div>';
@@ -369,7 +368,7 @@ SCRIPT = '''  <script id="mob-data" type="application/json">''' + json_blob + ''
           var rqty = rd.MinQuantity === rd.MaxQuantity ? 'x' + rd.MinQuantity : 'x' + rd.MinQuantity + ' \u2013 x' + rd.MaxQuantity;
           var rsrc = itemIconSrc(rd.ItemID);
           lootHtml += '<div class="loot-row">';
-          lootHtml += '<div class="loot-icon-wrap"><img src="' + rsrc + '" alt="' + rd.ItemID + '" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'" />' +
+          lootHtml += '<div class="loot-icon-wrap"><img src="' + rsrc + '" alt="' + rd.ItemID + '" onerror="this.style.display=\\x27none\\x27;this.nextElementSibling.style.display=\\x27flex\\x27" />' +
             '<span class="loot-ph" style="display:none">&#128142;</span></div>';
           lootHtml += '<div class="loot-info"><div class="loot-name">' + rd.ItemID + ' <span class="loot-rare-tag">RARE</span></div></div>';
           lootHtml += '<div class="loot-right"><span class="loot-qty">' + rqty + '</span><span class="loot-chance">' + pct(loot.RareDropChance) + '</span></div>';
@@ -385,7 +384,7 @@ SCRIPT = '''  <script id="mob-data" type="application/json">''' + json_blob + ''
         '<a class="back-btn" href="mobs.html"><i class="fas fa-arrow-left"></i> Back to Mobs</a>' +
         '<div class="mob-header-card">' +
           '<div class="mob-header-img">' +
-            '<img src="assets/mobs/' + mob.MobID.toLowerCase() + '.png" alt="' + mobName + '" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'" />' +
+            '<img src="assets/mobs/' + mob.MobID.toLowerCase() + '.png" alt="' + mobName + '" onerror="this.style.display=\\x27none\\x27;this.nextElementSibling.style.display=\\x27flex\\x27" />' +
             '<span class="ph" style="display:none">&#128128;</span>' +
           '</div>' +
           '<div class="mob-header-info">' +

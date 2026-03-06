@@ -3,15 +3,12 @@
     {
       "MobID": "BlueSlime",
       "MobName": "Blue Slime",
-      "Level": 1,
       "HealthConfig": {
         "MaxHealth": 100.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 10.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 10.0,
@@ -35,8 +32,6 @@
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 10,
-        "ExperiencePerLevel": 5.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -59,15 +54,12 @@
     {
       "MobID": "GreenSlime",
       "MobName": "Green Slime",
-      "Level": 2,
       "HealthConfig": {
         "MaxHealth": 120.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": true,
         "RegenerationRate": 2.0,
-        "RegenerationDelay": 4.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 12.0
+        "RegenerationDelay": 4.0
       },
       "CombatConfig": {
         "Damage": 12.0,
@@ -91,8 +83,6 @@
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 15,
-        "ExperiencePerLevel": 6.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -115,15 +105,12 @@
     {
       "MobID": "RedSlime",
       "MobName": "Red Slime",
-      "Level": 3,
       "HealthConfig": {
         "MaxHealth": 140.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 15.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 18.0,
@@ -147,8 +134,6 @@
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 20,
-        "ExperiencePerLevel": 7.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -171,15 +156,12 @@
     {
       "MobID": "BlackSlime",
       "MobName": "Black Slime",
-      "Level": 5,
       "HealthConfig": {
         "MaxHealth": 250.0,
         "InvulnerabilityDuration": 0.4,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 25.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 20.0,
@@ -203,8 +185,6 @@
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 50,
-        "ExperiencePerLevel": 12.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -227,15 +207,12 @@
     {
       "MobID": "TinyBlackSlime",
       "MobName": "Tiny Black Slime",
-      "Level": 1,
       "HealthConfig": {
         "MaxHealth": 50.0,
         "InvulnerabilityDuration": 0.3,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 5.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 8.0,
@@ -259,8 +236,6 @@
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 5,
-        "ExperiencePerLevel": 3.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -283,15 +258,12 @@
     {
       "MobID": "Orc",
       "MobName": "Orc",
-      "Level": 5,
       "HealthConfig": {
         "MaxHealth": 250.0,
         "InvulnerabilityDuration": 0.4,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 25.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 25.0,
@@ -315,8 +287,6 @@
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 50,
-        "ExperiencePerLevel": 12.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -339,15 +309,12 @@
     {
       "MobID": "ArmoredAxeman",
       "MobName": "Armored Axeman",
-      "Level": 5,
       "HealthConfig": {
         "MaxHealth": 250.0,
         "InvulnerabilityDuration": 0.4,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 25.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 25.0,
@@ -371,8 +338,6 @@
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 50,
-        "ExperiencePerLevel": 12.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -395,15 +360,12 @@
     {
       "MobID": "ArmoredOrc",
       "MobName": "Armored Orc",
-      "Level": 5,
       "HealthConfig": {
         "MaxHealth": 250.0,
         "InvulnerabilityDuration": 0.4,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 25.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 25.0,
@@ -427,8 +389,6 @@
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 50,
-        "ExperiencePerLevel": 12.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -451,15 +411,12 @@
     {
       "MobID": "ArmoredSkeleton",
       "MobName": "Armored Skeleton",
-      "Level": 5,
       "HealthConfig": {
         "MaxHealth": 250.0,
         "InvulnerabilityDuration": 0.4,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 25.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 25.0,
@@ -483,8 +440,6 @@
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 50,
-        "ExperiencePerLevel": 12.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -507,15 +462,12 @@
     {
       "MobID": "EliteOrc",
       "MobName": "Elite Orc",
-      "Level": 5,
       "HealthConfig": {
         "MaxHealth": 250.0,
         "InvulnerabilityDuration": 0.4,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 25.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 25.0,
@@ -539,8 +491,6 @@
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 50,
-        "ExperiencePerLevel": 12.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -563,15 +513,12 @@
     {
       "MobID": "Werebear",
       "MobName": "Werebear",
-      "Level": 5,
       "HealthConfig": {
         "MaxHealth": 250.0,
         "InvulnerabilityDuration": 0.4,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 25.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 25.0,
@@ -595,8 +542,6 @@
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 50,
-        "ExperiencePerLevel": 12.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -619,15 +564,12 @@
     {
       "MobID": "Werewolf",
       "MobName": "Werewolf",
-      "Level": 5,
       "HealthConfig": {
         "MaxHealth": 250.0,
         "InvulnerabilityDuration": 0.4,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 25.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 25.0,
@@ -651,8 +593,6 @@
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 50,
-        "ExperiencePerLevel": 12.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -672,18 +612,15 @@
         "RareDropChance": 0.0
       }
     },
-     {
+    {
       "MobID": "RedMushroom",
       "MobName": "Red Mushroom",
-      "Level": 1,
       "HealthConfig": {
         "MaxHealth": 80.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 8.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 8.0,
@@ -707,8 +644,6 @@
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 8,
-        "ExperiencePerLevel": 4.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -731,15 +666,12 @@
     {
       "MobID": "GreenMushroom",
       "MobName": "Green Mushroom",
-      "Level": 1,
       "HealthConfig": {
         "MaxHealth": 85.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": true,
         "RegenerationRate": 1.5,
-        "RegenerationDelay": 4.5,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 9.0
+        "RegenerationDelay": 4.5
       },
       "CombatConfig": {
         "Damage": 9.0,
@@ -763,8 +695,6 @@
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 9,
-        "ExperiencePerLevel": 4.5,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -787,15 +717,12 @@
     {
       "MobID": "BlueMushroom",
       "MobName": "Blue Mushroom",
-      "Level": 1,
       "HealthConfig": {
         "MaxHealth": 75.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 7.5
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 7.0,
@@ -803,7 +730,7 @@
         "FlightSpeedMultiplier": 1.0,
         "Defense": 0.5,
         "AttackSpeed": 1.2,
-        "AttackRange":0.5,
+        "AttackRange": 0.5,
         "KnockbackForce": 0.7,
         "KnockbackResistance": 0.0,
         "CritChance": 0.02,
@@ -819,8 +746,6 @@
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 7,
-        "ExperiencePerLevel": 3.5,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -843,15 +768,12 @@
     {
       "MobID": "Bloodcap",
       "MobName": "Bloodcap",
-      "Level": 1,
       "HealthConfig": {
         "MaxHealth": 80.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 8.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 8.0,
@@ -875,8 +797,6 @@
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 8,
-        "ExperiencePerLevel": 4.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -899,15 +819,12 @@
     {
       "MobID": "Venomcap",
       "MobName": "Venomcap",
-      "Level": 1,
       "HealthConfig": {
         "MaxHealth": 85.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": true,
         "RegenerationRate": 1.5,
-        "RegenerationDelay": 4.5,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 9.0
+        "RegenerationDelay": 4.5
       },
       "CombatConfig": {
         "Damage": 9.0,
@@ -931,8 +848,6 @@
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 9,
-        "ExperiencePerLevel": 4.5,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -955,15 +870,12 @@
     {
       "MobID": "Gloopcap",
       "MobName": "Gloopcap",
-      "Level": 1,
       "HealthConfig": {
         "MaxHealth": 75.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 7.5
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 7.0,
@@ -971,7 +883,7 @@
         "FlightSpeedMultiplier": 1.0,
         "Defense": 0.5,
         "AttackSpeed": 1.2,
-        "AttackRange":1.0,
+        "AttackRange": 1.0,
         "KnockbackForce": 0.7,
         "KnockbackResistance": 0.0,
         "CritChance": 0.02,
@@ -987,8 +899,6 @@
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 7,
-        "ExperiencePerLevel": 3.5,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -1008,18 +918,15 @@
         "RareDropChance": 0.0
       }
     },
-     {
+    {
       "MobID": "Sandworm",
       "MobName": "Sandworm",
-      "Level": 2,
       "HealthConfig": {
         "MaxHealth": 120.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 12.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 12.0,
@@ -1043,8 +950,6 @@
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 12,
-        "ExperiencePerLevel": 5.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -1067,15 +972,12 @@
     {
       "MobID": "Dirtworm",
       "MobName": "Dirtworm",
-      "Level": 1,
       "HealthConfig": {
         "MaxHealth": 90.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 9.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 9.0,
@@ -1099,8 +1001,6 @@
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 9,
-        "ExperiencePerLevel": 4.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -1120,18 +1020,15 @@
         "RareDropChance": 0.0
       }
     },
-     {
+    {
       "MobID": "Pig",
       "MobName": "Pig",
-      "Level": 1,
       "HealthConfig": {
         "MaxHealth": 60.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 6.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 5.0,
@@ -1155,8 +1052,6 @@
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 5,
-        "ExperiencePerLevel": 2.5,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -1179,15 +1074,12 @@
     {
       "MobID": "Boar",
       "MobName": "Boar",
-      "Level": 2,
       "HealthConfig": {
         "MaxHealth": 4000.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 10.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 50.0,
@@ -1211,8 +1103,6 @@
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 15,
-        "ExperiencePerLevel": 6.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -1235,15 +1125,12 @@
     {
       "MobID": "Leaf",
       "MobName": "Leaf",
-      "Level": 1,
       "HealthConfig": {
         "MaxHealth": 40.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 4.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 4.0,
@@ -1267,8 +1154,6 @@
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 3,
-        "ExperiencePerLevel": 1.5,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -1291,15 +1176,12 @@
     {
       "MobID": "Leafer",
       "MobName": "Leafer",
-      "Level": 2,
       "HealthConfig": {
         "MaxHealth": 80.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 8.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 10.0,
@@ -1323,8 +1205,6 @@
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 8,
-        "ExperiencePerLevel": 4.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -1347,15 +1227,12 @@
     {
       "MobID": "Bat",
       "MobName": "Bat",
-      "Level": 1,
       "HealthConfig": {
         "MaxHealth": 30.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 3.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 3.0,
@@ -1379,8 +1256,6 @@
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 2,
-        "ExperiencePerLevel": 1.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -1403,15 +1278,12 @@
     {
       "MobID": "TinyBee",
       "MobName": "Tiny Bee",
-      "Level": 1,
       "HealthConfig": {
         "MaxHealth": 25.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 2.5
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 2.0,
@@ -1435,8 +1307,6 @@
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 1,
-        "ExperiencePerLevel": 0.5,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -1459,15 +1329,12 @@
     {
       "MobID": "WorkerBee",
       "MobName": "Worker Bee",
-      "Level": 2,
       "HealthConfig": {
         "MaxHealth": 50.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": true,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 2.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 5.0
+        "RegenerationDelay": 2.0
       },
       "CombatConfig": {
         "Damage": 6.0,
@@ -1491,8 +1358,6 @@
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 4,
-        "ExperiencePerLevel": 2.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -1515,15 +1380,12 @@
     {
       "MobID": "MechanicalBee",
       "MobName": "Mechanical Bee",
-      "Level": 3,
       "HealthConfig": {
         "MaxHealth": 80.0,
         "InvulnerabilityDuration": 0.4,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 8.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 10.0,
@@ -1547,8 +1409,6 @@
         "CanBeStunned": false
       },
       "LootConfig": {
-        "BaseExperience": 8,
-        "ExperiencePerLevel": 4.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -1571,15 +1431,12 @@
     {
       "MobID": "SpiritBee",
       "MobName": "Spirit Bee",
-      "Level": 4,
       "HealthConfig": {
         "MaxHealth": 60.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": true,
         "RegenerationRate": 2.0,
-        "RegenerationDelay": 3.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 6.0
+        "RegenerationDelay": 3.0
       },
       "CombatConfig": {
         "Damage": 8.0,
@@ -1603,8 +1460,6 @@
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 6,
-        "ExperiencePerLevel": 3.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -1627,15 +1482,12 @@
     {
       "MobID": "WallCreeper",
       "MobName": "Wall Creeper",
-      "Level": 2,
       "HealthConfig": {
         "MaxHealth": 70.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 7.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 8.0,
@@ -1659,8 +1511,6 @@
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 6,
-        "ExperiencePerLevel": 3.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -1683,15 +1533,12 @@
     {
       "MobID": "VileHatcher",
       "MobName": "Vile Hatcher",
-      "Level": 3,
       "HealthConfig": {
         "MaxHealth": 100.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 10.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 12.0,
@@ -1715,8 +1562,6 @@
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 10,
-        "ExperiencePerLevel": 5.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -1739,15 +1584,12 @@
     {
       "MobID": "WebSpinner",
       "MobName": "Web Spinner",
-      "Level": 2,
       "HealthConfig": {
         "MaxHealth": 60.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 6.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 6.0,
@@ -1771,8 +1613,6 @@
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 5,
-        "ExperiencePerLevel": 2.5,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -1795,15 +1635,12 @@
     {
       "MobID": "Carapace",
       "MobName": "Carapace",
-      "Level": 4,
       "HealthConfig": {
         "MaxHealth": 150.0,
         "InvulnerabilityDuration": 0.4,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 15.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 15.0,
@@ -1827,8 +1664,6 @@
         "CanBeStunned": false
       },
       "LootConfig": {
-        "BaseExperience": 15,
-        "ExperiencePerLevel": 7.5,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -1851,15 +1686,12 @@
     {
       "MobID": "NightfangWeaver",
       "MobName": "Nightfang Weaver",
-      "Level": 3,
       "HealthConfig": {
         "MaxHealth": 90.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": true,
         "RegenerationRate": 1.5,
-        "RegenerationDelay": 4.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 9.0
+        "RegenerationDelay": 4.0
       },
       "CombatConfig": {
         "Damage": 10.0,
@@ -1883,8 +1715,6 @@
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 9,
-        "ExperiencePerLevel": 4.5,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -1907,15 +1737,12 @@
     {
       "MobID": "Ghost",
       "MobName": "Ghost",
-      "Level": 3,
       "HealthConfig": {
         "MaxHealth": 80.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 8.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 12.0,
@@ -1939,8 +1766,6 @@
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 8,
-        "ExperiencePerLevel": 4.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -1963,15 +1788,12 @@
     {
       "MobID": "Snowman",
       "MobName": "Snowman",
-      "Level": 2,
       "HealthConfig": {
         "MaxHealth": 100.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 10.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 10.0,
@@ -1995,8 +1817,6 @@
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 8,
-        "ExperiencePerLevel": 4.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -2019,15 +1839,12 @@
     {
       "MobID": "Penguin",
       "MobName": "Penguin",
-      "Level": 1,
       "HealthConfig": {
         "MaxHealth": 50.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 5.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 4.0,
@@ -2051,8 +1868,6 @@
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 3,
-        "ExperiencePerLevel": 1.5,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -2075,15 +1890,12 @@
     {
       "MobID": "Vulture",
       "MobName": "Vulture",
-      "Level": 2,
       "HealthConfig": {
         "MaxHealth": 60.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 6.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 8.0,
@@ -2107,8 +1919,6 @@
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 5,
-        "ExperiencePerLevel": 2.5,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -2131,15 +1941,12 @@
     {
       "MobID": "Zombie",
       "MobName": "Zombie",
-      "Level": 2,
       "HealthConfig": {
         "MaxHealth": 120.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 0.0,
-        "RegenerationDelay": 0.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 12.0
+        "RegenerationDelay": 0.0
       },
       "CombatConfig": {
         "Damage": 14.0,
@@ -2163,8 +1970,6 @@
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 12,
-        "ExperiencePerLevel": 5.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -2184,18 +1989,15 @@
         "RareDropChance": 0.0
       }
     },
-     {
+    {
       "MobID": "PrinceSlime",
       "MobName": "Prince Slime",
-      "Level": 1,
       "HealthConfig": {
         "MaxHealth": 500.0,
         "InvulnerabilityDuration": 0.5,
         "CanRegenerate": true,
         "RegenerationRate": 5.0,
-        "RegenerationDelay": 2.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 200.0
+        "RegenerationDelay": 2.0
       },
       "CombatConfig": {
         "Damage": 15.0,
@@ -2219,8 +2021,6 @@
         "CanBeStunned": false
       },
       "LootConfig": {
-        "BaseExperience": 500,
-        "ExperiencePerLevel": 50.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -2243,15 +2043,12 @@
     {
       "MobID": "ShroomletTyrant",
       "MobName": "Shroomlet Tyrant",
-      "Level": 1,
       "HealthConfig": {
         "MaxHealth": 1000.0,
         "InvulnerabilityDuration": 0.5,
         "CanRegenerate": true,
         "RegenerationRate": 5.0,
-        "RegenerationDelay": 2.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 200.0
+        "RegenerationDelay": 2.0
       },
       "CombatConfig": {
         "Damage": 2.0,
@@ -2275,8 +2072,6 @@
         "CanBeStunned": false
       },
       "LootConfig": {
-        "BaseExperience": 500,
-        "ExperiencePerLevel": 50.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -2299,15 +2094,12 @@
     {
       "MobID": "Centipede",
       "MobName": "Centipede",
-      "Level": 10,
       "HealthConfig": {
         "MaxHealth": 1800.0,
         "InvulnerabilityDuration": 0.3,
         "CanRegenerate": true,
         "RegenerationRate": 4.0,
-        "RegenerationDelay": 3.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 180.0
+        "RegenerationDelay": 3.0
       },
       "CombatConfig": {
         "Damage": 45.0,
@@ -2331,8 +2123,6 @@
         "CanBeStunned": false
       },
       "LootConfig": {
-        "BaseExperience": 450,
-        "ExperiencePerLevel": 45.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -2355,18 +2145,15 @@
     {
       "MobID": "Vinefang",
       "MobName": "Vinefang",
-      "Level": 7,
       "HealthConfig": {
         "MaxHealth": 900.0,
         "InvulnerabilityDuration": 0.3,
         "CanRegenerate": true,
         "RegenerationRate": 3.0,
-        "RegenerationDelay": 3.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 90.0
+        "RegenerationDelay": 3.0
       },
       "CombatConfig": {
-        "Damage": 0.350,
+        "Damage": 0.35,
         "MoveSpeed": 1.4,
         "FlightSpeedMultiplier": 1.0,
         "Defense": 10.0,
@@ -2387,8 +2174,6 @@
         "CanBeStunned": false
       },
       "LootConfig": {
-        "BaseExperience": 300,
-        "ExperiencePerLevel": 30.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -2411,15 +2196,12 @@
     {
       "MobID": "Thorncoil",
       "MobName": "Thorncoil",
-      "Level": 12,
       "HealthConfig": {
         "MaxHealth": 2200.0,
         "InvulnerabilityDuration": 0.4,
         "CanRegenerate": false,
         "RegenerationRate": 2.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 180.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 60.0,
@@ -2443,8 +2225,6 @@
         "CanBeStunned": false
       },
       "LootConfig": {
-        "BaseExperience": 700,
-        "ExperiencePerLevel": 70.0,
         "DropsLoot": true,
         "LootDrops": [
           {
