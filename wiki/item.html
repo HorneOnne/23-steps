@@ -718,6 +718,138 @@
       font-size: 1.1rem;
       flex-shrink: 0;
     }
+
+    /* ── Category comparison table ──────────────────── */
+    .cattable-section {
+      margin-top: 32px;
+    }
+
+    .cattable-wrap {
+      overflow-x: auto;
+      border-radius: 8px;
+      border: 1px solid var(--wiki-panel-border);
+    }
+
+    .cattable {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.78em;
+    }
+
+    .cattable thead th {
+      background: var(--wiki-stat-bg);
+      color: var(--wiki-stat-label);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-size: 0.72em;
+      padding: 9px 12px;
+      white-space: nowrap;
+      cursor: pointer;
+      user-select: none;
+      border-bottom: 2px solid var(--wiki-section-border);
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      transition: color .15s;
+    }
+
+    .cattable thead th:hover {
+      color: var(--wiki-section-title);
+    }
+
+    .cattable thead th .sort-arrow {
+      display: inline-block;
+      margin-left: 4px;
+      opacity: 0.35;
+      font-style: normal;
+    }
+
+    .cattable thead th.sort-asc .sort-arrow,
+    .cattable thead th.sort-desc .sort-arrow {
+      opacity: 1;
+      color: var(--rarity-color, #6ab0f3);
+    }
+
+    .cattable tbody tr {
+      border-bottom: 1px solid var(--wiki-infobox-row-border);
+      transition: background .12s;
+    }
+
+    .cattable tbody tr:last-child {
+      border-bottom: none;
+    }
+
+    .cattable tbody tr:hover {
+      background: var(--wiki-stat-bg);
+    }
+
+    .cattable tbody tr.active-row {
+      background: color-mix(in srgb, var(--rarity-color, #6ab0f3) 10%, var(--wiki-rarity-icon-base));
+    }
+
+    .cattable tbody tr.active-row td {
+      font-weight: 600;
+    }
+
+    .cattable tbody td {
+      padding: 8px 12px;
+      vertical-align: middle;
+      color: var(--wiki-text);
+    }
+
+    .cattable tbody td.stat-cell {
+      color: var(--wiki-stat-value);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .cattable tbody td.stat-cell.highlight {
+      color: var(--rarity-color, #6ab0f3);
+    }
+
+    .cattable-item-cell {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 140px;
+    }
+
+    .cattable-item-cell img {
+      width: 28px;
+      height: 28px;
+      image-rendering: pixelated;
+      flex-shrink: 0;
+    }
+
+    .cattable-item-cell .icon-missing {
+      font-size: 1.1rem;
+      opacity: 0.35;
+      flex-shrink: 0;
+    }
+
+    .cattable-item-link {
+      color: var(--wiki-link, #6ab0f3);
+      text-decoration: none;
+    }
+
+    .cattable-item-link:hover {
+      text-decoration: underline;
+    }
+
+    .cattable-rarity-dot {
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--dot-color, #b0bec5);
+      flex-shrink: 0;
+    }
+
+    .cattable-desc {
+      color: var(--wiki-text-dim);
+      font-size: 0.88em;
+      max-width: 320px;
+    }
   </style>
 </head>
 
@@ -1144,7 +1276,6 @@
                     </table>
                     ${renderCraftingRecipe(cfg)}
                 </div>
-                ${renderUsedIn(cfg)}
             </aside>
 
             <!-- RIGHT: Article body -->
@@ -1168,6 +1299,10 @@
                 ${statsHtml}
             </div>
         </div>
+
+        ${renderUsedIn(cfg)}
+
+        ${renderCategoryTable(cfg, configs)}
 
         <!-- Prev / Next nav -->
         <div class="item-nav">
@@ -1265,6 +1400,143 @@
         <div class="usedin-section">
           <div class="section-title"><i class="fas fa-wrench"></i>&nbsp; Used In</div>
           <div class="usedin-rows">${rows}</div>
+        </div>`;
+    }
+
+    // ── Category comparison table ─────────────────────────────────────────────
+    function renderCategoryTable(cfg, configs) {
+      const peers = configs.filter(c => c.ItemType === cfg.ItemType);
+      if (peers.length <= 1) return '';
+
+      // Determine which stat columns to show based on item type
+      const type = cfg.ItemType;
+      let statCols = [];
+      if (['Sword', 'Bow', 'Staff', 'Wand', 'Trident'].includes(type)) {
+        statCols = [
+          { key: 'damage', label: 'Damage', get: c => (c.SwordConfig || c.BowConfig || c.StaffConfig || c.WandConfig || c.TridentConfig || {}).AttackDamage ?? (c.StaffConfig || {}).MagicDamage ?? null },
+          { key: 'usespeed', label: 'Use Speed', get: c => c.UseSpeed ?? null, fmt: v => v + '/s' },
+        ];
+      } else if (type === 'Pickaxe') {
+        statCols = [
+          { key: 'miningpwr', label: 'Mining Pwr', get: c => (c.PickaxeConfig || {}).MiningPower ?? null },
+          { key: 'damage', label: 'Damage', get: c => (c.PickaxeConfig || {}).AttackDamage ?? null },
+        ];
+      } else if (type === 'Armor') {
+        statCols = [
+          { key: 'defense', label: 'Defense', get: c => (c.ArmorConfig || {}).Defense ?? null },
+          { key: 'slot', label: 'Slot', get: c => { const t = (c.ArmorConfig || {}).ArmorType; return t != null ? ['Helmet', 'Chestplate', 'Leggings'][t] ?? t : null; } },
+        ];
+      } else if (type === 'Wings') {
+        statCols = [
+          { key: 'speed', label: 'Flight Speed', get: c => (c.WingsConfig || {}).FlightSpeed ?? null },
+          { key: 'energy', label: 'Energy Drain', get: c => (c.WingsConfig || {}).EnergyDrainModifier ?? null, fmt: v => v + 'x' },
+        ];
+      } else if (type === 'Shield') {
+        statCols = [
+          { key: 'defense', label: 'Defense', get: c => (c.ShieldConfig || {}).Defense ?? null },
+        ];
+      } else if (['Potion', 'Food', 'Consumable'].includes(type)) {
+        statCols = [
+          { key: 'heal', label: 'Heal / Mana', get: c => { const s = c.ConsumableConfig || c.PotionConfig || {}; return s.HealthRestore ?? s.ManaRestore ?? null; } },
+        ];
+      }
+
+      // Sort state: default by name asc
+      let sortKey = 'name', sortDir = 1;
+
+      const tableId = 'cattable-' + Math.random().toString(36).slice(2);
+
+      function formatStat(col, item) {
+        const val = col.get(item);
+        if (val == null) return '—';
+        return col.fmt ? col.fmt(val) : val;
+      }
+
+      function sortedRows(key, dir) {
+        return [...peers].sort((a, b) => {
+          let va, vb;
+          if (key === 'name') { va = a.Name; vb = b.Name; }
+          else if (key === 'rarity') {
+            const order = ['Common', 'Uncommon', 'Rare', 'Epic', 'Legendary'];
+            va = order.indexOf(a.Rarity); vb = order.indexOf(b.Rarity);
+          } else {
+            const col = statCols.find(c => c.key === key);
+            if (!col) { va = a.Name; vb = b.Name; }
+            else { va = col.get(a) ?? -Infinity; vb = col.get(b) ?? -Infinity; }
+          }
+          if (va < vb) return -dir;
+          if (va > vb) return dir;
+          return 0;
+        });
+      }
+
+      function buildTableBody(key, dir) {
+        return sortedRows(key, dir).map(item => {
+          const isActive = item.ItemID === cfg.ItemID;
+          const rc = RARITY_COLOR[item.Rarity] || '#b0bec5';
+          const iUrl = iconUrl(item.ItemID);
+          const imgHtml = iUrl
+            ? `<img src="${iUrl}" alt="" onerror="this.style.display='none'" />`
+            : `<span class="icon-missing">📦</span>`;
+          const statCells = statCols.map(col => {
+            const val = col.get(item);
+            const display = val != null ? (col.fmt ? col.fmt(val) : val) : '—';
+            const isHi = val != null && col.key === (statCols[0] || {}).key;
+            return `<td class="stat-cell${isHi ? ' highlight' : ''}">${display}</td>`;
+          }).join('');
+          const descText = (item.Description || '').split('\n')[0] || '';
+          const shortDesc = descText.length > 80 ? descText.slice(0, 77) + '…' : descText;
+          const rarityLabel = item.Rarity || '—';
+          return `<tr class="${isActive ? 'active-row' : ''}" data-id="${item.ItemID}">
+            <td><div class="cattable-item-cell">
+              ${imgHtml}
+              <span class="cattable-rarity-dot" style="--dot-color:${rc}"></span>
+              <a class="cattable-item-link" href="item.html?id=${encodeURIComponent(item.ItemID)}">${item.Name}</a>
+            </div></td>
+            <td style="color:${rc};font-weight:600;white-space:nowrap">${rarityLabel}</td>
+            ${statCells}
+            <td class="cattable-desc">${shortDesc}</td>
+          </tr>`;
+        }).join('');
+      }
+
+      function buildHeaderCols(key, dir) {
+        const cols = [
+          { key: 'name', label: 'Item' },
+          { key: 'rarity', label: 'Rarity' },
+          ...statCols.map(c => ({ key: c.key, label: c.label }))
+        ];
+        return cols.map(col => {
+          const active = col.key === key;
+          const arrow = active ? (dir === 1 ? '▲' : '▼') : '⇅';
+          const cls = active ? (dir === 1 ? 'sort-asc' : 'sort-desc') : '';
+          return `<th class="${cls}" data-col="${col.key}">${col.label} <i class="sort-arrow">${arrow}</i></th>`;
+        }).join('') + '<th>Description</th>';
+      }
+
+      // Attach sort event after render via MutationObserver trick: use event delegation on table
+      setTimeout(() => {
+        const table = document.getElementById(tableId);
+        if (!table) return;
+        table.querySelector('thead').addEventListener('click', e => {
+          const th = e.target.closest('th[data-col]');
+          if (!th) return;
+          const col = th.dataset.col;
+          if (col === sortKey) { sortDir *= -1; } else { sortKey = col; sortDir = 1; }
+          table.querySelector('thead tr').innerHTML = buildHeaderCols(sortKey, sortDir);
+          table.querySelector('tbody').innerHTML = buildTableBody(sortKey, sortDir);
+        });
+      }, 0);
+
+      return `
+        <div class="cattable-section">
+          <div class="section-title"><i class="fas fa-list"></i>&nbsp; All ${cfg.ItemType}s (${peers.length})</div>
+          <div class="cattable-wrap">
+            <table class="cattable" id="${tableId}">
+              <thead><tr>${buildHeaderCols(sortKey, sortDir)}</tr></thead>
+              <tbody>${buildTableBody(sortKey, sortDir)}</tbody>
+            </table>
+          </div>
         </div>`;
     }
 
