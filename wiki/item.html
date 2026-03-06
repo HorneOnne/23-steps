@@ -1183,8 +1183,14 @@
       if (idx === -1) { showNotFound(`Item "${itemId}" not found.`); return; }
 
       const cfg = configs[idx];
-      const prevCfg = idx > 0 ? configs[idx - 1] : null;
-      const nextCfg = idx < configs.length - 1 ? configs[idx + 1] : null;
+
+      // Sort same-category items by name for prev/next navigation
+      const catSorted = configs
+        .filter(c => c.ItemType === cfg.ItemType)
+        .sort((a, b) => a.Name.localeCompare(b.Name));
+      const catIdx = catSorted.findIndex(c => c.ItemID === itemId);
+      const prevCfg = catIdx > 0 ? catSorted[catIdx - 1] : null;
+      const nextCfg = catIdx < catSorted.length - 1 ? catSorted[catIdx + 1] : null;
 
       // Set page title + SEO meta
       const pageTitle = `${cfg.Name} \u2014 Mine & Dungeon Wiki | 23-Steps`;

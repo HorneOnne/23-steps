@@ -806,8 +806,8 @@
       catalog.innerHTML = '';
 
       CAT_ORDER.forEach(cat => {
-        const items = groups[cat];
-        if (!items || !items.length) return;
+        const items = (groups[cat] || []).slice().sort((a, b) => a.Name.localeCompare(b.Name));
+        if (!items.length) return;
         const meta = CAT_META[cat];
 
         const section = document.createElement('section');
