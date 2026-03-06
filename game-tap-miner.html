@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tap Miner | 23-Steps</title>
 
-    <link rel="icon" type="image/png" href="icon.png" />
+    <link rel="icon" type="image/png" href="icon2.png" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="site-theme.css" />
+    <script src="site-theme.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <style>
@@ -15,15 +17,15 @@
             max-width: 900px;
             margin: 40px auto;
             padding: 20px;
-            background-color: #101824;
-            border: 1px solid #222a33;
+            background-color: var(--site-panel-bg);
+            border: 1px solid var(--site-panel-border);
             border-radius: 10px;
-            color: #c8d1e1;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+            color: var(--site-text-muted);
+            box-shadow: var(--site-panel-shadow);
         }
 
         .game-detail h2 {
-            color: #6ab0f3;
+            color: var(--site-accent);
             font-size: 1.8em;
             margin-bottom: 20px;
         }
@@ -45,8 +47,8 @@
         .back-link {
             display: inline-block;
             margin-top: 20px;
-            background-color: #2b3a59;
-            color: white;
+            background-color: var(--site-btn-bg);
+            color: var(--site-btn-text);
             padding: 8px 16px;
             border-radius: 6px;
             text-decoration: none;
@@ -54,17 +56,27 @@
         }
 
         .back-link:hover {
-            background-color: #3c4f7c;
+            background-color: var(--site-btn-hover);
         }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>23-STEPS</h1>
+        <h1>
+            <a href="index.html">
+                <img src="images/logo.png" alt="23-Steps" class="logo" />
+                <span class="sr-only">23-Steps</span>
+            </a>
+        </h1>
         <nav>
             <a href="index.html">HOME</a>
             <a href="games.html" class="active">GAMES</a>
+            <a href="wiki/index.html">WIKI</a>
+            <button class="theme-toggle" title="Toggle light/dark mode" aria-label="Toggle theme">
+                <i class="fas fa-sun icon-sun"></i>
+                <i class="fas fa-moon icon-moon"></i>
+            </button>
         </nav>
     </header>
 

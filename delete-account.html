@@ -1,40 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Account Deletion - Mine & Dungeon | 23-Steps</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="site-theme.css" />
+  <script src="site-theme.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="icon" type="image/png" href="icon2.png" />
   <style>
     .policy-container {
       max-width: 900px;
       margin: 40px auto;
       padding: 30px;
-      background-color: #101824;
-      border: 1px solid #222a33;
+      background-color: var(--site-panel-bg);
+      border: 1px solid var(--site-panel-border);
       border-radius: 10px;
-      color: #c8d1e1;
+      color: var(--site-text-muted);
       font-size: 0.95em;
       line-height: 1.6;
     }
 
     .policy-container h2 {
-      color: #6ab0f3;
+      color: var(--site-accent);
       margin-top: 0;
       font-size: 1.8em;
     }
 
     .policy-container h3 {
-      color: #7ec0ff;
+      color: var(--site-accent);
       margin-top: 25px;
       font-size: 1.2em;
     }
 
     .app-info {
-      background-color: #1a2332;
+      background-color: var(--site-accent-bg);
       padding: 15px;
-      border-left: 4px solid #6ab0f3;
+      border-left: 4px solid var(--site-accent);
       margin-bottom: 20px;
       border-radius: 4px;
     }
@@ -44,7 +48,7 @@
     }
 
     .steps {
-      background-color: #1a2332;
+      background-color: var(--site-accent-bg);
       padding: 20px;
       border-radius: 6px;
       margin: 20px 0;
@@ -61,7 +65,7 @@
     }
 
     .contact-box {
-      background-color: #1a2332;
+      background-color: var(--site-accent-bg);
       padding: 15px;
       border-radius: 6px;
       margin-top: 20px;
@@ -69,19 +73,19 @@
     }
 
     .contact-box a {
-      color: #6ab0f3;
+      color: var(--site-accent);
       text-decoration: none;
       font-weight: bold;
       font-size: 1.1em;
     }
 
     .contact-box a:hover {
-      color: #7ec0ff;
+      color: var(--site-accent-hover);
       text-decoration: underline;
     }
 
     .data-list {
-      background-color: #1a2332;
+      background-color: var(--site-accent-bg);
       padding: 15px 20px;
       border-radius: 6px;
       margin: 15px 0;
@@ -97,14 +101,15 @@
     }
 
     .warning {
-      background-color: #3d2a1f;
-      border-left: 4px solid #d9864f;
+      background-color: var(--site-warning-bg);
+      border-left: 4px solid var(--site-warning-border);
       padding: 15px;
       margin: 20px 0;
       border-radius: 4px;
     }
   </style>
 </head>
+
 <body>
   <header>
     <h1>
@@ -116,6 +121,11 @@
     <nav>
       <a href="index.html">HOME</a>
       <a href="games.html">GAMES</a>
+      <a href="wiki/index.html">WIKI</a>
+      <button class="theme-toggle" title="Toggle light/dark mode" aria-label="Toggle theme">
+        <i class="fas fa-sun icon-sun"></i>
+        <i class="fas fa-moon icon-moon"></i>
+      </button>
     </nav>
   </header>
 
@@ -129,7 +139,8 @@
         <p><strong>Last Updated:</strong> February 2026</p>
       </div>
 
-      <p>If you want to delete your account and all associated data from <strong>Mine & Dungeon</strong>, you can do so by following the instructions below.</p>
+      <p>If you want to delete your account and all associated data from <strong>Mine & Dungeon</strong>, you can do so
+        by following the instructions below.</p>
 
       <h3>How to Delete Your Account</h3>
 
@@ -151,7 +162,8 @@
       <div class="contact-box">
         <p>Email us at:</p>
         <a href="mailto:ngcognpal@gmail.com">ngcognpal@gmail.com</a>
-        <p style="margin-top: 10px; font-size: 0.9em; color: #99aab5;">Please include "Account Deletion - Mine & Dungeon" in the subject line</p>
+        <p style="margin-top: 10px; font-size: 0.9em; color: #99aab5;">Please include "Account Deletion - Mine &
+          Dungeon" in the subject line</p>
       </div>
 
       <h3>What Data Will Be Deleted</h3>
@@ -169,15 +181,19 @@
       </div>
 
       <div class="warning">
-        <p><strong>⚠️ Important:</strong> Account deletion is permanent and cannot be undone. All game progress and data will be lost. Please make sure you want to proceed before requesting deletion.</p>
+        <p><strong>⚠️ Important:</strong> Account deletion is permanent and cannot be undone. All game progress and data
+          will be lost. Please make sure you want to proceed before requesting deletion.</p>
       </div>
 
       <h3>Processing Time</h3>
-      <p>When we receive your deletion request, we will process it and delete your account and associated data within a reasonable timeframe, typically within 30 days.</p>
+      <p>When we receive your deletion request, we will process it and delete your account and associated data within a
+        reasonable timeframe, typically within 30 days.</p>
 
       <h3>Questions or Concerns</h3>
-      <p>If you have any questions about the account deletion process or data removal, please contact us at <a href="mailto:ngcognpal@gmail.com" style="color: #6ab0f3; text-decoration: none;">ngcognpal@gmail.com</a></p>
+      <p>If you have any questions about the account deletion process or data removal, please contact us at <a
+          href="mailto:ngcognpal@gmail.com">ngcognpal@gmail.com</a></p>
 
+    </div>
   </main>
 
   <footer>
@@ -187,4 +203,5 @@
     <a href="delete-account.html">Delete Account</a>
   </footer>
 </body>
+
 </html>

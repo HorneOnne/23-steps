@@ -1,0 +1,195 @@
+/* ═══════════════════════════════════════════════════════════════════════════════
+   site-theme.css — Shared Light / Dark theme tokens for 23-Steps main site
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+/* ── Dark Mode (default) ─────────────────────────────────────────────────── */
+
+:root {
+    --site-bg: #2b2b2b;
+    --site-bg-image: url('background-loop.png');
+    --site-bg-overlay: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+    --site-text: white;
+    --site-text-muted: #c8d1e1;
+    --site-text-dim: #99aab5;
+
+    /* Header */
+    --site-header-bg: #1f1f2e;
+    --site-header-border: #333;
+    --site-header-title: #99ccff;
+    --site-nav-text: #ccc;
+    --site-nav-active-bg: #2b3a59;
+    --site-nav-active-text: #fff;
+    --site-nav-hover-text: #fff;
+
+    /* Content panels / cards */
+    --site-panel-bg: #101824;
+    --site-panel-border: #222a33;
+    --site-panel-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    --site-accent: #6ab0f3;
+    --site-accent-hover: #7ec0ff;
+    --site-accent-bg: #1a2332;
+    --site-accent-border: #26354a;
+
+    /* Buttons */
+    --site-btn-bg: #2b3a59;
+    --site-btn-text: white;
+    --site-btn-hover: #3c4f7c;
+    --site-store-btn-bg: #3ddc84;
+    --site-store-btn-text: #000;
+    --site-store-btn-hover: #2ebd70;
+    --site-store-btn-hover-text: white;
+
+    /* Game details expand */
+    --site-details-bg: #0f1624;
+
+    /* Tags / badges */
+    --site-tag-bg: #2a3a5c;
+    --site-tag-text: #c8e6ff;
+    --site-coming-soon-bg: #1a2332;
+    --site-coming-soon-border: #2b3a59;
+    --site-coming-soon-text: #6a7f9e;
+
+    /* Info boxes (homepage) */
+    --site-info-heading: #6ab0f3;
+    --site-info-heading-border: #3a7ee0;
+
+    /* Warning callout */
+    --site-warning-bg: #3d2a1f;
+    --site-warning-border: #d9864f;
+
+    /* Footer */
+    --site-footer-bg: #1f1f2e;
+    --site-footer-border: #333;
+    --site-footer-text: #ccc;
+    --site-footer-link: #79aaff;
+
+    /* Links */
+    --site-link: #79aaff;
+    --site-link-hover: #99ccff;
+
+    /* Theme toggle */
+    --site-toggle-bg: #1a2535;
+    --site-toggle-border: #2b3a59;
+    --site-toggle-hover: #2b3a59;
+    --site-toggle-icon: #fbbf24;
+}
+
+/* ── Light Mode ──────────────────────────────────────────────────────────── */
+
+[data-theme="light"] {
+    --site-bg: #e8e4d4;
+    --site-bg-image: none;
+    --site-bg-overlay: transparent;
+    --site-text: #333;
+    --site-text-muted: #555;
+    --site-text-dim: #777;
+
+    /* Header — green bar (matching wiki) */
+    --site-header-bg: #2E6B2E;
+    --site-header-border: #1d4d1d;
+    --site-header-title: #fff;
+    --site-nav-text: rgba(255, 255, 255, 0.85);
+    --site-nav-active-bg: rgba(0, 0, 0, 0.2);
+    --site-nav-active-text: #fff;
+    --site-nav-hover-text: #fff;
+
+    /* Content panels / cards */
+    --site-panel-bg: #fff;
+    --site-panel-border: #d4cdb8;
+    --site-panel-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --site-accent: #2c6e2c;
+    --site-accent-hover: #3d8e3d;
+    --site-accent-bg: #f0ede0;
+    --site-accent-border: #c8c0a8;
+
+    /* Buttons */
+    --site-btn-bg: #2c6e2c;
+    --site-btn-text: #fff;
+    --site-btn-hover: #3d8e3d;
+    --site-store-btn-bg: #2c6e2c;
+    --site-store-btn-text: #fff;
+    --site-store-btn-hover: #3d8e3d;
+    --site-store-btn-hover-text: #fff;
+
+    /* Game details expand */
+    --site-details-bg: #f5f2e8;
+
+    /* Tags / badges */
+    --site-tag-bg: #dceadc;
+    --site-tag-text: #2c5e2c;
+    --site-coming-soon-bg: #f0f0f0;
+    --site-coming-soon-border: #ccc;
+    --site-coming-soon-text: #aaa;
+
+    /* Info boxes (homepage) */
+    --site-info-heading: #2c6e2c;
+    --site-info-heading-border: #2c6e2c;
+
+    /* Warning callout */
+    --site-warning-bg: #fff3e0;
+    --site-warning-border: #e6a352;
+
+    /* Footer */
+    --site-footer-bg: #2E6B2E;
+    --site-footer-border: #1d4d1d;
+    --site-footer-text: rgba(255, 255, 255, 0.85);
+    --site-footer-link: #c3f0c3;
+
+    /* Links */
+    --site-link: #2c6e2c;
+    --site-link-hover: #3d8e3d;
+
+    /* Theme toggle */
+    --site-toggle-bg: rgba(255, 255, 255, 0.2);
+    --site-toggle-border: rgba(255, 255, 255, 0.3);
+    --site-toggle-hover: rgba(255, 255, 255, 0.35);
+    --site-toggle-icon: #fff;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   THEME TOGGLE BUTTON
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    border: 1px solid var(--site-toggle-border);
+    background: var(--site-toggle-bg);
+    color: var(--site-toggle-icon);
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background 0.2s, border-color 0.2s, transform 0.15s;
+    flex-shrink: 0;
+    margin-left: 8px;
+}
+
+.theme-toggle:hover {
+    background: var(--site-toggle-hover);
+    transform: scale(1.08);
+}
+
+.theme-toggle:active {
+    transform: scale(0.95);
+}
+
+/* Show/hide icons */
+.theme-toggle .icon-sun {
+    display: none;
+}
+
+.theme-toggle .icon-moon {
+    display: inline;
+}
+
+[data-theme="light"] .theme-toggle .icon-sun {
+    display: inline;
+}
+
+[data-theme="light"] .theme-toggle .icon-moon {
+    display: none;
+}

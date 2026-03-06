@@ -1,28 +1,30 @@
 /* === PAGE LAYOUT === */
-html, body {
+html,
+body {
   margin: 0;
-    font-family: Arial, sans-serif;
-    background-image: url('background-loop.png');
-    background-repeat: repeat;
-    background-size: 256px 256px;
-    background-color: #2b2b2b;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    position: relative;
-    z-index: 0;
+  font-family: Arial, sans-serif;
+  background-image: var(--site-bg-image);
+  background-repeat: repeat;
+  background-size: 256px 256px;
+  background-color: var(--site-bg);
+  color: var(--site-text);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  z-index: 0;
 }
+
 body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.2));
-    pointer-events: none;
-    z-index: 1;
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--site-bg-overlay);
+  pointer-events: none;
+  z-index: 1;
 }
 
 main {
@@ -31,22 +33,22 @@ main {
 
 /* HEADER */
 header {
-    background-color: #1f1f2e;
-    height: 60px;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    border-bottom: 1px solid #333;
+  background-color: var(--site-header-bg);
+  height: 60px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  border-bottom: 1px solid var(--site-header-border);
 }
 
 header h1 {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 2em;
-    color: #99ccff;
-    margin: 0;
-    display: flex;
-    align-items: center;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2em;
+  color: var(--site-header-title);
+  margin: 0;
+  display: flex;
+  align-items: center;
 }
 
 /* === NAVIGATION === */
@@ -56,7 +58,7 @@ nav {
 }
 
 nav a {
-  color: #ccc;
+  color: var(--site-nav-text);
   text-decoration: none;
   font-weight: bold;
   padding: 0 20px;
@@ -66,13 +68,13 @@ nav a {
 }
 
 nav a.active {
-  background-color: #2b3a59;
-  color: white;
+  background-color: var(--site-nav-active-bg);
+  color: var(--site-nav-active-text);
 }
 
 nav a:hover:not(.active) {
-  color: #fff;
-  text-shadow: 0 0 2px #aaa;
+  color: var(--site-nav-hover-text);
+  text-shadow: 0 0 2px rgba(170, 170, 170, 0.5);
 }
 
 /* === HERO IMAGE === */
@@ -86,7 +88,7 @@ nav a:hover:not(.active) {
   width: 80%;
   max-width: 900px;
   border-radius: 6px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  box-shadow: var(--site-panel-shadow);
   border: none;
 }
 
@@ -100,10 +102,10 @@ nav a:hover:not(.active) {
 }
 
 .info-box {
-  background-color: #101824;
+  background-color: var(--site-panel-bg);
   padding: 20px;
   width: 300px;
-  border: 1px solid #222a33;
+  border: 1px solid var(--site-panel-border);
   border-radius: 10px;
 }
 
@@ -111,12 +113,12 @@ nav a:hover:not(.active) {
   font-size: 1.25em;
   margin: 0;
   padding: 0 0 8px 0;
-  color: #6ab0f3;
+  color: var(--site-info-heading);
   display: flex;
   align-items: center;
   gap: 10px;
   font-weight: bold;
-    border-bottom: 2px solid #3a7ee0;
+  border-bottom: 2px solid var(--site-info-heading-border);
 }
 
 
@@ -131,25 +133,29 @@ nav a:hover:not(.active) {
 .info-box p {
   font-size: 0.95em;
   line-height: 1.6;
-   color: #c8d1e1;
+  color: var(--site-text-muted);
   margin-bottom: 1em;
 }
 
 /* FOOTER */
 footer {
-    text-align: center;
-    padding: 10px;
-    font-size: 0.8em;
-    color: #ccc;
-    background-color: #1f1f2e;
-    border-top: 1px solid #333;
-    margin-top: auto;
-    font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.8em;
+  color: var(--site-footer-text);
+  background-color: var(--site-footer-bg);
+  border-top: 1px solid var(--site-footer-border);
+  margin-top: auto;
+  font-weight: bold;
+}
+
+footer a {
+  color: var(--site-footer-link);
 }
 
 /* === LINKS === */
 a {
-   color: #79aaff;
+  color: var(--site-link);
   text-decoration: none;
 }
 
@@ -175,7 +181,7 @@ header .logo {
   height: 1px;
   padding: 0;
   overflow: hidden;
-  clip: rect(0,0,0,0);
+  clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
 }

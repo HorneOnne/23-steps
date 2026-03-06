@@ -1,33 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy | 23-Steps</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="site-theme.css" />
+  <script src="site-theme.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="icon" type="image/png" href="icon2.png" />
   <style>
     .policy-container {
       max-width: 900px;
       margin: 40px auto;
       padding: 20px;
-      background-color: #101824;
-      border: 1px solid #222a33;
+      background-color: var(--site-panel-bg);
+      border: 1px solid var(--site-panel-border);
       border-radius: 10px;
-      color: #c8d1e1;
+      color: var(--site-text-muted);
       font-size: 0.95em;
       line-height: 1.6;
     }
 
     .policy-container h2 {
-      color: #6ab0f3;
+      color: var(--site-accent);
       margin-top: 0;
+    }
+
+    .policy-container h3 {
+      color: var(--site-accent);
+    }
+
+    .policy-container a {
+      color: var(--site-link);
     }
   </style>
 </head>
+
 <body>
   <header>
-      <h1>
+    <h1>
       <a href="index.html">
         <img src="images/logo.png" alt="23-Steps" class="logo" />
         <span class="sr-only">23-Steps</span>
@@ -36,6 +49,11 @@
     <nav>
       <a href="index.html">HOME</a>
       <a href="games.html">GAMES</a>
+      <a href="wiki/index.html">WIKI</a>
+      <button class="theme-toggle" title="Toggle light/dark mode" aria-label="Toggle theme">
+        <i class="fas fa-sun icon-sun"></i>
+        <i class="fas fa-moon icon-moon"></i>
+      </button>
     </nav>
   </header>
 
@@ -45,14 +63,18 @@
 
       <p><strong>Effective Date:</strong> January 1, 2026</p>
 
-      <p>23-Steps ("we", "us", or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and disclose information when you play our games or interact with our services.</p>
+      <p>23-Steps ("we", "us", or "our") is committed to protecting your privacy. This Privacy Policy explains how we
+        collect, use, and disclose information when you play our games or interact with our services.</p>
 
       <h3>1. Information We Collect</h3>
       <ul>
-        <li><strong>Device Information:</strong> such as device model, operating system, and country (used for analytics or debugging).</li>
+        <li><strong>Device Information:</strong> such as device model, operating system, and country (used for analytics
+          or debugging).</li>
         <li><strong>Game Data:</strong> such as your progress, settings, achievements, or high scores.</li>
-        <li><strong>Identifiers:</strong> such as a unique user ID, Google Play Games ID (if linked), or PlayFab ID (if used).</li>
-        <li><strong>Ad Data:</strong> if ads are used, anonymous data may be collected by third-party services (like AdMob or Unity Ads) to display relevant ads.</li>
+        <li><strong>Identifiers:</strong> such as a unique user ID, Google Play Games ID (if linked), or PlayFab ID (if
+          used).</li>
+        <li><strong>Ad Data:</strong> if ads are used, anonymous data may be collected by third-party services (like
+          AdMob or Unity Ads) to display relevant ads.</li>
       </ul>
 
       <h3>2. How We Use the Information</h3>
@@ -72,7 +94,8 @@
       </ul>
 
       <h3>4. Children's Privacy</h3>
-      <p>Our games are not directed to children under 13. If we discover that we have unintentionally collected personal data from a child, we will delete it promptly.</p>
+      <p>Our games are not directed to children under 13. If we discover that we have unintentionally collected personal
+        data from a child, we will delete it promptly.</p>
 
       <h3>5. Your Rights</h3>
       <p>You may contact us at any time to:</p>
@@ -80,10 +103,12 @@
         <li>Request data deletion</li>
         <li>Request access to your saved data (if applicable)</li>
       </ul>
-      <p>For instructions on how to delete your account and data, please visit our <a href="delete-account.html" style="color: #6ab0f3; font-weight: bold;">Account Deletion page</a>.</p>
+      <p>For instructions on how to delete your account and data, please visit our <a href="delete-account.html">Account
+          Deletion page</a>.</p>
 
       <h3>6. Changes to This Policy</h3>
-      <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with the updated date.</p>
+      <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with the updated
+        date.</p>
 
       <h3>7. Contact Us</h3>
       <p>If you have any questions or requests regarding your privacy, contact us at:</p>
@@ -98,4 +123,5 @@
     <a href="delete-account.html">Delete Account</a>
   </footer>
 </body>
+
 </html>

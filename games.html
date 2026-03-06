@@ -8,6 +8,8 @@
 
     <link rel="icon" type="image/png" href="icon2.png" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="site-theme.css" />
+    <script src="site-theme.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <style>
@@ -21,11 +23,11 @@
         }
 
         .game-item {
-            background-color: #101824;
-            border: 1px solid #222a33;
+            background-color: var(--site-panel-bg);
+            border: 1px solid var(--site-panel-border);
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+            box-shadow: var(--site-panel-shadow);
         }
 
         .game-header {
@@ -43,20 +45,20 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            color: #c8d1e1;
+            color: var(--site-text-muted);
         }
 
         .game-info h2 {
             margin: 0 0 10px;
             font-size: 1.5em;
-            color: #6ab0f3;
+            color: var(--site-accent);
         }
 
         .game-info button {
             margin-top: 10px;
             padding: 8px 16px;
-            background-color: #2b3a59;
-            color: white;
+            background-color: var(--site-btn-bg);
+            color: var(--site-btn-text);
             border: none;
             border-radius: 6px;
             font-weight: bold;
@@ -65,17 +67,17 @@
         }
 
         .game-info button:hover {
-            background-color: #3c4f7c;
+            background-color: var(--site-btn-hover);
         }
 
         .game-details {
             max-height: 0;
             overflow: hidden;
             padding: 0 20px;
-            background-color: #0f1624;
+            background-color: var(--site-details-bg);
             transition: max-height 0.4s ease, padding 0.4s ease;
             font-size: 0.95em;
-            color: #c8d1e1;
+            color: var(--site-text-muted);
             line-height: 1.6;
         }
 
@@ -88,8 +90,8 @@
             display: inline-block;
             margin-top: 10px;
             padding: 10px 18px;
-            background-color: #3ddc84;
-            color: #000;
+            background-color: var(--site-store-btn-bg);
+            color: var(--site-store-btn-text);
             font-weight: bold;
             text-decoration: none;
             border-radius: 6px;
@@ -102,8 +104,8 @@
         }
 
         .store-button:hover {
-            background-color: #2ebd70;
-            color: white;
+            background-color: var(--site-store-btn-hover);
+            color: var(--site-store-btn-hover-text);
         }
 
         @media (max-width: 768px) {
@@ -141,6 +143,10 @@
             <a href="index.html">HOME</a>
             <a href="games.html" class="active">GAMES</a>
             <a href="wiki/index.html">WIKI</a>
+            <button class="theme-toggle" title="Toggle light/dark mode" aria-label="Toggle theme">
+                <i class="fas fa-sun icon-sun"></i>
+                <i class="fas fa-moon icon-moon"></i>
+            </button>
         </nav>
     </header>
 
@@ -159,14 +165,16 @@
                 <div class="game-details">
                     <div style="margin-bottom: 1em;">
                         <p style="margin: 0 0 10px;"><strong>Mine & Dungeon</strong> combines <span
-                                style="color: #6ab0f3;">mining mechanics with dungeon crawling action</span>. Gather
+                                style="color: var(--site-accent);">mining mechanics with dungeon crawling action</span>.
+                            Gather
                             resources by day, fight monsters by night, and craft legendary equipment to survive
                             increasingly challenging dungeons.</p>
                     </div>
 
                     <div
-                        style="background-color: #141e30; border: 1px solid #26354a; border-radius: 8px; padding: 15px; margin-bottom: 1em;">
-                        <h3 style="color: #79aaff; margin-top: 0; font-size: 1.1em;"><i class="fas fa-gamepad"></i>
+                        style="background-color: var(--site-accent-bg); border: 1px solid var(--site-accent-border); border-radius: 8px; padding: 15px; margin-bottom: 1em;">
+                        <h3 style="color: var(--site-accent); margin-top: 0; font-size: 1.1em;"><i
+                                class="fas fa-gamepad"></i>
                             Features</h3>
                         <ul style="padding-left: 20px; margin: 0;">
                             <li>Voxel-based mining and combat</li>
@@ -180,9 +188,9 @@
                     <div style="margin-bottom: 1.2em;">
                         <strong>Platforms:</strong>
                         <span
-                            style="background-color: #2a3a5c; color: #c8e6ff; padding: 4px 10px; border-radius: 5px; margin-left: 8px;">Android</span>
+                            style="background-color: var(--site-tag-bg); color: var(--site-tag-text); padding: 4px 10px; border-radius: 5px; margin-left: 8px;">Android</span>
                         <span
-                            style="background-color: #2a3a5c; color: #c8e6ff; padding: 4px 10px; border-radius: 5px; margin-left: 8px;">iOS</span>
+                            style="background-color: var(--site-tag-bg); color: var(--site-tag-text); padding: 4px 10px; border-radius: 5px; margin-left: 8px;">iOS</span>
                     </div>
 
                     <a href="https://play.google.com/store/apps/details?id=com.TwentyThreeSteps.MineDungeon"
@@ -199,7 +207,7 @@
                     <img src="images/tap-miner.png" alt="Tap Miner" />
                     <div class="game-info">
                         <h2>Tap Miner <span
-                                style="font-size:0.45em;background:#1a2332;border:1px solid #2b3a59;color:#6a7f9e;padding:3px 8px;border-radius:4px;vertical-align:middle;font-family:Arial,sans-serif;">COMING
+                                style="font-size:0.45em;background:var(--site-coming-soon-bg);border:1px solid var(--site-coming-soon-border);color:var(--site-coming-soon-text);padding:3px 8px;border-radius:4px;vertical-align:middle;font-family:Arial,sans-serif;">COMING
                                 SOON</span></h2>
                         <p>Tap to dig, collect resources, and automate your mining empire in this voxel-style idle game.
                         </p>
@@ -209,13 +217,15 @@
                 <div class="game-details">
                     <div style="margin-bottom: 1em;">
                         <p style="margin: 0 0 10px;"><strong>Tap Miner</strong> is a <span
-                                style="color: #6ab0f3;">blocky idle mining game</span>. Dig into layers of stone, unlock
+                                style="color: var(--site-accent);">blocky idle mining game</span>. Dig into layers of
+                            stone, unlock
                             powerful upgrades, and automate your tools to progress even while offline.</p>
                     </div>
 
                     <div
-                        style="background-color: #141e30; border: 1px solid #26354a; border-radius: 8px; padding: 15px; margin-bottom: 1em;">
-                        <h3 style="color: #79aaff; margin-top: 0; font-size: 1.1em;"><i class="fas fa-tools"></i>
+                        style="background-color: var(--site-accent-bg); border: 1px solid var(--site-accent-border); border-radius: 8px; padding: 15px; margin-bottom: 1em;">
+                        <h3 style="color: var(--site-accent); margin-top: 0; font-size: 1.1em;"><i
+                                class="fas fa-tools"></i>
                             Features</h3>
                         <ul style="padding-left: 20px; margin: 0;">
                             <li>Voxel-inspired pixel art</li>
@@ -229,9 +239,9 @@
                     <div style="margin-bottom: 1.2em;">
                         <strong>Platforms:</strong>
                         <span
-                            style="background-color: #2a3a5c; color: #c8e6ff; padding: 4px 10px; border-radius: 5px; margin-left: 8px;">Android</span>
+                            style="background-color: var(--site-tag-bg); color: var(--site-tag-text); padding: 4px 10px; border-radius: 5px; margin-left: 8px;">Android</span>
                         <span
-                            style="background-color: #2a3a5c; color: #c8e6ff; padding: 4px 10px; border-radius: 5px; margin-left: 8px;">iOS</span>
+                            style="background-color: var(--site-tag-bg); color: var(--site-tag-text); padding: 4px 10px; border-radius: 5px; margin-left: 8px;">iOS</span>
                     </div>
 
                     <a href="https://play.google.com/store/apps/details?id=com.yourcompany.tapminer" target="_blank"
