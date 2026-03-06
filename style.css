@@ -3,10 +3,9 @@ html,
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background-color: var(--site-bg);
   background-image: var(--site-bg-image);
   background-repeat: repeat;
-  background-size: 256px 256px;
-  background-color: var(--site-bg);
   color: var(--site-text);
   display: flex;
   flex-direction: column;
