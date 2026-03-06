@@ -18,7 +18,7 @@ function Sync-Icons($source, $dest, $type) {
         $count = 0
 
         foreach ($file in $files) {
-            $destFile = Join-Path $dest $file.Name
+            $destFile = Join-Path $dest $file.Name.ToLower()
             Copy-Item -Path $file.FullName -Destination $destFile -Force
             $count++
         }

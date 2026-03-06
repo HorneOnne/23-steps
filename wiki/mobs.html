@@ -887,7 +887,7 @@
     function buildCard(m) {
       var hostile = m.AIConfig.IsHostileToPlayer;
       var cls = hostile ? 'hostile-card' : 'neutral-card';
-      var imgSrc = 'assets/mobs/' + m.MobID + '.png';
+      var imgSrc = 'assets/mobs/' + m.MobID.toLowerCase() + '.png';
       return [
         '<div class="mob-card ' + cls + '" onclick="location.href=\'mob.html?id=' + m.MobID + '\'" style="cursor:pointer">',
         '<div class="mob-icon-wrap">',
@@ -929,10 +929,8 @@
         return s && f;
       });
       mobs.sort(function (a, b) {
-        if (sort === 'level') return a.Level - b.Level;
         if (sort === 'hp') return a.HealthConfig.MaxHealth - b.HealthConfig.MaxHealth;
         if (sort === 'dmg') return a.CombatConfig.Damage - b.CombatConfig.Damage;
-        if (sort === 'exp') return a.LootConfig.BaseExperience - b.LootConfig.BaseExperience;
         return a.MobName.localeCompare(b.MobName);
       });
       render(mobs);
