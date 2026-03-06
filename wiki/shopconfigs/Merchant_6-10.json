@@ -1,0 +1,74 @@
+{
+  "ShopConfigs": [
+    {
+      "ConfigName": "Merchant_6-10",
+      "Description": "General store with common items and arrows",
+      "DefaultShopSlots": 6,
+      "AllowDuplicates": false,
+      "BuyPriceMultiplier": 1.0,
+      "SellPriceMultiplier": 1.0,
+      "AvailableItems": [
+        {
+          "ItemID": "HealthPotionI",
+          "Quantity": 1,
+          "MaxStock": 3,
+          "HasUnlimitedStock": false,
+          "UseItemValueManagerPrice": true,
+          "OverridePrice": 0.0,
+          "PriceMultiplier": 1.0,
+          "SpawnWeight": 1.0
+        },
+        {
+          "ItemID": "ManaPotionI",
+          "Quantity": 1,
+          "MaxStock": 3,
+          "HasUnlimitedStock": false,
+          "UseItemValueManagerPrice": true,
+          "OverridePrice": 0.0,
+          "PriceMultiplier": 1.0,
+          "SpawnWeight": 1.0
+        },
+        {
+          "ItemID": "CopperOre",
+          "Quantity": 10,
+          "MaxStock": 5,
+          "HasUnlimitedStock": false,
+          "UseItemValueManagerPrice": true,
+          "OverridePrice": 0.0,
+          "PriceMultiplier": 1.0,
+          "SpawnWeight": 1.0
+        },
+        {
+          "ItemID": "CopperIngot",
+          "Quantity": 1,
+          "MaxStock": 5,
+          "HasUnlimitedStock": false,
+          "UseItemValueManagerPrice": true,
+          "OverridePrice": 0.0,
+          "PriceMultiplier": 1.0,
+          "SpawnWeight": 1.0
+        },
+        {
+          "ItemID": "Coal",
+          "Quantity": 1,
+          "MaxStock": 5,
+          "HasUnlimitedStock": false,
+          "UseItemValueManagerPrice": true,
+          "OverridePrice": 0.0,
+          "PriceMultiplier": 1.0,
+          "SpawnWeight": 1.0
+        },
+        {
+          "ItemID": "Arrow",
+          "Quantity": 10,
+          "MaxStock": 99,
+          "HasUnlimitedStock": true,
+          "UseItemValueManagerPrice": true,
+          "OverridePrice": 0.0,
+          "PriceMultiplier": 1.0,
+          "SpawnWeight": 1.0
+        }
+      ]
+    }
+  ]
+}

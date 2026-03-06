@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Merchants — Mine &amp; Dungeon Wiki | 23-Steps</title>
+    <meta name="description"
+        content="All NPC merchants in Mine & Dungeon. Browse merchant inventories by dungeon depth, see buy/sell prices, stock limits, and item details." />
+    <meta name="keywords" content="Mine and Dungeon merchants, NPC shop, buy sell items, 23-Steps wiki" />
+    <link rel="canonical" href="https://23-steps.com/wiki/merchants.html" />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Merchants — Mine &amp; Dungeon Wiki | 23-Steps" />
+    <meta property="og:description"
+        content="All NPC merchants in Mine & Dungeon. Browse merchant inventories by dungeon depth with full pricing info." />
+    <meta property="og:url" content="https://23-steps.com/wiki/merchants.html" />
+    <meta property="og:site_name" content="23-Steps" />
+    <meta property="og:image" content="https://23-steps.com/images/mine-dungeon.png" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Merchants — Mine &amp; Dungeon Wiki | 23-Steps" />
+    <meta name="twitter:description"
+        content="All NPC merchants in Mine & Dungeon. Browse inventories by dungeon depth with full pricing." />
+    <meta name="twitter:image" content="https://23-steps.com/images/mine-dungeon.png" />
+    <link rel="icon" type="image/png" href="../icon2.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Press+Start+2P&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="wiki-theme.css" />
+    <script src="wiki-theme.js"></script>
+    <style>
+        /* ── Base ─────────────────────────────────────────── */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            font-family: 'Inter', sans-serif;
+            background-image: var(--wiki-body-bg-image);
+            background-repeat: repeat;
+            background-size: 256px 256px;
+            background-color: var(--wiki-bg);
+            color: var(--wiki-text);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: var(--wiki-bg-overlay);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        main {
+            flex: 1;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* ── Header ───────────────────────────────────────── */
+        header {
+            background-color: var(--wiki-header-bg);
+            height: 60px;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            border-bottom: 1px solid var(--wiki-header-border);
+            position: relative;
+            z-index: 10;
+        }
+
+        header h1 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1.4em;
+            color: var(--wiki-header-title);
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        header h1 a {
+            color: inherit;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        header .logo {
+            height: 50px;
+            object-fit: contain;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--wiki-nav-text);
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0 20px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            font-size: 0.85em;
+        }
+
+        nav a.active {
+            background-color: var(--wiki-nav-active-bg);
+            color: var(--wiki-nav-active-text);
+        }
+
+        nav a:hover:not(.active) {
+            color: var(--wiki-nav-active-text);
+        }
+
+        /* ── Page header ──────────────────────────────────── */
+        .wiki-page-header {
+            background-color: var(--wiki-page-header-bg);
+            border-bottom: 2px solid var(--wiki-page-header-border);
+            padding: 24px 24px 0;
+        }
+
+        .wiki-page-header .breadcrumb {
+            font-size: 0.7em;
+            color: var(--wiki-breadcrumb);
+            margin-bottom: 10px;
+            letter-spacing: 0.04em;
+        }
+
+        .wiki-page-header .breadcrumb a {
+            color: var(--wiki-breadcrumb);
+            text-decoration: none;
+        }
+
+        .wiki-page-header .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .wiki-page-header h2 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: clamp(0.9rem, 2.5vw, 1.4rem);
+            color: var(--wiki-heading);
+            margin-bottom: 5px;
+        }
+
+        .wiki-page-header p {
+            color: var(--wiki-subheading);
+            font-size: 0.83em;
+            margin-bottom: 18px;
+        }
+
+        /* ── Tab bar ──────────────────────────────────────── */
+        .tab-bar {
+            display: flex;
+            border-top: 1px solid var(--wiki-tab-border);
+            overflow-x: auto;
+        }
+
+        .tab-bar::-webkit-scrollbar {
+            height: 0;
+        }
+
+        .tab-btn {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            padding: 11px 20px;
+            color: var(--wiki-tab-text);
+            font-weight: 600;
+            font-size: 0.82em;
+            cursor: pointer;
+            border: none;
+            background: transparent;
+            border-bottom: 3px solid transparent;
+            white-space: nowrap;
+            transition: color .15s, border-color .15s, background .15s;
+            text-decoration: none;
+            font-family: inherit;
+        }
+
+        .tab-btn:hover {
+            color: var(--wiki-tab-hover-text);
+            background: var(--wiki-tab-hover-bg);
+        }
+
+        .tab-btn.active {
+            color: var(--wiki-tab-active-text);
+            border-bottom-color: var(--wiki-tab-active-border);
+            background: var(--wiki-tab-active-bg);
+        }
+
+        .tab-btn.disabled {
+            opacity: .4;
+            cursor: default;
+            pointer-events: none;
+        }
+
+        .tab-badge {
+            font-size: .6em;
+            background: var(--wiki-tab-badge-bg);
+            border: 1px solid var(--wiki-tab-badge-border);
+            color: var(--wiki-tab-badge-text);
+            padding: 1px 5px;
+            border-radius: 3px;
+        }
+
+        /* ── Content wrap ─────────────────────────────────── */
+        .content-wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 24px 20px 48px;
+        }
+
+        /* ── Merchant List (top-level grid) ───────────────── */
+        .merchant-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .merchant-card {
+            background: var(--wiki-section-card-bg);
+            border: 2px solid var(--wiki-section-card-border);
+            border-radius: 12px;
+            padding: 20px;
+            cursor: pointer;
+            transition: border-color .18s, transform .15s, box-shadow .18s;
+            position: relative;
+        }
+
+        .merchant-card:hover {
+            border-color: var(--wiki-section-card-hover);
+            transform: translateY(-3px);
+            box-shadow: var(--wiki-panel-shadow);
+        }
+
+        .merchant-card.selected {
+            border-color: var(--wiki-tab-active-border);
+            box-shadow: 0 0 0 1px var(--wiki-tab-active-border), var(--wiki-panel-shadow);
+        }
+
+        .merchant-card-top {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 10px;
+        }
+
+        .merchant-avatar {
+            width: 56px;
+            height: 56px;
+            background: var(--wiki-section-card-icon-bg);
+            border: 1px solid var(--wiki-section-card-icon-border);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            flex-shrink: 0;
+        }
+
+        .merchant-card-info h3 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 0.65rem;
+            color: var(--wiki-section-title);
+            margin-bottom: 4px;
+        }
+
+        .merchant-card-info p {
+            font-size: 0.75em;
+            color: var(--wiki-subheading);
+            line-height: 1.4;
+        }
+
+        .merchant-card-footer {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .merchant-tag {
+            font-size: 0.65em;
+            font-weight: 600;
+            padding: 3px 8px;
+            border-radius: 4px;
+            background: var(--wiki-stat-bg);
+            border: 1px solid var(--wiki-stat-border);
+            color: var(--wiki-stat-value);
+        }
+
+        /* ── Merchant Detail Panel ────────────────────────── */
+        .merchant-detail {
+            background: var(--wiki-panel-bg);
+            border: 1px solid var(--wiki-panel-border);
+            border-radius: 12px;
+            overflow: hidden;
+            backdrop-filter: var(--wiki-panel-blur);
+        }
+
+        .detail-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 20px 24px;
+            background: var(--wiki-infobox-header-bg);
+            border-bottom: 1px solid var(--wiki-infobox-header-border);
+        }
+
+        .detail-avatar {
+            width: 64px;
+            height: 64px;
+            background: var(--wiki-section-card-icon-bg);
+            border: 1px solid var(--wiki-section-card-icon-border);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .detail-title h3 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 0.8rem;
+            color: var(--wiki-heading);
+            margin-bottom: 4px;
+        }
+
+        .detail-title p {
+            font-size: 0.8em;
+            color: var(--wiki-subheading);
+        }
+
+        /* Depth sub-tabs */
+        .depth-tabs {
+            display: flex;
+            border-bottom: 1px solid var(--wiki-infobox-row-border);
+            overflow-x: auto;
+            background: var(--wiki-infobox-bg);
+        }
+
+        .depth-tabs::-webkit-scrollbar {
+            height: 0;
+        }
+
+        .depth-tab {
+            padding: 10px 20px;
+            font-size: 0.78em;
+            font-weight: 700;
+            color: var(--wiki-tab-text);
+            cursor: pointer;
+            border: none;
+            background: transparent;
+            border-bottom: 3px solid transparent;
+            white-space: nowrap;
+            transition: color .15s, border-color .15s, background .15s;
+            font-family: inherit;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .depth-tab:hover {
+            color: var(--wiki-tab-hover-text);
+            background: var(--wiki-tab-hover-bg);
+        }
+
+        .depth-tab.active {
+            color: var(--wiki-tab-active-text);
+            border-bottom-color: var(--wiki-tab-active-border);
+            background: var(--wiki-tab-active-bg);
+        }
+
+        .depth-tab .depth-icon {
+            font-size: 0.9em;
+        }
+
+        /* Merchant meta row */
+        .detail-meta {
+            display: flex;
+            gap: 12px;
+            padding: 14px 24px;
+            flex-wrap: wrap;
+            border-bottom: 1px solid var(--wiki-infobox-row-border);
+        }
+
+        .meta-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--wiki-stat-bg);
+            border: 1px solid var(--wiki-stat-border);
+            border-radius: 6px;
+            padding: 5px 12px;
+            font-size: 0.73em;
+            color: var(--wiki-stat-value);
+        }
+
+        .meta-chip .label {
+            color: var(--wiki-stat-label);
+            font-weight: 600;
+        }
+
+        /* ── Item table ───────────────────────────────────── */
+        .shop-table-wrap {
+            overflow-x: auto;
+        }
+
+        .shop-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.82em;
+        }
+
+        .shop-table thead {
+            background: var(--wiki-infobox-header-bg);
+        }
+
+        .shop-table th {
+            padding: 10px 14px;
+            text-align: left;
+            font-weight: 700;
+            font-size: 0.75em;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--wiki-stat-label);
+            border-bottom: 1px solid var(--wiki-infobox-header-border);
+            white-space: nowrap;
+        }
+
+        .shop-table th:first-child {
+            width: 56px;
+            text-align: center;
+        }
+
+        .shop-table tbody tr {
+            background: var(--wiki-card-bg);
+            transition: background .12s;
+        }
+
+        .shop-table tbody tr:hover {
+            background: var(--wiki-card-hover-bg);
+        }
+
+        .shop-table tbody tr:not(:last-child) td {
+            border-bottom: 1px solid var(--wiki-infobox-row-border);
+        }
+
+        .shop-table td {
+            padding: 8px 14px;
+            vertical-align: middle;
+            color: var(--wiki-infobox-value);
+        }
+
+        .shop-table td:first-child {
+            text-align: center;
+            padding: 6px 8px;
+        }
+
+        /* Item icon in table */
+        .table-icon-wrap {
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--wiki-card-icon-bg);
+            border: 1px solid var(--wiki-card-icon-border);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .table-icon-wrap img {
+            width: 36px;
+            height: 36px;
+            object-fit: contain;
+            image-rendering: pixelated;
+            image-rendering: crisp-edges;
+        }
+
+        .icon-missing-sm {
+            font-size: 1rem;
+            opacity: 0.25;
+        }
+
+        /* Item name link */
+        .item-link {
+            color: var(--wiki-section-title);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color .12s;
+        }
+
+        .item-link:hover {
+            text-decoration: underline;
+            color: var(--wiki-tab-active-text);
+        }
+
+        /* Rarity dot */
+        .rarity-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-right: 6px;
+            vertical-align: middle;
+        }
+
+        /* Stock badges */
+        .stock-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 0.78em;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .stock-unlimited {
+            background: rgba(74, 222, 128, 0.12);
+            border: 1px solid rgba(74, 222, 128, 0.3);
+            color: #4ade80;
+        }
+
+        .stock-limited {
+            background: var(--wiki-stat-bg);
+            border: 1px solid var(--wiki-stat-border);
+            color: var(--wiki-stat-value);
+        }
+
+        /* Price cell */
+        .price-buy {
+            color: #f87171;
+            font-weight: 600;
+        }
+
+        .price-sell {
+            color: #4ade80;
+            font-weight: 600;
+        }
+
+        .price-coin {
+            font-size: 0.85em;
+            margin-right: 2px;
+        }
+
+        /* Chance column */
+        .chance-cell {
+            white-space: nowrap;
+        }
+
+        .chance-bar-wrap {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .chance-bar {
+            width: 80px;
+            height: 10px;
+            background: var(--wiki-stat-bg);
+            border: 1px solid var(--wiki-stat-border);
+            border-radius: 6px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .chance-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #60a5fa, #818cf8);
+            border-radius: 6px;
+            transition: width .3s ease;
+        }
+
+        .chance-pct {
+            font-size: 0.8em;
+            font-weight: 700;
+            color: var(--wiki-stat-value);
+            min-width: 36px;
+        }
+
+        /* Clickable icon */
+        .table-icon-link {
+            display: inline-flex;
+        }
+
+        .table-icon-link:hover .table-icon-wrap {
+            border-color: var(--wiki-tab-active-border);
+            box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.25);
+        }
+
+        /* Price icon */
+        .price-icon {
+            color: #f5c842;
+            margin-right: 4px;
+        }
+
+        /* ── Loading ──────────────────────────────────────── */
+        .loading-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--wiki-loading);
+            font-size: 0.9em;
+        }
+
+        .loading-state i {
+            font-size: 2rem;
+            margin-bottom: 14px;
+            display: block;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* ── Footer ───────────────────────────────────────── */
+        footer {
+            text-align: center;
+            padding: 10px;
+            font-size: 0.8em;
+            color: var(--wiki-footer-text);
+            background-color: var(--wiki-footer-bg);
+            border-top: 1px solid var(--wiki-footer-border);
+            font-weight: bold;
+            position: relative;
+            z-index: 2;
+        }
+
+        footer a {
+            color: var(--wiki-footer-link);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* ── Responsive ───────────────────────────────────── */
+        @media (max-width: 600px) {
+            header {
+                height: auto;
+                flex-direction: column;
+                align-items: stretch;
+                padding: 0;
+            }
+
+            header h1 {
+                justify-content: center;
+                padding: 8px 12px 4px;
+            }
+
+            header .logo {
+                height: 40px;
+            }
+
+            nav {
+                justify-content: center;
+                flex-wrap: wrap;
+                border-top: 1px solid var(--wiki-header-border);
+                padding: 0 4px;
+            }
+
+            nav a {
+                padding: 8px 12px;
+                font-size: 0.75em;
+                height: auto;
+            }
+
+            .theme-toggle {
+                width: 32px;
+                height: 32px;
+                font-size: 0.9rem;
+            }
+
+            .wiki-page-header h2 {
+                font-size: 0.8rem;
+            }
+
+            .merchant-list {
+                grid-template-columns: 1fr;
+            }
+
+            .detail-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+                padding: 16px;
+            }
+
+            .detail-meta {
+                padding: 10px 16px;
+            }
+
+            .shop-table {
+                font-size: 0.75em;
+            }
+
+            .shop-table th,
+            .shop-table td {
+                padding: 6px 8px;
+            }
+
+            .table-icon-wrap {
+                width: 32px;
+                height: 32px;
+            }
+
+            .table-icon-wrap img {
+                width: 28px;
+                height: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>
+            <a href="../index.html">
+                <img src="../images/logo.png" alt="23-Steps" class="logo" />
+                <span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">23-Steps</span>
+            </a>
+        </h1>
+        <nav>
+            <a href="../index.html">HOME</a>
+            <a href="../games.html">GAMES</a>
+            <a href="mine-dungeon.html" class="active">WIKI</a>
+            <button class="theme-toggle" title="Toggle light/dark mode" aria-label="Toggle theme">
+                <i class="fas fa-sun icon-sun"></i>
+                <i class="fas fa-moon icon-moon"></i>
+            </button>
+        </nav>
+    </header>
+
+    <div class="wiki-page-header">
+        <div class="breadcrumb">
+            <a href="../index.html">23-Steps</a> &rsaquo;
+            <a href="index.html">Wiki</a> &rsaquo;
+            <a href="mine-dungeon.html">Mine &amp; Dungeon</a> &rsaquo;
+            Merchants
+        </div>
+        <h2><i class="fas fa-store"></i>&nbsp; Merchants</h2>
+        <p>NPC merchants buy and sell items &mdash; click a merchant to view their inventory</p>
+        <div class="tab-bar">
+            <a class="tab-btn" href="mobs.html"><i class="fas fa-skull"></i> Mobs</a>
+            <a class="tab-btn" href="items.html"><i class="fas fa-boxes"></i> Items</a>
+            <a class="tab-btn active" href="merchants.html"><i class="fas fa-store"></i> Merchants</a>
+            <a class="tab-btn" href="economy.html"><i class="fas fa-chart-line"></i> Economy</a>
+            <span class="tab-btn disabled"><i class="fas fa-map"></i> Maps <span class="tab-badge">Soon</span></span>
+            <span class="tab-btn disabled"><i class="fas fa-scroll"></i> Quests <span
+                    class="tab-badge">Soon</span></span>
+            <span class="tab-btn disabled"><i class="fas fa-hat-wizard"></i> Bosses <span
+                    class="tab-badge">Soon</span></span>
+            <span class="tab-btn disabled"><i class="fas fa-hammer"></i> Crafting <span
+                    class="tab-badge">Soon</span></span>
+        </div>
+    </div>
+
+    <main>
+        <div class="content-wrap">
+            <div id="merchantCatalog">
+                <div class="loading-state">
+                    <i class="fas fa-spinner"></i>
+                    Loading merchant data…
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy;2026 23-Steps. All rights reserved |
+        <a href="../privacy-policy.html">Privacy Policy</a> |
+        <a href="../terms-of-service.html">Terms of Service</a> |
+        <a href="../delete-account.html">Delete Account</a>
+    </footer>
+
+    <script src="shopconfigs.js"></script>
+    <script src="item_values.js"></script>
+    <script src="item_configs.js"></script>
+
+    <script>
+        // ── Config ──────────────────────────────────────────────────────────────────
+        const ICON_PATH = "assets/items/";
+        const DETAIL_PAGE = "item.html";
+
+        const ICON_MAP = {
+            "Dirt": "dirt", "Stone": "stone", "Sand": "sand", "IronOre": "ironore", "Coal": "coal", "CopperOre": "copperore",
+            "GoldOre": "goldore", "Grass": "dirtgrass", "WaterBucket": "water", "LavaBucket": "lava", "SilverOre": "silverore",
+            "DiamondOre": "diamond", "Ice": "ice", "Gel": "gel", "Arrow": "arrow", "CopperIngot": "CopperIngot",
+            "IronIngot": "IronIngot", "SilverIngot": "SilverIngot", "GoldIngot": "GoldIngot",
+            "Diamond": "diamond", "Ruby": "ruby", "Emerald": "emerald", "Sapphire": "sapphire", "Topaz": "topaz",
+            "Aquamarine": "aquamarine", "SpessartiteGarnet": "spessartiteGarnet", "Amethyst": "amethyst",
+            "Morganite": "morganite", "Onyx": "onyx", "Moss": "moss", "Snow": "snow", "Glass": "glass",
+            "OakLeaves": "oakleaves", "MangroveLeaves": "mangroveleaves", "PineLeaves": "pineleaves",
+            "CherryBlossomLeaves": "cherryblossomleaves", "BeechLeaves": "beechleaves",
+            "OnyxBrick": "onyxbrick", "MorganiteBrick": "morganitebrick", "AmethystBrick": "amethystbrick",
+            "SpessartiteBrick": "spessartitegarnetbrick", "AquamarineBrick": "aquamarinebrick",
+            "TopazBrick": "topazbrick", "SapphireBrick": "sapphirebrick", "EmeraldBrick": "emeraldbrick",
+            "RubyBrick": "rubybrick", "DiamondBrick": "diamondbrick", "Lilypad": "lilypad",
+            "MorganiteLightstone": "morganitelightstone", "AmethystLightstone": "amethystlightstone",
+            "SpessartiteLightstone": "spessartitegarnetlightstone", "AquamarineLightstone": "aquamarinelightstone",
+            "TopazLightstone": "topazlightstone", "SapphireLightstone": "sapphirelightstone",
+            "EmeraldLightstone": "emeraldlightstone", "RubyLightstone": "rubylightstone",
+            "TinOre": "tinore", "LeadOre": "leadore", "Amberstone": "amberstone", "TungstenOre": "tungstenore",
+            "PlatinumOre": "platinumore", "CobaltOre": "cobaltore", "MythrilOre": "mythrilore",
+            "Cobweb": "cobweb", "TinIngot": "TinIngot", "LeadIngot": "LeadIngot", "TungstenIngot": "TungstenIngot",
+            "PlatinumIngot": "PlatinumIngot", "AmberstoneIngot": "AmberstoneIngot", "Strings": "strings",
+            "BlueRose": "bluerose", "Flowstone": "flowstone", "Cactus": "cactus", "Rail": "rail",
+            "SlimelingCore": "SlimelingCore", "DemonMushroom": "DemonMushroom", "Mushroom": "Mushroom",
+            "BoneFragment": "bone", "GoldenFeather": "feather", "Log": "Log",
+            "BandOfRegeneration": "BandOfRegeneration", "WoodenShield": "WoodenShield",
+            "ReinforcedWoodShield": "ReinforcedWoodShield", "CopperPlatedGuard": "CopperPlatedGuard",
+            "GladiatorsRoundshield": "GladiatorsRoundshield", "IronHeaterShield": "IronHeaterShield",
+            "GoldLayeredBulwark": "GoldLayeredBulwark", "CobaltStuddedShield": "CobaltStuddedShield",
+            "RoyalCrest": "RoyalCrest", "EmeraldTarge": "EmeraldTarge", "CrimsonHeater": "CrimsonHeater",
+            "CopperKiteShield": "CopperKiteShield", "SapphireSparkShield": "SapphireSparkShield",
+            "HerosHeraldry": "HerosHeraldry", "GildedVisage": "GildedVisage", "MoltenAegis": "MoltenAegis",
+            "LivingWoodDefender": "LivingWoodDefender", "BlueMoonCrest": "BlueMoonCrest",
+            "CultistWard": "CultistWard", "PlatinumShield": "PlatinumShield", "HornetCarapace": "HornetCarapace",
+            "PlagueBringerGuard": "PlagueBringerGuard", "VoidBarrier": "VoidBarrier",
+            "HallowedAegis": "HallowedAegis", "CrimtaneTowerShield": "CrimtaneTowerShield",
+            "VampireCountGuard": "VampireCountGuard", "ShadowScaleMailPiece": "ShadowScaleMailPiece",
+            "CelestialCross": "CelestialCross", "MaskoftheSaints": "MaskoftheSaints",
+            "SerratedScraper": "SerratedScraper", "RoughHewnCleaver": "RoughHewnCleaver", "PebblePounder": "PebblePounder",
+            "WoodenPickaxe": "woodenpickaxe", "CopperPickaxe": "copperpickaxe", "IronPickaxe": "ironpickaxe",
+            "SilverPickaxe": "silverpickaxe", "GoldPickaxe": "goldpickaxe", "TinPickaxe": "tinpickaxe",
+            "LeadPickaxe": "leadpickaxe", "TungstenPickaxe": "tungstenpickaxe", "PlatinumPickaxe": "platinumpickaxe",
+            "WoodenSword": "woodensword", "CopperSword": "coppersword", "IronSword": "ironsword",
+            "SilverSword": "silversword", "GoldSword": "goldsword", "WoodenBow": "woodenbow",
+            "CopperBow": "copperbow", "TinBow": "tinbow", "LeadBow": "leadbow", "IronBow": "ironbow",
+            "SilverBow": "silverbow", "TungstenBow": "tungstenbow", "GoldBow": "goldbow",
+            "PlatinumBow": "platinumbow", "TinSword": "tinsword", "LeadSword": "leadsword",
+            "TungstenSword": "tungstensword", "PlatinumSword": "platinumsword",
+            "CobaltTrident": "cobalt_trident", "WoodenWand": "woodenwand", "OnyxWand": "onyxwand",
+            "MorganiteStaff": "morganitewand", "AmethystStaff": "AmethystStaff",
+            "SpessartiteStaff": "spessartitegarnetstaff", "AquamarineStaff": "aquamarinestaff",
+            "TopazStaff": "topazstaff", "SapphireStaff": "sapphirestaff", "EmeraldStaff": "emeraldstaff",
+            "RubyStaff": "rubystaff",
+            "CopperHelmet": "copperhelmet", "CopperChestplate": "copperchestplate", "CopperLeggings": "copperleggings",
+            "IronHelmet": "ironhelmet", "IronChestplate": "ironchestplate", "IronLeggings": "ironleggings",
+            "SilverHelmet": "silverhelmet", "SilverChestplate": "silverchestplate", "SilverLeggings": "silverleggings",
+            "GoldHelmet": "goldhelmet", "GoldChestplate": "goldchestplate", "GoldLeggings": "goldleggings",
+            "TinHelmet": "tinhelmet", "TinChestplate": "tinchestplate", "TinLeggings": "tinleggings",
+            "LeadHelmet": "leadhelmet", "LeadChestplate": "leadchestplate", "LeadLeggings": "leadleggings",
+            "TungstenHelmet": "tungstenhelmet", "TungstenChestplate": "tungstenchestplate", "TungstenLeggings": "tungstenleggings",
+            "PlatinumHelmet": "platinumhelmet", "PlatinumChestplate": "platinumchestplate", "PlatinumLeggings": "platinumleggings",
+            "AmberstoneHelmet": "amberstonehelmet", "AmberstoneChestplate": "amberstonechestplate", "AmberstoneLeggings": "amberstoneleggings",
+            "NatureWings": "naturewings", "ThornwoodWings": "thornwoodwings",
+            "Onion": "onion", "Garlic": "garlic", "Pumpkin": "pumpkin", "Carrot": "carrot",
+            "Potato": "potato", "Tomato": "tomato", "Strawberry": "strawberry", "Corn": "corn", "Eggplant": "eggplant",
+            "HealthPotionI": "HealthPotionI", "HealthPotionII": "healthpotionii", "HealthPotionIII": "healthpotioniii",
+            "HealthPotionIV": "healthpotioniv", "HealthPotionV": "healthpotionv",
+            "RegeneratePotionI": "regeneratepotioni", "RegeneratePotionII": "regeneratepotionii",
+            "RegeneratePotionIII": "regeneratepotioniii", "RegeneratePotionIV": "regeneratepotioniv",
+            "RegeneratePotionV": "regeneratepotionv", "SwiftnessPotionI": "swiftnesspotioni",
+            "SwiftnessPotionII": "swiftnesspotionii", "ManaPotionI": "manapotioni", "ManaPotionII": "manapotionii",
+            "ManaPotionIII": "manapotioniii", "ManaPotionIV": "manapotioniv", "ManaPotionV": "manapotionv",
+            "StrengthPotion": "strengthpotion", "ResistancePotion": "resistancepotion",
+            "Torch": "torch", "Chest": "chest", "GoldCoins": "goldcoin",
+            "StarterKit": "StarterKit", "RookieKit": "RookieKit", "MinerKit": "MinerKit", "ScoutKit": "ScoutKit",
+            "HunterKit": "HunterKit", "EliteKit": "EliteKit", "VeteranKit": "VeteranKit", "ShadowKit": "ShadowKit",
+            "ConquerorKit": "ConquerorKit", "KingKit": "KingKit", "OverlordKit": "OverlordKit", "EternalKit": "EternalKit",
+            "StarterVoucher": "StarterVoucher", "RookieVoucher": "RookieVoucher", "MinerVoucher": "MinerVoucher",
+            "ScoutVoucher": "ScoutVoucher", "HunterVoucher": "HunterVoucher", "EliteVoucher": "EliteVoucher",
+            "VeteranVoucher": "VeteranVoucher", "ShadowVoucher": "ShadowVoucher", "ConquerorVoucher": "ConquerorVoucher",
+            "KingVoucher": "KingVoucher", "OverlordVoucher": "OverlordVoucher", "EternalVoucher": "EternalVoucher",
+            "RookieCertificate": "RookieCertificate", "MinerCertificate": "MinerCertificate",
+            "ScoutCertificate": "ScoutCertificate", "HunterCertificate": "HunterCertificate",
+            "EliteCertificate": "EliteCertificate", "VeteranCertificate": "VeteranCertificate",
+            "ShadowCertificate": "ShadowCertificate", "ConquerorCertificate": "ConquerorCertificate",
+            "KingCertificate": "KingCertificate", "OverlordCertificate": "OverlordCertificate",
+            "EternalCertificate": "EternalCertificate",
+            "AdKey": "adKey", "RareKey": "RareKey", "MythicKey": "MythicKey", "DivineKey": "DivineKey",
+            "FlameArrow": "flamearrow", "Bomb": "bomb", "Compass": "compass", "Map": "map",
+            "MapFragment": "mapfragment", "TreasureMap": "treasuremap", "Lantern": "lantern",
+            "FishSword": "fishword", "PirateFlag": "pirateflag", "PirateGun": "pirategun", "PirateSword": "piratesword",
+            "IronKey": "ironkey", "WoodenSign": "wooden_sign",
+            "StoneBrick": "stonebrick", "MossStoneBrick": "mossstonebrick",
+        };
+
+        const RARITY_COLOR = {
+            Common: '#b0bec5',
+            Uncommon: '#4ade80',
+            Rare: '#60a5fa',
+            Epic: '#c084fc',
+            Legendary: '#fb923c',
+        };
+
+        // ── Helpers ─────────────────────────────────────────────────────────────────
+        function iconUrl(itemID) {
+            const file = ICON_MAP[itemID];
+            return file ? ICON_PATH + file + '.png' : null;
+        }
+
+        // Build lookup maps
+        const itemValueMap = {};
+        if (typeof ITEM_VALUES !== 'undefined' && ITEM_VALUES.ItemValues) {
+            ITEM_VALUES.ItemValues.forEach(v => { itemValueMap[v.itemID] = v.value; });
+        }
+        const itemConfigMap = {};
+        if (typeof ITEM_CONFIGS !== 'undefined' && ITEM_CONFIGS.ItemConfigs) {
+            ITEM_CONFIGS.ItemConfigs.forEach(c => { itemConfigMap[c.ItemID] = c; });
+        }
+
+        function getDisplayName(itemID) {
+            const cfg = itemConfigMap[itemID];
+            if (cfg && cfg.Name) return cfg.Name;
+            return itemID.replace(/([a-z])([A-Z])/g, '$1 $2');
+        }
+
+        function getRarity(itemID) {
+            const cfg = itemConfigMap[itemID];
+            return cfg ? (cfg.Rarity || 'Common') : 'Common';
+        }
+
+        function formatPrice(price) {
+            if (price === null || price === undefined) return '—';
+            return price % 1 === 0 ? price.toFixed(0) : price.toFixed(1);
+        }
+
+        function depthLabel(configName) {
+            const m = configName.match(/(\d+)-(\d+)/);
+            if (m) return `Depth ${m[1]}–${m[2]}`;
+            return configName;
+        }
+
+        function depthShort(configName) {
+            const m = configName.match(/(\d+)-(\d+)/);
+            if (m) return `${m[1]}–${m[2]}`;
+            return configName;
+        }
+
+        // ── Group shop configs into merchants ───────────────────────────────────────
+        // Each merchant is identified by the prefix before the depth range.
+        // e.g. "Merchant_1-5" → merchant name = "Merchant"
+        function groupMerchants(configs) {
+            const groups = {};
+            configs.forEach(shop => {
+                const name = shop.ConfigName.replace(/_\d+-\d+$/, '');
+                if (!groups[name]) groups[name] = { name, configs: [] };
+                groups[name].configs.push(shop);
+            });
+            // Sort each merchant's configs by first depth number
+            Object.values(groups).forEach(g => {
+                g.configs.sort((a, b) => {
+                    const da = parseInt(a.ConfigName.match(/(\d+)/)?.[1] || 0);
+                    const db = parseInt(b.ConfigName.match(/(\d+)/)?.[1] || 0);
+                    return da - db;
+                });
+            });
+            return Object.values(groups);
+        }
+
+        // ── Merchant metadata ──────────────────────────────────────────────────────
+        const MERCHANT_META = {
+            Merchant: {
+                emoji: '🏪',
+                displayName: 'Merchant',
+                description: 'A general goods trader found in the dungeon. Inventory changes based on how deep you\'ve ventured.',
+            }
+        };
+
+        function getMerchantMeta(name) {
+            return MERCHANT_META[name] || {
+                emoji: '🛒',
+                displayName: name.replace(/([a-z])([A-Z])/g, '$1 $2'),
+                description: 'An NPC merchant.',
+            };
+        }
+
+        // ── State ──────────────────────────────────────────────────────────────────
+        let allMerchants = [];
+        let selectedMerchant = null;
+        let selectedDepthIdx = 0;
+
+        // ── Build item table HTML ──────────────────────────────────────────────────
+        function buildItemTable(shop) {
+            const buyMul = shop.BuyPriceMultiplier || 1;
+            const sellMul = shop.SellPriceMultiplier || 1;
+
+            // Calculate total spawn weight for percentage
+            const totalWeight = shop.AvailableItems.reduce((sum, i) => sum + (i.SpawnWeight || 0), 0);
+
+            // Price icon matching item.html style
+            const coinIcon = `<i class="fas fa-coins price-icon"></i>`;
+
+            let rows = '';
+            shop.AvailableItems.forEach(item => {
+                const id = item.ItemID;
+                const icon = iconUrl(id);
+                const name = getDisplayName(id);
+                const rarity = getRarity(id);
+                const rarityCol = RARITY_COLOR[rarity] || '#b0bec5';
+                const values = itemValueMap[id];
+                const priceMul = item.PriceMultiplier || 1;
+
+                let buyPrice = null, sellPrice = null;
+                if (values) {
+                    buyPrice = values.BuyPrice * buyMul * priceMul;
+                    sellPrice = values.SellPrice * sellMul * priceMul;
+                }
+
+                // Spawn chance %
+                const weight = item.SpawnWeight || 0;
+                const chancePct = totalWeight > 0 ? (weight / totalWeight * 100) : 0;
+                const chanceStr = chancePct % 1 === 0 ? chancePct.toFixed(0) : chancePct.toFixed(1);
+
+                // Icon — clickable link to item detail
+                const iconInner = icon
+                    ? `<img src="${icon}" alt="${name}" loading="lazy" onerror="this.style.display='none'">`
+                    : `<span class="icon-missing-sm">❓</span>`;
+                const iconHtml = `<a class="table-icon-link" href="${DETAIL_PAGE}?id=${id}" title="View ${name}"><div class="table-icon-wrap">${iconInner}</div></a>`;
+
+                const stockHtml = item.HasUnlimitedStock
+                    ? `<span class="stock-badge stock-unlimited"><i class="fas fa-infinity"></i> Unlimited</span>`
+                    : `<span class="stock-badge stock-limited">${item.MaxStock}</span>`;
+
+                rows += `<tr>
+          <td>${iconHtml}</td>
+          <td><span class="rarity-dot" style="background:${rarityCol}"></span><a class="item-link" href="${DETAIL_PAGE}?id=${id}">${name}</a></td>
+          <td>${item.Quantity}</td>
+          <td>${stockHtml}</td>
+          <td class="chance-cell"><div class="chance-bar-wrap"><div class="chance-bar"><div class="chance-bar-fill" style="width:${chancePct}%"></div></div><span class="chance-pct">${chanceStr}%</span></div></td>
+          <td class="price-buy">${coinIcon}${formatPrice(buyPrice)}</td>
+          <td class="price-sell">${coinIcon}${formatPrice(sellPrice)}</td>
+        </tr>`;
+            });
+
+            return `<div class="shop-table-wrap"><table class="shop-table">
+        <thead><tr>
+          <th>Icon</th><th>Item</th><th>Qty</th><th>Stock</th><th>Chance</th><th>Buy Price</th><th>Sell Price</th>
+        </tr></thead>
+        <tbody>${rows}</tbody>
+      </table></div>`;
+        }
+
+        // ── Render merchant detail panel ────────────────────────────────────────────
+        function renderDetail() {
+            if (!selectedMerchant) {
+                document.getElementById('merchantDetail').innerHTML = '';
+                return;
+            }
+
+            const meta = getMerchantMeta(selectedMerchant.name);
+            const shop = selectedMerchant.configs[selectedDepthIdx];
+            const buyMul = shop.BuyPriceMultiplier || 1;
+            const sellMul = shop.SellPriceMultiplier || 1;
+
+            // Build depth tabs
+            let depthTabsHtml = '';
+            selectedMerchant.configs.forEach((cfg, i) => {
+                const active = i === selectedDepthIdx ? ' active' : '';
+                depthTabsHtml += `<button class="depth-tab${active}" onclick="selectDepth(${i})">
+          <span class="depth-icon">⛏️</span> ${depthLabel(cfg.ConfigName)}
+        </button>`;
+            });
+
+            const html = `<div class="merchant-detail">
+        <div class="detail-header">
+          <div class="detail-avatar">${meta.emoji}</div>
+          <div class="detail-title">
+            <h3>${meta.displayName}</h3>
+            <p>${meta.description}</p>
+          </div>
+        </div>
+        <div class="depth-tabs">${depthTabsHtml}</div>
+        <div class="detail-meta">
+          <div class="meta-chip"><span class="label">Shop Slots</span> ${shop.DefaultShopSlots}</div>
+          <div class="meta-chip"><span class="label">Buy ×</span> ${buyMul.toFixed(1)}</div>
+          <div class="meta-chip"><span class="label">Sell ×</span> ${sellMul.toFixed(1)}</div>
+          <div class="meta-chip"><span class="label">Items</span> ${shop.AvailableItems.length}</div>
+        </div>
+        ${buildItemTable(shop)}
+      </div>`;
+
+            document.getElementById('merchantDetail').innerHTML = html;
+        }
+
+        // ── Select merchant / depth ────────────────────────────────────────────────
+        function selectMerchant(idx) {
+            selectedMerchant = allMerchants[idx];
+            selectedDepthIdx = 0;
+
+            // Update card selection
+            document.querySelectorAll('.merchant-card').forEach((card, i) => {
+                card.classList.toggle('selected', i === idx);
+            });
+
+            renderDetail();
+            // Scroll to detail
+            document.getElementById('merchantDetail').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function selectDepth(idx) {
+            selectedDepthIdx = idx;
+            renderDetail();
+        }
+
+        // ── Initial render ─────────────────────────────────────────────────────────
+        function render() {
+            const container = document.getElementById('merchantCatalog');
+            if (!SHOP_CONFIGS || SHOP_CONFIGS.length === 0) {
+                container.innerHTML = '<div class="loading-state" style="animation:none"><i class="fas fa-exclamation-triangle" style="animation:none"></i>No merchant data found.</div>';
+                return;
+            }
+
+            allMerchants = groupMerchants(SHOP_CONFIGS);
+
+            // Build merchant cards
+            let cardsHtml = '<div class="merchant-list">';
+            allMerchants.forEach((merchant, idx) => {
+                const meta = getMerchantMeta(merchant.name);
+                const depthRange = merchant.configs.map(c => depthShort(c.ConfigName)).join(', ');
+                const totalItems = new Set(merchant.configs.flatMap(c => c.AvailableItems.map(i => i.ItemID))).size;
+
+                cardsHtml += `<div class="merchant-card${idx === 0 ? ' selected' : ''}" onclick="selectMerchant(${idx})">
+          <div class="merchant-card-top">
+            <div class="merchant-avatar">${meta.emoji}</div>
+            <div class="merchant-card-info">
+              <h3>${meta.displayName}</h3>
+              <p>${meta.description}</p>
+            </div>
+          </div>
+          <div class="merchant-card-footer">
+            <span class="merchant-tag"><i class="fas fa-layer-group"></i>&nbsp; ${merchant.configs.length} depth${merchant.configs.length > 1 ? 's' : ''}</span>
+            <span class="merchant-tag"><i class="fas fa-box-open"></i>&nbsp; ${totalItems} unique items</span>
+          </div>
+        </div>`;
+            });
+            cardsHtml += '</div>';
+
+            cardsHtml += '<div id="merchantDetail"></div>';
+            container.innerHTML = cardsHtml;
+
+            // Auto-select first merchant
+            selectedMerchant = allMerchants[0];
+            selectedDepthIdx = 0;
+            renderDetail();
+        }
+
+        render();
+    </script>
+
+</body>
+
+</html>
