@@ -336,7 +336,6 @@ SCRIPT = '''  <script id="mob-data" type="application/json">''' + json_blob + ''
       /* Combat */
       var combatHtml = '<div class="stat-grid">';
       combatHtml += stat('Damage', fmt(c.Damage), 'red');
-      combatHtml += stat('Defense', fmt(c.Defense), 'blue');
       combatHtml += stat('Attack Speed', fmt(c.AttackSpeed) + 'x', '');
       combatHtml += stat('Attack Range', fmt(c.AttackRange), '');
       combatHtml += stat('Move Speed', fmt(c.MoveSpeed) + 'x', 'yellow');

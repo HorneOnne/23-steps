@@ -885,7 +885,6 @@
               <th onclick="sortBy('type')" id="th-type">Type</th>
               <th onclick="sortBy('hp')" id="th-hp">HP</th>
               <th onclick="sortBy('dmg')" id="th-dmg">Damage</th>
-              <th onclick="sortBy('def')" id="th-def">Defense</th>
               <th onclick="sortBy('as')" id="th-as">Attack Speed</th>
               <th onclick="sortBy('ar')" id="th-ar">Attack Range</th>
               <th onclick="sortBy('ms')" id="th-ms">Move Speed</th>
@@ -940,7 +939,7 @@
     }
 
     function updateSortHeaders() {
-      var keys = ['name', 'type', 'hp', 'dmg', 'def', 'as', 'ar', 'ms', 'crit'];
+      var keys = ['name', 'type', 'hp', 'dmg', 'as', 'ar', 'ms', 'crit'];
       keys.forEach(function (k) {
         var th = document.getElementById('th-' + k);
         if (!th) return;
@@ -969,7 +968,6 @@
         '<td>' + typeTag + '</td>',
         '<td>' + fmt(h.MaxHealth) + '</td>',
         '<td>' + fmt(c.Damage) + '</td>',
-        '<td>' + fmt(c.Defense) + '</td>',
         '<td>' + fmt(c.AttackSpeed) + 'x' + '</td>',
         '<td>' + fmt(c.AttackRange) + '</td>',
         '<td>' + fmt(c.MoveSpeed) + 'x' + '</td>',
@@ -1009,7 +1007,6 @@
         switch (currentSort) {
           case 'hp': return dir * (a.HealthConfig.MaxHealth - b.HealthConfig.MaxHealth);
           case 'dmg': return dir * (a.CombatConfig.Damage - b.CombatConfig.Damage);
-          case 'def': return dir * (a.CombatConfig.Defense - b.CombatConfig.Defense);
           case 'as': return dir * (a.CombatConfig.AttackSpeed - b.CombatConfig.AttackSpeed);
           case 'ar': return dir * (a.CombatConfig.AttackRange - b.CombatConfig.AttackRange);
           case 'ms': return dir * (a.CombatConfig.MoveSpeed - b.CombatConfig.MoveSpeed);

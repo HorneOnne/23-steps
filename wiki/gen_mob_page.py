@@ -246,7 +246,6 @@ MOB_HTML = r'''<!DOCTYPE html>
       var combatHtml = '<div class="stat-grid">';
       combatHtml += stat('Damage', fmt(c.Damage), 'red');
       combatHtml += stat('DMG per Level', '+' + fmt(c.DamagePerLevel), 'red');
-      combatHtml += stat('Defense', fmt(c.Defense), 'blue');
       combatHtml += stat('Attack Speed', fmt(c.AttackSpeed) + 'x', '');
       combatHtml += stat('Attack Range', fmt(c.AttackRange), '');
       combatHtml += stat('Move Speed', fmt(c.MoveSpeed) + 'x', 'yellow');
