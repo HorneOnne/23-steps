@@ -130,7 +130,7 @@
       "ItemID": "WoodenSword",
       "ItemType": "Sword",
       "Name": "Wooden Sword",
-      "Description": "4 damage\n2% critical strike chance\n1 knockback",
+      "Description": "4 damage\n1 knockback",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Common",
@@ -144,16 +144,14 @@
       "UseSpeed": 2.5,
       "SwordConfig": {
         "AttackDamage": 4.0,
-        "KnockbackForce": 1.0,
-        "CritChance": 0.02,
-        "CritDamageMultiplier": 2.0
+        "KnockbackForce": 1.0
       }
     },
     {
       "ItemID": "CopperSword",
       "ItemType": "Sword",
       "Name": "Copper Sword",
-      "Description": "7 damage\n3% critical strike chance\n3.5 knockback",
+      "Description": "7 damage\n3.5 knockback",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Common",
@@ -167,16 +165,14 @@
       "UseSpeed": 3.4,
       "SwordConfig": {
         "AttackDamage": 7.0,
-        "KnockbackForce": 3.5,
-        "CritChance": 0.03,
-        "CritDamageMultiplier": 2.0
+        "KnockbackForce": 3.5
       }
     },
     {
       "ItemID": "TinSword",
       "ItemType": "Sword",
       "Name": "Tin Sword",
-      "Description": "8 damage\n4% critical strike chance\n3.6 knockback",
+      "Description": "8 damage\n3.6 knockback",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Common",
@@ -190,16 +186,14 @@
       "UseSpeed": 3.35,
       "SwordConfig": {
         "AttackDamage": 8.0,
-        "KnockbackForce": 3.6,
-        "CritChance": 0.04,
-        "CritDamageMultiplier": 2.0
+        "KnockbackForce": 3.6
       }
     },
     {
       "ItemID": "LeadSword",
       "ItemType": "Sword",
       "Name": "Lead Sword",
-      "Description": "9 damage\n4.5% critical strike chance\n3.7 knockback",
+      "Description": "9 damage\n3.7 knockback",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Uncommon",
@@ -213,16 +207,14 @@
       "UseSpeed": 3.3,
       "SwordConfig": {
         "AttackDamage": 9.0,
-        "KnockbackForce": 3.7,
-        "CritChance": 0.045,
-        "CritDamageMultiplier": 2.0
+        "KnockbackForce": 3.7
       }
     },
     {
       "ItemID": "IronSword",
       "ItemType": "Sword",
       "Name": "Iron Sword",
-      "Description": "11 damage\n5% critical strike chance\n4 knockback",
+      "Description": "11 damage\n4 knockback",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Uncommon",
@@ -236,16 +228,14 @@
       "UseSpeed": 3.2,
       "SwordConfig": {
         "AttackDamage": 11.0,
-        "KnockbackForce": 4.0,
-        "CritChance": 0.05,
-        "CritDamageMultiplier": 2.0
+        "KnockbackForce": 4.0
       }
     },
     {
       "ItemID": "SilverSword",
       "ItemType": "Sword",
       "Name": "Silver Sword",
-      "Description": "15 damage\n7% critical strike chance\n4.5 knockback",
+      "Description": "15 damage\n4.5 knockback",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Rare",
@@ -259,16 +249,14 @@
       "UseSpeed": 3.0,
       "SwordConfig": {
         "AttackDamage": 15.0,
-        "KnockbackForce": 4.5,
-        "CritChance": 0.07,
-        "CritDamageMultiplier": 2.0
+        "KnockbackForce": 4.5
       }
     },
     {
       "ItemID": "TungstenSword",
       "ItemType": "Sword",
       "Name": "Tungsten Sword",
-      "Description": "19 damage\n8% critical strike chance\n4.8 knockback",
+      "Description": "19 damage\n4.8 knockback",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Rare",
@@ -282,16 +270,14 @@
       "UseSpeed": 2.8,
       "SwordConfig": {
         "AttackDamage": 19.0,
-        "KnockbackForce": 4.8,
-        "CritChance": 0.08,
-        "CritDamageMultiplier": 2.0
+        "KnockbackForce": 4.8
       }
     },
     {
       "ItemID": "GoldSword",
       "ItemType": "Sword",
       "Name": "Gold Sword",
-      "Description": "18 damage\n10% critical strike chance\n4.75 knockback",
+      "Description": "18 damage\n4.75 knockback",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Epic",
@@ -305,16 +291,14 @@
       "UseSpeed": 3.1,
       "SwordConfig": {
         "AttackDamage": 18.0,
-        "KnockbackForce": 4.75,
-        "CritChance": 0.1,
-        "CritDamageMultiplier": 2.0
+        "KnockbackForce": 4.75
       }
     },
     {
       "ItemID": "PlatinumSword",
       "ItemType": "Sword",
       "Name": "Platinum Sword",
-      "Description": "22 damage\n12% critical strike chance\n5 knockback",
+      "Description": "22 damage\n5 knockback",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Epic",
@@ -328,16 +312,14 @@
       "UseSpeed": 2.7,
       "SwordConfig": {
         "AttackDamage": 22.0,
-        "KnockbackForce": 5.0,
-        "CritChance": 0.12,
-        "CritDamageMultiplier": 2.0
+        "KnockbackForce": 5.0
       }
     },
     {
       "ItemID": "Torch",
       "ItemType": "Utility",
       "Name": "Torch",
-      "Description": "Flickers bravely against the dark. Gel and wood bound together — a miner's best companion.",
+      "Description": "Flickers bravely against the dark. Gel and wood bound together \u2014 a miner's best companion.",
       "MaxStackSize": 9999,
       "CanBeEnchanted": false,
       "Rarity": "Common",
@@ -557,7 +539,7 @@
       "ItemID": "WoodenBow",
       "ItemType": "Bow",
       "Name": "Wooden Bow",
-      "Description": "5 damage\n2% critical strike chance\n2 knockback",
+      "Description": "5 damage\n2 knockback",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Common",
@@ -573,16 +555,14 @@
         "AttackDamage": 5.0,
         "ProjectileSpeed": 10.0,
         "KnockbackForce": 2.0,
-        "Range": 10.0,
-        "CritChance": 0.02,
-        "CritMultiplier": 2.0
+        "Range": 10.0
       }
     },
     {
       "ItemID": "CopperBow",
       "ItemType": "Bow",
       "Name": "Copper Bow",
-      "Description": "7 damage\n3% critical strike chance\n2 knockback",
+      "Description": "7 damage\n2 knockback",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Common",
@@ -598,16 +578,14 @@
         "AttackDamage": 7.0,
         "ProjectileSpeed": 11.0,
         "KnockbackForce": 2.0,
-        "Range": 10.0,
-        "CritChance": 0.03,
-        "CritMultiplier": 2.0
+        "Range": 10.0
       }
     },
     {
       "ItemID": "TinBow",
       "ItemType": "Bow",
       "Name": "Tin Bow",
-      "Description": "8 damage\n4% critical strike chance\n2 knockback",
+      "Description": "8 damage\n2 knockback",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Common",
@@ -623,16 +601,14 @@
         "AttackDamage": 8.0,
         "ProjectileSpeed": 12.0,
         "KnockbackForce": 2.0,
-        "Range": 10.0,
-        "CritChance": 0.04,
-        "CritMultiplier": 2.0
+        "Range": 10.0
       }
     },
     {
       "ItemID": "LeadBow",
       "ItemType": "Bow",
       "Name": "Lead Bow",
-      "Description": "9 damage\n4.5% critical strike chance\n2 knockback",
+      "Description": "9 damage\n2 knockback",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Uncommon",
@@ -648,16 +624,14 @@
         "AttackDamage": 9.0,
         "ProjectileSpeed": 13.0,
         "KnockbackForce": 2.0,
-        "Range": 10.0,
-        "CritChance": 0.045,
-        "CritMultiplier": 2.0
+        "Range": 10.0
       }
     },
     {
       "ItemID": "IronBow",
       "ItemType": "Bow",
       "Name": "Iron Bow",
-      "Description": "11 damage\n5% critical strike chance\n2 knockback",
+      "Description": "11 damage\n2 knockback",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Uncommon",
@@ -673,16 +647,14 @@
         "AttackDamage": 11.0,
         "ProjectileSpeed": 14.0,
         "KnockbackForce": 2.0,
-        "Range": 10.0,
-        "CritChance": 0.05,
-        "CritMultiplier": 2.0
+        "Range": 10.0
       }
     },
     {
       "ItemID": "SilverBow",
       "ItemType": "Bow",
       "Name": "Silver Bow",
-      "Description": "15 damage\n7% critical strike chance\n2 knockback",
+      "Description": "15 damage\n2 knockback",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Rare",
@@ -698,16 +670,14 @@
         "AttackDamage": 15.0,
         "ProjectileSpeed": 15.0,
         "KnockbackForce": 2.0,
-        "Range": 10.0,
-        "CritChance": 0.07,
-        "CritMultiplier": 2.0
+        "Range": 10.0
       }
     },
     {
       "ItemID": "TungstenBow",
       "ItemType": "Bow",
       "Name": "Tungsten Bow",
-      "Description": "19 damage\n8% critical strike chance\n2 knockback",
+      "Description": "19 damage\n2 knockback",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Rare",
@@ -723,16 +693,14 @@
         "AttackDamage": 19.0,
         "ProjectileSpeed": 16.0,
         "KnockbackForce": 2.0,
-        "Range": 10.0,
-        "CritChance": 0.08,
-        "CritMultiplier": 2.0
+        "Range": 10.0
       }
     },
     {
       "ItemID": "GoldBow",
       "ItemType": "Bow",
       "Name": "Gold Bow",
-      "Description": "18 damage\n10% critical strike chance\n2 knockback",
+      "Description": "18 damage\n2 knockback",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Epic",
@@ -748,16 +716,14 @@
         "AttackDamage": 18.0,
         "ProjectileSpeed": 15.5,
         "KnockbackForce": 2.0,
-        "Range": 10.0,
-        "CritChance": 0.1,
-        "CritMultiplier": 2.0
+        "Range": 10.0
       }
     },
     {
       "ItemID": "PlatinumBow",
       "ItemType": "Bow",
       "Name": "Platinum Bow",
-      "Description": "22 damage\n12% critical strike chance\n2 knockback",
+      "Description": "22 damage\n2 knockback",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Epic",
@@ -773,16 +739,14 @@
         "AttackDamage": 22.0,
         "ProjectileSpeed": 17.0,
         "KnockbackForce": 2.0,
-        "Range": 10.0,
-        "CritChance": 0.12,
-        "CritMultiplier": 2.0
+        "Range": 10.0
       }
     },
     {
       "ItemID": "Arrow",
       "ItemType": "Resource",
       "Name": "Arrow",
-      "Description": "Swift, straight, and deadly. Pack plenty — you'll need them.",
+      "Description": "Swift, straight, and deadly. Pack plenty \u2014 you'll need them.",
       "MaxStackSize": 9999,
       "CanBeEnchanted": false,
       "Rarity": "Common",
@@ -824,7 +788,7 @@
       "ItemID": "Sand",
       "ItemType": "Resource",
       "Name": "Sand",
-      "Description": "Countless tiny grains, each one a story of erosion. Great for glass — less great in your boots.",
+      "Description": "Countless tiny grains, each one a story of erosion. Great for glass \u2014 less great in your boots.",
       "MaxStackSize": 9999,
       "CanBeEnchanted": false,
       "Rarity": "Common",
@@ -2286,7 +2250,7 @@
       "ItemID": "Cobalt_Trident",
       "ItemType": "Sword",
       "Name": "Cobalt_Trident",
-      "Description": "150 damage\n50% critical strike chance\n3 knockback",
+      "Description": "150 damage\n3 knockback",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Legendary",
@@ -2300,9 +2264,7 @@
       "UseSpeed": 5.0,
       "SwordConfig": {
         "AttackDamage": 150.0,
-        "KnockbackForce": 3.0,
-        "CritChance": 0.5,
-        "CritDamageMultiplier": 2.0
+        "KnockbackForce": 3.0
       }
     },
     {
@@ -2330,9 +2292,7 @@
         "ManaCost": 5.0,
         "KnockbackForce": 1.0,
         "Range": 8.0,
-        "ProjectileSpeed": 6.0,
-        "CritChance": 0.08,
-        "CritMultiplier": 1.8
+        "ProjectileSpeed": 6.0
       }
     },
     {
@@ -2360,7 +2320,7 @@
       "ItemID": "Wood",
       "ItemType": "Resource",
       "Name": "Wood",
-      "Description": "Hewn and shaped, ready for crafting. Every pickaxe handle, every bow — starts here.",
+      "Description": "Hewn and shaped, ready for crafting. Every pickaxe handle, every bow \u2014 starts here.",
       "MaxStackSize": 9999,
       "CanBeEnchanted": false,
       "Rarity": "Common",
@@ -2402,7 +2362,7 @@
       "ItemID": "Gravel",
       "ItemType": "Resource",
       "Name": "Gravel",
-      "Description": "Loose rocks that crumble underfoot. Watch your step — and check beneath it for flint.",
+      "Description": "Loose rocks that crumble underfoot. Watch your step \u2014 and check beneath it for flint.",
       "MaxStackSize": 9999,
       "CanBeEnchanted": false,
       "Rarity": "Common",
@@ -2444,7 +2404,7 @@
       "ItemID": "Grass",
       "ItemType": "Resource",
       "Name": "Grass",
-      "Description": "A clump of green from near the surface world. Smells like fresh air — a rare luxury underground.",
+      "Description": "A clump of green from near the surface world. Smells like fresh air \u2014 a rare luxury underground.",
       "MaxStackSize": 9999,
       "CanBeEnchanted": false,
       "Rarity": "Common",
@@ -2465,7 +2425,7 @@
       "ItemID": "WaterBucket",
       "ItemType": "Utility",
       "Name": "Water Bucket",
-      "Description": "Sloshing with cool, clear water. Place it carefully — water has a way of going everywhere.",
+      "Description": "Sloshing with cool, clear water. Place it carefully \u2014 water has a way of going everywhere.",
       "MaxStackSize": 1,
       "CanBeEnchanted": false,
       "Rarity": "Common",
@@ -2530,7 +2490,7 @@
       "ItemID": "Ice",
       "ItemType": "Resource",
       "Name": "Ice",
-      "Description": "Frozen solid deep in the earth's coldest depths. Melts quickly above ground — hurry up.",
+      "Description": "Frozen solid deep in the earth's coldest depths. Melts quickly above ground \u2014 hurry up.",
       "MaxStackSize": 9999,
       "CanBeEnchanted": false,
       "Rarity": "Common",
@@ -2929,7 +2889,7 @@
       "ItemID": "RubyBrick",
       "ItemType": "Resource",
       "Name": "Ruby Brick",
-      "Description": "Crimson blocks that glow like smouldering coals. Hallways built from these feel ominous — and magnificent.",
+      "Description": "Crimson blocks that glow like smouldering coals. Hallways built from these feel ominous \u2014 and magnificent.",
       "MaxStackSize": 9999,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
@@ -3223,7 +3183,7 @@
       "ItemID": "RubyLightstone",
       "ItemType": "Resource",
       "Name": "Ruby Lightstone",
-      "Description": "A ruby blazing with deep red light. Its glow makes shadows look dangerous — they might be.",
+      "Description": "A ruby blazing with deep red light. Its glow makes shadows look dangerous \u2014 they might be.",
       "MaxStackSize": 16,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
@@ -3265,7 +3225,7 @@
       "ItemID": "SnowBrick",
       "ItemType": "Resource",
       "Name": "Snow Brick",
-      "Description": "Compacted snow pressed into a solid block. Builds beautifully — until someone lights a torch nearby.",
+      "Description": "Compacted snow pressed into a solid block. Builds beautifully \u2014 until someone lights a torch nearby.",
       "MaxStackSize": 9999,
       "CanBeEnchanted": false,
       "Rarity": "Common",
@@ -3725,7 +3685,7 @@
       "ItemID": "Cactus",
       "ItemType": "Resource",
       "Name": "Cactus",
-      "Description": "Prickly on the outside, useful on the inside. Handle with care — it already stuck you once.",
+      "Description": "Prickly on the outside, useful on the inside. Handle with care \u2014 it already stuck you once.",
       "MaxStackSize": 9999,
       "CanBeEnchanted": false,
       "Rarity": "Common",
@@ -3789,9 +3749,7 @@
         "ManaCost": 5.0,
         "KnockbackForce": 1.0,
         "Range": 8.0,
-        "ProjectileSpeed": 6.0,
-        "CritChance": 0.08,
-        "CritMultiplier": 1.8
+        "ProjectileSpeed": 6.0
       }
     },
     {
@@ -3819,16 +3777,14 @@
         "ManaCost": 5.0,
         "KnockbackForce": 1.0,
         "Range": 8.0,
-        "ProjectileSpeed": 6.0,
-        "CritChance": 0.08,
-        "CritMultiplier": 1.8
+        "ProjectileSpeed": 6.0
       }
     },
     {
       "ItemID": "AmethystStaff",
       "ItemType": "Staff",
       "Name": "Amethyst Staff",
-      "Description": "Crackling with violet arcane energy. Mages who wield this staff dream vividly — not all of them pleasantly.",
+      "Description": "Crackling with violet arcane energy. Mages who wield this staff dream vividly \u2014 not all of them pleasantly.",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
       "Rarity": "Rare",
@@ -3849,9 +3805,7 @@
         "ManaCost": 5.0,
         "KnockbackForce": 1.0,
         "Range": 8.0,
-        "ProjectileSpeed": 10.0,
-        "CritChance": 0.08,
-        "CritMultiplier": 1.8
+        "ProjectileSpeed": 10.0
       }
     },
     {
@@ -3879,9 +3833,7 @@
         "ManaCost": 5.0,
         "KnockbackForce": 1.0,
         "Range": 8.0,
-        "ProjectileSpeed": 35.0,
-        "CritChance": 0.08,
-        "CritMultiplier": 1.8
+        "ProjectileSpeed": 35.0
       }
     },
     {
@@ -3909,9 +3861,7 @@
         "ManaCost": 5.0,
         "KnockbackForce": 1.0,
         "Range": 8.0,
-        "ProjectileSpeed": 6.0,
-        "CritChance": 0.08,
-        "CritMultiplier": 1.8
+        "ProjectileSpeed": 6.0
       }
     },
     {
@@ -3939,9 +3889,7 @@
         "ManaCost": 5.0,
         "KnockbackForce": 1.0,
         "Range": 8.0,
-        "ProjectileSpeed": 6.0,
-        "CritChance": 0.08,
-        "CritMultiplier": 1.8
+        "ProjectileSpeed": 6.0
       }
     },
     {
@@ -3969,9 +3917,7 @@
         "ManaCost": 5.0,
         "KnockbackForce": 1.0,
         "Range": 8.0,
-        "ProjectileSpeed": 6.0,
-        "CritChance": 0.08,
-        "CritMultiplier": 1.8
+        "ProjectileSpeed": 6.0
       }
     },
     {
@@ -3999,9 +3945,7 @@
         "ManaCost": 5.0,
         "KnockbackForce": 1.0,
         "Range": 8.0,
-        "ProjectileSpeed": 6.0,
-        "CritChance": 0.08,
-        "CritMultiplier": 1.8
+        "ProjectileSpeed": 6.0
       }
     },
     {

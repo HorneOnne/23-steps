@@ -1087,8 +1087,7 @@
         const s = cfg.SwordConfig;
         stats.push({ label: 'Damage', value: s.AttackDamage, fmt: v => v, hi: true });
         stats.push({ label: 'Knockback', value: s.KnockbackForce, fmt: v => v });
-        stats.push({ label: 'Crit Chance', value: s.CritChance, fmt: v => (v * 100).toFixed(1) + '%' });
-        stats.push({ label: 'Crit Multiplier', value: s.CritDamageMultiplier, fmt: v => v + 'x' });
+
         stats.push({ label: 'Use Speed', value: cfg.UseSpeed, fmt: v => v + '/s' });
       }
       if (cfg.BowConfig) {
@@ -1097,8 +1096,7 @@
         stats.push({ label: 'Range', value: s.Range, fmt: v => v });
         stats.push({ label: 'Proj. Speed', value: s.ProjectileSpeed, fmt: v => v });
         stats.push({ label: 'Knockback', value: s.KnockbackForce, fmt: v => v });
-        stats.push({ label: 'Crit Chance', value: s.CritChance, fmt: v => (v * 100).toFixed(1) + '%' });
-        stats.push({ label: 'Crit Multiplier', value: s.CritMultiplier, fmt: v => v + 'x' });
+
         stats.push({ label: 'Use Speed', value: cfg.UseSpeed, fmt: v => v + '/s' });
       }
       if (cfg.PickaxeConfig) {
@@ -1149,8 +1147,7 @@
         if (s.Range !== undefined) stats.push({ label: 'Range', value: s.Range, fmt: v => v });
         if (s.KnockbackForce !== undefined) stats.push({ label: 'Knockback', value: s.KnockbackForce, fmt: v => v });
         if (s.ProjectileSpeed !== undefined) stats.push({ label: 'Proj. Speed', value: s.ProjectileSpeed, fmt: v => v });
-        if (s.CritChance !== undefined) stats.push({ label: 'Crit Chance', value: s.CritChance, fmt: v => (v * 100).toFixed(1) + '%' });
-        if (s.CritMultiplier !== undefined) stats.push({ label: 'Crit Multiplier', value: s.CritMultiplier, fmt: v => v + 'x' });
+
         stats.push({ label: 'Use Speed', value: cfg.UseSpeed, fmt: v => v + '/s' });
       }
       if (cfg.ConsumableConfig) {

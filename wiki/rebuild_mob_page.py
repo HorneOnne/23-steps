@@ -345,8 +345,7 @@ SCRIPT = '''  <script id="mob-data" type="application/json">''' + json_blob + ''
       }
       combatHtml += stat('Knockback', fmt(c.KnockbackForce), '');
       combatHtml += stat('KB Resist', pct(c.KnockbackResistance), '');
-      combatHtml += stat('Crit Chance', pct(c.CritChance), 'yellow');
-      combatHtml += stat('Crit Multi', c.CritMultiplier + 'x', 'yellow');
+
       combatHtml += '</div>';
 
       /* Loot */

@@ -612,7 +612,7 @@
                     const s = c.SwordConfig || c.BowConfig;
                     if (!s) return;
                     const v = valMap[c.ItemID]; if (!v) return;
-                    const dps = s.AttackDamage * (1 + (s.CritChance || 0) * ((s.CritDamageMultiplier || s.CritMultiplier || 2) - 1)) / (c.UseSpeed || 1);
+                    const dps = s.AttackDamage / (c.UseSpeed || 1);
                     weaponData.push({ name: c.Name, dps, buy: v.BuyPrice, eff: v.BuyPrice > 0 ? dps / v.BuyPrice : 0, rarity: c.Rarity });
                 });
                 weaponData.sort((a, b) => b.eff - a.eff);
@@ -680,15 +680,13 @@
                     const v = valMap[c.ItemID];
                     const dmg = cfg.AttackDamage || cfg.Damage || 0;
                     const spd = c.UseSpeed || 1;
-                    const crit = cfg.CritChance || 0;
-                    const critMul = (cfg.CritDamageMultiplier || cfg.CritMultiplier || 2);
-                    const dps = dmg * (1 + crit * (critMul - 1)) / spd;
+                    const dps = dmg / spd;
                     const type = sc ? 'Sword' : bc ? 'Bow' : 'Staff';
-                    rows.push({ name: c.Name, type, rarity: c.Rarity, dmg, spd, crit, dps, buy: v ? v.BuyPrice : 0, sell: v ? v.SellPrice : 0, eff: v && v.BuyPrice > 0 ? (dps / v.BuyPrice) : 0, kb: cfg.KnockbackForce || 0 });
+                    rows.push({ name: c.Name, type, rarity: c.Rarity, dmg, spd, dps, buy: v ? v.BuyPrice : 0, sell: v ? v.SellPrice : 0, eff: v && v.BuyPrice > 0 ? (dps / v.BuyPrice) : 0, kb: cfg.KnockbackForce || 0 });
                 });
                 rows.sort((a, b) => b.dps - a.dps);
                 const maxDps = Math.max(...rows.map(r => r.dps));
-                el.innerHTML = `<table class="eco-table"><thead><tr><th>Weapon</th><th>Type</th><th>Rarity</th><th class="num">Damage</th><th class="num">Speed</th><th class="num">Crit%</th><th class="num">DPS</th><th class="num">Buy ${coin}</th><th class="num">DPS/Gold</th><th>DPS Bar</th></tr></thead><tbody>${rows.map(r => `<tr><td><span class="rarity-dot" style="background:${RARITY_COLORS[r.rarity] || '#888'}"></span>${r.name}</td><td class="muted">${r.type}</td><td style="color:${RARITY_COLORS[r.rarity] || '#888'}">${r.rarity}</td><td class="num">${r.dmg}</td><td class="num">${r.spd.toFixed(1)}</td><td class="num">${(r.crit * 100).toFixed(1)}%</td><td class="num gold">${r.dps.toFixed(2)}</td><td class="num gold">${r.buy || '-'}</td><td class="num ${r.eff > 0.1 ? 'good' : r.eff > 0.05 ? 'warn' : 'bad'}">${r.eff ? r.eff.toFixed(4) : '-'}</td><td><div class="bar-cell"><div class="bar" style="width:${(r.dps / maxDps * 100).toFixed(0)}px;background:${RARITY_COLORS[r.rarity] || '#888'}"></div></div></td></tr>`).join('')}</tbody></table>`;
+                el.innerHTML = `<table class="eco-table"><thead><tr><th>Weapon</th><th>Type</th><th>Rarity</th><th class="num">Damage</th><th class="num">Speed</th><th class="num">DPS</th><th class="num">Buy ${coin}</th><th class="num">DPS/Gold</th><th>DPS Bar</th></tr></thead><tbody>${rows.map(r => `<tr><td><span class="rarity-dot" style="background:${RARITY_COLORS[r.rarity] || '#888'}"></span>${r.name}</td><td class="muted">${r.type}</td><td style="color:${RARITY_COLORS[r.rarity] || '#888'}">${r.rarity}</td><td class="num">${r.dmg}</td><td class="num">${r.spd.toFixed(1)}</td><td class="num gold">${r.dps.toFixed(2)}</td><td class="num gold">${r.buy || '-'}</td><td class="num ${r.eff > 0.1 ? 'good' : r.eff > 0.05 ? 'warn' : 'bad'}">${r.eff ? r.eff.toFixed(4) : '-'}</td><td><div class="bar-cell"><div class="bar" style="width:${(r.dps / maxDps * 100).toFixed(0)}px;background:${RARITY_COLORS[r.rarity] || '#888'}"></div></div></td></tr>`).join('')}</tbody></table>`;
             }
 
             function buildArmor(el) {
@@ -723,7 +721,7 @@
                     const hp = m.HealthConfig.MaxHealth;
                     const dmg = m.CombatConfig.Damage;
                     const def = m.CombatConfig.Defense;
-                    const threat = dmg * (1 + m.CombatConfig.CritChance * (m.CombatConfig.CritMultiplier - 1));
+                    const threat = dmg;
                     return { name: m.MobName, level: m.Level, hp, dmg, def, xp, threat: threat.toFixed(1), lootVal: avgLootValue, goldPerHp: hp > 0 ? (avgLootValue / hp) : 0, drops: lootNames.join(', '), hostile: m.AIConfig.IsHostileToPlayer };
                 });
                 rows.sort((a, b) => b.lootVal - a.lootVal);

@@ -398,8 +398,8 @@
     }
 
     .mob-icon-wrap img {
-      width: 44px;
-      height: 44px;
+      width: 64px;
+      height: 64px;
       object-fit: contain;
       image-rendering: pixelated;
       image-rendering: crisp-edges;
@@ -876,7 +876,7 @@
               <th onclick="sortBy('as')" id="th-as">Attack Speed</th>
               <th onclick="sortBy('ar')" id="th-ar">Attack Range</th>
               <th onclick="sortBy('ms')" id="th-ms">Move Speed</th>
-              <th onclick="sortBy('crit')" id="th-crit">Crit %</th>
+
             </tr>
           </thead>
           <tbody id="mobGrid">
@@ -960,7 +960,7 @@
         '<td>' + fmt(c.AttackSpeed) + 'x' + '</td>',
         '<td>' + fmt(c.AttackRange) + '</td>',
         '<td>' + fmt(c.MoveSpeed) + 'x' + '</td>',
-        '<td>' + Math.round(c.CritChance * 100) + '%</td>',
+
         '</tr>'
       ].join('');
     }
@@ -1000,7 +1000,7 @@
           case 'as': return dir * (a.CombatConfig.AttackSpeed - b.CombatConfig.AttackSpeed);
           case 'ar': return dir * (a.CombatConfig.AttackRange - b.CombatConfig.AttackRange);
           case 'ms': return dir * (a.CombatConfig.MoveSpeed - b.CombatConfig.MoveSpeed);
-          case 'crit': return dir * (a.CombatConfig.CritChance - b.CombatConfig.CritChance);
+
           case 'type': return dir * (a.AIConfig.IsHostileToPlayer === b.AIConfig.IsHostileToPlayer ? 0 : a.AIConfig.IsHostileToPlayer ? -1 : 1);
           default: return dir * a.MobName.localeCompare(b.MobName);
         }

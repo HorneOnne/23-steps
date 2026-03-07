@@ -252,8 +252,7 @@ MOB_HTML = r'''<!DOCTYPE html>
       combatHtml += stat('Move Speed', fmt(c.MoveSpeed) + 'x', 'yellow');
       combatHtml += stat('Knockback', fmt(c.KnockbackForce), '');
       combatHtml += stat('KB Resistance', fmt(c.KnockbackResistance), '');
-      combatHtml += stat('Crit Chance', pct(c.CritChance), 'yellow');
-      combatHtml += stat('Crit Multiplier', c.CritMultiplier + 'x', 'yellow');
+
       combatHtml += '</div>';
 
       /* ── Loot section ── */
