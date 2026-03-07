@@ -40,15 +40,7 @@
             "MaxQuantity": 4,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
@@ -91,15 +83,7 @@
             "MaxQuantity": 5,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
@@ -142,15 +126,7 @@
             "MaxQuantity": 6,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
@@ -193,15 +169,7 @@
             "MaxQuantity": 12,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
@@ -244,15 +212,7 @@
             "MaxQuantity": 2,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
@@ -295,15 +255,7 @@
             "MaxQuantity": 12,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
@@ -346,15 +298,7 @@
             "MaxQuantity": 12,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
@@ -397,15 +341,7 @@
             "MaxQuantity": 12,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
@@ -448,15 +384,7 @@
             "MaxQuantity": 12,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
@@ -499,15 +427,7 @@
             "MaxQuantity": 12,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
@@ -550,15 +470,7 @@
             "MaxQuantity": 12,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
@@ -601,15 +513,7 @@
             "MaxQuantity": 12,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
@@ -652,15 +556,7 @@
             "MaxQuantity": 3,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
@@ -703,15 +599,7 @@
             "MaxQuantity": 3,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
@@ -754,15 +642,7 @@
             "MaxQuantity": 2,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
@@ -805,15 +685,7 @@
             "MaxQuantity": 3,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
@@ -856,15 +728,7 @@
             "MaxQuantity": 3,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
@@ -907,15 +771,7 @@
             "MaxQuantity": 2,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
@@ -958,15 +814,7 @@
             "MaxQuantity": 4,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
@@ -1009,15 +857,7 @@
             "MaxQuantity": 3,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
@@ -1060,15 +900,7 @@
             "MaxQuantity": 2,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
@@ -1111,15 +943,7 @@
             "MaxQuantity": 4,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
@@ -1162,15 +986,7 @@
             "MaxQuantity": 1,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
@@ -1213,15 +1029,7 @@
             "MaxQuantity": 2,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
@@ -1264,15 +1072,7 @@
             "MaxQuantity": 1,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
@@ -1315,15 +1115,7 @@
             "MaxQuantity": 1,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
@@ -1366,15 +1158,7 @@
             "MaxQuantity": 2,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
@@ -1417,15 +1201,7 @@
             "MaxQuantity": 3,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
@@ -1468,15 +1244,7 @@
             "MaxQuantity": 2,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
@@ -1519,15 +1287,7 @@
             "MaxQuantity": 2,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
@@ -1570,15 +1330,7 @@
             "MaxQuantity": 4,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
@@ -1621,15 +1373,7 @@
             "MaxQuantity": 2,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
@@ -1672,15 +1416,7 @@
             "MaxQuantity": 5,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
@@ -1723,15 +1459,7 @@
             "MaxQuantity": 3,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
@@ -1774,15 +1502,7 @@
             "MaxQuantity": 2,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
@@ -1825,15 +1545,7 @@
             "MaxQuantity": 3,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
@@ -1876,15 +1588,7 @@
             "MaxQuantity": 1,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
@@ -1927,15 +1631,7 @@
             "MaxQuantity": 2,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
@@ -1978,15 +1674,7 @@
             "MaxQuantity": 2,
             "DropChance": 0.6
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
@@ -2029,15 +1717,7 @@
             "MaxQuantity": 100,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": true,
-        "RareDrop": {
-          "ItemID": "Gel",
-          "MinQuantity": 1,
-          "MaxQuantity": 1,
-          "DropChance": 1.0
-        },
-        "RareDropChance": 0.1
+        ]
       }
     },
     {
@@ -2080,15 +1760,7 @@
             "MaxQuantity": 100,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": true,
-        "RareDrop": {
-          "ItemID": "Gel",
-          "MinQuantity": 1,
-          "MaxQuantity": 1,
-          "DropChance": 1.0
-        },
-        "RareDropChance": 0.1
+        ]
       }
     },
     {
@@ -2131,15 +1803,7 @@
             "MaxQuantity": 80,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": true,
-        "RareDrop": {
-          "ItemID": "Gel",
-          "MinQuantity": 1,
-          "MaxQuantity": 1,
-          "DropChance": 1.0
-        },
-        "RareDropChance": 0.1
+        ]
       }
     },
     {
@@ -2182,15 +1846,7 @@
             "MaxQuantity": 3,
             "DropChance": 0.8
           }
-        ],
-        "HasRareDrop": true,
-        "RareDrop": {
-          "ItemID": "Gel",
-          "MinQuantity": 1,
-          "MaxQuantity": 1,
-          "DropChance": 0.2
-        },
-        "RareDropChance": 0.05
+        ]
       }
     },
     {
@@ -2233,15 +1889,7 @@
             "MaxQuantity": 5,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": true,
-        "RareDrop": {
-          "ItemID": "Gel",
-          "MinQuantity": 1,
-          "MaxQuantity": 1,
-          "DropChance": 0.2
-        },
-        "RareDropChance": 0.12
+        ]
       }
     }
   ]
