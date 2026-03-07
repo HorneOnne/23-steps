@@ -3,15 +3,12 @@ var MOB_CONFIGS = {
     {
       "MobID": "BlueSlime",
       "MobName": "Blue Slime",
-      "Level": 1,
       "HealthConfig": {
         "MaxHealth": 100.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 10.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 10.0,
@@ -35,8 +32,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 10,
-        "ExperiencePerLevel": 5.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -45,29 +40,18 @@ var MOB_CONFIGS = {
             "MaxQuantity": 4,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
       "MobID": "GreenSlime",
       "MobName": "Green Slime",
-      "Level": 2,
       "HealthConfig": {
         "MaxHealth": 120.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": true,
         "RegenerationRate": 2.0,
-        "RegenerationDelay": 4.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 12.0
+        "RegenerationDelay": 4.0
       },
       "CombatConfig": {
         "Damage": 12.0,
@@ -91,8 +75,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 15,
-        "ExperiencePerLevel": 6.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -101,29 +83,18 @@ var MOB_CONFIGS = {
             "MaxQuantity": 5,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
       "MobID": "RedSlime",
       "MobName": "Red Slime",
-      "Level": 3,
       "HealthConfig": {
         "MaxHealth": 140.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 15.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 18.0,
@@ -147,8 +118,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 20,
-        "ExperiencePerLevel": 7.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -157,29 +126,18 @@ var MOB_CONFIGS = {
             "MaxQuantity": 6,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
       "MobID": "BlackSlime",
       "MobName": "Black Slime",
-      "Level": 5,
       "HealthConfig": {
         "MaxHealth": 250.0,
         "InvulnerabilityDuration": 0.4,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 25.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 20.0,
@@ -203,8 +161,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 50,
-        "ExperiencePerLevel": 12.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -213,29 +169,18 @@ var MOB_CONFIGS = {
             "MaxQuantity": 12,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
       "MobID": "TinyBlackSlime",
       "MobName": "Tiny Black Slime",
-      "Level": 1,
       "HealthConfig": {
         "MaxHealth": 50.0,
         "InvulnerabilityDuration": 0.3,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 5.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 8.0,
@@ -259,8 +204,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 5,
-        "ExperiencePerLevel": 3.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -269,29 +212,18 @@ var MOB_CONFIGS = {
             "MaxQuantity": 2,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
       "MobID": "Orc",
       "MobName": "Orc",
-      "Level": 5,
       "HealthConfig": {
         "MaxHealth": 250.0,
         "InvulnerabilityDuration": 0.4,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 25.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 25.0,
@@ -315,8 +247,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 50,
-        "ExperiencePerLevel": 12.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -325,29 +255,18 @@ var MOB_CONFIGS = {
             "MaxQuantity": 12,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
       "MobID": "ArmoredAxeman",
       "MobName": "Armored Axeman",
-      "Level": 5,
       "HealthConfig": {
         "MaxHealth": 250.0,
         "InvulnerabilityDuration": 0.4,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 25.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 25.0,
@@ -371,8 +290,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 50,
-        "ExperiencePerLevel": 12.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -381,29 +298,18 @@ var MOB_CONFIGS = {
             "MaxQuantity": 12,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
       "MobID": "ArmoredOrc",
       "MobName": "Armored Orc",
-      "Level": 5,
       "HealthConfig": {
         "MaxHealth": 250.0,
         "InvulnerabilityDuration": 0.4,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 25.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 25.0,
@@ -427,8 +333,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 50,
-        "ExperiencePerLevel": 12.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -437,29 +341,18 @@ var MOB_CONFIGS = {
             "MaxQuantity": 12,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
       "MobID": "ArmoredSkeleton",
       "MobName": "Armored Skeleton",
-      "Level": 5,
       "HealthConfig": {
         "MaxHealth": 250.0,
         "InvulnerabilityDuration": 0.4,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 25.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 25.0,
@@ -483,8 +376,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 50,
-        "ExperiencePerLevel": 12.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -493,29 +384,18 @@ var MOB_CONFIGS = {
             "MaxQuantity": 12,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
       "MobID": "EliteOrc",
       "MobName": "Elite Orc",
-      "Level": 5,
       "HealthConfig": {
         "MaxHealth": 250.0,
         "InvulnerabilityDuration": 0.4,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 25.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 25.0,
@@ -539,8 +419,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 50,
-        "ExperiencePerLevel": 12.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -549,29 +427,18 @@ var MOB_CONFIGS = {
             "MaxQuantity": 12,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
       "MobID": "Werebear",
       "MobName": "Werebear",
-      "Level": 5,
       "HealthConfig": {
         "MaxHealth": 250.0,
         "InvulnerabilityDuration": 0.4,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 25.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 25.0,
@@ -595,8 +462,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 50,
-        "ExperiencePerLevel": 12.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -605,29 +470,18 @@ var MOB_CONFIGS = {
             "MaxQuantity": 12,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
       "MobID": "Werewolf",
       "MobName": "Werewolf",
-      "Level": 5,
       "HealthConfig": {
         "MaxHealth": 250.0,
         "InvulnerabilityDuration": 0.4,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 25.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 25.0,
@@ -651,8 +505,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 50,
-        "ExperiencePerLevel": 12.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -661,197 +513,18 @@ var MOB_CONFIGS = {
             "MaxQuantity": 12,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
-      }
-    },
-     {
-      "MobID": "RedMushroom",
-      "MobName": "Red Mushroom",
-      "Level": 1,
-      "HealthConfig": {
-        "MaxHealth": 80.0,
-        "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 8.0
-      },
-      "CombatConfig": {
-        "Damage": 8.0,
-        "MoveSpeed": 1.2,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 1.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 0.6,
-        "KnockbackForce": 0.8,
-        "KnockbackResistance": 0.0,
-        "CritChance": 0.03,
-        "CritMultiplier": 1.4
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 9.0,
-        "DeAggressionRange": 14.0,
-        "PatrolRadius": 4.0
-      },
-      "MovementConfig": {
-        "CanBeStunned": true
-      },
-      "LootConfig": {
-        "BaseExperience": 8,
-        "ExperiencePerLevel": 4.0,
-        "DropsLoot": true,
-        "LootDrops": [
-          {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
-            "MaxQuantity": 3,
-            "DropChance": 1.0
-          }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
-      }
-    },
-    {
-      "MobID": "GreenMushroom",
-      "MobName": "Green Mushroom",
-      "Level": 1,
-      "HealthConfig": {
-        "MaxHealth": 85.0,
-        "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": true,
-        "RegenerationRate": 1.5,
-        "RegenerationDelay": 4.5,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 9.0
-      },
-      "CombatConfig": {
-        "Damage": 9.0,
-        "MoveSpeed": 1.3,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 1.5,
-        "AttackSpeed": 1.1,
-        "AttackRange": 0.5,
-        "KnockbackForce": 0.9,
-        "KnockbackResistance": 0.05,
-        "CritChance": 0.04,
-        "CritMultiplier": 1.45
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 9.5,
-        "DeAggressionRange": 14.5,
-        "PatrolRadius": 4.5
-      },
-      "MovementConfig": {
-        "CanBeStunned": true
-      },
-      "LootConfig": {
-        "BaseExperience": 9,
-        "ExperiencePerLevel": 4.5,
-        "DropsLoot": true,
-        "LootDrops": [
-          {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
-            "MaxQuantity": 3,
-            "DropChance": 1.0
-          }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
-      }
-    },
-    {
-      "MobID": "BlueMushroom",
-      "MobName": "Blue Mushroom",
-      "Level": 1,
-      "HealthConfig": {
-        "MaxHealth": 75.0,
-        "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 7.5
-      },
-      "CombatConfig": {
-        "Damage": 7.0,
-        "MoveSpeed": 1.0,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.5,
-        "AttackSpeed": 1.2,
-        "AttackRange":0.5,
-        "KnockbackForce": 0.7,
-        "KnockbackResistance": 0.0,
-        "CritChance": 0.02,
-        "CritMultiplier": 1.3
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 8.5,
-        "DeAggressionRange": 13.5,
-        "PatrolRadius": 3.5
-      },
-      "MovementConfig": {
-        "CanBeStunned": true
-      },
-      "LootConfig": {
-        "BaseExperience": 7,
-        "ExperiencePerLevel": 3.5,
-        "DropsLoot": true,
-        "LootDrops": [
-          {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
-            "MaxQuantity": 2,
-            "DropChance": 1.0
-          }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
       "MobID": "Bloodcap",
       "MobName": "Bloodcap",
-      "Level": 1,
       "HealthConfig": {
         "MaxHealth": 80.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 8.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 8.0,
@@ -875,8 +548,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 8,
-        "ExperiencePerLevel": 4.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -885,29 +556,18 @@ var MOB_CONFIGS = {
             "MaxQuantity": 3,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
       "MobID": "Venomcap",
       "MobName": "Venomcap",
-      "Level": 1,
       "HealthConfig": {
         "MaxHealth": 85.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": true,
         "RegenerationRate": 1.5,
-        "RegenerationDelay": 4.5,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 9.0
+        "RegenerationDelay": 4.5
       },
       "CombatConfig": {
         "Damage": 9.0,
@@ -931,8 +591,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 9,
-        "ExperiencePerLevel": 4.5,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -941,29 +599,18 @@ var MOB_CONFIGS = {
             "MaxQuantity": 3,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
       "MobID": "Gloopcap",
       "MobName": "Gloopcap",
-      "Level": 1,
       "HealthConfig": {
         "MaxHealth": 75.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 7.5
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 7.0,
@@ -971,7 +618,7 @@ var MOB_CONFIGS = {
         "FlightSpeedMultiplier": 1.0,
         "Defense": 0.5,
         "AttackSpeed": 1.2,
-        "AttackRange":1.0,
+        "AttackRange": 1.0,
         "KnockbackForce": 0.7,
         "KnockbackResistance": 0.0,
         "CritChance": 0.02,
@@ -987,8 +634,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 7,
-        "ExperiencePerLevel": 3.5,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -997,29 +642,18 @@ var MOB_CONFIGS = {
             "MaxQuantity": 2,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
-     {
+    {
       "MobID": "Sandworm",
       "MobName": "Sandworm",
-      "Level": 2,
       "HealthConfig": {
         "MaxHealth": 120.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 12.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 12.0,
@@ -1043,8 +677,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 12,
-        "ExperiencePerLevel": 5.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -1053,29 +685,18 @@ var MOB_CONFIGS = {
             "MaxQuantity": 4,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
       "MobID": "Dirtworm",
       "MobName": "Dirtworm",
-      "Level": 1,
       "HealthConfig": {
         "MaxHealth": 90.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 9.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 9.0,
@@ -1099,8 +720,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 9,
-        "ExperiencePerLevel": 4.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -1109,29 +728,18 @@ var MOB_CONFIGS = {
             "MaxQuantity": 3,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
-     {
+    {
       "MobID": "Pig",
       "MobName": "Pig",
-      "Level": 1,
       "HealthConfig": {
         "MaxHealth": 60.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 6.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 5.0,
@@ -1155,8 +763,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 5,
-        "ExperiencePerLevel": 2.5,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -1165,29 +771,18 @@ var MOB_CONFIGS = {
             "MaxQuantity": 2,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
       "MobID": "Boar",
       "MobName": "Boar",
-      "Level": 2,
       "HealthConfig": {
         "MaxHealth": 4000.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 10.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 50.0,
@@ -1211,8 +806,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 15,
-        "ExperiencePerLevel": 6.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -1221,29 +814,18 @@ var MOB_CONFIGS = {
             "MaxQuantity": 4,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
       "MobID": "Leaf",
       "MobName": "Leaf",
-      "Level": 1,
       "HealthConfig": {
         "MaxHealth": 40.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 4.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 4.0,
@@ -1267,8 +849,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 3,
-        "ExperiencePerLevel": 1.5,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -1277,29 +857,18 @@ var MOB_CONFIGS = {
             "MaxQuantity": 1,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
       "MobID": "Leafer",
       "MobName": "Leafer",
-      "Level": 2,
       "HealthConfig": {
         "MaxHealth": 80.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 8.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 10.0,
@@ -1323,8 +892,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 8,
-        "ExperiencePerLevel": 4.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -1333,29 +900,18 @@ var MOB_CONFIGS = {
             "MaxQuantity": 2,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
       "MobID": "Bat",
       "MobName": "Bat",
-      "Level": 1,
       "HealthConfig": {
         "MaxHealth": 30.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 3.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 3.0,
@@ -1379,8 +935,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 2,
-        "ExperiencePerLevel": 1.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -1389,29 +943,18 @@ var MOB_CONFIGS = {
             "MaxQuantity": 1,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
       "MobID": "TinyBee",
       "MobName": "Tiny Bee",
-      "Level": 1,
       "HealthConfig": {
         "MaxHealth": 25.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 2.5
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 2.0,
@@ -1435,8 +978,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 1,
-        "ExperiencePerLevel": 0.5,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -1445,29 +986,18 @@ var MOB_CONFIGS = {
             "MaxQuantity": 1,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
       "MobID": "WorkerBee",
       "MobName": "Worker Bee",
-      "Level": 2,
       "HealthConfig": {
         "MaxHealth": 50.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": true,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 2.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 5.0
+        "RegenerationDelay": 2.0
       },
       "CombatConfig": {
         "Damage": 6.0,
@@ -1491,8 +1021,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 4,
-        "ExperiencePerLevel": 2.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -1501,29 +1029,18 @@ var MOB_CONFIGS = {
             "MaxQuantity": 2,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
       "MobID": "MechanicalBee",
       "MobName": "Mechanical Bee",
-      "Level": 3,
       "HealthConfig": {
         "MaxHealth": 80.0,
         "InvulnerabilityDuration": 0.4,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 8.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 10.0,
@@ -1547,8 +1064,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": false
       },
       "LootConfig": {
-        "BaseExperience": 8,
-        "ExperiencePerLevel": 4.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -1557,29 +1072,18 @@ var MOB_CONFIGS = {
             "MaxQuantity": 3,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
       "MobID": "SpiritBee",
       "MobName": "Spirit Bee",
-      "Level": 4,
       "HealthConfig": {
         "MaxHealth": 60.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": true,
         "RegenerationRate": 2.0,
-        "RegenerationDelay": 3.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 6.0
+        "RegenerationDelay": 3.0
       },
       "CombatConfig": {
         "Damage": 8.0,
@@ -1603,8 +1107,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 6,
-        "ExperiencePerLevel": 3.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -1613,29 +1115,18 @@ var MOB_CONFIGS = {
             "MaxQuantity": 2,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
       "MobID": "WallCreeper",
       "MobName": "Wall Creeper",
-      "Level": 2,
       "HealthConfig": {
         "MaxHealth": 70.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 7.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 8.0,
@@ -1659,8 +1150,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 6,
-        "ExperiencePerLevel": 3.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -1669,29 +1158,18 @@ var MOB_CONFIGS = {
             "MaxQuantity": 2,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
       "MobID": "VileHatcher",
       "MobName": "Vile Hatcher",
-      "Level": 3,
       "HealthConfig": {
         "MaxHealth": 100.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 10.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 12.0,
@@ -1715,8 +1193,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 10,
-        "ExperiencePerLevel": 5.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -1725,29 +1201,18 @@ var MOB_CONFIGS = {
             "MaxQuantity": 4,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
       "MobID": "WebSpinner",
       "MobName": "Web Spinner",
-      "Level": 2,
       "HealthConfig": {
         "MaxHealth": 60.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 6.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 6.0,
@@ -1771,8 +1236,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 5,
-        "ExperiencePerLevel": 2.5,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -1781,29 +1244,18 @@ var MOB_CONFIGS = {
             "MaxQuantity": 2,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
       "MobID": "Carapace",
       "MobName": "Carapace",
-      "Level": 4,
       "HealthConfig": {
         "MaxHealth": 150.0,
         "InvulnerabilityDuration": 0.4,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 15.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 15.0,
@@ -1827,8 +1279,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": false
       },
       "LootConfig": {
-        "BaseExperience": 15,
-        "ExperiencePerLevel": 7.5,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -1837,29 +1287,18 @@ var MOB_CONFIGS = {
             "MaxQuantity": 5,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
       "MobID": "NightfangWeaver",
       "MobName": "Nightfang Weaver",
-      "Level": 3,
       "HealthConfig": {
         "MaxHealth": 90.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": true,
         "RegenerationRate": 1.5,
-        "RegenerationDelay": 4.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 9.0
+        "RegenerationDelay": 4.0
       },
       "CombatConfig": {
         "Damage": 10.0,
@@ -1883,8 +1322,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 9,
-        "ExperiencePerLevel": 4.5,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -1893,29 +1330,18 @@ var MOB_CONFIGS = {
             "MaxQuantity": 3,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
       "MobID": "Ghost",
       "MobName": "Ghost",
-      "Level": 3,
       "HealthConfig": {
         "MaxHealth": 80.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 8.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 12.0,
@@ -1939,8 +1365,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 8,
-        "ExperiencePerLevel": 4.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -1949,29 +1373,18 @@ var MOB_CONFIGS = {
             "MaxQuantity": 2,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
       "MobID": "Snowman",
       "MobName": "Snowman",
-      "Level": 2,
       "HealthConfig": {
         "MaxHealth": 100.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 10.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 10.0,
@@ -1995,8 +1408,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 8,
-        "ExperiencePerLevel": 4.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -2005,29 +1416,18 @@ var MOB_CONFIGS = {
             "MaxQuantity": 3,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
       "MobID": "Penguin",
       "MobName": "Penguin",
-      "Level": 1,
       "HealthConfig": {
         "MaxHealth": 50.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 5.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 4.0,
@@ -2051,8 +1451,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 3,
-        "ExperiencePerLevel": 1.5,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -2061,29 +1459,18 @@ var MOB_CONFIGS = {
             "MaxQuantity": 1,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
       "MobID": "Vulture",
       "MobName": "Vulture",
-      "Level": 2,
       "HealthConfig": {
         "MaxHealth": 60.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 6.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 8.0,
@@ -2107,8 +1494,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 5,
-        "ExperiencePerLevel": 2.5,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -2117,29 +1502,18 @@ var MOB_CONFIGS = {
             "MaxQuantity": 2,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
     {
       "MobID": "Zombie",
       "MobName": "Zombie",
-      "Level": 2,
       "HealthConfig": {
         "MaxHealth": 120.0,
         "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
         "RegenerationRate": 0.0,
-        "RegenerationDelay": 0.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 12.0
+        "RegenerationDelay": 0.0
       },
       "CombatConfig": {
         "Damage": 14.0,
@@ -2163,8 +1537,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": true
       },
       "LootConfig": {
-        "BaseExperience": 12,
-        "ExperiencePerLevel": 5.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -2173,29 +1545,18 @@ var MOB_CONFIGS = {
             "MaxQuantity": 2,
             "DropChance": 0.6
           }
-        ],
-        "HasRareDrop": false,
-        "RareDrop": {
-          "ItemID": "None",
-          "MinQuantity": 0,
-          "MaxQuantity": 0,
-          "DropChance": 0.0
-        },
-        "RareDropChance": 0.0
+        ]
       }
     },
-     {
+    {
       "MobID": "PrinceSlime",
       "MobName": "Prince Slime",
-      "Level": 1,
       "HealthConfig": {
         "MaxHealth": 500.0,
         "InvulnerabilityDuration": 0.5,
         "CanRegenerate": true,
         "RegenerationRate": 5.0,
-        "RegenerationDelay": 2.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 200.0
+        "RegenerationDelay": 2.0
       },
       "CombatConfig": {
         "Damage": 15.0,
@@ -2219,8 +1580,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": false
       },
       "LootConfig": {
-        "BaseExperience": 500,
-        "ExperiencePerLevel": 50.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -2229,29 +1588,18 @@ var MOB_CONFIGS = {
             "MaxQuantity": 100,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": true,
-        "RareDrop": {
-          "ItemID": "Gel",
-          "MinQuantity": 1,
-          "MaxQuantity": 1,
-          "DropChance": 1.0
-        },
-        "RareDropChance": 0.1
+        ]
       }
     },
     {
       "MobID": "ShroomletTyrant",
       "MobName": "Shroomlet Tyrant",
-      "Level": 1,
       "HealthConfig": {
         "MaxHealth": 1000.0,
         "InvulnerabilityDuration": 0.5,
         "CanRegenerate": true,
         "RegenerationRate": 5.0,
-        "RegenerationDelay": 2.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 200.0
+        "RegenerationDelay": 2.0
       },
       "CombatConfig": {
         "Damage": 2.0,
@@ -2275,8 +1623,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": false
       },
       "LootConfig": {
-        "BaseExperience": 500,
-        "ExperiencePerLevel": 50.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -2285,29 +1631,18 @@ var MOB_CONFIGS = {
             "MaxQuantity": 100,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": true,
-        "RareDrop": {
-          "ItemID": "Gel",
-          "MinQuantity": 1,
-          "MaxQuantity": 1,
-          "DropChance": 1.0
-        },
-        "RareDropChance": 0.1
+        ]
       }
     },
     {
       "MobID": "Centipede",
       "MobName": "Centipede",
-      "Level": 10,
       "HealthConfig": {
         "MaxHealth": 1800.0,
         "InvulnerabilityDuration": 0.3,
         "CanRegenerate": true,
         "RegenerationRate": 4.0,
-        "RegenerationDelay": 3.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 180.0
+        "RegenerationDelay": 3.0
       },
       "CombatConfig": {
         "Damage": 45.0,
@@ -2331,8 +1666,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": false
       },
       "LootConfig": {
-        "BaseExperience": 450,
-        "ExperiencePerLevel": 45.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -2341,32 +1674,21 @@ var MOB_CONFIGS = {
             "MaxQuantity": 80,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": true,
-        "RareDrop": {
-          "ItemID": "Gel",
-          "MinQuantity": 1,
-          "MaxQuantity": 1,
-          "DropChance": 1.0
-        },
-        "RareDropChance": 0.1
+        ]
       }
     },
     {
       "MobID": "Vinefang",
       "MobName": "Vinefang",
-      "Level": 7,
       "HealthConfig": {
         "MaxHealth": 900.0,
         "InvulnerabilityDuration": 0.3,
         "CanRegenerate": true,
         "RegenerationRate": 3.0,
-        "RegenerationDelay": 3.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 90.0
+        "RegenerationDelay": 3.0
       },
       "CombatConfig": {
-        "Damage": 0.350,
+        "Damage": 0.35,
         "MoveSpeed": 1.4,
         "FlightSpeedMultiplier": 1.0,
         "Defense": 10.0,
@@ -2387,8 +1709,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": false
       },
       "LootConfig": {
-        "BaseExperience": 300,
-        "ExperiencePerLevel": 30.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -2397,29 +1717,18 @@ var MOB_CONFIGS = {
             "MaxQuantity": 3,
             "DropChance": 0.8
           }
-        ],
-        "HasRareDrop": true,
-        "RareDrop": {
-          "ItemID": "Gel",
-          "MinQuantity": 1,
-          "MaxQuantity": 1,
-          "DropChance": 0.2
-        },
-        "RareDropChance": 0.05
+        ]
       }
     },
     {
       "MobID": "Thorncoil",
       "MobName": "Thorncoil",
-      "Level": 12,
       "HealthConfig": {
         "MaxHealth": 2200.0,
         "InvulnerabilityDuration": 0.4,
         "CanRegenerate": false,
         "RegenerationRate": 2.0,
-        "RegenerationDelay": 5.0,
-        "ScaleWithLevel": true,
-        "HealthPerLevel": 180.0
+        "RegenerationDelay": 5.0
       },
       "CombatConfig": {
         "Damage": 60.0,
@@ -2443,8 +1752,6 @@ var MOB_CONFIGS = {
         "CanBeStunned": false
       },
       "LootConfig": {
-        "BaseExperience": 700,
-        "ExperiencePerLevel": 70.0,
         "DropsLoot": true,
         "LootDrops": [
           {
@@ -2453,17 +1760,8 @@ var MOB_CONFIGS = {
             "MaxQuantity": 5,
             "DropChance": 1.0
           }
-        ],
-        "HasRareDrop": true,
-        "RareDrop": {
-          "ItemID": "Gel",
-          "MinQuantity": 1,
-          "MaxQuantity": 1,
-          "DropChance": 0.2
-        },
-        "RareDropChance": 0.12
+        ]
       }
     }
   ]
-}
-;
+};
