@@ -86,7 +86,7 @@
       "Ingredients": [
         {
           "ItemID": "CopperIngot",
-          "Quantity": 24
+          "Quantity": 10
         }
       ]
     },
@@ -96,7 +96,7 @@
       "Ingredients": [
         {
           "ItemID": "IronIngot",
-          "Quantity": 24
+          "Quantity": 10
         }
       ]
     },
@@ -106,7 +106,7 @@
       "Ingredients": [
         {
           "ItemID": "SilverIngot",
-          "Quantity": 30
+          "Quantity": 10
         }
       ]
     },
@@ -116,7 +116,7 @@
       "Ingredients": [
         {
           "ItemID": "GoldIngot",
-          "Quantity": 30
+          "Quantity": 10
         }
       ]
     },
@@ -126,7 +126,7 @@
       "Ingredients": [
         {
           "ItemID": "CopperIngot",
-          "Quantity": 45
+          "Quantity": 10
         }
       ]
     },
@@ -136,7 +136,7 @@
       "Ingredients": [
         {
           "ItemID": "IronIngot",
-          "Quantity": 55
+          "Quantity": 10
         }
       ]
     },
@@ -146,7 +146,7 @@
       "Ingredients": [
         {
           "ItemID": "SilverIngot",
-          "Quantity": 65
+          "Quantity": 10
         }
       ]
     },
@@ -156,7 +156,7 @@
       "Ingredients": [
         {
           "ItemID": "GoldIngot",
-          "Quantity": 75
+          "Quantity": 10
         }
       ]
     },
@@ -166,7 +166,7 @@
       "Ingredients": [
         {
           "ItemID": "CopperIngot",
-          "Quantity": 20
+          "Quantity": 6
         }
       ]
     },
@@ -176,7 +176,7 @@
       "Ingredients": [
         {
           "ItemID": "CopperIngot",
-          "Quantity": 35
+          "Quantity": 10
         }
       ]
     },
@@ -186,7 +186,7 @@
       "Ingredients": [
         {
           "ItemID": "CopperIngot",
-          "Quantity": 15
+          "Quantity": 8
         }
       ]
     },
@@ -196,7 +196,7 @@
       "Ingredients": [
         {
           "ItemID": "IronIngot",
-          "Quantity": 25
+          "Quantity": 6
         }
       ]
     },
@@ -206,7 +206,7 @@
       "Ingredients": [
         {
           "ItemID": "IronIngot",
-          "Quantity": 40
+          "Quantity": 10
         }
       ]
     },
@@ -216,7 +216,7 @@
       "Ingredients": [
         {
           "ItemID": "IronIngot",
-          "Quantity": 20
+          "Quantity": 8
         }
       ]
     },
@@ -226,7 +226,7 @@
       "Ingredients": [
         {
           "ItemID": "SilverIngot",
-          "Quantity": 30
+          "Quantity": 6
         }
       ]
     },
@@ -236,7 +236,7 @@
       "Ingredients": [
         {
           "ItemID": "SilverIngot",
-          "Quantity": 45
+          "Quantity": 10
         }
       ]
     },
@@ -246,7 +246,7 @@
       "Ingredients": [
         {
           "ItemID": "SilverIngot",
-          "Quantity": 25
+          "Quantity": 8
         }
       ]
     },
@@ -256,7 +256,7 @@
       "Ingredients": [
         {
           "ItemID": "GoldIngot",
-          "Quantity": 35
+          "Quantity": 6
         }
       ]
     },
@@ -266,7 +266,7 @@
       "Ingredients": [
         {
           "ItemID": "GoldIngot",
-          "Quantity": 50
+          "Quantity": 10
         }
       ]
     },
@@ -276,7 +276,7 @@
       "Ingredients": [
         {
           "ItemID": "GoldIngot",
-          "Quantity": 30
+          "Quantity": 8
         }
       ]
     },
@@ -356,7 +356,7 @@
       "Ingredients": [
         {
           "ItemID": "TinIngot",
-          "Quantity": 25
+          "Quantity": 6
         }
       ]
     },
@@ -366,7 +366,7 @@
       "Ingredients": [
         {
           "ItemID": "TinIngot",
-          "Quantity": 40
+          "Quantity": 10
         }
       ]
     },
@@ -376,7 +376,7 @@
       "Ingredients": [
         {
           "ItemID": "TinIngot",
-          "Quantity": 20
+          "Quantity": 8
         }
       ]
     },
@@ -386,7 +386,7 @@
       "Ingredients": [
         {
           "ItemID": "LeadIngot",
-          "Quantity": 30
+          "Quantity": 6
         }
       ]
     },
@@ -396,7 +396,7 @@
       "Ingredients": [
         {
           "ItemID": "LeadIngot",
-          "Quantity": 45
+          "Quantity": 10
         }
       ]
     },
@@ -406,7 +406,7 @@
       "Ingredients": [
         {
           "ItemID": "LeadIngot",
-          "Quantity": 25
+          "Quantity": 8
         }
       ]
     },
@@ -416,7 +416,7 @@
       "Ingredients": [
         {
           "ItemID": "AmberstoneIngot",
-          "Quantity": 35
+          "Quantity": 6
         }
       ]
     },
@@ -426,7 +426,7 @@
       "Ingredients": [
         {
           "ItemID": "AmberstoneIngot",
-          "Quantity": 50
+          "Quantity": 10
         }
       ]
     },
@@ -436,7 +436,7 @@
       "Ingredients": [
         {
           "ItemID": "AmberstoneIngot",
-          "Quantity": 30
+          "Quantity": 8
         }
       ]
     },
@@ -446,7 +446,7 @@
       "Ingredients": [
         {
           "ItemID": "TungstenIngot",
-          "Quantity": 40
+          "Quantity": 6
         }
       ]
     },
@@ -456,7 +456,7 @@
       "Ingredients": [
         {
           "ItemID": "TungstenIngot",
-          "Quantity": 55
+          "Quantity": 10
         }
       ]
     },
@@ -466,7 +466,7 @@
       "Ingredients": [
         {
           "ItemID": "TungstenIngot",
-          "Quantity": 35
+          "Quantity": 8
         }
       ]
     },
@@ -476,7 +476,7 @@
       "Ingredients": [
         {
           "ItemID": "PlatinumIngot",
-          "Quantity": 45
+          "Quantity": 6
         }
       ]
     },
@@ -486,7 +486,7 @@
       "Ingredients": [
         {
           "ItemID": "PlatinumIngot",
-          "Quantity": 60
+          "Quantity": 10
         }
       ]
     },
@@ -496,7 +496,7 @@
       "Ingredients": [
         {
           "ItemID": "PlatinumIngot",
-          "Quantity": 40
+          "Quantity": 8
         }
       ]
     },
@@ -506,7 +506,7 @@
       "Ingredients": [
         {
           "ItemID": "TinIngot",
-          "Quantity": 24
+          "Quantity": 10
         }
       ]
     },
@@ -516,7 +516,7 @@
       "Ingredients": [
         {
           "ItemID": "LeadIngot",
-          "Quantity": 24
+          "Quantity": 10
         }
       ]
     },
@@ -536,7 +536,7 @@
       "Ingredients": [
         {
           "ItemID": "PlatinumIngot",
-          "Quantity": 30
+          "Quantity": 10
         }
       ]
     },
@@ -546,7 +546,7 @@
       "Ingredients": [
         {
           "ItemID": "TinIngot",
-          "Quantity": 45
+          "Quantity": 10
         }
       ]
     },
@@ -556,7 +556,7 @@
       "Ingredients": [
         {
           "ItemID": "LeadIngot",
-          "Quantity": 55
+          "Quantity": 10
         }
       ]
     },
@@ -566,7 +566,7 @@
       "Ingredients": [
         {
           "ItemID": "TungstenIngot",
-          "Quantity": 65
+          "Quantity": 10
         }
       ]
     },
@@ -576,7 +576,7 @@
       "Ingredients": [
         {
           "ItemID": "PlatinumIngot",
-          "Quantity": 75
+          "Quantity": 10
         }
       ]
     },
@@ -596,11 +596,11 @@
       "Ingredients": [
         {
           "ItemID": "Strings",
-          "Quantity": 45
+          "Quantity": 5
         },
         {
           "ItemID": "CopperIngot",
-          "Quantity": 45
+          "Quantity": 10
         }
       ]
     },
@@ -610,11 +610,11 @@
       "Ingredients": [
         {
           "ItemID": "Strings",
-          "Quantity": 45
+          "Quantity": 5
         },
         {
           "ItemID": "TinIngot",
-          "Quantity": 45
+          "Quantity": 10
         }
       ]
     },
@@ -624,11 +624,11 @@
       "Ingredients": [
         {
           "ItemID": "Strings",
-          "Quantity": 55
+          "Quantity": 5
         },
         {
           "ItemID": "LeadIngot",
-          "Quantity": 55
+          "Quantity": 10
         }
       ]
     },
@@ -638,11 +638,11 @@
       "Ingredients": [
         {
           "ItemID": "Strings",
-          "Quantity": 55
+          "Quantity": 5
         },
         {
           "ItemID": "IronIngot",
-          "Quantity": 55
+          "Quantity": 10
         }
       ]
     },
@@ -652,11 +652,11 @@
       "Ingredients": [
         {
           "ItemID": "Strings",
-          "Quantity": 65
+          "Quantity": 5
         },
         {
           "ItemID": "SilverIngot",
-          "Quantity": 65
+          "Quantity": 10
         }
       ]
     },
@@ -666,11 +666,11 @@
       "Ingredients": [
         {
           "ItemID": "Strings",
-          "Quantity": 65
+          "Quantity": 5
         },
         {
           "ItemID": "TungstenIngot",
-          "Quantity": 65
+          "Quantity": 10
         }
       ]
     },
@@ -680,11 +680,11 @@
       "Ingredients": [
         {
           "ItemID": "Strings",
-          "Quantity": 75
+          "Quantity": 5
         },
         {
           "ItemID": "GoldIngot",
-          "Quantity": 75
+          "Quantity": 10
         }
       ]
     },
@@ -694,11 +694,11 @@
       "Ingredients": [
         {
           "ItemID": "Strings",
-          "Quantity": 75
+          "Quantity": 5
         },
         {
           "ItemID": "PlatinumIngot",
-          "Quantity": 75
+          "Quantity": 10
         }
       ]
     },
