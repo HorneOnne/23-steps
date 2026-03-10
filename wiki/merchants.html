@@ -456,8 +456,16 @@
             transition: background .12s;
         }
 
+        [data-theme="light"] .shop-table tbody tr {
+            background: #f5f2ed;
+        }
+
         .shop-table tbody tr:hover {
             background: var(--wiki-card-hover-bg);
+        }
+
+        [data-theme="light"] .shop-table tbody tr:hover {
+            background: #ede8e0;
         }
 
         .shop-table tbody tr:not(:last-child) td {
@@ -579,15 +587,15 @@
             height: 10px;
             background: var(--wiki-stat-bg);
             border: 1px solid var(--wiki-stat-border);
-            border-radius: 6px;
+            border-radius: 0;
             overflow: hidden;
             flex-shrink: 0;
         }
 
         .chance-bar-fill {
             height: 100%;
-            background: linear-gradient(90deg, #60a5fa, #818cf8);
-            border-radius: 6px;
+            background: linear-gradient(90deg, #3b9e8c, #2d8a7e);
+            border-radius: 0;
             transition: width .3s ease;
         }
 
