@@ -976,6 +976,7 @@
       "BlueRose": "bluerose", "Flowstone": "flowstone", "Cactus": "cactus", "Rail": "rail",
       "SlimelingCore": "SlimelingCore", "DemonMushroom": "DemonMushroom", "Mushroom": "Mushroom",
       "BoneFragment": "bone", "GoldenFeather": "feather", "Log": "Log",
+      "RingOfSwiftness": "RingOfSwiftness",
       "BandOfRegeneration": "BandOfRegeneration", "WoodenShield": "WoodenShield",
       "ReinforcedWoodShield": "ReinforcedWoodShield", "CopperPlatedGuard": "CopperPlatedGuard",
       "GladiatorsRoundshield": "GladiatorsRoundshield", "IronHeaterShield": "IronHeaterShield",
@@ -1124,8 +1125,10 @@
         if (s.StatBonuses && s.StatBonuses.length) {
           s.StatBonuses.forEach(b => {
             const label = b.StatType ? b.StatType.replace(/([A-Z])/g, ' $1').trim() : 'Bonus';
-            const mod = b.ModifierType === 'Percent' ? '%' : '';
-            stats.push({ label, value: b.Value, fmt: v => '+' + v + mod, hi: true });
+            const isPercent = b.ModifierType === 'Percent' || b.ModifierType === 'Percentage';
+            const displayVal = isPercent ? Math.round(b.Value * 100) : b.Value;
+            const mod = isPercent ? '%' : '';
+            stats.push({ label, value: displayVal, fmt: v => '+' + v + mod, hi: true });
           });
         }
         if (s.HasSpecialEffect && s.SpecialEffectDescription) {

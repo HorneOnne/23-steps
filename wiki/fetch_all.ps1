@@ -8,7 +8,8 @@ $filesToCopy = @(
     "ItemConfigs\item_configs.json",
     "MobConfigs\mob_configs.json",
     "Recipes\crafting_recipes.json",
-    "ItemValues\item_values.json"
+    "ItemValues\item_values.json",
+    "ChestLoot\chestdata.json"
 )
 
 # Create destination if it doesn't exist

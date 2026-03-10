@@ -1,0 +1,96 @@
+{
+  "LootTables": [
+    {
+      "ChestType": "WoodenChest",
+      "ChestName": "Wooden Chest",
+      "MinItems": 3,
+      "MaxItems": 6,
+      "LootItems": [
+        {
+          "ItemID": "Coal",
+          "MinQuantity": 5,
+          "MaxQuantity": 20,
+          "Weight": 100.0
+        },
+        {
+          "ItemID": "CopperOre",
+          "MinQuantity": 5,
+          "MaxQuantity": 20,
+          "Weight": 100.0
+        },
+        {
+          "ItemID": "Log",
+          "MinQuantity": 5,
+          "MaxQuantity": 20,
+          "Weight": 100.0
+        },
+        {
+          "ItemID": "Strings",
+          "MinQuantity": 2,
+          "MaxQuantity": 4,
+          "Weight": 100.0
+        },
+        {
+          "ItemID": "WoodenShield",
+          "MinQuantity": 1,
+          "MaxQuantity": 1,
+          "Weight": 100.0
+        },
+        {
+          "ItemID": "CopperSword",
+          "MinQuantity": 1,
+          "MaxQuantity": 1,
+          "Weight": 100.0
+        },
+        {
+          "ItemID": "CopperPickaxe",
+          "MinQuantity": 1,
+          "MaxQuantity": 1,
+          "Weight": 100.0
+        },
+        {
+          "ItemID": "WoodenWand",
+          "MinQuantity": 1,
+          "MaxQuantity": 1,
+          "Weight": 100.0
+        },
+        {
+          "ItemID": "WoodenBow",
+          "MinQuantity": 1,
+          "MaxQuantity": 1,
+          "Weight": 100.0
+        },
+        {
+          "ItemID": "HealthPotionI",
+          "MinQuantity": 2,
+          "MaxQuantity": 4,
+          "Weight": 100.0
+        },
+        {
+          "ItemID": "ManaPotionI",
+          "MinQuantity": 2,
+          "MaxQuantity": 4,
+          "Weight": 100.0
+        },
+        {
+          "ItemID": "RareKey",
+          "MinQuantity": 1,
+          "MaxQuantity": 1,
+          "Weight": 45.9
+        },
+        {
+          "ItemID": "MythicKey",
+          "MinQuantity": 1,
+          "MaxQuantity": 1,
+          "Weight": 0.1
+        },
+        {
+          "ItemID": "DivineKey",
+          "MinQuantity": 1,
+          "MaxQuantity": 1,
+          "Weight": 0.1
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 #!/bin/bash
-# rebuild-economy-data.sh
-# Run this whenever crafting_recipes.json, item_values.json, item_configs.json, or mob_configs.json changes.
+# rebuild-economy-data.sh  (aliased as: rebuild_data)
+# Rebuilds all JS data wrappers from JSON files (item_configs, mob_configs, crafting_recipes, item_values).
+# Run this whenever any of those JSONs change.
 # Usage: bash rebuild-economy-data.sh
 
 set -e
@@ -16,8 +17,9 @@ wrap_json() {
   echo "  ✓ $js_file"
 }
 
-echo "Rebuilding economy JS data wrappers..."
+echo "Rebuilding all JS data wrappers..."
 wrap_json "$WIKI_DIR/crafting_recipes.json" "CRAFTING_RECIPES" "$WIKI_DIR/crafting_recipes.js"
 wrap_json "$WIKI_DIR/item_values.json"      "ITEM_VALUES"      "$WIKI_DIR/item_values.js"
 wrap_json "$WIKI_DIR/mob_configs.json"      "MOB_CONFIGS"      "$WIKI_DIR/mob_configs.js"
-echo "Done. Open economy.html to see updated data."
+wrap_json "$WIKI_DIR/item_configs.json"     "ITEM_CONFIGS"     "$WIKI_DIR/item_configs.js"
+echo "Done. Open economy.html / items.html / item.html to see updated data."

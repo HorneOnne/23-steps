@@ -144,9 +144,7 @@ var ITEM_CONFIGS = {
       "UseSpeed": 2.5,
       "SwordConfig": {
         "AttackDamage": 4.0,
-        "KnockbackForce": 1.0,
-        "CritChance": 0.02,
-        "CritDamageMultiplier": 2.0
+        "KnockbackForce": 1.0
       }
     },
     {
@@ -167,9 +165,7 @@ var ITEM_CONFIGS = {
       "UseSpeed": 3.4,
       "SwordConfig": {
         "AttackDamage": 7.0,
-        "KnockbackForce": 3.5,
-        "CritChance": 0.03,
-        "CritDamageMultiplier": 2.0
+        "KnockbackForce": 3.5
       }
     },
     {
@@ -190,9 +186,7 @@ var ITEM_CONFIGS = {
       "UseSpeed": 3.35,
       "SwordConfig": {
         "AttackDamage": 8.0,
-        "KnockbackForce": 3.6,
-        "CritChance": 0.04,
-        "CritDamageMultiplier": 2.0
+        "KnockbackForce": 3.6
       }
     },
     {
@@ -213,9 +207,7 @@ var ITEM_CONFIGS = {
       "UseSpeed": 3.3,
       "SwordConfig": {
         "AttackDamage": 9.0,
-        "KnockbackForce": 3.7,
-        "CritChance": 0.045,
-        "CritDamageMultiplier": 2.0
+        "KnockbackForce": 3.7
       }
     },
     {
@@ -236,9 +228,7 @@ var ITEM_CONFIGS = {
       "UseSpeed": 3.2,
       "SwordConfig": {
         "AttackDamage": 11.0,
-        "KnockbackForce": 4.0,
-        "CritChance": 0.05,
-        "CritDamageMultiplier": 2.0
+        "KnockbackForce": 4.0
       }
     },
     {
@@ -259,9 +249,7 @@ var ITEM_CONFIGS = {
       "UseSpeed": 3.0,
       "SwordConfig": {
         "AttackDamage": 15.0,
-        "KnockbackForce": 4.5,
-        "CritChance": 0.07,
-        "CritDamageMultiplier": 2.0
+        "KnockbackForce": 4.5
       }
     },
     {
@@ -282,9 +270,7 @@ var ITEM_CONFIGS = {
       "UseSpeed": 2.8,
       "SwordConfig": {
         "AttackDamage": 19.0,
-        "KnockbackForce": 4.8,
-        "CritChance": 0.08,
-        "CritDamageMultiplier": 2.0
+        "KnockbackForce": 4.8
       }
     },
     {
@@ -305,9 +291,7 @@ var ITEM_CONFIGS = {
       "UseSpeed": 3.1,
       "SwordConfig": {
         "AttackDamage": 18.0,
-        "KnockbackForce": 4.75,
-        "CritChance": 0.1,
-        "CritDamageMultiplier": 2.0
+        "KnockbackForce": 4.75
       }
     },
     {
@@ -328,9 +312,7 @@ var ITEM_CONFIGS = {
       "UseSpeed": 2.7,
       "SwordConfig": {
         "AttackDamage": 22.0,
-        "KnockbackForce": 5.0,
-        "CritChance": 0.12,
-        "CritDamageMultiplier": 2.0
+        "KnockbackForce": 5.0
       }
     },
     {
@@ -573,9 +555,7 @@ var ITEM_CONFIGS = {
         "AttackDamage": 5.0,
         "ProjectileSpeed": 10.0,
         "KnockbackForce": 2.0,
-        "Range": 10.0,
-        "CritChance": 0.02,
-        "CritMultiplier": 2.0
+        "Range": 10.0
       }
     },
     {
@@ -598,9 +578,7 @@ var ITEM_CONFIGS = {
         "AttackDamage": 7.0,
         "ProjectileSpeed": 11.0,
         "KnockbackForce": 2.0,
-        "Range": 10.0,
-        "CritChance": 0.03,
-        "CritMultiplier": 2.0
+        "Range": 10.0
       }
     },
     {
@@ -623,9 +601,7 @@ var ITEM_CONFIGS = {
         "AttackDamage": 8.0,
         "ProjectileSpeed": 12.0,
         "KnockbackForce": 2.0,
-        "Range": 10.0,
-        "CritChance": 0.04,
-        "CritMultiplier": 2.0
+        "Range": 10.0
       }
     },
     {
@@ -648,9 +624,7 @@ var ITEM_CONFIGS = {
         "AttackDamage": 9.0,
         "ProjectileSpeed": 13.0,
         "KnockbackForce": 2.0,
-        "Range": 10.0,
-        "CritChance": 0.045,
-        "CritMultiplier": 2.0
+        "Range": 10.0
       }
     },
     {
@@ -673,9 +647,7 @@ var ITEM_CONFIGS = {
         "AttackDamage": 11.0,
         "ProjectileSpeed": 14.0,
         "KnockbackForce": 2.0,
-        "Range": 10.0,
-        "CritChance": 0.05,
-        "CritMultiplier": 2.0
+        "Range": 10.0
       }
     },
     {
@@ -698,9 +670,7 @@ var ITEM_CONFIGS = {
         "AttackDamage": 15.0,
         "ProjectileSpeed": 15.0,
         "KnockbackForce": 2.0,
-        "Range": 10.0,
-        "CritChance": 0.07,
-        "CritMultiplier": 2.0
+        "Range": 10.0
       }
     },
     {
@@ -723,9 +693,7 @@ var ITEM_CONFIGS = {
         "AttackDamage": 19.0,
         "ProjectileSpeed": 16.0,
         "KnockbackForce": 2.0,
-        "Range": 10.0,
-        "CritChance": 0.08,
-        "CritMultiplier": 2.0
+        "Range": 10.0
       }
     },
     {
@@ -748,9 +716,7 @@ var ITEM_CONFIGS = {
         "AttackDamage": 18.0,
         "ProjectileSpeed": 15.5,
         "KnockbackForce": 2.0,
-        "Range": 10.0,
-        "CritChance": 0.1,
-        "CritMultiplier": 2.0
+        "Range": 10.0
       }
     },
     {
@@ -773,9 +739,7 @@ var ITEM_CONFIGS = {
         "AttackDamage": 22.0,
         "ProjectileSpeed": 17.0,
         "KnockbackForce": 2.0,
-        "Range": 10.0,
-        "CritChance": 0.12,
-        "CritMultiplier": 2.0
+        "Range": 10.0
       }
     },
     {
@@ -2300,9 +2264,7 @@ var ITEM_CONFIGS = {
       "UseSpeed": 5.0,
       "SwordConfig": {
         "AttackDamage": 150.0,
-        "KnockbackForce": 3.0,
-        "CritChance": 0.5,
-        "CritDamageMultiplier": 2.0
+        "KnockbackForce": 3.0
       }
     },
     {
@@ -2330,9 +2292,7 @@ var ITEM_CONFIGS = {
         "ManaCost": 5.0,
         "KnockbackForce": 1.0,
         "Range": 8.0,
-        "ProjectileSpeed": 6.0,
-        "CritChance": 0.08,
-        "CritMultiplier": 1.8
+        "ProjectileSpeed": 6.0
       }
     },
     {
@@ -3789,9 +3749,7 @@ var ITEM_CONFIGS = {
         "ManaCost": 5.0,
         "KnockbackForce": 1.0,
         "Range": 8.0,
-        "ProjectileSpeed": 6.0,
-        "CritChance": 0.08,
-        "CritMultiplier": 1.8
+        "ProjectileSpeed": 6.0
       }
     },
     {
@@ -3819,9 +3777,7 @@ var ITEM_CONFIGS = {
         "ManaCost": 5.0,
         "KnockbackForce": 1.0,
         "Range": 8.0,
-        "ProjectileSpeed": 6.0,
-        "CritChance": 0.08,
-        "CritMultiplier": 1.8
+        "ProjectileSpeed": 6.0
       }
     },
     {
@@ -3849,9 +3805,7 @@ var ITEM_CONFIGS = {
         "ManaCost": 5.0,
         "KnockbackForce": 1.0,
         "Range": 8.0,
-        "ProjectileSpeed": 10.0,
-        "CritChance": 0.08,
-        "CritMultiplier": 1.8
+        "ProjectileSpeed": 10.0
       }
     },
     {
@@ -3879,9 +3833,7 @@ var ITEM_CONFIGS = {
         "ManaCost": 5.0,
         "KnockbackForce": 1.0,
         "Range": 8.0,
-        "ProjectileSpeed": 35.0,
-        "CritChance": 0.08,
-        "CritMultiplier": 1.8
+        "ProjectileSpeed": 35.0
       }
     },
     {
@@ -3909,9 +3861,7 @@ var ITEM_CONFIGS = {
         "ManaCost": 5.0,
         "KnockbackForce": 1.0,
         "Range": 8.0,
-        "ProjectileSpeed": 6.0,
-        "CritChance": 0.08,
-        "CritMultiplier": 1.8
+        "ProjectileSpeed": 6.0
       }
     },
     {
@@ -3939,9 +3889,7 @@ var ITEM_CONFIGS = {
         "ManaCost": 5.0,
         "KnockbackForce": 1.0,
         "Range": 8.0,
-        "ProjectileSpeed": 6.0,
-        "CritChance": 0.08,
-        "CritMultiplier": 1.8
+        "ProjectileSpeed": 6.0
       }
     },
     {
@@ -3969,9 +3917,7 @@ var ITEM_CONFIGS = {
         "ManaCost": 5.0,
         "KnockbackForce": 1.0,
         "Range": 8.0,
-        "ProjectileSpeed": 6.0,
-        "CritChance": 0.08,
-        "CritMultiplier": 1.8
+        "ProjectileSpeed": 6.0
       }
     },
     {
@@ -3999,9 +3945,7 @@ var ITEM_CONFIGS = {
         "ManaCost": 5.0,
         "KnockbackForce": 1.0,
         "Range": 8.0,
-        "ProjectileSpeed": 6.0,
-        "CritChance": 0.08,
-        "CritMultiplier": 1.8
+        "ProjectileSpeed": 6.0
       }
     },
     {
@@ -4024,7 +3968,7 @@ var ITEM_CONFIGS = {
         "AccessoryType": "Belt",
         "StatBonuses": [
           {
-            "StatType": "HealthRegeneration",
+            "StatType": "ManaRegeneration",
             "ModifierType": "Flat",
             "Value": 0.5
           }
@@ -4865,7 +4809,7 @@ var ITEM_CONFIGS = {
         "AccessoryType": "Others",
         "StatBonuses": [
           {
-            "StatType": "MiningSpeedMultiplier",
+            "StatType": 15,
             "ModifierType": "Percentage",
             "Value": 0.2
           }
@@ -4894,7 +4838,7 @@ var ITEM_CONFIGS = {
         "AccessoryType": "Others",
         "StatBonuses": [
           {
-            "StatType": "MiningSpeedMultiplier",
+            "StatType": 15,
             "ModifierType": "Percentage",
             "Value": 0.4
           }
@@ -4923,7 +4867,7 @@ var ITEM_CONFIGS = {
         "AccessoryType": "Others",
         "StatBonuses": [
           {
-            "StatType": "MiningSpeedMultiplier",
+            "StatType": 15,
             "ModifierType": "Percentage",
             "Value": 0.6
           }
@@ -4936,7 +4880,7 @@ var ITEM_CONFIGS = {
       "ItemID": "RookieCertificate",
       "ItemType": "Consumable",
       "Name": "Rookie Certificate",
-      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>Unranked</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>Rookie</B></Color><Color=#Ffffff>.</Color>\r\n\r\n<Color=#Ffaa00><B>Requirement:</B></Color>\r\n<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>Unranked</B></Color><Color=#Ffffff>.</Color>",
+      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>Unranked</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>Rookie</B></Color><Color=#Ffffff>.</Color>\n\n\n<Color=#Ffaa00><B>Requirement:</B></Color>\n<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>Unranked</B></Color><Color=#Ffffff>.</Color>",
       "MaxStackSize": 1,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
@@ -4965,7 +4909,7 @@ var ITEM_CONFIGS = {
       "ItemID": "MinerCertificate",
       "ItemType": "Consumable",
       "Name": "Miner Certificate",
-      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>Rookie</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>Miner</B></Color><Color=#Ffffff>.</Color>\r\n\r\n<Color=#Ffaa00><B>Requirement:</B></Color>\r\n<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>Rookie</B></Color><Color=#Ffffff>.</Color>",
+      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>Rookie</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>Miner</B></Color><Color=#Ffffff>.</Color>\n\n\n<Color=#Ffaa00><B>Requirement:</B></Color>\n<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>Rookie</B></Color><Color=#Ffffff>.</Color>",
       "MaxStackSize": 1,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
@@ -4994,7 +4938,7 @@ var ITEM_CONFIGS = {
       "ItemID": "ScoutCertificate",
       "ItemType": "Consumable",
       "Name": "Scout Certificate",
-      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>Miner</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>Scout</B></Color><Color=#Ffffff>.</Color>\r\n\r\n<Color=#Ffaa00><B>Requirement:</B></Color>\r\n<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>Miner</B></Color><Color=#Ffffff>.</Color>",
+      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>Miner</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>Scout</B></Color><Color=#Ffffff>.</Color>\n\n\n<Color=#Ffaa00><B>Requirement:</B></Color>\n<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>Miner</B></Color><Color=#Ffffff>.</Color>",
       "MaxStackSize": 1,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
@@ -5023,7 +4967,7 @@ var ITEM_CONFIGS = {
       "ItemID": "HunterCertificate",
       "ItemType": "Consumable",
       "Name": "Hunter Certificate",
-      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>Scout</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>Hunter</B></Color><Color=#Ffffff>.</Color>\r\n\r\n<Color=#Ffaa00><B>Requirement:</B></Color>\r\n<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>Scout</B></Color><Color=#Ffffff>.</Color>",
+      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>Scout</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>Hunter</B></Color><Color=#Ffffff>.</Color>\n\n\n<Color=#Ffaa00><B>Requirement:</B></Color>\n<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>Scout</B></Color><Color=#Ffffff>.</Color>",
       "MaxStackSize": 1,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
@@ -5052,7 +4996,7 @@ var ITEM_CONFIGS = {
       "ItemID": "EliteCertificate",
       "ItemType": "Consumable",
       "Name": "Elite Certificate",
-      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>Hunter</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>Elite</B></Color><Color=#Ffffff>.</Color>\r\n\r\n<Color=#Ffaa00><B>Requirement:</B></Color>\r\n<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>Hunter</B></Color><Color=#Ffffff>.</Color>",
+      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>Hunter</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>Elite</B></Color><Color=#Ffffff>.</Color>\n\n\n<Color=#Ffaa00><B>Requirement:</B></Color>\n<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>Hunter</B></Color><Color=#Ffffff>.</Color>",
       "MaxStackSize": 1,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
@@ -5081,7 +5025,7 @@ var ITEM_CONFIGS = {
       "ItemID": "VeteranCertificate",
       "ItemType": "Consumable",
       "Name": "Veteran Certificate",
-      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>Elite</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>Veteran</B></Color><Color=#Ffffff>.</Color>\r\n\r\n<Color=#Ffaa00><B>Requirement:</B></Color>\r\n<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>Elite</B></Color><Color=#Ffffff>.</Color>",
+      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>Elite</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>Veteran</B></Color><Color=#Ffffff>.</Color>\n\n\n<Color=#Ffaa00><B>Requirement:</B></Color>\n<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>Elite</B></Color><Color=#Ffffff>.</Color>",
       "MaxStackSize": 1,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
@@ -5110,7 +5054,7 @@ var ITEM_CONFIGS = {
       "ItemID": "ShadowCertificate",
       "ItemType": "Consumable",
       "Name": "Shadow Certificate",
-      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>Veteran</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>Shadow</B></Color><Color=#Ffffff>.</Color>\r\n\r\n<Color=#Ffaa00><B>Requirement:</B></Color>\r\n<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>Veteran</B></Color><Color=#Ffffff>.</Color>",
+      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>Veteran</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>Shadow</B></Color><Color=#Ffffff>.</Color>\n\n\n<Color=#Ffaa00><B>Requirement:</B></Color>\n<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>Veteran</B></Color><Color=#Ffffff>.</Color>",
       "MaxStackSize": 1,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
@@ -5139,7 +5083,7 @@ var ITEM_CONFIGS = {
       "ItemID": "ConquerorCertificate",
       "ItemType": "Consumable",
       "Name": "Conqueror Certificate",
-      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>Shadow</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>Conqueror</B></Color><Color=#Ffffff>.</Color>\r\n\r\n<Color=#Ffaa00><B>Requirement:</B></Color>\r\n<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>Shadow</B></Color><Color=#Ffffff>.</Color>",
+      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>Shadow</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>Conqueror</B></Color><Color=#Ffffff>.</Color>\n\n\n<Color=#Ffaa00><B>Requirement:</B></Color>\n<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>Shadow</B></Color><Color=#Ffffff>.</Color>",
       "MaxStackSize": 1,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
@@ -5168,7 +5112,7 @@ var ITEM_CONFIGS = {
       "ItemID": "KingCertificate",
       "ItemType": "Consumable",
       "Name": "King Certificate",
-      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>Conqueror</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>King</B></Color><Color=#Ffffff>.</Color>\r\n\r\n<Color=#Ffaa00><B>Requirement:</B></Color>\r\n<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>Conqueror</B></Color><Color=#Ffffff>.</Color>",
+      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>Conqueror</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>King</B></Color><Color=#Ffffff>.</Color>\n\n\n<Color=#Ffaa00><B>Requirement:</B></Color>\n<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>Conqueror</B></Color><Color=#Ffffff>.</Color>",
       "MaxStackSize": 1,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
@@ -5197,7 +5141,7 @@ var ITEM_CONFIGS = {
       "ItemID": "OverlordCertificate",
       "ItemType": "Consumable",
       "Name": "Overlord Certificate",
-      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>King</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>Overlord</B></Color><Color=#Ffffff>.</Color>\r\n\r\n<Color=#Ffaa00><B>Requirement:</B></Color>\r\n<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>King</B></Color><Color=#Ffffff>.</Color>",
+      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>King</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>Overlord</B></Color><Color=#Ffffff>.</Color>\n\n\n<Color=#Ffaa00><B>Requirement:</B></Color>\n<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>King</B></Color><Color=#Ffffff>.</Color>",
       "MaxStackSize": 1,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
@@ -5226,7 +5170,7 @@ var ITEM_CONFIGS = {
       "ItemID": "EternalCertificate",
       "ItemType": "Consumable",
       "Name": "Eternal Certificate",
-      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>Overlord</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>Eternal</B></Color><Color=#Ffffff>.</Color>\r\n\r\n<Color=#Ffaa00><B>Requirement:</B></Color>\r\n<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>Overlord</B></Color><Color=#Ffffff>.</Color>",
+      "Description": "<Color=#Ffffff>Use To Upgrade Your Rank From </Color><Color=#Ff5555><B>Overlord</B></Color><Color=#Ffffff> To </Color><Color=#55Ff55><B>Eternal</B></Color><Color=#Ffffff>.</Color>\n\n\n<Color=#Ffaa00><B>Requirement:</B></Color>\n<Color=#Ffffff>Your Current Rank Must Be </Color><Color=#Ff5555><B>Overlord</B></Color><Color=#Ffffff>.</Color>",
       "MaxStackSize": 1,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
@@ -5423,6 +5367,35 @@ var ITEM_CONFIGS = {
         "EffectDescription": "",
         "ManaRestore": 0.0,
         "EnergyRestore": 0.0
+      }
+    },
+    {
+      "ItemID": "RingOfSwiftness",
+      "ItemType": "Accessory",
+      "Name": "Ring of Swiftness",
+      "Description": "+15% move speed",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Ring",
+        "StatBonuses": [
+          {
+            "StatType": "MoveSpeed",
+            "ModifierType": "Percentage",
+            "Value": 0.15
+          }
+        ],
+        "HasSpecialEffect": false,
+        "SpecialEffectDescription": ""
       }
     }
   ]
