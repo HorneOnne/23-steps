@@ -227,6 +227,58 @@
             padding: 24px 20px 48px;
         }
 
+        /* ── Quick Nav ────────────────────────────────────── */
+        .chest-quick-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 24px;
+            padding: 16px 18px;
+            background: var(--wiki-panel-bg);
+            border: 1px solid var(--wiki-panel-border);
+            border-radius: 8px;
+            backdrop-filter: var(--wiki-panel-blur);
+        }
+
+        .chest-quick-nav-label {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 0.55rem;
+            color: var(--wiki-stat-label);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-right: 6px;
+            white-space: nowrap;
+        }
+
+        .chest-nav-btn {
+            background: var(--wiki-filter-bg);
+            border: 1px solid var(--wiki-filter-border);
+            border-radius: 4px;
+            padding: 6px 14px;
+            color: var(--wiki-filter-text);
+            font-size: 0.78em;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all .15s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chest-nav-btn:hover {
+            background: var(--wiki-filter-hover-bg);
+            border-color: var(--wiki-input-focus);
+            color: var(--wiki-tab-hover-text);
+        }
+
+        .chest-nav-btn .nav-count {
+            font-size: 0.7em;
+            opacity: 0.6;
+        }
+
         /* ── Chest Card ───────────────────────────────────── */
         .chest-card {
             background: var(--wiki-panel-bg);
@@ -244,6 +296,33 @@
             padding: 20px 24px;
             background: var(--wiki-infobox-header-bg);
             border-bottom: 1px solid var(--wiki-infobox-header-border);
+            cursor: pointer;
+            user-select: none;
+            transition: background .15s;
+        }
+
+        .chest-header:hover {
+            background: var(--wiki-card-hover-bg);
+        }
+
+        .chest-toggle {
+            margin-left: auto;
+            font-size: 0.8rem;
+            color: var(--wiki-stat-label);
+            transition: transform .25s ease;
+            flex-shrink: 0;
+        }
+
+        .chest-card.collapsed .chest-toggle {
+            transform: rotate(-90deg);
+        }
+
+        .chest-card.collapsed .loot-table-wrap {
+            display: none;
+        }
+
+        .chest-card.collapsed .chest-header {
+            border-bottom: none;
         }
 
         .chest-icon {
@@ -826,11 +905,22 @@
                 return;
             }
 
-            let html = '';
-
+            // Build quick nav
+            let navHtml = '<div class="chest-quick-nav"><span class="chest-quick-nav-label"><i class="fas fa-compass"></i> Jump to:</span>';
             for (const chest of CHEST_DATA.LootTables) {
+                const slug = chest.ChestName.replace(/\s+/g, '-');
+                navHtml += `<a href="#${slug}" class="chest-nav-btn">${chest.ChestName} <span class="nav-count">(${chest.LootItems.length})</span></a>`;
+            }
+            navHtml += '</div>';
+
+            let html = navHtml;
+
+            for (let ci = 0; ci < CHEST_DATA.LootTables.length; ci++) {
+                const chest = CHEST_DATA.LootTables[ci];
                 // Calculate total weight for percentages
                 const totalWeight = chest.LootItems.reduce((s, it) => s + it.Weight, 0);
+                const collapsed = ci > 0 ? ' collapsed' : '';
+                const slug = chest.ChestName.replace(/\s+/g, '-');
 
                 // Chest icon — use the Chest icon from ICON_MAP if available
                 const chestIconUrl = iconUrl('Chest');
@@ -839,8 +929,8 @@
                     : `<span class="chest-emoji">📦</span>`;
 
                 html += `
-        <div class="chest-card">
-          <div class="chest-header">
+        <div class="chest-card${collapsed}" id="${slug}">
+          <div class="chest-header" onclick="this.parentElement.classList.toggle('collapsed')">
             <div class="chest-icon">${chestIconHtml}</div>
             <div class="chest-title-group">
               <div class="chest-name">${chest.ChestName}</div>
@@ -849,6 +939,7 @@
                 <span class="chest-tag"><i class="fas fa-list"></i> ${chest.LootItems.length} possible drops</span>
               </div>
             </div>
+            <span class="chest-toggle"><i class="fas fa-chevron-down"></i></span>
           </div>
           <div class="loot-table-wrap">
             <table class="loot-table">
