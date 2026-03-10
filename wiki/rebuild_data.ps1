@@ -16,4 +16,5 @@ Wrap-Json "$wikiDir\crafting_recipes.json" "CRAFTING_RECIPES" "$wikiDir\crafting
 Wrap-Json "$wikiDir\item_values.json"      "ITEM_VALUES"      "$wikiDir\item_values.js"
 Wrap-Json "$wikiDir\mob_configs.json"      "MOB_CONFIGS"      "$wikiDir\mob_configs.js"
 Wrap-Json "$wikiDir\item_configs.json"     "ITEM_CONFIGS"     "$wikiDir\item_configs.js"
-Write-Host "Done. Open economy.html / items.html / item.html to see updated data."
+Wrap-Json "$wikiDir\chestdata.json"        "CHEST_DATA"       "$wikiDir\chestdata.js"
+Write-Host "Done. Open economy.html / items.html / item.html / chests.html to see updated data."

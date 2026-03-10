@@ -72,6 +72,12 @@ var CHEST_DATA = {
           "MaxQuantity": 4,
           "Weight": 100.0
         },
+          {
+          "ItemID": "RingOfSwiftness",
+          "MinQuantity": 1,
+          "MaxQuantity": 1,
+          "Weight": 100.0
+        },
         {
           "ItemID": "RareKey",
           "MinQuantity": 1,
