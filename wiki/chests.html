@@ -240,6 +240,10 @@
             backdrop-filter: var(--wiki-panel-blur);
         }
 
+        [data-theme="light"] .chest-quick-nav {
+            background: #f5f2ed;
+        }
+
         .chest-quick-nav-label {
             font-family: 'Press Start 2P', cursive;
             font-size: 0.55rem;
@@ -423,8 +427,17 @@
             transition: background .12s;
         }
 
+        /* Warm off-white in light mode instead of stark white */
+        [data-theme="light"] .loot-table tbody tr {
+            background: #f5f2ed;
+        }
+
         .loot-table tbody tr:hover {
             background: var(--wiki-card-hover-bg);
+        }
+
+        [data-theme="light"] .loot-table tbody tr:hover {
+            background: #ede8e0;
         }
 
         .loot-table tbody tr:not(:last-child) td {
@@ -535,15 +548,15 @@
         }
 
         .chance-bar-fill.common {
-            background: linear-gradient(90deg, #60a5fa, #818cf8);
+            background: linear-gradient(90deg, #3b9e8c, #2d8a7e);
         }
 
         .chance-bar-fill.rare {
-            background: linear-gradient(90deg, #fbbf24, #f59e0b);
+            background: linear-gradient(90deg, #d4912a, #c07b1e);
         }
 
         .chance-bar-fill.ultra-rare {
-            background: linear-gradient(90deg, #f87171, #ef4444);
+            background: linear-gradient(90deg, #c94545, #a83232);
         }
 
         .chance-pct {
@@ -565,15 +578,15 @@
         }
 
         .rare-tag.tag-rare {
-            background: rgba(251, 191, 36, .15);
-            border: 1px solid rgba(251, 191, 36, .3);
-            color: #fbbf24;
+            background: rgba(212, 145, 42, .15);
+            border: 1px solid rgba(212, 145, 42, .35);
+            color: #b87a1a;
         }
 
         .rare-tag.tag-ultra-rare {
-            background: rgba(248, 113, 113, .15);
-            border: 1px solid rgba(248, 113, 113, .3);
-            color: #f87171;
+            background: rgba(201, 69, 69, .15);
+            border: 1px solid rgba(201, 69, 69, .35);
+            color: #a83232;
         }
 
         /* ── Loading / error ──────────────────────────────── */
