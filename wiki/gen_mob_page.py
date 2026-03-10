@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import json, re
 
 data = json.load(open(r'd:\23-steps\wiki\mob_configs.json', encoding='utf-8'))
@@ -181,6 +182,7 @@ MOB_HTML = r'''<!DOCTYPE html>
   </footer>
 
   <script id="mob-data" type="application/json">MOB_JSON_PLACEHOLDER</script>
+  <script src="icon_map.js"></script>
   <script>
     /* ── Helpers ── */
     function fmt(v) { return (v % 1 === 0) ? v : parseFloat(v.toFixed(2)); }
@@ -203,9 +205,9 @@ MOB_HTML = r'''<!DOCTYPE html>
     var mobId = params.id || '';
     var mob = allMobs.find(function (m) { return m.MobID === mobId; });
 
-    /* ── Item icon lookup (case-insensitive first-letter lowercase fallback) ── */
+    /* ── Item icon lookup ── */
     function itemIconSrc(itemId) {
-      return 'assets/items/' + itemId + '.png';
+      return iconUrl(itemId);
     }
 
     /* ── Build the page ── */
