@@ -22,4 +22,5 @@ wrap_json "$WIKI_DIR/crafting_recipes.json" "CRAFTING_RECIPES" "$WIKI_DIR/crafti
 wrap_json "$WIKI_DIR/item_values.json"      "ITEM_VALUES"      "$WIKI_DIR/item_values.js"
 wrap_json "$WIKI_DIR/mob_configs.json"      "MOB_CONFIGS"      "$WIKI_DIR/mob_configs.js"
 wrap_json "$WIKI_DIR/item_configs.json"     "ITEM_CONFIGS"     "$WIKI_DIR/item_configs.js"
-echo "Done. Open economy.html / items.html / item.html to see updated data."
+wrap_json "$WIKI_DIR/chestdata.json"       "CHEST_DATA"       "$WIKI_DIR/chestdata.js"
+echo "Done. Open economy.html / items.html / item.html / chests.html to see updated data."

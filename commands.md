@@ -43,6 +43,7 @@ This file documents all the custom terminal commands (aliases and scripts) creat
   | `item_values.js` | `item_values.json` | `ITEM_VALUES` |
   | `mob_configs.js` | `mob_configs.json` | `MOB_CONFIGS` |
   | `item_configs.js` | `item_configs.json` | `ITEM_CONFIGS` |
+  | `chestdata.js` | `chestdata.json` | `CHEST_DATA` |
 
 ---
 

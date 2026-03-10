@@ -4,24 +4,24 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Merchants — Mine &amp; Dungeon Wiki | 23-Steps</title>
+    <title>Chests — Mine &amp; Dungeon Wiki | 23-Steps</title>
     <meta name="description"
-        content="All NPC merchants in Mine & Dungeon. Browse merchant inventories by dungeon depth, see buy/sell prices, stock limits, and item details." />
-    <meta name="keywords" content="Mine and Dungeon merchants, NPC shop, buy sell items, 23-Steps wiki" />
-    <link rel="canonical" href="https://23-steps.com/wiki/merchants.html" />
+        content="All chest loot tables for Mine & Dungeon. See every item drop, quantity ranges, and drop chances for each chest type." />
+    <meta name="keywords" content="Mine and Dungeon chests, loot tables, chest drops, 23-Steps wiki" />
+    <link rel="canonical" href="https://23-steps.com/wiki/chests.html" />
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Merchants — Mine &amp; Dungeon Wiki | 23-Steps" />
+    <meta property="og:title" content="Chests — Mine &amp; Dungeon Wiki | 23-Steps" />
     <meta property="og:description"
-        content="All NPC merchants in Mine & Dungeon. Browse merchant inventories by dungeon depth with full pricing info." />
-    <meta property="og:url" content="https://23-steps.com/wiki/merchants.html" />
+        content="All chest loot tables for Mine & Dungeon. Item drops, quantity ranges, and drop chances." />
+    <meta property="og:url" content="https://23-steps.com/wiki/chests.html" />
     <meta property="og:site_name" content="23-Steps" />
     <meta property="og:image" content="https://23-steps.com/images/mine-dungeon.png" />
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Merchants — Mine &amp; Dungeon Wiki | 23-Steps" />
+    <meta name="twitter:title" content="Chests — Mine &amp; Dungeon Wiki | 23-Steps" />
     <meta name="twitter:description"
-        content="All NPC merchants in Mine & Dungeon. Browse inventories by dungeon depth with full pricing." />
+        content="All chest loot tables for Mine & Dungeon. Item drops, quantity ranges, and drop chances." />
     <meta name="twitter:image" content="https://23-steps.com/images/mine-dungeon.png" />
     <link rel="icon" type="image/png" href="../icon2.png" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Press+Start+2P&display=swap"
@@ -227,95 +227,17 @@
             padding: 24px 20px 48px;
         }
 
-        /* ── Merchant List (top-level grid) ───────────────── */
-        .merchant-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 16px;
-            margin-bottom: 32px;
-        }
-
-        .merchant-card {
-            background: var(--wiki-section-card-bg);
-            border: 2px solid var(--wiki-section-card-border);
-            border-radius: 12px;
-            padding: 20px;
-            cursor: pointer;
-            transition: border-color .18s, transform .15s, box-shadow .18s;
-            position: relative;
-        }
-
-        .merchant-card:hover {
-            border-color: var(--wiki-section-card-hover);
-            transform: translateY(-3px);
-            box-shadow: var(--wiki-panel-shadow);
-        }
-
-        .merchant-card.selected {
-            border-color: var(--wiki-tab-active-border);
-            box-shadow: 0 0 0 1px var(--wiki-tab-active-border), var(--wiki-panel-shadow);
-        }
-
-        .merchant-card-top {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            margin-bottom: 10px;
-        }
-
-        .merchant-avatar {
-            width: 56px;
-            height: 56px;
-            background: var(--wiki-section-card-icon-bg);
-            border: 1px solid var(--wiki-section-card-icon-border);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            flex-shrink: 0;
-        }
-
-        .merchant-card-info h3 {
-            font-family: 'Press Start 2P', cursive;
-            font-size: 0.65rem;
-            color: var(--wiki-section-title);
-            margin-bottom: 4px;
-        }
-
-        .merchant-card-info p {
-            font-size: 0.75em;
-            color: var(--wiki-subheading);
-            line-height: 1.4;
-        }
-
-        .merchant-card-footer {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-            margin-top: 10px;
-        }
-
-        .merchant-tag {
-            font-size: 0.65em;
-            font-weight: 600;
-            padding: 3px 8px;
-            border-radius: 4px;
-            background: var(--wiki-stat-bg);
-            border: 1px solid var(--wiki-stat-border);
-            color: var(--wiki-stat-value);
-        }
-
-        /* ── Merchant Detail Panel ────────────────────────── */
-        .merchant-detail {
+        /* ── Chest Card ───────────────────────────────────── */
+        .chest-card {
             background: var(--wiki-panel-bg);
             border: 1px solid var(--wiki-panel-border);
-            border-radius: 12px;
+            border-radius: 8px;
             overflow: hidden;
             backdrop-filter: var(--wiki-panel-blur);
+            margin-bottom: 28px;
         }
 
-        .detail-header {
+        .chest-header {
             display: flex;
             align-items: center;
             gap: 16px;
@@ -324,117 +246,79 @@
             border-bottom: 1px solid var(--wiki-infobox-header-border);
         }
 
-        .detail-avatar {
-            width: 64px;
-            height: 64px;
+        .chest-icon {
+            width: 56px;
+            height: 56px;
             background: var(--wiki-section-card-icon-bg);
             border: 1px solid var(--wiki-section-card-icon-border);
-            border-radius: 14px;
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
             flex-shrink: 0;
+            overflow: hidden;
         }
 
-        .detail-title h3 {
+        .chest-icon img {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+            image-rendering: pixelated;
+            image-rendering: crisp-edges;
+        }
+
+        .chest-icon .chest-emoji {
+            font-size: 1.8rem;
+        }
+
+        .chest-title-group {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .chest-name {
             font-family: 'Press Start 2P', cursive;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: var(--wiki-heading);
-            margin-bottom: 4px;
+            margin-bottom: 6px;
         }
 
-        .detail-title p {
-            font-size: 0.8em;
-            color: var(--wiki-subheading);
-        }
-
-        /* Depth sub-tabs */
-        .depth-tabs {
+        .chest-meta {
             display: flex;
-            border-bottom: 1px solid var(--wiki-infobox-row-border);
-            overflow-x: auto;
-            background: var(--wiki-infobox-bg);
-        }
-
-        .depth-tabs::-webkit-scrollbar {
-            height: 0;
-        }
-
-        .depth-tab {
-            padding: 10px 20px;
-            font-size: 0.78em;
-            font-weight: 700;
-            color: var(--wiki-tab-text);
-            cursor: pointer;
-            border: none;
-            background: transparent;
-            border-bottom: 3px solid transparent;
-            white-space: nowrap;
-            transition: color .15s, border-color .15s, background .15s;
-            font-family: inherit;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .depth-tab:hover {
-            color: var(--wiki-tab-hover-text);
-            background: var(--wiki-tab-hover-bg);
-        }
-
-        .depth-tab.active {
-            color: var(--wiki-tab-active-text);
-            border-bottom-color: var(--wiki-tab-active-border);
-            background: var(--wiki-tab-active-bg);
-        }
-
-        .depth-tab .depth-icon {
-            font-size: 0.9em;
-        }
-
-        /* Merchant meta row */
-        .detail-meta {
-            display: flex;
-            gap: 12px;
-            padding: 14px 24px;
             flex-wrap: wrap;
-            border-bottom: 1px solid var(--wiki-infobox-row-border);
+            gap: 8px;
         }
 
-        .meta-chip {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
+        .chest-tag {
+            font-size: 0.65em;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 4px;
             background: var(--wiki-stat-bg);
             border: 1px solid var(--wiki-stat-border);
-            border-radius: 6px;
-            padding: 5px 12px;
-            font-size: 0.73em;
             color: var(--wiki-stat-value);
         }
 
-        .meta-chip .label {
-            color: var(--wiki-stat-label);
-            font-weight: 600;
+        .chest-tag i {
+            margin-right: 4px;
         }
 
-        /* ── Item table ───────────────────────────────────── */
-        .shop-table-wrap {
+        /* ── Loot Table ───────────────────────────────────── */
+        .loot-table-wrap {
             overflow-x: auto;
         }
 
-        .shop-table {
+        .loot-table {
             width: 100%;
             border-collapse: collapse;
             font-size: 0.82em;
         }
 
-        .shop-table thead {
+        .loot-table thead {
             background: var(--wiki-infobox-header-bg);
         }
 
-        .shop-table th {
+        .loot-table th {
             padding: 10px 14px;
             text-align: left;
             font-weight: 700;
@@ -446,31 +330,35 @@
             white-space: nowrap;
         }
 
-        .shop-table th:first-child {
+        .loot-table th:first-child {
             width: 56px;
             text-align: center;
         }
 
-        .shop-table tbody tr {
+        .loot-table th.th-chance {
+            text-align: right;
+        }
+
+        .loot-table tbody tr {
             background: var(--wiki-card-bg);
             transition: background .12s;
         }
 
-        .shop-table tbody tr:hover {
+        .loot-table tbody tr:hover {
             background: var(--wiki-card-hover-bg);
         }
 
-        .shop-table tbody tr:not(:last-child) td {
+        .loot-table tbody tr:not(:last-child) td {
             border-bottom: 1px solid var(--wiki-infobox-row-border);
         }
 
-        .shop-table td {
+        .loot-table td {
             padding: 8px 14px;
             vertical-align: middle;
             color: var(--wiki-infobox-value);
         }
 
-        .shop-table td:first-child {
+        .loot-table td:first-child {
             text-align: center;
             padding: 6px 8px;
         }
@@ -514,64 +402,41 @@
             color: var(--wiki-tab-active-text);
         }
 
-        /* Rarity dot */
-        .rarity-dot {
-            display: inline-block;
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            margin-right: 6px;
-            vertical-align: middle;
-        }
-
-        /* Stock badges */
-        .stock-badge {
+        /* Clickable icon */
+        .table-icon-link {
             display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            font-size: 0.78em;
-            padding: 2px 8px;
-            border-radius: 4px;
+        }
+
+        .table-icon-link:hover .table-icon-wrap {
+            border-color: var(--wiki-tab-active-border);
+            box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.25);
+        }
+
+        /* Quantity */
+        .qty-cell {
             font-weight: 600;
-        }
-
-        .stock-unlimited {
-            background: rgba(74, 222, 128, 0.12);
-            border: 1px solid rgba(74, 222, 128, 0.3);
-            color: #4ade80;
-        }
-
-        .stock-limited {
-            background: var(--wiki-stat-bg);
-            border: 1px solid var(--wiki-stat-border);
             color: var(--wiki-stat-value);
+            white-space: nowrap;
         }
 
-        /* Price cell */
-        .price-buy {
-            color: #f87171;
-            font-weight: 600;
-        }
-
-        .price-sell {
-            color: #4ade80;
-            font-weight: 600;
-        }
-
-        .price-coin {
+        /* Weight */
+        .weight-cell {
             font-size: 0.85em;
-            margin-right: 2px;
+            color: var(--wiki-text-muted);
+            white-space: nowrap;
         }
 
         /* Chance column */
         .chance-cell {
             white-space: nowrap;
+            text-align: right;
         }
 
         .chance-bar-wrap {
             display: flex;
             align-items: center;
             gap: 8px;
+            justify-content: flex-end;
         }
 
         .chance-bar {
@@ -586,35 +451,53 @@
 
         .chance-bar-fill {
             height: 100%;
-            background: linear-gradient(90deg, #60a5fa, #818cf8);
             border-radius: 6px;
             transition: width .3s ease;
+        }
+
+        .chance-bar-fill.common {
+            background: linear-gradient(90deg, #60a5fa, #818cf8);
+        }
+
+        .chance-bar-fill.rare {
+            background: linear-gradient(90deg, #fbbf24, #f59e0b);
+        }
+
+        .chance-bar-fill.ultra-rare {
+            background: linear-gradient(90deg, #f87171, #ef4444);
         }
 
         .chance-pct {
             font-size: 0.8em;
             font-weight: 700;
             color: var(--wiki-stat-value);
-            min-width: 36px;
+            min-width: 42px;
+            text-align: right;
         }
 
-        /* Clickable icon */
-        .table-icon-link {
-            display: inline-flex;
+        .rare-tag {
+            display: inline-block;
+            font-size: 0.58em;
+            font-weight: 700;
+            padding: 1px 5px;
+            border-radius: 3px;
+            margin-left: 6px;
+            vertical-align: middle;
         }
 
-        .table-icon-link:hover .table-icon-wrap {
-            border-color: var(--wiki-tab-active-border);
-            box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.25);
+        .rare-tag.tag-rare {
+            background: rgba(251, 191, 36, .15);
+            border: 1px solid rgba(251, 191, 36, .3);
+            color: #fbbf24;
         }
 
-        /* Price icon */
-        .price-icon {
-            color: #f5c842;
-            margin-right: 4px;
+        .rare-tag.tag-ultra-rare {
+            background: rgba(248, 113, 113, .15);
+            border: 1px solid rgba(248, 113, 113, .3);
+            color: #f87171;
         }
 
-        /* ── Loading ──────────────────────────────────────── */
+        /* ── Loading / error ──────────────────────────────── */
         .loading-state {
             text-align: center;
             padding: 60px 20px;
@@ -698,27 +581,19 @@
                 font-size: 0.8rem;
             }
 
-            .merchant-list {
-                grid-template-columns: 1fr;
-            }
-
-            .detail-header {
+            .chest-header {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 10px;
                 padding: 16px;
             }
 
-            .detail-meta {
-                padding: 10px 16px;
-            }
-
-            .shop-table {
+            .loot-table {
                 font-size: 0.75em;
             }
 
-            .shop-table th,
-            .shop-table td {
+            .loot-table th,
+            .loot-table td {
                 padding: 6px 8px;
             }
 
@@ -760,16 +635,16 @@
             <a href="../index.html">23-Steps</a> &rsaquo;
             <a href="index.html">Wiki</a> &rsaquo;
             <a href="mine-dungeon.html">Mine &amp; Dungeon</a> &rsaquo;
-            Merchants
+            Chests
         </div>
-        <h2><i class="fas fa-store"></i>&nbsp; Merchants</h2>
-        <p>NPC merchants buy and sell items &mdash; click a merchant to view their inventory</p>
+        <h2><i class="fas fa-box-open"></i>&nbsp; Chests</h2>
+        <p>All chest loot tables &mdash; see every possible drop and its chance</p>
         <div class="tab-bar">
             <a class="tab-btn" href="mobs.html"><i class="fas fa-skull"></i> Mobs</a>
             <a class="tab-btn" href="items.html"><i class="fas fa-boxes"></i> Items</a>
-            <a class="tab-btn active" href="merchants.html"><i class="fas fa-store"></i> Merchants</a>
+            <a class="tab-btn" href="merchants.html"><i class="fas fa-store"></i> Merchants</a>
             <a class="tab-btn" href="economy.html"><i class="fas fa-chart-line"></i> Economy</a>
-            <a class="tab-btn" href="chests.html"><i class="fas fa-box-open"></i> Chests</a>
+            <a class="tab-btn active" href="chests.html"><i class="fas fa-box-open"></i> Chests</a>
             <span class="tab-btn disabled"><i class="fas fa-map"></i> Maps <span class="tab-badge">Soon</span></span>
             <span class="tab-btn disabled"><i class="fas fa-scroll"></i> Quests <span
                     class="tab-badge">Soon</span></span>
@@ -782,10 +657,10 @@
 
     <main>
         <div class="content-wrap">
-            <div id="merchantCatalog">
+            <div id="chestCatalog">
                 <div class="loading-state">
                     <i class="fas fa-spinner"></i>
-                    Loading merchant data…
+                    Loading chest data…
                 </div>
             </div>
         </div>
@@ -798,14 +673,12 @@
         <a href="../delete-account.html">Delete Account</a>
     </footer>
 
-    <script src="shopconfigs.js"></script>
-    <script src="item_values.js"></script>
+    <script src="chestdata.js"></script>
     <script src="item_configs.js"></script>
-
     <script>
         // ── Config ──────────────────────────────────────────────────────────────────
-        const ICON_PATH = "assets/items/";
-        const DETAIL_PAGE = "item.html";
+        const ICON_PATH = 'assets/items/';
+        const DETAIL_PAGE = 'item.html';
 
         const ICON_MAP = {
             "Dirt": "dirt", "Stone": "stone", "Sand": "sand", "IronOre": "ironore", "Coal": "coal", "CopperOre": "copperore",
@@ -832,6 +705,7 @@
             "BlueRose": "bluerose", "Flowstone": "flowstone", "Cactus": "cactus", "Rail": "rail",
             "SlimelingCore": "SlimelingCore", "DemonMushroom": "DemonMushroom", "Mushroom": "Mushroom",
             "BoneFragment": "bone", "GoldenFeather": "feather", "Log": "Log",
+            "RingOfSwiftness": "RingOfSwiftness",
             "BandOfRegeneration": "BandOfRegeneration", "WoodenShield": "WoodenShield",
             "ReinforcedWoodShield": "ReinforcedWoodShield", "CopperPlatedGuard": "CopperPlatedGuard",
             "GladiatorsRoundshield": "GladiatorsRoundshield", "IronHeaterShield": "IronHeaterShield",
@@ -895,274 +769,157 @@
             "KingCertificate": "KingCertificate", "OverlordCertificate": "OverlordCertificate",
             "EternalCertificate": "EternalCertificate",
             "AdKey": "adKey", "RareKey": "RareKey", "MythicKey": "MythicKey", "DivineKey": "DivineKey",
-            "FlameArrow": "flamearrow", "Bomb": "bomb", "Compass": "compass", "Map": "map",
-            "MapFragment": "mapfragment", "TreasureMap": "treasuremap", "Lantern": "lantern",
-            "FishSword": "fishword", "PirateFlag": "pirateflag", "PirateGun": "pirategun", "PirateSword": "piratesword",
-            "IronKey": "ironkey", "WoodenSign": "wooden_sign",
-            "StoneBrick": "stonebrick", "MossStoneBrick": "mossstonebrick",
         };
 
+        // ── Rarity lookup from ITEM_CONFIGS ──────────────────────────────────────
         const RARITY_COLOR = {
-            Common: '#b0bec5',
-            Uncommon: '#4ade80',
-            Rare: '#60a5fa',
-            Epic: '#c084fc',
-            Legendary: '#fb923c',
+            Common: '#b0bec5', Uncommon: '#4ade80', Rare: '#60a5fa',
+            Epic: '#c084fc', Legendary: '#fb923c',
         };
 
-        // ── Helpers ─────────────────────────────────────────────────────────────────
+        function getItemConfig(itemID) {
+            if (!window.ITEM_CONFIGS) return null;
+            const list = ITEM_CONFIGS.itemConfigs || ITEM_CONFIGS.ItemConfigs || ITEM_CONFIGS;
+            if (!Array.isArray(list)) return null;
+            return list.find(c => c.ItemID === itemID) || null;
+        }
+
+        function getRarityColor(itemID) {
+            const cfg = getItemConfig(itemID);
+            if (!cfg) return null;
+            return RARITY_COLOR[cfg.Rarity] || null;
+        }
+
+        // ── Helpers ──────────────────────────────────────────────────────────────
         function iconUrl(itemID) {
             const file = ICON_MAP[itemID];
             return file ? ICON_PATH + file + '.png' : null;
         }
 
-        // Build lookup maps
-        const itemValueMap = {};
-        if (typeof ITEM_VALUES !== 'undefined' && ITEM_VALUES.ItemValues) {
-            ITEM_VALUES.ItemValues.forEach(v => { itemValueMap[v.itemID] = v.value; });
-        }
-        const itemConfigMap = {};
-        if (typeof ITEM_CONFIGS !== 'undefined' && ITEM_CONFIGS.ItemConfigs) {
-            ITEM_CONFIGS.ItemConfigs.forEach(c => { itemConfigMap[c.ItemID] = c; });
+        function humanName(id) {
+            return id.replace(/([A-Z])/g, ' $1').replace(/^ /, '').replace(/\bI(\b|$)/g, 'I').trim();
         }
 
-        function getDisplayName(itemID) {
-            const cfg = itemConfigMap[itemID];
-            if (cfg && cfg.Name) return cfg.Name;
-            return itemID.replace(/([a-z])([A-Z])/g, '$1 $2');
-        }
-
-        function getRarity(itemID) {
-            const cfg = itemConfigMap[itemID];
-            return cfg ? (cfg.Rarity || 'Common') : 'Common';
-        }
-
-        function formatPrice(price) {
-            if (price === null || price === undefined) return '—';
-            return price % 1 === 0 ? price.toFixed(0) : price.toFixed(1);
-        }
-
-        function depthLabel(configName) {
-            const m = configName.match(/(\d+)-(\d+)/);
-            if (m) return `Depth ${m[1]}–${m[2]}`;
-            return configName;
-        }
-
-        function depthShort(configName) {
-            const m = configName.match(/(\d+)-(\d+)/);
-            if (m) return `${m[1]}–${m[2]}`;
-            return configName;
-        }
-
-        // ── Group shop configs into merchants ───────────────────────────────────────
-        // Each merchant is identified by the prefix before the depth range.
-        // e.g. "Merchant_1-5" → merchant name = "Merchant"
-        function groupMerchants(configs) {
-            const groups = {};
-            configs.forEach(shop => {
-                const name = shop.ConfigName.replace(/_\d+-\d+$/, '');
-                if (!groups[name]) groups[name] = { name, configs: [] };
-                groups[name].configs.push(shop);
-            });
-            // Sort each merchant's configs by first depth number
-            Object.values(groups).forEach(g => {
-                g.configs.sort((a, b) => {
-                    const da = parseInt(a.ConfigName.match(/(\d+)/)?.[1] || 0);
-                    const db = parseInt(b.ConfigName.match(/(\d+)/)?.[1] || 0);
-                    return da - db;
-                });
-            });
-            return Object.values(groups);
-        }
-
-        // ── Merchant metadata ──────────────────────────────────────────────────────
-        const MERCHANT_META = {
-            Merchant: {
-                emoji: '🏪',
-                displayName: 'Merchant',
-                description: 'A general goods trader found in the dungeon. Inventory changes based on how deep you\'ve ventured.',
+        function buildIconCell(itemID) {
+            const url = iconUrl(itemID);
+            const rarityCol = getRarityColor(itemID);
+            const borderStyle = rarityCol
+                ? `border-color: ${rarityCol}; background: color-mix(in srgb, ${rarityCol} 12%, var(--wiki-card-icon-bg));`
+                : '';
+            if (url) {
+                return `<a href="${DETAIL_PAGE}?id=${itemID}" class="table-icon-link">
+          <span class="table-icon-wrap" style="${borderStyle}">
+            <img src="${url}" alt="${itemID}" loading="lazy" />
+          </span>
+        </a>`;
             }
-        };
-
-        function getMerchantMeta(name) {
-            return MERCHANT_META[name] || {
-                emoji: '🛒',
-                displayName: name.replace(/([a-z])([A-Z])/g, '$1 $2'),
-                description: 'An NPC merchant.',
-            };
+            return `<span class="table-icon-wrap" style="${borderStyle}">
+        <i class="fas fa-cube icon-missing-sm"></i>
+      </span>`;
         }
 
-        // ── State ──────────────────────────────────────────────────────────────────
-        let allMerchants = [];
-        let selectedMerchant = null;
-        let selectedDepthIdx = 0;
-
-        // ── Build item table HTML ──────────────────────────────────────────────────
-        function buildItemTable(shop) {
-            const buyMul = shop.BuyPriceMultiplier || 1;
-            const sellMul = shop.SellPriceMultiplier || 1;
-
-            // Calculate total spawn weight for percentage
-            const totalWeight = shop.AvailableItems.reduce((sum, i) => sum + (i.SpawnWeight || 0), 0);
-
-            // Price icon matching item.html style
-            const coinIcon = `<i class="fas fa-coins price-icon"></i>`;
-
-            let rows = '';
-            shop.AvailableItems.forEach(item => {
-                const id = item.ItemID;
-                const icon = iconUrl(id);
-                const name = getDisplayName(id);
-                const rarity = getRarity(id);
-                const rarityCol = RARITY_COLOR[rarity] || '#b0bec5';
-                const values = itemValueMap[id];
-                const priceMul = item.PriceMultiplier || 1;
-
-                let buyPrice = null, sellPrice = null;
-                if (values) {
-                    buyPrice = values.BuyPrice * buyMul * priceMul;
-                    sellPrice = values.SellPrice * sellMul * priceMul;
-                }
-
-                // Spawn chance %
-                const weight = item.SpawnWeight || 0;
-                const chancePct = totalWeight > 0 ? (weight / totalWeight * 100) : 0;
-                const chanceStr = chancePct % 1 === 0 ? chancePct.toFixed(0) : chancePct.toFixed(1);
-
-                // Icon — clickable link to item detail
-                const iconInner = icon
-                    ? `<img src="${icon}" alt="${name}" loading="lazy" onerror="this.style.display='none'">`
-                    : `<span class="icon-missing-sm">❓</span>`;
-                const iconHtml = `<a class="table-icon-link" href="${DETAIL_PAGE}?id=${id}" title="View ${name}"><div class="table-icon-wrap">${iconInner}</div></a>`;
-
-                const stockHtml = item.HasUnlimitedStock
-                    ? `<span class="stock-badge stock-unlimited"><i class="fas fa-infinity"></i> Unlimited</span>`
-                    : `<span class="stock-badge stock-limited">${item.MaxStock}</span>`;
-
-                rows += `<tr>
-          <td>${iconHtml}</td>
-          <td><span class="rarity-dot" style="background:${rarityCol}"></span><a class="item-link" href="${DETAIL_PAGE}?id=${id}">${name}</a></td>
-          <td>${item.Quantity}</td>
-          <td>${stockHtml}</td>
-          <td class="chance-cell"><div class="chance-bar-wrap"><div class="chance-bar"><div class="chance-bar-fill" style="width:${chancePct}%"></div></div><span class="chance-pct">${chanceStr}%</span></div></td>
-          <td class="price-buy">${coinIcon}${formatPrice(buyPrice)}</td>
-          <td class="price-sell">${coinIcon}${formatPrice(sellPrice)}</td>
-        </tr>`;
-            });
-
-            return `<div class="shop-table-wrap"><table class="shop-table">
-        <thead><tr>
-          <th>Icon</th><th>Item</th><th>Qty</th><th>Stock</th><th>Chance</th><th>Buy Price</th><th>Sell Price</th>
-        </tr></thead>
-        <tbody>${rows}</tbody>
-      </table></div>`;
-        }
-
-        // ── Render merchant detail panel ────────────────────────────────────────────
-        function renderDetail() {
-            if (!selectedMerchant) {
-                document.getElementById('merchantDetail').innerHTML = '';
-                return;
-            }
-
-            const meta = getMerchantMeta(selectedMerchant.name);
-            const shop = selectedMerchant.configs[selectedDepthIdx];
-            const buyMul = shop.BuyPriceMultiplier || 1;
-            const sellMul = shop.SellPriceMultiplier || 1;
-
-            // Build depth tabs
-            let depthTabsHtml = '';
-            selectedMerchant.configs.forEach((cfg, i) => {
-                const active = i === selectedDepthIdx ? ' active' : '';
-                depthTabsHtml += `<button class="depth-tab${active}" onclick="selectDepth(${i})">
-          <span class="depth-icon">⛏️</span> ${depthLabel(cfg.ConfigName)}
-        </button>`;
-            });
-
-            const html = `<div class="merchant-detail">
-        <div class="detail-header">
-          <div class="detail-avatar">${meta.emoji}</div>
-          <div class="detail-title">
-            <h3>${meta.displayName}</h3>
-            <p>${meta.description}</p>
-          </div>
-        </div>
-        <div class="depth-tabs">${depthTabsHtml}</div>
-        <div class="detail-meta">
-          <div class="meta-chip"><span class="label">Shop Slots</span> ${shop.DefaultShopSlots}</div>
-          <div class="meta-chip"><span class="label">Buy ×</span> ${buyMul.toFixed(1)}</div>
-          <div class="meta-chip"><span class="label">Sell ×</span> ${sellMul.toFixed(1)}</div>
-          <div class="meta-chip"><span class="label">Items</span> ${shop.AvailableItems.length}</div>
-        </div>
-        ${buildItemTable(shop)}
-      </div>`;
-
-            document.getElementById('merchantDetail').innerHTML = html;
-        }
-
-        // ── Select merchant / depth ────────────────────────────────────────────────
-        function selectMerchant(idx) {
-            selectedMerchant = allMerchants[idx];
-            selectedDepthIdx = 0;
-
-            // Update card selection
-            document.querySelectorAll('.merchant-card').forEach((card, i) => {
-                card.classList.toggle('selected', i === idx);
-            });
-
-            renderDetail();
-            // Scroll to detail
-            document.getElementById('merchantDetail').scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-
-        function selectDepth(idx) {
-            selectedDepthIdx = idx;
-            renderDetail();
-        }
-
-        // ── Initial render ─────────────────────────────────────────────────────────
+        // ── Render ───────────────────────────────────────────────────────────────
         function render() {
-            const container = document.getElementById('merchantCatalog');
-            if (!SHOP_CONFIGS || SHOP_CONFIGS.length === 0) {
-                container.innerHTML = '<div class="loading-state" style="animation:none"><i class="fas fa-exclamation-triangle" style="animation:none"></i>No merchant data found.</div>';
+            const catalog = document.getElementById('chestCatalog');
+            if (!window.CHEST_DATA || !CHEST_DATA.LootTables || CHEST_DATA.LootTables.length === 0) {
+                catalog.innerHTML = '<div class="loading-state"><i class="fas fa-box-open"></i>No chest data found.</div>';
                 return;
             }
 
-            allMerchants = groupMerchants(SHOP_CONFIGS);
+            let html = '';
 
-            // Build merchant cards
-            let cardsHtml = '<div class="merchant-list">';
-            allMerchants.forEach((merchant, idx) => {
-                const meta = getMerchantMeta(merchant.name);
-                const depthRange = merchant.configs.map(c => depthShort(c.ConfigName)).join(', ');
-                const totalItems = new Set(merchant.configs.flatMap(c => c.AvailableItems.map(i => i.ItemID))).size;
+            for (const chest of CHEST_DATA.LootTables) {
+                // Calculate total weight for percentages
+                const totalWeight = chest.LootItems.reduce((s, it) => s + it.Weight, 0);
 
-                cardsHtml += `<div class="merchant-card${idx === 0 ? ' selected' : ''}" onclick="selectMerchant(${idx})">
-          <div class="merchant-card-top">
-            <div class="merchant-avatar">${meta.emoji}</div>
-            <div class="merchant-card-info">
-              <h3>${meta.displayName}</h3>
-              <p>${meta.description}</p>
+                // Chest icon — use the Chest icon from ICON_MAP if available
+                const chestIconUrl = iconUrl('Chest');
+                const chestIconHtml = chestIconUrl
+                    ? `<img src="${chestIconUrl}" alt="${chest.ChestName}" />`
+                    : `<span class="chest-emoji">📦</span>`;
+
+                html += `
+        <div class="chest-card">
+          <div class="chest-header">
+            <div class="chest-icon">${chestIconHtml}</div>
+            <div class="chest-title-group">
+              <div class="chest-name">${chest.ChestName}</div>
+              <div class="chest-meta">
+                <span class="chest-tag"><i class="fas fa-dice"></i> ${chest.MinItems}–${chest.MaxItems} items per open</span>
+                <span class="chest-tag"><i class="fas fa-list"></i> ${chest.LootItems.length} possible drops</span>
+              </div>
             </div>
           </div>
-          <div class="merchant-card-footer">
-            <span class="merchant-tag"><i class="fas fa-layer-group"></i>&nbsp; ${merchant.configs.length} depth${merchant.configs.length > 1 ? 's' : ''}</span>
-            <span class="merchant-tag"><i class="fas fa-box-open"></i>&nbsp; ${totalItems} unique items</span>
+          <div class="loot-table-wrap">
+            <table class="loot-table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Item</th>
+                  <th>Quantity</th>
+                  <th>Weight</th>
+                  <th class="th-chance">Drop Chance</th>
+                </tr>
+              </thead>
+              <tbody>`;
+
+                // Sort items by weight descending
+                const sorted = [...chest.LootItems].sort((a, b) => b.Weight - a.Weight);
+                const avgPct = 100 / chest.LootItems.length;
+
+                for (const item of sorted) {
+                    const pct = (item.Weight / totalWeight * 100);
+                    const pctDisplay = pct < 0.1 ? pct.toFixed(2) : pct < 1 ? pct.toFixed(1) : pct.toFixed(1);
+
+                    // Bar fill class based on rarity of the drop chance
+                    let fillClass = 'common';
+                    let rareTag = '';
+                    if (pct < 1) {
+                        fillClass = 'ultra-rare';
+                        rareTag = '<span class="rare-tag tag-ultra-rare">ULTRA RARE</span>';
+                    } else if (pct < avgPct / 3) {
+                        fillClass = 'rare';
+                        rareTag = '<span class="rare-tag tag-rare">RARE</span>';
+                    }
+
+                    const qtyStr = item.MinQuantity === item.MaxQuantity
+                        ? `${item.MinQuantity}`
+                        : `${item.MinQuantity}–${item.MaxQuantity}`;
+
+                    const displayName = humanName(item.ItemID);
+
+                    html += `
+                <tr>
+                  <td>${buildIconCell(item.ItemID)}</td>
+                  <td>
+                    <a href="${DETAIL_PAGE}?id=${item.ItemID}" class="item-link">${displayName}</a>
+                    ${rareTag}
+                  </td>
+                  <td class="qty-cell">${qtyStr}</td>
+                  <td class="weight-cell">${item.Weight}</td>
+                  <td class="chance-cell">
+                    <div class="chance-bar-wrap">
+                      <div class="chance-bar">
+                        <div class="chance-bar-fill ${fillClass}" style="width:${Math.min(pct, 100)}%"></div>
+                      </div>
+                      <span class="chance-pct">${pctDisplay}%</span>
+                    </div>
+                  </td>
+                </tr>`;
+                }
+
+                html += `
+              </tbody>
+            </table>
           </div>
         </div>`;
-            });
-            cardsHtml += '</div>';
+            }
 
-            cardsHtml += '<div id="merchantDetail"></div>';
-            container.innerHTML = cardsHtml;
-
-            // Auto-select first merchant
-            selectedMerchant = allMerchants[0];
-            selectedDepthIdx = 0;
-            renderDetail();
+            catalog.innerHTML = html;
         }
 
-        render();
+        // ── Boot ─────────────────────────────────────────────────────────────────
+        document.addEventListener('DOMContentLoaded', render);
     </script>
 
 </body>
