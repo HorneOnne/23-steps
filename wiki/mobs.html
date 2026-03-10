@@ -818,6 +818,50 @@
         grid-template-columns: 1fr 1fr
       }
     }
+
+    /* ── Wiki sections ── */
+    .section {
+      background: var(--wiki-stat-bg, var(--wiki-controls-bg));
+      border: 1px solid var(--wiki-stat-border, var(--wiki-mob-border));
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 0.62rem;
+      color: var(--wiki-section-title, var(--wiki-text-dimmer));
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--wiki-section-border, var(--wiki-mob-border));
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-text {
+      font-size: 0.84em;
+      color: var(--wiki-text);
+      line-height: 1.7;
+    }
+
+    .section-text+.section-text {
+      margin-top: 8px;
+    }
+
+    .section-text code {
+      font-size: 0.93em;
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid var(--wiki-mob-border);
+      padding: 1px 6px;
+      border-radius: 4px;
+      color: #60a5fa;
+    }
+
+    [data-theme="light"] .section-text code {
+      background: rgba(0, 0, 0, .05);
+    }
   </style>
 </head>
 
@@ -875,7 +919,19 @@
 
   <main>
     <div class="content-wrap">
+      <div class="section">
+        <div class="section-title"><i class="fas fa-shield-halved"></i> Damage Formula</div>
+        <p class="section-text">All mobs currently have <strong>Defense = 0</strong>, meaning your damage is only
+          reduced by the mob's elemental <strong>resistances</strong> — the flat defense subtraction has no effect. The
+          full formula applied each time you hit a mob is:</p>
+        <p class="section-text">
+          <code>final damage = max(1, damage &times; (1 &minus; resistance) &minus; defense)</code></p>
+        <p class="section-text">A minimum of <strong>1</strong> damage is always guaranteed regardless of resistances.
+        </p>
+      </div>
+
       <div class="results-count" id="resultsCount"></div>
+
       <div class="mob-table-wrap">
         <table class="mob-table" id="mobTable">
           <thead>

@@ -380,6 +380,25 @@
       color: #a78bfa;
     }
 
+    .section-text {
+      font-size: 0.84em;
+      color: var(--wiki-text);
+      line-height: 1.7;
+    }
+
+    .section-text code {
+      font-size: 0.93em;
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid var(--wiki-infobox-row-border);
+      padding: 1px 6px;
+      border-radius: 4px;
+      color: #60a5fa;
+    }
+
+    [data-theme="light"] .section-text code {
+      background: rgba(0, 0, 0, .05);
+    }
+
     /* Loot */
     .loot-grid {
       display: flex;
@@ -867,6 +886,12 @@
         '</div>' +
         '</div>' +
         '<div class="section"><div class="section-title"><i class="fas fa-heart"></i> Health</div>' + healthHtml + '</div>' +
+        '<div class="section">' +
+        '<div class="section-title"><i class="fas fa-shield-halved"></i> Damage Formula</div>' +
+        '<p class="section-text">All mobs currently have <strong>Defense = 0</strong>, meaning incoming player damage is only reduced by the mob\'s elemental <strong>resistances</strong> — the flat defense reduction has no effect. The full formula applied when you deal damage to a mob is:</p>' +
+        '<p class="section-text" style="margin-top:10px"><code>final damage = max(1, damage &times; (1 &minus; resistance) &minus; defense)</code></p>' +
+        '<p class="section-text" style="margin-top:8px">A minimum of <strong>1</strong> damage is always dealt regardless of resistances.</p>' +
+        '</div>' +
         '<div class="section"><div class="section-title"><i class="fas fa-khanda"></i> Combat</div>' + combatHtml + '</div>' +
         '<div class="section"><div class="section-title"><i class="fas fa-gift"></i> Loot Drops</div>' + lootHtml + '</div>';
     }
