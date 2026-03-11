@@ -95,6 +95,7 @@ const ICON_MAP = {
 // A fallback-friendly iconUrl function
 function iconUrl(itemID) {
     if (!itemID || itemID === 'None' || itemID === 'none') return null;
+    if (typeof itemID !== 'string') itemID = String(itemID);
     const file = ICON_MAP[itemID] || itemID.toLowerCase();
     return 'assets/items/' + file + '.png';
 }
