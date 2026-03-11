@@ -163,35 +163,37 @@
 
 ## 💍 Accessories — Full Ladder
 
-| Item | Effect | Depth | How |
-|---|---|---|---|
-| **Band of Regeneration** *(exists)* | Passive HP regen | 10 | 📦 |
-| **Ring of Swiftness** | +15% move speed | 6 | 📦 |
-| **Ring of Vitality** | +20 max HP | 8 | 📦 |
-| **Ring of Strength** | +10% damage | 12 | 📦 |
-| **Ring of Fortune** | +10% gold drops | 10 | 📦 |
-| **Miner's Amulet** | +2 mining power | 14 | 📦 |
-| **Lucky Charm** | +5% crit chance | 16 | 📦 Mythic |
-| **Vampire Ring** | +2 HP on kill | 20 | 📦 Mythic |
-| **Scholar's Ring** | −20% mana cost | 18 | 📦 Mythic |
-| **Rabbit's Foot** | +8% crit + loot luck | 26 | 📦 Mythic |
-| **Berserker Band** | +25% dmg, −10% HP | 25 | 📦 Divine |
-| **Guardian's Sigil** | +15 armor | 22 | 📦 Divine |
-| **Titan Belt** | +40 max HP | 30 | 📦 Divine |
-| **Magma Core Necklace** | Fire immunity | 52 | ⚔️ Magma Boss |
-| **Frostbite Ring** | +20% dmg vs fire mobs | 54 | 📦 Magma Chest |
-| **Spore Badge** | +15% dmg vs fungi mobs | 62 | ⚔️ Fungal Boss |
-| **Echo Crystal** | 5% chance to reset attack cooldown | 60 | 📦 |
-| **Shadow Cloak Pin** | +10% dodge | 66 | 🔨 Shadow |
-| **Reflector Charm** | Reflect 8% melee damage | 68 | 📦 Divine |
-| **Void Locket** | 10% hit negation | 74 | 📦 |
-| **Phantom Amulet** | Invisible to mobs while still | 76 | ⚔️ Boss |
-| **Void Heart** | −15% damage taken | 82 | ⚔️ Boss |
-| **Soul Gem** | Steal 5 HP on kill | 84 | ⚔️ Boss |
-| **Ancient Amulet** | +50 max HP + 5% all resists | 86 | ⚔️ Boss |
-| **Celestial Prism** | All stats +10% | 94 | 📦 Celestial |
-| **Phoenix Pendant** | Survive fatal hit once per run | 90 | ⚔️ Boss |
-| **Eternal Ring** | All bonuses +20%, no debuffs | 100 | ⚔️ Final Boss |
+> **Stat types**: Flat – HP, Defense, Luck, HP Regen, Mana Regen  |  Percent – Move Speed, Mining Speed
+
+| Item | HP | Def | Luck | HP Regen | Mana Regen | Move Spd | Mine Spd | Depth | How |
+|---|---|---|---|---|---|---|---|---|---|
+| **Band of Regeneration** *(exists)* | — | — | — | +0.5/s | — | — | — | 10 | 📦 |
+| **Ring of Swiftness** *(exists)* | — | — | — | — | — | +15% | — | 6 | 📦 |
+| **Ring of Vitality** *(exists)* | +20 | — | — | — | — | — | — | 8 | 📦 |
+| **Ring of Fortune** *(exists)* | — | — | +5 | — | — | — | — | 10 | 📦 |
+| **Ring of Strength** | — | — | — | — | — | — | — | 12 | 📦 |
+| **Miner's Amulet** *(exists)* | — | — | — | — | — | — | +15% | 14 | 📦 |
+| **Lucky Charm** *(exists)* | — | — | +10 | — | — | — | — | 16 | 📦 Mythic |
+| **Vampire Ring** *(exists)* | +5 | — | — | +1/s | — | — | — | 20 | 📦 Mythic |
+| **Scholar's Ring** *(exists)* | — | — | — | — | +1/s | — | — | 18 | 📦 Mythic |
+| **Rabbit's Foot** *(exists)* | — | — | +15 | — | — | — | — | 26 | 📦 Mythic |
+| **Berserker Band** | — | −10 | — | — | — | — | — | 25 | 📦 Divine |
+| **Guardian's Sigil** *(exists)* | — | +15 | — | — | — | — | — | 22 | 📦 Divine |
+| **Titan Belt** *(exists)* | +40 | +5 | — | — | — | — | — | 30 | 📦 Divine |
+| **Magma Core Necklace** | +10 | +5 | — | +1/s | — | — | — | 52 | ⚔️ Magma Boss |
+| **Frostbite Ring** | — | — | +5 | — | — | +10% | — | 54 | 📦 Magma Chest |
+| **Spore Badge** | — | — | +8 | — | +0.5/s | — | +10% | 62 | ⚔️ Fungal Boss |
+| **Echo Crystal** | — | — | +5 | — | +1/s | — | — | 60 | 📦 |
+| **Shadow Cloak Pin** *(exists)* | — | — | +5 | — | — | +10% | — | 66 | 🔨 Shadow |
+| **Reflector Charm** | — | +10 | — | — | — | — | — | 68 | 📦 Divine |
+| **Void Locket** | +20 | +10 | — | — | — | — | — | 74 | 📦 |
+| **Phantom Amulet** | — | — | +10 | — | — | +15% | — | 76 | ⚔️ Boss |
+| **Void Heart** | +30 | +15 | — | +1/s | — | — | — | 82 | ⚔️ Boss |
+| **Soul Gem** | +10 | — | +10 | +2/s | — | — | — | 84 | ⚔️ Boss |
+| **Ancient Amulet** *(exists)* | +50 | +10 | — | +2/s | — | — | — | 86 | ⚔️ Boss |
+| **Celestial Prism** *(exists)* | +30 | +10 | +20 | +1/s | +1/s | +10% | +10% | 94 | 📦 Celestial |
+| **Phoenix Pendant** | +20 | — | — | +3/s | — | — | — | 90 | ⚔️ Boss |
+| **Eternal Ring** *(exists)* | +80 | +20 | +30 | +3/s | +2/s | +20% | +20% | 100 | ⚔️ Final Boss |
 
 ---
 
