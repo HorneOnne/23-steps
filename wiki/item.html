@@ -732,7 +732,8 @@
 
     .cattable {
       width: 100%;
-      border-collapse: collapse;
+      border-collapse: separate;
+      border-spacing: 0;
       font-size: 0.78em;
     }
 
@@ -747,10 +748,17 @@
       cursor: pointer;
       user-select: none;
       border-bottom: 2px solid var(--wiki-section-border);
+      border-left: 1px solid var(--wiki-panel-border, rgba(255, 255, 255, 0.1));
       position: sticky;
       top: 0;
       z-index: 1;
       transition: color .15s;
+      text-align: center;
+    }
+
+    .cattable thead th:first-child {
+      border-left: none;
+      text-align: left;
     }
 
     .cattable thead th:hover {
@@ -795,12 +803,27 @@
       padding: 8px 12px;
       vertical-align: middle;
       color: var(--wiki-text);
+      border-left: 1px solid var(--wiki-panel-border, rgba(255, 255, 255, 0.08));
+      border-bottom: 1px solid var(--wiki-infobox-row-border);
+    }
+
+    .cattable tbody td:first-child {
+      border-left: none;
+    }
+
+    .cattable tbody tr {
+      transition: background .12s;
+    }
+
+    .cattable tbody tr:last-child td {
+      border-bottom: none;
     }
 
     .cattable tbody td.stat-cell {
       color: var(--wiki-stat-value);
       font-weight: 600;
       white-space: nowrap;
+      text-align: center;
     }
 
     .cattable tbody td.stat-cell.highlight {
@@ -861,7 +884,64 @@
     .cattable-desc {
       color: var(--wiki-text-dim);
       font-size: 0.88em;
-      max-width: 320px;
+      min-width: 250px;
+      max-width: 600px;
+    }
+
+
+    /* ── Accessory stat bonuses ─────────────────────────── */
+    .acc-bonuses-section {
+      margin-top: 24px;
+    }
+
+    .acc-bonuses-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88em;
+      margin-top: 10px;
+    }
+
+    .acc-bonuses-table thead tr {
+      background: var(--wiki-table-header-bg, rgba(255, 255, 255, 0.05));
+      color: var(--wiki-text-dim);
+      font-size: 0.8em;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .acc-bonuses-table th {
+      padding: 6px 12px;
+      text-align: left;
+      border-bottom: 1px solid var(--wiki-border, rgba(255, 255, 255, 0.08));
+      font-weight: 600;
+    }
+
+    .acc-bonus-row {
+      border-bottom: 1px solid var(--wiki-border, rgba(255, 255, 255, 0.05));
+      transition: background 0.15s;
+    }
+
+    .acc-bonus-row:hover {
+      background: var(--wiki-mob-hover-bg, rgba(255, 255, 255, 0.04));
+    }
+
+    .acc-stat-name {
+      padding: 8px 12px;
+      color: var(--wiki-text);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .acc-stat-value {
+      padding: 8px 12px;
+      font-weight: 700;
+      font-size: 1em;
+    }
+
+    .acc-stat-type {
+      padding: 8px 12px;
+      color: var(--wiki-text-dim);
+      font-size: 0.8em;
     }
 
     @media (max-width: 600px) {
@@ -941,7 +1021,7 @@
     <a href="../delete-account.html">Delete Account</a>
   </footer>
   <script src="item_configs.js"></script>
-    <script src="icon_map.js"></script>
+  <script src="icon_map.js"></script>
 
   <script src="crafting_recipes.js"></script>
 
@@ -1030,15 +1110,6 @@
       if (cfg.AccessoryConfig) {
         const s = cfg.AccessoryConfig;
         if (s.AccessoryType) stats.push({ label: 'Slot Type', value: s.AccessoryType, fmt: v => v });
-        if (s.StatBonuses && s.StatBonuses.length) {
-          s.StatBonuses.forEach(b => {
-            const label = b.StatType ? b.StatType.replace(/([A-Z])/g, ' $1').trim() : 'Bonus';
-            const isPercent = b.ModifierType === 'Percent' || b.ModifierType === 'Percentage';
-            const displayVal = isPercent ? Math.round(b.Value * 100) : b.Value;
-            const mod = isPercent ? '%' : '';
-            stats.push({ label, value: displayVal, fmt: v => '+' + v + mod, hi: true });
-          });
-        }
         if (s.HasSpecialEffect && s.SpecialEffectDescription) {
           stats.push({ label: 'Special Effect', value: s.SpecialEffectDescription, fmt: v => v });
         }
@@ -1108,7 +1179,63 @@
         </div>`;
     }
 
-    
+    // ── Accessory stat bonuses table ─────────────────────────────────────────────
+    const STAT_META = {
+      MaxHP: { label: 'Max HP', icon: 'fa-heart', color: '#4ade80', unit: 'HP', percent: false },
+      Defense: { label: 'Defense', icon: 'fa-shield-alt', color: '#60a5fa', unit: '', percent: false },
+      Luck: { label: 'Luck', icon: 'fa-clover', color: '#facc15', unit: '', percent: false },
+      HealthRegeneration: { label: 'HP Regen', icon: 'fa-heart-pulse', color: '#34d399', unit: '/s', percent: false },
+      ManaRegeneration: { label: 'Mana Regen', icon: 'fa-droplet', color: '#818cf8', unit: '/s', percent: false },
+      MoveSpeed: { label: 'Move Speed', icon: 'fa-person-running', color: '#f97316', unit: '%', percent: true },
+      MiningSpeed: { label: 'Mining Speed', icon: 'fa-hammer', color: '#a78bfa', unit: '%', percent: true },
+    };
+
+    function renderAccessoryBonuses(cfg) {
+      if (!cfg.AccessoryConfig) return '';
+      const s = cfg.AccessoryConfig;
+      if (!s.StatBonuses || !s.StatBonuses.length) return '';
+
+      const rows = s.StatBonuses.map(b => {
+        const meta = STAT_META[b.StatType] || {
+          label: b.StatType ? b.StatType.replace(/([A-Z])/g, ' $1').trim() : 'Bonus',
+          icon: 'fa-star', color: '#b0bec5', unit: '', percent: false
+        };
+        const isPercent = meta.percent || b.ModifierType === 'Percent' || b.ModifierType === 'Percentage';
+        const num = isPercent ? Math.round(b.Value * 100) : b.Value;
+        const display = '+' + num + (meta.unit || '');
+        return `
+          <tr class="acc-bonus-row">
+            <td class="acc-stat-name">
+              <i class="fas ${meta.icon}" style="color:${meta.color};width:18px;text-align:center"></i>
+              &nbsp;${meta.label}
+            </td>
+            <td class="acc-stat-value" style="color:${meta.color}">${display}</td>
+            <td class="acc-stat-type">${isPercent ? 'Percent' : 'Flat'}</td>
+          </tr>`;
+      }).join('');
+
+      const specialRow = s.HasSpecialEffect && s.SpecialEffectDescription
+        ? `<tr class="acc-bonus-row">
+             <td class="acc-stat-name"><i class="fas fa-sparkles" style="color:#fb923c;width:18px;text-align:center"></i>&nbsp;Special Effect</td>
+             <td class="acc-stat-value" colspan="2" style="color:#fb923c">${s.SpecialEffectDescription}</td>
+           </tr>`
+        : '';
+
+      return `
+        <div class="acc-bonuses-section">
+          <div class="section-title"><i class="fas fa-circle-plus"></i>&nbsp; Stat Bonuses</div>
+          <table class="acc-bonuses-table">
+            <thead>
+              <tr>
+                <th>Stat</th>
+                <th>Bonus</th>
+                <th>Type</th>
+              </tr>
+            </thead>
+            <tbody>${rows}${specialRow}</tbody>
+          </table>
+        </div>`;
+    }
 
     function iconHtml(id, size) {
       const url = iconUrl(id);
@@ -1204,7 +1331,11 @@
       if (cfg.PickaxeConfig) { infoRows.push(['Damage', cfg.PickaxeConfig.AttackDamage]); infoRows.push(['Mining Pwr', cfg.PickaxeConfig.MiningPower]); }
       if (cfg.ArmorConfig) infoRows.push(['Defense', cfg.ArmorConfig.Defense]);
 
-      const descLines = (cfg.Description || '').split('\n').filter(Boolean);
+      // For accessories split on both \n and , so each bonus is on its own line
+      const rawDesc = cfg.Description || '';
+      const descLines = cfg.AccessoryConfig
+        ? rawDesc.split(/[,\n]/).map(l => l.trim()).filter(Boolean)
+        : rawDesc.split('\n').filter(Boolean);
       const enchantHtml = cfg.CanBeEnchanted
         ? `<span class="enchant-tag"><i class="fas fa-magic"></i> Enchantable</span>`
         : `<span class="no-enchant-tag"><i class="fas fa-ban"></i> Not Enchantable</span>`;
@@ -1258,6 +1389,7 @@
                 </div>` : ''}
 
                 ${statsHtml}
+                ${renderAccessoryBonuses(cfg)}
             </div>
         </div>
 
@@ -1400,6 +1532,29 @@
         statCols = [
           { key: 'heal', label: 'Heal / Mana', get: c => { const s = c.ConsumableConfig || c.PotionConfig || {}; return s.HealthRestore ?? s.ManaRestore ?? null; } },
         ];
+      } else if (type === 'Accessory') {
+        // Helper: find the value of a specific StatType from StatBonuses
+        function getBonus(c, statType) {
+          const bonuses = (c.AccessoryConfig && c.AccessoryConfig.StatBonuses) || [];
+          const b = bonuses.find(x => x.StatType === statType);
+          if (!b) return null;
+          const isPercent = b.ModifierType === 'Percent' || b.ModifierType === 'Percentage';
+          return isPercent ? Math.round(b.Value * 100) : b.Value;
+        }
+        function getBonusDisplay(c, statType, unit) {
+          const v = getBonus(c, statType);
+          if (v == null) return null;
+          return '+' + v + unit;
+        }
+        statCols = [
+          { key: 'maxhp', label: 'HP', get: c => getBonus(c, 'MaxHP'), fmt: v => v },
+          { key: 'defense', label: 'Def', get: c => getBonus(c, 'Defense'), fmt: v => v },
+          { key: 'luck', label: 'Luck', get: c => getBonus(c, 'Luck'), fmt: v => v },
+          { key: 'hpregen', label: 'HP Regen (/s)', get: c => getBonus(c, 'HealthRegeneration'), fmt: v => v },
+          { key: 'manaregen', label: 'MP Regen (/s)', get: c => getBonus(c, 'ManaRegeneration'), fmt: v => v },
+          { key: 'movespd', label: 'Move Spd (%)', get: c => getBonus(c, 'MoveSpeed'), fmt: v => v },
+          { key: 'minespd', label: 'Mine Spd (%)', get: c => getBonus(c, 'MiningSpeed'), fmt: v => v },
+        ];
       }
 
       // Sort state: default by name asc
@@ -1447,7 +1602,7 @@
             return `<td class="stat-cell${isHi ? ' highlight' : ''}">${display}</td>`;
           }).join('');
           const descText = (item.Description || '').split('\n')[0] || '';
-          const shortDesc = descText.length > 80 ? descText.slice(0, 77) + '…' : descText;
+          const shortDesc = descText.length > 200 ? descText.slice(0, 197) + '…' : descText;
           const rarityLabel = item.Rarity || '—';
           return `<tr class="${isActive ? 'active-row' : ''}" data-id="${item.ItemID}">
             <td><div class="cattable-item-cell">
