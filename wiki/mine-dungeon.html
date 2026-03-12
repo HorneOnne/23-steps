@@ -241,7 +241,7 @@
             background: var(--wiki-section-card-bg);
             border: 1px solid var(--wiki-section-card-border);
             border-radius: 10px;
-            padding: 22px;
+            padding: 10px;
             display: flex;
             align-items: center;
             gap: 18px;
@@ -257,16 +257,25 @@
         }
 
         .section-card-icon {
-            width: 52px;
-            height: 52px;
+            width: 90px;
+            height: 90px;
             background: var(--wiki-section-card-icon-bg);
             border: 1px solid var(--wiki-section-card-icon-border);
             border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 2rem;
             flex-shrink: 0;
+            overflow: hidden;
+            padding: 4px;
+        }
+
+        .section-card-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            image-rendering: pixelated;
         }
 
         .section-card-body .section-card-title {
@@ -394,28 +403,40 @@
         <div class="content-wrap">
             <div class="section-grid">
                 <a href="mobs.html" class="section-card">
-                    <div class="section-card-icon">💀</div>
+                    <div class="section-card-icon">
+                        <img src="assets/mobs/greenslime.png" alt="Mobs"
+                            onerror="this.parentElement.textContent='💀'" />
+                    </div>
                     <div class="section-card-body">
                         <div class="section-card-title">Mobs</div>
                         <p>All enemy creatures — stats, resistances, loot drops, and AI behaviour.</p>
                     </div>
                 </a>
                 <a href="items.html" class="section-card">
-                    <div class="section-card-icon">🗡️</div>
+                    <div class="section-card-icon">
+                        <img src="assets/items/ironsword.png" alt="Items"
+                            onerror="this.parentElement.textContent='🗡️'" />
+                    </div>
                     <div class="section-card-body">
                         <div class="section-card-title">Items</div>
                         <p>Every weapon, armor, tool, and resource with full stats and crafting info.</p>
                     </div>
                 </a>
                 <a href="economy.html" class="section-card">
-                    <div class="section-card-icon">📊</div>
+                    <div class="section-card-icon">
+                        <img src="assets/items/goldcoin.png" alt="Economy"
+                            onerror="this.parentElement.textContent='📊'" />
+                    </div>
                     <div class="section-card-body">
                         <div class="section-card-title">Economy</div>
                         <p>Balance testing — prices, crafting profit, weapon efficiency, and mob loot analysis.</p>
                     </div>
                 </a>
                 <a href="merchants.html" class="section-card">
-                    <div class="section-card-icon">🏪</div>
+                    <div class="section-card-icon">
+                        <img src="assets/items/chest.png" alt="Merchants"
+                            onerror="this.parentElement.textContent='🏪'" />
+                    </div>
                     <div class="section-card-body">
                         <div class="section-card-title">Merchants</div>
                         <p>NPC shop inventories by dungeon depth — buy &amp; sell prices, stock limits, and item
@@ -423,21 +444,29 @@
                     </div>
                 </a>
                 <a href="chests.html" class="section-card">
-                    <div class="section-card-icon">📦</div>
+                    <div class="section-card-icon">
+                        <img src="assets/items/wooden_chest.png" alt="Chests"
+                            onerror="this.parentElement.textContent='📦'" />
+                    </div>
                     <div class="section-card-body">
                         <div class="section-card-title">Chests</div>
                         <p>Chest loot tables — all possible drops, quantity ranges, and drop chance percentages.</p>
                     </div>
                 </a>
                 <a href="luck.html" class="section-card">
-                    <div class="section-card-icon">🍀</div>
+                    <div class="section-card-icon">
+                        <img src="assets/items/ringoffortune.png" alt="Luck"
+                            onerror="this.parentElement.textContent='🍀'" />
+                    </div>
                     <div class="section-card-body">
                         <div class="section-card-title">Luck System</div>
                         <p>How Luck affects drop chance &amp; quantity — formulas, items, potions, and set bonuses.</p>
                     </div>
                 </a>
                 <div class="section-card" style="opacity:0.4;cursor:default;pointer-events:none;">
-                    <div class="section-card-icon">🗺️</div>
+                    <div class="section-card-icon">
+                        <img src="assets/items/map.png" alt="Maps" onerror="this.parentElement.textContent='🗺️'" />
+                    </div>
                     <div class="section-card-body">
                         <div class="section-card-title">Maps</div>
                         <p>Coming soon — dungeon floors, biomes, and exploration maps.</p>
