@@ -2466,27 +2466,6 @@ var ITEM_CONFIGS = {
       }
     },
     {
-      "ItemID": "DiamondOre",
-      "ItemType": "Resource",
-      "Name": "Diamond Ore",
-      "Description": "A rough stone hiding a glittering heart. Only the finest pickaxes can reveal what's inside.",
-      "MaxStackSize": 9999,
-      "CanBeEnchanted": false,
-      "Rarity": "Rare",
-      "Offset": {
-        "x": 0.0,
-        "y": 0.0,
-        "magnitude": 0.0,
-        "sqrMagnitude": 0.0
-      },
-      "AngleZ": 0.0,
-      "UseSpeed": 999.0,
-      "ResourceConfig": {
-        "IsRaw": true,
-        "IsCraftingMaterial": true
-      }
-    },
-    {
       "ItemID": "Ice",
       "ItemType": "Resource",
       "Name": "Ice",
