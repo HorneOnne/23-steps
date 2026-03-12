@@ -1202,7 +1202,7 @@
         };
         const isPercent = meta.percent || b.ModifierType === 'Percent' || b.ModifierType === 'Percentage';
         const num = isPercent ? Math.round(b.Value * 100) : b.Value;
-        const display = '+' + num + (meta.unit || '');
+        const display = '+' + num + (isPercent ? '%' : (meta.unit || ''));
         return `
           <tr class="acc-bonus-row">
             <td class="acc-stat-name">
@@ -1210,7 +1210,6 @@
               &nbsp;${meta.label}
             </td>
             <td class="acc-stat-value" style="color:${meta.color}">${display}</td>
-            <td class="acc-stat-type">${isPercent ? 'Percent' : 'Flat'}</td>
           </tr>`;
       }).join('');
 
@@ -1229,7 +1228,6 @@
               <tr>
                 <th>Stat</th>
                 <th>Bonus</th>
-                <th>Type</th>
               </tr>
             </thead>
             <tbody>${rows}${specialRow}</tbody>

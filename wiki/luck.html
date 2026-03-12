@@ -335,6 +335,65 @@
       border: 1px solid var(--wiki-infobox-border);
     }
 
+    /* ── Luck panel (card wrapper like chests page) ──── */
+    .luck-panel {
+      background: var(--wiki-panel-bg);
+      border: 1px solid var(--wiki-panel-border);
+      border-radius: 10px;
+      overflow: hidden;
+      backdrop-filter: var(--wiki-panel-blur);
+      box-shadow: var(--wiki-panel-shadow);
+      margin-bottom: 28px;
+    }
+
+    .luck-panel-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 18px 24px;
+      background: var(--wiki-infobox-header-bg);
+      border-bottom: 1px solid var(--wiki-infobox-header-border);
+    }
+
+    .luck-panel-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+      background: color-mix(in srgb, #fbbf24 12%, var(--wiki-panel-bg));
+      border: 1px solid color-mix(in srgb, #fbbf24 30%, var(--wiki-panel-border));
+    }
+
+    .luck-panel-title {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 0.7rem;
+      color: var(--wiki-heading);
+    }
+
+    .luck-panel-subtitle {
+      font-size: 0.75em;
+      color: var(--wiki-subheading);
+      margin-top: 4px;
+    }
+
+    .luck-panel .table-wrap {
+      margin-bottom: 0;
+      border: none;
+      border-radius: 0;
+    }
+
+    .luck-panel-footer {
+      padding: 14px 24px;
+      font-size: 0.82em;
+      color: var(--wiki-subheading);
+      border-top: 1px solid var(--wiki-infobox-row-border);
+      background: var(--wiki-infobox-header-bg);
+    }
+
     table {
       width: 100%;
       border-collapse: collapse;
@@ -772,321 +831,139 @@
       <!-- ── Multiplier Reference Table ─────────────────── -->
       <h3 class="section-heading"><i class="fas fa-table"></i> Luck Multiplier Reference</h3>
 
-      <div class="callout callout-info">
-        <div class="callout-icon">ℹ️</div>
-        <div>
-          The table below shows how different Luck values translate into a multiplier and the resulting change
-          to a <strong>50% base drop chance</strong>. The multiplier is clamped between 0.5× and 2.0×.
-        </div>
-      </div>
-
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Luck Value</th>
-              <th>Multiplier</th>
-              <th>Bonus / Penalty</th>
-              <th>Drop Chance (50% base)</th>
-              <th>Qty Multiplier (5 base items)</th>
-              <th>Notes</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><span class="tbl-luck-val luck-negative">−50</span></td>
-              <td><span class="multiplier-val">0.50×</span></td>
-              <td><span class="luck-negative">−50%</span></td>
-              <td><span class="drop-chance-val luck-negative">~37.5%</span></td>
-              <td><span class="luck-negative">2–3 items</span></td>
-              <td>Minimum cap — drops heavily penalised</td>
-            </tr>
-            <tr>
-              <td><span class="tbl-luck-val luck-negative">−25</span></td>
-              <td><span class="multiplier-val">0.75×</span></td>
-              <td><span class="luck-negative">−25%</span></td>
-              <td><span class="drop-chance-val luck-negative">~43.8%</span></td>
-              <td><span class="luck-negative">3–4 items</span></td>
-              <td>Reduced drops</td>
-            </tr>
-            <tr>
-              <td><span class="tbl-luck-val luck-neutral">0</span></td>
-              <td><span class="multiplier-val">1.00×</span></td>
-              <td><span class="luck-neutral">±0%</span></td>
-              <td><span class="drop-chance-val">50.0%</span></td>
-              <td><span class="luck-neutral">5 items</span></td>
-              <td>Default — no change</td>
-            </tr>
-            <tr>
-              <td><span class="tbl-luck-val luck-positive">+10</span></td>
-              <td><span class="multiplier-val">1.10×</span></td>
-              <td><span class="luck-positive">+10%</span></td>
-              <td><span class="drop-chance-val luck-positive">~52.5%</span></td>
-              <td><span class="luck-positive">5–6 items</span></td>
-              <td>Common item bonus</td>
-            </tr>
-            <tr>
-              <td><span class="tbl-luck-val luck-positive">+25</span></td>
-              <td><span class="multiplier-val">1.25×</span></td>
-              <td><span class="luck-positive">+25%</span></td>
-              <td><span class="drop-chance-val luck-positive">~56.3%</span></td>
-              <td><span class="luck-positive">6–7 items</span></td>
-              <td>Uncommon item bonus</td>
-            </tr>
-            <tr>
-              <td><span class="tbl-luck-val luck-positive">+50</span></td>
-              <td><span class="multiplier-val">1.50×</span></td>
-              <td><span class="luck-positive">+50%</span></td>
-              <td><span class="drop-chance-val luck-positive">~62.5%</span></td>
-              <td><span class="luck-positive">7–8 items</span></td>
-              <td>Rare item tier</td>
-            </tr>
-            <tr>
-              <td><span class="tbl-luck-val luck-positive">+75</span></td>
-              <td><span class="multiplier-val">1.75×</span></td>
-              <td><span class="luck-positive">+75%</span></td>
-              <td><span class="drop-chance-val luck-positive">~68.8%</span></td>
-              <td><span class="luck-positive">8–9 items</span></td>
-              <td>Epic item tier</td>
-            </tr>
-            <tr>
-              <td><span class="tbl-luck-val luck-positive">+100</span></td>
-              <td><span class="multiplier-val">2.00×</span></td>
-              <td><span class="luck-positive">+100%</span></td>
-              <td><span class="drop-chance-val luck-positive">~75.0%</span></td>
-              <td><span class="luck-positive">10 items</span></td>
-              <td>Maximum cap — double drop rate</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="callout callout-warn">
-        <div class="callout-icon">⚠️</div>
-        <div>
-          Drop chance uses <strong>soft scaling</strong> — drops can never become 100% guaranteed regardless of
-          how much Luck you stack. Quantity scaling is <strong>direct</strong> and scales linearly up to the 2× cap.
-        </div>
-      </div>
-
-      <!-- ── Lucky Items ─────────────────────────────────── -->
-      <h3 class="section-heading"><i class="fas fa-gem"></i> Lucky Items</h3>
-
-      <p style="font-size:0.84em;color:var(--wiki-subheading);margin-bottom:18px;">
-        The following accessories grant Luck bonuses when equipped. Mix and match to maximise your fortune.
-      </p>
-
-      <div class="lucky-items-grid">
-
-        <!-- Lucky Charm -->
-        <div class="lucky-item-card">
-          <div class="lucky-item-header">
-            <div class="lucky-item-emoji" style="background:#60a5fa18;border:1px solid #60a5fa40;">🍀</div>
-            <div>
-              <div class="lucky-item-name">Lucky Charm</div>
-              <div class="lucky-item-type">
-                Accessory — Necklace &nbsp;<span class="rarity-badge rarity-Rare">Rare</span>
-              </div>
-            </div>
-          </div>
-          <div class="lucky-item-body">
-            <div class="lucky-item-stat">
-              <span class="lucky-item-stat-label">Item ID</span>
-              <span class="lucky-item-stat-value" style="color:var(--wiki-infobox-label);font-weight:400;font-family:monospace;">LuckyCharm (#224)</span>
-            </div>
-            <div class="lucky-item-stat">
-              <span class="lucky-item-stat-label">Luck Bonus</span>
-              <span class="lucky-item-stat-value">+25 Luck (Flat)</span>
-            </div>
-            <div class="lucky-item-stat">
-              <span class="lucky-item-stat-label">Multiplier Effect</span>
-              <span class="lucky-item-stat-value">1.25× drops</span>
-            </div>
-            <div class="lucky-item-stat">
-              <span class="lucky-item-stat-label">Description</span>
-              <span style="font-size:0.8em;color:var(--wiki-text-dim);font-style:italic;">A four-leaf clover charm that brings good fortune.</span>
-            </div>
+      <div class="luck-panel">
+        <div class="luck-panel-header">
+          <div class="luck-panel-icon">📊</div>
+          <div>
+            <div class="luck-panel-title">Multiplier Reference</div>
+            <div class="luck-panel-subtitle">How Luck values translate to multipliers — clamped between 0.5× and 2.0×</div>
           </div>
         </div>
-
-        <!-- Rabbit's Foot -->
-        <div class="lucky-item-card">
-          <div class="lucky-item-header">
-            <div class="lucky-item-emoji" style="background:#c084fc18;border:1px solid #c084fc40;">🐇</div>
-            <div>
-              <div class="lucky-item-name">Rabbit's Foot</div>
-              <div class="lucky-item-type">
-                Accessory — Trinket &nbsp;<span class="rarity-badge rarity-Epic">Epic</span>
-              </div>
-            </div>
-          </div>
-          <div class="lucky-item-body">
-            <div class="lucky-item-stat">
-              <span class="lucky-item-stat-label">Item ID</span>
-              <span class="lucky-item-stat-value" style="color:var(--wiki-infobox-label);font-weight:400;font-family:monospace;">RabbitsFoot (#225)</span>
-            </div>
-            <div class="lucky-item-stat">
-              <span class="lucky-item-stat-label">Luck Bonus</span>
-              <span class="lucky-item-stat-value">+35 Luck (Flat)</span>
-            </div>
-            <div class="lucky-item-stat">
-              <span class="lucky-item-stat-label">Multiplier Effect</span>
-              <span class="lucky-item-stat-value">1.35× drops</span>
-            </div>
-            <div class="lucky-item-stat">
-              <span class="lucky-item-stat-label">Description</span>
-              <span style="font-size:0.8em;color:var(--wiki-text-dim);font-style:italic;">A legendary rabbit's foot that brings incredible luck.</span>
-            </div>
-          </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Luck Value</th>
+                <th>Multiplier</th>
+                <th>Bonus / Penalty</th>
+                <th>Drop Chance (50% base)</th>
+                <th>Qty Multiplier (5 base items)</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="tbl-luck-val luck-negative">−50</span></td>
+                <td><span class="multiplier-val">0.50×</span></td>
+                <td><span class="luck-negative">−50%</span></td>
+                <td><span class="drop-chance-val luck-negative">~37.5%</span></td>
+                <td><span class="luck-negative">2–3 items</span></td>
+                <td>Minimum cap — drops heavily penalised</td>
+              </tr>
+              <tr>
+                <td><span class="tbl-luck-val luck-negative">−25</span></td>
+                <td><span class="multiplier-val">0.75×</span></td>
+                <td><span class="luck-negative">−25%</span></td>
+                <td><span class="drop-chance-val luck-negative">~43.8%</span></td>
+                <td><span class="luck-negative">3–4 items</span></td>
+                <td>Reduced drops</td>
+              </tr>
+              <tr>
+                <td><span class="tbl-luck-val luck-neutral">0</span></td>
+                <td><span class="multiplier-val">1.00×</span></td>
+                <td><span class="luck-neutral">±0%</span></td>
+                <td><span class="drop-chance-val">50.0%</span></td>
+                <td><span class="luck-neutral">5 items</span></td>
+                <td>Default — no change</td>
+              </tr>
+              <tr>
+                <td><span class="tbl-luck-val luck-positive">+10</span></td>
+                <td><span class="multiplier-val">1.10×</span></td>
+                <td><span class="luck-positive">+10%</span></td>
+                <td><span class="drop-chance-val luck-positive">~52.5%</span></td>
+                <td><span class="luck-positive">5–6 items</span></td>
+                <td>Common item bonus</td>
+              </tr>
+              <tr>
+                <td><span class="tbl-luck-val luck-positive">+25</span></td>
+                <td><span class="multiplier-val">1.25×</span></td>
+                <td><span class="luck-positive">+25%</span></td>
+                <td><span class="drop-chance-val luck-positive">~56.3%</span></td>
+                <td><span class="luck-positive">6–7 items</span></td>
+                <td>Uncommon item bonus</td>
+              </tr>
+              <tr>
+                <td><span class="tbl-luck-val luck-positive">+50</span></td>
+                <td><span class="multiplier-val">1.50×</span></td>
+                <td><span class="luck-positive">+50%</span></td>
+                <td><span class="drop-chance-val luck-positive">~62.5%</span></td>
+                <td><span class="luck-positive">7–8 items</span></td>
+                <td>Rare item tier</td>
+              </tr>
+              <tr>
+                <td><span class="tbl-luck-val luck-positive">+75</span></td>
+                <td><span class="multiplier-val">1.75×</span></td>
+                <td><span class="luck-positive">+75%</span></td>
+                <td><span class="drop-chance-val luck-positive">~68.8%</span></td>
+                <td><span class="luck-positive">8–9 items</span></td>
+                <td>Epic item tier</td>
+              </tr>
+              <tr>
+                <td><span class="tbl-luck-val luck-positive">+100</span></td>
+                <td><span class="multiplier-val">2.00×</span></td>
+                <td><span class="luck-positive">+100%</span></td>
+                <td><span class="drop-chance-val luck-positive">~75.0%</span></td>
+                <td><span class="luck-positive">10 items</span></td>
+                <td>Maximum cap — double drop rate</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-
-        <!-- Ring of Fortune -->
-        <div class="lucky-item-card">
-          <div class="lucky-item-header">
-            <div class="lucky-item-emoji" style="background:#fb923c18;border:1px solid #fb923c40;">💍</div>
-            <div>
-              <div class="lucky-item-name">Ring of Fortune</div>
-              <div class="lucky-item-type">
-                Accessory — Ring &nbsp;<span class="rarity-badge rarity-Rare">Rare</span>
-              </div>
-            </div>
-          </div>
-          <div class="lucky-item-body">
-            <div class="lucky-item-stat">
-              <span class="lucky-item-stat-label">Item ID</span>
-              <span class="lucky-item-stat-value" style="color:var(--wiki-infobox-label);font-weight:400;font-family:monospace;">RingOfFortune (#227)</span>
-            </div>
-            <div class="lucky-item-stat">
-              <span class="lucky-item-stat-label">Luck Bonus</span>
-              <span class="lucky-item-stat-value">+15 Luck (Flat)</span>
-            </div>
-            <div class="lucky-item-stat">
-              <span class="lucky-item-stat-label">Multiplier Effect</span>
-              <span class="lucky-item-stat-value">1.15× drops</span>
-            </div>
-            <div class="lucky-item-stat">
-              <span class="lucky-item-stat-label">Description</span>
-              <span style="font-size:0.8em;color:var(--wiki-text-dim);font-style:italic;">A ring rumoured to attract fortune to its wearer.</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- ── Luck Items by Rarity ────────────────────────── -->
-      <h3 class="section-heading"><i class="fas fa-list-ol"></i> Recommended Luck Values by Source</h3>
-
-      <div class="rec-grid">
-        <div class="rec-card rc-common">
-          <div class="rec-card-label">Common Items</div>
-          <div class="rec-card-range">+5 – +10</div>
-          <div class="rec-card-desc">Minor luck boost from basic accessories</div>
-        </div>
-        <div class="rec-card rc-uncommon">
-          <div class="rec-card-label">Uncommon Items</div>
-          <div class="rec-card-range">+10 – +20</div>
-          <div class="rec-card-desc">Moderate improvement to drop rates</div>
-        </div>
-        <div class="rec-card rc-rare">
-          <div class="rec-card-label">Rare Items</div>
-          <div class="rec-card-range">+20 – +35</div>
-          <div class="rec-card-desc">e.g. Lucky Charm (+25), Ring of Fortune (+15)</div>
-        </div>
-        <div class="rec-card rc-epic">
-          <div class="rec-card-label">Epic Items</div>
-          <div class="rec-card-range">+35 – +50</div>
-          <div class="rec-card-desc">e.g. Rabbit's Foot (+35)</div>
-        </div>
-        <div class="rec-card rc-legendary">
-          <div class="rec-card-label">Legendary Items</div>
-          <div class="rec-card-range">+50 – +100</div>
-          <div class="rec-card-desc">Near maximum-cap items</div>
-        </div>
-        <div class="rec-card rc-buff">
-          <div class="rec-card-label">Potions / Buffs</div>
-          <div class="rec-card-range">+15 – +50</div>
-          <div class="rec-card-desc">Minor +15 · Major +30 · Supreme +50 (5–10 min)</div>
-        </div>
-        <div class="rec-card rc-set">
-          <div class="rec-card-label">Set Bonuses</div>
-          <div class="rec-card-range">+10 – +50</div>
-          <div class="rec-card-desc">2-pc +10 · 4-pc +25 · 6-pc +50</div>
+        <div class="luck-panel-footer">
+          <i class="fas fa-exclamation-triangle" style="margin-right:6px;opacity:0.6;color:#fbbf24;"></i>
+          Drop chance uses <strong>soft scaling</strong> — drops can never become 100% guaranteed. Quantity scales <strong>directly</strong> up to the 2× cap.
         </div>
       </div>
 
-      <!-- ── Potion / Buff table ─────────────────────────── -->
-      <h3 class="section-heading"><i class="fas fa-flask"></i> Luck Potions &amp; Buffs</h3>
+      <!-- ── Items with Luck Stat ────────────────────────── -->
+      <h3 class="section-heading"><i class="fas fa-gem"></i> Items with Luck Stat</h3>
 
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Item / Buff</th>
-              <th>Luck Bonus</th>
-              <th>Duration</th>
-              <th>Effect</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>🧪 Minor Luck Potion</td>
-              <td><span class="luck-positive">+15</span></td>
-              <td>5 min</td>
-              <td>~1.08× drop chance · 1.15× quantity</td>
-            </tr>
-            <tr>
-              <td>🧪 Major Luck Potion</td>
-              <td><span class="luck-positive">+30</span></td>
-              <td>5 min</td>
-              <td>~1.15× drop chance · 1.30× quantity</td>
-            </tr>
-            <tr>
-              <td>🧪 Supreme Luck Potion</td>
-              <td><span class="luck-positive">+50</span></td>
-              <td>10 min</td>
-              <td>~1.25× drop chance · 1.50× quantity</td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="luck-panel">
+        <div class="luck-panel-header">
+          <div class="luck-panel-icon">🍀</div>
+          <div>
+            <div class="luck-panel-title">Lucky Equipment</div>
+            <div class="luck-panel-subtitle">All items that grant Luck bonuses — sourced from game data</div>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table id="luckItemsTable">
+            <thead>
+              <tr>
+                <th style="width:48px;"></th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Rarity</th>
+                <th>Luck Bonus</th>
+                <th>Multiplier</th>
+              </tr>
+            </thead>
+            <tbody id="luckItemsBody">
+              <tr>
+                <td colspan="7" style="text-align:center;padding:30px;color:var(--wiki-loading);">
+                  <i class="fas fa-spinner" style="animation:spin 1s linear infinite;"></i> Loading…
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="luck-panel-footer" id="luckItemsCount">
+          <i class="fas fa-info-circle" style="margin-right:6px;opacity:0.6;"></i>
+          <span id="luckItemsCountText">Loading item data…</span>
+        </div>
       </div>
 
-      <!-- ── Set Bonus table ─────────────────────────────── -->
-      <h3 class="section-heading"><i class="fas fa-layer-group"></i> Lucky Set Bonuses</h3>
-
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Pieces Equipped</th>
-              <th>Set Bonus Luck</th>
-              <th>Total Multiplier</th>
-              <th>Notes</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>2-piece Lucky Set</td>
-              <td><span class="luck-positive">+10</span></td>
-              <td><span class="multiplier-val">1.10×</span></td>
-              <td>Small but stackable bonus</td>
-            </tr>
-            <tr>
-              <td>4-piece Lucky Set</td>
-              <td><span class="luck-positive">+25</span></td>
-              <td><span class="multiplier-val">1.25×</span></td>
-              <td>Mid-tier farming boost</td>
-            </tr>
-            <tr>
-              <td>6-piece Lucky Set</td>
-              <td><span class="luck-positive">+50</span></td>
-              <td><span class="multiplier-val">1.50×</span></td>
-              <td>Full set — significant loot increase</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- ── Integration ─────────────────────────────────── -->
+      <!-- ── What Luck Affects ────────────────────────────── -->
       <h3 class="section-heading"><i class="fas fa-plug"></i> What Luck Affects</h3>
 
       <div class="example-grid">
@@ -1126,117 +1003,7 @@
           </div>
           <div class="example-card-body">
             Luck from accessories, set bonuses, and potions all <strong>add together</strong> before the
-            multiplier is calculated. Equip all three lucky items for a combined +75 Luck (1.75× multiplier).
-          </div>
-        </div>
-      </div>
-
-      <!-- ── Stacking example ────────────────────────────── -->
-      <div class="callout callout-tip">
-        <div class="callout-icon">💡</div>
-        <div>
-          <strong>Max Luck Stacking Example:</strong> Equip Lucky Charm (+25) + Rabbit's Foot (+35) + Ring of Fortune (+15)
-          and drink a Supreme Luck Potion (+50) = <strong>+125 total Luck</strong>.
-          After the 2.0× cap this gives you <strong>2× quantity</strong> and <strong>~75% drop chance</strong> on any 50% base drop.
-        </div>
-      </div>
-
-      <!-- ── Test cases ──────────────────────────────────── -->
-      <h3 class="section-heading"><i class="fas fa-vial"></i> Test Case Examples</h3>
-
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Scenario</th>
-              <th>Luck Value</th>
-              <th>Drop Rate Change</th>
-              <th>Quantity Change</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>🆕 Base Case — no luck gear</td>
-              <td><span class="tbl-luck-val luck-neutral">0</span></td>
-              <td>Unchanged</td>
-              <td>Unchanged</td>
-            </tr>
-            <tr>
-              <td>⬆️ Positive Luck</td>
-              <td><span class="tbl-luck-val luck-positive">+50</span></td>
-              <td><span class="luck-positive">~+25% higher</span></td>
-              <td><span class="luck-positive">~1.5× more items</span></td>
-            </tr>
-            <tr>
-              <td>🔱 High Luck</td>
-              <td><span class="tbl-luck-val luck-positive">+100</span></td>
-              <td><span class="luck-positive">~+50% higher (capped)</span></td>
-              <td><span class="luck-positive">2× items (capped)</span></td>
-            </tr>
-            <tr>
-              <td>⬇️ Negative Luck</td>
-              <td><span class="tbl-luck-val luck-negative">−50</span></td>
-              <td><span class="luck-negative">~−25% lower</span></td>
-              <td><span class="luck-negative">0.5× items (min 1)</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- ── Future features ─────────────────────────────── -->
-      <h3 class="section-heading"><i class="fas fa-rocket"></i> Planned Luck Features</h3>
-
-      <div class="example-grid">
-        <div class="example-card">
-          <div class="example-card-header">
-            <div class="example-card-icon" style="background:#60a5fa18;border:1px solid #60a5fa40;">⚔️</div>
-            <div>
-              <div class="example-card-title">Critical Hit Luck</div>
-              <div class="example-card-sub">Combat</div>
-            </div>
-          </div>
-          <div class="example-card-body">
-            Luck may influence <strong>critical strike chance</strong> — higher luck means a better
-            probability of landing critical hits in combat.
-          </div>
-        </div>
-        <div class="example-card">
-          <div class="example-card-header">
-            <div class="example-card-icon" style="background:#c084fc18;border:1px solid #c084fc40;">👾</div>
-            <div>
-              <div class="example-card-title">Rare Enemy Spawns</div>
-              <div class="example-card-sub">World</div>
-            </div>
-          </div>
-          <div class="example-card-body">
-            With enough luck, <strong>rare variants</strong> of enemies may spawn more frequently,
-            providing access to unique loot tables not seen on normal mobs.
-          </div>
-        </div>
-        <div class="example-card">
-          <div class="example-card-header">
-            <div class="example-card-icon" style="background:#4ade8018;border:1px solid #4ade8040;">✨</div>
-            <div>
-              <div class="example-card-title">Enchantment Success Rate</div>
-              <div class="example-card-sub">Crafting</div>
-            </div>
-          </div>
-          <div class="example-card-body">
-            Luck is planned to boost the <strong>success chance</strong> when enchanting items,
-            reducing the likelihood of enchantment failures.
-          </div>
-        </div>
-        <div class="example-card">
-          <div class="example-card-header">
-            <div class="example-card-icon" style="background:#fb923c18;border:1px solid #fb923c40;">🏆</div>
-            <div>
-              <div class="example-card-title">Quality / Rarity Boost</div>
-              <div class="example-card-sub">Loot</div>
-            </div>
-          </div>
-          <div class="example-card-body">
-            A weight-adjustment system (already partially implemented) will allow luck to push
-            <strong>rarer item variants</strong> to drop more frequently from chests.
+            multiplier is calculated. Stack multiple items to maximise your drop bonuses!
           </div>
         </div>
       </div>
@@ -1250,6 +1017,83 @@
     <a href="../terms-of-service.html">Terms of Service</a> |
     <a href="../delete-account.html">Delete Account</a>
   </footer>
+  <script src="item_configs.js?v=1773248938"></script>
+  <script src="icon_map.js?v=1773248938"></script>
+  <script>
+    const RARITY_COLOR = {
+      Common: '#b0bec5',
+      Uncommon: '#4ade80',
+      Rare: '#60a5fa',
+      Epic: '#c084fc',
+      Legendary: '#fb923c',
+    };
+
+    function buildLuckTable() {
+      const data = (typeof ITEM_CONFIGS !== 'undefined') ? ITEM_CONFIGS : null;
+      if (!data) return;
+      const configs = data.ItemConfigs || data;
+
+      // Find all items with a Luck stat bonus
+      const luckItems = [];
+      configs.forEach(cfg => {
+        const bonuses = cfg.AccessoryConfig?.StatBonuses || [];
+        bonuses.forEach(b => {
+          if (b.StatType === 'Luck') {
+            luckItems.push({ cfg, bonus: b });
+          }
+        });
+      });
+
+      // Sort by luck value descending
+      luckItems.sort((a, b) => b.bonus.Value - a.bonus.Value);
+
+      const tbody = document.getElementById('luckItemsBody');
+      if (!luckItems.length) {
+        tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;padding:30px;color:var(--wiki-text-muted);">No items with Luck stat found.</td></tr>';
+        return;
+      }
+
+      tbody.innerHTML = '';
+      luckItems.forEach(({ cfg, bonus }) => {
+        const url = iconUrl(cfg.ItemID);
+        const rarityColor = RARITY_COLOR[cfg.Rarity] || '#b0bec5';
+        const accType = cfg.AccessoryConfig?.AccessoryType || cfg.ItemType;
+        const luckVal = bonus.ModifierType === 'Percentage'
+          ? `+${(bonus.Value * 100).toFixed(0)}%`
+          : `+${bonus.Value}`;
+        const mult = `${(1 + (bonus.ModifierType === 'Percentage' ? bonus.Value : bonus.Value * 0.01)).toFixed(2)}×`;
+
+        const iconHtml = url
+          ? `<img src="${url}" alt="${cfg.Name}" style="width:36px;height:36px;object-fit:contain;image-rendering:pixelated;" loading="lazy" onerror="this.parentElement.innerHTML='🍀'" />`
+          : '🍀';
+
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td style="text-align:center;">
+            <div style="width:36px;height:36px;display:inline-flex;align-items:center;justify-content:center;background:${rarityColor}18;border:1px solid ${rarityColor}40;border-radius:6px;overflow:hidden;">
+              ${iconHtml}
+            </div>
+          </td>
+          <td>
+            <a href="item.html?id=${encodeURIComponent(cfg.ItemID)}" style="color:var(--wiki-infobox-value);text-decoration:none;font-weight:600;">
+              ${cfg.Name}
+            </a>
+          </td>
+          <td style="font-size:0.82em;color:var(--wiki-infobox-label);">${accType}</td>
+          <td><span class="rarity-badge rarity-${cfg.Rarity}">${cfg.Rarity}</span></td>
+          <td><span class="tbl-luck-val luck-positive">${luckVal}</span></td>
+          <td><span class="multiplier-val">${mult}</span></td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      // Update footer count
+      const countText = document.getElementById('luckItemsCountText');
+      countText.innerHTML = `Found <strong>${luckItems.length}</strong> item${luckItems.length !== 1 ? 's' : ''} with Luck stat bonus across all game data.`;
+    }
+
+    buildLuckTable();
+  </script>
 
 </body>
 
