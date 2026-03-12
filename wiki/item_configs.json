@@ -5397,6 +5397,64 @@
         "HasSpecialEffect": false,
         "SpecialEffectDescription": ""
       }
+    },
+    {
+      "ItemID": "RingOfVitality",
+      "ItemType": "Accessory",
+      "Name": "Ring of Vitality",
+      "Description": "+20 HP",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Ring",
+        "StatBonuses": [
+          {
+            "StatType": "MaxHealth",
+            "ModifierType": "Flat",
+            "Value": 20.0
+          }
+        ],
+        "HasSpecialEffect": false,
+        "SpecialEffectDescription": ""
+      }
+    },
+    {
+      "ItemID": "RingOfFortune",
+      "ItemType": "Accessory",
+      "Name": "Ring of Fortune",
+      "Description": "+5 Luck",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Ring",
+        "StatBonuses": [
+          {
+            "StatType": "Luck",
+            "ModifierType": "Flat",
+            "Value": 5.0
+          }
+        ],
+        "HasSpecialEffect": false,
+        "SpecialEffectDescription": ""
+      }
     }
   ]
 }

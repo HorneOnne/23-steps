@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luck System — Mine &amp; Dungeon Wiki | 23-Steps</title>
+  <meta name="description"
+    content="Complete guide to the Luck system in Mine &amp; Dungeon. Learn how Luck affects loot drop chance, item quantity, chest rewards, and which items grant luck bonuses." />
+  <meta name="keywords"
+    content="Mine and Dungeon luck, luck system, loot drops, lucky charm, rabbit's foot, ring of fortune, 23-Steps wiki" />
+  <link rel="canonical" href="https://23-steps.com/wiki/luck.html" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Luck System — Mine &amp; Dungeon Wiki | 23-Steps" />
+  <meta property="og:description"
+    content="Complete guide to the Luck system in Mine &amp; Dungeon. Drop chances, multipliers, lucky items, and more." />
+  <meta property="og:url" content="https://23-steps.com/wiki/luck.html" />
+  <meta property="og:site_name" content="23-Steps" />
+  <meta property="og:image" content="https://23-steps.com/images/mine-dungeon.png" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Luck System — Mine &amp; Dungeon Wiki | 23-Steps" />
+  <meta name="twitter:description"
+    content="Complete guide to the Luck system in Mine &amp; Dungeon. Drop chances, multipliers, lucky items, and more." />
+  <meta name="twitter:image" content="https://23-steps.com/images/mine-dungeon.png" />
+  <link rel="icon" type="image/png" href="../icon2.png" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Press+Start+2P&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="wiki-theme.css" />
+  <script src="wiki-theme.js"></script>
+  <style>
+    /* ── Base ─────────────────────────────────────────── */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      font-family: 'Inter', sans-serif;
+      background-image: var(--wiki-body-bg-image);
+      background-repeat: repeat;
+      background-size: 256px 256px;
+      background-color: var(--wiki-bg);
+      color: var(--wiki-text);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: var(--wiki-bg-overlay);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    main {
+      flex: 1;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* ── Header ───────────────────────────────────────── */
+    header {
+      background-color: var(--wiki-header-bg);
+      height: 60px;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      border-bottom: 1px solid var(--wiki-header-border);
+      position: relative;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 1.4em;
+      color: var(--wiki-header-title);
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    header h1 a {
+      color: inherit;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    header .logo {
+      height: 50px;
+      object-fit: contain;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    nav a {
+      color: var(--wiki-nav-text);
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0 20px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      font-size: 0.85em;
+    }
+
+    nav a.active {
+      background-color: var(--wiki-nav-active-bg);
+      color: var(--wiki-nav-active-text);
+    }
+
+    nav a:hover:not(.active) {
+      color: var(--wiki-nav-active-text);
+    }
+
+    /* ── Page header ──────────────────────────────────── */
+    .wiki-page-header {
+      background-color: var(--wiki-page-header-bg);
+      border-bottom: 2px solid var(--wiki-page-header-border);
+      padding: 24px 24px 0;
+    }
+
+    .wiki-page-header .breadcrumb {
+      font-size: 0.7em;
+      color: var(--wiki-breadcrumb);
+      margin-bottom: 10px;
+      letter-spacing: 0.04em;
+    }
+
+    .wiki-page-header .breadcrumb a {
+      color: var(--wiki-breadcrumb);
+      text-decoration: none;
+    }
+
+    .wiki-page-header .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+
+    .wiki-page-header h2 {
+      font-family: 'Press Start 2P', cursive;
+      font-size: clamp(0.9rem, 2.5vw, 1.4rem);
+      color: var(--wiki-heading);
+      margin-bottom: 5px;
+    }
+
+    .wiki-page-header p {
+      color: var(--wiki-subheading);
+      font-size: 0.83em;
+      margin-bottom: 18px;
+    }
+
+    /* ── Tab bar ──────────────────────────────────────── */
+    .tab-bar {
+      display: flex;
+      border-top: 1px solid var(--wiki-tab-border);
+      overflow-x: auto;
+    }
+
+    .tab-bar::-webkit-scrollbar {
+      height: 0;
+    }
+
+    .tab-btn {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 11px 20px;
+      color: var(--wiki-tab-text);
+      font-weight: 600;
+      font-size: 0.82em;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      border-bottom: 3px solid transparent;
+      white-space: nowrap;
+      transition: color .15s, border-color .15s, background .15s;
+      text-decoration: none;
+      font-family: inherit;
+    }
+
+    .tab-btn:hover {
+      color: var(--wiki-tab-hover-text);
+      background: var(--wiki-tab-hover-bg);
+    }
+
+    .tab-btn.active {
+      color: var(--wiki-tab-active-text);
+      border-bottom-color: var(--wiki-tab-active-border);
+      background: var(--wiki-tab-active-bg);
+    }
+
+    .tab-btn.disabled {
+      opacity: .4;
+      cursor: default;
+      pointer-events: none;
+    }
+
+    .tab-badge {
+      font-size: .6em;
+      background: var(--wiki-tab-badge-bg);
+      border: 1px solid var(--wiki-tab-badge-border);
+      color: var(--wiki-tab-badge-text);
+      padding: 1px 5px;
+      border-radius: 3px;
+    }
+
+    /* ── Content wrap ─────────────────────────────────── */
+    .content-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px 20px 56px;
+    }
+
+    /* ── Section heading ──────────────────────────────── */
+    .section-heading {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 0.75rem;
+      color: var(--wiki-section-title);
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--wiki-section-border);
+      margin-bottom: 20px;
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-heading:first-child {
+      margin-top: 0;
+    }
+
+    /* ── Overview banner ──────────────────────────────── */
+    .overview-banner {
+      background: linear-gradient(135deg,
+          color-mix(in srgb, #fbbf24 10%, var(--wiki-panel-bg)),
+          color-mix(in srgb, #f59e0b 6%, var(--wiki-panel-bg)));
+      border: 1px solid color-mix(in srgb, #fbbf24 30%, var(--wiki-panel-border));
+      border-radius: 12px;
+      padding: 24px 28px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      margin-bottom: 32px;
+    }
+
+    .overview-icon {
+      font-size: 3rem;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+
+    .overview-body h3 {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 0.8rem;
+      color: #fbbf24;
+      margin-bottom: 10px;
+    }
+
+    .overview-body p {
+      font-size: 0.88em;
+      color: var(--wiki-text);
+      line-height: 1.7;
+    }
+
+    /* ── Stat card row ────────────────────────────────── */
+    .stat-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+
+    .stat-card {
+      background: var(--wiki-infobox-bg);
+      border: 1px solid var(--wiki-infobox-border);
+      border-radius: 10px;
+      padding: 18px 18px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .stat-card-icon {
+      font-size: 1.5rem;
+      margin-bottom: 4px;
+    }
+
+    .stat-card-title {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 0.55rem;
+      color: var(--wiki-section-title);
+      letter-spacing: 0.05em;
+    }
+
+    .stat-card-formula {
+      font-size: 0.78em;
+      color: var(--wiki-infobox-label);
+      font-family: 'Courier New', monospace;
+      background: var(--wiki-controls-bg);
+      border: 1px solid var(--wiki-controls-border);
+      border-radius: 4px;
+      padding: 4px 8px;
+      margin-top: 4px;
+    }
+
+    .stat-card-desc {
+      font-size: 0.8em;
+      color: var(--wiki-text);
+      line-height: 1.55;
+    }
+
+    /* ── Data tables ──────────────────────────────────── */
+    .table-wrap {
+      overflow-x: auto;
+      margin-bottom: 28px;
+      border-radius: 8px;
+      border: 1px solid var(--wiki-infobox-border);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85em;
+    }
+
+    table th {
+      background: var(--wiki-infobox-header-bg);
+      color: var(--wiki-infobox-label);
+      font-weight: 600;
+      font-size: 0.75em;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 10px 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--wiki-infobox-header-border);
+      white-space: nowrap;
+    }
+
+    table td {
+      padding: 9px 14px;
+      border-bottom: 1px solid var(--wiki-infobox-row-border);
+      color: var(--wiki-infobox-value);
+      vertical-align: middle;
+    }
+
+    table tr:last-child td {
+      border-bottom: none;
+    }
+
+    table tr:hover td {
+      background: color-mix(in srgb, var(--wiki-tab-hover-bg) 80%, transparent);
+    }
+
+    .tbl-luck-val {
+      font-weight: 700;
+      font-family: 'Courier New', monospace;
+    }
+
+    .luck-positive { color: #4ade80; }
+    .luck-neutral  { color: var(--wiki-text-muted); }
+    .luck-negative { color: #f87171; }
+
+    .multiplier-val {
+      font-weight: 700;
+      font-family: 'Courier New', monospace;
+      color: #fbbf24;
+    }
+
+    .drop-chance-val {
+      font-family: 'Courier New', monospace;
+    }
+
+    /* ── Rarity badges ────────────────────────────────── */
+    .rarity-badge {
+      display: inline-block;
+      font-size: 0.68em;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 3px;
+    }
+
+    .rarity-Common    { background: #b0bec522; color: #b0bec5; border: 1px solid #b0bec555; }
+    .rarity-Uncommon  { background: #4ade8022; color: #4ade80; border: 1px solid #4ade8055; }
+    .rarity-Rare      { background: #60a5fa22; color: #60a5fa; border: 1px solid #60a5fa55; }
+    .rarity-Epic      { background: #c084fc22; color: #c084fc; border: 1px solid #c084fc55; }
+    .rarity-Legendary { background: #fb923c22; color: #fb923c; border: 1px solid #fb923c55; }
+
+    /* ── Example rows ─────────────────────────────────── */
+    .example-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .example-card {
+      background: var(--wiki-infobox-bg);
+      border: 1px solid var(--wiki-infobox-border);
+      border-radius: 10px;
+      padding: 16px 18px;
+    }
+
+    .example-card-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .example-card-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+
+    .example-card-title {
+      font-weight: 700;
+      font-size: 0.88em;
+      color: var(--wiki-infobox-value);
+    }
+
+    .example-card-sub {
+      font-size: 0.72em;
+      color: var(--wiki-infobox-label);
+    }
+
+    .example-card-body {
+      font-size: 0.82em;
+      color: var(--wiki-text);
+      line-height: 1.65;
+    }
+
+    .example-card-body strong {
+      color: #fbbf24;
+    }
+
+    /* ── Info callouts ────────────────────────────────── */
+    .callout {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 20px;
+      font-size: 0.85em;
+      line-height: 1.6;
+    }
+
+    .callout-tip {
+      background: color-mix(in srgb, #4ade80 10%, var(--wiki-panel-bg));
+      border: 1px solid color-mix(in srgb, #4ade80 30%, var(--wiki-panel-border));
+      color: var(--wiki-text);
+    }
+
+    .callout-info {
+      background: color-mix(in srgb, #60a5fa 10%, var(--wiki-panel-bg));
+      border: 1px solid color-mix(in srgb, #60a5fa 30%, var(--wiki-panel-border));
+      color: var(--wiki-text);
+    }
+
+    .callout-warn {
+      background: color-mix(in srgb, #fbbf24 10%, var(--wiki-panel-bg));
+      border: 1px solid color-mix(in srgb, #fbbf24 30%, var(--wiki-panel-border));
+      color: var(--wiki-text);
+    }
+
+    .callout-icon {
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ── Lucky item cards ─────────────────────────────── */
+    .lucky-items-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .lucky-item-card {
+      background: var(--wiki-infobox-bg);
+      border: 1px solid var(--wiki-infobox-border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .lucky-item-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 16px;
+      background: var(--wiki-infobox-header-bg);
+      border-bottom: 1px solid var(--wiki-infobox-header-border);
+    }
+
+    .lucky-item-emoji {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .lucky-item-name {
+      font-weight: 700;
+      font-size: 0.9em;
+      color: var(--wiki-infobox-value);
+      margin-bottom: 3px;
+    }
+
+    .lucky-item-type {
+      font-size: 0.72em;
+      color: var(--wiki-infobox-label);
+    }
+
+    .lucky-item-body {
+      padding: 14px 16px;
+    }
+
+    .lucky-item-stat {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 0;
+      border-bottom: 1px solid var(--wiki-infobox-row-border);
+      font-size: 0.82em;
+    }
+
+    .lucky-item-stat:last-child {
+      border-bottom: none;
+    }
+
+    .lucky-item-stat-label {
+      color: var(--wiki-infobox-label);
+    }
+
+    .lucky-item-stat-value {
+      font-weight: 700;
+      color: #fbbf24;
+    }
+
+    /* ── Recommended ranges ───────────────────────────── */
+    .rec-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .rec-card {
+      border-radius: 8px;
+      padding: 14px 16px;
+      border: 1px solid;
+    }
+
+    .rec-card-label {
+      font-size: 0.68em;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin-bottom: 6px;
+    }
+
+    .rec-card-range {
+      font-family: 'Courier New', monospace;
+      font-size: 1.05em;
+      font-weight: 700;
+    }
+
+    .rec-card-desc {
+      font-size: 0.75em;
+      margin-top: 4px;
+      opacity: 0.75;
+    }
+
+    .rc-common    { background: #b0bec505; border-color: #b0bec530; color: #b0bec5; }
+    .rc-uncommon  { background: #4ade8008; border-color: #4ade8030; color: #4ade80; }
+    .rc-rare      { background: #60a5fa08; border-color: #60a5fa30; color: #60a5fa; }
+    .rc-epic      { background: #c084fc08; border-color: #c084fc30; color: #c084fc; }
+    .rc-legendary { background: #fb923c08; border-color: #fb923c30; color: #fb923c; }
+    .rc-buff      { background: #34d39908; border-color: #34d39930; color: #34d399; }
+    .rc-set       { background: #f472b608; border-color: #f472b630; color: #f472b6; }
+
+    /* ── Footer ───────────────────────────────────────── */
+    footer {
+      text-align: center;
+      padding: 10px;
+      font-size: 0.8em;
+      color: var(--wiki-footer-text);
+      background-color: var(--wiki-footer-bg);
+      border-top: 1px solid var(--wiki-footer-border);
+      font-weight: bold;
+      position: relative;
+      z-index: 2;
+    }
+
+    footer a {
+      color: var(--wiki-footer-link);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        height: auto;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0;
+      }
+
+      header h1 {
+        justify-content: center;
+        padding: 8px 12px 4px;
+      }
+
+      header .logo {
+        height: 40px;
+      }
+
+      nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        border-top: 1px solid var(--wiki-header-border);
+        padding: 0 4px;
+      }
+
+      nav a {
+        padding: 8px 12px;
+        font-size: 0.75em;
+        height: auto;
+      }
+
+      .theme-toggle {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+      }
+
+      .wiki-page-header h2 {
+        font-size: 0.8rem;
+      }
+
+      .overview-banner {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>
+      <a href="../index.html">
+        <img src="../images/logo.png" alt="23-Steps" class="logo" />
+        <span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">23-Steps</span>
+      </a>
+    </h1>
+    <nav>
+      <a href="../index.html">HOME</a>
+      <a href="../games.html">GAMES</a>
+      <a href="mine-dungeon.html" class="active">WIKI</a>
+      <button class="theme-toggle" title="Toggle light/dark mode" aria-label="Toggle theme">
+        <i class="fas fa-sun icon-sun"></i>
+        <i class="fas fa-moon icon-moon"></i>
+      </button>
+    </nav>
+  </header>
+
+  <div class="wiki-page-header">
+    <div class="breadcrumb">
+      <a href="../index.html">23-Steps</a> &rsaquo;
+      <a href="index.html">Wiki</a> &rsaquo;
+      <a href="mine-dungeon.html">Mine &amp; Dungeon</a> &rsaquo;
+      Luck System
+    </div>
+    <h2>🍀 Luck System</h2>
+    <p>How luck affects loot drops, chest rewards, and item quantities</p>
+    <div class="tab-bar">
+      <a class="tab-btn" href="mobs.html"><i class="fas fa-skull"></i> Mobs</a>
+      <a class="tab-btn" href="items.html"><i class="fas fa-boxes"></i> Items</a>
+      <a class="tab-btn" href="merchants.html"><i class="fas fa-store"></i> Merchants</a>
+      <a class="tab-btn" href="economy.html"><i class="fas fa-chart-line"></i> Economy</a>
+      <a class="tab-btn" href="chests.html"><i class="fas fa-box-open"></i> Chests</a>
+      <a class="tab-btn active" href="luck.html"><i class="fas fa-clover"></i> Luck</a>
+      <span class="tab-btn disabled"><i class="fas fa-map"></i> Maps <span class="tab-badge">Soon</span></span>
+      <span class="tab-btn disabled"><i class="fas fa-scroll"></i> Quests <span class="tab-badge">Soon</span></span>
+      <span class="tab-btn disabled"><i class="fas fa-hat-wizard"></i> Bosses <span class="tab-badge">Soon</span></span>
+      <span class="tab-btn disabled"><i class="fas fa-hammer"></i> Crafting <span class="tab-badge">Soon</span></span>
+    </div>
+  </div>
+
+  <main>
+    <div class="content-wrap">
+
+      <!-- ── Overview ───────────────────────────────────── -->
+      <div class="overview-banner">
+        <div class="overview-icon">🍀</div>
+        <div class="overview-body">
+          <h3>What is Luck?</h3>
+          <p>
+            The <strong>Luck System</strong> is a core game mechanic that influences loot drops from mobs and chests.
+            A higher Luck stat increases both the <strong>drop chance</strong> and <strong>quantity</strong> of items,
+            making farming and dungeon exploration more rewarding. Luck can be gained from accessories, set bonuses,
+            potions, and buffs — and can even go negative, penalising your drops!
+          </p>
+        </div>
+      </div>
+
+      <!-- ── How Luck Works ─────────────────────────────── -->
+      <h3 class="section-heading"><i class="fas fa-calculator"></i> How Luck Works</h3>
+
+      <div class="stat-cards">
+        <div class="stat-card">
+          <div class="stat-card-icon">✖️</div>
+          <div class="stat-card-title">Luck Multiplier</div>
+          <div class="stat-card-formula">1 + (luck × 0.01)</div>
+          <div class="stat-card-desc">Base formula that converts your Luck stat into a multiplier. Capped between <strong>0.5×&nbsp;(−50&nbsp;luck)</strong> and <strong>2.0×&nbsp;(+100&nbsp;luck)</strong>.</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-icon">🎲</div>
+          <div class="stat-card-title">Drop Chance</div>
+          <div class="stat-card-formula">base + base × (mult−1) × 0.5</div>
+          <div class="stat-card-desc">Soft scaling so drops never become guaranteed. A 50% base chance with +50 luck becomes ~62.5%.</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-icon">📦</div>
+          <div class="stat-card-title">Drop Quantity</div>
+          <div class="stat-card-formula">base × multiplier</div>
+          <div class="stat-card-desc">Direct multiplier on mob drop amounts. 5 items at +50 luck yields 7–8 items.</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-icon">🗃️</div>
+          <div class="stat-card-title">Chest Item Count</div>
+          <div class="stat-card-formula">base × (1 + luck×0.003)</div>
+          <div class="stat-card-desc">Uses 30% of the luck effect to prevent overflow. 8 base items at +50 luck gives 9–10 items.</div>
+        </div>
+      </div>
+
+      <!-- ── Multiplier Reference Table ─────────────────── -->
+      <h3 class="section-heading"><i class="fas fa-table"></i> Luck Multiplier Reference</h3>
+
+      <div class="callout callout-info">
+        <div class="callout-icon">ℹ️</div>
+        <div>
+          The table below shows how different Luck values translate into a multiplier and the resulting change
+          to a <strong>50% base drop chance</strong>. The multiplier is clamped between 0.5× and 2.0×.
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Luck Value</th>
+              <th>Multiplier</th>
+              <th>Bonus / Penalty</th>
+              <th>Drop Chance (50% base)</th>
+              <th>Qty Multiplier (5 base items)</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="tbl-luck-val luck-negative">−50</span></td>
+              <td><span class="multiplier-val">0.50×</span></td>
+              <td><span class="luck-negative">−50%</span></td>
+              <td><span class="drop-chance-val luck-negative">~37.5%</span></td>
+              <td><span class="luck-negative">2–3 items</span></td>
+              <td>Minimum cap — drops heavily penalised</td>
+            </tr>
+            <tr>
+              <td><span class="tbl-luck-val luck-negative">−25</span></td>
+              <td><span class="multiplier-val">0.75×</span></td>
+              <td><span class="luck-negative">−25%</span></td>
+              <td><span class="drop-chance-val luck-negative">~43.8%</span></td>
+              <td><span class="luck-negative">3–4 items</span></td>
+              <td>Reduced drops</td>
+            </tr>
+            <tr>
+              <td><span class="tbl-luck-val luck-neutral">0</span></td>
+              <td><span class="multiplier-val">1.00×</span></td>
+              <td><span class="luck-neutral">±0%</span></td>
+              <td><span class="drop-chance-val">50.0%</span></td>
+              <td><span class="luck-neutral">5 items</span></td>
+              <td>Default — no change</td>
+            </tr>
+            <tr>
+              <td><span class="tbl-luck-val luck-positive">+10</span></td>
+              <td><span class="multiplier-val">1.10×</span></td>
+              <td><span class="luck-positive">+10%</span></td>
+              <td><span class="drop-chance-val luck-positive">~52.5%</span></td>
+              <td><span class="luck-positive">5–6 items</span></td>
+              <td>Common item bonus</td>
+            </tr>
+            <tr>
+              <td><span class="tbl-luck-val luck-positive">+25</span></td>
+              <td><span class="multiplier-val">1.25×</span></td>
+              <td><span class="luck-positive">+25%</span></td>
+              <td><span class="drop-chance-val luck-positive">~56.3%</span></td>
+              <td><span class="luck-positive">6–7 items</span></td>
+              <td>Uncommon item bonus</td>
+            </tr>
+            <tr>
+              <td><span class="tbl-luck-val luck-positive">+50</span></td>
+              <td><span class="multiplier-val">1.50×</span></td>
+              <td><span class="luck-positive">+50%</span></td>
+              <td><span class="drop-chance-val luck-positive">~62.5%</span></td>
+              <td><span class="luck-positive">7–8 items</span></td>
+              <td>Rare item tier</td>
+            </tr>
+            <tr>
+              <td><span class="tbl-luck-val luck-positive">+75</span></td>
+              <td><span class="multiplier-val">1.75×</span></td>
+              <td><span class="luck-positive">+75%</span></td>
+              <td><span class="drop-chance-val luck-positive">~68.8%</span></td>
+              <td><span class="luck-positive">8–9 items</span></td>
+              <td>Epic item tier</td>
+            </tr>
+            <tr>
+              <td><span class="tbl-luck-val luck-positive">+100</span></td>
+              <td><span class="multiplier-val">2.00×</span></td>
+              <td><span class="luck-positive">+100%</span></td>
+              <td><span class="drop-chance-val luck-positive">~75.0%</span></td>
+              <td><span class="luck-positive">10 items</span></td>
+              <td>Maximum cap — double drop rate</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-warn">
+        <div class="callout-icon">⚠️</div>
+        <div>
+          Drop chance uses <strong>soft scaling</strong> — drops can never become 100% guaranteed regardless of
+          how much Luck you stack. Quantity scaling is <strong>direct</strong> and scales linearly up to the 2× cap.
+        </div>
+      </div>
+
+      <!-- ── Lucky Items ─────────────────────────────────── -->
+      <h3 class="section-heading"><i class="fas fa-gem"></i> Lucky Items</h3>
+
+      <p style="font-size:0.84em;color:var(--wiki-subheading);margin-bottom:18px;">
+        The following accessories grant Luck bonuses when equipped. Mix and match to maximise your fortune.
+      </p>
+
+      <div class="lucky-items-grid">
+
+        <!-- Lucky Charm -->
+        <div class="lucky-item-card">
+          <div class="lucky-item-header">
+            <div class="lucky-item-emoji" style="background:#60a5fa18;border:1px solid #60a5fa40;">🍀</div>
+            <div>
+              <div class="lucky-item-name">Lucky Charm</div>
+              <div class="lucky-item-type">
+                Accessory — Necklace &nbsp;<span class="rarity-badge rarity-Rare">Rare</span>
+              </div>
+            </div>
+          </div>
+          <div class="lucky-item-body">
+            <div class="lucky-item-stat">
+              <span class="lucky-item-stat-label">Item ID</span>
+              <span class="lucky-item-stat-value" style="color:var(--wiki-infobox-label);font-weight:400;font-family:monospace;">LuckyCharm (#224)</span>
+            </div>
+            <div class="lucky-item-stat">
+              <span class="lucky-item-stat-label">Luck Bonus</span>
+              <span class="lucky-item-stat-value">+25 Luck (Flat)</span>
+            </div>
+            <div class="lucky-item-stat">
+              <span class="lucky-item-stat-label">Multiplier Effect</span>
+              <span class="lucky-item-stat-value">1.25× drops</span>
+            </div>
+            <div class="lucky-item-stat">
+              <span class="lucky-item-stat-label">Description</span>
+              <span style="font-size:0.8em;color:var(--wiki-text-dim);font-style:italic;">A four-leaf clover charm that brings good fortune.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rabbit's Foot -->
+        <div class="lucky-item-card">
+          <div class="lucky-item-header">
+            <div class="lucky-item-emoji" style="background:#c084fc18;border:1px solid #c084fc40;">🐇</div>
+            <div>
+              <div class="lucky-item-name">Rabbit's Foot</div>
+              <div class="lucky-item-type">
+                Accessory — Trinket &nbsp;<span class="rarity-badge rarity-Epic">Epic</span>
+              </div>
+            </div>
+          </div>
+          <div class="lucky-item-body">
+            <div class="lucky-item-stat">
+              <span class="lucky-item-stat-label">Item ID</span>
+              <span class="lucky-item-stat-value" style="color:var(--wiki-infobox-label);font-weight:400;font-family:monospace;">RabbitsFoot (#225)</span>
+            </div>
+            <div class="lucky-item-stat">
+              <span class="lucky-item-stat-label">Luck Bonus</span>
+              <span class="lucky-item-stat-value">+35 Luck (Flat)</span>
+            </div>
+            <div class="lucky-item-stat">
+              <span class="lucky-item-stat-label">Multiplier Effect</span>
+              <span class="lucky-item-stat-value">1.35× drops</span>
+            </div>
+            <div class="lucky-item-stat">
+              <span class="lucky-item-stat-label">Description</span>
+              <span style="font-size:0.8em;color:var(--wiki-text-dim);font-style:italic;">A legendary rabbit's foot that brings incredible luck.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ring of Fortune -->
+        <div class="lucky-item-card">
+          <div class="lucky-item-header">
+            <div class="lucky-item-emoji" style="background:#fb923c18;border:1px solid #fb923c40;">💍</div>
+            <div>
+              <div class="lucky-item-name">Ring of Fortune</div>
+              <div class="lucky-item-type">
+                Accessory — Ring &nbsp;<span class="rarity-badge rarity-Rare">Rare</span>
+              </div>
+            </div>
+          </div>
+          <div class="lucky-item-body">
+            <div class="lucky-item-stat">
+              <span class="lucky-item-stat-label">Item ID</span>
+              <span class="lucky-item-stat-value" style="color:var(--wiki-infobox-label);font-weight:400;font-family:monospace;">RingOfFortune (#227)</span>
+            </div>
+            <div class="lucky-item-stat">
+              <span class="lucky-item-stat-label">Luck Bonus</span>
+              <span class="lucky-item-stat-value">+15 Luck (Flat)</span>
+            </div>
+            <div class="lucky-item-stat">
+              <span class="lucky-item-stat-label">Multiplier Effect</span>
+              <span class="lucky-item-stat-value">1.15× drops</span>
+            </div>
+            <div class="lucky-item-stat">
+              <span class="lucky-item-stat-label">Description</span>
+              <span style="font-size:0.8em;color:var(--wiki-text-dim);font-style:italic;">A ring rumoured to attract fortune to its wearer.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── Luck Items by Rarity ────────────────────────── -->
+      <h3 class="section-heading"><i class="fas fa-list-ol"></i> Recommended Luck Values by Source</h3>
+
+      <div class="rec-grid">
+        <div class="rec-card rc-common">
+          <div class="rec-card-label">Common Items</div>
+          <div class="rec-card-range">+5 – +10</div>
+          <div class="rec-card-desc">Minor luck boost from basic accessories</div>
+        </div>
+        <div class="rec-card rc-uncommon">
+          <div class="rec-card-label">Uncommon Items</div>
+          <div class="rec-card-range">+10 – +20</div>
+          <div class="rec-card-desc">Moderate improvement to drop rates</div>
+        </div>
+        <div class="rec-card rc-rare">
+          <div class="rec-card-label">Rare Items</div>
+          <div class="rec-card-range">+20 – +35</div>
+          <div class="rec-card-desc">e.g. Lucky Charm (+25), Ring of Fortune (+15)</div>
+        </div>
+        <div class="rec-card rc-epic">
+          <div class="rec-card-label">Epic Items</div>
+          <div class="rec-card-range">+35 – +50</div>
+          <div class="rec-card-desc">e.g. Rabbit's Foot (+35)</div>
+        </div>
+        <div class="rec-card rc-legendary">
+          <div class="rec-card-label">Legendary Items</div>
+          <div class="rec-card-range">+50 – +100</div>
+          <div class="rec-card-desc">Near maximum-cap items</div>
+        </div>
+        <div class="rec-card rc-buff">
+          <div class="rec-card-label">Potions / Buffs</div>
+          <div class="rec-card-range">+15 – +50</div>
+          <div class="rec-card-desc">Minor +15 · Major +30 · Supreme +50 (5–10 min)</div>
+        </div>
+        <div class="rec-card rc-set">
+          <div class="rec-card-label">Set Bonuses</div>
+          <div class="rec-card-range">+10 – +50</div>
+          <div class="rec-card-desc">2-pc +10 · 4-pc +25 · 6-pc +50</div>
+        </div>
+      </div>
+
+      <!-- ── Potion / Buff table ─────────────────────────── -->
+      <h3 class="section-heading"><i class="fas fa-flask"></i> Luck Potions &amp; Buffs</h3>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Item / Buff</th>
+              <th>Luck Bonus</th>
+              <th>Duration</th>
+              <th>Effect</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>🧪 Minor Luck Potion</td>
+              <td><span class="luck-positive">+15</span></td>
+              <td>5 min</td>
+              <td>~1.08× drop chance · 1.15× quantity</td>
+            </tr>
+            <tr>
+              <td>🧪 Major Luck Potion</td>
+              <td><span class="luck-positive">+30</span></td>
+              <td>5 min</td>
+              <td>~1.15× drop chance · 1.30× quantity</td>
+            </tr>
+            <tr>
+              <td>🧪 Supreme Luck Potion</td>
+              <td><span class="luck-positive">+50</span></td>
+              <td>10 min</td>
+              <td>~1.25× drop chance · 1.50× quantity</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ── Set Bonus table ─────────────────────────────── -->
+      <h3 class="section-heading"><i class="fas fa-layer-group"></i> Lucky Set Bonuses</h3>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Pieces Equipped</th>
+              <th>Set Bonus Luck</th>
+              <th>Total Multiplier</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2-piece Lucky Set</td>
+              <td><span class="luck-positive">+10</span></td>
+              <td><span class="multiplier-val">1.10×</span></td>
+              <td>Small but stackable bonus</td>
+            </tr>
+            <tr>
+              <td>4-piece Lucky Set</td>
+              <td><span class="luck-positive">+25</span></td>
+              <td><span class="multiplier-val">1.25×</span></td>
+              <td>Mid-tier farming boost</td>
+            </tr>
+            <tr>
+              <td>6-piece Lucky Set</td>
+              <td><span class="luck-positive">+50</span></td>
+              <td><span class="multiplier-val">1.50×</span></td>
+              <td>Full set — significant loot increase</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ── Integration ─────────────────────────────────── -->
+      <h3 class="section-heading"><i class="fas fa-plug"></i> What Luck Affects</h3>
+
+      <div class="example-grid">
+        <div class="example-card">
+          <div class="example-card-header">
+            <div class="example-card-icon" style="background:#f8717118;border:1px solid #f8717140;">💀</div>
+            <div>
+              <div class="example-card-title">Mob Loot Drops</div>
+              <div class="example-card-sub">All enemy kills</div>
+            </div>
+          </div>
+          <div class="example-card-body">
+            Every item that a mob can drop has its <strong>drop chance</strong> and <strong>quantity</strong>
+            scaled by your Luck stat. Higher Luck means mobs drop items more often and in larger amounts.
+          </div>
+        </div>
+        <div class="example-card">
+          <div class="example-card-header">
+            <div class="example-card-icon" style="background:#fbbf2418;border:1px solid #fbbf2440;">📦</div>
+            <div>
+              <div class="example-card-title">Chest Loot</div>
+              <div class="example-card-sub">All chest types</div>
+            </div>
+          </div>
+          <div class="example-card-body">
+            Chests give you more <strong>item slots</strong> and higher <strong>stack quantities</strong>
+            when your Luck is positive. The effect uses 30% of the multiplier to prevent overflowing inventory.
+          </div>
+        </div>
+        <div class="example-card">
+          <div class="example-card-header">
+            <div class="example-card-icon" style="background:#4ade8018;border:1px solid #4ade8040;">⚡</div>
+            <div>
+              <div class="example-card-title">Stacks with Equipment</div>
+              <div class="example-card-sub">Accessories + buffs</div>
+            </div>
+          </div>
+          <div class="example-card-body">
+            Luck from accessories, set bonuses, and potions all <strong>add together</strong> before the
+            multiplier is calculated. Equip all three lucky items for a combined +75 Luck (1.75× multiplier).
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Stacking example ────────────────────────────── -->
+      <div class="callout callout-tip">
+        <div class="callout-icon">💡</div>
+        <div>
+          <strong>Max Luck Stacking Example:</strong> Equip Lucky Charm (+25) + Rabbit's Foot (+35) + Ring of Fortune (+15)
+          and drink a Supreme Luck Potion (+50) = <strong>+125 total Luck</strong>.
+          After the 2.0× cap this gives you <strong>2× quantity</strong> and <strong>~75% drop chance</strong> on any 50% base drop.
+        </div>
+      </div>
+
+      <!-- ── Test cases ──────────────────────────────────── -->
+      <h3 class="section-heading"><i class="fas fa-vial"></i> Test Case Examples</h3>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Scenario</th>
+              <th>Luck Value</th>
+              <th>Drop Rate Change</th>
+              <th>Quantity Change</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>🆕 Base Case — no luck gear</td>
+              <td><span class="tbl-luck-val luck-neutral">0</span></td>
+              <td>Unchanged</td>
+              <td>Unchanged</td>
+            </tr>
+            <tr>
+              <td>⬆️ Positive Luck</td>
+              <td><span class="tbl-luck-val luck-positive">+50</span></td>
+              <td><span class="luck-positive">~+25% higher</span></td>
+              <td><span class="luck-positive">~1.5× more items</span></td>
+            </tr>
+            <tr>
+              <td>🔱 High Luck</td>
+              <td><span class="tbl-luck-val luck-positive">+100</span></td>
+              <td><span class="luck-positive">~+50% higher (capped)</span></td>
+              <td><span class="luck-positive">2× items (capped)</span></td>
+            </tr>
+            <tr>
+              <td>⬇️ Negative Luck</td>
+              <td><span class="tbl-luck-val luck-negative">−50</span></td>
+              <td><span class="luck-negative">~−25% lower</span></td>
+              <td><span class="luck-negative">0.5× items (min 1)</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ── Future features ─────────────────────────────── -->
+      <h3 class="section-heading"><i class="fas fa-rocket"></i> Planned Luck Features</h3>
+
+      <div class="example-grid">
+        <div class="example-card">
+          <div class="example-card-header">
+            <div class="example-card-icon" style="background:#60a5fa18;border:1px solid #60a5fa40;">⚔️</div>
+            <div>
+              <div class="example-card-title">Critical Hit Luck</div>
+              <div class="example-card-sub">Combat</div>
+            </div>
+          </div>
+          <div class="example-card-body">
+            Luck may influence <strong>critical strike chance</strong> — higher luck means a better
+            probability of landing critical hits in combat.
+          </div>
+        </div>
+        <div class="example-card">
+          <div class="example-card-header">
+            <div class="example-card-icon" style="background:#c084fc18;border:1px solid #c084fc40;">👾</div>
+            <div>
+              <div class="example-card-title">Rare Enemy Spawns</div>
+              <div class="example-card-sub">World</div>
+            </div>
+          </div>
+          <div class="example-card-body">
+            With enough luck, <strong>rare variants</strong> of enemies may spawn more frequently,
+            providing access to unique loot tables not seen on normal mobs.
+          </div>
+        </div>
+        <div class="example-card">
+          <div class="example-card-header">
+            <div class="example-card-icon" style="background:#4ade8018;border:1px solid #4ade8040;">✨</div>
+            <div>
+              <div class="example-card-title">Enchantment Success Rate</div>
+              <div class="example-card-sub">Crafting</div>
+            </div>
+          </div>
+          <div class="example-card-body">
+            Luck is planned to boost the <strong>success chance</strong> when enchanting items,
+            reducing the likelihood of enchantment failures.
+          </div>
+        </div>
+        <div class="example-card">
+          <div class="example-card-header">
+            <div class="example-card-icon" style="background:#fb923c18;border:1px solid #fb923c40;">🏆</div>
+            <div>
+              <div class="example-card-title">Quality / Rarity Boost</div>
+              <div class="example-card-sub">Loot</div>
+            </div>
+          </div>
+          <div class="example-card-body">
+            A weight-adjustment system (already partially implemented) will allow luck to push
+            <strong>rarer item variants</strong> to drop more frequently from chests.
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /content-wrap -->
+  </main>
+
+  <footer>
+    &copy;2026 23-Steps. All rights reserved |
+    <a href="../privacy-policy.html">Privacy Policy</a> |
+    <a href="../terms-of-service.html">Terms of Service</a> |
+    <a href="../delete-account.html">Delete Account</a>
+  </footer>
+
+</body>
+
+</html>

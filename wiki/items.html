@@ -586,6 +586,7 @@
       <a class="tab-btn" href="merchants.html"><i class="fas fa-store"></i> Merchants</a>
       <a class="tab-btn" href="economy.html"><i class="fas fa-chart-line"></i> Economy</a>
       <a class="tab-btn" href="chests.html"><i class="fas fa-box-open"></i> Chests</a>
+      <a class="tab-btn" href="luck.html"><i class="fas fa-clover"></i> Luck</a>
       <span class="tab-btn disabled"><i class="fas fa-map"></i> Maps <span class="tab-badge">Soon</span></span>
       <span class="tab-btn disabled"><i class="fas fa-scroll"></i> Quests <span class="tab-badge">Soon</span></span>
       <span class="tab-btn disabled"><i class="fas fa-hat-wizard"></i> Bosses <span class="tab-badge">Soon</span></span>
@@ -620,9 +621,9 @@
     <a href="../terms-of-service.html">Terms of Service</a> |
     <a href="../delete-account.html">Delete Account</a>
   </footer>
-  <script src="item_configs.js"></script>
-    <script src="icon_map.js"></script>
-  <script>/* data loaded from item_configs.js */</script>
+  <script src="item_configs.js?v=1773248938"></script>
+    <script src="icon_map.js?v=1773248938"></script>
+  <script>/* data loaded from item_configs.js?v=1773248938 */</script>
 
 
   <script>
@@ -710,7 +711,7 @@
     let activeCat = 'all';
 
     async function init() {
-      const data = (typeof ITEM_CONFIGS !== 'undefined') ? ITEM_CONFIGS : await fetch('item_configs.json').then(r => r.json());
+      const data = (typeof ITEM_CONFIGS !== 'undefined') ? ITEM_CONFIGS : await fetch('item_configs.js?v=1773248938on').then(r => r.json());
       const configs = data.ItemConfigs || data;
 
       // Group by category

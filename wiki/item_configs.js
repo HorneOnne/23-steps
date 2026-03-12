@@ -3968,7 +3968,7 @@ var ITEM_CONFIGS = {
         "AccessoryType": "Belt",
         "StatBonuses": [
           {
-            "StatType": "HealthRegeneration",
+            "StatType": "ManaRegeneration",
             "ModifierType": "Flat",
             "Value": 0.5
           }
@@ -5402,17 +5402,26 @@ var ITEM_CONFIGS = {
       "ItemID": "RingOfVitality",
       "ItemType": "Accessory",
       "Name": "Ring of Vitality",
-      "Description": "+20 Max HP",
+      "Description": "+20 HP",
       "MaxStackSize": 1,
       "CanBeEnchanted": false,
       "Rarity": "Uncommon",
-      "Offset": { "x": 0.0, "y": 0.0, "magnitude": 0.0, "sqrMagnitude": 0.0 },
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
       "AngleZ": 0.0,
       "UseSpeed": 1.0,
       "AccessoryConfig": {
         "AccessoryType": "Ring",
         "StatBonuses": [
-          { "StatType": "MaxHP", "ModifierType": "Flat", "Value": 20.0 }
+          {
+            "StatType": "MaxHealth",
+            "ModifierType": "Flat",
+            "Value": 20.0
+          }
         ],
         "HasSpecialEffect": false,
         "SpecialEffectDescription": ""
@@ -5426,250 +5435,22 @@ var ITEM_CONFIGS = {
       "MaxStackSize": 1,
       "CanBeEnchanted": false,
       "Rarity": "Uncommon",
-      "Offset": { "x": 0.0, "y": 0.0, "magnitude": 0.0, "sqrMagnitude": 0.0 },
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
       "AngleZ": 0.0,
       "UseSpeed": 1.0,
       "AccessoryConfig": {
         "AccessoryType": "Ring",
         "StatBonuses": [
-          { "StatType": "Luck", "ModifierType": "Flat", "Value": 5.0 }
-        ],
-        "HasSpecialEffect": false,
-        "SpecialEffectDescription": ""
-      }
-    },
-    {
-      "ItemID": "MinersAmulet",
-      "ItemType": "Accessory",
-      "Name": "Miner's Amulet",
-      "Description": "+15% mining speed",
-      "MaxStackSize": 1,
-      "CanBeEnchanted": false,
-      "Rarity": "Uncommon",
-      "Offset": { "x": 0.0, "y": 0.0, "magnitude": 0.0, "sqrMagnitude": 0.0 },
-      "AngleZ": 0.0,
-      "UseSpeed": 1.0,
-      "AccessoryConfig": {
-        "AccessoryType": "Amulet",
-        "StatBonuses": [
-          { "StatType": "MiningSpeed", "ModifierType": "Percentage", "Value": 0.15 }
-        ],
-        "HasSpecialEffect": false,
-        "SpecialEffectDescription": ""
-      }
-    },
-    {
-      "ItemID": "LuckyCharm",
-      "ItemType": "Accessory",
-      "Name": "Lucky Charm",
-      "Description": "+10 Luck",
-      "MaxStackSize": 1,
-      "CanBeEnchanted": false,
-      "Rarity": "Rare",
-      "Offset": { "x": 0.0, "y": 0.0, "magnitude": 0.0, "sqrMagnitude": 0.0 },
-      "AngleZ": 0.0,
-      "UseSpeed": 1.0,
-      "AccessoryConfig": {
-        "AccessoryType": "Charm",
-        "StatBonuses": [
-          { "StatType": "Luck", "ModifierType": "Flat", "Value": 10.0 }
-        ],
-        "HasSpecialEffect": false,
-        "SpecialEffectDescription": ""
-      }
-    },
-    {
-      "ItemID": "VampireRing",
-      "ItemType": "Accessory",
-      "Name": "Vampire Ring",
-      "Description": "+1 HP Regen, +5 Max HP",
-      "MaxStackSize": 1,
-      "CanBeEnchanted": false,
-      "Rarity": "Rare",
-      "Offset": { "x": 0.0, "y": 0.0, "magnitude": 0.0, "sqrMagnitude": 0.0 },
-      "AngleZ": 0.0,
-      "UseSpeed": 1.0,
-      "AccessoryConfig": {
-        "AccessoryType": "Ring",
-        "StatBonuses": [
-          { "StatType": "HealthRegeneration", "ModifierType": "Flat", "Value": 1.0 },
-          { "StatType": "MaxHP", "ModifierType": "Flat", "Value": 5.0 }
-        ],
-        "HasSpecialEffect": false,
-        "SpecialEffectDescription": ""
-      }
-    },
-    {
-      "ItemID": "ScholarsRing",
-      "ItemType": "Accessory",
-      "Name": "Scholar's Ring",
-      "Description": "+1 Mana Regen",
-      "MaxStackSize": 1,
-      "CanBeEnchanted": false,
-      "Rarity": "Rare",
-      "Offset": { "x": 0.0, "y": 0.0, "magnitude": 0.0, "sqrMagnitude": 0.0 },
-      "AngleZ": 0.0,
-      "UseSpeed": 1.0,
-      "AccessoryConfig": {
-        "AccessoryType": "Ring",
-        "StatBonuses": [
-          { "StatType": "ManaRegeneration", "ModifierType": "Flat", "Value": 1.0 }
-        ],
-        "HasSpecialEffect": false,
-        "SpecialEffectDescription": ""
-      }
-    },
-    {
-      "ItemID": "RabbitsFoot",
-      "ItemType": "Accessory",
-      "Name": "Rabbit's Foot",
-      "Description": "+15 Luck",
-      "MaxStackSize": 1,
-      "CanBeEnchanted": false,
-      "Rarity": "Epic",
-      "Offset": { "x": 0.0, "y": 0.0, "magnitude": 0.0, "sqrMagnitude": 0.0 },
-      "AngleZ": 0.0,
-      "UseSpeed": 1.0,
-      "AccessoryConfig": {
-        "AccessoryType": "Charm",
-        "StatBonuses": [
-          { "StatType": "Luck", "ModifierType": "Flat", "Value": 15.0 }
-        ],
-        "HasSpecialEffect": false,
-        "SpecialEffectDescription": ""
-      }
-    },
-    {
-      "ItemID": "GuardiansSigil",
-      "ItemType": "Accessory",
-      "Name": "Guardian's Sigil",
-      "Description": "+15 Defense",
-      "MaxStackSize": 1,
-      "CanBeEnchanted": false,
-      "Rarity": "Epic",
-      "Offset": { "x": 0.0, "y": 0.0, "magnitude": 0.0, "sqrMagnitude": 0.0 },
-      "AngleZ": 0.0,
-      "UseSpeed": 1.0,
-      "AccessoryConfig": {
-        "AccessoryType": "Sigil",
-        "StatBonuses": [
-          { "StatType": "Defense", "ModifierType": "Flat", "Value": 15.0 }
-        ],
-        "HasSpecialEffect": false,
-        "SpecialEffectDescription": ""
-      }
-    },
-    {
-      "ItemID": "TitanBelt",
-      "ItemType": "Accessory",
-      "Name": "Titan Belt",
-      "Description": "+40 Max HP, +5 Defense",
-      "MaxStackSize": 1,
-      "CanBeEnchanted": false,
-      "Rarity": "Epic",
-      "Offset": { "x": 0.0, "y": 0.0, "magnitude": 0.0, "sqrMagnitude": 0.0 },
-      "AngleZ": 0.0,
-      "UseSpeed": 1.0,
-      "AccessoryConfig": {
-        "AccessoryType": "Belt",
-        "StatBonuses": [
-          { "StatType": "MaxHP", "ModifierType": "Flat", "Value": 40.0 },
-          { "StatType": "Defense", "ModifierType": "Flat", "Value": 5.0 }
-        ],
-        "HasSpecialEffect": false,
-        "SpecialEffectDescription": ""
-      }
-    },
-    {
-      "ItemID": "ShadowCloakPin",
-      "ItemType": "Accessory",
-      "Name": "Shadow Cloak Pin",
-      "Description": "+10% Move Speed, +5 Luck",
-      "MaxStackSize": 1,
-      "CanBeEnchanted": false,
-      "Rarity": "Epic",
-      "Offset": { "x": 0.0, "y": 0.0, "magnitude": 0.0, "sqrMagnitude": 0.0 },
-      "AngleZ": 0.0,
-      "UseSpeed": 1.0,
-      "AccessoryConfig": {
-        "AccessoryType": "Pin",
-        "StatBonuses": [
-          { "StatType": "MoveSpeed", "ModifierType": "Percentage", "Value": 0.10 },
-          { "StatType": "Luck", "ModifierType": "Flat", "Value": 5.0 }
-        ],
-        "HasSpecialEffect": false,
-        "SpecialEffectDescription": ""
-      }
-    },
-    {
-      "ItemID": "AncientAmulet",
-      "ItemType": "Accessory",
-      "Name": "Ancient Amulet",
-      "Description": "+50 Max HP, +10 Defense, +2 HP Regen",
-      "MaxStackSize": 1,
-      "CanBeEnchanted": false,
-      "Rarity": "Legendary",
-      "Offset": { "x": 0.0, "y": 0.0, "magnitude": 0.0, "sqrMagnitude": 0.0 },
-      "AngleZ": 0.0,
-      "UseSpeed": 1.0,
-      "AccessoryConfig": {
-        "AccessoryType": "Amulet",
-        "StatBonuses": [
-          { "StatType": "MaxHP", "ModifierType": "Flat", "Value": 50.0 },
-          { "StatType": "Defense", "ModifierType": "Flat", "Value": 10.0 },
-          { "StatType": "HealthRegeneration", "ModifierType": "Flat", "Value": 2.0 }
-        ],
-        "HasSpecialEffect": false,
-        "SpecialEffectDescription": ""
-      }
-    },
-    {
-      "ItemID": "CelestialPrism",
-      "ItemType": "Accessory",
-      "Name": "Celestial Prism",
-      "Description": "+30 Max HP, +10 Defense, +20 Luck, +1 HP Regen, +1 Mana Regen, +10% Move Speed, +10% Mining Speed",
-      "MaxStackSize": 1,
-      "CanBeEnchanted": false,
-      "Rarity": "Legendary",
-      "Offset": { "x": 0.0, "y": 0.0, "magnitude": 0.0, "sqrMagnitude": 0.0 },
-      "AngleZ": 0.0,
-      "UseSpeed": 1.0,
-      "AccessoryConfig": {
-        "AccessoryType": "Prism",
-        "StatBonuses": [
-          { "StatType": "MaxHP", "ModifierType": "Flat", "Value": 30.0 },
-          { "StatType": "Defense", "ModifierType": "Flat", "Value": 10.0 },
-          { "StatType": "Luck", "ModifierType": "Flat", "Value": 20.0 },
-          { "StatType": "HealthRegeneration", "ModifierType": "Flat", "Value": 1.0 },
-          { "StatType": "ManaRegeneration", "ModifierType": "Flat", "Value": 1.0 },
-          { "StatType": "MoveSpeed", "ModifierType": "Percentage", "Value": 0.10 },
-          { "StatType": "MiningSpeed", "ModifierType": "Percentage", "Value": 0.10 }
-        ],
-        "HasSpecialEffect": false,
-        "SpecialEffectDescription": ""
-      }
-    },
-    {
-      "ItemID": "EternalRing",
-      "ItemType": "Accessory",
-      "Name": "Eternal Ring",
-      "Description": "+80 Max HP, +20 Defense, +30 Luck, +3 HP Regen, +2 Mana Regen, +20% Move Speed, +20% Mining Speed",
-      "MaxStackSize": 1,
-      "CanBeEnchanted": false,
-      "Rarity": "Legendary",
-      "Offset": { "x": 0.0, "y": 0.0, "magnitude": 0.0, "sqrMagnitude": 0.0 },
-      "AngleZ": 0.0,
-      "UseSpeed": 1.0,
-      "AccessoryConfig": {
-        "AccessoryType": "Ring",
-        "StatBonuses": [
-          { "StatType": "MaxHP", "ModifierType": "Flat", "Value": 80.0 },
-          { "StatType": "Defense", "ModifierType": "Flat", "Value": 20.0 },
-          { "StatType": "Luck", "ModifierType": "Flat", "Value": 30.0 },
-          { "StatType": "HealthRegeneration", "ModifierType": "Flat", "Value": 3.0 },
-          { "StatType": "ManaRegeneration", "ModifierType": "Flat", "Value": 2.0 },
-          { "StatType": "MoveSpeed", "ModifierType": "Percentage", "Value": 0.20 },
-          { "StatType": "MiningSpeed", "ModifierType": "Percentage", "Value": 0.20 }
+          {
+            "StatType": "Luck",
+            "ModifierType": "Flat",
+            "Value": 5.0
+          }
         ],
         "HasSpecialEffect": false,
         "SpecialEffectDescription": ""
