@@ -512,6 +512,117 @@
       display: block
     }
 
+    /* ── Sidebar layout ── */
+    .page-layout {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 28px 16px 48px;
+    }
+
+    .wiki-sidebar {
+      width: 210px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      position: sticky;
+      top: 16px;
+    }
+
+    .sidebar-label {
+      font-size: 0.6em;
+      font-weight: 700;
+      color: var(--wiki-text-dimmer);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      padding: 0 4px 6px;
+      border-bottom: 1px solid var(--wiki-infobox-row-border);
+      margin-bottom: 4px;
+    }
+
+    a.sidebar-card {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px;
+      border-radius: 8px;
+      background: var(--wiki-section-card-bg);
+      border: 1px solid var(--wiki-section-card-border);
+      text-decoration: none;
+      color: inherit;
+      transition: border-color .15s, background .15s;
+    }
+
+    a.sidebar-card:hover {
+      border-color: var(--wiki-section-card-hover);
+      background: var(--wiki-tab-hover-bg);
+    }
+
+    a.sidebar-card.active {
+      border-color: var(--wiki-tab-active-border);
+      background: var(--wiki-tab-active-bg);
+    }
+
+    .sidebar-card-icon {
+      width: 60px;
+      height: 60px;
+      flex-shrink: 0;
+      background: var(--wiki-section-card-icon-bg);
+      border: 1px solid var(--wiki-section-card-icon-border);
+      border-radius: 7px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 2px;
+    }
+
+    .sidebar-card-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      image-rendering: pixelated;
+    }
+
+    .sidebar-card-body {
+      min-width: 0;
+    }
+
+    .sidebar-card-title {
+      font-size: 0.88em;
+      font-weight: 700;
+      color: var(--wiki-section-title);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .sidebar-card-sub {
+      font-size: 0.68em;
+      color: var(--wiki-text-dimmer);
+      margin-top: 1px;
+      white-space: nowrap;
+    }
+
+    .content-wrap {
+      flex: 1;
+      min-width: 0;
+      padding: 0;
+    }
+
+    @media(max-width:1100px) {
+      .wiki-sidebar {
+        display: none;
+      }
+
+      .page-layout {
+        padding: 20px 12px 40px;
+      }
+    }
+
     /* ── Footer ── */
     footer {
       text-align: center;
@@ -594,10 +705,73 @@
   </div>
 
   <main>
-    <div class="content-wrap" id="pageContent">
-      <div class="not-found"><i class="fas fa-spinner fa-spin"></i>
-        <p>Loading...</p>
+    <div class="page-layout">
+
+      <!-- Wiki Section Sidebar -->
+      <aside class="wiki-sidebar">
+        <div class="sidebar-label">Mine &amp; Dungeon Wiki</div>
+        <a href="mobs.html" class="sidebar-card active">
+          <div class="sidebar-card-icon">
+            <img src="assets/mobs/greenslime.png" alt="Mobs" onerror="this.parentElement.textContent='💀'" />
+          </div>
+          <div class="sidebar-card-body">
+            <div class="sidebar-card-title">Mobs</div>
+            <div class="sidebar-card-sub">Mine &amp; Dungeon Wiki</div>
+          </div>
+        </a>
+        <a href="items.html" class="sidebar-card">
+          <div class="sidebar-card-icon">
+            <img src="assets/items/ironsword.png" alt="Items" onerror="this.parentElement.textContent='🗡️'" />
+          </div>
+          <div class="sidebar-card-body">
+            <div class="sidebar-card-title">Items</div>
+            <div class="sidebar-card-sub">Mine &amp; Dungeon Wiki</div>
+          </div>
+        </a>
+        <a href="chests.html" class="sidebar-card">
+          <div class="sidebar-card-icon">
+            <img src="assets/items/wooden_chest.png" alt="Chests" onerror="this.parentElement.textContent='📦'" />
+          </div>
+          <div class="sidebar-card-body">
+            <div class="sidebar-card-title">Chests</div>
+            <div class="sidebar-card-sub">Mine &amp; Dungeon Wiki</div>
+          </div>
+        </a>
+        <a href="merchants.html" class="sidebar-card">
+          <div class="sidebar-card-icon">
+            <img src="assets/items/chest.png" alt="Merchants" onerror="this.parentElement.textContent='🏪'" />
+          </div>
+          <div class="sidebar-card-body">
+            <div class="sidebar-card-title">Merchants</div>
+            <div class="sidebar-card-sub">Mine &amp; Dungeon Wiki</div>
+          </div>
+        </a>
+        <a href="economy.html" class="sidebar-card">
+          <div class="sidebar-card-icon">
+            <img src="assets/items/goldcoin.png" alt="Economy" onerror="this.parentElement.textContent='📊'" />
+          </div>
+          <div class="sidebar-card-body">
+            <div class="sidebar-card-title">Economy</div>
+            <div class="sidebar-card-sub">Mine &amp; Dungeon Wiki</div>
+          </div>
+        </a>
+        <a href="luck.html" class="sidebar-card">
+          <div class="sidebar-card-icon">
+            <img src="assets/items/ringoffortune.png" alt="Luck" onerror="this.parentElement.textContent='🍀'" />
+          </div>
+          <div class="sidebar-card-body">
+            <div class="sidebar-card-title">Luck System</div>
+            <div class="sidebar-card-sub">Mine &amp; Dungeon Wiki</div>
+          </div>
+        </a>
+      </aside>
+
+      <div class="content-wrap" id="pageContent">
+        <div class="not-found"><i class="fas fa-spinner fa-spin"></i>
+          <p>Loading...</p>
+        </div>
       </div>
+
     </div>
   </main>
 
@@ -773,5 +947,7 @@
     }
   </script>
 </body>
+
+</html>
 
 </html>

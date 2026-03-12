@@ -143,6 +143,20 @@
       box-shadow: var(--wiki-panel-shadow);
     }
 
+    .page-layout .content-wrap {
+      max-width: none;
+      margin: 0;
+      padding: 0;
+      background: none;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      border-radius: 0;
+      border: none;
+      box-shadow: none;
+      flex: 1;
+      min-width: 0;
+    }
+
     /* ── Breadcrumb ───────────────────────────────────── */
     .breadcrumb {
       font-size: 0.7em;
@@ -980,6 +994,204 @@
         font-size: 0.9rem;
       }
     }
+
+    /* ── Sidebar layout ── */
+    .page-layout {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 28px 16px 48px;
+    }
+
+    .wiki-sidebar {
+      width: 210px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      position: sticky;
+      top: 16px;
+    }
+
+    .sidebar-label {
+      font-size: 0.6em;
+      font-weight: 700;
+      color: var(--wiki-text-dimmer);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      padding: 0 4px 6px;
+      border-bottom: 1px solid var(--wiki-infobox-row-border);
+      margin-bottom: 4px;
+    }
+
+    a.sidebar-card {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 8px;
+      background: var(--wiki-section-card-bg);
+      border: 1px solid var(--wiki-section-card-border);
+      text-decoration: none;
+      color: inherit;
+      transition: border-color .15s, background .15s;
+    }
+
+    a.sidebar-card:hover {
+      border-color: var(--wiki-section-card-hover);
+      background: var(--wiki-tab-hover-bg);
+    }
+
+    a.sidebar-card.active {
+      border-color: var(--wiki-tab-active-border);
+      background: var(--wiki-tab-active-bg);
+    }
+
+    .sidebar-card-icon {
+      width: 44px;
+      height: 44px;
+      flex-shrink: 0;
+      background: var(--wiki-section-card-icon-bg);
+      border: 1px solid var(--wiki-section-card-icon-border);
+      border-radius: 7px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 2px;
+    }
+
+    .sidebar-card-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      image-rendering: pixelated;
+    }
+
+    .sidebar-card-body {
+      min-width: 0;
+    }
+
+    .sidebar-card-title {
+      font-size: 0.8em;
+      font-weight: 700;
+      color: var(--wiki-section-title);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .sidebar-card-sub {
+      font-size: 0.68em;
+      color: var(--wiki-text-dimmer);
+      margin-top: 1px;
+      white-space: nowrap;
+    }
+
+    /* ── Sidebar card sizing ── */
+    .sidebar-card-icon {
+      width: 60px;
+      height: 60px;
+    }
+
+    a.sidebar-card {
+      padding: 12px;
+      gap: 12px;
+    }
+
+    .sidebar-card-title {
+      font-size: 0.88em;
+    }
+
+    @media(max-width:1100px) {
+      .wiki-sidebar {
+        display: none;
+      }
+
+      .page-layout {
+        padding: 20px 12px 40px;
+      }
+    }
+
+    /* ── Wiki Page Header (breadcrumb + tabs) ── */
+    .wiki-page-header {
+      background-color: var(--wiki-page-header-bg);
+      border-bottom: 2px solid var(--wiki-page-header-border);
+      padding: 24px 24px 0;
+    }
+
+    .wiki-page-header .breadcrumb {
+      margin-bottom: 10px;
+    }
+
+    .wiki-page-header h2 {
+      font-family: 'Press Start 2P', cursive;
+      font-size: clamp(0.85rem, 2.5vw, 1.3rem);
+      color: var(--wiki-heading);
+      margin-bottom: 5px;
+    }
+
+    .wiki-page-header p {
+      color: var(--wiki-subheading);
+      font-size: 0.83em;
+      margin-bottom: 18px;
+    }
+
+    .tab-bar {
+      display: flex;
+      border-top: 1px solid var(--wiki-tab-border);
+      overflow-x: auto;
+    }
+
+    .tab-bar::-webkit-scrollbar {
+      height: 0;
+    }
+
+    .tab-btn {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 11px 20px;
+      color: var(--wiki-tab-text);
+      font-weight: 600;
+      font-size: 0.82em;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      border-bottom: 3px solid transparent;
+      white-space: nowrap;
+      transition: color .15s, border-color .15s, background .15s;
+      text-decoration: none;
+      font-family: inherit;
+    }
+
+    .tab-btn:hover {
+      color: var(--wiki-tab-hover-text);
+      background: var(--wiki-tab-hover-bg);
+    }
+
+    .tab-btn.active {
+      color: var(--wiki-tab-active-text);
+      border-bottom-color: var(--wiki-tab-active-border);
+      background: var(--wiki-tab-active-bg);
+    }
+
+    .tab-btn.coming-soon {
+      opacity: .4;
+      cursor: default;
+      pointer-events: none;
+    }
+
+    .tab-badge {
+      font-size: .6em;
+      background: var(--wiki-tab-badge-bg);
+      border: 1px solid var(--wiki-tab-badge-border);
+      color: var(--wiki-tab-badge-text);
+      padding: 1px 5px;
+      border-radius: 3px;
+    }
   </style>
 </head>
 
@@ -1003,15 +1215,104 @@
     </nav>
   </header>
 
-  <main>
-    <div class="content-wrap">
-      <div id="page-root">
-        <div class="loading-state">
-          <i class="fas fa-spinner"></i>
-          Loading item…
-        </div>
-      </div>
+  <div class="wiki-page-header">
+    <div class="breadcrumb">
+      <a href="../index.html">23-Steps</a> &rsaquo;
+      <a href="index.html">Wiki</a> &rsaquo;
+      <a href="mine-dungeon.html">Mine &amp; Dungeon</a> &rsaquo;
+      <a href="items.html">Items</a> &rsaquo;
+      <span id="breadcrumbName">...</span>
     </div>
+    <h2 id="pageHeading"><i class="fas fa-boxes"></i>&nbsp; Item</h2>
+    <p id="pageSubtitle">Loading...</p>
+    <div class="tab-bar">
+      <a class="tab-btn" href="mobs.html"><i class="fas fa-skull"></i> Mobs</a>
+      <a class="tab-btn active" href="items.html"><i class="fas fa-boxes"></i> Items</a>
+      <a class="tab-btn" href="merchants.html"><i class="fas fa-store"></i> Merchants</a>
+      <a class="tab-btn" href="economy.html"><i class="fas fa-chart-line"></i> Economy</a>
+      <a class="tab-btn" href="chests.html"><i class="fas fa-box-open"></i> Chests</a>
+      <a class="tab-btn" href="luck.html"><i class="fas fa-clover"></i> Luck</a>
+      <span class="tab-btn coming-soon"><i class="fas fa-map"></i> Maps <span class="tab-badge">Soon</span></span>
+      <span class="tab-btn coming-soon"><i class="fas fa-scroll"></i> Quests <span class="tab-badge">Soon</span></span>
+      <span class="tab-btn coming-soon"><i class="fas fa-hat-wizard"></i> Bosses <span
+          class="tab-badge">Soon</span></span>
+      <span class="tab-btn coming-soon"><i class="fas fa-hammer"></i> Crafting <span
+          class="tab-badge">Soon</span></span>
+    </div>
+  </div>
+
+  <main>
+    <div class="page-layout">
+
+      <!-- Wiki Section Sidebar -->
+      <aside class="wiki-sidebar">
+        <div class="sidebar-label">Mine &amp; Dungeon Wiki</div>
+        <a href="mobs.html" class="sidebar-card">
+          <div class="sidebar-card-icon">
+            <img src="assets/mobs/greenslime.png" alt="Mobs" onerror="this.parentElement.textContent='💀'" />
+          </div>
+          <div class="sidebar-card-body">
+            <div class="sidebar-card-title">Mobs</div>
+            <div class="sidebar-card-sub">Mine &amp; Dungeon Wiki</div>
+          </div>
+        </a>
+        <a href="items.html" class="sidebar-card active">
+          <div class="sidebar-card-icon">
+            <img src="assets/items/ironsword.png" alt="Items" onerror="this.parentElement.textContent='🗡️'" />
+          </div>
+          <div class="sidebar-card-body">
+            <div class="sidebar-card-title">Items</div>
+            <div class="sidebar-card-sub">Mine &amp; Dungeon Wiki</div>
+          </div>
+        </a>
+        <a href="chests.html" class="sidebar-card">
+          <div class="sidebar-card-icon">
+            <img src="assets/items/wooden_chest.png" alt="Chests" onerror="this.parentElement.textContent='📦'" />
+          </div>
+          <div class="sidebar-card-body">
+            <div class="sidebar-card-title">Chests</div>
+            <div class="sidebar-card-sub">Mine &amp; Dungeon Wiki</div>
+          </div>
+        </a>
+        <a href="merchants.html" class="sidebar-card">
+          <div class="sidebar-card-icon">
+            <img src="assets/items/chest.png" alt="Merchants" onerror="this.parentElement.textContent='🏪'" />
+          </div>
+          <div class="sidebar-card-body">
+            <div class="sidebar-card-title">Merchants</div>
+            <div class="sidebar-card-sub">Mine &amp; Dungeon Wiki</div>
+          </div>
+        </a>
+        <a href="economy.html" class="sidebar-card">
+          <div class="sidebar-card-icon">
+            <img src="assets/items/goldcoin.png" alt="Economy" onerror="this.parentElement.textContent='📊'" />
+          </div>
+          <div class="sidebar-card-body">
+            <div class="sidebar-card-title">Economy</div>
+            <div class="sidebar-card-sub">Mine &amp; Dungeon Wiki</div>
+          </div>
+        </a>
+        <a href="luck.html" class="sidebar-card">
+          <div class="sidebar-card-icon">
+            <img src="assets/items/ringoffortune.png" alt="Luck" onerror="this.parentElement.textContent='🍀'" />
+          </div>
+          <div class="sidebar-card-body">
+            <div class="sidebar-card-title">Luck System</div>
+            <div class="sidebar-card-sub">Mine &amp; Dungeon Wiki</div>
+          </div>
+        </a>
+      </aside>
+
+      <div class="content-wrap">
+        <div id="page-root">
+          <div class="loading-state">
+            <i class="fas fa-spinner"></i>
+            Loading item…
+          </div>
+        </div><!-- /page-root -->
+      </div><!-- /content-wrap -->
+
+    </div><!-- /page-layout -->
   </main>
 
   <footer>
@@ -1280,6 +1581,13 @@
       descParts.push('Full stats and crafting info on the Mine & Dungeon Wiki.');
       const pageDesc = descParts.join(' \u2014 ');
       document.title = pageTitle;
+      // Update wiki-page-header elements
+      const $bn = document.getElementById('breadcrumbName');
+      if ($bn) $bn.textContent = cfg.Name;
+      const $ph = document.getElementById('pageHeading');
+      if ($ph) $ph.innerHTML = `<i class="fas ${TYPE_ICON[cfg.ItemType] || 'fa-box'}"></i>&nbsp; ${cfg.Name}`;
+      const $ps = document.getElementById('pageSubtitle');
+      if ($ps) $ps.textContent = `${cfg.Rarity ? cfg.Rarity + ' ' : ''}${cfg.ItemType}`;
       document.querySelectorAll('meta[name="description"]').forEach(m => m.setAttribute('content', pageDesc));
       document.querySelectorAll('link[rel="canonical"]').forEach(m => m.setAttribute('href', pageUrl));
       document.querySelectorAll('meta[property="og:title"]').forEach(m => m.setAttribute('content', pageTitle));
