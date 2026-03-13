@@ -146,13 +146,13 @@
     .page-layout .content-wrap {
       max-width: none;
       margin: 0;
-      padding: 0;
-      background: none;
+      padding: 20px 24px 28px;
+      background: var(--wiki-card-bg);
       backdrop-filter: none;
       -webkit-backdrop-filter: none;
-      border-radius: 0;
-      border: none;
-      box-shadow: none;
+      border-radius: 10px;
+      border: 1px solid var(--wiki-panel-border);
+      box-shadow: var(--wiki-panel-shadow);
       flex: 1;
       min-width: 0;
     }
@@ -251,6 +251,7 @@
       width: 100%;
       border-collapse: collapse;
       font-size: 0.78em;
+      background: var(--wiki-card-bg);
     }
 
     .infobox-table tr {
@@ -742,6 +743,7 @@
       overflow-x: auto;
       border-radius: 8px;
       border: 1px solid var(--wiki-panel-border);
+      background: var(--wiki-card-bg);
     }
 
     .cattable {
@@ -916,7 +918,7 @@
     }
 
     .acc-bonuses-table thead tr {
-      background: var(--wiki-table-header-bg, rgba(255, 255, 255, 0.05));
+      background: var(--wiki-table-header-bg);
       color: var(--wiki-text-dim);
       font-size: 0.8em;
       text-transform: uppercase;
@@ -926,17 +928,17 @@
     .acc-bonuses-table th {
       padding: 6px 12px;
       text-align: left;
-      border-bottom: 1px solid var(--wiki-border, rgba(255, 255, 255, 0.08));
+      border-bottom: 1px solid var(--wiki-border);
       font-weight: 600;
     }
 
     .acc-bonus-row {
-      border-bottom: 1px solid var(--wiki-border, rgba(255, 255, 255, 0.05));
+      border-bottom: 1px solid var(--wiki-border);
       transition: background 0.15s;
     }
 
     .acc-bonus-row:hover {
-      background: var(--wiki-mob-hover-bg, rgba(255, 255, 255, 0.04));
+      background: var(--wiki-mob-hover-bg);
     }
 
     .acc-stat-name {

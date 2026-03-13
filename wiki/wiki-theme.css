@@ -39,10 +39,10 @@
   --wiki-tab-border: #2b3a59;
   --wiki-tab-text: #8fa3c8;
   --wiki-tab-hover-text: #c8d1e1;
-  --wiki-tab-hover-bg: rgba(255, 255, 255, 0.04);
+  --wiki-tab-hover-bg: #1a2538;
   --wiki-tab-active-text: #6ab0f3;
   --wiki-tab-active-border: #6ab0f3;
-  --wiki-tab-active-bg: rgba(106, 176, 243, 0.06);
+  --wiki-tab-active-bg: #142435;
   --wiki-tab-badge-bg: #1a2332;
   --wiki-tab-badge-border: #2b3a59;
   --wiki-tab-badge-text: #4a576b;
@@ -178,11 +178,15 @@
   /* Mob card */
   --wiki-mob-bg: #0d1420;
   --wiki-mob-border: #222a33;
-  --wiki-mob-hover-bg: #111e30;
+  --wiki-mob-hover-bg: #1a2a3e;
   --wiki-mob-level-bg: #0e1926;
   --wiki-mob-level-border: #2b3a59;
   --wiki-mob-level-text: #6ab0f3;
   --wiki-mob-name: #c8d1e1;
+
+  /* Table */
+  --wiki-table-header-bg: #111d2e;
+  --wiki-border: #1e2d40;
 
   /* Loot */
   --wiki-loot-bg: #111827;
@@ -242,10 +246,10 @@
   --wiki-tab-border: #d4cdb8;
   --wiki-tab-text: #666;
   --wiki-tab-hover-text: #333;
-  --wiki-tab-hover-bg: rgba(0, 0, 0, 0.04);
+  --wiki-tab-hover-bg: #ece8d8;
   --wiki-tab-active-text: #2c6e2c;
   --wiki-tab-active-border: #2c6e2c;
-  --wiki-tab-active-bg: rgba(46, 107, 46, 0.06);
+  --wiki-tab-active-bg: #e2f0e2;
   --wiki-tab-badge-bg: #eee;
   --wiki-tab-badge-border: #ccc;
   --wiki-tab-badge-text: #999;
@@ -381,11 +385,15 @@
   /* Mob card */
   --wiki-mob-bg: #fff;
   --wiki-mob-border: #d4cdb8;
-  --wiki-mob-hover-bg: #f8fdf8;
+  --wiki-mob-hover-bg: #f0ede0;
   --wiki-mob-level-bg: #eef8ee;
   --wiki-mob-level-border: #b0d8b0;
   --wiki-mob-level-text: #2c6e2c;
   --wiki-mob-name: #333;
+
+  /* Table */
+  --wiki-table-header-bg: #f0ede0;
+  --wiki-border: #d4cdb8;
 
   /* Loot */
   --wiki-loot-bg: #f5f2e8;
