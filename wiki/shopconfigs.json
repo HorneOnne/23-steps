@@ -1,4 +1,4 @@
-var SHOP_CONFIGS = [
+[
     {
         "ConfigName": "Merchant_1-5",
         "Description": "General store with common items and arrows",
@@ -47,4 +47,4 @@ var SHOP_CONFIGS = [
             { "ItemID": "Arrow", "Quantity": 10, "MaxStock": 99, "HasUnlimitedStock": true, "UseItemValueManagerPrice": true, "OverridePrice": 0.0, "PriceMultiplier": 1.0, "SpawnWeight": 1.0 }
         ]
     }
-];
+]

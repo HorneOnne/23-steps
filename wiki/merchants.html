@@ -807,10 +807,7 @@
         <a href="../delete-account.html">Delete Account</a>
     </footer>
 
-    <script src="shopconfigs.js"></script>
-    <script src="item_values.js?v=1773338118"></script>
-    <script src="item_configs.js?v=1773338118"></script>
-    <script src="icon_map.js?v=1773338118"></script>
+    <script src="icon_map.js"></script>
 
     <script>
         // ── Config ──────────────────────────────────────────────────────────────────
@@ -829,15 +826,10 @@
         // ── Helpers ─────────────────────────────────────────────────────────────────
         
 
-        // Build lookup maps
-        const itemValueMap = {};
-        if (typeof ITEM_VALUES !== 'undefined' && ITEM_VALUES.ItemValues) {
-            ITEM_VALUES.ItemValues.forEach(v => { itemValueMap[v.itemID] = v.value; });
-        }
-        const itemConfigMap = {};
-        if (typeof ITEM_CONFIGS !== 'undefined' && ITEM_CONFIGS.ItemConfigs) {
-            ITEM_CONFIGS.ItemConfigs.forEach(c => { itemConfigMap[c.ItemID] = c; });
-        }
+        // Build lookup maps (populated after fetch)
+        let itemValueMap = {};
+        let itemConfigMap = {};
+        let SHOP_CONFIGS = [];
 
         function getDisplayName(itemID) {
             const cfg = itemConfigMap[itemID];
@@ -868,8 +860,6 @@
         }
 
         // ── Group shop configs into merchants ───────────────────────────────────────
-        // Each merchant is identified by the prefix before the depth range.
-        // e.g. "Merchant_1-5" → merchant name = "Merchant"
         function groupMerchants(configs) {
             const groups = {};
             configs.forEach(shop => {
@@ -877,7 +867,6 @@
                 if (!groups[name]) groups[name] = { name, configs: [] };
                 groups[name].configs.push(shop);
             });
-            // Sort each merchant's configs by first depth number
             Object.values(groups).forEach(g => {
                 g.configs.sort((a, b) => {
                     const da = parseInt(a.ConfigName.match(/(\d+)/)?.[1] || 0);
@@ -914,11 +903,7 @@
         function buildItemTable(shop) {
             const buyMul = shop.BuyPriceMultiplier || 1;
             const sellMul = shop.SellPriceMultiplier || 1;
-
-            // Calculate total spawn weight for percentage
             const totalWeight = shop.AvailableItems.reduce((sum, i) => sum + (i.SpawnWeight || 0), 0);
-
-            // Price icon matching item.html style
             const coinIcon = `<i class="fas fa-coins price-icon"></i>`;
 
             let rows = '';
@@ -937,12 +922,10 @@
                     sellPrice = values.SellPrice * sellMul * priceMul;
                 }
 
-                // Spawn chance %
                 const weight = item.SpawnWeight || 0;
                 const chancePct = totalWeight > 0 ? (weight / totalWeight * 100) : 0;
                 const chanceStr = chancePct % 1 === 0 ? chancePct.toFixed(0) : chancePct.toFixed(1);
 
-                // Icon — clickable link to item detail
                 const iconInner = icon
                     ? `<img src="${icon}" alt="${name}" loading="lazy" onerror="this.style.display='none'">`
                     : `<span class="icon-missing-sm">❓</span>`;
@@ -983,7 +966,6 @@
             const buyMul = shop.BuyPriceMultiplier || 1;
             const sellMul = shop.SellPriceMultiplier || 1;
 
-            // Build depth tabs
             let depthTabsHtml = '';
             selectedMerchant.configs.forEach((cfg, i) => {
                 const active = i === selectedDepthIdx ? ' active' : '';
@@ -1017,14 +999,10 @@
         function selectMerchant(idx) {
             selectedMerchant = allMerchants[idx];
             selectedDepthIdx = 0;
-
-            // Update card selection
             document.querySelectorAll('.merchant-card').forEach((card, i) => {
                 card.classList.toggle('selected', i === idx);
             });
-
             renderDetail();
-            // Scroll to detail
             document.getElementById('merchantDetail').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
@@ -1034,7 +1012,20 @@
         }
 
         // ── Initial render ─────────────────────────────────────────────────────────
-        function render() {
+        (async function() {
+            var [shopData, valuesData, configsData] = await Promise.all([
+                fetch('shopconfigs.json').then(function(r) { return r.json(); }),
+                fetch('item_values.json').then(function(r) { return r.json(); }),
+                fetch('item_configs.json').then(function(r) { return r.json(); })
+            ]);
+            SHOP_CONFIGS = shopData;
+            if (valuesData && valuesData.ItemValues) {
+                valuesData.ItemValues.forEach(function(v) { itemValueMap[v.itemID] = v.value; });
+            }
+            if (configsData && configsData.ItemConfigs) {
+                configsData.ItemConfigs.forEach(function(c) { itemConfigMap[c.ItemID] = c; });
+            }
+
             const container = document.getElementById('merchantCatalog');
             if (!SHOP_CONFIGS || SHOP_CONFIGS.length === 0) {
                 container.innerHTML = '<div class="loading-state" style="animation:none"><i class="fas fa-exclamation-triangle" style="animation:none"></i>No merchant data found.</div>';
@@ -1043,7 +1034,6 @@
 
             allMerchants = groupMerchants(SHOP_CONFIGS);
 
-            // Build merchant cards
             let cardsHtml = '<div class="merchant-list">';
             allMerchants.forEach((merchant, idx) => {
                 const meta = getMerchantMeta(merchant.name);
@@ -1069,13 +1059,10 @@
             cardsHtml += '<div id="merchantDetail"></div>';
             container.innerHTML = cardsHtml;
 
-            // Auto-select first merchant
             selectedMerchant = allMerchants[0];
             selectedDepthIdx = 0;
             renderDetail();
-        }
-
-        render();
+        })();
     </script>
 
 </body>

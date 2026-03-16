@@ -523,17 +523,19 @@
     <footer>&copy;2026 23-Steps. All rights reserved | <a href="../privacy-policy.html">Privacy Policy</a> | <a
             href="../terms-of-service.html">Terms of Service</a></footer>
 
-    <script src="item_configs.js?v=1773338118"></script>
-    <script src="crafting_recipes.js?v=1773338118"></script>
-    <script src="item_values.js?v=1773338118"></script>
-    <script src="mob_configs.js?v=1773338118"></script>
     <script>
-        (function () {
-            // Load data from inlined script variables
-            const itemConfigs = (typeof ITEM_CONFIGS !== 'undefined' ? ITEM_CONFIGS : {}).ItemConfigs || [];
-            const recipes = (typeof CRAFTING_RECIPES !== 'undefined' ? CRAFTING_RECIPES : {}).Recipes || [];
-            const itemValues = (typeof ITEM_VALUES !== 'undefined' ? ITEM_VALUES : {}).ItemValues || [];
-            const mobConfigs = (typeof MOB_CONFIGS !== 'undefined' ? MOB_CONFIGS : {}).MobConfigs || [];
+        (async function () {
+            // Load data from JSON files
+            var [itemConfigsData, recipesData, itemValuesData, mobConfigsData] = await Promise.all([
+                fetch('item_configs.json').then(function(r) { return r.json(); }),
+                fetch('crafting_recipes.json').then(function(r) { return r.json(); }),
+                fetch('item_values.json').then(function(r) { return r.json(); }),
+                fetch('mob_configs.json').then(function(r) { return r.json(); })
+            ]);
+            const itemConfigs = itemConfigsData.ItemConfigs || [];
+            const recipes = recipesData.Recipes || [];
+            const itemValues = itemValuesData.ItemValues || [];
+            const mobConfigs = mobConfigsData.MobConfigs || [];
 
             // Build lookups
             const valMap = {}, cfgMap = {};

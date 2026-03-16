@@ -973,16 +973,17 @@
 
 
 
-  <script src="mob_configs.js?v=1773338118"></script>
   <script>
 
-    var allMobs = MOB_CONFIGS.MobConfigs || [];
+    var allMobs = [];
     var currentFilter = 'all';
     var currentSort = 'name';
     var sortAsc = true;
 
     /* ── Load data ── */
-    (function () {
+    (async function () {
+      var data = await fetch('mob_configs.json').then(function(r) { return r.json(); });
+      allMobs = data.MobConfigs || [];
       applyFilters();
     })();
 
