@@ -64,6 +64,18 @@ This file documents all the custom terminal commands (aliases and scripts) creat
 
 ---
 
+## 6. `start_server` (macOS)
+- **Description:** Starts a local HTTP server to serve the wiki files from the `23-steps` project root. Required to preview any `.html` pages in the browser (avoids CORS issues with `fetch()` calls to local JSON files).
+- **How to run:** From the `23-steps` root directory:
+  ```bash
+  python3 -m http.server
+  ```
+  Then open your browser and go to: [http://localhost:8000/wiki/](http://localhost:8000/wiki/)
+- **Default port:** `8000`. To use a different port: `python3 -m http.server 8080`
+- **How to stop:** Press `Ctrl+C` in the terminal where the server is running.
+
+---
+
 ## Typical Workflow
 
 After making changes to Unity configs, run these commands in order:

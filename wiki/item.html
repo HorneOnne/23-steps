@@ -905,6 +905,57 @@
     }
 
 
+    /* ── Dropped by / Sold by sections ────────────────── */
+    .source-section {
+      padding: 10px 12px 12px;
+      border-top: 1px solid var(--wiki-recipe-border);
+    }
+
+    .source-section .section-title {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 0.5rem;
+      color: var(--wiki-section-title);
+      margin-bottom: 8px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid var(--wiki-stat-border);
+    }
+
+    .source-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .source-icon {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      transition: transform .12s, opacity .12s;
+      text-decoration: none;
+      opacity: 0.85;
+    }
+
+    .source-icon:hover {
+      transform: scale(1.15);
+      opacity: 1;
+    }
+
+    .source-icon img {
+      width: 36px;
+      height: 36px;
+      object-fit: contain;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+    }
+
+    .source-icon .icon-missing {
+      font-size: 1.1rem;
+      opacity: 0.3;
+    }
+
     /* ── Accessory stat bonuses ─────────────────────────── */
     .acc-bonuses-section {
       margin-top: 24px;
@@ -1542,19 +1593,25 @@
     // ── Main ──────────────────────────────────────────────────────────────────────
     let allConfigs = [];
     let allRecipes = [];
+    let allMobs = [];
+    let allShops = [];
     async function init() {
       const params = new URLSearchParams(location.search);
       const itemId = params.get('id');
       if (!itemId) { showNotFound('No item ID specified.'); return; }
 
-      const [data, valuesData, recipesData] = await Promise.all([
+      const [data, valuesData, recipesData, mobData, shopData] = await Promise.all([
         fetch('item_configs.json').then(r => r.json()),
         fetch('item_values.json').then(r => r.json()),
-        fetch('crafting_recipes.json').then(r => r.json())
+        fetch('crafting_recipes.json').then(r => r.json()),
+        fetch('mob_configs.json').then(r => r.json()),
+        fetch('shopconfigs.json').then(r => r.json())
       ]);
       const configs = data.ItemConfigs || data;
       allConfigs = configs;
       allRecipes = recipesData.Recipes || [];
+      allMobs = (mobData.MobConfigs || mobData);
+      allShops = shopData;
 
       // Build item values map
       let itemValuesMap = {};
@@ -1673,6 +1730,8 @@
                         ${infoRows.map(([k, v]) => `<tr><td>${k}</td><td>${v}</td></tr>`).join('')}
                     </table>
                     ${renderCraftingRecipe(cfg)}
+                    ${renderDroppedBy(cfg)}
+                    ${renderSoldBy(cfg)}
                 </div>
             </aside>
 
@@ -1752,6 +1811,46 @@
         <div class="recipe-section">
             <div class="section-title"><i class="fas fa-hammer"></i>&nbsp; Crafting</div>
             <div class="recipe-grid">${ingredientChips}</div>
+        </div>`;
+    }
+
+    // ── Dropped by ───────────────────────────────────────────────────────────────
+    function renderDroppedBy(cfg) {
+      const matches = allMobs.filter(mob =>
+        mob.LootConfig && mob.LootConfig.DropsLoot && mob.LootConfig.LootDrops &&
+        mob.LootConfig.LootDrops.some(d => d.ItemID === cfg.ItemID)
+      );
+      if (!matches.length) return '';
+
+      const icons = matches.map(mob => {
+        const imgSrc = 'assets/mobs/' + mob.MobID.toLowerCase() + '.png';
+        const imgHtml = `<img src="${imgSrc}" alt="${mob.MobName}" onerror="this.outerHTML='<span class=\'icon-missing\'>💀</span>'" />`;
+        return `<a class="source-icon" href="mob.html?id=${encodeURIComponent(mob.MobID)}" title="${mob.MobName}">${imgHtml}</a>`;
+      }).join('');
+
+      return `
+        <div class="source-section">
+          <div class="section-title"><i class="fas fa-skull-crossbones"></i>&nbsp; Dropped by</div>
+          <div class="source-grid">${icons}</div>
+        </div>`;
+    }
+
+    // ── Sold by ──────────────────────────────────────────────────────────────────
+    function renderSoldBy(cfg) {
+      const matches = allShops.filter(shop =>
+        shop.AvailableItems && shop.AvailableItems.some(si => si.ItemID === cfg.ItemID)
+      );
+      if (!matches.length) return '';
+
+      const icons = matches.map(shop => {
+        const label = shop.ConfigName.replace(/_/g, ' ');
+        return `<a class="source-icon" href="merchants.html" title="${label}"><i class="fas fa-store" style="font-size:1.2rem;color:var(--wiki-text-dimmer)"></i></a>`;
+      }).join('');
+
+      return `
+        <div class="source-section">
+          <div class="section-title"><i class="fas fa-store"></i>&nbsp; Sold by</div>
+          <div class="source-grid">${icons}</div>
         </div>`;
     }
 
