@@ -206,67 +206,112 @@
       padding: 28px 20px
     }
 
-    /* ── Mob Header Card ── */
-    .mob-header-card {
-      background: var(--wiki-card-bg);
+    /* ── Infobox (standalone, item-style) ──────── */
+    .infobox {
+      background-color: var(--wiki-infobox-bg);
       border: 1px solid var(--wiki-infobox-border);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      padding: 24px 28px;
-      margin-bottom: 24px;
+      border-top: 3px solid var(--mob-accent, #f87171);
+      border-radius: 4px;
+      overflow: hidden;
+      max-width: 320px;
     }
 
-    .mob-header-img {
-      width: 100px;
-      height: 100px;
-      flex-shrink: 0;
-      background: var(--wiki-card-icon-bg);
-      border: 1px solid var(--wiki-infobox-border);
-      border-radius: 10px;
+    .infobox-header {
+      background: var(--wiki-infobox-header-bg);
+      padding: 14px;
+      text-align: center;
+      border-bottom: 1px solid var(--wiki-infobox-header-border);
+    }
+
+    .infobox-icon {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 10px;
+      background: color-mix(in srgb, var(--mob-accent, #f87171) 12%, var(--wiki-rarity-icon-base));
+      border: 2px solid color-mix(in srgb, var(--mob-accent, #f87171) 35%, var(--wiki-rarity-icon-border-base));
+      border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
+      box-shadow: 0 0 12px color-mix(in srgb, var(--mob-accent, #f87171) 25%, transparent),
+        inset 0 0 16px color-mix(in srgb, var(--mob-accent, #f87171) 10%, transparent);
     }
 
-    .mob-header-img img {
-      width: 100px;
-      height: 100px;
+    .infobox-icon img {
+      width: 64px;
+      height: 64px;
       object-fit: contain;
-      image-rendering: pixelated
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
     }
 
-    .mob-header-img .ph {
-      font-size: 3rem;
-      opacity: .3
+    .infobox-icon .icon-missing {
+      font-size: 2rem;
+      opacity: 0.25;
     }
 
-    .mob-header-info {
-      flex: 1;
-      min-width: 0
-    }
-
-    .mob-header-name {
+    .infobox-name {
       font-family: 'Press Start 2P', cursive;
-      font-size: clamp(0.9rem, 2vw, 1.2rem);
-      color: var(--wiki-heading);
-      margin-bottom: 10px;
-      line-height: 1.5
+      font-size: 0.65rem;
+      color: var(--mob-accent, #f87171);
+      line-height: 1.5;
+      margin-bottom: 4px;
     }
 
-    .mob-header-badges {
+    .infobox-type {
+      font-size: 0.7em;
+      color: var(--wiki-text-dim);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .infobox-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.78em;
+      background: var(--wiki-card-bg);
+    }
+
+    .infobox-table tr {
+      border-bottom: 1px solid var(--wiki-infobox-row-border);
+    }
+
+    .infobox-table tr:last-child {
+      border-bottom: none;
+    }
+
+    .infobox-table td {
+      padding: 7px 12px;
+      vertical-align: top;
+    }
+
+    .infobox-table td:first-child {
+      color: var(--wiki-infobox-label);
+      white-space: nowrap;
+      width: 50%;
+      font-size: 0.9em;
+    }
+
+    .infobox-table td:last-child {
+      color: var(--wiki-infobox-value);
+      font-weight: bold;
+    }
+
+    /* ── Badges ── */
+    .mob-badges {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px
+      gap: 5px;
+      justify-content: center;
+      margin-top: 8px;
     }
 
     .badge {
-      font-size: 0.65em;
+      font-size: 0.55em;
       font-weight: 700;
-      padding: 3px 9px;
-      border-radius: 4px
+      padding: 2px 7px;
+      border-radius: 3px;
     }
 
     .badge-hostile {
@@ -281,12 +326,6 @@
       color: #fbbf24
     }
 
-    .badge-level {
-      background: var(--wiki-mob-level-bg);
-      border: 1px solid var(--wiki-mob-level-border);
-      color: var(--wiki-mob-level-text)
-    }
-
     .badge-regen {
       background: rgba(74, 222, 128, .12);
       border: 1px solid rgba(74, 222, 128, .28);
@@ -299,78 +338,35 @@
       color: #a78bfa
     }
 
-    /* ── Sections ── */
-    .section {
-      background: var(--wiki-stat-bg);
-      border: 1px solid var(--wiki-infobox-row-border);
-      border-radius: 10px;
-      padding: 20px 22px;
-      margin-bottom: 16px
+    /* ── Infobox section headers ── */
+    .infobox-section-header {
+      background: var(--wiki-infobox-header-bg);
+      padding: 8px 12px;
+      text-align: center;
+      border-top: 1px solid var(--wiki-infobox-header-border);
+      border-bottom: 1px solid var(--wiki-infobox-header-border);
     }
 
-    .section-title {
+    .infobox-section-header span {
       font-family: 'Press Start 2P', cursive;
-      font-size: 0.62rem;
+      font-size: 0.5rem;
       color: var(--wiki-section-title);
-      margin-bottom: 16px;
-      display: flex;
-      align-items: center;
-      gap: 8px
+      letter-spacing: 0.05em;
     }
 
-    .section-title i {
-      font-size: 0.9em
+    /* ── Loot inside infobox ── */
+    .loot-infobox-section {
+      padding: 0;
     }
 
-    /* ── Stat Grid ── */
-    .stat-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-      gap: 8px
+    .loot-infobox-section .loot-grid {
+      padding: 10px;
     }
 
-    .stat-item {
-      background: var(--wiki-card-icon-bg);
-      border: 1px solid var(--wiki-stat-border);
-      border-radius: 6px;
-      padding: 10px 12px
+    .loot-infobox-section .no-loot {
+      padding: 10px 12px;
     }
 
-    .stat-label {
-      font-size: 0.58em;
-      color: var(--wiki-stat-label);
-      text-transform: uppercase;
-      letter-spacing: .05em;
-      margin-bottom: 3px
-    }
-
-    .stat-value {
-      font-size: 0.9em;
-      font-weight: 700;
-      color: var(--wiki-stat-value)
-    }
-
-    .stat-value.green {
-      color: #4ade80
-    }
-
-    .stat-value.red {
-      color: #f87171
-    }
-
-    .stat-value.yellow {
-      color: #fbbf24
-    }
-
-    .stat-value.blue {
-      color: #60a5fa
-    }
-
-    .stat-value.purple {
-      color: #a78bfa
-    }
-
-    /* ── Loot ── */
     .loot-grid {
       display: flex;
       flex-direction: column;
@@ -650,14 +646,8 @@
     }
 
     @media(max-width:600px) {
-      .mob-header-card {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px
-      }
-
-      .stat-grid {
-        grid-template-columns: 1fr 1fr
+      .article {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -847,32 +837,51 @@
       document.getElementById('pageHeading').innerHTML = '<i class="fas fa-skull"></i>&nbsp; ' + mobName;
       document.getElementById('pageSubtitle').textContent = (hostile ? 'Hostile mob' : 'Neutral mob');
 
+      var accentColor = hostile ? '#f87171' : '#fbbf24';
+
       /* badges */
       var badges =
         '<span class="badge ' + (hostile ? 'badge-hostile' : 'badge-neutral') + '">' + (hostile ? '&#128308; Hostile' : '&#128992; Neutral') + '</span>';
       if (h.CanRegenerate) badges += '<span class="badge badge-regen">&#9829; Regenerates</span>';
       if (mv && mv.CanBeStunned) badges += '<span class="badge badge-stun">&#128165; Stunnable</span>';
 
-      /* ── Health section ── */
-      var healthHtml = '<div class="stat-grid">';
-      healthHtml += stat('Max HP', fmt(h.MaxHealth), 'green');
-      healthHtml += stat('I-Frames', h.InvulnerabilityDuration + 's', '');
-      if (h.CanRegenerate) {
-        healthHtml += stat('Regen Rate', fmt(h.RegenerationRate) + '/s', 'green');
-        healthHtml += stat('Regen Delay', h.RegenerationDelay + 's', '');
+      /* ── Infobox icon ── */
+      var iconHtml = '<img src="assets/mobs/' + mob.MobID.toLowerCase() + '.png" alt="' + mobName + '"' +
+        ' onerror="this.outerHTML=\'<span class=\\\\&quot;icon-missing\\\\&quot;>&#128128;</span>\'" />';
+
+      /* ── Build section tables ── */
+      function sectionHeader(title) {
+        return '<div class="infobox-section-header"><span>' + title + '</span></div>';
       }
-      healthHtml += '</div>';
+      function sectionTable(rows) {
+        return '<table class="infobox-table">' + rows.map(function(r) {
+          return '<tr><td>' + r[0] + '</td><td>' + r[1] + '</td></tr>';
+        }).join('') + '</table>';
+      }
 
-      /* ── Combat section ── */
-      var combatHtml = '<div class="stat-grid">';
-      combatHtml += stat('Damage', fmt(c.Damage), 'red');
-      combatHtml += stat('Attack Speed', fmt(c.AttackSpeed) + 'x', '');
-      combatHtml += stat('Attack Range', fmt(c.AttackRange), '');
-      combatHtml += stat('Move Speed', fmt(c.MoveSpeed) + 'x', 'yellow');
-      combatHtml += stat('Knockback', fmt(c.KnockbackForce), '');
-      combatHtml += stat('KB Resistance', fmt(c.KnockbackResistance), '');
+      /* Stats section */
+      var statsRows = [
+        ['Max HP', '<span style="color:#4ade80;font-weight:700">' + fmt(h.MaxHealth) + '</span>'],
+      ];
+      if (h.CanRegenerate) {
+        statsRows.push(['Regen Rate', '<span style="color:#4ade80">' + fmt(h.RegenerationRate) + '/s</span>']);
+        statsRows.push(['Regen Delay', h.RegenerationDelay + 's']);
+      }
+      statsRows.push(['I-Frames', h.InvulnerabilityDuration + 's']);
 
-      combatHtml += '</div>';
+      /* Combat section */
+      var combatRows = [
+        ['Damage', '<span style="color:#f87171;font-weight:700">' + fmt(c.Damage) + '</span>'],
+        ['Attack Speed', fmt(c.AttackSpeed) + 'x'],
+        ['Attack Range', fmt(c.AttackRange)],
+      ];
+      if (c.KnockbackForce) combatRows.push(['Knockback', fmt(c.KnockbackForce)]);
+      if (c.KnockbackResistance) combatRows.push(['KB Resist', fmt(c.KnockbackResistance)]);
+
+      /* Movement section */
+      var moveRows = [
+        ['Move Speed', '<span style="color:#fbbf24;font-weight:700">' + fmt(c.MoveSpeed) + 'x</span>'],
+      ];
 
       /* ── Loot section ── */
       var lootHtml = '';
@@ -921,31 +930,25 @@
         lootHtml = '<div class="no-loot">No loot drops.</div>';
       }
 
-      /* ── Assemble page ── */
       document.getElementById('pageContent').innerHTML =
         '<a class="back-btn" href="mobs.html"><i class="fas fa-arrow-left"></i> Back to Mobs</a>' +
-        '<div class="mob-header-card">' +
-        '<div class="mob-header-img">' +
-        '<img src="assets/mobs/' + mob.MobID.toLowerCase() + '.png" alt="' + mobName + '"' +
-        ' onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'" />' +
-        '<span class="ph" style="display:none">&#128128;</span>' +
-        '</div>' +
-        '<div class="mob-header-info">' +
-        '<div class="mob-header-name">' + mobName + '</div>' +
-        '<div class="mob-header-badges">' + badges + '</div>' +
-        '</div>' +
-        '</div>' +
-        '<div class="section">' +
-        '<div class="section-title"><i class="fas fa-heart"></i> Health</div>' +
-        healthHtml +
-        '</div>' +
-        '<div class="section">' +
-        '<div class="section-title"><i class="fas fa-sword"></i> Combat</div>' +
-        combatHtml +
-        '</div>' +
-        '<div class="section">' +
-        '<div class="section-title"><i class="fas fa-gift"></i> Loot Drops</div>' +
-        lootHtml +
+        '<div class="infobox" style="--mob-accent:' + accentColor + '">' +
+          '<div class="infobox-header">' +
+            '<div class="infobox-icon">' + iconHtml + '</div>' +
+            '<div class="infobox-name">' + mobName + '</div>' +
+            '<div class="infobox-type">' + (hostile ? 'Hostile Mob' : 'Neutral Mob') + '</div>' +
+            '<div class="mob-badges">' + badges + '</div>' +
+          '</div>' +
+          sectionHeader('Stats') +
+          sectionTable(statsRows) +
+          sectionHeader('Combat') +
+          sectionTable(combatRows) +
+          sectionHeader('Movement') +
+          sectionTable(moveRows) +
+          '<div class="loot-infobox-section">' +
+            sectionHeader('Loot') +
+            lootHtml +
+          '</div>' +
         '</div>';
     }
     })();
