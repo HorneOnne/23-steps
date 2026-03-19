@@ -34,9 +34,9 @@
         "LootDrops": [
           {
             "ItemID": "Gel",
-            "MinQuantity": 2,
-            "MaxQuantity": 4,
-            "DropChance": 1.0
+            "MinQuantity": 1,
+            "MaxQuantity": 1,
+            "DropChance": 0.3
           }
         ]
       }
@@ -75,9 +75,9 @@
         "LootDrops": [
           {
             "ItemID": "Gel",
-            "MinQuantity": 3,
-            "MaxQuantity": 5,
-            "DropChance": 1.0
+            "MinQuantity": 1,
+            "MaxQuantity": 1,
+            "DropChance": 0.7
           }
         ]
       }
@@ -116,8 +116,8 @@
         "LootDrops": [
           {
             "ItemID": "Gel",
-            "MinQuantity": 4,
-            "MaxQuantity": 6,
+            "MinQuantity": 1,
+            "MaxQuantity": 1,
             "DropChance": 1.0
           }
         ]
@@ -157,8 +157,8 @@
         "LootDrops": [
           {
             "ItemID": "Gel",
-            "MinQuantity": 8,
-            "MaxQuantity": 12,
+            "MinQuantity": 1,
+            "MaxQuantity": 2,
             "DropChance": 1.0
           }
         ]
@@ -199,8 +199,8 @@
           {
             "ItemID": "Gel",
             "MinQuantity": 1,
-            "MaxQuantity": 2,
-            "DropChance": 1.0
+            "MaxQuantity": 1,
+            "DropChance": 0.3
           }
         ]
       }
@@ -1510,8 +1510,14 @@
         "LootDrops": [
           {
             "ItemID": "Gel",
-            "MinQuantity": 50,
-            "MaxQuantity": 100,
+            "MinQuantity": 4,
+            "MaxQuantity": 8,
+            "DropChance": 1.0
+          },
+          {
+            "ItemID": "SlimelingCore",
+            "MinQuantity": 1,
+            "MaxQuantity": 1,
             "DropChance": 1.0
           }
         ]
