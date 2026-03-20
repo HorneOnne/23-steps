@@ -43,8 +43,8 @@
     {
       "itemID": "IronOre",
       "value": {
-        "BuyPrice": 50,
-        "SellPrice": 25,
+        "BuyPrice": 160,
+        "SellPrice": 80,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -93,8 +93,8 @@
     {
       "itemID": "GoldOre",
       "value": {
-        "BuyPrice": 165,
-        "SellPrice": 83,
+        "BuyPrice": 640,
+        "SellPrice": 320,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -153,8 +153,8 @@
     {
       "itemID": "SilverOre",
       "value": {
-        "BuyPrice": 100,
-        "SellPrice": 50,
+        "BuyPrice": 320,
+        "SellPrice": 160,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -213,8 +213,8 @@
     {
       "itemID": "IronIngot",
       "value": {
-        "BuyPrice": 67,
-        "SellPrice": 13,
+        "BuyPrice": 160,
+        "SellPrice": 80,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -223,8 +223,8 @@
     {
       "itemID": "SilverIngot",
       "value": {
-        "BuyPrice": 115,
-        "SellPrice": 23,
+        "BuyPrice": 320,
+        "SellPrice": 160,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -233,8 +233,8 @@
     {
       "itemID": "GoldIngot",
       "value": {
-        "BuyPrice": 200,
-        "SellPrice": 40,
+        "BuyPrice": 640,
+        "SellPrice": 320,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -673,8 +673,8 @@
     {
       "itemID": "LeadOre",
       "value": {
-        "BuyPrice": 43,
-        "SellPrice": 22,
+        "BuyPrice": 80,
+        "SellPrice": 40,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -693,8 +693,8 @@
     {
       "itemID": "TungstenOre",
       "value": {
-        "BuyPrice": 105,
-        "SellPrice": 53,
+        "BuyPrice": 1280,
+        "SellPrice": 640,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -703,8 +703,8 @@
     {
       "itemID": "PlatinumOre",
       "value": {
-        "BuyPrice": 185,
-        "SellPrice": 93,
+        "BuyPrice": 2560,
+        "SellPrice": 1280,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -753,8 +753,8 @@
     {
       "itemID": "LeadIngot",
       "value": {
-        "BuyPrice": 60,
-        "SellPrice": 12,
+        "BuyPrice": 80,
+        "SellPrice": 40,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -763,8 +763,8 @@
     {
       "itemID": "TungstenIngot",
       "value": {
-        "BuyPrice": 135,
-        "SellPrice": 27,
+        "BuyPrice": 1280,
+        "SellPrice": 640,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -773,8 +773,8 @@
     {
       "itemID": "PlatinumIngot",
       "value": {
-        "BuyPrice": 215,
-        "SellPrice": 43,
+        "BuyPrice": 2560,
+        "SellPrice": 1280,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -823,8 +823,8 @@
     {
       "itemID": "IronPickaxe",
       "value": {
-        "BuyPrice": 265,
-        "SellPrice": 53,
+        "BuyPrice": 800,
+        "SellPrice": 400,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -833,8 +833,8 @@
     {
       "itemID": "SilverPickaxe",
       "value": {
-        "BuyPrice": 400,
-        "SellPrice": 80,
+        "BuyPrice": 1600,
+        "SellPrice": 800,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -843,8 +843,8 @@
     {
       "itemID": "GoldPickaxe",
       "value": {
-        "BuyPrice": 500,
-        "SellPrice": 100,
+        "BuyPrice": 3200,
+        "SellPrice": 1600,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -854,7 +854,7 @@
       "itemID": "TinPickaxe",
       "value": {
         "BuyPrice": 200,
-        "SellPrice": 40,
+        "SellPrice": 100,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -863,8 +863,8 @@
     {
       "itemID": "LeadPickaxe",
       "value": {
-        "BuyPrice": 235,
-        "SellPrice": 47,
+        "BuyPrice": 400,
+        "SellPrice": 200,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -873,8 +873,8 @@
     {
       "itemID": "TungstenPickaxe",
       "value": {
-        "BuyPrice": 435,
-        "SellPrice": 87,
+        "BuyPrice": 6400,
+        "SellPrice": 3200,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -883,8 +883,8 @@
     {
       "itemID": "PlatinumPickaxe",
       "value": {
-        "BuyPrice": 600,
-        "SellPrice": 120,
+        "BuyPrice": 12800,
+        "SellPrice": 6400,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -933,8 +933,8 @@
     {
       "itemID": "IronSword",
       "value": {
-        "BuyPrice": 300,
-        "SellPrice": 60,
+        "BuyPrice": 800,
+        "SellPrice": 400,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -943,8 +943,8 @@
     {
       "itemID": "SilverSword",
       "value": {
-        "BuyPrice": 435,
-        "SellPrice": 87,
+        "BuyPrice": 1600,
+        "SellPrice": 800,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -953,8 +953,8 @@
     {
       "itemID": "GoldSword",
       "value": {
-        "BuyPrice": 535,
-        "SellPrice": 105,
+        "BuyPrice": 3200,
+        "SellPrice": 1600,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -983,8 +983,8 @@
     {
       "itemID": "TinBow",
       "value": {
-        "BuyPrice": 265,
-        "SellPrice": 53,
+        "BuyPrice": 400,
+        "SellPrice": 200,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -993,8 +993,8 @@
     {
       "itemID": "LeadBow",
       "value": {
-        "BuyPrice": 300,
-        "SellPrice": 60,
+        "BuyPrice": 800,
+        "SellPrice": 400,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -1003,8 +1003,8 @@
     {
       "itemID": "IronBow",
       "value": {
-        "BuyPrice": 335,
-        "SellPrice": 67,
+        "BuyPrice": 1600,
+        "SellPrice": 800,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -1013,8 +1013,8 @@
     {
       "itemID": "SilverBow",
       "value": {
-        "BuyPrice": 465,
-        "SellPrice": 93,
+        "BuyPrice": 3200,
+        "SellPrice": 1600,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -1023,8 +1023,8 @@
     {
       "itemID": "GoldBow",
       "value": {
-        "BuyPrice": 565,
-        "SellPrice": 115,
+        "BuyPrice": 6400,
+        "SellPrice": 3200,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -1033,8 +1033,8 @@
     {
       "itemID": "TungstenBow",
       "value": {
-        "BuyPrice": 500,
-        "SellPrice": 100,
+        "BuyPrice": 12800,
+        "SellPrice": 6400,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -1043,8 +1043,8 @@
     {
       "itemID": "PlatinumBow",
       "value": {
-        "BuyPrice": 700,
-        "SellPrice": 140,
+        "BuyPrice": 25600,
+        "SellPrice": 12800,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -1073,8 +1073,8 @@
     {
       "itemID": "TinSword",
       "value": {
-        "BuyPrice": 235,
-        "SellPrice": 47,
+        "BuyPrice": 200,
+        "SellPrice": 100,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -1083,8 +1083,8 @@
     {
       "itemID": "LeadSword",
       "value": {
-        "BuyPrice": 265,
-        "SellPrice": 53,
+        "BuyPrice": 400,
+        "SellPrice": 200,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -1093,8 +1093,8 @@
     {
       "itemID": "TungstenSword",
       "value": {
-        "BuyPrice": 465,
-        "SellPrice": 93,
+        "BuyPrice": 6400,
+        "SellPrice": 3200,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -1103,8 +1103,8 @@
     {
       "itemID": "PlatinumSword",
       "value": {
-        "BuyPrice": 665,
-        "SellPrice": 135,
+        "BuyPrice": 12800,
+        "SellPrice": 6400,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -1273,8 +1273,8 @@
     {
       "itemID": "IronHelmet",
       "value": {
-        "BuyPrice": 200,
-        "SellPrice": 40,
+        "BuyPrice": 480,
+        "SellPrice": 240,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -1283,8 +1283,8 @@
     {
       "itemID": "IronChestplate",
       "value": {
-        "BuyPrice": 335,
-        "SellPrice": 67,
+        "BuyPrice": 800,
+        "SellPrice": 400,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -1293,8 +1293,8 @@
     {
       "itemID": "IronLeggings",
       "value": {
-        "BuyPrice": 215,
-        "SellPrice": 43,
+        "BuyPrice": 640,
+        "SellPrice": 320,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -1303,8 +1303,8 @@
     {
       "itemID": "SilverHelmet",
       "value": {
-        "BuyPrice": 300,
-        "SellPrice": 60,
+        "BuyPrice": 960,
+        "SellPrice": 480,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -1313,8 +1313,8 @@
     {
       "itemID": "SilverChestplate",
       "value": {
-        "BuyPrice": 485,
-        "SellPrice": 97,
+        "BuyPrice": 1600,
+        "SellPrice": 800,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -1323,8 +1323,8 @@
     {
       "itemID": "SilverLeggings",
       "value": {
-        "BuyPrice": 300,
-        "SellPrice": 60,
+        "BuyPrice": 1280,
+        "SellPrice": 640,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -1333,8 +1333,8 @@
     {
       "itemID": "GoldHelmet",
       "value": {
-        "BuyPrice": 365,
-        "SellPrice": 73,
+        "BuyPrice": 1920,
+        "SellPrice": 960,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -1343,8 +1343,8 @@
     {
       "itemID": "GoldChestplate",
       "value": {
-        "BuyPrice": 600,
-        "SellPrice": 120,
+        "BuyPrice": 3200,
+        "SellPrice": 1600,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -1353,8 +1353,8 @@
     {
       "itemID": "GoldLeggings",
       "value": {
-        "BuyPrice": 365,
-        "SellPrice": 73,
+        "BuyPrice": 2560,
+        "SellPrice": 1280,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -1363,8 +1363,8 @@
     {
       "itemID": "TinHelmet",
       "value": {
-        "BuyPrice": 165,
-        "SellPrice": 33,
+        "BuyPrice": 120,
+        "SellPrice": 60,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -1373,8 +1373,8 @@
     {
       "itemID": "TinChestplate",
       "value": {
-        "BuyPrice": 250,
-        "SellPrice": 50,
+        "BuyPrice": 200,
+        "SellPrice": 100,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -1383,8 +1383,8 @@
     {
       "itemID": "TinLeggings",
       "value": {
-        "BuyPrice": 165,
-        "SellPrice": 33,
+        "BuyPrice": 160,
+        "SellPrice": 80,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -1393,8 +1393,8 @@
     {
       "itemID": "LeadHelmet",
       "value": {
-        "BuyPrice": 185,
-        "SellPrice": 37,
+        "BuyPrice": 240,
+        "SellPrice": 120,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -1403,8 +1403,8 @@
     {
       "itemID": "LeadChestplate",
       "value": {
-        "BuyPrice": 300,
-        "SellPrice": 60,
+        "BuyPrice": 400,
+        "SellPrice": 200,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -1413,8 +1413,8 @@
     {
       "itemID": "LeadLeggings",
       "value": {
-        "BuyPrice": 185,
-        "SellPrice": 37,
+        "BuyPrice": 320,
+        "SellPrice": 160,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -1423,8 +1423,8 @@
     {
       "itemID": "TungstenHelmet",
       "value": {
-        "BuyPrice": 335,
-        "SellPrice": 67,
+        "BuyPrice": 3840,
+        "SellPrice": 1920,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -1433,8 +1433,8 @@
     {
       "itemID": "TungstenChestplate",
       "value": {
-        "BuyPrice": 500,
-        "SellPrice": 100,
+        "BuyPrice": 6400,
+        "SellPrice": 3200,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -1443,8 +1443,8 @@
     {
       "itemID": "TungstenLeggings",
       "value": {
-        "BuyPrice": 335,
-        "SellPrice": 67,
+        "BuyPrice": 5120,
+        "SellPrice": 2560,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -1453,8 +1453,8 @@
     {
       "itemID": "PlatinumHelmet",
       "value": {
-        "BuyPrice": 465,
-        "SellPrice": 93,
+        "BuyPrice": 7680,
+        "SellPrice": 3840,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -1463,8 +1463,8 @@
     {
       "itemID": "PlatinumChestplate",
       "value": {
-        "BuyPrice": 735,
-        "SellPrice": 145,
+        "BuyPrice": 12800,
+        "SellPrice": 6400,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
@@ -1473,8 +1473,8 @@
     {
       "itemID": "PlatinumLeggings",
       "value": {
-        "BuyPrice": 465,
-        "SellPrice": 93,
+        "BuyPrice": 10240,
+        "SellPrice": 5120,
         "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
