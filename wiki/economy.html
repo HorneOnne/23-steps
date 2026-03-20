@@ -479,6 +479,34 @@
                 font-size: .7rem
             }
         }
+
+        .row-icon {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+            image-rendering: pixelated;
+            image-rendering: crisp-edges;
+            vertical-align: middle;
+            margin-right: 6px;
+            flex-shrink: 0;
+        }
+
+        .row-icon-wrap {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .mob-row-icon {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+            image-rendering: pixelated;
+            image-rendering: crisp-edges;
+            vertical-align: middle;
+            margin-right: 4px;
+            flex-shrink: 0;
+        }
     </style>
 </head>
 
@@ -523,6 +551,7 @@
     <footer>&copy;2026 23-Steps. All rights reserved | <a href="../privacy-policy.html">Privacy Policy</a> | <a
             href="../terms-of-service.html">Terms of Service</a></footer>
 
+    <script src="icon_map.js"></script>
     <script>
         (async function () {
             // Load data from JSON files
@@ -649,8 +678,13 @@
                 });
                 rows.sort((a, b) => b.buy - a.buy);
                 const maxBuy = Math.max(...rows.map(r => r.buy));
-                el.innerHTML = `<table class="eco-table" id="priceTable"><thead><tr><th data-col="name">Item ↕</th><th data-col="type">Type</th><th data-col="rarity">Rarity</th><th data-col="buy" class="num">Buy ${coin} ↕</th><th data-col="sell" class="num">Sell ${coin}</th><th data-col="ratio" class="num">Sell/Buy %</th><th>Relative</th></tr></thead><tbody>${rows.map(r => `<tr><td><span class="rarity-dot" style="background:${RARITY_COLORS[r.rarity] || '#888'}"></span>${r.name}</td><td class="muted">${r.type}</td><td style="color:${RARITY_COLORS[r.rarity] || '#888'}">${r.rarity}</td><td class="num gold">${r.buy}</td><td class="num gold">${r.sell}</td><td class="num ${r.ratio >= 25 ? 'good' : r.ratio >= 15 ? 'warn' : 'bad'}">${r.ratioStr}%</td><td><div class="bar-cell"><div class="bar" style="width:${(r.buy / maxBuy * 120).toFixed(0)}px"></div></div></td></tr>`).join('')}</tbody></table>`;
-                makeSortable(document.getElementById('priceTable'), rows, r => `<tr><td><span class="rarity-dot" style="background:${RARITY_COLORS[r.rarity] || '#888'}"></span>${r.name}</td><td class="muted">${r.type}</td><td style="color:${RARITY_COLORS[r.rarity] || '#888'}">${r.rarity}</td><td class="num gold">${r.buy}</td><td class="num gold">${r.sell}</td><td class="num ${r.ratio >= 25 ? 'good' : r.ratio >= 15 ? 'warn' : 'bad'}">${r.ratioStr}%</td><td><div class="bar-cell"><div class="bar" style="width:${(r.buy / maxBuy * 120).toFixed(0)}px"></div></div></td></tr>`);
+                const priceRowHtml = r => {
+                    const iUrl = typeof iconUrl !== 'undefined' ? iconUrl(r.id) : null;
+                    const iImg = iUrl ? `<img class="row-icon" src="${iUrl}" alt="" onerror="this.style.display='none'">` : '';
+                    return `<tr><td><span class="rarity-dot" style="background:${RARITY_COLORS[r.rarity] || '#888'}"></span>${iImg}${r.name}</td><td class="muted">${r.type}</td><td style="color:${RARITY_COLORS[r.rarity] || '#888'}">${r.rarity}</td><td class="num gold">${r.buy}</td><td class="num gold">${r.sell}</td><td class="num ${r.ratio >= 25 ? 'good' : r.ratio >= 15 ? 'warn' : 'bad'}">${r.ratioStr}%</td><td><div class="bar-cell"><div class="bar" style="width:${(r.buy / maxBuy * 120).toFixed(0)}px"></div></div></td></tr>`;
+                };
+                el.innerHTML = `<table class="eco-table" id="priceTable"><thead><tr><th data-col="name">Item ↕</th><th data-col="type">Type</th><th data-col="rarity">Rarity</th><th data-col="buy" class="num">Buy ${coin} ↕</th><th data-col="sell" class="num">Sell ${coin}</th><th data-col="ratio" class="num">Sell/Buy %</th><th>Relative</th></tr></thead><tbody>${rows.map(priceRowHtml).join('')}</tbody></table>`;
+                makeSortable(document.getElementById('priceTable'), rows, priceRowHtml);
             }
 
             function buildCrafting(el) {
@@ -670,10 +704,10 @@
                     });
                     const profit = sellTotal - matCost;
                     const margin = matCost > 0 ? (profit / matCost * 100) : 0;
-                    rows.push({ name: resultCfg.Name || r.ResultItem, qty: r.ResultQuantity, rarity: resultCfg.Rarity || 'Common', matCost, sellTotal, buyTotal, profit, margin, mats: matDetail.join(', '), missing });
+                    rows.push({ id: r.ResultItem, name: resultCfg.Name || r.ResultItem, qty: r.ResultQuantity, rarity: resultCfg.Rarity || 'Common', matCost, sellTotal, buyTotal, profit, margin, mats: matDetail.join(', '), missing });
                 });
                 rows.sort((a, b) => b.margin - a.margin);
-                el.innerHTML = `<table class="eco-table"><thead><tr><th>Result</th><th class="num">Qty</th><th class="num">Mat Cost ${coin}</th><th class="num">Sell Value ${coin}</th><th class="num">Buy Value ${coin}</th><th class="num">Craft Profit</th><th class="num">Margin %</th><th>Materials</th></tr></thead><tbody>${rows.map(r => `<tr><td><span class="rarity-dot" style="background:${RARITY_COLORS[r.rarity] || '#888'}"></span>${r.name}</td><td class="num">${r.qty}</td><td class="num gold">${r.missing ? '<span class="muted">partial</span>' : r.matCost.toFixed(0)}</td><td class="num gold">${r.sellTotal.toFixed(0)}</td><td class="num gold">${r.buyTotal.toFixed(0)}</td><td class="num ${r.profit >= 0 ? 'good' : 'bad'}">${r.profit >= 0 ? '+' : ''}${r.profit.toFixed(0)}</td><td class="num ${r.margin > 0 ? 'good' : r.margin > -30 ? 'warn' : 'bad'}">${r.margin.toFixed(1)}%</td><td class="muted" style="white-space:normal;max-width:300px;font-size:.7rem">${r.mats}</td></tr>`).join('')}</tbody></table>`;
+                el.innerHTML = `<table class="eco-table"><thead><tr><th>Result</th><th class="num">Qty</th><th class="num">Mat Cost ${coin}</th><th class="num">Sell Value ${coin}</th><th class="num">Buy Value ${coin}</th><th class="num">Craft Profit</th><th class="num">Margin %</th><th>Materials</th></tr></thead><tbody>${rows.map(r => { const iUrl2 = typeof iconUrl !== 'undefined' ? iconUrl(r.id) : null; const iImg2 = iUrl2 ? `<img class="row-icon" src="${iUrl2}" alt="" onerror="this.style.display='none'">` : ''; return `<tr><td><span class="rarity-dot" style="background:${RARITY_COLORS[r.rarity] || '#888'}"></span>${iImg2}${r.name}</td><td class="num">${r.qty}</td><td class="num gold">${r.missing ? '<span class="muted">partial</span>' : r.matCost.toFixed(0)}</td><td class="num gold">${r.sellTotal.toFixed(0)}</td><td class="num gold">${r.buyTotal.toFixed(0)}</td><td class="num ${r.profit >= 0 ? 'good' : 'bad'}">${r.profit >= 0 ? '+' : ''}${r.profit.toFixed(0)}</td><td class="num ${r.margin > 0 ? 'good' : r.margin > -30 ? 'warn' : 'bad'}">${r.margin.toFixed(1)}%</td><td class="muted" style="white-space:normal;max-width:300px;font-size:.7rem">${r.mats}</td></tr>`; }).join('')}</tbody></table>`;
             }
 
             function buildWeapons(el) {
@@ -686,11 +720,11 @@
                     const spd = c.UseSpeed || 1;
                     const dps = dmg / spd;
                     const type = sc ? 'Sword' : bc ? 'Bow' : 'Staff';
-                    rows.push({ name: c.Name, type, rarity: c.Rarity, dmg, spd, dps, buy: v ? v.BuyPrice : 0, sell: v ? v.SellPrice : 0, eff: v && v.BuyPrice > 0 ? (dps / v.BuyPrice) : 0, kb: cfg.KnockbackForce || 0 });
+                    rows.push({ id: c.ItemID, name: c.Name, type, rarity: c.Rarity, dmg, spd, dps, buy: v ? v.BuyPrice : 0, sell: v ? v.SellPrice : 0, eff: v && v.BuyPrice > 0 ? (dps / v.BuyPrice) : 0, kb: cfg.KnockbackForce || 0 });
                 });
                 rows.sort((a, b) => b.dps - a.dps);
                 const maxDps = Math.max(...rows.map(r => r.dps));
-                el.innerHTML = `<table class="eco-table"><thead><tr><th>Weapon</th><th>Type</th><th>Rarity</th><th class="num">Damage</th><th class="num">Speed</th><th class="num">DPS</th><th class="num">Buy ${coin}</th><th class="num">DPS/Gold</th><th>DPS Bar</th></tr></thead><tbody>${rows.map(r => `<tr><td><span class="rarity-dot" style="background:${RARITY_COLORS[r.rarity] || '#888'}"></span>${r.name}</td><td class="muted">${r.type}</td><td style="color:${RARITY_COLORS[r.rarity] || '#888'}">${r.rarity}</td><td class="num">${r.dmg}</td><td class="num">${r.spd.toFixed(1)}</td><td class="num gold">${r.dps.toFixed(2)}</td><td class="num gold">${r.buy || '-'}</td><td class="num ${r.eff > 0.1 ? 'good' : r.eff > 0.05 ? 'warn' : 'bad'}">${r.eff ? r.eff.toFixed(4) : '-'}</td><td><div class="bar-cell"><div class="bar" style="width:${(r.dps / maxDps * 100).toFixed(0)}px;background:${RARITY_COLORS[r.rarity] || '#888'}"></div></div></td></tr>`).join('')}</tbody></table>`;
+                el.innerHTML = `<table class="eco-table"><thead><tr><th>Weapon</th><th>Type</th><th>Rarity</th><th class="num">Damage</th><th class="num">Speed</th><th class="num">DPS</th><th class="num">Buy ${coin}</th><th class="num">DPS/Gold</th><th>DPS Bar</th></tr></thead><tbody>${rows.map(r => { const wIUrl = typeof iconUrl !== 'undefined' ? iconUrl(r.id) : null; const wIImg = wIUrl ? `<img class="row-icon" src="${wIUrl}" alt="" onerror="this.style.display='none'">` : ''; return `<tr><td><span class="rarity-dot" style="background:${RARITY_COLORS[r.rarity] || '#888'}"></span>${wIImg}${r.name}</td><td class="muted">${r.type}</td><td style="color:${RARITY_COLORS[r.rarity] || '#888'}">${r.rarity}</td><td class="num">${r.dmg}</td><td class="num">${r.spd.toFixed(1)}</td><td class="num gold">${r.dps.toFixed(2)}</td><td class="num gold">${r.buy || '-'}</td><td class="num ${r.eff > 0.1 ? 'good' : r.eff > 0.05 ? 'warn' : 'bad'}">${r.eff ? r.eff.toFixed(4) : '-'}</td><td><div class="bar-cell"><div class="bar" style="width:${(r.dps / maxDps * 100).toFixed(0)}px;background:${RARITY_COLORS[r.rarity] || '#888'}"></div></div></td></tr>`; }).join('')}</tbody></table>`;
             }
 
             function buildArmor(el) {
@@ -702,11 +736,11 @@
                     const mdef = c.ArmorConfig.MagicDefense || 0;
                     const armorTypes = ['Helmet', 'Chestplate', 'Leggings'];
                     const slot = armorTypes[c.ArmorConfig.ArmorType] || '?';
-                    rows.push({ name: c.Name, slot, set: c.ArmorConfig.SetName, rarity: c.Rarity, def, mdef, buy: v ? v.BuyPrice : 0, sell: v ? v.SellPrice : 0, eff: v && v.BuyPrice > 0 ? (def / v.BuyPrice) : 0 });
+                    rows.push({ id: c.ItemID, name: c.Name, slot, set: c.ArmorConfig.SetName, rarity: c.Rarity, def, mdef, buy: v ? v.BuyPrice : 0, sell: v ? v.SellPrice : 0, eff: v && v.BuyPrice > 0 ? (def / v.BuyPrice) : 0 });
                 });
                 rows.sort((a, b) => b.def - a.def);
                 const maxDef = Math.max(...rows.map(r => r.def));
-                el.innerHTML = `<table class="eco-table"><thead><tr><th>Armor</th><th>Slot</th><th>Set</th><th>Rarity</th><th class="num">Defense</th><th class="num">M.Def</th><th class="num">Buy ${coin}</th><th class="num">Sell ${coin}</th><th class="num">Def/Gold</th><th>Defense Bar</th></tr></thead><tbody>${rows.map(r => `<tr><td><span class="rarity-dot" style="background:${RARITY_COLORS[r.rarity] || '#888'}"></span>${r.name}</td><td class="muted">${r.slot}</td><td class="muted">${r.set}</td><td style="color:${RARITY_COLORS[r.rarity] || '#888'}">${r.rarity}</td><td class="num">${r.def}</td><td class="num">${r.mdef}</td><td class="num gold">${r.buy || '-'}</td><td class="num gold">${r.sell || '-'}</td><td class="num ${r.eff > 0.05 ? 'good' : r.eff > 0.02 ? 'warn' : 'bad'}">${r.eff ? r.eff.toFixed(4) : '-'}</td><td><div class="bar-cell"><div class="bar" style="width:${(r.def / maxDef * 100).toFixed(0)}px;background:${RARITY_COLORS[r.rarity] || '#888'}"></div></div></td></tr>`).join('')}</tbody></table>`;
+                el.innerHTML = `<table class="eco-table"><thead><tr><th>Armor</th><th>Slot</th><th>Set</th><th>Rarity</th><th class="num">Defense</th><th class="num">M.Def</th><th class="num">Buy ${coin}</th><th class="num">Sell ${coin}</th><th class="num">Def/Gold</th><th>Defense Bar</th></tr></thead><tbody>${rows.map(r => { const aIUrl = typeof iconUrl !== 'undefined' ? iconUrl(r.id) : null; const aIImg = aIUrl ? `<img class="row-icon" src="${aIUrl}" alt="" onerror="this.style.display='none'">` : ''; return `<tr><td><span class="rarity-dot" style="background:${RARITY_COLORS[r.rarity] || '#888'}"></span>${aIImg}${r.name}</td><td class="muted">${r.slot}</td><td class="muted">${r.set}</td><td style="color:${RARITY_COLORS[r.rarity] || '#888'}">${r.rarity}</td><td class="num">${r.def}</td><td class="num">${r.mdef}</td><td class="num gold">${r.buy || '-'}</td><td class="num gold">${r.sell || '-'}</td><td class="num ${r.eff > 0.05 ? 'good' : r.eff > 0.02 ? 'warn' : 'bad'}">${r.eff ? r.eff.toFixed(4) : '-'}</td><td><div class="bar-cell"><div class="bar" style="width:${(r.def / maxDef * 100).toFixed(0)}px;background:${RARITY_COLORS[r.rarity] || '#888'}"></div></div></td></tr>`; }).join('')}</tbody></table>`;
             }
 
             function buildMobs(el) {
@@ -726,11 +760,11 @@
                     const dmg = m.CombatConfig.Damage;
                     const def = m.CombatConfig.Defense;
                     const threat = dmg;
-                    return { name: m.MobName, level: m.Level, hp, dmg, def, xp, threat: threat.toFixed(1), lootVal: avgLootValue, goldPerHp: hp > 0 ? (avgLootValue / hp) : 0, drops: lootNames.join(', '), hostile: m.AIConfig.IsHostileToPlayer };
+                    return { name: m.MobName, mobID: m.MobID, level: m.Level, hp, dmg, def, xp, threat: threat.toFixed(1), lootVal: avgLootValue, goldPerHp: hp > 0 ? (avgLootValue / hp) : 0, drops: lootNames.join(', '), hostile: m.AIConfig.IsHostileToPlayer };
                 });
                 rows.sort((a, b) => b.lootVal - a.lootVal);
                 const maxLoot = Math.max(...rows.map(r => r.lootVal));
-                el.innerHTML = `<table class="eco-table"><thead><tr><th>Mob</th><th class="num">Lvl</th><th class="num">HP</th><th class="num">Damage</th><th class="num">Defense</th><th class="num">Threat</th><th class="num">XP</th><th class="num">Avg Loot ${coin}</th><th class="num">Gold/HP</th><th>Drops</th><th>Loot Bar</th></tr></thead><tbody>${rows.map(r => `<tr><td>${r.hostile ? '⚔️' : '🕊️'} ${r.name}</td><td class="num">${r.level}</td><td class="num">${r.hp}</td><td class="num">${r.dmg}</td><td class="num">${r.def}</td><td class="num warn">${r.threat}</td><td class="num">${r.xp}</td><td class="num gold">${r.lootVal.toFixed(1)}</td><td class="num ${r.goldPerHp > 0.05 ? 'good' : r.goldPerHp > 0.01 ? 'warn' : 'bad'}">${r.goldPerHp.toFixed(4)}</td><td class="muted" style="white-space:normal;font-size:.7rem">${r.drops}</td><td><div class="bar-cell"><div class="bar" style="width:${maxLoot > 0 ? (r.lootVal / maxLoot * 100).toFixed(0) : 0}px;background:#f5c842"></div></div></td></tr>`).join('')}</tbody></table>`;
+                el.innerHTML = `<table class="eco-table"><thead><tr><th>Mob</th><th class="num">Lvl</th><th class="num">HP</th><th class="num">Damage</th><th class="num">Defense</th><th class="num">Threat</th><th class="num">XP</th><th class="num">Avg Loot ${coin}</th><th class="num">Gold/HP</th><th>Drops</th><th>Loot Bar</th></tr></thead><tbody>${rows.map(r => { const mImgSrc = 'assets/mobs/' + r.mobID.toLowerCase() + '.png'; return `<tr><td><img class="mob-row-icon" src="${mImgSrc}" alt="" onerror="this.style.display='none'">${r.hostile ? '⚔️' : '🕊️'} ${r.name}</td><td class="num">${r.level}</td><td class="num">${r.hp}</td><td class="num">${r.dmg}</td><td class="num">${r.def}</td><td class="num warn">${r.threat}</td><td class="num">${r.xp}</td><td class="num gold">${r.lootVal.toFixed(1)}</td><td class="num ${r.goldPerHp > 0.05 ? 'good' : r.goldPerHp > 0.01 ? 'warn' : 'bad'}">${r.goldPerHp.toFixed(4)}</td><td class="muted" style="white-space:normal;font-size:.7rem">${r.drops}</td><td><div class="bar-cell"><div class="bar" style="width:${maxLoot > 0 ? (r.lootVal / maxLoot * 100).toFixed(0) : 0}px;background:#f5c842"></div></div></td></tr>`; }).join('')}</tbody></table>`;
             }
 
             function makeSortable(table, data, renderRow) {

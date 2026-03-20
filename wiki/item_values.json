@@ -3,8 +3,8 @@
     {
       "itemID": "Dirt",
       "value": {
-        "BuyPrice": 2.5,
-        "SellPrice": 0.5,
+        "BuyPrice": 2.0,
+        "SellPrice": 1.0,
         "DemandMultiplier": 1.0,
         "CanBuy": true,
         "CanSell": true
@@ -13,7 +13,7 @@
     {
       "itemID": "Stone",
       "value": {
-        "BuyPrice": 5.0,
+        "BuyPrice": 3.0,
         "SellPrice": 1.0,
         "DemandMultiplier": 1.0,
         "CanBuy": true,
@@ -23,8 +23,8 @@
     {
       "itemID": "Sand",
       "value": {
-        "BuyPrice": 2.5,
-        "SellPrice": 0.5,
+        "BuyPrice": 5.0,
+        "SellPrice": 2.0,
         "DemandMultiplier": 1.0,
         "CanBuy": true,
         "CanSell": true
@@ -53,8 +53,8 @@
     {
       "itemID": "Coal",
       "value": {
-        "BuyPrice": 8.0,
-        "SellPrice": 1.6,
+        "BuyPrice": 10.0,
+        "SellPrice": 5.0,
         "DemandMultiplier": 1.0,
         "CanBuy": true,
         "CanSell": true
@@ -1531,7 +1531,7 @@
       }
     },
     {
-      "itemID":"BoneWings",
+      "itemID": "BoneWings",
       "value": {
         "BuyPrice": 3500.0,
         "SellPrice": 700.0,
