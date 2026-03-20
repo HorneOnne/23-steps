@@ -2317,27 +2317,6 @@
       }
     },
     {
-      "ItemID": "Wood",
-      "ItemType": "Resource",
-      "Name": "Wood",
-      "Description": "Hewn and shaped, ready for crafting.",
-      "MaxStackSize": 64,
-      "CanBeEnchanted": false,
-      "Rarity": "Common",
-      "Offset": {
-        "x": 0.0,
-        "y": 0.0,
-        "magnitude": 0.0,
-        "sqrMagnitude": 0.0
-      },
-      "AngleZ": 0.0,
-      "UseSpeed": 999.0,
-      "ResourceConfig": {
-        "IsRaw": true,
-        "IsCraftingMaterial": true
-      }
-    },
-    {
       "ItemID": "Clay",
       "ItemType": "Resource",
       "Name": "Clay",

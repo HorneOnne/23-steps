@@ -1,16 +1,6 @@
 {
   "Recipes": [
     {
-      "ResultItem": "Coal",
-      "ResultQuantity": 1,
-      "Ingredients": [
-        {
-          "ItemID": "Dirt",
-          "Quantity": 1
-        }
-      ]
-    },
-    {
       "ResultItem": "Arrow",
       "ResultQuantity": 1,
       "Ingredients": [

@@ -3,9 +3,9 @@
     {
       "itemID": "Dirt",
       "value": {
-        "BuyPrice": 2.0,
-        "SellPrice": 1.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 2,
+        "SellPrice": 1,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -13,9 +13,9 @@
     {
       "itemID": "Stone",
       "value": {
-        "BuyPrice": 3.0,
-        "SellPrice": 1.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 4,
+        "SellPrice": 2,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -23,9 +23,9 @@
     {
       "itemID": "Sand",
       "value": {
-        "BuyPrice": 5.0,
-        "SellPrice": 2.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 5,
+        "SellPrice": 2,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -33,9 +33,9 @@
     {
       "itemID": "Clay",
       "value": {
-        "BuyPrice": 5.0,
-        "SellPrice": 1.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 5,
+        "SellPrice": 1,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -43,9 +43,9 @@
     {
       "itemID": "IronOre",
       "value": {
-        "BuyPrice": 15.0,
-        "SellPrice": 3.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 50,
+        "SellPrice": 25,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -53,9 +53,9 @@
     {
       "itemID": "Coal",
       "value": {
-        "BuyPrice": 10.0,
-        "SellPrice": 5.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 10,
+        "SellPrice": 5,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -63,9 +63,19 @@
     {
       "itemID": "Wood",
       "value": {
-        "BuyPrice": 5.0,
-        "SellPrice": 1.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 5,
+        "SellPrice": 1,
+        "DemandMultiplier": 1,
+        "CanBuy": true,
+        "CanSell": true
+      }
+    },
+    {
+      "itemID": "Log",
+      "value": {
+        "BuyPrice": 4,
+        "SellPrice": 2,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -73,9 +83,9 @@
     {
       "itemID": "CopperOre",
       "value": {
-        "BuyPrice": 12.0,
-        "SellPrice": 2.4,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 20,
+        "SellPrice": 10,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -83,9 +93,9 @@
     {
       "itemID": "GoldOre",
       "value": {
-        "BuyPrice": 50.0,
-        "SellPrice": 10.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 165,
+        "SellPrice": 83,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -93,9 +103,9 @@
     {
       "itemID": "Gravel",
       "value": {
-        "BuyPrice": 3.0,
-        "SellPrice": 0.6,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 3,
+        "SellPrice": 1,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -103,9 +113,9 @@
     {
       "itemID": "Flint",
       "value": {
-        "BuyPrice": 6.0,
-        "SellPrice": 1.2,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 6,
+        "SellPrice": 1,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -113,9 +123,9 @@
     {
       "itemID": "Grass",
       "value": {
-        "BuyPrice": 3.0,
-        "SellPrice": 0.6,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 3,
+        "SellPrice": 1,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -123,9 +133,9 @@
     {
       "itemID": "WaterBucket",
       "value": {
-        "BuyPrice": 10.0,
-        "SellPrice": 2.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 10,
+        "SellPrice": 2,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -133,9 +143,9 @@
     {
       "itemID": "LavaBucket",
       "value": {
-        "BuyPrice": 25.0,
-        "SellPrice": 5.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 25,
+        "SellPrice": 5,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -143,9 +153,9 @@
     {
       "itemID": "SilverOre",
       "value": {
-        "BuyPrice": 30.0,
-        "SellPrice": 6.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 100,
+        "SellPrice": 50,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -153,9 +163,9 @@
     {
       "itemID": "DiamondOre",
       "value": {
-        "BuyPrice": 150.0,
-        "SellPrice": 30.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 500,
+        "SellPrice": 250,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -163,9 +173,9 @@
     {
       "itemID": "Ice",
       "value": {
-        "BuyPrice": 5.0,
-        "SellPrice": 1.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 5,
+        "SellPrice": 1,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -173,9 +183,9 @@
     {
       "itemID": "Gel",
       "value": {
-        "BuyPrice": 8.0,
-        "SellPrice": 1.6,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 8,
+        "SellPrice": 2,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -183,9 +193,9 @@
     {
       "itemID": "Arrow",
       "value": {
-        "BuyPrice": 1.0,
-        "SellPrice": 0.2,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 8,
+        "SellPrice": 4,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -193,9 +203,9 @@
     {
       "itemID": "CopperIngot",
       "value": {
-        "BuyPrice": 15.0,
-        "SellPrice": 3.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 20,
+        "SellPrice": 10,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -203,9 +213,9 @@
     {
       "itemID": "IronIngot",
       "value": {
-        "BuyPrice": 20.0,
-        "SellPrice": 4.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 67,
+        "SellPrice": 13,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -213,9 +223,9 @@
     {
       "itemID": "SilverIngot",
       "value": {
-        "BuyPrice": 35.0,
-        "SellPrice": 7.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 115,
+        "SellPrice": 23,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -223,9 +233,9 @@
     {
       "itemID": "GoldIngot",
       "value": {
-        "BuyPrice": 60.0,
-        "SellPrice": 12.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 200,
+        "SellPrice": 40,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -233,9 +243,9 @@
     {
       "itemID": "Diamond",
       "value": {
-        "BuyPrice": 200.0,
-        "SellPrice": 40.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 200,
+        "SellPrice": 40,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -243,9 +253,9 @@
     {
       "itemID": "Ruby",
       "value": {
-        "BuyPrice": 180.0,
-        "SellPrice": 36.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 180,
+        "SellPrice": 36,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -253,9 +263,9 @@
     {
       "itemID": "Emerald",
       "value": {
-        "BuyPrice": 190.0,
-        "SellPrice": 38.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 190,
+        "SellPrice": 38,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -263,9 +273,9 @@
     {
       "itemID": "Sapphire",
       "value": {
-        "BuyPrice": 175.0,
-        "SellPrice": 35.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 175,
+        "SellPrice": 35,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -273,9 +283,9 @@
     {
       "itemID": "Topaz",
       "value": {
-        "BuyPrice": 160.0,
-        "SellPrice": 32.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 160,
+        "SellPrice": 32,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -283,9 +293,9 @@
     {
       "itemID": "Aquamarine",
       "value": {
-        "BuyPrice": 165.0,
-        "SellPrice": 33.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 165,
+        "SellPrice": 33,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -293,9 +303,9 @@
     {
       "itemID": "SpessartiteGarnet",
       "value": {
-        "BuyPrice": 155.0,
-        "SellPrice": 31.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 155,
+        "SellPrice": 31,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -303,9 +313,9 @@
     {
       "itemID": "Amethyst",
       "value": {
-        "BuyPrice": 150.0,
-        "SellPrice": 30.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 150,
+        "SellPrice": 30,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -313,9 +323,9 @@
     {
       "itemID": "Morganite",
       "value": {
-        "BuyPrice": 145.0,
-        "SellPrice": 29.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 145,
+        "SellPrice": 29,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -323,9 +333,9 @@
     {
       "itemID": "Onyx",
       "value": {
-        "BuyPrice": 140.0,
-        "SellPrice": 28.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 140,
+        "SellPrice": 28,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -333,9 +343,9 @@
     {
       "itemID": "Moss",
       "value": {
-        "BuyPrice": 3.0,
-        "SellPrice": 0.6,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 3,
+        "SellPrice": 1,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -343,9 +353,9 @@
     {
       "itemID": "Snow",
       "value": {
-        "BuyPrice": 2.5,
-        "SellPrice": 0.5,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 3,
+        "SellPrice": 1,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -353,9 +363,9 @@
     {
       "itemID": "Glass",
       "value": {
-        "BuyPrice": 4.0,
-        "SellPrice": 0.8,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 4,
+        "SellPrice": 1,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -363,9 +373,9 @@
     {
       "itemID": "OakLeaves",
       "value": {
-        "BuyPrice": 2.5,
-        "SellPrice": 0.5,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 3,
+        "SellPrice": 1,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -373,9 +383,9 @@
     {
       "itemID": "MangroveLeaves",
       "value": {
-        "BuyPrice": 2.5,
-        "SellPrice": 0.5,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 3,
+        "SellPrice": 1,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -383,9 +393,9 @@
     {
       "itemID": "PineLeaves",
       "value": {
-        "BuyPrice": 2.5,
-        "SellPrice": 0.5,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 3,
+        "SellPrice": 1,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -393,9 +403,9 @@
     {
       "itemID": "CherryBlossomLeaves",
       "value": {
-        "BuyPrice": 2.5,
-        "SellPrice": 0.5,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 3,
+        "SellPrice": 1,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -403,9 +413,9 @@
     {
       "itemID": "BeechLeaves",
       "value": {
-        "BuyPrice": 2.5,
-        "SellPrice": 0.5,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 3,
+        "SellPrice": 1,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -413,9 +423,9 @@
     {
       "itemID": "OnyxBrick",
       "value": {
-        "BuyPrice": 600.0,
-        "SellPrice": 120.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 600,
+        "SellPrice": 120,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -423,9 +433,9 @@
     {
       "itemID": "MorganiteBrick",
       "value": {
-        "BuyPrice": 620.0,
-        "SellPrice": 124.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 620,
+        "SellPrice": 124,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -433,9 +443,9 @@
     {
       "itemID": "AmethystBrick",
       "value": {
-        "BuyPrice": 640.0,
-        "SellPrice": 128.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 640,
+        "SellPrice": 128,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -443,9 +453,9 @@
     {
       "itemID": "SpessartitegarnetBrick",
       "value": {
-        "BuyPrice": 660.0,
-        "SellPrice": 132.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 660,
+        "SellPrice": 132,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -453,9 +463,9 @@
     {
       "itemID": "AquamarineBrick",
       "value": {
-        "BuyPrice": 700.0,
-        "SellPrice": 140.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 700,
+        "SellPrice": 140,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -463,9 +473,9 @@
     {
       "itemID": "TopazBrick",
       "value": {
-        "BuyPrice": 680.0,
-        "SellPrice": 136.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 680,
+        "SellPrice": 136,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -473,9 +483,9 @@
     {
       "itemID": "SapphireBrick",
       "value": {
-        "BuyPrice": 740.0,
-        "SellPrice": 148.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 740,
+        "SellPrice": 148,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -483,9 +493,9 @@
     {
       "itemID": "EmeraldBrick",
       "value": {
-        "BuyPrice": 800.0,
-        "SellPrice": 160.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 800,
+        "SellPrice": 160,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -493,9 +503,9 @@
     {
       "itemID": "RubyBrick",
       "value": {
-        "BuyPrice": 760.0,
-        "SellPrice": 152.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 760,
+        "SellPrice": 152,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -503,9 +513,9 @@
     {
       "itemID": "DiamondBrick",
       "value": {
-        "BuyPrice": 840.0,
-        "SellPrice": 168.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 840,
+        "SellPrice": 168,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -513,9 +523,9 @@
     {
       "itemID": "SmoothSandBrick",
       "value": {
-        "BuyPrice": 5.0,
-        "SellPrice": 1.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 5,
+        "SellPrice": 1,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -523,9 +533,9 @@
     {
       "itemID": "SmoothSand",
       "value": {
-        "BuyPrice": 4.0,
-        "SellPrice": 0.8,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 4,
+        "SellPrice": 1,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -533,9 +543,9 @@
     {
       "itemID": "SandBrick",
       "value": {
-        "BuyPrice": 5.0,
-        "SellPrice": 1.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 5,
+        "SellPrice": 1,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -543,9 +553,9 @@
     {
       "itemID": "Lilypad",
       "value": {
-        "BuyPrice": 10.0,
-        "SellPrice": 2.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 10,
+        "SellPrice": 2,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -553,9 +563,9 @@
     {
       "itemID": "MorganiteLightstone",
       "value": {
-        "BuyPrice": 300.0,
-        "SellPrice": 60.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 300,
+        "SellPrice": 60,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -563,9 +573,9 @@
     {
       "itemID": "AmethystLightstone",
       "value": {
-        "BuyPrice": 310.0,
-        "SellPrice": 62.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 310,
+        "SellPrice": 62,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -573,9 +583,9 @@
     {
       "itemID": "SpessartitegarnetLightstone",
       "value": {
-        "BuyPrice": 320.0,
-        "SellPrice": 64.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 320,
+        "SellPrice": 64,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -583,9 +593,9 @@
     {
       "itemID": "AquamarineLightstone",
       "value": {
-        "BuyPrice": 340.0,
-        "SellPrice": 68.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 340,
+        "SellPrice": 68,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -593,9 +603,9 @@
     {
       "itemID": "TopazLightstone",
       "value": {
-        "BuyPrice": 330.0,
-        "SellPrice": 66.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 330,
+        "SellPrice": 66,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -603,9 +613,9 @@
     {
       "itemID": "SapphireLightstone",
       "value": {
-        "BuyPrice": 360.0,
-        "SellPrice": 72.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 360,
+        "SellPrice": 72,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -613,9 +623,9 @@
     {
       "itemID": "EmeraldLightstone",
       "value": {
-        "BuyPrice": 380.0,
-        "SellPrice": 76.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 380,
+        "SellPrice": 76,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -623,9 +633,9 @@
     {
       "itemID": "RubyLightstone",
       "value": {
-        "BuyPrice": 370.0,
-        "SellPrice": 74.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 370,
+        "SellPrice": 74,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -633,9 +643,9 @@
     {
       "itemID": "HayBale",
       "value": {
-        "BuyPrice": 15.0,
-        "SellPrice": 3.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 15,
+        "SellPrice": 3,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -643,9 +653,9 @@
     {
       "itemID": "SnowBrick",
       "value": {
-        "BuyPrice": 10.0,
-        "SellPrice": 2.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 10,
+        "SellPrice": 2,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -653,9 +663,9 @@
     {
       "itemID": "TinOre",
       "value": {
-        "BuyPrice": 12.0,
-        "SellPrice": 2.4,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 40,
+        "SellPrice": 20,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -663,9 +673,9 @@
     {
       "itemID": "LeadOre",
       "value": {
-        "BuyPrice": 13.0,
-        "SellPrice": 2.6,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 43,
+        "SellPrice": 22,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -673,9 +683,9 @@
     {
       "itemID": "Amberstone",
       "value": {
-        "BuyPrice": 100.0,
-        "SellPrice": 20.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 335,
+        "SellPrice": 170,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -683,9 +693,9 @@
     {
       "itemID": "TungstenOre",
       "value": {
-        "BuyPrice": 32.0,
-        "SellPrice": 6.4,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 105,
+        "SellPrice": 53,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -693,9 +703,9 @@
     {
       "itemID": "PlatinumOre",
       "value": {
-        "BuyPrice": 55.0,
-        "SellPrice": 11.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 185,
+        "SellPrice": 93,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -703,9 +713,9 @@
     {
       "itemID": "CobaltOre",
       "value": {
-        "BuyPrice": 80.0,
-        "SellPrice": 16.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 265,
+        "SellPrice": 135,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -713,9 +723,9 @@
     {
       "itemID": "MythrilOre",
       "value": {
-        "BuyPrice": 85.0,
-        "SellPrice": 17.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 285,
+        "SellPrice": 145,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -723,9 +733,9 @@
     {
       "itemID": "Cobweb",
       "value": {
-        "BuyPrice": 5.0,
-        "SellPrice": 1.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 10,
+        "SellPrice": 5,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -733,9 +743,9 @@
     {
       "itemID": "TinIngot",
       "value": {
-        "BuyPrice": 15.0,
-        "SellPrice": 3.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 40,
+        "SellPrice": 20,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -743,9 +753,9 @@
     {
       "itemID": "LeadIngot",
       "value": {
-        "BuyPrice": 18.0,
-        "SellPrice": 3.6,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 60,
+        "SellPrice": 12,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -753,9 +763,9 @@
     {
       "itemID": "TungstenIngot",
       "value": {
-        "BuyPrice": 40.0,
-        "SellPrice": 8.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 135,
+        "SellPrice": 27,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -763,9 +773,9 @@
     {
       "itemID": "PlatinumIngot",
       "value": {
-        "BuyPrice": 65.0,
-        "SellPrice": 13.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 215,
+        "SellPrice": 43,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -773,9 +783,9 @@
     {
       "itemID": "AmberstoneIngot",
       "value": {
-        "BuyPrice": 120.0,
-        "SellPrice": 24.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 400,
+        "SellPrice": 80,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -783,9 +793,9 @@
     {
       "itemID": "Strings",
       "value": {
-        "BuyPrice": 10.0,
-        "SellPrice": 2.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 10,
+        "SellPrice": 5,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -793,9 +803,9 @@
     {
       "itemID": "WoodenPickaxe",
       "value": {
-        "BuyPrice": 20.0,
-        "SellPrice": 4.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 67,
+        "SellPrice": 13,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -803,9 +813,9 @@
     {
       "itemID": "CopperPickaxe",
       "value": {
-        "BuyPrice": 60.0,
-        "SellPrice": 12.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 100,
+        "SellPrice": 50,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -813,9 +823,9 @@
     {
       "itemID": "IronPickaxe",
       "value": {
-        "BuyPrice": 80.0,
-        "SellPrice": 16.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 265,
+        "SellPrice": 53,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -823,9 +833,9 @@
     {
       "itemID": "SilverPickaxe",
       "value": {
-        "BuyPrice": 120.0,
-        "SellPrice": 24.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 400,
+        "SellPrice": 80,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -833,9 +843,9 @@
     {
       "itemID": "GoldPickaxe",
       "value": {
-        "BuyPrice": 150.0,
-        "SellPrice": 30.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 500,
+        "SellPrice": 100,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -843,9 +853,9 @@
     {
       "itemID": "TinPickaxe",
       "value": {
-        "BuyPrice": 60.0,
-        "SellPrice": 12.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 200,
+        "SellPrice": 40,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -853,9 +863,9 @@
     {
       "itemID": "LeadPickaxe",
       "value": {
-        "BuyPrice": 70.0,
-        "SellPrice": 14.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 235,
+        "SellPrice": 47,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -863,9 +873,9 @@
     {
       "itemID": "TungstenPickaxe",
       "value": {
-        "BuyPrice": 130.0,
-        "SellPrice": 26.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 435,
+        "SellPrice": 87,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -873,9 +883,9 @@
     {
       "itemID": "PlatinumPickaxe",
       "value": {
-        "BuyPrice": 180.0,
-        "SellPrice": 36.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 600,
+        "SellPrice": 120,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -883,9 +893,9 @@
     {
       "itemID": "CobaltPickaxe",
       "value": {
-        "BuyPrice": 350.0,
-        "SellPrice": 70.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 1165,
+        "SellPrice": 235,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -893,9 +903,9 @@
     {
       "itemID": "MythrilPickaxe",
       "value": {
-        "BuyPrice": 400.0,
-        "SellPrice": 80.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 1335,
+        "SellPrice": 265,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -903,9 +913,9 @@
     {
       "itemID": "WoodenSword",
       "value": {
-        "BuyPrice": 25.0,
-        "SellPrice": 5.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 83,
+        "SellPrice": 17,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -913,9 +923,9 @@
     {
       "itemID": "CopperSword",
       "value": {
-        "BuyPrice": 70.0,
-        "SellPrice": 14.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 100,
+        "SellPrice": 50,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -923,9 +933,9 @@
     {
       "itemID": "IronSword",
       "value": {
-        "BuyPrice": 90.0,
-        "SellPrice": 18.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 300,
+        "SellPrice": 60,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -933,9 +943,9 @@
     {
       "itemID": "SilverSword",
       "value": {
-        "BuyPrice": 130.0,
-        "SellPrice": 26.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 435,
+        "SellPrice": 87,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -943,9 +953,9 @@
     {
       "itemID": "GoldSword",
       "value": {
-        "BuyPrice": 160.0,
-        "SellPrice": 32.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 535,
+        "SellPrice": 105,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -953,9 +963,9 @@
     {
       "itemID": "WoodenBow",
       "value": {
-        "BuyPrice": 30.0,
-        "SellPrice": 6.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 100,
+        "SellPrice": 20,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -963,9 +973,9 @@
     {
       "itemID": "CopperBow",
       "value": {
-        "BuyPrice": 80.0,
-        "SellPrice": 16.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 200,
+        "SellPrice": 100,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -973,9 +983,9 @@
     {
       "itemID": "TinBow",
       "value": {
-        "BuyPrice": 80.0,
-        "SellPrice": 16.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 265,
+        "SellPrice": 53,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -983,9 +993,9 @@
     {
       "itemID": "LeadBow",
       "value": {
-        "BuyPrice": 90.0,
-        "SellPrice": 18.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 300,
+        "SellPrice": 60,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -993,9 +1003,9 @@
     {
       "itemID": "IronBow",
       "value": {
-        "BuyPrice": 100.0,
-        "SellPrice": 20.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 335,
+        "SellPrice": 67,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1003,9 +1013,9 @@
     {
       "itemID": "SilverBow",
       "value": {
-        "BuyPrice": 140.0,
-        "SellPrice": 28.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 465,
+        "SellPrice": 93,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1013,9 +1023,9 @@
     {
       "itemID": "GoldBow",
       "value": {
-        "BuyPrice": 170.0,
-        "SellPrice": 34.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 565,
+        "SellPrice": 115,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1023,9 +1033,9 @@
     {
       "itemID": "TungstenBow",
       "value": {
-        "BuyPrice": 150.0,
-        "SellPrice": 30.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 500,
+        "SellPrice": 100,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1033,9 +1043,9 @@
     {
       "itemID": "PlatinumBow",
       "value": {
-        "BuyPrice": 210.0,
-        "SellPrice": 42.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 700,
+        "SellPrice": 140,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1043,9 +1053,9 @@
     {
       "itemID": "CobaltBow",
       "value": {
-        "BuyPrice": 420.0,
-        "SellPrice": 84.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 1400,
+        "SellPrice": 280,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1053,9 +1063,9 @@
     {
       "itemID": "MythrilBow",
       "value": {
-        "BuyPrice": 470.0,
-        "SellPrice": 94.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 1565,
+        "SellPrice": 315,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1063,9 +1073,9 @@
     {
       "itemID": "TinSword",
       "value": {
-        "BuyPrice": 70.0,
-        "SellPrice": 14.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 235,
+        "SellPrice": 47,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1073,9 +1083,9 @@
     {
       "itemID": "LeadSword",
       "value": {
-        "BuyPrice": 80.0,
-        "SellPrice": 16.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 265,
+        "SellPrice": 53,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1083,9 +1093,9 @@
     {
       "itemID": "TungstenSword",
       "value": {
-        "BuyPrice": 140.0,
-        "SellPrice": 28.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 465,
+        "SellPrice": 93,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1093,9 +1103,9 @@
     {
       "itemID": "PlatinumSword",
       "value": {
-        "BuyPrice": 200.0,
-        "SellPrice": 40.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 665,
+        "SellPrice": 135,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1103,9 +1113,9 @@
     {
       "itemID": "CobaltSword",
       "value": {
-        "BuyPrice": 400.0,
-        "SellPrice": 80.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 1335,
+        "SellPrice": 265,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1113,9 +1123,9 @@
     {
       "itemID": "MythrilSword",
       "value": {
-        "BuyPrice": 450.0,
-        "SellPrice": 90.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 1500,
+        "SellPrice": 300,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1123,9 +1133,9 @@
     {
       "itemID": "Cobalt_Trident",
       "value": {
-        "BuyPrice": 1000.0,
-        "SellPrice": 200.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 3335,
+        "SellPrice": 665,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1133,9 +1143,9 @@
     {
       "itemID": "WoodenWand",
       "value": {
-        "BuyPrice": 50.0,
-        "SellPrice": 10.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 50,
+        "SellPrice": 10,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1143,9 +1153,9 @@
     {
       "itemID": "OnyxWand",
       "value": {
-        "BuyPrice": 300.0,
-        "SellPrice": 60.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 300,
+        "SellPrice": 60,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1153,9 +1163,9 @@
     {
       "itemID": "MorganiteStaff",
       "value": {
-        "BuyPrice": 310.0,
-        "SellPrice": 62.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 310,
+        "SellPrice": 62,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1163,9 +1173,9 @@
     {
       "itemID": "AmethystStaff",
       "value": {
-        "BuyPrice": 320.0,
-        "SellPrice": 64.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 320,
+        "SellPrice": 64,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1173,9 +1183,9 @@
     {
       "itemID": "SpessartiteGarnetStaff",
       "value": {
-        "BuyPrice": 330.0,
-        "SellPrice": 66.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 330,
+        "SellPrice": 66,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1183,9 +1193,9 @@
     {
       "itemID": "AquamarineStaff",
       "value": {
-        "BuyPrice": 350.0,
-        "SellPrice": 70.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 350,
+        "SellPrice": 70,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1193,9 +1203,9 @@
     {
       "itemID": "TopazStaff",
       "value": {
-        "BuyPrice": 340.0,
-        "SellPrice": 68.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 340,
+        "SellPrice": 68,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1203,9 +1213,9 @@
     {
       "itemID": "SapphireStaff",
       "value": {
-        "BuyPrice": 370.0,
-        "SellPrice": 74.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 370,
+        "SellPrice": 74,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1213,9 +1223,9 @@
     {
       "itemID": "EmeraldStaff",
       "value": {
-        "BuyPrice": 400.0,
-        "SellPrice": 80.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 400,
+        "SellPrice": 80,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1223,9 +1233,9 @@
     {
       "itemID": "RubyStaff",
       "value": {
-        "BuyPrice": 380.0,
-        "SellPrice": 76.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 380,
+        "SellPrice": 76,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1233,9 +1243,9 @@
     {
       "itemID": "CopperHelmet",
       "value": {
-        "BuyPrice": 50.0,
-        "SellPrice": 10.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 60,
+        "SellPrice": 30,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1243,9 +1253,9 @@
     {
       "itemID": "CopperChestplate",
       "value": {
-        "BuyPrice": 75.0,
-        "SellPrice": 15.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 100,
+        "SellPrice": 50,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1253,9 +1263,9 @@
     {
       "itemID": "CopperLeggings",
       "value": {
-        "BuyPrice": 50.0,
-        "SellPrice": 10.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 80,
+        "SellPrice": 40,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1263,9 +1273,9 @@
     {
       "itemID": "IronHelmet",
       "value": {
-        "BuyPrice": 60.0,
-        "SellPrice": 12.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 200,
+        "SellPrice": 40,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1273,9 +1283,9 @@
     {
       "itemID": "IronChestplate",
       "value": {
-        "BuyPrice": 100.0,
-        "SellPrice": 20.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 335,
+        "SellPrice": 67,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1283,9 +1293,9 @@
     {
       "itemID": "IronLeggings",
       "value": {
-        "BuyPrice": 65.0,
-        "SellPrice": 13.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 215,
+        "SellPrice": 43,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1293,9 +1303,9 @@
     {
       "itemID": "SilverHelmet",
       "value": {
-        "BuyPrice": 90.0,
-        "SellPrice": 18.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 300,
+        "SellPrice": 60,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1303,9 +1313,9 @@
     {
       "itemID": "SilverChestplate",
       "value": {
-        "BuyPrice": 145.0,
-        "SellPrice": 29.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 485,
+        "SellPrice": 97,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1313,9 +1323,9 @@
     {
       "itemID": "SilverLeggings",
       "value": {
-        "BuyPrice": 90.0,
-        "SellPrice": 18.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 300,
+        "SellPrice": 60,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1323,9 +1333,9 @@
     {
       "itemID": "GoldHelmet",
       "value": {
-        "BuyPrice": 110.0,
-        "SellPrice": 22.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 365,
+        "SellPrice": 73,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1333,9 +1343,9 @@
     {
       "itemID": "GoldChestplate",
       "value": {
-        "BuyPrice": 180.0,
-        "SellPrice": 36.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 600,
+        "SellPrice": 120,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1343,9 +1353,9 @@
     {
       "itemID": "GoldLeggings",
       "value": {
-        "BuyPrice": 110.0,
-        "SellPrice": 22.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 365,
+        "SellPrice": 73,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1353,9 +1363,9 @@
     {
       "itemID": "TinHelmet",
       "value": {
-        "BuyPrice": 50.0,
-        "SellPrice": 10.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 165,
+        "SellPrice": 33,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1363,9 +1373,9 @@
     {
       "itemID": "TinChestplate",
       "value": {
-        "BuyPrice": 75.0,
-        "SellPrice": 15.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 250,
+        "SellPrice": 50,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1373,9 +1383,9 @@
     {
       "itemID": "TinLeggings",
       "value": {
-        "BuyPrice": 50.0,
-        "SellPrice": 10.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 165,
+        "SellPrice": 33,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1383,9 +1393,9 @@
     {
       "itemID": "LeadHelmet",
       "value": {
-        "BuyPrice": 55.0,
-        "SellPrice": 11.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 185,
+        "SellPrice": 37,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1393,9 +1403,9 @@
     {
       "itemID": "LeadChestplate",
       "value": {
-        "BuyPrice": 90.0,
-        "SellPrice": 18.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 300,
+        "SellPrice": 60,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1403,9 +1413,9 @@
     {
       "itemID": "LeadLeggings",
       "value": {
-        "BuyPrice": 55.0,
-        "SellPrice": 11.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 185,
+        "SellPrice": 37,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1413,9 +1423,9 @@
     {
       "itemID": "TungstenHelmet",
       "value": {
-        "BuyPrice": 100.0,
-        "SellPrice": 20.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 335,
+        "SellPrice": 67,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1423,9 +1433,9 @@
     {
       "itemID": "TungstenChestplate",
       "value": {
-        "BuyPrice": 150.0,
-        "SellPrice": 30.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 500,
+        "SellPrice": 100,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1433,9 +1443,9 @@
     {
       "itemID": "TungstenLeggings",
       "value": {
-        "BuyPrice": 100.0,
-        "SellPrice": 20.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 335,
+        "SellPrice": 67,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1443,9 +1453,9 @@
     {
       "itemID": "PlatinumHelmet",
       "value": {
-        "BuyPrice": 140.0,
-        "SellPrice": 28.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 465,
+        "SellPrice": 93,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1453,9 +1463,9 @@
     {
       "itemID": "PlatinumChestplate",
       "value": {
-        "BuyPrice": 220.0,
-        "SellPrice": 44.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 735,
+        "SellPrice": 145,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1463,9 +1473,9 @@
     {
       "itemID": "PlatinumLeggings",
       "value": {
-        "BuyPrice": 140.0,
-        "SellPrice": 28.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 465,
+        "SellPrice": 93,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1473,9 +1483,9 @@
     {
       "itemID": "AmberstoneHelmet",
       "value": {
-        "BuyPrice": 210.0,
-        "SellPrice": 42.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 700,
+        "SellPrice": 140,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1483,9 +1493,9 @@
     {
       "itemID": "AmberstoneChestplate",
       "value": {
-        "BuyPrice": 330.0,
-        "SellPrice": 66.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 1100,
+        "SellPrice": 220,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1493,9 +1503,9 @@
     {
       "itemID": "AmberstoneLeggings",
       "value": {
-        "BuyPrice": 210.0,
-        "SellPrice": 42.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 700,
+        "SellPrice": 140,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1503,9 +1513,9 @@
     {
       "itemID": "NatureWings",
       "value": {
-        "BuyPrice": 2500.0,
-        "SellPrice": 500.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 2500,
+        "SellPrice": 500,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1513,9 +1523,9 @@
     {
       "itemID": "CosmicWings",
       "value": {
-        "BuyPrice": 5000.0,
-        "SellPrice": 1000.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 5000,
+        "SellPrice": 1000,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1523,9 +1533,9 @@
     {
       "itemID": "FairyWings",
       "value": {
-        "BuyPrice": 3000.0,
-        "SellPrice": 600.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 3000,
+        "SellPrice": 600,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1533,9 +1543,9 @@
     {
       "itemID": "BoneWings",
       "value": {
-        "BuyPrice": 3500.0,
-        "SellPrice": 700.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 3500,
+        "SellPrice": 700,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1543,9 +1553,9 @@
     {
       "itemID": "ThornwoodWings",
       "value": {
-        "BuyPrice": 2500.0,
-        "SellPrice": 500.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 2500,
+        "SellPrice": 500,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1553,9 +1563,9 @@
     {
       "itemID": "NightWings",
       "value": {
-        "BuyPrice": 4000.0,
-        "SellPrice": 800.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 4000,
+        "SellPrice": 800,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1563,9 +1573,9 @@
     {
       "itemID": "SpiritWings",
       "value": {
-        "BuyPrice": 4500.0,
-        "SellPrice": 900.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 4500,
+        "SellPrice": 900,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1573,9 +1583,9 @@
     {
       "itemID": "FrostWings",
       "value": {
-        "BuyPrice": 4500.0,
-        "SellPrice": 900.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 4500,
+        "SellPrice": 900,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1583,9 +1593,9 @@
     {
       "itemID": "Apple",
       "value": {
-        "BuyPrice": 10.0,
-        "SellPrice": 2.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 10,
+        "SellPrice": 2,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1593,9 +1603,9 @@
     {
       "itemID": "CookedMeat",
       "value": {
-        "BuyPrice": 25.0,
-        "SellPrice": 5.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 25,
+        "SellPrice": 5,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1603,9 +1613,9 @@
     {
       "itemID": "WaterBottle",
       "value": {
-        "BuyPrice": 5.0,
-        "SellPrice": 1.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 5,
+        "SellPrice": 1,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1613,9 +1623,9 @@
     {
       "itemID": "Onion",
       "value": {
-        "BuyPrice": 8.0,
-        "SellPrice": 1.6,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 8,
+        "SellPrice": 2,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1623,9 +1633,9 @@
     {
       "itemID": "Garlic",
       "value": {
-        "BuyPrice": 8.0,
-        "SellPrice": 1.6,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 8,
+        "SellPrice": 2,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1633,9 +1643,9 @@
     {
       "itemID": "Pumpkin",
       "value": {
-        "BuyPrice": 15.0,
-        "SellPrice": 3.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 15,
+        "SellPrice": 3,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1643,9 +1653,9 @@
     {
       "itemID": "HealthPotionI",
       "value": {
-        "BuyPrice": 100.0,
-        "SellPrice": 0.2,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 100,
+        "SellPrice": 0,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1653,9 +1663,9 @@
     {
       "itemID": "HealthPotionII",
       "value": {
-        "BuyPrice": 200.0,
-        "SellPrice": 0.4,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 200,
+        "SellPrice": 0,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1663,9 +1673,9 @@
     {
       "itemID": "HealthPotionIII",
       "value": {
-        "BuyPrice": 500.0,
-        "SellPrice": 0.6,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 500,
+        "SellPrice": 1,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1673,9 +1683,9 @@
     {
       "itemID": "HealthPotionIV",
       "value": {
-        "BuyPrice": 1000.0,
-        "SellPrice": 0.8,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 1000,
+        "SellPrice": 1,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1683,9 +1693,9 @@
     {
       "itemID": "HealthPotionV",
       "value": {
-        "BuyPrice": 2000.0,
-        "SellPrice": 1.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 2000,
+        "SellPrice": 1,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1693,9 +1703,9 @@
     {
       "itemID": "RegeneratePotionI",
       "value": {
-        "BuyPrice": 150.0,
-        "SellPrice": 0.2,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 150,
+        "SellPrice": 0,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1703,9 +1713,9 @@
     {
       "itemID": "RegeneratePotionII",
       "value": {
-        "BuyPrice": 300.0,
-        "SellPrice": 0.4,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 300,
+        "SellPrice": 0,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1713,9 +1723,9 @@
     {
       "itemID": "RegeneratePotionIII",
       "value": {
-        "BuyPrice": 600.0,
-        "SellPrice": 0.6,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 600,
+        "SellPrice": 1,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1723,9 +1733,9 @@
     {
       "itemID": "RegeneratePotionIV",
       "value": {
-        "BuyPrice": 1200.0,
-        "SellPrice": 0.8,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 1200,
+        "SellPrice": 1,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1733,9 +1743,9 @@
     {
       "itemID": "RegeneratePotionV",
       "value": {
-        "BuyPrice": 2500.0,
-        "SellPrice": 1.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 2500,
+        "SellPrice": 1,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1743,9 +1753,9 @@
     {
       "itemID": "SwiftnessPotionI",
       "value": {
-        "BuyPrice": 100.0,
-        "SellPrice": 0.2,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 100,
+        "SellPrice": 0,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1753,9 +1763,9 @@
     {
       "itemID": "SwiftnessPotionII",
       "value": {
-        "BuyPrice": 250.0,
-        "SellPrice": 0.4,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 250,
+        "SellPrice": 0,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1763,9 +1773,9 @@
     {
       "itemID": "ManaPotionI",
       "value": {
-        "BuyPrice": 50.0,
-        "SellPrice": 0.2,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 50,
+        "SellPrice": 0,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1773,9 +1783,9 @@
     {
       "itemID": "ManaPotionII",
       "value": {
-        "BuyPrice": 100.0,
-        "SellPrice": 0.4,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 100,
+        "SellPrice": 0,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1783,9 +1793,9 @@
     {
       "itemID": "ManaPotionIII",
       "value": {
-        "BuyPrice": 200.0,
-        "SellPrice": 0.6,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 200,
+        "SellPrice": 1,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1793,9 +1803,9 @@
     {
       "itemID": "ManaPotionIV",
       "value": {
-        "BuyPrice": 400.0,
-        "SellPrice": 0.8,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 400,
+        "SellPrice": 1,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1803,9 +1813,9 @@
     {
       "itemID": "ManaPotionV",
       "value": {
-        "BuyPrice": 800.0,
-        "SellPrice": 1.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 800,
+        "SellPrice": 1,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1813,9 +1823,9 @@
     {
       "itemID": "StrengthPotion",
       "value": {
-        "BuyPrice": 500.0,
-        "SellPrice": 0.6,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 500,
+        "SellPrice": 1,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1823,9 +1833,9 @@
     {
       "itemID": "ResistancePotion",
       "value": {
-        "BuyPrice": 500.0,
-        "SellPrice": 0.6,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 500,
+        "SellPrice": 1,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
@@ -1833,9 +1843,19 @@
     {
       "itemID": "Torch",
       "value": {
-        "BuyPrice": 10.0,
-        "SellPrice": 2.0,
-        "DemandMultiplier": 1.0,
+        "BuyPrice": 10,
+        "SellPrice": 2,
+        "DemandMultiplier": 1,
+        "CanBuy": true,
+        "CanSell": true
+      }
+    },
+    {
+      "itemID": "CopperPlatedGuard",
+      "value": {
+        "BuyPrice": 120,
+        "SellPrice": 60,
+        "DemandMultiplier": 1,
         "CanBuy": true,
         "CanSell": true
       }
