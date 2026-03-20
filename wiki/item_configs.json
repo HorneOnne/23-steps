@@ -5,7 +5,7 @@
       "ItemType": "Resource",
       "Name": "Dirt",
       "Description": "Humble, plentiful, and surprisingly useful.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -26,7 +26,7 @@
       "ItemType": "Resource",
       "Name": "Ad Key",
       "Description": "Otherworldly key. Watch the right thing to earn entry.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Uncommon",
       "Offset": {
@@ -47,7 +47,7 @@
       "ItemType": "Resource",
       "Name": "Rare Key",
       "Description": "Finely crafted key for extraordinary chests.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
       "Offset": {
@@ -68,7 +68,7 @@
       "ItemType": "Resource",
       "Name": "Mythic Key",
       "Description": "Opens a chest never found twice in the same place.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Epic",
       "Offset": {
@@ -89,7 +89,7 @@
       "ItemType": "Resource",
       "Name": "Divine Key",
       "Description": "God-forged key for the most forbidden chests.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Legendary",
       "Offset": {
@@ -110,7 +110,7 @@
       "ItemType": "Resource",
       "Name": "Log",
       "Description": "Fresh-felled trunk. The backbone of early crafting.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -320,7 +320,7 @@
       "ItemType": "Utility",
       "Name": "Torch",
       "Description": "Gel and wood bound together \u2014 a miner's best friend.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -747,7 +747,7 @@
       "ItemType": "Resource",
       "Name": "Arrow",
       "Description": "Swift, straight, and deadly. Pack plenty.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -768,7 +768,7 @@
       "ItemType": "Resource",
       "Name": "Coal",
       "Description": "Ancient compressed wood. Burns hot and long.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -789,7 +789,7 @@
       "ItemType": "Resource",
       "Name": "Sand",
       "Description": "Tiny grains, great for glass.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -1483,7 +1483,7 @@
       "ItemType": "Resource",
       "Name": "Gel",
       "Description": "Slimy crafting material from defeated slimes.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -1504,7 +1504,7 @@
       "ItemType": "Resource",
       "Name": "Mushroom",
       "Description": "Dark-grown cave fungi. An alchemist's favourite.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -1525,7 +1525,7 @@
       "ItemType": "Resource",
       "Name": "Copper Ore",
       "Description": "Reddish-brown ore near the surface.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -1546,7 +1546,7 @@
       "ItemType": "Resource",
       "Name": "Iron Ore",
       "Description": "Dense grey ore forged in the earth's depths.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Uncommon",
       "Offset": {
@@ -1567,7 +1567,7 @@
       "ItemType": "Resource",
       "Name": "Silver Ore",
       "Description": "Gleams softly in torchlight.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
       "Offset": {
@@ -1588,7 +1588,7 @@
       "ItemType": "Resource",
       "Name": "Gold Ore",
       "Description": "Glittering veins of fortune buried deep.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Epic",
       "Offset": {
@@ -1609,7 +1609,7 @@
       "ItemType": "Resource",
       "Name": "Copper Ingot",
       "Description": "Smelted copper, ready to be shaped.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -1630,7 +1630,7 @@
       "ItemType": "Resource",
       "Name": "Iron Ingot",
       "Description": "Cold, heavy, and unyielding.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Uncommon",
       "Offset": {
@@ -1651,7 +1651,7 @@
       "ItemType": "Resource",
       "Name": "Silver Ingot",
       "Description": "Pure refined silver with a faint blessing.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
       "Offset": {
@@ -1672,7 +1672,7 @@
       "ItemType": "Resource",
       "Name": "Gold Ingot",
       "Description": "Gleaming and precious. The most coveted metal.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Epic",
       "Offset": {
@@ -1693,7 +1693,7 @@
       "ItemType": "Resource",
       "Name": "Diamond",
       "Description": "Hardest stone known. Clear and twice as rare.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
       "Offset": {
@@ -1714,7 +1714,7 @@
       "ItemType": "Resource",
       "Name": "Ruby",
       "Description": "Deep crimson gemstone burning with inner fire.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
       "Offset": {
@@ -1735,7 +1735,7 @@
       "ItemType": "Resource",
       "Name": "Emerald",
       "Description": "Lush green gem forged in the cold dark below.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
       "Offset": {
@@ -1756,7 +1756,7 @@
       "ItemType": "Resource",
       "Name": "Sapphire",
       "Description": "Blue as midnight sky. Mages covet this stone.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
       "Offset": {
@@ -1777,7 +1777,7 @@
       "ItemType": "Resource",
       "Name": "Topaz",
       "Description": "Warm golden gem that catches light like sunrise.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
       "Offset": {
@@ -1798,7 +1798,7 @@
       "ItemType": "Resource",
       "Name": "Aquamarine",
       "Description": "Pale blue translucent gem, like frozen seawater.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
       "Offset": {
@@ -1819,7 +1819,7 @@
       "ItemType": "Resource",
       "Name": "SpessartiteGarnet",
       "Description": "Fiery orange gem prized for volatile energy.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
       "Offset": {
@@ -1840,7 +1840,7 @@
       "ItemType": "Resource",
       "Name": "Amethyst",
       "Description": "Deep violet crystal used in enchanting rituals.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
       "Offset": {
@@ -1861,7 +1861,7 @@
       "ItemType": "Resource",
       "Name": "Morganite",
       "Description": "Blushing pink gemstone, rare and delicate.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
       "Offset": {
@@ -1882,7 +1882,7 @@
       "ItemType": "Resource",
       "Name": "Onyx",
       "Description": "Pitch black and smooth as shadow.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
       "Offset": {
@@ -1903,7 +1903,7 @@
       "ItemType": "Consumable",
       "Name": "Health Potion I",
       "Description": "Restore 50 Health",
-      "MaxStackSize": 999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -1932,7 +1932,7 @@
       "ItemType": "Consumable",
       "Name": "Health Potion II",
       "Description": "Restore 100 Health",
-      "MaxStackSize": 999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Uncommon",
       "Offset": {
@@ -1961,7 +1961,7 @@
       "ItemType": "Consumable",
       "Name": "Health Potion III",
       "Description": "Restore 150 Health",
-      "MaxStackSize": 999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
       "Offset": {
@@ -1990,7 +1990,7 @@
       "ItemType": "Consumable",
       "Name": "Health Potion IV",
       "Description": "Restore 200 Health",
-      "MaxStackSize": 999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Epic",
       "Offset": {
@@ -2019,7 +2019,7 @@
       "ItemType": "Consumable",
       "Name": "Health Potion V",
       "Description": "Restore 250 Health",
-      "MaxStackSize": 999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Legendary",
       "Offset": {
@@ -2048,7 +2048,7 @@
       "ItemType": "Consumable",
       "Name": "Regeneration Potion I",
       "Description": "Heals 2 HP/sec for 30 seconds.",
-      "MaxStackSize": 999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -2077,7 +2077,7 @@
       "ItemType": "Consumable",
       "Name": "Regeneration Potion II",
       "Description": "Heals 4 HP/sec for 30 seconds.",
-      "MaxStackSize": 999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Uncommon",
       "Offset": {
@@ -2106,7 +2106,7 @@
       "ItemType": "Consumable",
       "Name": "Regeneration Potion III",
       "Description": "Heals 6 HP/sec for 30 seconds.",
-      "MaxStackSize": 999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
       "Offset": {
@@ -2135,7 +2135,7 @@
       "ItemType": "Consumable",
       "Name": "Regeneration Potion IV",
       "Description": "Heals 8 HP/sec for 30 seconds.",
-      "MaxStackSize": 999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Epic",
       "Offset": {
@@ -2164,7 +2164,7 @@
       "ItemType": "Consumable",
       "Name": "Regeneration Potion V",
       "Description": "Heals 10 HP/sec for 30 seconds.",
-      "MaxStackSize": 999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Legendary",
       "Offset": {
@@ -2193,7 +2193,7 @@
       "ItemType": "Consumable",
       "Name": "Swiftness Potion I",
       "Description": "Increases Movement Speed By 20% For 4 Minutes.",
-      "MaxStackSize": 999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -2222,7 +2222,7 @@
       "ItemType": "Consumable",
       "Name": "Swiftness Potion II",
       "Description": "Increases Movement Speed By 40% For 8 Minutes.",
-      "MaxStackSize": 999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Uncommon",
       "Offset": {
@@ -2300,7 +2300,7 @@
       "ItemType": "Resource",
       "Name": "Stone",
       "Description": "Solid, sturdy. Foundation of any structure.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -2321,7 +2321,7 @@
       "ItemType": "Resource",
       "Name": "Wood",
       "Description": "Hewn and shaped, ready for crafting.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -2342,7 +2342,7 @@
       "ItemType": "Resource",
       "Name": "Clay",
       "Description": "Soft and pliable. Fire it to harden.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -2363,7 +2363,7 @@
       "ItemType": "Resource",
       "Name": "Gravel",
       "Description": "Loose rocks. Check beneath for flint.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -2384,7 +2384,7 @@
       "ItemType": "Resource",
       "Name": "Flint",
       "Description": "Strike it right and it throws sparks.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -2405,7 +2405,7 @@
       "ItemType": "Resource",
       "Name": "Grass",
       "Description": "A clump of green from near the surface.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -2470,7 +2470,7 @@
       "ItemType": "Resource",
       "Name": "Ice",
       "Description": "Frozen solid. Melts quickly above ground.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -2491,7 +2491,7 @@
       "ItemType": "Resource",
       "Name": "Moss",
       "Description": "Soft and damp, clinging to ancient stone.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -2512,7 +2512,7 @@
       "ItemType": "Resource",
       "Name": "Snow",
       "Description": "Cold, light, and oddly satisfying to hold.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -2533,7 +2533,7 @@
       "ItemType": "Resource",
       "Name": "Glass",
       "Description": "Transparent, fragile, and versatile.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -2554,7 +2554,7 @@
       "ItemType": "Resource",
       "Name": "Oak Leaves",
       "Description": "Broad, sturdy dried oak leaves.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -2575,7 +2575,7 @@
       "ItemType": "Resource",
       "Name": "Mangrove Leaves",
       "Description": "Waxy resilient leaves from the swamps.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -2596,7 +2596,7 @@
       "ItemType": "Resource",
       "Name": "Pine Leaves",
       "Description": "Sharp needles smelling of mountain air.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -2617,7 +2617,7 @@
       "ItemType": "Resource",
       "Name": "Cherry Blossom Leaves",
       "Description": "Delicate pink petals caught mid-fall.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -2680,7 +2680,7 @@
       "ItemType": "Resource",
       "Name": "Beech Leaves",
       "Description": "Smooth oval leaves in autumn gold.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -2701,7 +2701,7 @@
       "ItemType": "Resource",
       "Name": "Onyx Brick",
       "Description": "Polished black blocks that swallow light.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
       "Offset": {
@@ -2722,7 +2722,7 @@
       "ItemType": "Resource",
       "Name": "Morganite Brick",
       "Description": "Soft rose bricks with a subtle glow.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
       "Offset": {
@@ -2743,7 +2743,7 @@
       "ItemType": "Resource",
       "Name": "Amethyst Brick",
       "Description": "Purple bricks humming with arcane energy.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
       "Offset": {
@@ -2764,7 +2764,7 @@
       "ItemType": "Resource",
       "Name": "Spessartite Garnet Brick",
       "Description": "Fiery orange bricks, faintly warm.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
       "Offset": {
@@ -2785,7 +2785,7 @@
       "ItemType": "Resource",
       "Name": "Aquamarine Brick",
       "Description": "Sea-blue blocks like an underwater ruin.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
       "Offset": {
@@ -2806,7 +2806,7 @@
       "ItemType": "Resource",
       "Name": "Topaz Brick",
       "Description": "Warm golden bricks that catch every ray.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
       "Offset": {
@@ -2827,7 +2827,7 @@
       "ItemType": "Resource",
       "Name": "Sapphire Brick",
       "Description": "Cool blue bricks radiating calm elegance.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
       "Offset": {
@@ -2848,7 +2848,7 @@
       "ItemType": "Resource",
       "Name": "Emerald Brick",
       "Description": "Rich green bricks evoking ancient forests.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
       "Offset": {
@@ -2869,7 +2869,7 @@
       "ItemType": "Resource",
       "Name": "Ruby Brick",
       "Description": "Deep red bricks that glow like embers.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
       "Offset": {
@@ -2890,7 +2890,7 @@
       "ItemType": "Resource",
       "Name": "Diamond Brick",
       "Description": "Pristine white bricks that shimmer brilliantly.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
       "Offset": {
@@ -2911,7 +2911,7 @@
       "ItemType": "Resource",
       "Name": "Cracked Stone Brick",
       "Description": "Old stone bricks worn thin by time.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -2932,7 +2932,7 @@
       "ItemType": "Resource",
       "Name": "Smooth Sand Brick",
       "Description": "Pressed heated sand. Clean and uniform.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -2953,7 +2953,7 @@
       "ItemType": "Resource",
       "Name": "Smooth Sand",
       "Description": "Refined sand compressed into a slab.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -2974,7 +2974,7 @@
       "ItemType": "Resource",
       "Name": "Sand Brick",
       "Description": "Coarse pale brick for desert builds.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -2995,7 +2995,7 @@
       "ItemType": "Resource",
       "Name": "Lilypad",
       "Description": "Flat floating leaf from a still pond.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -3016,7 +3016,7 @@
       "ItemType": "Resource",
       "Name": "Morganite Lightstone",
       "Description": "Morganite with a gentle pink glow.",
-      "MaxStackSize": 16,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
       "Offset": {
@@ -3037,7 +3037,7 @@
       "ItemType": "Resource",
       "Name": "Amethyst Lightstone",
       "Description": "An amethyst radiating deep violet light.",
-      "MaxStackSize": 16,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
       "Offset": {
@@ -3058,7 +3058,7 @@
       "ItemType": "Resource",
       "Name": "Spessartite Garnet Lightstone",
       "Description": "Garnet with flickering orange light.",
-      "MaxStackSize": 16,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
       "Offset": {
@@ -3079,7 +3079,7 @@
       "ItemType": "Resource",
       "Name": "Aquamarine Lightstone",
       "Description": "An aquamarine radiating pale blue light.",
-      "MaxStackSize": 16,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
       "Offset": {
@@ -3100,7 +3100,7 @@
       "ItemType": "Resource",
       "Name": "Topaz Lightstone",
       "Description": "A topaz radiating warm golden light.",
-      "MaxStackSize": 16,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
       "Offset": {
@@ -3121,7 +3121,7 @@
       "ItemType": "Resource",
       "Name": "Sapphire Lightstone",
       "Description": "A sapphire radiating cool blue light.",
-      "MaxStackSize": 16,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
       "Offset": {
@@ -3142,7 +3142,7 @@
       "ItemType": "Resource",
       "Name": "Emerald Lightstone",
       "Description": "An emerald radiating lush green light.",
-      "MaxStackSize": 16,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
       "Offset": {
@@ -3163,7 +3163,7 @@
       "ItemType": "Resource",
       "Name": "Ruby Lightstone",
       "Description": "A ruby radiating deep crimson light.",
-      "MaxStackSize": 16,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
       "Offset": {
@@ -3184,7 +3184,7 @@
       "ItemType": "Resource",
       "Name": "Hay Bale",
       "Description": "Bundled dried grass from the fields.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -3205,7 +3205,7 @@
       "ItemType": "Resource",
       "Name": "Snow Brick",
       "Description": "Compacted snow in solid block form.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -3226,7 +3226,7 @@
       "ItemType": "Resource",
       "Name": "Tin Ore",
       "Description": "Light silvery ore, easy to smelt.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -3247,7 +3247,7 @@
       "ItemType": "Resource",
       "Name": "Lead Ore",
       "Description": "Heavy dark ore from the deep caverns.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Uncommon",
       "Offset": {
@@ -3268,7 +3268,7 @@
       "ItemType": "Resource",
       "Name": "Amberstone",
       "Description": "Warm amber mineral, tougher than it looks.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Uncommon",
       "Offset": {
@@ -3289,7 +3289,7 @@
       "ItemType": "Resource",
       "Name": "Tungsten Ore",
       "Description": "Incredibly dense ore, extremely hard.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
       "Offset": {
@@ -3310,7 +3310,7 @@
       "ItemType": "Resource",
       "Name": "Platinum Ore",
       "Description": "Lustrous rare ore from the deepest veins.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Epic",
       "Offset": {
@@ -3331,7 +3331,7 @@
       "ItemType": "Resource",
       "Name": "Cobalt Ore",
       "Description": "Vivid blue ore, hard as iron.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -3352,7 +3352,7 @@
       "ItemType": "Resource",
       "Name": "Mythril Ore",
       "Description": "Legendary ore carrying traces of starlight.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -3373,7 +3373,7 @@
       "ItemType": "Consumable",
       "Name": "Mana Potion I",
       "Description": "Restores 50 Mana.",
-      "MaxStackSize": 999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -3402,7 +3402,7 @@
       "ItemType": "Consumable",
       "Name": "Mana Potion II",
       "Description": "Restores 100 Mana.",
-      "MaxStackSize": 999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Uncommon",
       "Offset": {
@@ -3431,7 +3431,7 @@
       "ItemType": "Consumable",
       "Name": "Mana Potion III",
       "Description": "Restores 150 Mana.",
-      "MaxStackSize": 999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
       "Offset": {
@@ -3460,7 +3460,7 @@
       "ItemType": "Consumable",
       "Name": "Mana Potion IV",
       "Description": "Restores 200 Mana.",
-      "MaxStackSize": 999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Epic",
       "Offset": {
@@ -3489,7 +3489,7 @@
       "ItemType": "Consumable",
       "Name": "Mana Potion V",
       "Description": "Restores 250 Mana.",
-      "MaxStackSize": 999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Legendary",
       "Offset": {
@@ -3518,7 +3518,7 @@
       "ItemType": "Resource",
       "Name": "Tin Ingot",
       "Description": "Light, pliable smelted tin.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -3539,7 +3539,7 @@
       "ItemType": "Resource",
       "Name": "Lead Ingot",
       "Description": "Dense and weighty. Gets the job done.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Uncommon",
       "Offset": {
@@ -3560,7 +3560,7 @@
       "ItemType": "Resource",
       "Name": "Amberstone Ingot",
       "Description": "Warm amber bar with a soft glow.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Uncommon",
       "Offset": {
@@ -3581,7 +3581,7 @@
       "ItemType": "Resource",
       "Name": "Tungsten Ingot",
       "Description": "Brutally heavy, incredibly hard.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Rare",
       "Offset": {
@@ -3602,7 +3602,7 @@
       "ItemType": "Resource",
       "Name": "Platinum Ingot",
       "Description": "The finest refined metal.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Epic",
       "Offset": {
@@ -3623,7 +3623,7 @@
       "ItemType": "Resource",
       "Name": "Strings",
       "Description": "Tough twisted cord for bows and traps.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -3644,7 +3644,7 @@
       "ItemType": "Resource",
       "Name": "Cobweb",
       "Description": "Silky strands from something large and eight-legged.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -3665,7 +3665,7 @@
       "ItemType": "Resource",
       "Name": "Cactus",
       "Description": "Prickly outside, useful inside.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -3686,7 +3686,7 @@
       "ItemType": "Utility",
       "Name": "Rail",
       "Description": "Iron strips to guide mine carts.",
-      "MaxStackSize": 9999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -5179,7 +5179,7 @@
       "ItemType": "Consumable",
       "Name": "Carrot",
       "Description": "Restores 10 Health",
-      "MaxStackSize": 999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -5208,7 +5208,7 @@
       "ItemType": "Consumable",
       "Name": "Potato",
       "Description": "Restores 10 Health",
-      "MaxStackSize": 999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -5237,7 +5237,7 @@
       "ItemType": "Consumable",
       "Name": "Tomato",
       "Description": "Restores 10 Health",
-      "MaxStackSize": 999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -5266,7 +5266,7 @@
       "ItemType": "Consumable",
       "Name": "Strawberry",
       "Description": "Restores 10 Health",
-      "MaxStackSize": 999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -5295,7 +5295,7 @@
       "ItemType": "Consumable",
       "Name": "Corn",
       "Description": "Restores 10 Health",
-      "MaxStackSize": 999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
@@ -5324,7 +5324,7 @@
       "ItemType": "Consumable",
       "Name": "Eggplant",
       "Description": "Restores 10 Health",
-      "MaxStackSize": 999,
+      "MaxStackSize": 64,
       "CanBeEnchanted": false,
       "Rarity": "Common",
       "Offset": {
