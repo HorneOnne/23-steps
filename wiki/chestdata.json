@@ -19,6 +19,12 @@
           "Weight": 100.0
         },
         {
+          "ItemID": "ReinforcedWoodShield",
+          "MinQuantity": 1,
+          "MaxQuantity": 1,
+          "Weight": 100.0
+        },
+        {
           "ItemID": "Log",
           "MinQuantity": 5,
           "MaxQuantity": 20,
@@ -72,8 +78,20 @@
           "MaxQuantity": 4,
           "Weight": 100.0
         },
-          {
+        {
           "ItemID": "RingOfSwiftness",
+          "MinQuantity": 1,
+          "MaxQuantity": 1,
+          "Weight": 100.0
+        },
+        {
+          "ItemID": "RingOfVitality",
+          "MinQuantity": 1,
+          "MaxQuantity": 1,
+          "Weight": 100.0
+        },
+        {
+          "ItemID": "RingOfFortune",
           "MinQuantity": 1,
           "MaxQuantity": 1,
           "Weight": 100.0

@@ -143,7 +143,7 @@
       "AngleZ": 0.0,
       "UseSpeed": 2.5,
       "SwordConfig": {
-        "AttackDamage": 4.0,
+        "AttackDamage": 8.0,
         "KnockbackForce": 1.0
       }
     },
@@ -162,9 +162,9 @@
         "sqrMagnitude": 0.0
       },
       "AngleZ": 0.0,
-      "UseSpeed": 3.4,
+      "UseSpeed": 2.5,
       "SwordConfig": {
-        "AttackDamage": 7.0,
+        "AttackDamage": 14.0,
         "KnockbackForce": 3.5
       }
     },

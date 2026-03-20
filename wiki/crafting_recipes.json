@@ -25,6 +25,26 @@
       ]
     },
     {
+      "ResultItem": "WoodenShield",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "Log",
+          "Quantity": 10
+        }
+      ]
+    },
+    {
+      "ResultItem": "CopperPlatedGuard",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "CopperIngot",
+          "Quantity": 10
+        }
+      ]
+    },
+    {
       "ResultItem": "CopperIngot",
       "ResultQuantity": 1,
       "Ingredients": [
