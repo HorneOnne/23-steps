@@ -322,12 +322,17 @@
     }
 
     .tile-table tbody tr {
-      border-bottom: 1px solid var(--wiki-card-border);
+      border-bottom: 1px solid var(--wiki-infobox-row-border);
       transition: background-color .12s;
+      background-color: var(--wiki-infobox-bg);
+    }
+
+    .tile-table tbody tr:nth-child(even) {
+      background-color: var(--wiki-infobox-header-bg);
     }
 
     .tile-table tbody tr:hover {
-      background-color: var(--wiki-card-hover-bg);
+      background-color: var(--wiki-card-hover-bg) !important;
     }
 
     .tile-table td {
