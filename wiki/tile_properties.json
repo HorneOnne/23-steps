@@ -1,0 +1,464 @@
+{
+  "tileProperties": [
+    {
+      "tileID": "air",
+      "hardness": 0,
+      "minPickaxePower": 0
+    },
+    {
+      "tileID": "water",
+      "hardness": -1,
+      "minPickaxePower": 0
+    },
+    {
+      "tileID": "lava",
+      "hardness": -1,
+      "minPickaxePower": 0
+    },
+    {
+      "tileID": "dirt",
+      "hardness": 3,
+      "minPickaxePower": 0
+    },
+    {
+      "tileID": "sand",
+      "hardness": 3,
+      "minPickaxePower": 0
+    },
+    {
+      "tileID": "moss",
+      "hardness": 3,
+      "minPickaxePower": 0
+    },
+    {
+      "tileID": "snow",
+      "hardness": 3,
+      "minPickaxePower": 0
+    },
+    {
+      "tileID": "ice",
+      "hardness": 3,
+      "minPickaxePower": 0
+    },
+    {
+      "tileID": "glass",
+      "hardness": 3,
+      "minPickaxePower": 0
+    },
+    {
+      "tileID": "torch",
+      "hardness": 1,
+      "minPickaxePower": 0
+    },
+    {
+      "tileID": "lilypad",
+      "hardness": 1,
+      "minPickaxePower": 0
+    },
+    {
+      "tileID": "hay_bale",
+      "hardness": 2,
+      "minPickaxePower": 0
+    },
+    {
+      "tileID": "stone",
+      "hardness": 5,
+      "minPickaxePower": 1
+    },
+    {
+      "tileID": "voidstone",
+      "hardness": -1,
+      "minPickaxePower": -1
+    },
+    {
+      "tileID": "empty",
+      "hardness": 0,
+      "minPickaxePower": 0
+    },
+    {
+      "tileID": "carrot",
+      "hardness": 1,
+      "minPickaxePower": 0
+    },
+    {
+      "tileID": "potato",
+      "hardness": 1,
+      "minPickaxePower": 0
+    },
+    {
+      "tileID": "tomato",
+      "hardness": 1,
+      "minPickaxePower": 0
+    },
+    {
+      "tileID": "strawberry",
+      "hardness": 1,
+      "minPickaxePower": 0
+    },
+    {
+      "tileID": "corn",
+      "hardness": 1,
+      "minPickaxePower": 0
+    },
+    {
+      "tileID": "eggplant",
+      "hardness": 1,
+      "minPickaxePower": 0
+    },
+    {
+      "tileID": "wood_1_side",
+      "hardness": 5,
+      "minPickaxePower": 0
+    },
+    {
+      "tileID": "wood_1_up",
+      "hardness": 5,
+      "minPickaxePower": 0
+    },
+    {
+      "tileID": "wood_2_side",
+      "hardness": 5,
+      "minPickaxePower": 0
+    },
+    {
+      "tileID": "wood_2_up",
+      "hardness": 5,
+      "minPickaxePower": 0
+    },
+    {
+      "tileID": "verdant_pine",
+      "hardness": 10,
+      "minPickaxePower": 0
+    },
+    {
+      "tileID": "oak_tree",
+      "hardness": 10,
+      "minPickaxePower": 0
+    },
+    {
+      "tileID": "mist_willow",
+      "hardness": 10,
+      "minPickaxePower": 0
+    },
+    {
+      "tileID": "ember_maple",
+      "hardness": 10,
+      "minPickaxePower": 0
+    },
+    {
+      "tileID": "sunleaf_oak",
+      "hardness": 10,
+      "minPickaxePower": 0
+    },
+    {
+      "tileID": "stone_brick",
+      "hardness": 6,
+      "minPickaxePower": 2
+    },
+    {
+      "tileID": "moss_stone_brick",
+      "hardness": 6,
+      "minPickaxePower": 2
+    },
+    {
+      "tileID": "cracked_stone_brick",
+      "hardness": 5,
+      "minPickaxePower": 1
+    },
+    {
+      "tileID": "smooth_sand_brick",
+      "hardness": 4,
+      "minPickaxePower": 1
+    },
+    {
+      "tileID": "smooth_sand",
+      "hardness": 4,
+      "minPickaxePower": 1
+    },
+    {
+      "tileID": "sand_brick",
+      "hardness": 4,
+      "minPickaxePower": 1
+    },
+    {
+      "tileID": "snow_brick",
+      "hardness": 4,
+      "minPickaxePower": 1
+    },
+    {
+      "tileID": "onyx_brick",
+      "hardness": 8,
+      "minPickaxePower": 4
+    },
+    {
+      "tileID": "morganite_brick",
+      "hardness": 8,
+      "minPickaxePower": 4
+    },
+    {
+      "tileID": "amethyst_brick",
+      "hardness": 8,
+      "minPickaxePower": 4
+    },
+    {
+      "tileID": "spessartitegarnet_brick",
+      "hardness": 8,
+      "minPickaxePower": 5
+    },
+    {
+      "tileID": "aquamarine_brick",
+      "hardness": 8,
+      "minPickaxePower": 5
+    },
+    {
+      "tileID": "topaz_brick",
+      "hardness": 8,
+      "minPickaxePower": 5
+    },
+    {
+      "tileID": "sapphire_brick",
+      "hardness": 8,
+      "minPickaxePower": 6
+    },
+    {
+      "tileID": "emerald_brick",
+      "hardness": 8,
+      "minPickaxePower": 6
+    },
+    {
+      "tileID": "ruby_brick",
+      "hardness": 8,
+      "minPickaxePower": 7
+    },
+    {
+      "tileID": "diamond_brick",
+      "hardness": 10,
+      "minPickaxePower": 8
+    },
+    {
+      "tileID": "coal_ore",
+      "hardness": 4,
+      "minPickaxePower": 1
+    },
+    {
+      "tileID": "copper_ore",
+      "hardness": 5,
+      "minPickaxePower": 2
+    },
+    {
+      "tileID": "tin_ore",
+      "hardness": 5,
+      "minPickaxePower": 2
+    },
+    {
+      "tileID": "lead_ore",
+      "hardness": 6,
+      "minPickaxePower": 3
+    },
+    {
+      "tileID": "iron_ore",
+      "hardness": 6,
+      "minPickaxePower": 3
+    },
+    {
+      "tileID": "amberstone",
+      "hardness": 5,
+      "minPickaxePower": 3
+    },
+    {
+      "tileID": "silver_ore",
+      "hardness": 6,
+      "minPickaxePower": 3
+    },
+    {
+      "tileID": "tungsten_ore",
+      "hardness": 8,
+      "minPickaxePower": 5
+    },
+    {
+      "tileID": "gold_ore",
+      "hardness": 7,
+      "minPickaxePower": 4
+    },
+    {
+      "tileID": "platinum_ore",
+      "hardness": 8,
+      "minPickaxePower": 5
+    },
+    {
+      "tileID": "cobalt_ore",
+      "hardness": 9,
+      "minPickaxePower": 6
+    },
+    {
+      "tileID": "mythril_ore",
+      "hardness": 9,
+      "minPickaxePower": 6
+    },
+    {
+      "tileID": "onyx_ore",
+      "hardness": 8,
+      "minPickaxePower": 4
+    },
+    {
+      "tileID": "morganite_ore",
+      "hardness": 8,
+      "minPickaxePower": 4
+    },
+    {
+      "tileID": "amethyst_ore",
+      "hardness": 8,
+      "minPickaxePower": 4
+    },
+    {
+      "tileID": "spessartitegarnet_ore",
+      "hardness": 8,
+      "minPickaxePower": 5
+    },
+    {
+      "tileID": "aquamarine_ore",
+      "hardness": 8,
+      "minPickaxePower": 5
+    },
+    {
+      "tileID": "topaz_ore",
+      "hardness": 8,
+      "minPickaxePower": 5
+    },
+    {
+      "tileID": "sapphire_ore",
+      "hardness": 9,
+      "minPickaxePower": 6
+    },
+    {
+      "tileID": "emerald_ore",
+      "hardness": 9,
+      "minPickaxePower": 6
+    },
+    {
+      "tileID": "ruby_ore",
+      "hardness": 10,
+      "minPickaxePower": 7
+    },
+    {
+      "tileID": "diamond_ore",
+      "hardness": 10,
+      "minPickaxePower": 8
+    },
+    {
+      "tileID": "wooden_chest",
+      "hardness": -1,
+      "minPickaxePower": 0
+    },
+    {
+      "tileID": "copper_chest",
+      "hardness": -1,
+      "minPickaxePower": 0
+    },
+    {
+      "tileID": "silver_chest",
+      "hardness": -1,
+      "minPickaxePower": 0
+    },
+    {
+      "tileID": "gold_chest",
+      "hardness": -1,
+      "minPickaxePower": 0
+    },
+    {
+      "tileID": "emerald_chest",
+      "hardness": -1,
+      "minPickaxePower": 0
+    },
+    {
+      "tileID": "sapphire_chest",
+      "hardness": -1,
+      "minPickaxePower": 0
+    },
+    {
+      "tileID": "ruby_chest",
+      "hardness": -1,
+      "minPickaxePower": 0
+    },
+    {
+      "tileID": "ancient_chest",
+      "hardness": -1,
+      "minPickaxePower": 0
+    },
+    {
+      "tileID": "voidchest",
+      "hardness": -1,
+      "minPickaxePower": 0
+    },
+    {
+      "tileID": "workbench",
+      "hardness": -1,
+      "minPickaxePower": 0
+    },
+    {
+      "tileID": "g_dirt",
+      "hardness": -1,
+      "minPickaxePower": -1
+    },
+    {
+      "tileID": "g_cobblestone",
+      "hardness": -1,
+      "minPickaxePower": -1
+    },
+    {
+      "tileID": "g_snow",
+      "hardness": -1,
+      "minPickaxePower": -1
+    },
+    {
+      "tileID": "g_moss",
+      "hardness": -1,
+      "minPickaxePower": -1
+    },
+    {
+      "tileID": "g_cobblestone_moss",
+      "hardness": -1,
+      "minPickaxePower": -1
+    },
+    {
+      "tileID": "g_sand",
+      "hardness": -1,
+      "minPickaxePower": -1
+    },
+    {
+      "tileID": "g_stone",
+      "hardness": -1,
+      "minPickaxePower": -1
+    },
+    {
+      "tileID": "g_swamp_dirt",
+      "hardness": -1,
+      "minPickaxePower": -1
+    },
+    {
+      "tileID": "g_coast_sand",
+      "hardness": -1,
+      "minPickaxePower": -1
+    },
+    {
+      "tileID": "g_mud",
+      "hardness": -1,
+      "minPickaxePower": -1
+    },
+    {
+      "tileID": "downstair",
+      "hardness": -1,
+      "minPickaxePower": 500
+    },
+    {
+      "tileID": "upstair",
+      "hardness": -1,
+      "minPickaxePower": 500
+    },
+    {
+      "tileID": "wooden_sign",
+      "hardness": -1,
+      "minPickaxePower": 0
+    }
+  ]
+}

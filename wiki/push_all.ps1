@@ -1,5 +1,5 @@
 # push_all.ps1
-# Copies item_configs.json, mob_configs.json, crafting_recipes.json, item_values.json, chestdata.json, and tile_to_item_mapping.json from the wiki folder back to the Unity Resources folder.
+# Copies item_configs.json, mob_configs.json, crafting_recipes.json, item_values.json, chestdata.json, tile_to_item_mapping.json, and tile_properties.json from the wiki folder back to the Unity Resources folder.
 
 $sourceBase = "d:\23-steps\wiki"
 $destBase = "d:\UnityProject\1PercentGameStudio\MineAndDungeon\Assets\Resources"
@@ -11,6 +11,7 @@ $filesToCopy = @{
     "item_values.json"        = "ItemValues"
     "chestdata.json"          = "ChestLoot"
     "tile_to_item_mapping.json" = "OtherData"
+    "tile_properties.json"      = "OtherData"
 }
 
 $count = 0
