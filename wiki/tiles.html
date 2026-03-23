@@ -616,12 +616,13 @@
     }
 
     function findRequiredPickaxe(minPower) {
-      if (minPower <= 0) return null; // hand-mineable or N/A
-      // Find the weakest pickaxe whose MiningPower >= minPower
+      if (minPower < 0) return undefined; // indestructible / special — show –
+      // minPower === 0: require at least the weakest pickaxe
+      const threshold = Math.max(minPower, 1);
       for (const p of PICKAXES) {
-        if (p.power >= minPower) return p;
+        if (p.power >= threshold) return p;
       }
-      return undefined; // no pickaxe can mine it (e.g. 500)
+      return undefined; // no pickaxe qualifies (e.g. power 500 for stairs)
     }
 
     function fmt(val) {
@@ -685,9 +686,9 @@
             return sortAsc ? va.localeCompare(vb) : vb.localeCompare(va);
           }
           if (sortCol === 'pickaxe') {
-            // Sort by pickaxe power (null = 0, undefined = 999)
-            va = va === null ? -1 : va === undefined ? 999 : va.power;
-            vb = vb === null ? -1 : vb === undefined ? 999 : vb.power;
+            // Sort by pickaxe power (undefined = 999 = bottom)
+            va = va === undefined ? 999 : va.power;
+            vb = vb === undefined ? 999 : vb.power;
           }
           return sortAsc ? va - vb : vb - va;
         });
@@ -723,10 +724,7 @@
     }
 
     function buildPickaxeCell(pickaxe) {
-      // null = hand-mineable, undefined = can't mine
-      if (pickaxe === null) {
-        return '<span class="none-label">None (hand)</span>';
-      }
+      // undefined = indestructible / no pickaxe qualifies
       if (pickaxe === undefined) {
         return '<span class="val-dash">–</span>';
       }
@@ -757,9 +755,10 @@
         }))
         .sort((a, b) => a.power - b.power);
 
-      // Build row data (skip air)
+      // Build row data (skip air, water, lava)
+      const SKIP_TILES = new Set(['air', 'water', 'lava']);
       allRows = tiles
-        .filter(t => t.tileID !== 'air')
+        .filter(t => !SKIP_TILES.has(t.tileID))
         .map(t => ({
           tileID: t.tileID,
           name: tileDisplayName(t.tileID),
