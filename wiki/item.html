@@ -1595,23 +1595,26 @@
     let allRecipes = [];
     let allMobs = [];
     let allShops = [];
+    let allTileMappings = [];
     async function init() {
       const params = new URLSearchParams(location.search);
       const itemId = params.get('id');
       if (!itemId) { showNotFound('No item ID specified.'); return; }
 
-      const [data, valuesData, recipesData, mobData, shopData] = await Promise.all([
+      const [data, valuesData, recipesData, mobData, shopData, tileData] = await Promise.all([
         fetch('item_configs.json').then(r => r.json()),
         fetch('item_values.json').then(r => r.json()),
         fetch('crafting_recipes.json').then(r => r.json()),
         fetch('mob_configs.json').then(r => r.json()),
-        fetch('shopconfigs.json').then(r => r.json())
+        fetch('shopconfigs.json').then(r => r.json()),
+        fetch('tile_to_item_mapping.json').then(r => r.json())
       ]);
       const configs = data.ItemConfigs || data;
       allConfigs = configs;
       allRecipes = recipesData.Recipes || [];
       allMobs = (mobData.MobConfigs || mobData);
       allShops = shopData;
+      allTileMappings = tileData.mappings || [];
 
       // Build item values map
       let itemValuesMap = {};
@@ -1730,6 +1733,7 @@
                         ${infoRows.map(([k, v]) => `<tr><td>${k}</td><td>${v}</td></tr>`).join('')}
                     </table>
                     ${renderCraftingRecipe(cfg)}
+                    ${renderMinedFrom(cfg)}
                     ${renderDroppedBy(cfg)}
                     ${renderSoldBy(cfg)}
                 </div>
@@ -1811,6 +1815,34 @@
         <div class="recipe-section">
             <div class="section-title"><i class="fas fa-hammer"></i>&nbsp; Crafting</div>
             <div class="recipe-grid">${ingredientChips}</div>
+        </div>`;
+    }
+
+    // ── Mined From (tiles) ────────────────────────────────────────────────────────
+    function tileDisplayName(tileID) {
+      return tileID.split('_').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+    }
+
+    function renderMinedFrom(cfg) {
+      const matches = allTileMappings.filter(m =>
+        m.itemID === cfg.ItemID && m.tileID !== 'None' && m.tileID !== 'air'
+      );
+      if (!matches.length) return '';
+
+      const icons = matches.map(m => {
+        const name = tileDisplayName(m.tileID);
+        const imgSrc = 'assets/tiles/' + m.tileID + '.png';
+        const qtyText = m.dropQuantityMin === m.dropQuantityMax
+          ? `×${m.dropQuantityMin}`
+          : `×${m.dropQuantityMin}–${m.dropQuantityMax}`;
+        const imgHtml = `<img src="${imgSrc}" alt="${name}" onerror="this.outerHTML='<span class=\'icon-missing\'>🪨</span>'" />`;
+        return `<span class="source-icon" title="${name} (${qtyText})">${imgHtml}</span>`;
+      }).join('');
+
+      return `
+        <div class="source-section">
+          <div class="section-title"><i class="fas fa-gem"></i>&nbsp; Mined From</div>
+          <div class="source-grid">${icons}</div>
         </div>`;
     }
 
