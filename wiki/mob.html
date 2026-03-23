@@ -650,6 +650,128 @@
         grid-template-columns: 1fr;
       }
     }
+
+    /* ── Damage Table ───────────────────────────────────── */
+    .damage-section {
+      margin-top: 28px;
+    }
+
+    .damage-section-title {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 0.65rem;
+      color: var(--wiki-heading);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .damage-table-wrap {
+      overflow-x: auto;
+      border-radius: 8px;
+      border: 1px solid var(--wiki-infobox-border);
+    }
+
+    .damage-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82em;
+    }
+
+    .damage-table thead {
+      background: var(--wiki-page-header-bg);
+    }
+
+    .damage-table th {
+      padding: 10px 14px;
+      text-align: left;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 0.5rem;
+      color: var(--wiki-heading);
+      border-bottom: 2px solid var(--wiki-page-header-border);
+      white-space: nowrap;
+    }
+
+    .damage-table .group-header td {
+      padding: 8px 14px;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 0.5rem;
+      color: var(--wiki-section-title);
+      background: var(--wiki-infobox-header-bg);
+      border-bottom: 1px solid var(--wiki-infobox-header-border);
+      letter-spacing: 0.04em;
+    }
+
+    .damage-table tbody tr {
+      border-bottom: 1px solid var(--wiki-infobox-row-border);
+      background: var(--wiki-infobox-bg);
+      transition: background .12s;
+    }
+
+    .damage-table tbody tr:nth-child(even):not(.group-header) {
+      background: var(--wiki-infobox-header-bg);
+    }
+
+    .damage-table tbody tr:hover:not(.group-header) {
+      background: var(--wiki-card-hover-bg) !important;
+    }
+
+    .damage-table td {
+      padding: 8px 14px;
+      vertical-align: middle;
+    }
+
+    .damage-table .dmg-icon-cell {
+      width: 36px;
+      text-align: center;
+      padding: 6px 6px 6px 14px;
+    }
+
+    .dmg-icon-wrap {
+      width: 32px;
+      height: 32px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .dmg-icon-wrap img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+    }
+
+    .dmg-weapon-link {
+      color: var(--wiki-section-title);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color .12s;
+    }
+
+    .dmg-weapon-link:hover {
+      text-decoration: underline;
+      color: var(--wiki-tab-active-text);
+    }
+
+    .dmg-val {
+      font-weight: 700;
+      color: var(--wiki-infobox-value);
+    }
+
+    .dmg-val.dmg-color { color: #f87171; }
+
+    .hits-val {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 0.6rem;
+      font-weight: 700;
+      color: var(--wiki-infobox-value);
+    }
+
+    .hits-few { color: #4ade80; }
+    .hits-mid { color: #fbbf24; }
+    .hits-many { color: #f87171; }
   </style>
 </head>
 
@@ -931,6 +1053,43 @@
         lootHtml = '<div class="no-loot">No loot drops.</div>';
       }
 
+      /* ── Build damage table ── */
+      var weaponTypes = [
+        { label: 'Swords', icon: 'fa-khanda', filter: function(c) { return c.ItemType === 'Sword' && c.SwordConfig; }, dmg: function(c) { return c.SwordConfig.AttackDamage; } },
+        { label: 'Pickaxes', icon: 'fa-hammer', filter: function(c) { return c.ItemType === 'Pickaxe' && c.PickaxeConfig; }, dmg: function(c) { return c.PickaxeConfig.AttackDamage; } },
+        { label: 'Bows', icon: 'fa-bow-arrow', filter: function(c) { return c.ItemType === 'Bow' && c.BowConfig; }, dmg: function(c) { return c.BowConfig.AttackDamage; } },
+        { label: 'Staffs', icon: 'fa-wand-sparkles', filter: function(c) { return c.ItemType === 'Staff' && c.StaffConfig; }, dmg: function(c) { return c.StaffConfig.MagicDamage; } }
+      ];
+
+      var mobHP = h.MaxHealth;
+      var damageRows = '';
+      var allConfigs = itemData.ItemConfigs || [];
+
+      weaponTypes.forEach(function(wt) {
+        var weapons = allConfigs.filter(wt.filter).sort(function(a, b) { return wt.dmg(a) - wt.dmg(b); });
+        if (weapons.length === 0) return;
+        damageRows += '<tr class="group-header"><td colspan="4"><i class="fas ' + wt.icon + '"></i>&nbsp; ' + wt.label + '</td></tr>';
+        weapons.forEach(function(w) {
+          var damage = wt.dmg(w);
+          var hits = Math.ceil(mobHP / damage);
+          var hitsClass = hits <= 5 ? 'hits-few' : hits <= 15 ? 'hits-mid' : 'hits-many';
+          var wIcon = iconUrl(w.ItemID);
+          var displayName = w.Name || w.ItemID;
+          damageRows += '<tr>' +
+            '<td class="dmg-icon-cell"><a href="item.html?id=' + encodeURIComponent(w.ItemID) + '"><div class="dmg-icon-wrap"><img src="' + wIcon + '" alt="' + displayName + '" loading="lazy" onerror="this.style.display=\'none\'" /></div></a></td>' +
+            '<td><a class="dmg-weapon-link" href="item.html?id=' + encodeURIComponent(w.ItemID) + '">' + displayName + '</a></td>' +
+            '<td class="dmg-val dmg-color">' + fmt(damage) + '</td>' +
+            '<td><span class="hits-val ' + hitsClass + '">' + hits + '</span></td>' +
+          '</tr>';
+        });
+      });
+
+      var damageTableHtml = '<div class="damage-section">' +
+        '<div class="damage-section-title"><i class="fas fa-crosshairs"></i> Hits to Kill</div>' +
+        '<div class="damage-table-wrap"><table class="damage-table">' +
+        '<thead><tr><th></th><th>Weapon</th><th>Damage</th><th>Hits</th></tr></thead>' +
+        '<tbody>' + damageRows + '</tbody></table></div></div>';
+
       document.getElementById('pageContent').innerHTML =
         '<a class="back-btn" href="mobs.html"><i class="fas fa-arrow-left"></i> Back to Mobs</a>' +
         '<div class="infobox" style="--mob-accent:' + accentColor + '">' +
@@ -950,7 +1109,8 @@
             sectionHeader('Loot') +
             lootHtml +
           '</div>' +
-        '</div>';
+        '</div>' +
+        damageTableHtml;
     }
     })();
   </script>
