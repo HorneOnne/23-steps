@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiles — Mine &amp; Dungeon Wiki | 23-Steps</title>
+  <meta name="description"
+    content="Complete tile database for Mine & Dungeon. Browse all blocks and tiles with hardness, mining power requirements, and required pickaxe info." />
+  <meta name="keywords" content="Mine and Dungeon tiles, blocks, mining, pickaxe power, hardness, 23-Steps wiki" />
+  <link rel="canonical" href="https://23-steps.com/wiki/tiles.html" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Tiles — Mine &amp; Dungeon Wiki | 23-Steps" />
+  <meta property="og:description"
+    content="Complete tile database for Mine & Dungeon. All blocks with hardness, mining requirements, and required pickaxe." />
+  <meta property="og:url" content="https://23-steps.com/wiki/tiles.html" />
+  <meta property="og:site_name" content="23-Steps" />
+  <meta property="og:image" content="https://23-steps.com/images/mine-dungeon.png" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tiles — Mine &amp; Dungeon Wiki | 23-Steps" />
+  <meta name="twitter:description"
+    content="Complete tile database for Mine & Dungeon. Blocks, hardness, mining requirements." />
+  <meta name="twitter:image" content="https://23-steps.com/images/mine-dungeon.png" />
+  <link rel="icon" type="image/png" href="../icon2.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Press+Start+2P&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="wiki-theme.css" />
+  <script src="wiki-theme.js"></script>
+  <style>
+    /* ── Base ─────────────────────────────────────────── */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      font-family: 'Inter', sans-serif;
+      background-image: var(--wiki-body-bg-image);
+      background-repeat: repeat;
+      background-size: 256px 256px;
+      background-color: var(--wiki-bg);
+      color: var(--wiki-text);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: var(--wiki-bg-overlay);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    main {
+      flex: 1;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* ── Header ───────────────────────────────────────── */
+    header {
+      background-color: var(--wiki-header-bg);
+      height: 60px;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      border-bottom: 1px solid var(--wiki-header-border);
+      position: relative;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 1.4em;
+      color: var(--wiki-header-title);
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    header h1 a {
+      color: inherit;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    header .logo {
+      height: 50px;
+      object-fit: contain;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    nav a {
+      color: var(--wiki-nav-text);
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0 20px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      font-size: 0.85em;
+    }
+
+    nav a.active {
+      background-color: var(--wiki-nav-active-bg);
+      color: var(--wiki-nav-active-text);
+    }
+
+    nav a:hover:not(.active) {
+      color: var(--wiki-nav-active-text);
+    }
+
+    /* ── Page header ──────────────────────────────────── */
+    .wiki-page-header {
+      background-color: var(--wiki-page-header-bg);
+      border-bottom: 2px solid var(--wiki-page-header-border);
+      padding: 24px 24px 0;
+    }
+
+    .wiki-page-header .breadcrumb {
+      font-size: 0.7em;
+      color: var(--wiki-breadcrumb);
+      margin-bottom: 10px;
+      letter-spacing: 0.04em;
+    }
+
+    .wiki-page-header .breadcrumb a {
+      color: var(--wiki-breadcrumb);
+      text-decoration: none;
+    }
+
+    .wiki-page-header .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+
+    .wiki-page-header h2 {
+      font-family: 'Press Start 2P', cursive;
+      font-size: clamp(0.9rem, 2.5vw, 1.4rem);
+      color: var(--wiki-heading);
+      margin-bottom: 5px;
+    }
+
+    .wiki-page-header p {
+      color: var(--wiki-subheading);
+      font-size: 0.83em;
+      margin-bottom: 18px;
+    }
+
+    /* ── Tab bar ──────────────────────────────────────── */
+    .tab-bar {
+      display: flex;
+      border-top: 1px solid var(--wiki-tab-border);
+      overflow-x: auto;
+    }
+
+    .tab-bar::-webkit-scrollbar {
+      height: 0;
+    }
+
+    .tab-btn {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 11px 20px;
+      color: var(--wiki-tab-text);
+      font-weight: 600;
+      font-size: 0.82em;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      border-bottom: 3px solid transparent;
+      white-space: nowrap;
+      transition: color .15s, border-color .15s, background .15s;
+      text-decoration: none;
+      font-family: inherit;
+    }
+
+    .tab-btn:hover {
+      color: var(--wiki-tab-hover-text);
+      background: var(--wiki-tab-hover-bg);
+    }
+
+    .tab-btn.active {
+      color: var(--wiki-tab-active-text);
+      border-bottom-color: var(--wiki-tab-active-border);
+      background: var(--wiki-tab-active-bg);
+    }
+
+    .tab-btn.disabled {
+      opacity: .4;
+      cursor: default;
+      pointer-events: none;
+    }
+
+    .tab-badge {
+      font-size: .6em;
+      background: var(--wiki-tab-badge-bg);
+      border: 1px solid var(--wiki-tab-badge-border);
+      color: var(--wiki-tab-badge-text);
+      padding: 1px 5px;
+      border-radius: 3px;
+    }
+
+    /* ── Controls bar ─────────────────────────────────── */
+    .controls-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 9;
+      background-color: var(--wiki-controls-bg);
+      border-bottom: 1px solid var(--wiki-controls-border);
+      padding: 10px 20px;
+    }
+
+    .controls {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .search-box {
+      flex: 1;
+      min-width: 200px;
+      background: var(--wiki-input-bg);
+      border: 1px solid var(--wiki-input-border);
+      border-radius: 5px;
+      padding: 7px 12px;
+      color: var(--wiki-input-text);
+      font-size: 0.85em;
+      outline: none;
+      transition: border-color .2s;
+      font-family: inherit;
+    }
+
+    .search-box:focus {
+      border-color: var(--wiki-input-focus);
+    }
+
+    .search-box::placeholder {
+      color: var(--wiki-input-placeholder);
+    }
+
+    /* ── Content wrap ─────────────────────────────────── */
+    .content-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px 20px;
+    }
+
+    /* ── Tile Table ───────────────────────────────────── */
+    .tile-table-wrap {
+      overflow-x: auto;
+      border-radius: 8px;
+      border: 1px solid var(--wiki-card-border);
+    }
+
+    .tile-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85em;
+    }
+
+    .tile-table thead {
+      background: var(--wiki-page-header-bg);
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+
+    .tile-table th {
+      padding: 12px 14px;
+      text-align: left;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 0.55rem;
+      color: var(--wiki-heading);
+      border-bottom: 2px solid var(--wiki-page-header-border);
+      cursor: pointer;
+      user-select: none;
+      white-space: nowrap;
+      transition: color .15s;
+    }
+
+    .tile-table th:nth-child(1) { width: 40px; }
+    .tile-table th:nth-child(2) { width: 30%; }
+    .tile-table th:nth-child(3) { width: 12%; }
+    .tile-table th:nth-child(4) { width: 18%; }
+    .tile-table th:nth-child(5) { width: auto; }
+
+    .tile-table th:hover {
+      color: var(--wiki-tab-active-text);
+    }
+
+    .tile-table th .sort-icon {
+      margin-left: 4px;
+      font-size: 0.7em;
+      opacity: 0.4;
+    }
+
+    .tile-table th.sorted .sort-icon {
+      opacity: 1;
+    }
+
+    .tile-table tbody tr {
+      border-bottom: 1px solid var(--wiki-card-border);
+      transition: background-color .12s;
+    }
+
+    .tile-table tbody tr:hover {
+      background-color: var(--wiki-card-hover-bg);
+    }
+
+    .tile-table td {
+      padding: 10px 14px;
+      vertical-align: middle;
+    }
+
+    .tile-table .tile-icon-cell {
+      width: 40px;
+      text-align: center;
+      padding: 8px 6px;
+    }
+
+    .tile-icon-wrap {
+      width: 32px;
+      height: 32px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .tile-icon-wrap img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+    }
+
+    .tile-name {
+      font-weight: 600;
+      color: var(--wiki-text);
+    }
+
+    .tile-id {
+      font-size: 0.75em;
+      color: var(--wiki-text-dimmer);
+      margin-top: 2px;
+    }
+
+    .val-dash {
+      color: var(--wiki-text-dimmer);
+      font-style: italic;
+    }
+
+    /* Pickaxe requirement cell */
+    .pickaxe-cell {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .pickaxe-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      color: var(--wiki-text);
+      padding: 2px 4px;
+      border-radius: 4px;
+      transition: background .15s;
+    }
+
+    .pickaxe-link:hover {
+      background: var(--wiki-card-hover-bg);
+      text-decoration: underline;
+    }
+
+    .pickaxe-link img {
+      width: 24px;
+      height: 24px;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+    }
+
+    .pickaxe-link .pickaxe-name {
+      font-size: 0.8em;
+      font-weight: 500;
+    }
+
+    .none-label {
+      color: var(--wiki-text-dimmer);
+      font-size: 0.85em;
+      font-style: italic;
+    }
+
+    /* ── Stats bar ────────────────────────────────────── */
+    .stats-bar {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .stat-chip {
+      background: var(--wiki-card-bg);
+      border: 1px solid var(--wiki-card-border);
+      border-radius: 6px;
+      padding: 8px 14px;
+      font-size: 0.8em;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .stat-chip strong {
+      color: var(--wiki-heading);
+    }
+
+    /* ── Loading / error ──────────────────────────────── */
+    .loading-state {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--wiki-loading);
+      font-size: 0.9em;
+    }
+
+    .loading-state i {
+      font-size: 2rem;
+      margin-bottom: 14px;
+      display: block;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* ── Footer ───────────────────────────────────────── */
+    footer {
+      text-align: center;
+      padding: 10px;
+      font-size: 0.8em;
+      color: var(--wiki-footer-text);
+      background-color: var(--wiki-footer-bg);
+      border-top: 1px solid var(--wiki-footer-border);
+      font-weight: bold;
+      position: relative;
+      z-index: 2;
+    }
+
+    footer a {
+      color: var(--wiki-footer-link);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        height: auto;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0;
+      }
+
+      header h1 {
+        justify-content: center;
+        padding: 8px 12px 4px;
+      }
+
+      header .logo {
+        height: 40px;
+      }
+
+      nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        border-top: 1px solid var(--wiki-header-border);
+        padding: 0 4px;
+      }
+
+      nav a {
+        padding: 8px 12px;
+        font-size: 0.75em;
+        height: auto;
+      }
+
+      .theme-toggle {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+      }
+
+      .wiki-page-header h2 {
+        font-size: 0.8rem;
+      }
+
+      .pickaxe-link .pickaxe-name {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>
+      <a href="../index.html">
+        <img src="../images/logo.png" alt="23-Steps" class="logo" />
+        <span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">23-Steps</span>
+      </a>
+    </h1>
+    <nav>
+      <a href="../index.html">HOME</a>
+      <a href="../games.html">GAMES</a>
+      <a href="mine-dungeon.html" class="active">WIKI</a>
+      <button class="theme-toggle" title="Toggle light/dark mode" aria-label="Toggle theme">
+        <i class="fas fa-sun icon-sun"></i>
+        <i class="fas fa-moon icon-moon"></i>
+      </button>
+    </nav>
+  </header>
+
+  <div class="wiki-page-header">
+    <div class="breadcrumb">
+      <a href="../index.html">23-Steps</a> &rsaquo;
+      <a href="index.html">Wiki</a> &rsaquo;
+      <a href="mine-dungeon.html">Mine &amp; Dungeon</a> &rsaquo;
+      Tiles
+    </div>
+    <h2><i class="fas fa-th"></i>&nbsp; Tiles</h2>
+    <p>All tiles with hardness, mining power requirements, and required pickaxe</p>
+    <div class="tab-bar">
+      <a class="tab-btn" href="mobs.html"><i class="fas fa-skull"></i> Mobs</a>
+      <a class="tab-btn" href="items.html"><i class="fas fa-boxes"></i> Items</a>
+      <a class="tab-btn active" href="tiles.html"><i class="fas fa-th"></i> Tiles</a>
+      <a class="tab-btn" href="merchants.html"><i class="fas fa-store"></i> Merchants</a>
+      <a class="tab-btn" href="economy.html"><i class="fas fa-chart-line"></i> Economy</a>
+      <a class="tab-btn" href="chests.html"><i class="fas fa-box-open"></i> Chests</a>
+      <a class="tab-btn" href="luck.html"><i class="fas fa-clover"></i> Luck</a>
+      <span class="tab-btn disabled"><i class="fas fa-map"></i> Maps <span class="tab-badge">Soon</span></span>
+      <span class="tab-btn disabled"><i class="fas fa-scroll"></i> Quests <span class="tab-badge">Soon</span></span>
+      <span class="tab-btn disabled"><i class="fas fa-hat-wizard"></i> Bosses <span class="tab-badge">Soon</span></span>
+      <span class="tab-btn disabled"><i class="fas fa-hammer"></i> Crafting <span class="tab-badge">Soon</span></span>
+    </div>
+  </div>
+
+  <div class="controls-wrap">
+    <div class="controls">
+      <input class="search-box" type="text" id="searchInput" placeholder="&#128269;  Search tiles by name..."
+        oninput="applyFilter()" />
+    </div>
+  </div>
+
+  <main>
+    <div class="content-wrap">
+      <div class="stats-bar" id="statsBar"></div>
+      <div id="tileContent">
+        <div class="loading-state">
+          <i class="fas fa-spinner"></i>
+          Loading tile data…
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy;2026 23-Steps. All rights reserved |
+    <a href="../privacy-policy.html">Privacy Policy</a> |
+    <a href="../terms-of-service.html">Terms of Service</a> |
+    <a href="../delete-account.html">Delete Account</a>
+  </footer>
+  <script src="icon_map.js"></script>
+
+  <script>
+    // ── Pickaxes sorted by MiningPower (ascending) ───────────────────────────────
+    // Will be populated from item_configs.json
+    let PICKAXES = [];
+
+    // ── Helpers ──────────────────────────────────────────────────────────────────
+    function tileDisplayName(tileID) {
+      return tileID
+        .replace(/_/g, ' ')
+        .replace(/\b\w/g, c => c.toUpperCase());
+    }
+
+    function tileIconUrl(tileID) {
+      // Try tile-specific asset first, then fall back to item icon via mapping
+      return 'assets/tiles/' + tileID + '.png';
+    }
+
+    function findRequiredPickaxe(minPower) {
+      if (minPower <= 0) return null; // hand-mineable or N/A
+      // Find the weakest pickaxe whose MiningPower >= minPower
+      for (const p of PICKAXES) {
+        if (p.power >= minPower) return p;
+      }
+      return undefined; // no pickaxe can mine it (e.g. 500)
+    }
+
+    function fmt(val) {
+      if (val < 0) return '<span class="val-dash">–</span>';
+      return val;
+    }
+
+    // ── Sort state ───────────────────────────────────────────────────────────────
+    let sortCol = null;
+    let sortAsc = true;
+    let allRows = [];
+
+    function sortTable(col) {
+      if (sortCol === col) {
+        sortAsc = !sortAsc;
+      } else {
+        sortCol = col;
+        sortAsc = true;
+      }
+      renderRows();
+      updateSortHeaders();
+    }
+
+    function updateSortHeaders() {
+      document.querySelectorAll('.tile-table th').forEach(th => {
+        th.classList.remove('sorted');
+        const icon = th.querySelector('.sort-icon');
+        if (icon) icon.textContent = '⇅';
+      });
+      if (sortCol !== null) {
+        const th = document.querySelector(`.tile-table th[data-col="${sortCol}"]`);
+        if (th) {
+          th.classList.add('sorted');
+          const icon = th.querySelector('.sort-icon');
+          if (icon) icon.textContent = sortAsc ? '↑' : '↓';
+        }
+      }
+    }
+
+    // ── Filter ───────────────────────────────────────────────────────────────────
+    function applyFilter() {
+      const q = document.getElementById('searchInput').value.toLowerCase().trim();
+      const tbody = document.querySelector('.tile-table tbody');
+      if (!tbody) return;
+      const rows = tbody.querySelectorAll('tr');
+      rows.forEach(row => {
+        const name = row.dataset.name || '';
+        row.style.display = name.includes(q) ? '' : 'none';
+      });
+    }
+
+    // ── Render ───────────────────────────────────────────────────────────────────
+    function renderRows() {
+      const sorted = [...allRows];
+      if (sortCol !== null) {
+        sorted.sort((a, b) => {
+          let va = a[sortCol], vb = b[sortCol];
+          // For string columns
+          if (sortCol === 'name') {
+            va = va.toLowerCase(); vb = vb.toLowerCase();
+            return sortAsc ? va.localeCompare(vb) : vb.localeCompare(va);
+          }
+          if (sortCol === 'pickaxe') {
+            // Sort by pickaxe power (null = 0, undefined = 999)
+            va = va === null ? -1 : va === undefined ? 999 : va.power;
+            vb = vb === null ? -1 : vb === undefined ? 999 : vb.power;
+          }
+          return sortAsc ? va - vb : vb - va;
+        });
+      }
+
+      const tbody = document.querySelector('.tile-table tbody');
+      tbody.innerHTML = '';
+      sorted.forEach(row => {
+        const tr = document.createElement('tr');
+        tr.dataset.name = row.name.toLowerCase();
+
+        const pickaxeHtml = buildPickaxeCell(row.pickaxe);
+
+        tr.innerHTML = `
+          <td class="tile-icon-cell">
+            <div class="tile-icon-wrap">
+              <img src="${tileIconUrl(row.tileID)}" alt="${row.name}" loading="lazy"
+                   onerror="this.onerror=null;this.src='assets/items/${row.tileID}.png';" />
+            </div>
+          </td>
+          <td>
+            <div class="tile-name">${row.name}</div>
+            <div class="tile-id">${row.tileID}</div>
+          </td>
+          <td>${fmt(row.hardness)}</td>
+          <td>${fmt(row.minPickaxePower)}</td>
+          <td>${pickaxeHtml}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      applyFilter();
+    }
+
+    function buildPickaxeCell(pickaxe) {
+      // null = hand-mineable, undefined = can't mine
+      if (pickaxe === null) {
+        return '<span class="none-label">None (hand)</span>';
+      }
+      if (pickaxe === undefined) {
+        return '<span class="val-dash">–</span>';
+      }
+      const url = iconUrl(pickaxe.id);
+      return `<a class="pickaxe-link" href="item.html?id=${encodeURIComponent(pickaxe.id)}" title="${pickaxe.name}">
+        <img src="${url}" alt="${pickaxe.name}" onerror="this.style.display='none'" />
+        <span class="pickaxe-name">${pickaxe.name}</span>
+      </a>`;
+    }
+
+    // ── Init ─────────────────────────────────────────────────────────────────────
+    async function init() {
+      const [tileData, itemData] = await Promise.all([
+        fetch('tile_properties.json').then(r => r.json()),
+        fetch('item_configs.json').then(r => r.json())
+      ]);
+
+      const tiles = tileData.tileProperties || [];
+      const configs = itemData.ItemConfigs || itemData;
+
+      // Build pickaxe list from item configs
+      PICKAXES = configs
+        .filter(c => c.ItemType === 'Pickaxe' && c.PickaxeConfig)
+        .map(c => ({
+          id: c.ItemID,
+          name: c.Name,
+          power: c.PickaxeConfig.MiningPower
+        }))
+        .sort((a, b) => a.power - b.power);
+
+      // Build row data (skip air)
+      allRows = tiles
+        .filter(t => t.tileID !== 'air')
+        .map(t => ({
+          tileID: t.tileID,
+          name: tileDisplayName(t.tileID),
+          hardness: t.hardness,
+          minPickaxePower: t.minPickaxePower,
+          pickaxe: findRequiredPickaxe(t.minPickaxePower)
+        }));
+
+      // Stats
+      const statsBar = document.getElementById('statsBar');
+      const mineableCount = allRows.filter(r => r.hardness > 0).length;
+      const indestructible = allRows.filter(r => r.hardness < 0).length;
+      statsBar.innerHTML = `
+        <div class="stat-chip"><i class="fas fa-th"></i> <strong>${allRows.length}</strong> Tiles</div>
+        <div class="stat-chip"><i class="fas fa-pickaxe fa-hammer"></i> <strong>${mineableCount}</strong> Mineable</div>
+        <div class="stat-chip"><i class="fas fa-shield-halved"></i> <strong>${indestructible}</strong> Indestructible</div>
+      `;
+
+      // Build table
+      const content = document.getElementById('tileContent');
+      content.innerHTML = `
+        <div class="tile-table-wrap">
+          <table class="tile-table">
+            <thead>
+              <tr>
+                <th style="cursor:default"></th>
+                <th data-col="name" onclick="sortTable('name')">Name <span class="sort-icon">⇅</span></th>
+                <th data-col="hardness" onclick="sortTable('hardness')">Hardness <span class="sort-icon">⇅</span></th>
+                <th data-col="minPickaxePower" onclick="sortTable('minPickaxePower')">Min Pickaxe Power <span class="sort-icon">⇅</span></th>
+                <th data-col="pickaxe" onclick="sortTable('pickaxe')">Required Pickaxe <span class="sort-icon">⇅</span></th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      `;
+
+      renderRows();
+    }
+
+    init();
+  </script>
+
+</body>
+
+</html>
