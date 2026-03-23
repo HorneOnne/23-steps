@@ -7,31 +7,49 @@ This file documents all the custom terminal commands (aliases and scripts) creat
 ## 1. `sync_icons`
 - **Description:** Automatically copies all new or updated `.png` item and mob icons from the main Unity project directly into the wiki's asset folders. It safely ignores any Unity `.meta` files.
 - **Source Folders:**
-  - Items: `d:\UnityProject\1PercentGameStudio\Mine&Dungeon\Assets\Resources\Items`
-  - Mobs: `d:\UnityProject\1PercentGameStudio\Mine&Dungeon\Assets\Resources\MobIcons`
+  - Items: `d:\UnityProject\1PercentGameStudio\MineAndDungeon\Assets\Resources\Items`
+  - Mobs: `d:\UnityProject\1PercentGameStudio\MineAndDungeon\Assets\Resources\MobIcons`
+  - Tiles: `d:\UnityProject\1PercentGameStudio\MineAndDungeon\Assets\Sprites\Icons\tiles`
 - **Destination Folders:**
   - Items: `d:\23-steps\wiki\assets\items`
   - Mobs: `d:\23-steps\wiki\assets\mobs`
+  - Tiles: `d:\23-steps\wiki\assets\tiles`
 - **How to run:** Just type `sync_icons` in any bash terminal (Git Bash). You can be inside any folder.
 - **How it works:** This is an alias defined in your `~/.bashrc` which points to `d:/23-steps/wiki/sync_icons.ps1`.
 
 ---
 
 ## 2. `fetch_all`
-- **Description:** Automatically copies `item_configs.json`, `mob_configs.json`, `crafting_recipes.json`, `item_values.json`, and `chestdata.json` from the main Unity project directly into the wiki folder.
-- **Source Folder:** `d:\UnityProject\1PercentGameStudio\Mine&Dungeon\Assets\Resources`
+- **Description:** Automatically copies `item_configs.json`, `mob_configs.json`, `crafting_recipes.json`, `item_values.json`, `chestdata.json`, and `tile_to_item_mapping.json` from the main Unity project directly into the wiki folder.
+- **Source Folder:** `d:\UnityProject\1PercentGameStudio\MineAndDungeon\Assets\Resources`
   - `ItemConfigs\item_configs.json`
   - `MobConfigs\mob_configs.json`
   - `Recipes\crafting_recipes.json`
   - `ItemValues\item_values.json`
   - `ChestLoot\chestdata.json`
+  - `OtherData\tile_to_item_mapping.json`
 - **Destination:** `d:\23-steps\wiki`
 - **How to run:** Just type `fetch_all` in any bash terminal (Git Bash). You can be inside any folder.
 - **How it works:** This is an alias defined in your `~/.bashrc` which points to `d:/23-steps/wiki/fetch_all.ps1`.
 
 ---
 
-## 3. `rebuild_data`
+## 3. `push_all`
+- **Description:** Inverse of `fetch_all`. Copies `item_configs.json`, `mob_configs.json`, `crafting_recipes.json`, `item_values.json`, `chestdata.json`, and `tile_to_item_mapping.json` from the wiki folder back into the Unity Resources folder.
+- **Source Folder:** `d:\23-steps\wiki`
+- **Destination Folder:** `d:\UnityProject\1PercentGameStudio\MineAndDungeon\Assets\Resources`
+  - `item_configs.json` → `ItemConfigs\`
+  - `mob_configs.json` → `MobConfigs\`
+  - `crafting_recipes.json` → `Recipes\`
+  - `item_values.json` → `ItemValues\`
+  - `chestdata.json` → `ChestLoot\`
+  - `tile_to_item_mapping.json` → `OtherData\`
+- **How to run:** Just type `push_all` in any bash terminal (Git Bash). You can be inside any folder.
+- **How it works:** This is an alias defined in your `~/.bashrc` which points to `d:/23-steps/wiki/push_all.ps1`.
+
+---
+
+## 4. `rebuild_data`
 - **Description:** Rebuilds the JS data wrapper files (`crafting_recipes.js`, `item_values.js`, `mob_configs.js`, `item_configs.js`) from their corresponding `.json` files. Run this after any of those JSONs change so `economy.html`, `items.html`, `item.html`, and `merchants.html` pick up updated data.
 - **Location:** `d:\23-steps\wiki\rebuild-economy-data.sh`
 - **How to run:** Just type `rebuild_data` in any bash terminal (Git Bash). You can be inside any folder.
@@ -64,14 +82,11 @@ This file documents all the custom terminal commands (aliases and scripts) creat
 
 ---
 
-## 6. `start_server` (macOS)
-- **Description:** Starts a local HTTP server to serve the wiki files from the `23-steps` project root. Required to preview any `.html` pages in the browser (avoids CORS issues with `fetch()` calls to local JSON files).
-- **How to run:** From the `23-steps` root directory:
-  ```bash
-  python3 -m http.server
-  ```
-  Then open your browser and go to: [http://localhost:8000/wiki/](http://localhost:8000/wiki/)
-- **Default port:** `8000`. To use a different port: `python3 -m http.server 8080`
+## 6. `start_server`
+- **Description:** Starts a local HTTP server on port 8080 serving the `23-steps` project root, then opens the wiki in your default browser. Required to preview `.html` pages (avoids CORS issues with local `fetch()` calls to JSON files).
+- **How to run:** Just type `start_server` in any bash terminal (Git Bash). You can be inside any folder.
+- **How it works:** This is an alias defined in your `~/.bashrc` which points to `d:/23-steps/wiki/start_server.ps1`. The script runs `python -m http.server 8080` from the project root.
+- **Wiki URL:** [http://localhost:8080/wiki/](http://localhost:8080/wiki/)
 - **How to stop:** Press `Ctrl+C` in the terminal where the server is running.
 
 ---

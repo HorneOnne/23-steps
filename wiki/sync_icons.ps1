@@ -1,11 +1,14 @@
 # sync_icons.ps1
-# Copies all .png item and mob icons from the Unity Resources folders to the wiki assets folders.
+# Copies all .png item, mob, and tile icons from the Unity project to the wiki assets folders.
 
-$itemSource = "d:\UnityProject\1PercentGameStudio\Mine&Dungeon\Assets\Resources\Items"
+$itemSource = "d:\UnityProject\1PercentGameStudio\MineAndDungeon\Assets\Resources\Items"
 $itemDest   = "d:\23-steps\wiki\assets\items"
 
-$mobSource = "d:\UnityProject\1PercentGameStudio\Mine&Dungeon\Assets\Resources\MobIcons"
+$mobSource = "d:\UnityProject\1PercentGameStudio\MineAndDungeon\Assets\Resources\MobIcons"
 $mobDest   = "d:\23-steps\wiki\assets\mobs"
+
+$tileSource = "d:\UnityProject\1PercentGameStudio\MineAndDungeon\Assets\Sprites\Icons\tiles"
+$tileDest   = "d:\23-steps\wiki\assets\tiles"
 
 function Sync-Icons($source, $dest, $type) {
     if (-not (Test-Path $dest)) {
@@ -31,3 +34,4 @@ function Sync-Icons($source, $dest, $type) {
 
 Sync-Icons -source $itemSource -dest $itemDest -type "item"
 Sync-Icons -source $mobSource -dest $mobDest -type "mob"
+Sync-Icons -source $tileSource -dest $tileDest -type "tile"
