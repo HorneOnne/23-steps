@@ -301,11 +301,25 @@
       transition: color .15s;
     }
 
-    .tile-table th:nth-child(1) { width: 40px; }
-    .tile-table th:nth-child(2) { width: 30%; }
-    .tile-table th:nth-child(3) { width: 12%; }
-    .tile-table th:nth-child(4) { width: 18%; }
-    .tile-table th:nth-child(5) { width: auto; }
+    .tile-table th:nth-child(1) {
+      width: 40px;
+    }
+
+    .tile-table th:nth-child(2) {
+      width: 30%;
+    }
+
+    .tile-table th:nth-child(3) {
+      width: 12%;
+    }
+
+    .tile-table th:nth-child(4) {
+      width: 18%;
+    }
+
+    .tile-table th:nth-child(5) {
+      width: auto;
+    }
 
     .tile-table th:hover {
       color: var(--wiki-tab-active-text);
@@ -340,10 +354,14 @@
       vertical-align: middle;
     }
 
+    .tile-table td:nth-child(2) {
+      padding-left: 20px;
+    }
+
     .tile-table .tile-icon-cell {
       width: 40px;
       text-align: center;
-      padding: 8px 6px;
+      padding: 0px 0px 0px 24px;
     }
 
     .tile-icon-wrap {
@@ -402,8 +420,8 @@
     }
 
     .pickaxe-link img {
-      width: 24px;
-      height: 24px;
+      width: 48px;
+      height: 48px;
       image-rendering: pixelated;
       image-rendering: crisp-edges;
     }
