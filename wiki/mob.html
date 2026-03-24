@@ -773,6 +773,8 @@
     .hits-mid { color: #fbbf24; }
     .hits-many { color: #f87171; }
   </style>
+<script src="wiki-data.js"></script>
+<script src="wiki-admin-edit.js"></script>
 </head>
 
 <body>
@@ -921,8 +923,8 @@
     (async function() {
       /* ── Fetch data ── */
       var [mobData, itemData] = await Promise.all([
-        fetch('mob_configs.json').then(function(r) { return r.json(); }),
-        fetch('item_configs.json').then(function(r) { return r.json(); })
+        WikiData.load('mob_configs.json'),
+        WikiData.load('item_configs.json')
       ]);
 
       var allMobs = mobData.MobConfigs || [];

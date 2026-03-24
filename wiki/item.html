@@ -1246,6 +1246,8 @@
       border-radius: 3px;
     }
   </style>
+<script src="wiki-data.js"></script>
+<script src="wiki-admin-edit.js"></script>
 </head>
 
 <body>
@@ -1423,34 +1425,34 @@
 
       if (cfg.SwordConfig) {
         const s = cfg.SwordConfig;
-        stats.push({ label: 'Damage', value: s.AttackDamage, fmt: v => v, hi: true });
-        stats.push({ label: 'Knockback', value: s.KnockbackForce, fmt: v => v });
+        stats.push({ label: 'Damage', value: s.AttackDamage, fmt: v => v, hi: true, field: 'SwordConfig.AttackDamage' });
+        stats.push({ label: 'Knockback', value: s.KnockbackForce, fmt: v => v, field: 'SwordConfig.KnockbackForce' });
 
-        stats.push({ label: 'Use Speed', value: cfg.UseSpeed, fmt: v => v + '/s' });
+        stats.push({ label: 'Use Speed', value: cfg.UseSpeed, fmt: v => v + '/s', field: 'UseSpeed' });
       }
       if (cfg.BowConfig) {
         const s = cfg.BowConfig;
-        stats.push({ label: 'Damage', value: s.AttackDamage, fmt: v => v, hi: true });
-        stats.push({ label: 'Range', value: s.Range, fmt: v => v });
-        stats.push({ label: 'Proj. Speed', value: s.ProjectileSpeed, fmt: v => v });
-        stats.push({ label: 'Knockback', value: s.KnockbackForce, fmt: v => v });
+        stats.push({ label: 'Damage', value: s.AttackDamage, fmt: v => v, hi: true, field: 'BowConfig.AttackDamage' });
+        stats.push({ label: 'Range', value: s.Range, fmt: v => v, field: 'BowConfig.Range' });
+        stats.push({ label: 'Proj. Speed', value: s.ProjectileSpeed, fmt: v => v, field: 'BowConfig.ProjectileSpeed' });
+        stats.push({ label: 'Knockback', value: s.KnockbackForce, fmt: v => v, field: 'BowConfig.KnockbackForce' });
 
-        stats.push({ label: 'Use Speed', value: cfg.UseSpeed, fmt: v => v + '/s' });
+        stats.push({ label: 'Use Speed', value: cfg.UseSpeed, fmt: v => v + '/s', field: 'UseSpeed' });
       }
       if (cfg.PickaxeConfig) {
         const s = cfg.PickaxeConfig;
-        stats.push({ label: 'Mining Power', value: s.MiningPower, fmt: v => v, hi: true });
-        stats.push({ label: 'Damage', value: s.AttackDamage, fmt: v => v });
-        stats.push({ label: 'Knockback', value: s.KnockbackForce, fmt: v => v });
-        stats.push({ label: 'Use Speed', value: cfg.UseSpeed, fmt: v => v + '/s' });
+        stats.push({ label: 'Mining Power', value: s.MiningPower, fmt: v => v, hi: true, field: 'PickaxeConfig.MiningPower' });
+        stats.push({ label: 'Damage', value: s.AttackDamage, fmt: v => v, field: 'PickaxeConfig.AttackDamage' });
+        stats.push({ label: 'Knockback', value: s.KnockbackForce, fmt: v => v, field: 'PickaxeConfig.KnockbackForce' });
+        stats.push({ label: 'Use Speed', value: cfg.UseSpeed, fmt: v => v + '/s', field: 'UseSpeed' });
       }
       if (cfg.ArmorConfig) {
         const s = cfg.ArmorConfig;
         const armorTypes = ['Helmet', 'Chestplate', 'Leggings'];
-        stats.push({ label: 'Defense', value: s.Defense, fmt: v => v, hi: true });
-        if (s.MagicDefense) stats.push({ label: 'Mag. Defense', value: s.MagicDefense, fmt: v => v });
-        stats.push({ label: 'Slot', value: s.ArmorType, fmt: v => armorTypes[v] || v });
-        if (s.SetName) stats.push({ label: 'Set', value: s.SetName, fmt: v => v.charAt(0).toUpperCase() + v.slice(1) });
+        stats.push({ label: 'Defense', value: s.Defense, fmt: v => v, hi: true, field: 'ArmorConfig.Defense' });
+        if (s.MagicDefense) stats.push({ label: 'Mag. Defense', value: s.MagicDefense, fmt: v => v, field: 'ArmorConfig.MagicDefense' });
+        stats.push({ label: 'Slot', value: s.ArmorType, fmt: v => armorTypes[v] || v, field: 'ArmorConfig.ArmorType' });
+        if (s.SetName) stats.push({ label: 'Set', value: s.SetName, fmt: v => v.charAt(0).toUpperCase() + v.slice(1), field: 'ArmorConfig.SetName' });
       }
       if (cfg.ShieldConfig) {
         const s = cfg.ShieldConfig;
@@ -1465,11 +1467,11 @@
       }
       if (cfg.WingsConfig) {
         const s = cfg.WingsConfig;
-        stats.push({ label: 'Flight Speed', value: s.FlightSpeed, fmt: v => v, hi: true });
-        stats.push({ label: 'Acceleration', value: s.FlightAcceleration, fmt: v => v });
-        stats.push({ label: 'Deceleration', value: s.FlightDeceleration, fmt: v => v });
-        if (s.EnergyCapacityBonus) stats.push({ label: 'Energy Bonus', value: s.EnergyCapacityBonus, fmt: v => '+' + v, hi: true });
-        stats.push({ label: 'Energy Drain', value: s.EnergyDrainModifier, fmt: v => v + 'x' });
+        stats.push({ label: 'Flight Speed', value: s.FlightSpeed, fmt: v => v, hi: true, field: 'WingsConfig.FlightSpeed' });
+        stats.push({ label: 'Acceleration', value: s.FlightAcceleration, fmt: v => v, field: 'WingsConfig.FlightAcceleration' });
+        stats.push({ label: 'Deceleration', value: s.FlightDeceleration, fmt: v => v, field: 'WingsConfig.FlightDeceleration' });
+        if (s.EnergyCapacityBonus) stats.push({ label: 'Energy Bonus', value: s.EnergyCapacityBonus, fmt: v => '+' + v, hi: true, field: 'WingsConfig.EnergyCapacityBonus' });
+        stats.push({ label: 'Energy Drain', value: s.EnergyDrainModifier, fmt: v => v + 'x', field: 'WingsConfig.EnergyDrainModifier' });
       }
       if (cfg.StaffConfig) {
         const s = cfg.StaffConfig;
@@ -1515,6 +1517,8 @@
 
       if (!stats.length) return '';
 
+      const isAdmin = typeof WikiAdmin !== 'undefined' && WikiAdmin.isAdmin();
+
       return `
         <div class="stats-section">
             <div class="section-title"><i class="fas fa-chart-bar"></i>&nbsp; Statistics</div>
@@ -1522,7 +1526,7 @@
                 ${stats.map(s => `
                 <div class="stat-card">
                     <span class="stat-label">${s.label}</span>
-                    <span class="stat-value${s.hi ? ' highlight' : ''}">${s.fmt(s.value)}</span>
+                    <span class="stat-value${s.hi ? ' highlight' : ''}"${isAdmin && s.field ? ` data-field="${s.field}"` : ''}>${s.fmt(s.value)}</span>
                 </div>`).join('')}
             </div>
         </div>`;
@@ -1603,12 +1607,12 @@
       if (!itemId) { showNotFound('No item ID specified.'); return; }
 
       const [data, valuesData, recipesData, mobData, shopData, tileData] = await Promise.all([
-        fetch('item_configs.json').then(r => r.json()),
-        fetch('item_values.json').then(r => r.json()),
-        fetch('crafting_recipes.json').then(r => r.json()),
-        fetch('mob_configs.json').then(r => r.json()),
-        fetch('shopconfigs.json').then(r => r.json()),
-        fetch('tile_to_item_mapping.json').then(r => r.json())
+        WikiData.load('item_configs.json'),
+        WikiData.load('item_values.json'),
+        WikiData.load('crafting_recipes.json'),
+        WikiData.load('mob_configs.json'),
+        WikiData.load('shopconfigs.json'),
+        WikiData.load('tile_to_item_mapping.json')
       ]);
       const configs = data.ItemConfigs || data;
       allConfigs = configs;
@@ -1780,6 +1784,25 @@
                 ${iconHtml(nextCfg.ItemID, 32)}
             </a>` : '<div></div>'}
         </div>`;
+
+      // Wire admin inline editing
+      if (typeof WikiAdmin !== 'undefined' && WikiAdmin.isAdmin()) {
+        document.querySelectorAll('[data-field]').forEach(function(cell) {
+          WikiAdmin.makeEditable(cell, {
+            onSave: function(newVal) {
+              var fieldPath = cell.getAttribute('data-field');
+              var parts = fieldPath.split('.');
+              var target = cfg;
+              for (var i = 0; i < parts.length - 1; i++) {
+                if (!target[parts[i]]) target[parts[i]] = {};
+                target = target[parts[i]];
+              }
+              target[parts[parts.length - 1]] = newVal;
+              WikiData.save('item_configs.json', { ItemConfigs: allConfigs });
+            }
+          });
+        });
+      }
     }
 
     function showNotFound(msg) {
