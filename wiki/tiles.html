@@ -548,6 +548,8 @@
       }
     }
   </style>
+<script src="wiki-data.js"></script>
+<script src="wiki-admin-edit.js"></script>
 </head>
 
 <body>
@@ -761,8 +763,8 @@
     // ── Init ─────────────────────────────────────────────────────────────────────
     async function init() {
       const [tileData, itemData] = await Promise.all([
-        fetch('tile_properties.json').then(r => r.json()),
-        fetch('item_configs.json').then(r => r.json())
+        WikiData.load('tile_properties.json'),
+        WikiData.load('item_configs.json')
       ]);
 
       const tiles = tileData.tileProperties || [];

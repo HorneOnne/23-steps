@@ -549,6 +549,8 @@
       }
     }
   </style>
+<script src="wiki-data.js"></script>
+<script src="wiki-admin-edit.js"></script>
 </head>
 
 <body>
@@ -710,7 +712,7 @@
     let activeCat = 'all';
 
     async function init() {
-      const data = await fetch('item_configs.json').then(r => r.json());
+      const data = await WikiData.load('item_configs.json');
       const configs = data.ItemConfigs || data;
 
       // Group by category

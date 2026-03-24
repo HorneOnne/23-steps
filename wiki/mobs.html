@@ -863,6 +863,8 @@
       background: rgba(0, 0, 0, .05);
     }
   </style>
+<script src="wiki-data.js"></script>
+<script src="wiki-admin-edit.js"></script>
 </head>
 
 <body>
@@ -983,7 +985,7 @@
 
     /* ── Load data ── */
     (async function () {
-      var data = await fetch('mob_configs.json').then(function(r) { return r.json(); });
+      var data = await WikiData.load('mob_configs.json');
       allMobs = data.MobConfigs || [];
       applyFilters();
     })();
@@ -1018,8 +1020,9 @@
         ? '<span class="tag-hostile">TL</span>'
         : '<span class="tag-neutral">TN</span>';
       var c = m.CombatConfig, h = m.HealthConfig;
+      var ed = WikiAdmin.isAdmin() ? ' data-mob="' + m.MobID + '"' : '';
       return [
-        '<tr class="' + rowCls + '" onclick="location.href=\'mob.html?id=' + m.MobID + '\'">',
+        '<tr class="' + rowCls + '"' + (ed ? '' : ' onclick="location.href=\'mob.html?id=' + m.MobID + '\'"') + '>',
         '<td><div class="mob-icon-wrap">',
         '<img src="' + imgSrc + '" alt=""',
         ' onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'" />',
@@ -1027,12 +1030,11 @@
         '</div></td>',
         '<td class="td-name"><a class="mob-name-link" href="mob.html?id=' + m.MobID + '">' + m.MobName + '</a></td>',
         '<td>' + typeTag + '</td>',
-        '<td>' + fmt(h.MaxHealth) + '</td>',
-        '<td>' + fmt(c.Damage) + '</td>',
-        '<td>' + fmt(c.AttackSpeed) + 'x' + '</td>',
-        '<td>' + fmt(c.AttackRange) + '</td>',
-        '<td>' + fmt(c.MoveSpeed) + 'x' + '</td>',
-
+        '<td' + (ed ? ' data-field="MaxHealth"' + ed : '') + '>' + fmt(h.MaxHealth) + '</td>',
+        '<td' + (ed ? ' data-field="Damage"' + ed : '') + '>' + fmt(c.Damage) + '</td>',
+        '<td' + (ed ? ' data-field="AttackSpeed"' + ed : '') + '>' + fmt(c.AttackSpeed) + 'x</td>',
+        '<td' + (ed ? ' data-field="AttackRange"' + ed : '') + '>' + fmt(c.AttackRange) + '</td>',
+        '<td' + (ed ? ' data-field="MoveSpeed"' + ed : '') + '>' + fmt(c.MoveSpeed) + 'x</td>',
         '</tr>'
       ].join('');
     }
@@ -1050,7 +1052,28 @@
         empty.style.display = 'none';
         tbody.innerHTML = mobs.map(buildRow).join('');
         count.textContent = mobs.length + ' mob' + (mobs.length === 1 ? '' : 's') + ' found';
+        if (WikiAdmin.isAdmin()) wireEditing();
       }
+    }
+
+    /* ── Admin inline editing ── */
+    function wireEditing() {
+      var cells = document.querySelectorAll('[data-field][data-mob]');
+      cells.forEach(function (cell) {
+        WikiAdmin.makeEditable(cell, {
+          onSave: function (newVal) {
+            var mobId = cell.getAttribute('data-mob');
+            var field = cell.getAttribute('data-field');
+            var mob = allMobs.find(function (m) { return m.MobID === mobId; });
+            if (!mob) return;
+            // Write to the correct nested config
+            if (field === 'MaxHealth') mob.HealthConfig.MaxHealth = newVal;
+            else mob.CombatConfig[field] = newVal;
+            // Persist to localStorage
+            WikiData.save('mob_configs.json', { MobConfigs: allMobs });
+          }
+        });
+      });
     }
 
     /* ── Filter & sort ── */

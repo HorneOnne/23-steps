@@ -700,6 +700,8 @@
             }
         }
     </style>
+<script src="wiki-data.js"></script>
+<script src="wiki-admin-edit.js"></script>
 </head>
 
 <body>
@@ -936,8 +938,8 @@
         // ── Boot ─────────────────────────────────────────────────────────────────
         document.addEventListener('DOMContentLoaded', async function() {
             var results = await Promise.all([
-                fetch('chestdata.json').then(function(r) { return r.json(); }),
-                fetch('item_configs.json').then(function(r) { return r.json(); })
+                WikiData.load('chestdata.json'),
+                WikiData.load('item_configs.json')
             ]);
             CHEST_DATA = results[0];
             ITEM_CONFIGS = results[1];

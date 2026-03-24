@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin | Mine &amp; Dungeon Wiki</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" type="image/png" href="../icon2.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Press+Start+2P&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="wiki-theme.css" />
+    <script src="wiki-theme.js"></script>
+    <script src="wiki-data.js"></script>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            font-family: 'Inter', sans-serif;
+            background-image: var(--wiki-body-bg-image);
+            background-repeat: repeat;
+            background-size: 256px 256px;
+            background-color: var(--wiki-bg);
+            color: var(--wiki-text);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: var(--wiki-bg-overlay);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        main {
+            flex: 1;
+            position: relative;
+            z-index: 2;
+        }
+
+        header {
+            background-color: var(--wiki-header-bg);
+            height: 60px;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            border-bottom: 1px solid var(--wiki-header-border);
+            position: relative;
+            z-index: 10;
+        }
+
+        header h1 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1.4em;
+            color: var(--wiki-header-title);
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        header h1 a {
+            color: inherit;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        header .logo {
+            height: 50px;
+            object-fit: contain;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--wiki-nav-text);
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0 20px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            font-size: 0.85em;
+        }
+
+        nav a.active {
+            background-color: var(--wiki-nav-active-bg);
+            color: var(--wiki-nav-active-text);
+        }
+
+        nav a:hover:not(.active) {
+            color: var(--wiki-nav-active-text);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            font-size: 0.8em;
+            color: var(--wiki-footer-text);
+            background-color: var(--wiki-footer-bg);
+            border-top: 1px solid var(--wiki-footer-border);
+            font-weight: bold;
+            position: relative;
+            z-index: 2;
+        }
+
+        footer a {
+            color: var(--wiki-footer-link);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* ── Login Gate ──────────────────────────────────── */
+        #login-gate {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 60vh;
+            gap: 16px;
+        }
+
+        #login-gate h2 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1rem;
+            color: var(--wiki-heading);
+        }
+
+        #login-gate input {
+            padding: 10px 16px;
+            border: 1px solid var(--wiki-section-card-border);
+            border-radius: 8px;
+            background: var(--wiki-section-card-bg);
+            color: var(--wiki-text);
+            font-size: 1rem;
+            width: 280px;
+            font-family: inherit;
+        }
+
+        #login-gate input:focus {
+            outline: none;
+            border-color: var(--wiki-tab-active-border);
+        }
+
+        #login-gate button {
+            padding: 10px 28px;
+            border: none;
+            border-radius: 8px;
+            background: var(--wiki-tab-active-border);
+            color: #fff;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: opacity .15s;
+        }
+
+        #login-gate button:hover {
+            opacity: 0.85;
+        }
+
+        #login-error {
+            color: #e74c3c;
+            font-size: 0.85em;
+            display: none;
+        }
+
+        /* ── Admin Panel ─────────────────────────────────── */
+        #admin-panel {
+            display: none;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 24px 20px 48px;
+        }
+
+        .admin-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .admin-header h2 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 0.85rem;
+            color: var(--wiki-heading);
+        }
+
+        .admin-actions {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 8px 18px;
+            border: 1px solid var(--wiki-section-card-border);
+            border-radius: 8px;
+            background: var(--wiki-section-card-bg);
+            color: var(--wiki-text);
+            font-weight: 600;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: border-color .15s, background .15s;
+            font-family: inherit;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn:hover {
+            border-color: var(--wiki-tab-active-border);
+        }
+
+        .btn-primary {
+            background: var(--wiki-tab-active-border);
+            color: #fff;
+            border-color: var(--wiki-tab-active-border);
+        }
+
+        .btn-primary:hover {
+            opacity: 0.85;
+        }
+
+        .btn-danger {
+            border-color: #e74c3c;
+            color: #e74c3c;
+        }
+
+        .btn-danger:hover {
+            background: #e74c3c;
+            color: #fff;
+        }
+
+        /* ── File Tabs ───────────────────────────────────── */
+        .file-tabs {
+            display: flex;
+            gap: 0;
+            border-bottom: 2px solid var(--wiki-section-card-border);
+            overflow-x: auto;
+            margin-bottom: 16px;
+        }
+
+        .file-tabs::-webkit-scrollbar {
+            height: 0;
+        }
+
+        .file-tab {
+            padding: 10px 18px;
+            cursor: pointer;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--wiki-tab-text);
+            border: none;
+            background: transparent;
+            border-bottom: 3px solid transparent;
+            white-space: nowrap;
+            transition: color .15s, border-color .15s;
+            font-family: inherit;
+            position: relative;
+        }
+
+        .file-tab:hover {
+            color: var(--wiki-tab-hover-text);
+        }
+
+        .file-tab.active {
+            color: var(--wiki-tab-active-text);
+            border-bottom-color: var(--wiki-tab-active-border);
+        }
+
+        .file-tab .modified-dot {
+            display: none;
+            width: 7px;
+            height: 7px;
+            background: #e67e22;
+            border-radius: 50%;
+            position: absolute;
+            top: 6px;
+            right: 6px;
+        }
+
+        .file-tab.modified .modified-dot {
+            display: block;
+        }
+
+        /* ── Editor ──────────────────────────────────────── */
+        .editor-wrap {
+            position: relative;
+        }
+
+        .editor-status {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 0.78em;
+            color: var(--wiki-subheading);
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .editor-status .status-badge {
+            padding: 2px 10px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.75rem;
+        }
+
+        .status-badge.original {
+            background: rgba(46, 204, 113, 0.15);
+            color: #2ecc71;
+        }
+
+        .status-badge.modified {
+            background: rgba(230, 126, 34, 0.15);
+            color: #e67e22;
+        }
+
+        #json-editor {
+            width: 100%;
+            min-height: 500px;
+            padding: 16px;
+            border: 1px solid var(--wiki-section-card-border);
+            border-radius: 10px;
+            background: var(--wiki-section-card-bg);
+            color: var(--wiki-text);
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.82rem;
+            line-height: 1.6;
+            resize: vertical;
+            tab-size: 2;
+        }
+
+        #json-editor:focus {
+            outline: none;
+            border-color: var(--wiki-tab-active-border);
+        }
+
+        #json-error {
+            color: #e74c3c;
+            font-size: 0.82em;
+            margin-top: 8px;
+            display: none;
+        }
+
+        .editor-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+            flex-wrap: wrap;
+        }
+
+        /* ── Toast ────────────────────────────────────────── */
+        .toast {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            padding: 12px 24px;
+            border-radius: 10px;
+            background: #2ecc71;
+            color: #fff;
+            font-weight: 600;
+            font-size: 0.85rem;
+            z-index: 999;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity .3s, transform .3s;
+            pointer-events: none;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .toast.error {
+            background: #e74c3c;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                height: auto;
+                flex-direction: column;
+                align-items: stretch;
+                padding: 0;
+            }
+
+            header h1 {
+                justify-content: center;
+                padding: 8px 12px 4px;
+            }
+
+            header .logo {
+                height: 40px;
+            }
+
+            nav {
+                justify-content: center;
+                flex-wrap: wrap;
+                border-top: 1px solid var(--wiki-header-border);
+                padding: 0 4px;
+            }
+
+            nav a {
+                padding: 8px 12px;
+                font-size: 0.75em;
+                height: auto;
+            }
+
+            .admin-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>
+            <a href="../index.html">
+                <img src="../images/logo.png" alt="23-Steps" class="logo" />
+                <span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">23-Steps</span>
+            </a>
+        </h1>
+        <nav>
+            <a href="../index.html">HOME</a>
+            <a href="../games.html">GAMES</a>
+            <a href="index.html">WIKI</a>
+            <button class="theme-toggle" title="Toggle light/dark mode" aria-label="Toggle theme">
+                <i class="fas fa-sun icon-sun"></i>
+                <i class="fas fa-moon icon-moon"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Login Gate -->
+        <div id="login-gate">
+            <h2>🔒 Admin Access</h2>
+            <input type="password" id="password-input" placeholder="Enter password" autocomplete="off" />
+            <button onclick="tryLogin()">Enter</button>
+            <div id="login-error">Wrong password. Try again.</div>
+        </div>
+
+        <!-- Admin Panel (hidden until login) -->
+        <div id="admin-panel">
+            <div class="admin-header">
+                <h2>📝 Data Editor</h2>
+                <div class="admin-actions">
+                    <button class="btn" onclick="exportModified()"><i class="fas fa-download"></i> Export
+                        Modified</button>
+                    <button class="btn btn-danger" onclick="resetAll()"><i class="fas fa-trash-alt"></i> Reset
+                        All</button>
+                    <button class="btn" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</button>
+                </div>
+            </div>
+
+            <div class="file-tabs" id="file-tabs"></div>
+
+            <div class="editor-wrap">
+                <div class="editor-status">
+                    <span id="current-file-name"></span>
+                    <span class="status-badge" id="status-badge">Original</span>
+                </div>
+                <textarea id="json-editor" spellcheck="false"></textarea>
+                <div id="json-error"></div>
+                <div class="editor-actions">
+                    <button class="btn btn-primary" onclick="saveCurrentFile()"><i class="fas fa-save"></i>
+                        Save</button>
+                    <button class="btn" onclick="formatJson()"><i class="fas fa-code"></i> Format</button>
+                    <button class="btn" onclick="revertCurrentFile()"><i class="fas fa-undo"></i> Revert to
+                        Original</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="toast" id="toast"></div>
+
+    <footer>
+        &copy;2026 23-Steps. All rights reserved |
+        <a href="../privacy-policy.html">Privacy Policy</a> |
+        <a href="../terms-of-service.html">Terms of Service</a> |
+        <a href="../delete-account.html">Delete Account</a>
+    </footer>
+
+    <script>
+        // ── Config ──────────────────────────────────────────
+        // SHA-256 hash of the admin password. Change this to your own.
+        // Default password: "admin123" → hash below
+        var PASSWORD_HASH = '240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9';
+
+        var DATA_FILES = [
+            'mob_configs.json',
+            'item_configs.json',
+            'item_values.json',
+            'crafting_recipes.json',
+            'chestdata.json',
+            'shopconfigs.json',
+            'tile_properties.json',
+            'tile_to_item_mapping.json'
+        ];
+
+        var SESSION_KEY = 'wikiAdmin_session';
+        var currentFile = DATA_FILES[0];
+        var originalData = {};   // original fetched data per file
+        var editorDirty = false;
+
+        // ── Auth ────────────────────────────────────────────
+        async function sha256(text) {
+            var buf = await crypto.subtle.digest('SHA-256',
+                new TextEncoder().encode(text));
+            return Array.from(new Uint8Array(buf))
+                .map(function (b) { return b.toString(16).padStart(2, '0'); })
+                .join('');
+        }
+
+        async function tryLogin() {
+            var pw = document.getElementById('password-input').value;
+            var hash = await sha256(pw);
+            if (hash === PASSWORD_HASH) {
+                sessionStorage.setItem(SESSION_KEY, '1');
+                showAdmin();
+            } else {
+                document.getElementById('login-error').style.display = 'block';
+            }
+        }
+
+        function logout() {
+            sessionStorage.removeItem(SESSION_KEY);
+            document.getElementById('admin-panel').style.display = 'none';
+            document.getElementById('login-gate').style.display = 'flex';
+            document.getElementById('password-input').value = '';
+        }
+
+        function showAdmin() {
+            document.getElementById('login-gate').style.display = 'none';
+            document.getElementById('admin-panel').style.display = 'block';
+            buildTabs();
+            switchFile(currentFile);
+        }
+
+        // Auto-login if session active
+        if (sessionStorage.getItem(SESSION_KEY) === '1') {
+            document.addEventListener('DOMContentLoaded', showAdmin);
+        }
+
+        // Enter key on password
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('password-input').addEventListener('keydown', function (e) {
+                if (e.key === 'Enter') tryLogin();
+            });
+        });
+
+        // ── Tabs ────────────────────────────────────────────
+        function buildTabs() {
+            var container = document.getElementById('file-tabs');
+            container.innerHTML = '';
+            DATA_FILES.forEach(function (f) {
+                var btn = document.createElement('button');
+                btn.className = 'file-tab' + (f === currentFile ? ' active' : '');
+                if (WikiData.hasOverride(f)) btn.classList.add('modified');
+                btn.innerHTML = f.replace('.json', '') + '<span class="modified-dot"></span>';
+                btn.onclick = function () { switchFile(f); };
+                container.appendChild(btn);
+            });
+        }
+
+        async function switchFile(filename) {
+            currentFile = filename;
+            // Update tab UI
+            document.querySelectorAll('.file-tab').forEach(function (t, i) {
+                t.classList.toggle('active', DATA_FILES[i] === filename);
+            });
+            // Load data
+            var editor = document.getElementById('json-editor');
+            editor.value = 'Loading...';
+
+            // Always fetch original for revert capability
+            if (!originalData[filename]) {
+                originalData[filename] = await fetch(filename).then(function (r) { return r.text(); });
+            }
+
+            // Show override if exists, else original
+            var overrideKey = 'wikiAdmin_' + filename;
+            var stored = localStorage.getItem(overrideKey);
+            if (stored) {
+                editor.value = stored;
+                // Try to pretty-print
+                try { editor.value = JSON.stringify(JSON.parse(stored), null, 2); } catch (e) { }
+            } else {
+                editor.value = originalData[filename];
+                try { editor.value = JSON.stringify(JSON.parse(originalData[filename]), null, 2); } catch (e) { }
+            }
+
+            updateStatusBadge();
+            hideError();
+
+            document.getElementById('current-file-name').textContent = filename;
+        }
+
+        function updateStatusBadge() {
+            var badge = document.getElementById('status-badge');
+            if (WikiData.hasOverride(currentFile)) {
+                badge.textContent = 'Modified';
+                badge.className = 'status-badge modified';
+            } else {
+                badge.textContent = 'Original';
+                badge.className = 'status-badge original';
+            }
+        }
+
+        // ── Editor actions ──────────────────────────────────
+        function saveCurrentFile() {
+            var editor = document.getElementById('json-editor');
+            var text = editor.value.trim();
+            try {
+                var parsed = JSON.parse(text);
+                WikiData.save(currentFile, parsed);
+                showToast('Saved ' + currentFile);
+                updateStatusBadge();
+                buildTabs();
+                hideError();
+            } catch (e) {
+                showError('Invalid JSON: ' + e.message);
+            }
+        }
+
+        function formatJson() {
+            var editor = document.getElementById('json-editor');
+            try {
+                var parsed = JSON.parse(editor.value);
+                editor.value = JSON.stringify(parsed, null, 2);
+                hideError();
+            } catch (e) {
+                showError('Cannot format — invalid JSON: ' + e.message);
+            }
+        }
+
+        function revertCurrentFile() {
+            if (!confirm('Revert ' + currentFile + ' to original? Your edits will be lost.')) return;
+            WikiData.clearOverride(currentFile);
+            switchFile(currentFile);
+            buildTabs();
+            showToast('Reverted ' + currentFile);
+        }
+
+        function resetAll() {
+            var modified = WikiData.getOverriddenFiles();
+            if (modified.length === 0) {
+                showToast('Nothing to reset', true);
+                return;
+            }
+            if (!confirm('Reset ALL modified files (' + modified.length + ')? All edits will be lost.')) return;
+            WikiData.clearAll();
+            switchFile(currentFile);
+            buildTabs();
+            showToast('All overrides cleared');
+        }
+
+        // ── Export ──────────────────────────────────────────
+        function exportModified() {
+            var modified = WikiData.getOverriddenFiles();
+            if (modified.length === 0) {
+                showToast('No modified files to export', true);
+                return;
+            }
+            modified.forEach(function (filename) {
+                var data = localStorage.getItem('wikiAdmin_' + filename);
+                if (!data) return;
+                // Pretty-print
+                try { data = JSON.stringify(JSON.parse(data), null, 2); } catch (e) { }
+                var blob = new Blob([data], { type: 'application/json' });
+                var a = document.createElement('a');
+                a.href = URL.createObjectURL(blob);
+                a.download = filename;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(a.href);
+            });
+            showToast('Exported ' + modified.length + ' file(s)');
+        }
+
+        // ── Toast ───────────────────────────────────────────
+        function showToast(msg, isError) {
+            var el = document.getElementById('toast');
+            el.textContent = msg;
+            el.className = 'toast show' + (isError ? ' error' : '');
+            clearTimeout(el._timer);
+            el._timer = setTimeout(function () { el.className = 'toast'; }, 2500);
+        }
+
+        // ── Error display ───────────────────────────────────
+        function showError(msg) {
+            var el = document.getElementById('json-error');
+            el.textContent = msg;
+            el.style.display = 'block';
+        }
+
+        function hideError() {
+            document.getElementById('json-error').style.display = 'none';
+        }
+    </script>
+
+</body>
+
+</html>
