@@ -4,7 +4,7 @@
  */
 var FirebaseConfig = (function () {
     var config = {
-        apiKey: "AIzaSyAP78rbdHvDZg_Si3dYdigqFuunNUBKX3Q",
+        apiKey: "AIzaSyDPttprkxukAMGt35TduWGNKXPvGkhf-mg",
         authDomain: "steps-76b7f.firebaseapp.com",
         projectId: "steps-76b7f",
         storageBucket: "steps-76b7f.firebasestorage.app",
