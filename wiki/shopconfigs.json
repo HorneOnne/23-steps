@@ -1,50 +1,212 @@
 [
-    {
-        "ConfigName": "Merchant_1-5",
-        "Description": "General store with common items and arrows",
-        "DefaultShopSlots": 6,
-        "AllowDuplicates": false,
-        "BuyPriceMultiplier": 1.0,
-        "SellPriceMultiplier": 1.0,
-        "AvailableItems": [
-            { "ItemID": "HealthPotionI", "Quantity": 1, "MaxStock": 3, "HasUnlimitedStock": false, "UseItemValueManagerPrice": true, "OverridePrice": 0.0, "PriceMultiplier": 1.0, "SpawnWeight": 1.0 },
-            { "ItemID": "ManaPotionI", "Quantity": 1, "MaxStock": 3, "HasUnlimitedStock": false, "UseItemValueManagerPrice": true, "OverridePrice": 0.0, "PriceMultiplier": 1.0, "SpawnWeight": 1.0 },
-            { "ItemID": "CopperOre", "Quantity": 10, "MaxStock": 5, "HasUnlimitedStock": false, "UseItemValueManagerPrice": true, "OverridePrice": 0.0, "PriceMultiplier": 1.0, "SpawnWeight": 1.0 },
-            { "ItemID": "CopperIngot", "Quantity": 1, "MaxStock": 5, "HasUnlimitedStock": false, "UseItemValueManagerPrice": true, "OverridePrice": 0.0, "PriceMultiplier": 1.0, "SpawnWeight": 1.0 },
-            { "ItemID": "Coal", "Quantity": 1, "MaxStock": 5, "HasUnlimitedStock": false, "UseItemValueManagerPrice": true, "OverridePrice": 0.0, "PriceMultiplier": 1.0, "SpawnWeight": 1.0 },
-            { "ItemID": "Arrow", "Quantity": 10, "MaxStock": 99, "HasUnlimitedStock": true, "UseItemValueManagerPrice": true, "OverridePrice": 0.0, "PriceMultiplier": 1.0, "SpawnWeight": 1.0 }
-        ]
-    },
-    {
-        "ConfigName": "Merchant_6-10",
-        "Description": "General store with common items and arrows",
-        "DefaultShopSlots": 6,
-        "AllowDuplicates": false,
-        "BuyPriceMultiplier": 1.0,
-        "SellPriceMultiplier": 1.0,
-        "AvailableItems": [
-            { "ItemID": "HealthPotionI", "Quantity": 1, "MaxStock": 3, "HasUnlimitedStock": false, "UseItemValueManagerPrice": true, "OverridePrice": 0.0, "PriceMultiplier": 1.0, "SpawnWeight": 1.0 },
-            { "ItemID": "ManaPotionI", "Quantity": 1, "MaxStock": 3, "HasUnlimitedStock": false, "UseItemValueManagerPrice": true, "OverridePrice": 0.0, "PriceMultiplier": 1.0, "SpawnWeight": 1.0 },
-            { "ItemID": "CopperOre", "Quantity": 10, "MaxStock": 5, "HasUnlimitedStock": false, "UseItemValueManagerPrice": true, "OverridePrice": 0.0, "PriceMultiplier": 1.0, "SpawnWeight": 1.0 },
-            { "ItemID": "CopperIngot", "Quantity": 1, "MaxStock": 5, "HasUnlimitedStock": false, "UseItemValueManagerPrice": true, "OverridePrice": 0.0, "PriceMultiplier": 1.0, "SpawnWeight": 1.0 },
-            { "ItemID": "Coal", "Quantity": 1, "MaxStock": 5, "HasUnlimitedStock": false, "UseItemValueManagerPrice": true, "OverridePrice": 0.0, "PriceMultiplier": 1.0, "SpawnWeight": 1.0 },
-            { "ItemID": "Arrow", "Quantity": 10, "MaxStock": 99, "HasUnlimitedStock": true, "UseItemValueManagerPrice": true, "OverridePrice": 0.0, "PriceMultiplier": 1.0, "SpawnWeight": 1.0 }
-        ]
-    },
-    {
-        "ConfigName": "Merchant_11-15",
-        "Description": "General store with common items and arrows",
-        "DefaultShopSlots": 6,
-        "AllowDuplicates": false,
-        "BuyPriceMultiplier": 1.0,
-        "SellPriceMultiplier": 1.0,
-        "AvailableItems": [
-            { "ItemID": "HealthPotionI", "Quantity": 1, "MaxStock": 3, "HasUnlimitedStock": false, "UseItemValueManagerPrice": true, "OverridePrice": 0.0, "PriceMultiplier": 1.0, "SpawnWeight": 1.0 },
-            { "ItemID": "ManaPotionI", "Quantity": 1, "MaxStock": 3, "HasUnlimitedStock": false, "UseItemValueManagerPrice": true, "OverridePrice": 0.0, "PriceMultiplier": 1.0, "SpawnWeight": 1.0 },
-            { "ItemID": "CopperOre", "Quantity": 10, "MaxStock": 5, "HasUnlimitedStock": false, "UseItemValueManagerPrice": true, "OverridePrice": 0.0, "PriceMultiplier": 1.0, "SpawnWeight": 1.0 },
-            { "ItemID": "CopperIngot", "Quantity": 1, "MaxStock": 5, "HasUnlimitedStock": false, "UseItemValueManagerPrice": true, "OverridePrice": 0.0, "PriceMultiplier": 1.0, "SpawnWeight": 1.0 },
-            { "ItemID": "Coal", "Quantity": 1, "MaxStock": 5, "HasUnlimitedStock": false, "UseItemValueManagerPrice": true, "OverridePrice": 0.0, "PriceMultiplier": 1.0, "SpawnWeight": 1.0 },
-            { "ItemID": "Arrow", "Quantity": 10, "MaxStock": 99, "HasUnlimitedStock": true, "UseItemValueManagerPrice": true, "OverridePrice": 0.0, "PriceMultiplier": 1.0, "SpawnWeight": 1.0 }
-        ]
-    }
+  {
+    "DefaultShopSlots": 6,
+    "ConfigName": "Merchant_1-5",
+    "SellPriceMultiplier": 1,
+    "AvailableItems": [
+      {
+        "UseItemValueManagerPrice": true,
+        "ItemID": "HealthPotionI",
+        "MaxStock": 3,
+        "SpawnWeight": 1,
+        "HasUnlimitedStock": false,
+        "Quantity": 1,
+        "OverridePrice": 0,
+        "PriceMultiplier": 1
+      },
+      {
+        "OverridePrice": 0,
+        "PriceMultiplier": 1,
+        "MaxStock": 3,
+        "SpawnWeight": 1,
+        "HasUnlimitedStock": false,
+        "Quantity": 1,
+        "ItemID": "ManaPotionI",
+        "UseItemValueManagerPrice": true
+      },
+      {
+        "OverridePrice": 0,
+        "PriceMultiplier": 1,
+        "HasUnlimitedStock": false,
+        "Quantity": 10,
+        "MaxStock": 5,
+        "SpawnWeight": 1,
+        "ItemID": "CopperOre",
+        "UseItemValueManagerPrice": true
+      },
+      {
+        "UseItemValueManagerPrice": true,
+        "ItemID": "CopperIngot",
+        "MaxStock": 5,
+        "SpawnWeight": 1,
+        "HasUnlimitedStock": false,
+        "Quantity": 1,
+        "OverridePrice": 0,
+        "PriceMultiplier": 1
+      },
+      {
+        "ItemID": "Coal",
+        "UseItemValueManagerPrice": true,
+        "PriceMultiplier": 1,
+        "OverridePrice": 0,
+        "MaxStock": 5,
+        "SpawnWeight": 1,
+        "Quantity": 1,
+        "HasUnlimitedStock": false
+      },
+      {
+        "ItemID": "Arrow",
+        "UseItemValueManagerPrice": true,
+        "OverridePrice": 0,
+        "PriceMultiplier": 1,
+        "MaxStock": 99,
+        "SpawnWeight": 1,
+        "HasUnlimitedStock": true,
+        "Quantity": 10
+      }
+    ],
+    "BuyPriceMultiplier": 1,
+    "Description": "General store with common items and arrows",
+    "AllowDuplicates": false
+  },
+  {
+    "AllowDuplicates": false,
+    "Description": "General store with common items and arrows",
+    "AvailableItems": [
+      {
+        "ItemID": "HealthPotionI",
+        "UseItemValueManagerPrice": true,
+        "PriceMultiplier": 1,
+        "OverridePrice": 0,
+        "Quantity": 1,
+        "HasUnlimitedStock": false,
+        "MaxStock": 3,
+        "SpawnWeight": 1
+      },
+      {
+        "Quantity": 1,
+        "HasUnlimitedStock": false,
+        "SpawnWeight": 1,
+        "MaxStock": 3,
+        "OverridePrice": 0,
+        "PriceMultiplier": 1,
+        "UseItemValueManagerPrice": true,
+        "ItemID": "ManaPotionI"
+      },
+      {
+        "PriceMultiplier": 1,
+        "OverridePrice": 0,
+        "HasUnlimitedStock": false,
+        "Quantity": 10,
+        "SpawnWeight": 1,
+        "MaxStock": 5,
+        "ItemID": "CopperOre",
+        "UseItemValueManagerPrice": true
+      },
+      {
+        "UseItemValueManagerPrice": true,
+        "ItemID": "CopperIngot",
+        "MaxStock": 5,
+        "SpawnWeight": 1,
+        "Quantity": 1,
+        "HasUnlimitedStock": false,
+        "PriceMultiplier": 1,
+        "OverridePrice": 0
+      },
+      {
+        "OverridePrice": 0,
+        "PriceMultiplier": 1,
+        "MaxStock": 5,
+        "SpawnWeight": 1,
+        "HasUnlimitedStock": false,
+        "Quantity": 1,
+        "ItemID": "Coal",
+        "UseItemValueManagerPrice": true
+      },
+      {
+        "UseItemValueManagerPrice": true,
+        "ItemID": "Arrow",
+        "MaxStock": 99,
+        "SpawnWeight": 1,
+        "Quantity": 10,
+        "HasUnlimitedStock": true,
+        "PriceMultiplier": 1,
+        "OverridePrice": 0
+      }
+    ],
+    "BuyPriceMultiplier": 1,
+    "SellPriceMultiplier": 1,
+    "DefaultShopSlots": 6,
+    "ConfigName": "Merchant_6-10"
+  },
+  {
+    "BuyPriceMultiplier": 1,
+    "AvailableItems": [
+      {
+        "UseItemValueManagerPrice": true,
+        "ItemID": "HealthPotionI",
+        "MaxStock": 3,
+        "SpawnWeight": 1,
+        "Quantity": 1,
+        "HasUnlimitedStock": false,
+        "PriceMultiplier": 1,
+        "OverridePrice": 0
+      },
+      {
+        "PriceMultiplier": 1,
+        "OverridePrice": 0,
+        "Quantity": 1,
+        "HasUnlimitedStock": false,
+        "MaxStock": 3,
+        "SpawnWeight": 1,
+        "ItemID": "ManaPotionI",
+        "UseItemValueManagerPrice": true
+      },
+      {
+        "PriceMultiplier": 1,
+        "OverridePrice": 0,
+        "MaxStock": 5,
+        "SpawnWeight": 1,
+        "Quantity": 10,
+        "HasUnlimitedStock": false,
+        "ItemID": "CopperOre",
+        "UseItemValueManagerPrice": true
+      },
+      {
+        "OverridePrice": 0,
+        "PriceMultiplier": 1,
+        "HasUnlimitedStock": false,
+        "Quantity": 1,
+        "MaxStock": 5,
+        "SpawnWeight": 1,
+        "ItemID": "CopperIngot",
+        "UseItemValueManagerPrice": true
+      },
+      {
+        "ItemID": "Coal",
+        "UseItemValueManagerPrice": true,
+        "OverridePrice": 0,
+        "PriceMultiplier": 1,
+        "Quantity": 1,
+        "HasUnlimitedStock": false,
+        "SpawnWeight": 1,
+        "MaxStock": 5
+      },
+      {
+        "Quantity": 10,
+        "HasUnlimitedStock": true,
+        "SpawnWeight": 1,
+        "MaxStock": 99,
+        "OverridePrice": 0,
+        "PriceMultiplier": 1,
+        "UseItemValueManagerPrice": true,
+        "ItemID": "Arrow"
+      }
+    ],
+    "SellPriceMultiplier": 1,
+    "Description": "General store with common items and arrows",
+    "AllowDuplicates": false,
+    "ConfigName": "Merchant_11-15",
+    "DefaultShopSlots": 6
+  }
 ]

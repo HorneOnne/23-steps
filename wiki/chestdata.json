@@ -1,120 +1,120 @@
 {
   "LootTables": [
     {
-      "ChestType": "WoodenChest",
       "ChestName": "Wooden Chest",
-      "MinItems": 3,
       "MaxItems": 6,
       "LootItems": [
         {
+          "Weight": 100,
+          "MaxQuantity": 20,
           "ItemID": "Coal",
-          "MinQuantity": 5,
-          "MaxQuantity": 20,
-          "Weight": 100.0
+          "MinQuantity": 5
         },
         {
-          "ItemID": "CopperOre",
+          "Weight": 100,
           "MinQuantity": 5,
           "MaxQuantity": 20,
-          "Weight": 100.0
+          "ItemID": "CopperOre"
         },
         {
-          "ItemID": "ReinforcedWoodShield",
           "MinQuantity": 1,
           "MaxQuantity": 1,
-          "Weight": 100.0
+          "ItemID": "ReinforcedWoodShield",
+          "Weight": 100
         },
         {
+          "MaxQuantity": 20,
           "ItemID": "Log",
           "MinQuantity": 5,
-          "MaxQuantity": 20,
-          "Weight": 100.0
+          "Weight": 100
         },
         {
-          "ItemID": "Strings",
-          "MinQuantity": 2,
+          "Weight": 100,
           "MaxQuantity": 4,
-          "Weight": 100.0
+          "MinQuantity": 2,
+          "ItemID": "Strings"
         },
         {
           "ItemID": "WoodenShield",
           "MinQuantity": 1,
           "MaxQuantity": 1,
-          "Weight": 100.0
+          "Weight": 100
         },
         {
+          "MinQuantity": 1,
+          "MaxQuantity": 1,
           "ItemID": "CopperSword",
-          "MinQuantity": 1,
-          "MaxQuantity": 1,
-          "Weight": 100.0
+          "Weight": 100
         },
         {
-          "ItemID": "CopperPickaxe",
-          "MinQuantity": 1,
+          "Weight": 100,
           "MaxQuantity": 1,
-          "Weight": 100.0
+          "MinQuantity": 1,
+          "ItemID": "CopperPickaxe"
         },
         {
+          "Weight": 100,
           "ItemID": "WoodenWand",
-          "MinQuantity": 1,
           "MaxQuantity": 1,
-          "Weight": 100.0
+          "MinQuantity": 1
         },
         {
-          "ItemID": "WoodenBow",
-          "MinQuantity": 1,
           "MaxQuantity": 1,
-          "Weight": 100.0
+          "MinQuantity": 1,
+          "ItemID": "WoodenBow",
+          "Weight": 100
         },
         {
           "ItemID": "HealthPotionI",
           "MinQuantity": 2,
           "MaxQuantity": 4,
-          "Weight": 100.0
+          "Weight": 100
         },
         {
           "ItemID": "ManaPotionI",
           "MinQuantity": 2,
           "MaxQuantity": 4,
-          "Weight": 100.0
+          "Weight": 100
         },
         {
-          "ItemID": "RingOfSwiftness",
-          "MinQuantity": 1,
+          "Weight": 100,
           "MaxQuantity": 1,
-          "Weight": 100.0
-        },
-        {
-          "ItemID": "RingOfVitality",
           "MinQuantity": 1,
-          "MaxQuantity": 1,
-          "Weight": 100.0
+          "ItemID": "RingOfSwiftness"
         },
         {
+          "Weight": 100,
+          "MaxQuantity": 1,
+          "MinQuantity": 1,
+          "ItemID": "RingOfVitality"
+        },
+        {
+          "MaxQuantity": 1,
           "ItemID": "RingOfFortune",
           "MinQuantity": 1,
-          "MaxQuantity": 1,
-          "Weight": 100.0
+          "Weight": 100
         },
         {
-          "ItemID": "RareKey",
           "MinQuantity": 1,
+          "ItemID": "RareKey",
           "MaxQuantity": 1,
           "Weight": 45.9
         },
         {
-          "ItemID": "MythicKey",
+          "Weight": 0.1,
           "MinQuantity": 1,
-          "MaxQuantity": 1,
-          "Weight": 0.1
+          "ItemID": "MythicKey",
+          "MaxQuantity": 1
         },
         {
-          "ItemID": "DivineKey",
+          "Weight": 0.1,
           "MinQuantity": 1,
-          "MaxQuantity": 1,
-          "Weight": 0.1
+          "ItemID": "DivineKey",
+          "MaxQuantity": 1
         }
-      ]
+      ],
+      "MinItems": 3,
+      "ChestType": "WoodenChest"
     }
   ]
 }

@@ -1,1691 +1,1691 @@
 {
   "MobConfigs": [
     {
-      "MobID": "BlueSlime",
       "MobName": "Blue Slime",
       "HealthConfig": {
-        "MaxHealth": 40.0,
-        "InvulnerabilityDuration": 0.1,
+        "RegenerationRate": 1,
         "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0
-      },
-      "CombatConfig": {
-        "Damage": 3.0,
-        "MoveSpeed": 1.0,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 0.5,
-        "KnockbackForce": 1.0,
-        "KnockbackResistance": 0.0
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 10.0,
-        "DeAggressionRange": 15.0,
-        "PatrolRadius": 5.0
+        "RegenerationDelay": 5,
+        "MaxHealth": 40,
+        "InvulnerabilityDuration": 0.1
       },
       "MovementConfig": {
         "CanBeStunned": true
       },
       "LootConfig": {
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
+            "DropChance": 0.3,
             "MaxQuantity": 1,
-            "DropChance": 0.3
+            "MinQuantity": 1,
+            "ItemID": "Gel"
           }
-        ]
-      }
+        ],
+        "DropsLoot": true
+      },
+      "AIConfig": {
+        "PatrolRadius": 5,
+        "IsHostileToPlayer": true,
+        "DeAggressionRange": 15,
+        "DetectionRange": 10
+      },
+      "CombatConfig": {
+        "MoveSpeed": 1,
+        "FlightSpeedMultiplier": 1,
+        "Defense": 0,
+        "AttackRange": 0.5,
+        "Damage": 3,
+        "KnockbackResistance": 0,
+        "KnockbackForce": 1,
+        "AttackSpeed": 1
+      },
+      "MobID": "BlueSlime"
     },
     {
+      "MovementConfig": {
+        "CanBeStunned": true
+      },
+      "LootConfig": {
+        "LootDrops": [
+          {
+            "DropChance": 0.7,
+            "MaxQuantity": 1,
+            "MinQuantity": 1,
+            "ItemID": "Gel"
+          }
+        ],
+        "DropsLoot": true
+      },
+      "AIConfig": {
+        "DeAggressionRange": 16,
+        "DetectionRange": 10,
+        "PatrolRadius": 5,
+        "IsHostileToPlayer": true
+      },
+      "CombatConfig": {
+        "Defense": 0,
+        "FlightSpeedMultiplier": 1,
+        "MoveSpeed": 1.15,
+        "KnockbackForce": 2,
+        "AttackSpeed": 1,
+        "KnockbackResistance": 0.1,
+        "AttackRange": 0.5,
+        "Damage": 5
+      },
       "MobID": "GreenSlime",
       "MobName": "Green Slime",
       "HealthConfig": {
-        "MaxHealth": 60.0,
-        "InvulnerabilityDuration": 0.1,
+        "RegenerationDelay": 4,
         "CanRegenerate": true,
-        "RegenerationRate": 2.0,
-        "RegenerationDelay": 4.0
-      },
-      "CombatConfig": {
-        "Damage": 5.0,
-        "MoveSpeed": 1.15,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 0.5,
-        "KnockbackForce": 2.0,
-        "KnockbackResistance": 0.1
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 10.0,
-        "DeAggressionRange": 16.0,
-        "PatrolRadius": 5.0
-      },
-      "MovementConfig": {
-        "CanBeStunned": true
-      },
-      "LootConfig": {
-        "DropsLoot": true,
-        "LootDrops": [
-          {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
-            "MaxQuantity": 1,
-            "DropChance": 0.7
-          }
-        ]
+        "RegenerationRate": 2,
+        "MaxHealth": 60,
+        "InvulnerabilityDuration": 0.1
       }
     },
     {
-      "MobID": "RedSlime",
-      "MobName": "Red Slime",
       "HealthConfig": {
-        "MaxHealth": 80.0,
         "InvulnerabilityDuration": 0.1,
+        "MaxHealth": 80,
+        "RegenerationRate": 1,
         "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0
+        "RegenerationDelay": 5
+      },
+      "MobName": "Red Slime",
+      "MobID": "RedSlime",
+      "MovementConfig": {
+        "CanBeStunned": true
       },
       "CombatConfig": {
-        "Damage": 7.0,
+        "FlightSpeedMultiplier": 1,
         "MoveSpeed": 1.3,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
+        "Defense": 0,
+        "KnockbackForce": 2,
+        "AttackSpeed": 1,
+        "Damage": 7,
         "AttackRange": 0.5,
-        "KnockbackForce": 2.0,
         "KnockbackResistance": 0.15
       },
       "AIConfig": {
+        "DetectionRange": 10,
+        "DeAggressionRange": 17,
         "IsHostileToPlayer": true,
-        "DetectionRange": 10.0,
-        "DeAggressionRange": 17.0,
-        "PatrolRadius": 6.0
+        "PatrolRadius": 6
+      },
+      "LootConfig": {
+        "LootDrops": [
+          {
+            "DropChance": 1,
+            "MaxQuantity": 1,
+            "MinQuantity": 1,
+            "ItemID": "Gel"
+          }
+        ],
+        "DropsLoot": true
+      }
+    },
+    {
+      "AIConfig": {
+        "IsHostileToPlayer": true,
+        "PatrolRadius": 8,
+        "DetectionRange": 10,
+        "DeAggressionRange": 20
+      },
+      "LootConfig": {
+        "LootDrops": [
+          {
+            "DropChance": 1,
+            "MaxQuantity": 2,
+            "MinQuantity": 1,
+            "ItemID": "Gel"
+          }
+        ],
+        "DropsLoot": true
+      },
+      "CombatConfig": {
+        "MoveSpeed": 1.5,
+        "FlightSpeedMultiplier": 1,
+        "Defense": 0,
+        "AttackRange": 0.8,
+        "Damage": 20,
+        "KnockbackResistance": 0.5,
+        "KnockbackForce": 2,
+        "AttackSpeed": 1
       },
       "MovementConfig": {
         "CanBeStunned": true
       },
-      "LootConfig": {
-        "DropsLoot": true,
-        "LootDrops": [
-          {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
-            "MaxQuantity": 1,
-            "DropChance": 1.0
-          }
-        ]
-      }
-    },
-    {
       "MobID": "BlackSlime",
       "MobName": "Black Slime",
       "HealthConfig": {
-        "MaxHealth": 250.0,
+        "MaxHealth": 250,
         "InvulnerabilityDuration": 0.4,
         "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0
-      },
-      "CombatConfig": {
-        "Damage": 20.0,
-        "MoveSpeed": 1.5,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 0.8,
-        "KnockbackForce": 2.0,
-        "KnockbackResistance": 0.5
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 10.0,
-        "DeAggressionRange": 20.0,
-        "PatrolRadius": 8.0
-      },
-      "MovementConfig": {
-        "CanBeStunned": true
-      },
-      "LootConfig": {
-        "DropsLoot": true,
-        "LootDrops": [
-          {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
-            "MaxQuantity": 2,
-            "DropChance": 1.0
-          }
-        ]
+        "RegenerationRate": 1,
+        "RegenerationDelay": 5
       }
     },
     {
-      "MobID": "TinyBlackSlime",
-      "MobName": "Tiny Black Slime",
       "HealthConfig": {
-        "MaxHealth": 50.0,
-        "InvulnerabilityDuration": 0.3,
+        "RegenerationDelay": 5,
         "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0
+        "RegenerationRate": 1,
+        "MaxHealth": 50,
+        "InvulnerabilityDuration": 0.3
       },
-      "CombatConfig": {
-        "Damage": 8.0,
-        "MoveSpeed": 1.4,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 0.3,
-        "KnockbackForce": 1.2,
-        "KnockbackResistance": 0.0
+      "MobName": "Tiny Black Slime",
+      "MobID": "TinyBlackSlime",
+      "LootConfig": {
+        "LootDrops": [
+          {
+            "DropChance": 0.3,
+            "MaxQuantity": 1,
+            "MinQuantity": 1,
+            "ItemID": "Gel"
+          }
+        ],
+        "DropsLoot": true
       },
       "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 8.0,
-        "DeAggressionRange": 12.0,
-        "PatrolRadius": 4.0
+        "DeAggressionRange": 12,
+        "DetectionRange": 8,
+        "PatrolRadius": 4,
+        "IsHostileToPlayer": true
+      },
+      "CombatConfig": {
+        "Damage": 8,
+        "AttackRange": 0.3,
+        "KnockbackResistance": 0,
+        "KnockbackForce": 1.2,
+        "AttackSpeed": 1,
+        "MoveSpeed": 1.4,
+        "FlightSpeedMultiplier": 1,
+        "Defense": 0
       },
       "MovementConfig": {
         "CanBeStunned": true
-      },
-      "LootConfig": {
-        "DropsLoot": true,
-        "LootDrops": [
-          {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
-            "MaxQuantity": 1,
-            "DropChance": 0.3
-          }
-        ]
       }
     },
     {
-      "MobID": "Orc",
       "MobName": "Orc",
       "HealthConfig": {
-        "MaxHealth": 250.0,
+        "MaxHealth": 250,
         "InvulnerabilityDuration": 0.4,
+        "RegenerationRate": 1,
         "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0
-      },
-      "CombatConfig": {
-        "Damage": 25.0,
-        "MoveSpeed": 1.5,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 1.5,
-        "KnockbackForce": 3.5,
-        "KnockbackResistance": 0.5
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 15.0,
-        "DeAggressionRange": 20.0,
-        "PatrolRadius": 8.0
+        "RegenerationDelay": 5
       },
       "MovementConfig": {
         "CanBeStunned": true
       },
       "LootConfig": {
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 8,
+            "DropChance": 1,
             "MaxQuantity": 12,
-            "DropChance": 1.0
+            "MinQuantity": 8,
+            "ItemID": "Gel"
           }
-        ]
-      }
+        ],
+        "DropsLoot": true
+      },
+      "AIConfig": {
+        "DetectionRange": 15,
+        "DeAggressionRange": 20,
+        "IsHostileToPlayer": true,
+        "PatrolRadius": 8
+      },
+      "CombatConfig": {
+        "Defense": 0,
+        "MoveSpeed": 1.5,
+        "FlightSpeedMultiplier": 1,
+        "KnockbackForce": 3.5,
+        "AttackSpeed": 1,
+        "KnockbackResistance": 0.5,
+        "Damage": 25,
+        "AttackRange": 1.5
+      },
+      "MobID": "Orc"
     },
     {
       "MobID": "ArmoredAxeman",
-      "MobName": "Armored Axeman",
-      "HealthConfig": {
-        "MaxHealth": 250.0,
-        "InvulnerabilityDuration": 0.4,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0
+      "LootConfig": {
+        "LootDrops": [
+          {
+            "DropChance": 1,
+            "MaxQuantity": 12,
+            "MinQuantity": 8,
+            "ItemID": "Gel"
+          }
+        ],
+        "DropsLoot": true
       },
       "CombatConfig": {
-        "Damage": 25.0,
-        "MoveSpeed": 1.5,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 1.5,
         "KnockbackForce": 3.5,
-        "KnockbackResistance": 0.5
+        "AttackSpeed": 1,
+        "Damage": 25,
+        "AttackRange": 1.5,
+        "KnockbackResistance": 0.5,
+        "FlightSpeedMultiplier": 1,
+        "MoveSpeed": 1.5,
+        "Defense": 0
       },
       "AIConfig": {
         "IsHostileToPlayer": true,
-        "DetectionRange": 15.0,
-        "DeAggressionRange": 20.0,
-        "PatrolRadius": 8.0
+        "PatrolRadius": 8,
+        "DetectionRange": 15,
+        "DeAggressionRange": 20
       },
       "MovementConfig": {
         "CanBeStunned": true
       },
-      "LootConfig": {
-        "DropsLoot": true,
-        "LootDrops": [
-          {
-            "ItemID": "Gel",
-            "MinQuantity": 8,
-            "MaxQuantity": 12,
-            "DropChance": 1.0
-          }
-        ]
-      }
+      "HealthConfig": {
+        "RegenerationDelay": 5,
+        "CanRegenerate": false,
+        "RegenerationRate": 1,
+        "MaxHealth": 250,
+        "InvulnerabilityDuration": 0.4
+      },
+      "MobName": "Armored Axeman"
     },
     {
+      "CombatConfig": {
+        "Defense": 0,
+        "MoveSpeed": 1.5,
+        "FlightSpeedMultiplier": 1,
+        "KnockbackResistance": 0.5,
+        "Damage": 25,
+        "AttackRange": 1.5,
+        "KnockbackForce": 3.5,
+        "AttackSpeed": 1
+      },
+      "LootConfig": {
+        "LootDrops": [
+          {
+            "DropChance": 1,
+            "MaxQuantity": 12,
+            "MinQuantity": 8,
+            "ItemID": "Gel"
+          }
+        ],
+        "DropsLoot": true
+      },
+      "AIConfig": {
+        "IsHostileToPlayer": true,
+        "PatrolRadius": 8,
+        "DetectionRange": 15,
+        "DeAggressionRange": 20
+      },
+      "MovementConfig": {
+        "CanBeStunned": true
+      },
       "MobID": "ArmoredOrc",
       "MobName": "Armored Orc",
       "HealthConfig": {
-        "MaxHealth": 250.0,
-        "InvulnerabilityDuration": 0.4,
         "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0
-      },
+        "RegenerationRate": 1,
+        "RegenerationDelay": 5,
+        "InvulnerabilityDuration": 0.4,
+        "MaxHealth": 250
+      }
+    },
+    {
       "CombatConfig": {
-        "Damage": 25.0,
+        "Defense": 0,
+        "FlightSpeedMultiplier": 1,
         "MoveSpeed": 1.5,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 1.5,
+        "KnockbackResistance": 0.5,
+        "AttackRange": 1.55,
+        "Damage": 25,
         "KnockbackForce": 3.5,
-        "KnockbackResistance": 0.5
+        "AttackSpeed": 1
       },
       "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 15.0,
-        "DeAggressionRange": 20.0,
-        "PatrolRadius": 8.0
+        "DeAggressionRange": 20,
+        "DetectionRange": 15,
+        "PatrolRadius": 8,
+        "IsHostileToPlayer": true
+      },
+      "LootConfig": {
+        "LootDrops": [
+          {
+            "DropChance": 1,
+            "MaxQuantity": 12,
+            "MinQuantity": 8,
+            "ItemID": "Gel"
+          }
+        ],
+        "DropsLoot": true
       },
       "MovementConfig": {
         "CanBeStunned": true
       },
-      "LootConfig": {
-        "DropsLoot": true,
-        "LootDrops": [
-          {
-            "ItemID": "Gel",
-            "MinQuantity": 8,
-            "MaxQuantity": 12,
-            "DropChance": 1.0
-          }
-        ]
-      }
-    },
-    {
       "MobID": "ArmoredSkeleton",
       "MobName": "Armored Skeleton",
       "HealthConfig": {
-        "MaxHealth": 250.0,
-        "InvulnerabilityDuration": 0.4,
+        "RegenerationDelay": 5,
         "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0
-      },
-      "CombatConfig": {
-        "Damage": 25.0,
-        "MoveSpeed": 1.5,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 1.55,
-        "KnockbackForce": 3.5,
-        "KnockbackResistance": 0.5
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 15.0,
-        "DeAggressionRange": 20.0,
-        "PatrolRadius": 8.0
-      },
-      "MovementConfig": {
-        "CanBeStunned": true
-      },
-      "LootConfig": {
-        "DropsLoot": true,
-        "LootDrops": [
-          {
-            "ItemID": "Gel",
-            "MinQuantity": 8,
-            "MaxQuantity": 12,
-            "DropChance": 1.0
-          }
-        ]
+        "RegenerationRate": 1,
+        "InvulnerabilityDuration": 0.4,
+        "MaxHealth": 250
       }
     },
     {
-      "MobID": "EliteOrc",
+      "HealthConfig": {
+        "InvulnerabilityDuration": 0.4,
+        "MaxHealth": 250,
+        "RegenerationDelay": 5,
+        "RegenerationRate": 1,
+        "CanRegenerate": false
+      },
       "MobName": "Elite Orc",
-      "HealthConfig": {
-        "MaxHealth": 250.0,
-        "InvulnerabilityDuration": 0.4,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0
-      },
+      "MobID": "EliteOrc",
       "CombatConfig": {
-        "Damage": 25.0,
-        "MoveSpeed": 1.5,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
+        "Damage": 25,
         "AttackRange": 1.75,
+        "KnockbackResistance": 0.5,
         "KnockbackForce": 3.5,
-        "KnockbackResistance": 0.5
+        "AttackSpeed": 1,
+        "MoveSpeed": 1.5,
+        "FlightSpeedMultiplier": 1,
+        "Defense": 0
       },
       "AIConfig": {
+        "DetectionRange": 15,
+        "DeAggressionRange": 20,
         "IsHostileToPlayer": true,
-        "DetectionRange": 15.0,
-        "DeAggressionRange": 20.0,
-        "PatrolRadius": 8.0
+        "PatrolRadius": 8
+      },
+      "LootConfig": {
+        "LootDrops": [
+          {
+            "DropChance": 1,
+            "MaxQuantity": 12,
+            "MinQuantity": 8,
+            "ItemID": "Gel"
+          }
+        ],
+        "DropsLoot": true
       },
       "MovementConfig": {
         "CanBeStunned": true
-      },
-      "LootConfig": {
-        "DropsLoot": true,
-        "LootDrops": [
-          {
-            "ItemID": "Gel",
-            "MinQuantity": 8,
-            "MaxQuantity": 12,
-            "DropChance": 1.0
-          }
-        ]
       }
     },
     {
-      "MobID": "Werebear",
-      "MobName": "Werebear",
       "HealthConfig": {
-        "MaxHealth": 250.0,
-        "InvulnerabilityDuration": 0.4,
+        "RegenerationRate": 1,
         "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0
+        "RegenerationDelay": 5,
+        "MaxHealth": 250,
+        "InvulnerabilityDuration": 0.4
       },
+      "MobName": "Werebear",
+      "MobID": "Werebear",
       "CombatConfig": {
-        "Damage": 25.0,
+        "Defense": 0,
+        "FlightSpeedMultiplier": 1,
         "MoveSpeed": 1.5,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
+        "KnockbackResistance": 0.5,
         "AttackRange": 1.5,
-        "KnockbackForce": 1.0,
-        "KnockbackResistance": 0.5
+        "Damage": 25,
+        "KnockbackForce": 1,
+        "AttackSpeed": 1
+      },
+      "LootConfig": {
+        "LootDrops": [
+          {
+            "DropChance": 1,
+            "MaxQuantity": 12,
+            "MinQuantity": 8,
+            "ItemID": "Gel"
+          }
+        ],
+        "DropsLoot": true
       },
       "AIConfig": {
+        "DetectionRange": 15,
+        "DeAggressionRange": 20,
         "IsHostileToPlayer": true,
-        "DetectionRange": 15.0,
-        "DeAggressionRange": 20.0,
-        "PatrolRadius": 8.0
+        "PatrolRadius": 8
       },
       "MovementConfig": {
         "CanBeStunned": true
-      },
-      "LootConfig": {
-        "DropsLoot": true,
-        "LootDrops": [
-          {
-            "ItemID": "Gel",
-            "MinQuantity": 8,
-            "MaxQuantity": 12,
-            "DropChance": 1.0
-          }
-        ]
       }
     },
     {
       "MobID": "Werewolf",
-      "MobName": "Werewolf",
-      "HealthConfig": {
-        "MaxHealth": 250.0,
-        "InvulnerabilityDuration": 0.4,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0
-      },
       "CombatConfig": {
-        "Damage": 25.0,
+        "Defense": 0,
         "MoveSpeed": 1.5,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
+        "FlightSpeedMultiplier": 1,
+        "KnockbackResistance": 0.5,
         "AttackRange": 1.75,
+        "Damage": 25,
         "KnockbackForce": 3.5,
-        "KnockbackResistance": 0.5
+        "AttackSpeed": 1
+      },
+      "LootConfig": {
+        "LootDrops": [
+          {
+            "DropChance": 1,
+            "MaxQuantity": 12,
+            "MinQuantity": 8,
+            "ItemID": "Gel"
+          }
+        ],
+        "DropsLoot": true
       },
       "AIConfig": {
         "IsHostileToPlayer": true,
-        "DetectionRange": 15.0,
-        "DeAggressionRange": 20.0,
-        "PatrolRadius": 8.0
+        "PatrolRadius": 8,
+        "DetectionRange": 15,
+        "DeAggressionRange": 20
       },
       "MovementConfig": {
         "CanBeStunned": true
       },
-      "LootConfig": {
-        "DropsLoot": true,
-        "LootDrops": [
-          {
-            "ItemID": "Gel",
-            "MinQuantity": 8,
-            "MaxQuantity": 12,
-            "DropChance": 1.0
-          }
-        ]
-      }
+      "HealthConfig": {
+        "RegenerationRate": 1,
+        "CanRegenerate": false,
+        "RegenerationDelay": 5,
+        "InvulnerabilityDuration": 0.4,
+        "MaxHealth": 250
+      },
+      "MobName": "Werewolf"
     },
     {
       "MobID": "Bloodcap",
-      "MobName": "Bloodcap",
-      "HealthConfig": {
-        "MaxHealth": 80.0,
-        "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0
-      },
-      "CombatConfig": {
-        "Damage": 8.0,
-        "MoveSpeed": 1.1,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 1.0,
-        "KnockbackForce": 0.8,
-        "KnockbackResistance": 0.0
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 9.0,
-        "DeAggressionRange": 14.0,
-        "PatrolRadius": 4.0
-      },
       "MovementConfig": {
         "CanBeStunned": true
       },
+      "AIConfig": {
+        "IsHostileToPlayer": true,
+        "PatrolRadius": 4,
+        "DetectionRange": 9,
+        "DeAggressionRange": 14
+      },
+      "CombatConfig": {
+        "MoveSpeed": 1.1,
+        "FlightSpeedMultiplier": 1,
+        "Defense": 0,
+        "Damage": 8,
+        "AttackRange": 1,
+        "KnockbackResistance": 0,
+        "KnockbackForce": 0.8,
+        "AttackSpeed": 1
+      },
       "LootConfig": {
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Mushroom",
-            "MinQuantity": 1,
+            "DropChance": 1,
             "MaxQuantity": 3,
-            "DropChance": 1.0
+            "MinQuantity": 1,
+            "ItemID": "Mushroom"
           }
-        ]
-      }
+        ],
+        "DropsLoot": true
+      },
+      "HealthConfig": {
+        "RegenerationDelay": 5,
+        "RegenerationRate": 1,
+        "CanRegenerate": false,
+        "MaxHealth": 80,
+        "InvulnerabilityDuration": 0.1
+      },
+      "MobName": "Bloodcap"
     },
     {
-      "MobID": "Venomcap",
       "MobName": "Venomcap",
       "HealthConfig": {
-        "MaxHealth": 110.0,
-        "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": true,
         "RegenerationRate": 1.5,
-        "RegenerationDelay": 4.5
+        "CanRegenerate": true,
+        "RegenerationDelay": 4.5,
+        "MaxHealth": 110,
+        "InvulnerabilityDuration": 0.1
+      },
+      "LootConfig": {
+        "LootDrops": [
+          {
+            "DropChance": 1,
+            "MaxQuantity": 3,
+            "MinQuantity": 1,
+            "ItemID": "Mushroom"
+          }
+        ],
+        "DropsLoot": true
       },
       "CombatConfig": {
-        "Damage": 11.0,
-        "MoveSpeed": 1.2,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 1.0,
+        "KnockbackResistance": 0.05,
+        "AttackRange": 1,
+        "Damage": 11,
         "KnockbackForce": 0.9,
-        "KnockbackResistance": 0.05
+        "AttackSpeed": 1,
+        "Defense": 0,
+        "MoveSpeed": 1.2,
+        "FlightSpeedMultiplier": 1
       },
       "AIConfig": {
+        "PatrolRadius": 4.5,
         "IsHostileToPlayer": true,
-        "DetectionRange": 9.5,
         "DeAggressionRange": 14.5,
-        "PatrolRadius": 4.5
+        "DetectionRange": 9.5
       },
       "MovementConfig": {
         "CanBeStunned": true
       },
-      "LootConfig": {
-        "DropsLoot": true,
-        "LootDrops": [
-          {
-            "ItemID": "Mushroom",
-            "MinQuantity": 1,
-            "MaxQuantity": 3,
-            "DropChance": 1.0
-          }
-        ]
-      }
+      "MobID": "Venomcap"
     },
     {
       "MobID": "Gloopcap",
-      "MobName": "Gloopcap",
-      "HealthConfig": {
-        "MaxHealth": 140.0,
-        "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0
-      },
-      "CombatConfig": {
-        "Damage": 14.0,
-        "MoveSpeed": 1.3,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 1.0,
-        "KnockbackForce": 0.7,
-        "KnockbackResistance": 0.0
-      },
       "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 8.5,
         "DeAggressionRange": 13.5,
-        "PatrolRadius": 3.5
-      },
-      "MovementConfig": {
-        "CanBeStunned": true
-      },
-      "LootConfig": {
-        "DropsLoot": true,
-        "LootDrops": [
-          {
-            "ItemID": "Mushroom",
-            "MinQuantity": 1,
-            "MaxQuantity": 2,
-            "DropChance": 1.0
-          }
-        ]
-      }
-    },
-    {
-      "MobID": "Sandworm",
-      "MobName": "Sandworm",
-      "HealthConfig": {
-        "MaxHealth": 120.0,
-        "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0
+        "DetectionRange": 8.5,
+        "PatrolRadius": 3.5,
+        "IsHostileToPlayer": true
       },
       "CombatConfig": {
-        "Damage": 12.0,
-        "MoveSpeed": 1.5,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 0.7,
-        "KnockbackForce": 1.5,
-        "KnockbackResistance": 1
+        "FlightSpeedMultiplier": 1,
+        "MoveSpeed": 1.3,
+        "Defense": 0,
+        "Damage": 14,
+        "AttackRange": 1,
+        "KnockbackResistance": 0,
+        "KnockbackForce": 0.7,
+        "AttackSpeed": 1
       },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 10.0,
-        "DeAggressionRange": 15.0,
-        "PatrolRadius": 5.0
+      "LootConfig": {
+        "LootDrops": [
+          {
+            "DropChance": 1,
+            "MaxQuantity": 2,
+            "MinQuantity": 1,
+            "ItemID": "Mushroom"
+          }
+        ],
+        "DropsLoot": true
       },
       "MovementConfig": {
         "CanBeStunned": true
       },
+      "HealthConfig": {
+        "RegenerationDelay": 5,
+        "RegenerationRate": 1,
+        "CanRegenerate": false,
+        "InvulnerabilityDuration": 0.1,
+        "MaxHealth": 140
+      },
+      "MobName": "Gloopcap"
+    },
+    {
+      "HealthConfig": {
+        "MaxHealth": 120,
+        "InvulnerabilityDuration": 0.1,
+        "CanRegenerate": false,
+        "RegenerationRate": 1,
+        "RegenerationDelay": 5
+      },
+      "MobName": "Sandworm",
+      "MobID": "Sandworm",
+      "CombatConfig": {
+        "KnockbackForce": 1.5,
+        "AttackSpeed": 1,
+        "KnockbackResistance": 1,
+        "AttackRange": 0.7,
+        "Damage": 12,
+        "Defense": 0,
+        "MoveSpeed": 1.5,
+        "FlightSpeedMultiplier": 1
+      },
       "LootConfig": {
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 2,
+            "DropChance": 1,
             "MaxQuantity": 4,
-            "DropChance": 1.0
+            "MinQuantity": 2,
+            "ItemID": "Gel"
           }
-        ]
+        ],
+        "DropsLoot": true
+      },
+      "AIConfig": {
+        "DetectionRange": 10,
+        "DeAggressionRange": 15,
+        "IsHostileToPlayer": true,
+        "PatrolRadius": 5
+      },
+      "MovementConfig": {
+        "CanBeStunned": true
       }
     },
     {
+      "MovementConfig": {
+        "CanBeStunned": true
+      },
+      "AIConfig": {
+        "DetectionRange": 9,
+        "DeAggressionRange": 14,
+        "IsHostileToPlayer": true,
+        "PatrolRadius": 4
+      },
+      "CombatConfig": {
+        "KnockbackForce": 5,
+        "AttackSpeed": 1,
+        "Damage": 9,
+        "AttackRange": 0.6,
+        "KnockbackResistance": 1,
+        "FlightSpeedMultiplier": 1,
+        "MoveSpeed": 1.1,
+        "Defense": 0
+      },
+      "LootConfig": {
+        "LootDrops": [
+          {
+            "DropChance": 1,
+            "MaxQuantity": 3,
+            "MinQuantity": 1,
+            "ItemID": "Gel"
+          }
+        ],
+        "DropsLoot": true
+      },
       "MobID": "Dirtworm",
       "MobName": "Dirtworm",
       "HealthConfig": {
-        "MaxHealth": 90.0,
-        "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0
-      },
-      "CombatConfig": {
-        "Damage": 9.0,
-        "MoveSpeed": 1.1,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 0.6,
-        "KnockbackForce": 5.0,
-        "KnockbackResistance": 1
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 9.0,
-        "DeAggressionRange": 14.0,
-        "PatrolRadius": 4.0
-      },
-      "MovementConfig": {
-        "CanBeStunned": true
-      },
-      "LootConfig": {
-        "DropsLoot": true,
-        "LootDrops": [
-          {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
-            "MaxQuantity": 3,
-            "DropChance": 1.0
-          }
-        ]
+        "RegenerationRate": 1,
+        "RegenerationDelay": 5,
+        "MaxHealth": 90,
+        "InvulnerabilityDuration": 0.1
       }
     },
     {
       "MobID": "Pig",
-      "MobName": "Pig",
-      "HealthConfig": {
-        "MaxHealth": 60.0,
-        "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0
-      },
       "CombatConfig": {
-        "Damage": 5.0,
-        "MoveSpeed": 1.5,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
         "AttackRange": 0.55,
+        "Damage": 5,
+        "KnockbackResistance": 0,
         "KnockbackForce": 0.5,
-        "KnockbackResistance": 0.0
+        "AttackSpeed": 1,
+        "MoveSpeed": 1.5,
+        "FlightSpeedMultiplier": 1,
+        "Defense": 0
       },
       "AIConfig": {
+        "DetectionRange": 5,
+        "DeAggressionRange": 10,
         "IsHostileToPlayer": true,
-        "DetectionRange": 5.0,
-        "DeAggressionRange": 10.0,
-        "PatrolRadius": 3.0
+        "PatrolRadius": 3
+      },
+      "LootConfig": {
+        "LootDrops": [
+          {
+            "DropChance": 1,
+            "MaxQuantity": 2,
+            "MinQuantity": 1,
+            "ItemID": "Gel"
+          }
+        ],
+        "DropsLoot": true
       },
       "MovementConfig": {
         "CanBeStunned": true
       },
-      "LootConfig": {
-        "DropsLoot": true,
-        "LootDrops": [
-          {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
-            "MaxQuantity": 2,
-            "DropChance": 1.0
-          }
-        ]
-      }
+      "HealthConfig": {
+        "MaxHealth": 60,
+        "InvulnerabilityDuration": 0.1,
+        "RegenerationDelay": 5,
+        "RegenerationRate": 1,
+        "CanRegenerate": false
+      },
+      "MobName": "Pig"
     },
     {
+      "CombatConfig": {
+        "FlightSpeedMultiplier": 1,
+        "MoveSpeed": 1.3,
+        "Defense": 0,
+        "Damage": 50,
+        "AttackRange": 1.5,
+        "KnockbackResistance": 1,
+        "KnockbackForce": 7,
+        "AttackSpeed": 1
+      },
+      "LootConfig": {
+        "LootDrops": [
+          {
+            "DropChance": 1,
+            "MaxQuantity": 4,
+            "MinQuantity": 2,
+            "ItemID": "Gel"
+          }
+        ],
+        "DropsLoot": true
+      },
+      "AIConfig": {
+        "PatrolRadius": 6,
+        "IsHostileToPlayer": true,
+        "DeAggressionRange": 17,
+        "DetectionRange": 12
+      },
+      "MovementConfig": {
+        "CanBeStunned": true
+      },
       "MobID": "Boar",
       "MobName": "Boar",
       "HealthConfig": {
-        "MaxHealth": 4000.0,
-        "InvulnerabilityDuration": 0.1,
+        "RegenerationRate": 1,
         "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0
-      },
+        "RegenerationDelay": 5,
+        "InvulnerabilityDuration": 0.1,
+        "MaxHealth": 4000
+      }
+    },
+    {
       "CombatConfig": {
-        "Damage": 50.0,
-        "MoveSpeed": 1.3,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 1.5,
-        "KnockbackForce": 7.0,
-        "KnockbackResistance": 1.0
+        "KnockbackResistance": 0,
+        "AttackRange": 0.4,
+        "Damage": 4,
+        "KnockbackForce": 0.3,
+        "AttackSpeed": 1,
+        "Defense": 0,
+        "MoveSpeed": 1.2,
+        "FlightSpeedMultiplier": 1
       },
       "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 12.0,
-        "DeAggressionRange": 17.0,
-        "PatrolRadius": 6.0
+        "DeAggressionRange": 11,
+        "DetectionRange": 6,
+        "PatrolRadius": 2,
+        "IsHostileToPlayer": true
+      },
+      "LootConfig": {
+        "LootDrops": [
+          {
+            "DropChance": 1,
+            "MaxQuantity": 1,
+            "MinQuantity": 1,
+            "ItemID": "Gel"
+          }
+        ],
+        "DropsLoot": true
       },
       "MovementConfig": {
         "CanBeStunned": true
       },
-      "LootConfig": {
-        "DropsLoot": true,
-        "LootDrops": [
-          {
-            "ItemID": "Gel",
-            "MinQuantity": 2,
-            "MaxQuantity": 4,
-            "DropChance": 1.0
-          }
-        ]
-      }
-    },
-    {
       "MobID": "Leaf",
       "MobName": "Leaf",
       "HealthConfig": {
-        "MaxHealth": 40.0,
+        "MaxHealth": 40,
         "InvulnerabilityDuration": 0.1,
+        "RegenerationRate": 1,
         "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0
-      },
-      "CombatConfig": {
-        "Damage": 4.0,
-        "MoveSpeed": 1.2,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 0.4,
-        "KnockbackForce": 0.3,
-        "KnockbackResistance": 0.0
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 6.0,
-        "DeAggressionRange": 11.0,
-        "PatrolRadius": 2.0
-      },
-      "MovementConfig": {
-        "CanBeStunned": true
-      },
-      "LootConfig": {
-        "DropsLoot": true,
-        "LootDrops": [
-          {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
-            "MaxQuantity": 1,
-            "DropChance": 1.0
-          }
-        ]
+        "RegenerationDelay": 5
       }
     },
     {
-      "MobID": "Leafer",
-      "MobName": "Leafer",
       "HealthConfig": {
-        "MaxHealth": 80.0,
+        "MaxHealth": 80,
         "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0
+        "RegenerationDelay": 5,
+        "RegenerationRate": 1,
+        "CanRegenerate": false
+      },
+      "MobName": "Leafer",
+      "MobID": "Leafer",
+      "AIConfig": {
+        "DeAggressionRange": 13,
+        "DetectionRange": 8,
+        "PatrolRadius": 4,
+        "IsHostileToPlayer": true
       },
       "CombatConfig": {
-        "Damage": 10.0,
+        "Defense": 0,
         "MoveSpeed": 1.2,
-        "FlightSpeedMultiplier": 2.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 5.0,
-        "KnockbackForce": 1.0,
-        "KnockbackResistance": 0.1
+        "FlightSpeedMultiplier": 2,
+        "KnockbackResistance": 0.1,
+        "AttackRange": 5,
+        "Damage": 10,
+        "KnockbackForce": 1,
+        "AttackSpeed": 1
       },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 8.0,
-        "DeAggressionRange": 13.0,
-        "PatrolRadius": 4.0
+      "LootConfig": {
+        "LootDrops": [
+          {
+            "DropChance": 1,
+            "MaxQuantity": 2,
+            "MinQuantity": 1,
+            "ItemID": "Gel"
+          }
+        ],
+        "DropsLoot": true
       },
       "MovementConfig": {
         "CanBeStunned": true
-      },
-      "LootConfig": {
-        "DropsLoot": true,
-        "LootDrops": [
-          {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
-            "MaxQuantity": 2,
-            "DropChance": 1.0
-          }
-        ]
       }
     },
     {
+      "MovementConfig": {
+        "CanBeStunned": true
+      },
+      "CombatConfig": {
+        "KnockbackResistance": 0,
+        "AttackRange": 0.4,
+        "Damage": 3,
+        "KnockbackForce": 0.2,
+        "AttackSpeed": 1,
+        "Defense": 0,
+        "MoveSpeed": 1.4,
+        "FlightSpeedMultiplier": 1.5
+      },
+      "AIConfig": {
+        "DetectionRange": 7,
+        "DeAggressionRange": 12,
+        "IsHostileToPlayer": true,
+        "PatrolRadius": 3
+      },
+      "LootConfig": {
+        "LootDrops": [
+          {
+            "DropChance": 1,
+            "MaxQuantity": 1,
+            "MinQuantity": 1,
+            "ItemID": "Gel"
+          }
+        ],
+        "DropsLoot": true
+      },
       "MobID": "Bat",
       "MobName": "Bat",
       "HealthConfig": {
-        "MaxHealth": 30.0,
-        "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0
-      },
-      "CombatConfig": {
-        "Damage": 3.0,
-        "MoveSpeed": 1.4,
-        "FlightSpeedMultiplier": 1.5,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 0.4,
-        "KnockbackForce": 0.2,
-        "KnockbackResistance": 0.0
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 7.0,
-        "DeAggressionRange": 12.0,
-        "PatrolRadius": 3.0
-      },
-      "MovementConfig": {
-        "CanBeStunned": true
-      },
-      "LootConfig": {
-        "DropsLoot": true,
-        "LootDrops": [
-          {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
-            "MaxQuantity": 1,
-            "DropChance": 1.0
-          }
-        ]
+        "RegenerationRate": 1,
+        "RegenerationDelay": 5,
+        "InvulnerabilityDuration": 0.1,
+        "MaxHealth": 30
       }
     },
     {
-      "MobID": "TinyBee",
-      "MobName": "Tiny Bee",
       "HealthConfig": {
-        "MaxHealth": 25.0,
-        "InvulnerabilityDuration": 0.1,
+        "RegenerationDelay": 5,
+        "RegenerationRate": 1,
         "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0
+        "InvulnerabilityDuration": 0.1,
+        "MaxHealth": 25
       },
-      "CombatConfig": {
-        "Damage": 2.0,
-        "MoveSpeed": 1.5,
-        "FlightSpeedMultiplier": 2.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 0.3,
-        "KnockbackForce": 0.1,
-        "KnockbackResistance": 0.0
+      "MobName": "Tiny Bee",
+      "MobID": "TinyBee",
+      "MovementConfig": {
+        "CanBeStunned": true
       },
       "AIConfig": {
         "IsHostileToPlayer": false,
-        "DetectionRange": 6.0,
-        "DeAggressionRange": 11.0,
-        "PatrolRadius": 2.0
-      },
-      "MovementConfig": {
-        "CanBeStunned": true
+        "PatrolRadius": 2,
+        "DetectionRange": 6,
+        "DeAggressionRange": 11
       },
       "LootConfig": {
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
+            "DropChance": 1,
             "MaxQuantity": 1,
-            "DropChance": 1.0
+            "MinQuantity": 1,
+            "ItemID": "Gel"
           }
-        ]
+        ],
+        "DropsLoot": true
+      },
+      "CombatConfig": {
+        "KnockbackForce": 0.1,
+        "AttackSpeed": 1,
+        "Damage": 2,
+        "AttackRange": 0.3,
+        "KnockbackResistance": 0,
+        "MoveSpeed": 1.5,
+        "FlightSpeedMultiplier": 2,
+        "Defense": 0
       }
     },
     {
-      "MobID": "WorkerBee",
-      "MobName": "Worker Bee",
       "HealthConfig": {
-        "MaxHealth": 50.0,
-        "InvulnerabilityDuration": 0.1,
+        "RegenerationDelay": 2,
         "CanRegenerate": true,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 2.0
+        "RegenerationRate": 1,
+        "MaxHealth": 50,
+        "InvulnerabilityDuration": 0.1
       },
+      "MobName": "Worker Bee",
+      "MobID": "WorkerBee",
       "CombatConfig": {
-        "Damage": 6.0,
+        "Damage": 6,
+        "AttackRange": 0.4,
+        "KnockbackResistance": 0.1,
+        "KnockbackForce": 0.5,
+        "AttackSpeed": 1,
         "MoveSpeed": 1.4,
         "FlightSpeedMultiplier": 2.5,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 0.4,
-        "KnockbackForce": 0.5,
-        "KnockbackResistance": 0.1
+        "Defense": 0
       },
       "AIConfig": {
+        "DetectionRange": 8,
+        "DeAggressionRange": 13,
         "IsHostileToPlayer": false,
-        "DetectionRange": 8.0,
-        "DeAggressionRange": 13.0,
-        "PatrolRadius": 4.0
+        "PatrolRadius": 4
+      },
+      "LootConfig": {
+        "LootDrops": [
+          {
+            "DropChance": 1,
+            "MaxQuantity": 2,
+            "MinQuantity": 1,
+            "ItemID": "Gel"
+          }
+        ],
+        "DropsLoot": true
       },
       "MovementConfig": {
         "CanBeStunned": true
-      },
-      "LootConfig": {
-        "DropsLoot": true,
-        "LootDrops": [
-          {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
-            "MaxQuantity": 2,
-            "DropChance": 1.0
-          }
-        ]
       }
     },
     {
-      "MobID": "MechanicalBee",
-      "MobName": "Mechanical Bee",
-      "HealthConfig": {
-        "MaxHealth": 80.0,
-        "InvulnerabilityDuration": 0.4,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0
+      "LootConfig": {
+        "LootDrops": [
+          {
+            "DropChance": 1,
+            "MaxQuantity": 3,
+            "MinQuantity": 2,
+            "ItemID": "Gel"
+          }
+        ],
+        "DropsLoot": true
       },
       "CombatConfig": {
-        "Damage": 10.0,
-        "MoveSpeed": 1.0,
-        "FlightSpeedMultiplier": 1.8,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
+        "KnockbackResistance": 0.5,
+        "Damage": 10,
         "AttackRange": 0.5,
-        "KnockbackForce": 1.0,
-        "KnockbackResistance": 0.5
+        "KnockbackForce": 1,
+        "AttackSpeed": 1,
+        "Defense": 0,
+        "FlightSpeedMultiplier": 1.8,
+        "MoveSpeed": 1
       },
       "AIConfig": {
         "IsHostileToPlayer": true,
-        "DetectionRange": 10.0,
-        "DeAggressionRange": 15.0,
-        "PatrolRadius": 5.0
+        "PatrolRadius": 5,
+        "DetectionRange": 10,
+        "DeAggressionRange": 15
       },
       "MovementConfig": {
         "CanBeStunned": false
       },
-      "LootConfig": {
-        "DropsLoot": true,
-        "LootDrops": [
-          {
-            "ItemID": "Gel",
-            "MinQuantity": 2,
-            "MaxQuantity": 3,
-            "DropChance": 1.0
-          }
-        ]
+      "MobID": "MechanicalBee",
+      "MobName": "Mechanical Bee",
+      "HealthConfig": {
+        "InvulnerabilityDuration": 0.4,
+        "MaxHealth": 80,
+        "CanRegenerate": false,
+        "RegenerationRate": 1,
+        "RegenerationDelay": 5
       }
     },
     {
+      "AIConfig": {
+        "DeAggressionRange": 14,
+        "DetectionRange": 9,
+        "PatrolRadius": 4,
+        "IsHostileToPlayer": true
+      },
+      "LootConfig": {
+        "LootDrops": [
+          {
+            "DropChance": 1,
+            "MaxQuantity": 2,
+            "MinQuantity": 1,
+            "ItemID": "Gel"
+          }
+        ],
+        "DropsLoot": true
+      },
+      "CombatConfig": {
+        "FlightSpeedMultiplier": 3,
+        "MoveSpeed": 1.5,
+        "Defense": 0,
+        "KnockbackForce": 0.3,
+        "AttackSpeed": 1,
+        "Damage": 8,
+        "AttackRange": 0.3,
+        "KnockbackResistance": 0
+      },
+      "MovementConfig": {
+        "CanBeStunned": true
+      },
       "MobID": "SpiritBee",
       "MobName": "Spirit Bee",
       "HealthConfig": {
-        "MaxHealth": 60.0,
-        "InvulnerabilityDuration": 0.1,
+        "RegenerationDelay": 3,
         "CanRegenerate": true,
-        "RegenerationRate": 2.0,
-        "RegenerationDelay": 3.0
-      },
-      "CombatConfig": {
-        "Damage": 8.0,
-        "MoveSpeed": 1.5,
-        "FlightSpeedMultiplier": 3.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 0.3,
-        "KnockbackForce": 0.3,
-        "KnockbackResistance": 0.0
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 9.0,
-        "DeAggressionRange": 14.0,
-        "PatrolRadius": 4.0
-      },
-      "MovementConfig": {
-        "CanBeStunned": true
-      },
-      "LootConfig": {
-        "DropsLoot": true,
-        "LootDrops": [
-          {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
-            "MaxQuantity": 2,
-            "DropChance": 1.0
-          }
-        ]
+        "RegenerationRate": 2,
+        "MaxHealth": 60,
+        "InvulnerabilityDuration": 0.1
       }
     },
     {
-      "MobID": "WallCreeper",
       "MobName": "Wall Creeper",
       "HealthConfig": {
-        "MaxHealth": 70.0,
-        "InvulnerabilityDuration": 0.1,
+        "RegenerationDelay": 5,
         "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0
-      },
-      "CombatConfig": {
-        "Damage": 8.0,
-        "MoveSpeed": 1.6,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 0.4,
-        "KnockbackForce": 0.5,
-        "KnockbackResistance": 0.0
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 8.0,
-        "DeAggressionRange": 13.0,
-        "PatrolRadius": 4.0
+        "RegenerationRate": 1,
+        "MaxHealth": 70,
+        "InvulnerabilityDuration": 0.1
       },
       "MovementConfig": {
         "CanBeStunned": true
       },
+      "AIConfig": {
+        "DetectionRange": 8,
+        "DeAggressionRange": 13,
+        "IsHostileToPlayer": true,
+        "PatrolRadius": 4
+      },
       "LootConfig": {
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
+            "DropChance": 1,
             "MaxQuantity": 2,
-            "DropChance": 1.0
+            "MinQuantity": 1,
+            "ItemID": "Gel"
           }
-        ]
-      }
-    },
-    {
-      "MobID": "VileHatcher",
-      "MobName": "Vile Hatcher",
-      "HealthConfig": {
-        "MaxHealth": 100.0,
-        "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0
+        ],
+        "DropsLoot": true
       },
       "CombatConfig": {
-        "Damage": 12.0,
-        "MoveSpeed": 1.0,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
+        "FlightSpeedMultiplier": 1,
+        "MoveSpeed": 1.6,
+        "Defense": 0,
+        "KnockbackForce": 0.5,
+        "AttackSpeed": 1,
+        "AttackRange": 0.4,
+        "Damage": 8,
+        "KnockbackResistance": 0
+      },
+      "MobID": "WallCreeper"
+    },
+    {
+      "HealthConfig": {
+        "InvulnerabilityDuration": 0.1,
+        "MaxHealth": 100,
+        "RegenerationRate": 1,
+        "CanRegenerate": false,
+        "RegenerationDelay": 5
+      },
+      "MobName": "Vile Hatcher",
+      "MobID": "VileHatcher",
+      "MovementConfig": {
+        "CanBeStunned": true
+      },
+      "CombatConfig": {
+        "FlightSpeedMultiplier": 1,
+        "MoveSpeed": 1,
+        "Defense": 0,
+        "KnockbackForce": 1,
+        "AttackSpeed": 1,
         "AttackRange": 0.6,
-        "KnockbackForce": 1.0,
+        "Damage": 12,
         "KnockbackResistance": 0.2
       },
       "AIConfig": {
+        "DetectionRange": 10,
+        "DeAggressionRange": 15,
         "IsHostileToPlayer": true,
-        "DetectionRange": 10.0,
-        "DeAggressionRange": 15.0,
-        "PatrolRadius": 5.0
-      },
-      "MovementConfig": {
-        "CanBeStunned": true
+        "PatrolRadius": 5
       },
       "LootConfig": {
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 2,
+            "DropChance": 1,
             "MaxQuantity": 4,
-            "DropChance": 1.0
+            "MinQuantity": 2,
+            "ItemID": "Gel"
           }
-        ]
+        ],
+        "DropsLoot": true
       }
     },
     {
       "MobID": "WebSpinner",
-      "MobName": "Web Spinner",
-      "HealthConfig": {
-        "MaxHealth": 60.0,
-        "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0
-      },
-      "CombatConfig": {
-        "Damage": 6.0,
-        "MoveSpeed": 1.5,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 0.5,
-        "KnockbackForce": 0.5,
-        "KnockbackResistance": 0.0
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 7.0,
-        "DeAggressionRange": 12.0,
-        "PatrolRadius": 3.0
-      },
       "MovementConfig": {
         "CanBeStunned": true
       },
-      "LootConfig": {
-        "DropsLoot": true,
-        "LootDrops": [
-          {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
-            "MaxQuantity": 2,
-            "DropChance": 1.0
-          }
-        ]
-      }
-    },
-    {
-      "MobID": "Carapace",
-      "MobName": "Carapace",
-      "HealthConfig": {
-        "MaxHealth": 150.0,
-        "InvulnerabilityDuration": 0.4,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0
-      },
       "CombatConfig": {
-        "Damage": 15.0,
-        "MoveSpeed": 1.0,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 0.7,
-        "KnockbackForce": 2.0,
-        "KnockbackResistance": 0.8
+        "KnockbackForce": 0.5,
+        "AttackSpeed": 1,
+        "AttackRange": 0.5,
+        "Damage": 6,
+        "KnockbackResistance": 0,
+        "MoveSpeed": 1.5,
+        "FlightSpeedMultiplier": 1,
+        "Defense": 0
       },
       "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 12.0,
-        "DeAggressionRange": 17.0,
-        "PatrolRadius": 6.0
+        "DeAggressionRange": 12,
+        "DetectionRange": 7,
+        "PatrolRadius": 3,
+        "IsHostileToPlayer": true
+      },
+      "LootConfig": {
+        "LootDrops": [
+          {
+            "DropChance": 1,
+            "MaxQuantity": 2,
+            "MinQuantity": 1,
+            "ItemID": "Gel"
+          }
+        ],
+        "DropsLoot": true
+      },
+      "HealthConfig": {
+        "MaxHealth": 60,
+        "InvulnerabilityDuration": 0.1,
+        "RegenerationRate": 1,
+        "CanRegenerate": false,
+        "RegenerationDelay": 5
+      },
+      "MobName": "Web Spinner"
+    },
+    {
+      "HealthConfig": {
+        "MaxHealth": 150,
+        "InvulnerabilityDuration": 0.4,
+        "RegenerationRate": 1,
+        "CanRegenerate": false,
+        "RegenerationDelay": 5
+      },
+      "MobName": "Carapace",
+      "MobID": "Carapace",
+      "AIConfig": {
+        "DeAggressionRange": 17,
+        "DetectionRange": 12,
+        "PatrolRadius": 6,
+        "IsHostileToPlayer": true
+      },
+      "CombatConfig": {
+        "KnockbackResistance": 0.8,
+        "Damage": 15,
+        "AttackRange": 0.7,
+        "KnockbackForce": 2,
+        "AttackSpeed": 1,
+        "Defense": 0,
+        "MoveSpeed": 1,
+        "FlightSpeedMultiplier": 1
+      },
+      "LootConfig": {
+        "LootDrops": [
+          {
+            "DropChance": 1,
+            "MaxQuantity": 5,
+            "MinQuantity": 3,
+            "ItemID": "Gel"
+          }
+        ],
+        "DropsLoot": true
       },
       "MovementConfig": {
         "CanBeStunned": false
-      },
-      "LootConfig": {
-        "DropsLoot": true,
-        "LootDrops": [
-          {
-            "ItemID": "Gel",
-            "MinQuantity": 3,
-            "MaxQuantity": 5,
-            "DropChance": 1.0
-          }
-        ]
       }
     },
     {
+      "AIConfig": {
+        "IsHostileToPlayer": true,
+        "PatrolRadius": 4,
+        "DetectionRange": 9,
+        "DeAggressionRange": 14
+      },
+      "LootConfig": {
+        "LootDrops": [
+          {
+            "DropChance": 1,
+            "MaxQuantity": 3,
+            "MinQuantity": 2,
+            "ItemID": "Gel"
+          }
+        ],
+        "DropsLoot": true
+      },
+      "CombatConfig": {
+        "KnockbackResistance": 0.1,
+        "AttackRange": 0.5,
+        "Damage": 10,
+        "KnockbackForce": 1,
+        "AttackSpeed": 1,
+        "Defense": 0,
+        "FlightSpeedMultiplier": 1,
+        "MoveSpeed": 1
+      },
+      "MovementConfig": {
+        "CanBeStunned": true
+      },
       "MobID": "NightfangWeaver",
       "MobName": "Nightfang Weaver",
       "HealthConfig": {
-        "MaxHealth": 90.0,
         "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": true,
+        "MaxHealth": 90,
         "RegenerationRate": 1.5,
-        "RegenerationDelay": 4.0
-      },
-      "CombatConfig": {
-        "Damage": 10.0,
-        "MoveSpeed": 1.0,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 0.5,
-        "KnockbackForce": 1.0,
-        "KnockbackResistance": 0.1
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 9.0,
-        "DeAggressionRange": 14.0,
-        "PatrolRadius": 4.0
-      },
-      "MovementConfig": {
-        "CanBeStunned": true
-      },
-      "LootConfig": {
-        "DropsLoot": true,
-        "LootDrops": [
-          {
-            "ItemID": "Gel",
-            "MinQuantity": 2,
-            "MaxQuantity": 3,
-            "DropChance": 1.0
-          }
-        ]
+        "CanRegenerate": true,
+        "RegenerationDelay": 4
       }
     },
     {
+      "MovementConfig": {
+        "CanBeStunned": true
+      },
+      "CombatConfig": {
+        "KnockbackForce": 0.5,
+        "AttackSpeed": 1,
+        "AttackRange": 0.4,
+        "Damage": 12,
+        "KnockbackResistance": 0,
+        "FlightSpeedMultiplier": 1.5,
+        "MoveSpeed": 1.3,
+        "Defense": 0
+      },
+      "LootConfig": {
+        "LootDrops": [
+          {
+            "DropChance": 1,
+            "MaxQuantity": 2,
+            "MinQuantity": 1,
+            "ItemID": "Gel"
+          }
+        ],
+        "DropsLoot": true
+      },
+      "AIConfig": {
+        "DetectionRange": 10,
+        "DeAggressionRange": 15,
+        "IsHostileToPlayer": true,
+        "PatrolRadius": 5
+      },
       "MobID": "Ghost",
       "MobName": "Ghost",
       "HealthConfig": {
-        "MaxHealth": 80.0,
-        "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0
-      },
-      "CombatConfig": {
-        "Damage": 12.0,
-        "MoveSpeed": 1.3,
-        "FlightSpeedMultiplier": 1.5,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 0.4,
-        "KnockbackForce": 0.5,
-        "KnockbackResistance": 0.0
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 10.0,
-        "DeAggressionRange": 15.0,
-        "PatrolRadius": 5.0
-      },
-      "MovementConfig": {
-        "CanBeStunned": true
-      },
-      "LootConfig": {
-        "DropsLoot": true,
-        "LootDrops": [
-          {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
-            "MaxQuantity": 2,
-            "DropChance": 1.0
-          }
-        ]
+        "RegenerationRate": 1,
+        "RegenerationDelay": 5,
+        "MaxHealth": 80,
+        "InvulnerabilityDuration": 0.1
       }
     },
     {
-      "MobID": "Snowman",
-      "MobName": "Snowman",
       "HealthConfig": {
-        "MaxHealth": 100.0,
-        "InvulnerabilityDuration": 0.1,
+        "RegenerationDelay": 5,
+        "RegenerationRate": 1,
         "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0
+        "MaxHealth": 100,
+        "InvulnerabilityDuration": 0.1
       },
-      "CombatConfig": {
-        "Damage": 10.0,
-        "MoveSpeed": 1.0,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 0.6,
-        "KnockbackForce": 1.5,
-        "KnockbackResistance": 0.2
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 8.0,
-        "DeAggressionRange": 13.0,
-        "PatrolRadius": 4.0
-      },
+      "MobName": "Snowman",
+      "MobID": "Snowman",
       "MovementConfig": {
         "CanBeStunned": true
       },
+      "CombatConfig": {
+        "FlightSpeedMultiplier": 1,
+        "MoveSpeed": 1,
+        "Defense": 0,
+        "Damage": 10,
+        "AttackRange": 0.6,
+        "KnockbackResistance": 0.2,
+        "KnockbackForce": 1.5,
+        "AttackSpeed": 1
+      },
       "LootConfig": {
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 2,
+            "DropChance": 1,
             "MaxQuantity": 3,
-            "DropChance": 1.0
+            "MinQuantity": 2,
+            "ItemID": "Gel"
           }
-        ]
+        ],
+        "DropsLoot": true
+      },
+      "AIConfig": {
+        "PatrolRadius": 4,
+        "IsHostileToPlayer": true,
+        "DeAggressionRange": 13,
+        "DetectionRange": 8
       }
     },
     {
       "MobID": "Penguin",
-      "MobName": "Penguin",
-      "HealthConfig": {
-        "MaxHealth": 50.0,
-        "InvulnerabilityDuration": 0.1,
-        "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0
+      "AIConfig": {
+        "PatrolRadius": 3,
+        "IsHostileToPlayer": false,
+        "DeAggressionRange": 10,
+        "DetectionRange": 5
+      },
+      "LootConfig": {
+        "LootDrops": [
+          {
+            "DropChance": 1,
+            "MaxQuantity": 1,
+            "MinQuantity": 1,
+            "ItemID": "Gel"
+          }
+        ],
+        "DropsLoot": true
       },
       "CombatConfig": {
-        "Damage": 4.0,
-        "MoveSpeed": 1.5,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 0.4,
         "KnockbackForce": 0.5,
-        "KnockbackResistance": 0.0
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": false,
-        "DetectionRange": 5.0,
-        "DeAggressionRange": 10.0,
-        "PatrolRadius": 3.0
+        "AttackSpeed": 1,
+        "Damage": 4,
+        "AttackRange": 0.4,
+        "KnockbackResistance": 0,
+        "MoveSpeed": 1.5,
+        "FlightSpeedMultiplier": 1,
+        "Defense": 0
       },
       "MovementConfig": {
         "CanBeStunned": true
       },
-      "LootConfig": {
-        "DropsLoot": true,
-        "LootDrops": [
-          {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
-            "MaxQuantity": 1,
-            "DropChance": 1.0
-          }
-        ]
-      }
+      "HealthConfig": {
+        "MaxHealth": 50,
+        "InvulnerabilityDuration": 0.1,
+        "RegenerationDelay": 5,
+        "RegenerationRate": 1,
+        "CanRegenerate": false
+      },
+      "MobName": "Penguin"
     },
     {
-      "MobID": "Vulture",
-      "MobName": "Vulture",
       "HealthConfig": {
-        "MaxHealth": 60.0,
-        "InvulnerabilityDuration": 0.1,
         "CanRegenerate": false,
-        "RegenerationRate": 1.0,
-        "RegenerationDelay": 5.0
+        "RegenerationRate": 1,
+        "RegenerationDelay": 5,
+        "InvulnerabilityDuration": 0.1,
+        "MaxHealth": 60
+      },
+      "MobName": "Vulture",
+      "MobID": "Vulture",
+      "MovementConfig": {
+        "CanBeStunned": true
+      },
+      "LootConfig": {
+        "LootDrops": [
+          {
+            "DropChance": 1,
+            "MaxQuantity": 2,
+            "MinQuantity": 1,
+            "ItemID": "Gel"
+          }
+        ],
+        "DropsLoot": true
       },
       "CombatConfig": {
-        "Damage": 8.0,
-        "MoveSpeed": 1.0,
-        "FlightSpeedMultiplier": 2.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
+        "FlightSpeedMultiplier": 2,
+        "MoveSpeed": 1,
+        "Defense": 0,
         "AttackRange": 0.5,
+        "Damage": 8,
+        "KnockbackResistance": 0,
         "KnockbackForce": 0.8,
-        "KnockbackResistance": 0.0
+        "AttackSpeed": 1
       },
       "AIConfig": {
         "IsHostileToPlayer": true,
-        "DetectionRange": 9.0,
-        "DeAggressionRange": 14.0,
-        "PatrolRadius": 4.0
-      },
-      "MovementConfig": {
-        "CanBeStunned": true
-      },
-      "LootConfig": {
-        "DropsLoot": true,
-        "LootDrops": [
-          {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
-            "MaxQuantity": 2,
-            "DropChance": 1.0
-          }
-        ]
+        "PatrolRadius": 4,
+        "DetectionRange": 9,
+        "DeAggressionRange": 14
       }
     },
     {
+      "MovementConfig": {
+        "CanBeStunned": true
+      },
+      "AIConfig": {
+        "DeAggressionRange": 16,
+        "DetectionRange": 12,
+        "PatrolRadius": 5,
+        "IsHostileToPlayer": true
+      },
+      "CombatConfig": {
+        "FlightSpeedMultiplier": 1,
+        "MoveSpeed": 1.2,
+        "Defense": 0,
+        "Damage": 14,
+        "AttackRange": 1,
+        "KnockbackResistance": 0.2,
+        "KnockbackForce": 2,
+        "AttackSpeed": 1
+      },
+      "LootConfig": {
+        "LootDrops": [
+          {
+            "DropChance": 0.6,
+            "MaxQuantity": 2,
+            "MinQuantity": 1,
+            "ItemID": "Gel"
+          }
+        ],
+        "DropsLoot": true
+      },
       "MobID": "Zombie",
       "MobName": "Zombie",
       "HealthConfig": {
-        "MaxHealth": 500.0,
         "InvulnerabilityDuration": 0.1,
+        "MaxHealth": 500,
+        "RegenerationDelay": 0,
         "CanRegenerate": false,
-        "RegenerationRate": 0.0,
-        "RegenerationDelay": 0.0
-      },
-      "CombatConfig": {
-        "Damage": 14.0,
-        "MoveSpeed": 1.2,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 1.0,
-        "KnockbackForce": 2.0,
-        "KnockbackResistance": 0.2
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 12.0,
-        "DeAggressionRange": 16.0,
-        "PatrolRadius": 5.0
-      },
-      "MovementConfig": {
-        "CanBeStunned": true
-      },
-      "LootConfig": {
-        "DropsLoot": true,
-        "LootDrops": [
-          {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
-            "MaxQuantity": 2,
-            "DropChance": 0.6
-          }
-        ]
+        "RegenerationRate": 0
       }
     },
     {
-      "MobID": "PrinceSlime",
-      "MobName": "Prince Slime",
       "HealthConfig": {
-        "MaxHealth": 500.0,
         "InvulnerabilityDuration": 0.5,
+        "MaxHealth": 500,
+        "RegenerationDelay": 2,
         "CanRegenerate": true,
-        "RegenerationRate": 5.0,
-        "RegenerationDelay": 2.0
+        "RegenerationRate": 5
       },
+      "MobName": "Prince Slime",
+      "MobID": "PrinceSlime",
       "CombatConfig": {
-        "Damage": 10.0,
+        "Defense": 0,
         "MoveSpeed": 1.4,
-        "FlightSpeedMultiplier": 2.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 1.25,
+        "FlightSpeedMultiplier": 2,
         "KnockbackForce": 0.5,
-        "KnockbackResistance": 0.9
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 10.0,
-        "DeAggressionRange": 75.0,
-        "PatrolRadius": 10.0
-      },
-      "MovementConfig": {
-        "CanBeStunned": false
+        "AttackSpeed": 1,
+        "KnockbackResistance": 0.9,
+        "Damage": 10,
+        "AttackRange": 1.25
       },
       "LootConfig": {
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 4,
+            "DropChance": 1,
             "MaxQuantity": 8,
-            "DropChance": 1.0
+            "MinQuantity": 4,
+            "ItemID": "Gel"
           },
           {
-            "ItemID": "SlimelingCore",
-            "MinQuantity": 1,
+            "DropChance": 1,
             "MaxQuantity": 1,
-            "DropChance": 1.0
+            "MinQuantity": 1,
+            "ItemID": "SlimelingCore"
           }
-        ]
-      }
-    },
-    {
-      "MobID": "ShroomletTyrant",
-      "MobName": "Shroomlet Tyrant",
-      "HealthConfig": {
-        "MaxHealth": 1000.0,
-        "InvulnerabilityDuration": 0.5,
-        "CanRegenerate": true,
-        "RegenerationRate": 5.0,
-        "RegenerationDelay": 2.0
-      },
-      "CombatConfig": {
-        "Damage": 16.0,
-        "MoveSpeed": 1.4,
-        "FlightSpeedMultiplier": 2.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 1.25,
-        "KnockbackForce": 0.5,
-        "KnockbackResistance": 0.9
+        ],
+        "DropsLoot": true
       },
       "AIConfig": {
         "IsHostileToPlayer": true,
-        "DetectionRange": 10.0,
-        "DeAggressionRange": 75.0,
-        "PatrolRadius": 10.0
+        "PatrolRadius": 10,
+        "DetectionRange": 10,
+        "DeAggressionRange": 75
+      },
+      "MovementConfig": {
+        "CanBeStunned": false
+      }
+    },
+    {
+      "MobName": "Shroomlet Tyrant",
+      "HealthConfig": {
+        "InvulnerabilityDuration": 0.5,
+        "MaxHealth": 1000,
+        "RegenerationRate": 5,
+        "CanRegenerate": true,
+        "RegenerationDelay": 2
       },
       "MovementConfig": {
         "CanBeStunned": false
       },
+      "AIConfig": {
+        "DetectionRange": 10,
+        "DeAggressionRange": 75,
+        "IsHostileToPlayer": true,
+        "PatrolRadius": 10
+      },
+      "CombatConfig": {
+        "Defense": 0,
+        "FlightSpeedMultiplier": 2,
+        "MoveSpeed": 1.4,
+        "KnockbackForce": 0.5,
+        "AttackSpeed": 1,
+        "KnockbackResistance": 0.9,
+        "Damage": 16,
+        "AttackRange": 1.25
+      },
       "LootConfig": {
-        "DropsLoot": true,
         "LootDrops": [
           {
-            "ItemID": "Gel",
-            "MinQuantity": 50,
+            "DropChance": 1,
             "MaxQuantity": 100,
-            "DropChance": 1.0
+            "MinQuantity": 50,
+            "ItemID": "Gel"
           }
-        ]
-      }
+        ],
+        "DropsLoot": true
+      },
+      "MobID": "ShroomletTyrant"
     },
     {
+      "MovementConfig": {
+        "CanBeStunned": false
+      },
+      "CombatConfig": {
+        "AttackRange": 1.5,
+        "Damage": 45,
+        "KnockbackResistance": 1,
+        "KnockbackForce": 1,
+        "AttackSpeed": 1,
+        "MoveSpeed": 1.6,
+        "FlightSpeedMultiplier": 1,
+        "Defense": 0
+      },
+      "AIConfig": {
+        "IsHostileToPlayer": true,
+        "PatrolRadius": 10,
+        "DetectionRange": 50,
+        "DeAggressionRange": 75
+      },
+      "LootConfig": {
+        "LootDrops": [
+          {
+            "DropChance": 1,
+            "MaxQuantity": 80,
+            "MinQuantity": 40,
+            "ItemID": "Gel"
+          }
+        ],
+        "DropsLoot": true
+      },
       "MobID": "Centipede",
       "MobName": "Centipede",
       "HealthConfig": {
-        "MaxHealth": 1800.0,
         "InvulnerabilityDuration": 0.3,
+        "MaxHealth": 1800,
+        "RegenerationDelay": 3,
         "CanRegenerate": true,
-        "RegenerationRate": 4.0,
-        "RegenerationDelay": 3.0
-      },
-      "CombatConfig": {
-        "Damage": 45.0,
-        "MoveSpeed": 1.6,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 1.5,
-        "KnockbackForce": 1.0,
-        "KnockbackResistance": 1.0
-      },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 50.0,
-        "DeAggressionRange": 75.0,
-        "PatrolRadius": 10.0
-      },
-      "MovementConfig": {
-        "CanBeStunned": false
-      },
-      "LootConfig": {
-        "DropsLoot": true,
-        "LootDrops": [
-          {
-            "ItemID": "Gel",
-            "MinQuantity": 40,
-            "MaxQuantity": 80,
-            "DropChance": 1.0
-          }
-        ]
+        "RegenerationRate": 4
       }
     },
     {
       "MobID": "Vinefang",
-      "MobName": "Vinefang",
-      "HealthConfig": {
-        "MaxHealth": 900.0,
-        "InvulnerabilityDuration": 0.3,
-        "CanRegenerate": true,
-        "RegenerationRate": 3.0,
-        "RegenerationDelay": 3.0
+      "AIConfig": {
+        "DetectionRange": 1,
+        "DeAggressionRange": 20,
+        "IsHostileToPlayer": true,
+        "PatrolRadius": 0
       },
       "CombatConfig": {
-        "Damage": 0.35,
+        "Defense": 0,
+        "FlightSpeedMultiplier": 1,
         "MoveSpeed": 1.4,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
-        "AttackRange": 1.0,
         "KnockbackForce": 1.5,
-        "KnockbackResistance": 0.4
+        "AttackSpeed": 1,
+        "KnockbackResistance": 0.4,
+        "AttackRange": 1,
+        "Damage": 0.35
       },
-      "AIConfig": {
-        "IsHostileToPlayer": true,
-        "DetectionRange": 1.0,
-        "DeAggressionRange": 20.0,
-        "PatrolRadius": 0.0
+      "LootConfig": {
+        "LootDrops": [
+          {
+            "DropChance": 0.8,
+            "MaxQuantity": 3,
+            "MinQuantity": 1,
+            "ItemID": "Gel"
+          }
+        ],
+        "DropsLoot": true
       },
       "MovementConfig": {
         "CanBeStunned": false
       },
-      "LootConfig": {
-        "DropsLoot": true,
-        "LootDrops": [
-          {
-            "ItemID": "Gel",
-            "MinQuantity": 1,
-            "MaxQuantity": 3,
-            "DropChance": 0.8
-          }
-        ]
-      }
+      "HealthConfig": {
+        "InvulnerabilityDuration": 0.3,
+        "MaxHealth": 900,
+        "RegenerationRate": 3,
+        "CanRegenerate": true,
+        "RegenerationDelay": 3
+      },
+      "MobName": "Vinefang"
     },
     {
-      "MobID": "Thorncoil",
       "MobName": "Thorncoil",
       "HealthConfig": {
-        "MaxHealth": 2200.0,
-        "InvulnerabilityDuration": 0.4,
+        "RegenerationRate": 2,
         "CanRegenerate": false,
-        "RegenerationRate": 2.0,
-        "RegenerationDelay": 5.0
+        "RegenerationDelay": 5,
+        "InvulnerabilityDuration": 0.4,
+        "MaxHealth": 2200
       },
       "CombatConfig": {
-        "Damage": 60.0,
+        "Defense": 0,
         "MoveSpeed": 1.2,
-        "FlightSpeedMultiplier": 1.0,
-        "Defense": 0.0,
-        "AttackSpeed": 1.0,
+        "FlightSpeedMultiplier": 1,
+        "KnockbackResistance": 0.8,
         "AttackRange": 1.8,
-        "KnockbackForce": 2.0,
-        "KnockbackResistance": 0.8
+        "Damage": 60,
+        "KnockbackForce": 2,
+        "AttackSpeed": 1
+      },
+      "LootConfig": {
+        "LootDrops": [
+          {
+            "DropChance": 1,
+            "MaxQuantity": 5,
+            "MinQuantity": 2,
+            "ItemID": "Gel"
+          }
+        ],
+        "DropsLoot": true
       },
       "AIConfig": {
         "IsHostileToPlayer": true,
-        "DetectionRange": 60.0,
-        "DeAggressionRange": 90.0,
-        "PatrolRadius": 12.0
+        "PatrolRadius": 12,
+        "DetectionRange": 60,
+        "DeAggressionRange": 90
       },
       "MovementConfig": {
         "CanBeStunned": false
       },
-      "LootConfig": {
-        "DropsLoot": true,
-        "LootDrops": [
-          {
-            "ItemID": "Gel",
-            "MinQuantity": 2,
-            "MaxQuantity": 5,
-            "DropChance": 1.0
-          }
-        ]
-      }
+      "MobID": "Thorncoil"
     }
   ]
 }

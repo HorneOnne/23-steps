@@ -1,493 +1,493 @@
 {
   "ItemValues": [
     {
-      "itemID": "Dirt",
       "value": {
         "BuyPrice": 2,
+        "CanBuy": true,
         "SellPrice": 1,
         "DemandMultiplier": 1,
-        "CanBuy": true,
         "CanSell": true
-      }
+      },
+      "itemID": "Dirt"
     },
     {
       "itemID": "Stone",
       "value": {
+        "CanBuy": true,
+        "SellPrice": 2,
         "BuyPrice": 4,
-        "SellPrice": 2,
         "DemandMultiplier": 1,
-        "CanBuy": true,
         "CanSell": true
       }
     },
     {
-      "itemID": "Sand",
       "value": {
-        "BuyPrice": 5,
-        "SellPrice": 2,
+        "CanSell": true,
         "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "BuyPrice": 5,
+        "SellPrice": 2
+      },
+      "itemID": "Sand"
     },
     {
-      "itemID": "Clay",
       "value": {
-        "BuyPrice": 5,
+        "CanSell": true,
+        "DemandMultiplier": 1,
         "SellPrice": 1,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "BuyPrice": 5
+      },
+      "itemID": "Clay"
     },
     {
       "itemID": "IronOre",
       "value": {
-        "BuyPrice": 160,
-        "SellPrice": 80,
+        "CanSell": true,
         "DemandMultiplier": 1,
+        "BuyPrice": 160,
         "CanBuy": true,
-        "CanSell": true
+        "SellPrice": 80
       }
     },
     {
       "itemID": "Coal",
       "value": {
-        "BuyPrice": 10,
-        "SellPrice": 5,
+        "CanSell": true,
         "DemandMultiplier": 1,
+        "SellPrice": 5,
         "CanBuy": true,
-        "CanSell": true
+        "BuyPrice": 10
       }
     },
     {
-      "itemID": "Wood",
       "value": {
         "BuyPrice": 5,
+        "CanBuy": true,
         "SellPrice": 1,
         "DemandMultiplier": 1,
-        "CanBuy": true,
         "CanSell": true
-      }
+      },
+      "itemID": "Wood"
     },
     {
-      "itemID": "Log",
       "value": {
-        "BuyPrice": 4,
+        "DemandMultiplier": 1,
+        "CanSell": true,
+        "CanBuy": true,
         "SellPrice": 2,
-        "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
-      }
+        "BuyPrice": 4
+      },
+      "itemID": "Log"
     },
     {
-      "itemID": "CopperOre",
       "value": {
-        "BuyPrice": 20,
-        "SellPrice": 10,
         "DemandMultiplier": 1,
+        "CanSell": true,
+        "BuyPrice": 20,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "SellPrice": 10
+      },
+      "itemID": "CopperOre"
     },
     {
       "itemID": "GoldOre",
       "value": {
-        "BuyPrice": 640,
+        "CanSell": true,
+        "DemandMultiplier": 1,
         "SellPrice": 320,
-        "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
+        "BuyPrice": 640,
+        "CanBuy": true
       }
     },
     {
-      "itemID": "Gravel",
       "value": {
-        "BuyPrice": 3,
         "SellPrice": 1,
-        "DemandMultiplier": 1,
         "CanBuy": true,
+        "BuyPrice": 3,
+        "DemandMultiplier": 1,
         "CanSell": true
-      }
+      },
+      "itemID": "Gravel"
     },
     {
-      "itemID": "Flint",
       "value": {
+        "CanBuy": true,
+        "SellPrice": 1,
         "BuyPrice": 6,
-        "SellPrice": 1,
-        "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
-      }
+        "CanSell": true,
+        "DemandMultiplier": 1
+      },
+      "itemID": "Flint"
     },
     {
-      "itemID": "Grass",
       "value": {
-        "BuyPrice": 3,
-        "SellPrice": 1,
         "DemandMultiplier": 1,
+        "CanSell": true,
+        "SellPrice": 1,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "BuyPrice": 3
+      },
+      "itemID": "Grass"
     },
     {
       "itemID": "WaterBucket",
       "value": {
-        "BuyPrice": 10,
+        "DemandMultiplier": 1,
+        "CanSell": true,
+        "CanBuy": true,
         "SellPrice": 2,
-        "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
+        "BuyPrice": 10
       }
     },
     {
-      "itemID": "LavaBucket",
       "value": {
-        "BuyPrice": 25,
         "SellPrice": 5,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "BuyPrice": 25,
+        "CanSell": true,
+        "DemandMultiplier": 1
+      },
+      "itemID": "LavaBucket"
     },
     {
-      "itemID": "SilverOre",
       "value": {
         "BuyPrice": 320,
         "SellPrice": 160,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "CanSell": true,
+        "DemandMultiplier": 1
+      },
+      "itemID": "SilverOre"
     },
     {
-      "itemID": "DiamondOre",
       "value": {
+        "DemandMultiplier": 1,
+        "CanSell": true,
         "BuyPrice": 500,
         "SellPrice": 250,
-        "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
-      }
+        "CanBuy": true
+      },
+      "itemID": "DiamondOre"
     },
     {
-      "itemID": "Ice",
       "value": {
-        "BuyPrice": 5,
+        "CanSell": true,
+        "DemandMultiplier": 1,
         "SellPrice": 1,
-        "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
-      }
+        "BuyPrice": 5,
+        "CanBuy": true
+      },
+      "itemID": "Ice"
     },
     {
-      "itemID": "Gel",
       "value": {
-        "BuyPrice": 8,
         "SellPrice": 2,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
-      }
-    },
-    {
-      "itemID": "Arrow",
-      "value": {
         "BuyPrice": 8,
-        "SellPrice": 4,
-        "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
-      }
+        "CanSell": true,
+        "DemandMultiplier": 1
+      },
+      "itemID": "Gel"
     },
     {
-      "itemID": "CopperIngot",
+      "value": {
+        "CanSell": true,
+        "DemandMultiplier": 1,
+        "CanBuy": true,
+        "SellPrice": 4,
+        "BuyPrice": 8
+      },
+      "itemID": "Arrow"
+    },
+    {
       "value": {
         "BuyPrice": 20,
         "SellPrice": 10,
-        "DemandMultiplier": 1,
         "CanBuy": true,
+        "DemandMultiplier": 1,
         "CanSell": true
-      }
+      },
+      "itemID": "CopperIngot"
     },
     {
       "itemID": "IronIngot",
       "value": {
-        "BuyPrice": 160,
-        "SellPrice": 80,
         "DemandMultiplier": 1,
+        "CanSell": true,
+        "BuyPrice": 160,
         "CanBuy": true,
-        "CanSell": true
+        "SellPrice": 80
       }
     },
     {
-      "itemID": "SilverIngot",
       "value": {
         "BuyPrice": 320,
-        "SellPrice": 160,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "SellPrice": 160,
+        "CanSell": true,
+        "DemandMultiplier": 1
+      },
+      "itemID": "SilverIngot"
     },
     {
-      "itemID": "GoldIngot",
       "value": {
+        "CanBuy": true,
         "BuyPrice": 640,
         "SellPrice": 320,
-        "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
-      }
+        "CanSell": true,
+        "DemandMultiplier": 1
+      },
+      "itemID": "GoldIngot"
     },
     {
       "itemID": "Diamond",
       "value": {
-        "BuyPrice": 200,
-        "SellPrice": 40,
         "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
+        "CanSell": true,
+        "SellPrice": 40,
+        "BuyPrice": 200,
+        "CanBuy": true
       }
     },
     {
-      "itemID": "Ruby",
       "value": {
         "BuyPrice": 180,
         "SellPrice": 36,
-        "DemandMultiplier": 1,
         "CanBuy": true,
+        "DemandMultiplier": 1,
         "CanSell": true
-      }
+      },
+      "itemID": "Ruby"
     },
     {
-      "itemID": "Emerald",
       "value": {
-        "BuyPrice": 190,
+        "DemandMultiplier": 1,
+        "CanSell": true,
         "SellPrice": 38,
-        "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
-      }
+        "BuyPrice": 190,
+        "CanBuy": true
+      },
+      "itemID": "Emerald"
     },
     {
-      "itemID": "Sapphire",
       "value": {
-        "BuyPrice": 175,
+        "CanSell": true,
+        "DemandMultiplier": 1,
+        "CanBuy": true,
         "SellPrice": 35,
-        "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
-      }
+        "BuyPrice": 175
+      },
+      "itemID": "Sapphire"
     },
     {
-      "itemID": "Topaz",
       "value": {
-        "BuyPrice": 160,
+        "DemandMultiplier": 1,
+        "CanSell": true,
         "SellPrice": 32,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "BuyPrice": 160
+      },
+      "itemID": "Topaz"
     },
     {
-      "itemID": "Aquamarine",
       "value": {
-        "BuyPrice": 165,
-        "SellPrice": 33,
         "DemandMultiplier": 1,
+        "CanSell": true,
+        "SellPrice": 33,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "BuyPrice": 165
+      },
+      "itemID": "Aquamarine"
     },
     {
       "itemID": "SpessartiteGarnet",
       "value": {
-        "BuyPrice": 155,
+        "CanBuy": true,
         "SellPrice": 31,
+        "BuyPrice": 155,
         "DemandMultiplier": 1,
-        "CanBuy": true,
         "CanSell": true
       }
     },
     {
-      "itemID": "Amethyst",
       "value": {
-        "BuyPrice": 150,
         "SellPrice": 30,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "BuyPrice": 150,
+        "CanSell": true,
+        "DemandMultiplier": 1
+      },
+      "itemID": "Amethyst"
     },
     {
-      "itemID": "Morganite",
       "value": {
-        "BuyPrice": 145,
         "SellPrice": 29,
-        "DemandMultiplier": 1,
+        "BuyPrice": 145,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "CanSell": true,
+        "DemandMultiplier": 1
+      },
+      "itemID": "Morganite"
     },
     {
       "itemID": "Onyx",
       "value": {
-        "BuyPrice": 140,
-        "SellPrice": 28,
         "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
+        "CanSell": true,
+        "SellPrice": 28,
+        "BuyPrice": 140,
+        "CanBuy": true
       }
     },
     {
       "itemID": "Moss",
       "value": {
+        "DemandMultiplier": 1,
+        "CanSell": true,
         "BuyPrice": 3,
         "SellPrice": 1,
-        "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
+        "CanBuy": true
       }
     },
     {
-      "itemID": "Snow",
       "value": {
-        "BuyPrice": 3,
-        "SellPrice": 1,
+        "CanSell": true,
         "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
-      }
+        "SellPrice": 1,
+        "BuyPrice": 3,
+        "CanBuy": true
+      },
+      "itemID": "Snow"
     },
     {
-      "itemID": "Glass",
       "value": {
         "BuyPrice": 4,
         "SellPrice": 1,
-        "DemandMultiplier": 1,
         "CanBuy": true,
+        "DemandMultiplier": 1,
         "CanSell": true
-      }
+      },
+      "itemID": "Glass"
     },
     {
-      "itemID": "OakLeaves",
       "value": {
-        "BuyPrice": 3,
-        "SellPrice": 1,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "SellPrice": 1,
+        "BuyPrice": 3,
+        "CanSell": true,
+        "DemandMultiplier": 1
+      },
+      "itemID": "OakLeaves"
     },
     {
-      "itemID": "MangroveLeaves",
       "value": {
-        "BuyPrice": 3,
-        "SellPrice": 1,
         "DemandMultiplier": 1,
+        "CanSell": true,
+        "BuyPrice": 3,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "SellPrice": 1
+      },
+      "itemID": "MangroveLeaves"
     },
     {
-      "itemID": "PineLeaves",
       "value": {
-        "BuyPrice": 3,
         "SellPrice": 1,
-        "DemandMultiplier": 1,
+        "BuyPrice": 3,
         "CanBuy": true,
+        "DemandMultiplier": 1,
         "CanSell": true
-      }
+      },
+      "itemID": "PineLeaves"
     },
     {
-      "itemID": "CherryBlossomLeaves",
       "value": {
-        "BuyPrice": 3,
         "SellPrice": 1,
-        "DemandMultiplier": 1,
         "CanBuy": true,
+        "BuyPrice": 3,
+        "DemandMultiplier": 1,
         "CanSell": true
-      }
+      },
+      "itemID": "CherryBlossomLeaves"
     },
     {
-      "itemID": "BeechLeaves",
       "value": {
-        "BuyPrice": 3,
-        "SellPrice": 1,
-        "DemandMultiplier": 1,
         "CanBuy": true,
+        "SellPrice": 1,
+        "BuyPrice": 3,
+        "DemandMultiplier": 1,
         "CanSell": true
-      }
+      },
+      "itemID": "BeechLeaves"
     },
     {
       "itemID": "OnyxBrick",
       "value": {
         "BuyPrice": 600,
         "SellPrice": 120,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
+        "CanSell": true,
+        "DemandMultiplier": 1
       }
     },
     {
-      "itemID": "MorganiteBrick",
       "value": {
-        "BuyPrice": 620,
-        "SellPrice": 124,
         "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
-      }
+        "CanSell": true,
+        "SellPrice": 124,
+        "BuyPrice": 620,
+        "CanBuy": true
+      },
+      "itemID": "MorganiteBrick"
     },
     {
       "itemID": "AmethystBrick",
       "value": {
-        "BuyPrice": 640,
-        "SellPrice": 128,
+        "CanSell": true,
         "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
+        "BuyPrice": 640,
+        "SellPrice": 128
       }
     },
     {
       "itemID": "SpessartitegarnetBrick",
       "value": {
+        "DemandMultiplier": 1,
+        "CanSell": true,
         "BuyPrice": 660,
-        "SellPrice": 132,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
+        "SellPrice": 132
       }
     },
     {
-      "itemID": "AquamarineBrick",
       "value": {
-        "BuyPrice": 700,
         "SellPrice": 140,
-        "DemandMultiplier": 1,
+        "BuyPrice": 700,
         "CanBuy": true,
+        "DemandMultiplier": 1,
         "CanSell": true
-      }
+      },
+      "itemID": "AquamarineBrick"
     },
     {
-      "itemID": "TopazBrick",
       "value": {
-        "BuyPrice": 680,
-        "SellPrice": 136,
+        "CanSell": true,
         "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
-      }
+        "SellPrice": 136,
+        "BuyPrice": 680,
+        "CanBuy": true
+      },
+      "itemID": "TopazBrick"
     },
     {
       "itemID": "SapphireBrick",
       "value": {
-        "BuyPrice": 740,
         "SellPrice": 148,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
+        "BuyPrice": 740,
+        "CanSell": true,
+        "DemandMultiplier": 1
       }
     },
     {
@@ -495,419 +495,419 @@
       "value": {
         "BuyPrice": 800,
         "SellPrice": 160,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
+        "CanSell": true,
+        "DemandMultiplier": 1
       }
     },
     {
-      "itemID": "RubyBrick",
       "value": {
         "BuyPrice": 760,
+        "CanBuy": true,
         "SellPrice": 152,
         "DemandMultiplier": 1,
-        "CanBuy": true,
         "CanSell": true
-      }
+      },
+      "itemID": "RubyBrick"
     },
     {
       "itemID": "DiamondBrick",
       "value": {
-        "BuyPrice": 840,
         "SellPrice": 168,
-        "DemandMultiplier": 1,
+        "BuyPrice": 840,
         "CanBuy": true,
-        "CanSell": true
+        "CanSell": true,
+        "DemandMultiplier": 1
       }
     },
     {
       "itemID": "SmoothSandBrick",
       "value": {
         "BuyPrice": 5,
-        "SellPrice": 1,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
+        "SellPrice": 1,
+        "CanSell": true,
+        "DemandMultiplier": 1
       }
     },
     {
       "itemID": "SmoothSand",
       "value": {
+        "SellPrice": 1,
+        "CanBuy": true,
         "BuyPrice": 4,
-        "SellPrice": 1,
         "DemandMultiplier": 1,
-        "CanBuy": true,
         "CanSell": true
       }
     },
     {
-      "itemID": "SandBrick",
       "value": {
+        "SellPrice": 1,
         "BuyPrice": 5,
-        "SellPrice": 1,
-        "DemandMultiplier": 1,
         "CanBuy": true,
+        "DemandMultiplier": 1,
         "CanSell": true
-      }
+      },
+      "itemID": "SandBrick"
     },
     {
-      "itemID": "Lilypad",
       "value": {
-        "BuyPrice": 10,
+        "CanSell": true,
+        "DemandMultiplier": 1,
+        "CanBuy": true,
         "SellPrice": 2,
-        "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
-      }
+        "BuyPrice": 10
+      },
+      "itemID": "Lilypad"
     },
     {
-      "itemID": "MorganiteLightstone",
       "value": {
-        "BuyPrice": 300,
         "SellPrice": 60,
-        "DemandMultiplier": 1,
+        "BuyPrice": 300,
         "CanBuy": true,
+        "DemandMultiplier": 1,
         "CanSell": true
-      }
+      },
+      "itemID": "MorganiteLightstone"
     },
     {
-      "itemID": "AmethystLightstone",
       "value": {
-        "BuyPrice": 310,
-        "SellPrice": 62,
         "DemandMultiplier": 1,
+        "CanSell": true,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "SellPrice": 62,
+        "BuyPrice": 310
+      },
+      "itemID": "AmethystLightstone"
     },
     {
       "itemID": "SpessartitegarnetLightstone",
       "value": {
-        "BuyPrice": 320,
-        "SellPrice": 64,
+        "CanSell": true,
         "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
+        "SellPrice": 64,
+        "BuyPrice": 320
       }
     },
     {
       "itemID": "AquamarineLightstone",
       "value": {
-        "BuyPrice": 340,
-        "SellPrice": 68,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
+        "SellPrice": 68,
+        "BuyPrice": 340,
+        "CanSell": true,
+        "DemandMultiplier": 1
       }
     },
     {
       "itemID": "TopazLightstone",
       "value": {
-        "BuyPrice": 330,
-        "SellPrice": 66,
+        "CanSell": true,
         "DemandMultiplier": 1,
+        "SellPrice": 66,
         "CanBuy": true,
-        "CanSell": true
+        "BuyPrice": 330
       }
     },
     {
       "itemID": "SapphireLightstone",
       "value": {
+        "CanSell": true,
+        "DemandMultiplier": 1,
         "BuyPrice": 360,
         "SellPrice": 72,
-        "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
+        "CanBuy": true
       }
     },
     {
       "itemID": "EmeraldLightstone",
       "value": {
-        "BuyPrice": 380,
-        "SellPrice": 76,
+        "CanSell": true,
         "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
+        "SellPrice": 76,
+        "BuyPrice": 380,
+        "CanBuy": true
       }
     },
     {
-      "itemID": "RubyLightstone",
       "value": {
+        "CanBuy": true,
         "BuyPrice": 370,
         "SellPrice": 74,
         "DemandMultiplier": 1,
-        "CanBuy": true,
         "CanSell": true
-      }
+      },
+      "itemID": "RubyLightstone"
     },
     {
-      "itemID": "HayBale",
       "value": {
+        "CanSell": true,
+        "DemandMultiplier": 1,
         "BuyPrice": 15,
         "SellPrice": 3,
-        "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
-      }
+        "CanBuy": true
+      },
+      "itemID": "HayBale"
     },
     {
-      "itemID": "SnowBrick",
       "value": {
         "BuyPrice": 10,
-        "SellPrice": 2,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "SellPrice": 2,
+        "CanSell": true,
+        "DemandMultiplier": 1
+      },
+      "itemID": "SnowBrick"
     },
     {
       "itemID": "TinOre",
       "value": {
+        "CanSell": true,
+        "DemandMultiplier": 1,
         "BuyPrice": 40,
         "SellPrice": 20,
-        "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
+        "CanBuy": true
       }
     },
     {
-      "itemID": "LeadOre",
       "value": {
-        "BuyPrice": 80,
-        "SellPrice": 40,
         "DemandMultiplier": 1,
+        "CanSell": true,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "BuyPrice": 80,
+        "SellPrice": 40
+      },
+      "itemID": "LeadOre"
     },
     {
       "itemID": "Amberstone",
       "value": {
-        "BuyPrice": 335,
-        "SellPrice": 170,
         "DemandMultiplier": 1,
+        "CanSell": true,
         "CanBuy": true,
-        "CanSell": true
+        "BuyPrice": 335,
+        "SellPrice": 170
       }
     },
     {
-      "itemID": "TungstenOre",
       "value": {
         "BuyPrice": 1280,
+        "CanBuy": true,
         "SellPrice": 640,
         "DemandMultiplier": 1,
-        "CanBuy": true,
         "CanSell": true
-      }
+      },
+      "itemID": "TungstenOre"
     },
     {
       "itemID": "PlatinumOre",
       "value": {
-        "BuyPrice": 2560,
+        "CanSell": true,
+        "DemandMultiplier": 1,
         "SellPrice": 1280,
-        "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
+        "BuyPrice": 2560,
+        "CanBuy": true
       }
     },
     {
-      "itemID": "CobaltOre",
       "value": {
-        "BuyPrice": 265,
+        "CanSell": true,
+        "DemandMultiplier": 1,
+        "CanBuy": true,
         "SellPrice": 135,
-        "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
-      }
+        "BuyPrice": 265
+      },
+      "itemID": "CobaltOre"
     },
     {
-      "itemID": "MythrilOre",
       "value": {
-        "BuyPrice": 285,
-        "SellPrice": 145,
+        "CanSell": true,
         "DemandMultiplier": 1,
+        "SellPrice": 145,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "BuyPrice": 285
+      },
+      "itemID": "MythrilOre"
     },
     {
       "itemID": "Cobweb",
       "value": {
-        "BuyPrice": 10,
-        "SellPrice": 5,
+        "CanSell": true,
         "DemandMultiplier": 1,
+        "SellPrice": 5,
         "CanBuy": true,
-        "CanSell": true
+        "BuyPrice": 10
       }
     },
     {
       "itemID": "TinIngot",
       "value": {
-        "BuyPrice": 40,
-        "SellPrice": 20,
         "DemandMultiplier": 1,
+        "CanSell": true,
         "CanBuy": true,
-        "CanSell": true
+        "BuyPrice": 40,
+        "SellPrice": 20
       }
     },
     {
       "itemID": "LeadIngot",
       "value": {
-        "BuyPrice": 80,
         "SellPrice": 40,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
+        "BuyPrice": 80,
+        "CanSell": true,
+        "DemandMultiplier": 1
       }
     },
     {
       "itemID": "TungstenIngot",
       "value": {
-        "BuyPrice": 1280,
         "SellPrice": 640,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
+        "BuyPrice": 1280,
+        "CanSell": true,
+        "DemandMultiplier": 1
       }
     },
     {
-      "itemID": "PlatinumIngot",
       "value": {
+        "CanBuy": true,
         "BuyPrice": 2560,
         "SellPrice": 1280,
-        "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
-      }
+        "CanSell": true,
+        "DemandMultiplier": 1
+      },
+      "itemID": "PlatinumIngot"
     },
     {
       "itemID": "AmberstoneIngot",
       "value": {
-        "BuyPrice": 400,
-        "SellPrice": 80,
         "DemandMultiplier": 1,
+        "CanSell": true,
         "CanBuy": true,
-        "CanSell": true
+        "BuyPrice": 400,
+        "SellPrice": 80
       }
     },
     {
-      "itemID": "Strings",
       "value": {
         "BuyPrice": 10,
+        "CanBuy": true,
         "SellPrice": 5,
         "DemandMultiplier": 1,
-        "CanBuy": true,
         "CanSell": true
-      }
+      },
+      "itemID": "Strings"
     },
     {
-      "itemID": "WoodenPickaxe",
       "value": {
-        "BuyPrice": 67,
         "SellPrice": 13,
-        "DemandMultiplier": 1,
+        "BuyPrice": 67,
         "CanBuy": true,
+        "DemandMultiplier": 1,
         "CanSell": true
-      }
+      },
+      "itemID": "WoodenPickaxe"
     },
     {
-      "itemID": "CopperPickaxe",
       "value": {
-        "BuyPrice": 100,
         "SellPrice": 50,
-        "DemandMultiplier": 1,
+        "BuyPrice": 100,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "CanSell": true,
+        "DemandMultiplier": 1
+      },
+      "itemID": "CopperPickaxe"
     },
     {
       "itemID": "IronPickaxe",
       "value": {
-        "BuyPrice": 800,
-        "SellPrice": 400,
+        "CanSell": true,
         "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
+        "SellPrice": 400,
+        "BuyPrice": 800
       }
     },
     {
-      "itemID": "SilverPickaxe",
       "value": {
+        "DemandMultiplier": 1,
+        "CanSell": true,
         "BuyPrice": 1600,
         "SellPrice": 800,
-        "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
-      }
+        "CanBuy": true
+      },
+      "itemID": "SilverPickaxe"
     },
     {
       "itemID": "GoldPickaxe",
       "value": {
         "BuyPrice": 3200,
-        "SellPrice": 1600,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
+        "SellPrice": 1600,
+        "CanSell": true,
+        "DemandMultiplier": 1
       }
     },
     {
       "itemID": "TinPickaxe",
       "value": {
-        "BuyPrice": 200,
         "SellPrice": 100,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
+        "BuyPrice": 200,
+        "CanSell": true,
+        "DemandMultiplier": 1
       }
     },
     {
       "itemID": "LeadPickaxe",
       "value": {
-        "BuyPrice": 400,
         "SellPrice": 200,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
+        "BuyPrice": 400,
+        "CanSell": true,
+        "DemandMultiplier": 1
       }
     },
     {
       "itemID": "TungstenPickaxe",
       "value": {
-        "BuyPrice": 6400,
         "SellPrice": 3200,
-        "DemandMultiplier": 1,
         "CanBuy": true,
+        "BuyPrice": 6400,
+        "DemandMultiplier": 1,
         "CanSell": true
       }
     },
     {
-      "itemID": "PlatinumPickaxe",
       "value": {
-        "BuyPrice": 12800,
         "SellPrice": 6400,
-        "DemandMultiplier": 1,
+        "BuyPrice": 12800,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "CanSell": true,
+        "DemandMultiplier": 1
+      },
+      "itemID": "PlatinumPickaxe"
     },
     {
-      "itemID": "CobaltPickaxe",
       "value": {
-        "BuyPrice": 1165,
-        "SellPrice": 235,
+        "CanSell": true,
         "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "BuyPrice": 1165,
+        "SellPrice": 235
+      },
+      "itemID": "CobaltPickaxe"
     },
     {
       "itemID": "MythrilPickaxe",
       "value": {
-        "BuyPrice": 1335,
-        "SellPrice": 265,
         "DemandMultiplier": 1,
+        "CanSell": true,
         "CanBuy": true,
-        "CanSell": true
+        "SellPrice": 265,
+        "BuyPrice": 1335
       }
     },
     {
@@ -915,48 +915,48 @@
       "value": {
         "BuyPrice": 83,
         "SellPrice": 17,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
+        "CanSell": true,
+        "DemandMultiplier": 1
       }
     },
     {
-      "itemID": "CopperSword",
       "value": {
+        "CanSell": true,
+        "DemandMultiplier": 1,
         "BuyPrice": 100,
-        "SellPrice": 50,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "SellPrice": 50
+      },
+      "itemID": "CopperSword"
     },
     {
-      "itemID": "IronSword",
       "value": {
+        "CanSell": true,
+        "DemandMultiplier": 1,
         "BuyPrice": 800,
-        "SellPrice": 400,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "SellPrice": 400
+      },
+      "itemID": "IronSword"
     },
     {
-      "itemID": "SilverSword",
       "value": {
+        "DemandMultiplier": 1,
+        "CanSell": true,
         "BuyPrice": 1600,
         "SellPrice": 800,
-        "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
-      }
+        "CanBuy": true
+      },
+      "itemID": "SilverSword"
     },
     {
       "itemID": "GoldSword",
       "value": {
         "BuyPrice": 3200,
+        "CanBuy": true,
         "SellPrice": 1600,
         "DemandMultiplier": 1,
-        "CanBuy": true,
         "CanSell": true
       }
     },
@@ -965,899 +965,899 @@
       "value": {
         "BuyPrice": 100,
         "SellPrice": 20,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
+        "CanSell": true,
+        "DemandMultiplier": 1
       }
     },
     {
-      "itemID": "CopperBow",
       "value": {
-        "BuyPrice": 200,
-        "SellPrice": 100,
+        "CanSell": true,
         "DemandMultiplier": 1,
+        "SellPrice": 100,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "BuyPrice": 200
+      },
+      "itemID": "CopperBow"
     },
     {
       "itemID": "TinBow",
       "value": {
         "BuyPrice": 400,
-        "SellPrice": 200,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
+        "SellPrice": 200,
+        "CanSell": true,
+        "DemandMultiplier": 1
       }
     },
     {
-      "itemID": "LeadBow",
       "value": {
-        "BuyPrice": 800,
-        "SellPrice": 400,
+        "CanSell": true,
         "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "BuyPrice": 800,
+        "SellPrice": 400
+      },
+      "itemID": "LeadBow"
     },
     {
       "itemID": "IronBow",
       "value": {
-        "BuyPrice": 1600,
+        "DemandMultiplier": 1,
+        "CanSell": true,
         "SellPrice": 800,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
+        "BuyPrice": 1600
       }
     },
     {
-      "itemID": "SilverBow",
       "value": {
-        "BuyPrice": 3200,
-        "SellPrice": 1600,
+        "CanSell": true,
         "DemandMultiplier": 1,
+        "BuyPrice": 3200,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "SellPrice": 1600
+      },
+      "itemID": "SilverBow"
     },
     {
-      "itemID": "GoldBow",
       "value": {
         "BuyPrice": 6400,
+        "CanBuy": true,
         "SellPrice": 3200,
-        "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
-      }
+        "CanSell": true,
+        "DemandMultiplier": 1
+      },
+      "itemID": "GoldBow"
     },
     {
-      "itemID": "TungstenBow",
       "value": {
-        "BuyPrice": 12800,
-        "SellPrice": 6400,
         "DemandMultiplier": 1,
+        "CanSell": true,
+        "BuyPrice": 12800,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "SellPrice": 6400
+      },
+      "itemID": "TungstenBow"
     },
     {
-      "itemID": "PlatinumBow",
       "value": {
         "BuyPrice": 25600,
-        "SellPrice": 12800,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "SellPrice": 12800,
+        "CanSell": true,
+        "DemandMultiplier": 1
+      },
+      "itemID": "PlatinumBow"
     },
     {
       "itemID": "CobaltBow",
       "value": {
-        "BuyPrice": 1400,
-        "SellPrice": 280,
         "DemandMultiplier": 1,
+        "CanSell": true,
         "CanBuy": true,
-        "CanSell": true
+        "BuyPrice": 1400,
+        "SellPrice": 280
       }
     },
     {
-      "itemID": "MythrilBow",
       "value": {
+        "CanSell": true,
+        "DemandMultiplier": 1,
         "BuyPrice": 1565,
         "SellPrice": 315,
-        "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
-      }
+        "CanBuy": true
+      },
+      "itemID": "MythrilBow"
     },
     {
       "itemID": "TinSword",
       "value": {
-        "BuyPrice": 200,
         "SellPrice": 100,
-        "DemandMultiplier": 1,
         "CanBuy": true,
+        "BuyPrice": 200,
+        "DemandMultiplier": 1,
         "CanSell": true
       }
     },
     {
       "itemID": "LeadSword",
       "value": {
-        "BuyPrice": 400,
-        "SellPrice": 200,
         "DemandMultiplier": 1,
+        "CanSell": true,
+        "SellPrice": 200,
         "CanBuy": true,
-        "CanSell": true
+        "BuyPrice": 400
       }
     },
     {
       "itemID": "TungstenSword",
       "value": {
-        "BuyPrice": 6400,
-        "SellPrice": 3200,
+        "CanSell": true,
         "DemandMultiplier": 1,
+        "BuyPrice": 6400,
         "CanBuy": true,
-        "CanSell": true
+        "SellPrice": 3200
       }
     },
     {
       "itemID": "PlatinumSword",
       "value": {
+        "DemandMultiplier": 1,
+        "CanSell": true,
         "BuyPrice": 12800,
-        "SellPrice": 6400,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
+        "SellPrice": 6400
       }
     },
     {
-      "itemID": "CobaltSword",
       "value": {
-        "BuyPrice": 1335,
         "SellPrice": 265,
-        "DemandMultiplier": 1,
+        "BuyPrice": 1335,
         "CanBuy": true,
+        "DemandMultiplier": 1,
         "CanSell": true
-      }
+      },
+      "itemID": "CobaltSword"
     },
     {
-      "itemID": "MythrilSword",
       "value": {
-        "BuyPrice": 1500,
         "SellPrice": 300,
-        "DemandMultiplier": 1,
+        "BuyPrice": 1500,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "CanSell": true,
+        "DemandMultiplier": 1
+      },
+      "itemID": "MythrilSword"
     },
     {
       "itemID": "Cobalt_Trident",
       "value": {
+        "CanBuy": true,
         "BuyPrice": 3335,
         "SellPrice": 665,
         "DemandMultiplier": 1,
-        "CanBuy": true,
         "CanSell": true
       }
     },
     {
       "itemID": "WoodenWand",
       "value": {
-        "BuyPrice": 50,
-        "SellPrice": 10,
+        "CanSell": true,
         "DemandMultiplier": 1,
+        "SellPrice": 10,
         "CanBuy": true,
-        "CanSell": true
+        "BuyPrice": 50
       }
     },
     {
       "itemID": "OnyxWand",
       "value": {
-        "BuyPrice": 300,
         "SellPrice": 60,
-        "DemandMultiplier": 1,
+        "BuyPrice": 300,
         "CanBuy": true,
-        "CanSell": true
+        "CanSell": true,
+        "DemandMultiplier": 1
       }
     },
     {
-      "itemID": "MorganiteStaff",
       "value": {
-        "BuyPrice": 310,
+        "CanSell": true,
+        "DemandMultiplier": 1,
         "SellPrice": 62,
-        "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
-      }
+        "BuyPrice": 310,
+        "CanBuy": true
+      },
+      "itemID": "MorganiteStaff"
     },
     {
-      "itemID": "AmethystStaff",
       "value": {
-        "BuyPrice": 320,
+        "DemandMultiplier": 1,
+        "CanSell": true,
         "SellPrice": 64,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "BuyPrice": 320
+      },
+      "itemID": "AmethystStaff"
     },
     {
-      "itemID": "SpessartiteGarnetStaff",
       "value": {
-        "BuyPrice": 330,
-        "SellPrice": 66,
+        "CanSell": true,
         "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "BuyPrice": 330,
+        "SellPrice": 66
+      },
+      "itemID": "SpessartiteGarnetStaff"
     },
     {
       "itemID": "AquamarineStaff",
       "value": {
-        "BuyPrice": 350,
-        "SellPrice": 70,
+        "CanSell": true,
         "DemandMultiplier": 1,
+        "BuyPrice": 350,
         "CanBuy": true,
-        "CanSell": true
+        "SellPrice": 70
       }
     },
     {
-      "itemID": "TopazStaff",
       "value": {
+        "CanBuy": true,
         "BuyPrice": 340,
         "SellPrice": 68,
         "DemandMultiplier": 1,
-        "CanBuy": true,
         "CanSell": true
-      }
+      },
+      "itemID": "TopazStaff"
     },
     {
       "itemID": "SapphireStaff",
       "value": {
-        "BuyPrice": 370,
-        "SellPrice": 74,
+        "CanSell": true,
         "DemandMultiplier": 1,
+        "SellPrice": 74,
         "CanBuy": true,
-        "CanSell": true
+        "BuyPrice": 370
       }
     },
     {
       "itemID": "EmeraldStaff",
       "value": {
-        "BuyPrice": 400,
-        "SellPrice": 80,
+        "CanSell": true,
         "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
+        "SellPrice": 80,
+        "BuyPrice": 400,
+        "CanBuy": true
       }
     },
     {
       "itemID": "RubyStaff",
       "value": {
-        "BuyPrice": 380,
-        "SellPrice": 76,
+        "CanSell": true,
         "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
+        "SellPrice": 76,
+        "BuyPrice": 380
       }
     },
     {
-      "itemID": "CopperHelmet",
       "value": {
-        "BuyPrice": 60,
-        "SellPrice": 30,
         "DemandMultiplier": 1,
+        "CanSell": true,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "SellPrice": 30,
+        "BuyPrice": 60
+      },
+      "itemID": "CopperHelmet"
     },
     {
       "itemID": "CopperChestplate",
       "value": {
-        "BuyPrice": 100,
-        "SellPrice": 50,
-        "DemandMultiplier": 1,
         "CanBuy": true,
+        "SellPrice": 50,
+        "BuyPrice": 100,
+        "DemandMultiplier": 1,
         "CanSell": true
       }
     },
     {
       "itemID": "CopperLeggings",
       "value": {
-        "BuyPrice": 80,
-        "SellPrice": 40,
-        "DemandMultiplier": 1,
         "CanBuy": true,
+        "SellPrice": 40,
+        "BuyPrice": 80,
+        "DemandMultiplier": 1,
         "CanSell": true
       }
     },
     {
       "itemID": "IronHelmet",
       "value": {
-        "BuyPrice": 480,
-        "SellPrice": 240,
+        "CanSell": true,
         "DemandMultiplier": 1,
+        "BuyPrice": 480,
         "CanBuy": true,
-        "CanSell": true
+        "SellPrice": 240
       }
     },
     {
       "itemID": "IronChestplate",
       "value": {
-        "BuyPrice": 800,
-        "SellPrice": 400,
+        "CanSell": true,
         "DemandMultiplier": 1,
+        "BuyPrice": 800,
         "CanBuy": true,
-        "CanSell": true
+        "SellPrice": 400
       }
     },
     {
-      "itemID": "IronLeggings",
       "value": {
-        "BuyPrice": 640,
         "SellPrice": 320,
-        "DemandMultiplier": 1,
+        "BuyPrice": 640,
         "CanBuy": true,
+        "DemandMultiplier": 1,
         "CanSell": true
-      }
+      },
+      "itemID": "IronLeggings"
     },
     {
       "itemID": "SilverHelmet",
       "value": {
-        "BuyPrice": 960,
-        "SellPrice": 480,
+        "CanSell": true,
         "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
+        "BuyPrice": 960,
+        "SellPrice": 480
       }
     },
     {
       "itemID": "SilverChestplate",
       "value": {
-        "BuyPrice": 1600,
         "SellPrice": 800,
-        "DemandMultiplier": 1,
         "CanBuy": true,
+        "BuyPrice": 1600,
+        "DemandMultiplier": 1,
         "CanSell": true
       }
     },
     {
       "itemID": "SilverLeggings",
       "value": {
-        "BuyPrice": 1280,
-        "SellPrice": 640,
+        "CanSell": true,
         "DemandMultiplier": 1,
+        "SellPrice": 640,
         "CanBuy": true,
-        "CanSell": true
+        "BuyPrice": 1280
       }
     },
     {
-      "itemID": "GoldHelmet",
       "value": {
-        "BuyPrice": 1920,
         "SellPrice": 960,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "BuyPrice": 1920,
+        "CanSell": true,
+        "DemandMultiplier": 1
+      },
+      "itemID": "GoldHelmet"
     },
     {
       "itemID": "GoldChestplate",
       "value": {
-        "BuyPrice": 3200,
         "SellPrice": 1600,
-        "DemandMultiplier": 1,
+        "BuyPrice": 3200,
         "CanBuy": true,
-        "CanSell": true
+        "CanSell": true,
+        "DemandMultiplier": 1
       }
     },
     {
-      "itemID": "GoldLeggings",
       "value": {
+        "DemandMultiplier": 1,
+        "CanSell": true,
         "BuyPrice": 2560,
         "SellPrice": 1280,
-        "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
-      }
+        "CanBuy": true
+      },
+      "itemID": "GoldLeggings"
     },
     {
-      "itemID": "TinHelmet",
       "value": {
-        "BuyPrice": 120,
         "SellPrice": 60,
-        "DemandMultiplier": 1,
+        "BuyPrice": 120,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "CanSell": true,
+        "DemandMultiplier": 1
+      },
+      "itemID": "TinHelmet"
     },
     {
       "itemID": "TinChestplate",
       "value": {
-        "BuyPrice": 200,
         "SellPrice": 100,
-        "DemandMultiplier": 1,
         "CanBuy": true,
+        "BuyPrice": 200,
+        "DemandMultiplier": 1,
         "CanSell": true
       }
     },
     {
-      "itemID": "TinLeggings",
       "value": {
         "BuyPrice": 160,
         "SellPrice": 80,
-        "DemandMultiplier": 1,
         "CanBuy": true,
+        "DemandMultiplier": 1,
         "CanSell": true
-      }
+      },
+      "itemID": "TinLeggings"
     },
     {
-      "itemID": "LeadHelmet",
       "value": {
-        "BuyPrice": 240,
         "SellPrice": 120,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "BuyPrice": 240,
+        "CanSell": true,
+        "DemandMultiplier": 1
+      },
+      "itemID": "LeadHelmet"
     },
     {
       "itemID": "LeadChestplate",
       "value": {
         "BuyPrice": 400,
-        "SellPrice": 200,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
+        "SellPrice": 200,
+        "CanSell": true,
+        "DemandMultiplier": 1
       }
     },
     {
-      "itemID": "LeadLeggings",
       "value": {
         "BuyPrice": 320,
         "SellPrice": 160,
-        "DemandMultiplier": 1,
         "CanBuy": true,
+        "DemandMultiplier": 1,
         "CanSell": true
-      }
+      },
+      "itemID": "LeadLeggings"
     },
     {
-      "itemID": "TungstenHelmet",
       "value": {
+        "CanBuy": true,
         "BuyPrice": 3840,
         "SellPrice": 1920,
-        "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
-      }
+        "CanSell": true,
+        "DemandMultiplier": 1
+      },
+      "itemID": "TungstenHelmet"
     },
     {
-      "itemID": "TungstenChestplate",
       "value": {
-        "BuyPrice": 6400,
-        "SellPrice": 3200,
+        "CanSell": true,
         "DemandMultiplier": 1,
+        "BuyPrice": 6400,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "SellPrice": 3200
+      },
+      "itemID": "TungstenChestplate"
     },
     {
       "itemID": "TungstenLeggings",
       "value": {
-        "BuyPrice": 5120,
-        "SellPrice": 2560,
         "DemandMultiplier": 1,
+        "CanSell": true,
+        "BuyPrice": 5120,
         "CanBuy": true,
-        "CanSell": true
+        "SellPrice": 2560
       }
     },
     {
       "itemID": "PlatinumHelmet",
       "value": {
-        "BuyPrice": 7680,
-        "SellPrice": 3840,
         "DemandMultiplier": 1,
+        "CanSell": true,
+        "SellPrice": 3840,
         "CanBuy": true,
-        "CanSell": true
+        "BuyPrice": 7680
       }
     },
     {
-      "itemID": "PlatinumChestplate",
       "value": {
-        "BuyPrice": 12800,
-        "SellPrice": 6400,
+        "CanSell": true,
         "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "BuyPrice": 12800,
+        "SellPrice": 6400
+      },
+      "itemID": "PlatinumChestplate"
     },
     {
       "itemID": "PlatinumLeggings",
       "value": {
+        "CanBuy": true,
         "BuyPrice": 10240,
         "SellPrice": 5120,
-        "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
+        "CanSell": true,
+        "DemandMultiplier": 1
       }
     },
     {
       "itemID": "AmberstoneHelmet",
       "value": {
-        "BuyPrice": 700,
-        "SellPrice": 140,
+        "CanSell": true,
         "DemandMultiplier": 1,
+        "SellPrice": 140,
         "CanBuy": true,
-        "CanSell": true
+        "BuyPrice": 700
       }
     },
     {
       "itemID": "AmberstoneChestplate",
       "value": {
-        "BuyPrice": 1100,
         "SellPrice": 220,
-        "DemandMultiplier": 1,
+        "BuyPrice": 1100,
         "CanBuy": true,
+        "DemandMultiplier": 1,
         "CanSell": true
       }
     },
     {
       "itemID": "AmberstoneLeggings",
       "value": {
-        "BuyPrice": 700,
         "SellPrice": 140,
-        "DemandMultiplier": 1,
         "CanBuy": true,
+        "BuyPrice": 700,
+        "DemandMultiplier": 1,
         "CanSell": true
       }
     },
     {
-      "itemID": "NatureWings",
       "value": {
-        "BuyPrice": 2500,
-        "SellPrice": 500,
         "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
-      }
+        "CanSell": true,
+        "SellPrice": 500,
+        "BuyPrice": 2500,
+        "CanBuy": true
+      },
+      "itemID": "NatureWings"
     },
     {
       "itemID": "CosmicWings",
       "value": {
+        "DemandMultiplier": 1,
+        "CanSell": true,
         "BuyPrice": 5000,
         "SellPrice": 1000,
-        "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
+        "CanBuy": true
       }
     },
     {
       "itemID": "FairyWings",
       "value": {
+        "DemandMultiplier": 1,
+        "CanSell": true,
         "BuyPrice": 3000,
         "SellPrice": 600,
-        "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
+        "CanBuy": true
       }
     },
     {
-      "itemID": "BoneWings",
       "value": {
-        "BuyPrice": 3500,
         "SellPrice": 700,
-        "DemandMultiplier": 1,
+        "BuyPrice": 3500,
         "CanBuy": true,
+        "DemandMultiplier": 1,
         "CanSell": true
-      }
+      },
+      "itemID": "BoneWings"
     },
     {
       "itemID": "ThornwoodWings",
       "value": {
         "BuyPrice": 2500,
+        "CanBuy": true,
         "SellPrice": 500,
         "DemandMultiplier": 1,
-        "CanBuy": true,
         "CanSell": true
       }
     },
     {
-      "itemID": "NightWings",
       "value": {
-        "BuyPrice": 4000,
-        "SellPrice": 800,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "SellPrice": 800,
+        "BuyPrice": 4000,
+        "CanSell": true,
+        "DemandMultiplier": 1
+      },
+      "itemID": "NightWings"
     },
     {
       "itemID": "SpiritWings",
       "value": {
-        "BuyPrice": 4500,
-        "SellPrice": 900,
         "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
+        "CanSell": true,
+        "SellPrice": 900,
+        "BuyPrice": 4500,
+        "CanBuy": true
       }
     },
     {
-      "itemID": "FrostWings",
       "value": {
-        "BuyPrice": 4500,
-        "SellPrice": 900,
         "DemandMultiplier": 1,
+        "CanSell": true,
+        "SellPrice": 900,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "BuyPrice": 4500
+      },
+      "itemID": "FrostWings"
     },
     {
       "itemID": "Apple",
       "value": {
-        "BuyPrice": 10,
-        "SellPrice": 2,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
+        "SellPrice": 2,
+        "BuyPrice": 10,
+        "CanSell": true,
+        "DemandMultiplier": 1
       }
     },
     {
       "itemID": "CookedMeat",
       "value": {
+        "DemandMultiplier": 1,
+        "CanSell": true,
         "BuyPrice": 25,
-        "SellPrice": 5,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
+        "SellPrice": 5
       }
     },
     {
-      "itemID": "WaterBottle",
       "value": {
-        "BuyPrice": 5,
+        "CanSell": true,
+        "DemandMultiplier": 1,
         "SellPrice": 1,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "BuyPrice": 5
+      },
+      "itemID": "WaterBottle"
     },
     {
-      "itemID": "Onion",
       "value": {
+        "SellPrice": 2,
+        "CanBuy": true,
+        "BuyPrice": 8,
+        "CanSell": true,
+        "DemandMultiplier": 1
+      },
+      "itemID": "Onion"
+    },
+    {
+      "value": {
+        "CanSell": true,
+        "DemandMultiplier": 1,
         "BuyPrice": 8,
         "SellPrice": 2,
-        "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
-      }
+        "CanBuy": true
+      },
+      "itemID": "Garlic"
     },
     {
-      "itemID": "Garlic",
       "value": {
-        "BuyPrice": 8,
-        "SellPrice": 2,
+        "CanSell": true,
         "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
-      }
-    },
-    {
-      "itemID": "Pumpkin",
-      "value": {
         "BuyPrice": 15,
-        "SellPrice": 3,
-        "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
-      }
+        "SellPrice": 3
+      },
+      "itemID": "Pumpkin"
     },
     {
       "itemID": "HealthPotionI",
       "value": {
-        "BuyPrice": 100,
-        "SellPrice": 0,
         "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
+        "CanSell": true,
+        "SellPrice": 0,
+        "BuyPrice": 100,
+        "CanBuy": true
       }
     },
     {
       "itemID": "HealthPotionII",
       "value": {
-        "BuyPrice": 200,
-        "SellPrice": 0,
         "DemandMultiplier": 1,
+        "CanSell": true,
+        "SellPrice": 0,
         "CanBuy": true,
-        "CanSell": true
+        "BuyPrice": 200
       }
     },
     {
       "itemID": "HealthPotionIII",
       "value": {
-        "BuyPrice": 500,
-        "SellPrice": 1,
         "DemandMultiplier": 1,
+        "CanSell": true,
+        "SellPrice": 1,
         "CanBuy": true,
-        "CanSell": true
+        "BuyPrice": 500
       }
     },
     {
-      "itemID": "HealthPotionIV",
       "value": {
         "BuyPrice": 1000,
         "SellPrice": 1,
-        "DemandMultiplier": 1,
         "CanBuy": true,
+        "DemandMultiplier": 1,
         "CanSell": true
-      }
+      },
+      "itemID": "HealthPotionIV"
     },
     {
-      "itemID": "HealthPotionV",
       "value": {
-        "BuyPrice": 2000,
-        "SellPrice": 1,
+        "CanSell": true,
         "DemandMultiplier": 1,
+        "BuyPrice": 2000,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "SellPrice": 1
+      },
+      "itemID": "HealthPotionV"
     },
     {
-      "itemID": "RegeneratePotionI",
       "value": {
         "BuyPrice": 150,
+        "CanBuy": true,
         "SellPrice": 0,
         "DemandMultiplier": 1,
-        "CanBuy": true,
         "CanSell": true
-      }
+      },
+      "itemID": "RegeneratePotionI"
     },
     {
-      "itemID": "RegeneratePotionII",
       "value": {
-        "BuyPrice": 300,
-        "SellPrice": 0,
+        "CanSell": true,
         "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "BuyPrice": 300,
+        "SellPrice": 0
+      },
+      "itemID": "RegeneratePotionII"
     },
     {
       "itemID": "RegeneratePotionIII",
       "value": {
-        "BuyPrice": 600,
-        "SellPrice": 1,
         "DemandMultiplier": 1,
+        "CanSell": true,
+        "SellPrice": 1,
         "CanBuy": true,
-        "CanSell": true
+        "BuyPrice": 600
       }
     },
     {
-      "itemID": "RegeneratePotionIV",
       "value": {
-        "BuyPrice": 1200,
         "SellPrice": 1,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "BuyPrice": 1200,
+        "CanSell": true,
+        "DemandMultiplier": 1
+      },
+      "itemID": "RegeneratePotionIV"
     },
     {
       "itemID": "RegeneratePotionV",
       "value": {
-        "BuyPrice": 2500,
+        "DemandMultiplier": 1,
+        "CanSell": true,
         "SellPrice": 1,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
+        "BuyPrice": 2500
       }
     },
     {
-      "itemID": "SwiftnessPotionI",
       "value": {
+        "CanBuy": true,
+        "SellPrice": 0,
         "BuyPrice": 100,
-        "SellPrice": 0,
-        "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
-      }
+        "CanSell": true,
+        "DemandMultiplier": 1
+      },
+      "itemID": "SwiftnessPotionI"
     },
     {
-      "itemID": "SwiftnessPotionII",
       "value": {
-        "BuyPrice": 250,
         "SellPrice": 0,
-        "DemandMultiplier": 1,
+        "BuyPrice": 250,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "CanSell": true,
+        "DemandMultiplier": 1
+      },
+      "itemID": "SwiftnessPotionII"
     },
     {
       "itemID": "ManaPotionI",
       "value": {
-        "BuyPrice": 50,
-        "SellPrice": 0,
+        "CanSell": true,
         "DemandMultiplier": 1,
+        "SellPrice": 0,
         "CanBuy": true,
-        "CanSell": true
+        "BuyPrice": 50
       }
     },
     {
       "itemID": "ManaPotionII",
       "value": {
-        "BuyPrice": 100,
-        "SellPrice": 0,
         "DemandMultiplier": 1,
+        "CanSell": true,
         "CanBuy": true,
-        "CanSell": true
+        "BuyPrice": 100,
+        "SellPrice": 0
       }
     },
     {
-      "itemID": "ManaPotionIII",
       "value": {
         "BuyPrice": 200,
-        "SellPrice": 1,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "SellPrice": 1,
+        "CanSell": true,
+        "DemandMultiplier": 1
+      },
+      "itemID": "ManaPotionIII"
     },
     {
-      "itemID": "ManaPotionIV",
       "value": {
+        "DemandMultiplier": 1,
+        "CanSell": true,
         "BuyPrice": 400,
         "SellPrice": 1,
-        "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
-      }
+        "CanBuy": true
+      },
+      "itemID": "ManaPotionIV"
     },
     {
-      "itemID": "ManaPotionV",
       "value": {
+        "SellPrice": 1,
         "BuyPrice": 800,
-        "SellPrice": 1,
-        "DemandMultiplier": 1,
         "CanBuy": true,
+        "DemandMultiplier": 1,
         "CanSell": true
-      }
+      },
+      "itemID": "ManaPotionV"
     },
     {
-      "itemID": "StrengthPotion",
       "value": {
         "BuyPrice": 500,
-        "SellPrice": 1,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "SellPrice": 1,
+        "CanSell": true,
+        "DemandMultiplier": 1
+      },
+      "itemID": "StrengthPotion"
     },
     {
-      "itemID": "ResistancePotion",
       "value": {
+        "CanSell": true,
+        "DemandMultiplier": 1,
+        "CanBuy": true,
         "BuyPrice": 500,
-        "SellPrice": 1,
-        "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
-      }
+        "SellPrice": 1
+      },
+      "itemID": "ResistancePotion"
     },
     {
-      "itemID": "Torch",
       "value": {
-        "BuyPrice": 10,
+        "DemandMultiplier": 1,
+        "CanSell": true,
         "SellPrice": 2,
-        "DemandMultiplier": 1,
         "CanBuy": true,
-        "CanSell": true
-      }
+        "BuyPrice": 10
+      },
+      "itemID": "Torch"
     },
     {
       "itemID": "CopperPlatedGuard",
       "value": {
-        "BuyPrice": 120,
-        "SellPrice": 60,
         "DemandMultiplier": 1,
-        "CanBuy": true,
-        "CanSell": true
+        "CanSell": true,
+        "SellPrice": 60,
+        "BuyPrice": 120,
+        "CanBuy": true
       }
     }
   ]

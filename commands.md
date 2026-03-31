@@ -91,6 +91,28 @@ This file documents all the custom terminal commands (aliases and scripts) creat
 
 ---
 
+## 7. `upload_to_firebase`
+- **Description:** Uploads all local wiki JSON files to Firestore, overwriting existing data in the cloud. Prompts for admin email/password.
+- **Location:** `wiki/upload_to_firebase.mjs`
+- **How to run:** `node wiki/upload_to_firebase.mjs`
+- **Requires:** `npm install` (firebase package)
+- **Files uploaded:**
+  - `mob_configs.json`, `item_configs.json`, `item_values.json`, `crafting_recipes.json`, `chestdata.json`, `shopconfigs.json`, `tile_properties.json`, `tile_to_item_mapping.json`
+- **When to use:** After updating local JSON files (e.g. after `fetch_all` from Unity) to sync changes to Firestore.
+
+---
+
+## 8. `fetch_from_firebase`
+- **Description:** Downloads JSON data from Firestore and saves them as local `.json` files in the wiki folder. No login required (public read).
+- **Location:** `wiki/fetch_from_firebase.mjs`
+- **How to run:** `node wiki/fetch_from_firebase.mjs`
+- **Requires:** `npm install` (firebase package)
+- **Files downloaded:**
+  - `mob_configs.json`, `item_configs.json`, `item_values.json`, `crafting_recipes.json`, `chestdata.json`, `shopconfigs.json`, `tile_properties.json`, `tile_to_item_mapping.json`
+- **When to use:** When setting up a new device or syncing the latest Firestore data back to local files.
+
+---
+
 ## Typical Workflow
 
 After making changes to Unity configs, run these commands in order:
