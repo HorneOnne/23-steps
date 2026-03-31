@@ -11,6 +11,10 @@
         rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="stylesheet" href="wiki-theme.css" />
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+    <script src="firebase-config.js"></script>
     <script src="wiki-theme.js"></script>
     <script src="wiki-data.js"></script>
     <style>
@@ -157,6 +161,7 @@
             font-size: 1rem;
             width: 280px;
             font-family: inherit;
+            margin-bottom: 4px;
         }
 
         #login-gate input:focus {
@@ -463,9 +468,10 @@
         <!-- Login Gate -->
         <div id="login-gate">
             <h2>🔒 Admin Access</h2>
-            <input type="password" id="password-input" placeholder="Enter password" autocomplete="off" />
-            <button onclick="tryLogin()">Enter</button>
-            <div id="login-error">Wrong password. Try again.</div>
+            <input type="email" id="email-input" placeholder="Email" autocomplete="email" />
+            <input type="password" id="password-input" placeholder="Password" autocomplete="current-password" />
+            <button onclick="tryLogin()">Sign In</button>
+            <div id="login-error">Login failed. Check your credentials.</div>
         </div>
 
         <!-- Admin Panel (hidden until login) -->
@@ -512,10 +518,6 @@
 
     <script>
         // ── Config ──────────────────────────────────────────
-        // SHA-256 hash of the admin password. Change this to your own.
-        // Default password: "admin123" → hash below
-        var PASSWORD_HASH = '240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9';
-
         var DATA_FILES = [
             'mob_configs.json',
             'item_configs.json',
@@ -532,30 +534,29 @@
         var originalData = {};   // original fetched data per file
         var editorDirty = false;
 
-        // ── Auth ────────────────────────────────────────────
-        async function sha256(text) {
-            var buf = await crypto.subtle.digest('SHA-256',
-                new TextEncoder().encode(text));
-            return Array.from(new Uint8Array(buf))
-                .map(function (b) { return b.toString(16).padStart(2, '0'); })
-                .join('');
-        }
+        // ── Auth (Firebase) ─────────────────────────────────
+        FirebaseConfig.init();
+        var auth = firebase.auth();
 
         async function tryLogin() {
+            var email = document.getElementById('email-input').value;
             var pw = document.getElementById('password-input').value;
-            var hash = await sha256(pw);
-            if (hash === PASSWORD_HASH) {
+            try {
+                await auth.signInWithEmailAndPassword(email, pw);
                 sessionStorage.setItem(SESSION_KEY, '1');
                 showAdmin();
-            } else {
+            } catch (err) {
+                console.error('[Auth]', err.message);
                 document.getElementById('login-error').style.display = 'block';
             }
         }
 
         function logout() {
+            auth.signOut();
             sessionStorage.removeItem(SESSION_KEY);
             document.getElementById('admin-panel').style.display = 'none';
             document.getElementById('login-gate').style.display = 'flex';
+            document.getElementById('email-input').value = '';
             document.getElementById('password-input').value = '';
         }
 
@@ -566,15 +567,25 @@
             switchFile(currentFile);
         }
 
-        // Auto-login if session active
-        if (sessionStorage.getItem(SESSION_KEY) === '1') {
-            document.addEventListener('DOMContentLoaded', showAdmin);
-        }
+        // Auto-login if Firebase session persists
+        auth.onAuthStateChanged(function (user) {
+            if (user) {
+                sessionStorage.setItem(SESSION_KEY, '1');
+                if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', showAdmin);
+                } else {
+                    showAdmin();
+                }
+            }
+        });
 
         // Enter key on password
         document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('password-input').addEventListener('keydown', function (e) {
                 if (e.key === 'Enter') tryLogin();
+            });
+            document.getElementById('email-input').addEventListener('keydown', function (e) {
+                if (e.key === 'Enter') document.getElementById('password-input').focus();
             });
         });
 
@@ -637,13 +648,13 @@
         }
 
         // ── Editor actions ──────────────────────────────────
-        function saveCurrentFile() {
+        async function saveCurrentFile() {
             var editor = document.getElementById('json-editor');
             var text = editor.value.trim();
             try {
                 var parsed = JSON.parse(text);
-                WikiData.save(currentFile, parsed);
-                showToast('Saved ' + currentFile);
+                await WikiData.save(currentFile, parsed);
+                showToast('Saved ' + currentFile + ' to Firestore');
                 updateStatusBadge();
                 buildTabs();
                 hideError();

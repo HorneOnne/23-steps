@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Seed Firestore</title>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+    <script src="firebase-config.js"></script>
+    <style>
+        body { font-family: monospace; padding: 24px; background: #1a1a2e; color: #eee; }
+        button { padding: 12px 24px; font-size: 1rem; cursor: pointer; margin: 8px 4px; border: none; border-radius: 6px; }
+        #seed-btn { background: #2ecc71; color: #fff; }
+        #seed-btn:hover { background: #27ae60; }
+        #login-btn { background: #3498db; color: #fff; }
+        #login-btn:hover { background: #2980b9; }
+        .log { margin-top: 16px; padding: 12px; background: #16213e; border-radius: 8px; max-height: 400px; overflow-y: auto; }
+        .log div { padding: 2px 0; }
+        .ok { color: #2ecc71; }
+        .err { color: #e74c3c; }
+        .info { color: #f1c40f; }
+        input { padding: 8px 12px; margin: 4px; border: 1px solid #444; border-radius: 6px; background: #16213e; color: #eee; font-size: 1rem; }
+    </style>
+</head>
+<body>
+    <h2>Seed Firestore with JSON Data</h2>
+    <p>This uploads your local JSON files to Firestore. You must sign in first.</p>
+
+    <div id="auth-section">
+        <input type="email" id="email" placeholder="Admin email" />
+        <input type="password" id="password" placeholder="Password" />
+        <button id="login-btn" onclick="login()">Sign In</button>
+        <span id="auth-status"></span>
+    </div>
+
+    <br/>
+    <button id="seed-btn" onclick="seedAll()" disabled>Upload All JSON to Firestore</button>
+    <div class="log" id="log"></div>
+
+    <script>
+        FirebaseConfig.init();
+        var auth = firebase.auth();
+        var db = FirebaseConfig.getDb();
+
+        var FILES = [
+            'mob_configs.json',
+            'item_configs.json',
+            'item_values.json',
+            'crafting_recipes.json',
+            'chestdata.json',
+            'shopconfigs.json',
+            'tile_properties.json',
+            'tile_to_item_mapping.json'
+        ];
+
+        function log(msg, cls) {
+            var el = document.getElementById('log');
+            var d = document.createElement('div');
+            d.className = cls || '';
+            d.textContent = msg;
+            el.appendChild(d);
+            el.scrollTop = el.scrollHeight;
+        }
+
+        async function login() {
+            var email = document.getElementById('email').value;
+            var pw = document.getElementById('password').value;
+            try {
+                await auth.signInWithEmailAndPassword(email, pw);
+                document.getElementById('auth-status').textContent = ' Signed in!';
+                document.getElementById('auth-status').style.color = '#2ecc71';
+                document.getElementById('seed-btn').disabled = false;
+                log('Authenticated as ' + email, 'ok');
+            } catch (err) {
+                document.getElementById('auth-status').textContent = ' ' + err.message;
+                document.getElementById('auth-status').style.color = '#e74c3c';
+                log('Auth failed: ' + err.message, 'err');
+            }
+        }
+
+        async function seedAll() {
+            document.getElementById('seed-btn').disabled = true;
+            log('Starting upload...', 'info');
+
+            for (var i = 0; i < FILES.length; i++) {
+                var filename = FILES[i];
+                var docName = filename.replace('.json', '');
+                try {
+                    log('Fetching ' + filename + '...');
+                    var res = await fetch(filename);
+                    if (!res.ok) { log('SKIP: ' + filename + ' (not found)', 'err'); continue; }
+                    var data = await res.json();
+                    log('Uploading ' + docName + ' to Firestore...');
+                    await db.collection('configs').doc(docName).set({ data: data });
+                    log('OK: ' + docName, 'ok');
+                } catch (err) {
+                    log('ERROR: ' + filename + ' — ' + err.message, 'err');
+                }
+            }
+
+            log('Done! All files uploaded.', 'info');
+            document.getElementById('seed-btn').disabled = false;
+        }
+    </script>
+</body>
+</html>
