@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explode The Castle Wiki | 23-Steps</title>
+    <link rel="icon" type="image/png" href="../icon2.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="wiki-theme.css" />
+    <script src="wiki-theme.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; background-image: var(--wiki-body-bg-image); background-repeat: repeat; background-size: 256px 256px; background-color: var(--wiki-bg); color: var(--wiki-text); }
+        body::before { content: ""; position: fixed; inset: 0; background: var(--wiki-bg-overlay); pointer-events: none; z-index: -1; }
+        .wiki-container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; position: relative; z-index: 2;}
+        .wiki-header { text-align: center; margin-bottom: 40px; }
+        .wiki-header h2 { font-family: 'Press Start 2P', cursive; font-size: 2em; color: var(--wiki-heading); }
+        .wiki-section { background: var(--wiki-game-card-bg); border: 1px solid var(--wiki-game-card-border); padding: 20px; border-radius: 10px; margin-bottom: 30px; }
+        .wiki-section h3 { font-family: 'Press Start 2P', cursive; font-size: 1.2em; color: var(--wiki-heading); margin-bottom: 15px; border-bottom: 2px solid var(--wiki-game-card-border); padding-bottom: 10px; }
+        .wiki-list { list-style: none; padding: 0; }
+        .wiki-list li { margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px dashed var(--wiki-game-card-border); }
+        .wiki-list li:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .wiki-list h4 { color: var(--wiki-link-btn-bg); font-size: 1.1em; margin-bottom: 5px; }
+        .back-link { display: inline-block; margin-bottom: 20px; color: var(--wiki-link-btn-bg); text-decoration: none; font-weight: bold; }
+        .back-link:hover { text-decoration: underline; }
+
+        header { background-color: var(--wiki-header-bg); height: 60px; padding: 0 20px; display: flex; justify-content: space-between; align-items: stretch; border-bottom: 1px solid var(--wiki-header-border); position: relative; z-index: 10; }
+        header h1 { font-family: 'Press Start 2P', cursive; font-size: 1.4em; color: var(--wiki-header-title); margin: 0; display: flex; align-items: center; }
+        header h1 a { color: inherit; text-decoration: none; display: flex; align-items: center; }
+        .logo { height: 50px; object-fit: contain; }
+        .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
+        nav { display: flex; align-items: center; }
+        nav a { color: var(--wiki-nav-text); text-decoration: none; font-weight: bold; padding: 0 20px; height: 100%; display: flex; align-items: center; font-size: 0.85em; }
+        nav a.active { background-color: var(--wiki-nav-active-bg); color: var(--wiki-nav-active-text); }
+        nav a:hover:not(.active) { color: var(--wiki-nav-active-text); text-shadow: 0 0 2px rgba(255, 255, 255, 0.3); }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="../index.html">
+                <img src="../images/logo.png" alt="23-Steps" class="logo" />
+                <span class="sr-only">23-Steps</span>
+            </a>
+        </h1>
+        <nav>
+            <a href="../index.html">HOME</a>
+            <a href="../games.html">GAMES</a>
+            <a href="index.html" class="active">WIKI</a>
+            <button class="theme-toggle" title="Toggle light/dark mode" aria-label="Toggle theme">
+                <i class="fas fa-sun icon-sun"></i>
+                <i class="fas fa-moon icon-moon"></i>
+            </button>
+        </nav>
+    </header>
+
+    <div class="wiki-container">
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Wikis</a>
+        
+        <div class="wiki-header">
+            <h2>Explode The Castle Wiki</h2>
+            <p>Everything you need to know to crush your enemies.</p>
+        </div>
+
+        <style>
+            .wiki-table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+            .wiki-table th, .wiki-table td { padding: 12px 15px; border: 1px solid var(--wiki-game-card-border); text-align: left; }
+            .wiki-table th { background-color: var(--wiki-header-bg); color: var(--wiki-heading); font-family: 'Press Start 2P', cursive; font-size: 0.75em; }
+            .wiki-table td { color: var(--wiki-text); vertical-align: middle; }
+            .tile-icon { width: 24px; height: 24px; border-radius: 4px; border: 2px solid rgba(255,255,255,0.2); box-shadow: 0 2px 4px rgba(0,0,0,0.3); display: inline-block; }
+        </style>
+        <div class="wiki-section">
+            <h3>Tiles & Materials</h3>
+            <p style="margin-bottom: 15px;">The castles are built using various materials, each with unique physics properties and hitpoints.</p>
+            <table class="wiki-table">
+                <thead>
+                    <tr>
+                        <th style="width: 40px; text-align: center;">Index</th>
+                        <th style="width: 80px; text-align: center;">Icon</th>
+                        <th style="width: 150px;">Material</th>
+                        <th>Description</th>
+                        <th style="width: 200px;">Recommended Ammo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align: center;"><strong>1</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(150, 100, 50);"></div></td>
+                        <td><strong>Wood</strong></td>
+                        <td>The weakest structural material. Easily broken by any projectile, making it an excellent weak point to target. Flammable.</td>
+                        <td><em>Fireball</em> (Starts fires)</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>2</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(136, 136, 146);"></div></td>
+                        <td><strong>Stone</strong></td>
+                        <td>A sturdy material with high mass. Resistant to light impacts but will crumble under heavy bombardment.</td>
+                        <td><em>Boulder</em> (Pierces through)</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>3</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(180, 220, 245);"></div></td>
+                        <td><strong>Glass</strong></td>
+                        <td>Very brittle but slippery. Shatters easily into pieces upon impact.</td>
+                        <td><em>Splitter</em> (Wide coverage)</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>4</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(222, 187, 107);"></div></td>
+                        <td><strong>Sand</strong></td>
+                        <td>Heavy and dense. Doesn't shatter like glass or wood, but dampens impacts and adds massive weight to structures.</td>
+                        <td><em>IceBomb</em> (Freezes to glass)</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>5</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(40, 110, 210);"></div></td>
+                        <td><strong>Water</strong></td>
+                        <td>Flows naturally and puts out fires. Can be displaced by explosions.</td>
+                        <td><em>IceBomb</em> (Freezes to glass)</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>6</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(255, 100, 20);"></div></td>
+                        <td><strong>Fire</strong></td>
+                        <td>Ignites flammable materials like wood, oil, and gunpowder. Spreads quickly and turns into smoke.</td>
+                        <td><em>Tornado</em> (Blows it away)</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>7</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(90, 90, 100);"></div></td>
+                        <td><strong>Smoke</strong></td>
+                        <td>Rises from fires and dissipates over time. Harmless but obscures vision.</td>
+                        <td><em>Tornado</em> (Clears vision)</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>8</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(160, 130, 90);"></div></td>
+                        <td><strong>Debris</strong></td>
+                        <td>Broken remnants of destroyed structures. Falls like sand and eventually fades away.</td>
+                        <td><em>Tornado</em> (Scatters it)</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>9</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(50, 50, 55);"></div></td>
+                        <td><strong>Gunpowder</strong></td>
+                        <td>Highly explosive powder. Igniting it causes massive chain reactions and huge explosions.</td>
+                        <td><em>Fireball</em> (Ignites)</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>10</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(30, 30, 20);"></div></td>
+                        <td><strong>Oil</strong></td>
+                        <td>Highly flammable liquid. Burns intensely and spreads fire rapidly across surfaces.</td>
+                        <td><em>Fireball</em> (Ignites)</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>11</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(100, 255, 50);"></div></td>
+                        <td><strong>Acid</strong></td>
+                        <td>Corrosive liquid that slowly dissolves wood, stone, sand, and metal on contact.</td>
+                        <td><em>Tornado</em> (Scatters safely)</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>12</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(200, 200, 210);"></div></td>
+                        <td><strong>Metal</strong></td>
+                        <td>Extremely durable and heavy. Highly resistant to physical impacts but can be melted by lava.</td>
+                        <td><em>Lightning / Nuke</em></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>13</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(255, 80, 0);"></div></td>
+                        <td><strong>Lava</strong></td>
+                        <td>Viscous, incredibly hot liquid. Melts metal, glass, and ignites all flammable materials on contact.</td>
+                        <td><em>IceBomb</em> (Cools it)</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>14</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(40, 160, 50);"></div></td>
+                        <td><strong>Plant (Vine)</strong></td>
+                        <td>Static tile that slowly grows and spreads into empty spaces if touching Water or Dirt. Flammable.</td>
+                        <td><em>Fireball</em> (Burns rapidly)</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>15</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(190, 240, 255);"></div></td>
+                        <td><strong>Ice</strong></td>
+                        <td>Slippery static solid. Melts into Water when exposed to Fire or Lava.</td>
+                        <td><em>Fireball</em> (Melts it)</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>16</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(245, 245, 250);"></div></td>
+                        <td><strong>Snow</strong></td>
+                        <td>Falling powder. Melts into Water when exposed to heat.</td>
+                        <td><em>Fireball</em> (Melts it)</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>17</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(90, 70, 50);"></div></td>
+                        <td><strong>Mud</strong></td>
+                        <td>Heavy falling sludge. Over time, it dries out and hardens into Dirt.</td>
+                        <td><em>None</em></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>18</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(120, 80, 40);"></div></td>
+                        <td><strong>Dirt</strong></td>
+                        <td>Basic falling solid. Touching dirt drastically speeds up the growth of Plants.</td>
+                        <td><em>None</em></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>19</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(30, 20, 40);"></div></td>
+                        <td><strong>Obsidian</strong></td>
+                        <td>Extremely hard static solid. Created when Water touches Lava.</td>
+                        <td><em>Boulder</em> (Takes multiple hits)</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>20</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(230, 220, 100);"></div></td>
+                        <td><strong>Sponge</strong></td>
+                        <td>Static material that slowly absorbs adjacent Water cells.</td>
+                        <td><em>Fireball</em> (Burns rapidly)</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>21</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(240, 230, 180);"></div></td>
+                        <td><strong>Wax</strong></td>
+                        <td>Static flammable solid. Melts into Liquid Wax when exposed to heat.</td>
+                        <td><em>Fireball</em> (Melts/Burns)</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>22</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(240, 230, 180); border-radius: 50%;"></div></td>
+                        <td><strong>Liquid Wax</strong></td>
+                        <td>Viscous liquid that solidifies back into Wax over time.</td>
+                        <td><em>None</em></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>23</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(40, 40, 40);"></div></td>
+                        <td><strong>Coal</strong></td>
+                        <td>Hard static solid. Highly flammable and burns very slowly over a long time.</td>
+                        <td><em>Fireball</em> (Ignites)</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>24</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgba(220, 220, 230, 0.6); border-radius: 50%;"></div></td>
+                        <td><strong>Steam</strong></td>
+                        <td>Rising gas. Eventually condenses back into Water over time.</td>
+                        <td><em>None</em></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>25</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgba(180, 220, 180, 0.5); border-radius: 50%;"></div></td>
+                        <td><strong>Natural Gas</strong></td>
+                        <td>Rising gas. Highly explosive when ignited by a spark or fire.</td>
+                        <td><em>Fireball</em> (Massive Explosion)</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>26</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgba(180, 210, 240, 0.3); border-radius: 50%;"></div></td>
+                        <td><strong>Oxygen</strong></td>
+                        <td>Rising gas. Makes adjacent fires burn longer and spread more violently.</td>
+                        <td><em>Fireball</em> (Boosts fire)</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>27</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(200, 50, 150);"></div></td>
+                        <td><strong>Rubber</strong></td>
+                        <td>Extremely bouncy material. Projectiles will bounce off rubber surfaces rapidly without dealing damage!</td>
+                        <td><em>IceBomb</em> (Freezes it)</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>28</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(50, 200, 100);"></div></td>
+                        <td><strong>Slime</strong></td>
+                        <td>Sticky green liquid. Falls downwards but occasionally clings to walls and moves sideways.</td>
+                        <td><em>Tornado</em></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>29</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(100, 30, 150);"></div></td>
+                        <td><strong>Poison</strong></td>
+                        <td>Toxic purple liquid. Instantly kills any Plant cells it touches.</td>
+                        <td><em>Tornado</em></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>30</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(200, 255, 255);"></div></td>
+                        <td><strong>Liquid Nitrogen</strong></td>
+                        <td>Extremely cold liquid that freezes Water into Ice, and shatters organic matter like Plants or Slime on contact. Evaporates into Smoke.</td>
+                        <td><em>Fireball</em></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>31</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(15, 15, 15);"></div></td>
+                        <td><strong>Tar</strong></td>
+                        <td>Very sticky, heavy black sludge. Highly flammable and burns slowly.</td>
+                        <td><em>Fireball</em></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>32</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgba(100, 150, 50, 0.5); border-radius: 50%;"></div></td>
+                        <td><strong>Toxic Gas</strong></td>
+                        <td>Rising green gas. Slowly dissipates over time.</td>
+                        <td><em>Tornado</em></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>33</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(200, 200, 200);"></div></td>
+                        <td><strong>C4</strong></td>
+                        <td>Static grey explosive block. Explodes instantly and violently if touched by Fire or explosions.</td>
+                        <td><em>Fireball</em> (Ignites)</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>34</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(255, 255, 0);"></div></td>
+                        <td><strong>Battery</strong></td>
+                        <td>Static electrical energy block. (Coming Soon: Electrifies water and metal!)</td>
+                        <td><em>Boulder</em></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>35</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(255, 100, 255);"></div></td>
+                        <td><strong>Crystal</strong></td>
+                        <td>Sturdy static transparent block. (Coming Soon: Refracts lasers!)</td>
+                        <td><em>Boulder</em></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>36</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(150, 160, 170);"></div></td>
+                        <td><strong>Mercury</strong></td>
+                        <td>Heavy liquid metal. Falls normally but conducts electricity.</td>
+                        <td><em>Tornado</em></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>37</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(180, 70, 20);"></div></td>
+                        <td><strong>Rust</strong></td>
+                        <td>Static corrosive material. Slowly spreads to adjacent Metal cells, weakening them until they crumble into Debris.</td>
+                        <td><em>Splitter</em></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>38</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(180, 180, 190);"></div></td>
+                        <td><strong>Thermite</strong></td>
+                        <td>Falling powder. When ignited by fire, burns incredibly hot.</td>
+                        <td><em>Fireball</em></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>39</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(255, 100, 150);"></div></td>
+                        <td><strong>Anti-Gravity Sand</strong></td>
+                        <td>Pink powder that ignores gravity and falls UP towards the sky.</td>
+                        <td><em>None</em></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>40</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(50, 0, 200);"></div></td>
+                        <td><strong>Portal</strong></td>
+                        <td>Static magical rift. Any falling object that enters the top of the portal is instantly teleported to a random location in the sky!</td>
+                        <td><em>None</em></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>41</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(0, 255, 200);"></div></td>
+                        <td><strong>Replicator</strong></td>
+                        <td>Static sci-fi machine. Continuously duplicates whatever cell is directly above it and pushes it out below.</td>
+                        <td><em>Boulder</em></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>42</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(10, 10, 10);"></div></td>
+                        <td><strong>AntiMatter</strong></td>
+                        <td>Extremely dense static void block. Instantly annihilates (deletes) any non-empty cell it touches! Very dangerous.</td>
+                        <td><em>Nuke</em></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>43</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(80, 90, 100);"></div></td>
+                        <td><strong>Nanobots</strong></td>
+                        <td>Falling swarm of microscopic robots. Slowly consumes all organic and stone materials, converting them into more Nanobots. Ignores Metal.</td>
+                        <td><em>Fireball</em></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>44</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgba(0, 150, 255, 0.5);"></div></td>
+                        <td><strong>Forcefield</strong></td>
+                        <td>Indestructible sci-fi energy barrier. Blocks all physical objects.</td>
+                        <td><em>None</em></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>45</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(100, 100, 100);"></div></td>
+                        <td><strong>Conveyor</strong></td>
+                        <td>Static mechanical belt. Continuously pushes any object resting on top of it to the right.</td>
+                        <td><em>Boulder</em></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>46</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(20, 0, 40);"></div></td>
+                        <td><strong>Black Hole Sand</strong></td>
+                        <td>Extremely dense powder. (Coming Soon: Pulls nearby objects towards it!)</td>
+                        <td><em>Nuke</em></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>47</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(150, 255, 0);"></div></td>
+                        <td><strong>Radioactive</strong></td>
+                        <td>Glowing green static material. Randomly mutates nearby cells (e.g. Water becomes Poison, Sand becomes Glass, Plant becomes Slime).</td>
+                        <td><em>Splitter</em></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>48</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(200, 0, 200);"></div></td>
+                        <td><strong>Virus</strong></td>
+                        <td>Hyper-aggressive bio-weapon. Rapidly infects and converts all organic material (Plants, Wood, Slime, Mud) into more Virus until it dies out.</td>
+                        <td><em>Fireball</em></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><strong>49</strong></td>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(90, 65, 40);"></div></td>
+                        <td><strong>Ground</strong></td>
+                        <td>Indestructible bedrock foundation of the level. Cannot be destroyed by any means.</td>
+                        <td><em>None</em></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="wiki-section">
+            <h3>Slingshot Mechanics</h3>
+            <p style="margin-bottom: 15px;">Your primary tool for destruction. The slingshot is used to launch boulders and other special ammo at the enemy fortifications.</p>
+            <ul class="wiki-list" style="margin-bottom: 20px;">
+                <li>
+                    <h4>Aiming</h4>
+                    <p>Click and drag back from the slingshot to aim. The further you drag, the more power is applied to the shot.</p>
+                </li>
+                <li>
+                    <h4>Trajectory</h4>
+                    <p>A dotted line will appear to show the predicted trajectory of your projectile. Use this to aim for structural weak points.</p>
+                </li>
+            </ul>
+
+            <h4 style="color: var(--wiki-link-btn-bg); font-family: 'Press Start 2P', cursive; font-size: 1.1em; margin-bottom: 15px;">Ammunition Types</h4>
+            <table class="wiki-table">
+                <thead>
+                    <tr>
+                        <th style="width: 80px; text-align: center;">Icon</th>
+                        <th style="width: 150px;">Ammo Type</th>
+                        <th>Effects & Interactions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(255, 76, 13); border-radius: 50%;"></div></td>
+                        <td><strong>Fireball</strong></td>
+                        <td>Creates a large circular explosion upon impact and scatters <strong>Fire</strong>. Excellent against Wood, Oil, and Gunpowder.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(127, 127, 140); border-radius: 50%;"></div></td>
+                        <td><strong>Boulder</strong></td>
+                        <td>Heavy and dense. Punches deep into structures, piercing through materials before exploding. Best for breaking Stone and Metal.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(255, 216, 38); border-radius: 50%;"></div></td>
+                        <td><strong>Splitter</strong></td>
+                        <td>Tap the screen while in flight to split into three smaller projectiles. Great for covering a wide area or hitting multiple weak points.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(76, 216, 255); border-radius: 50%;"></div></td>
+                        <td><strong>IceBomb</strong></td>
+                        <td>Freezes nearby Sand and Water into brittle <strong>Glass</strong> upon impact, then shatters them, causing structural collapse.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(178, 102, 255); border-radius: 50%;"></div></td>
+                        <td><strong>Lightning</strong></td>
+                        <td>Creates a small explosion at the impact point and calls down a massive vertical lightning bolt from the sky, destroying everything in a column.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(76, 229, 102); border-radius: 50%;"></div></td>
+                        <td><strong>Tornado</strong></td>
+                        <td>Does not explode conventionally. Instead, it creates a vortex that violently scatters loose Debris and Sand outward in a wide ring.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(245, 191, 51); border-radius: 50%;"></div></td>
+                        <td><strong>Nuke</strong></td>
+                        <td>The ultimate tactical megabomb. Causes a colossal, screen-shaking explosion, spawning fire and scattering debris across the entire map.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(255, 25, 51); border-radius: 50%;"></div></td>
+                        <td><strong>Laser</strong></td>
+                        <td>Fires a highly concentrated energy beam that instantly pierces a thin line through the entire level structure, destroying anything in its path.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(51, 0, 102); border-radius: 50%;"></div></td>
+                        <td><strong>Black Hole</strong></td>
+                        <td>Creates a lingering vortex that sucks all loose falling particles (Sand, Water, Debris) towards its center for a few seconds before imploding.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(25, 229, 229); border-radius: 50%;"></div></td>
+                        <td><strong>EMP Grenade</strong></td>
+                        <td>Instantly disables and deletes all Sci-Fi and Electronic tiles (Forcefields, Nanobots, Batteries, etc.) in a massive radius.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(229, 255, 255); border-radius: 50%;"></div></td>
+                        <td><strong>Purifier</strong></td>
+                        <td>Releases a cleansing wave that neutralizes bio-hazards (Virus, Poison, Slime, Radioactive), converting them into harmless Water.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(51, 255, 51); border-radius: 50%;"></div></td>
+                        <td><strong>Acid Flask</strong></td>
+                        <td>Shatters on impact, splattering highly concentrated Acid everywhere. Excellent for melting through thick Metal and Obsidian.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(76, 153, 255); border-radius: 50%;"></div></td>
+                        <td><strong>Water Balloon</strong></td>
+                        <td>Splashes a massive amount of water. Puts out raging fires, cools Lava into Obsidian, and washes away Mud.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><div class="tile-icon" style="background-color: rgb(255, 127, 255); border-radius: 50%;"></div></td>
+                        <td><strong>Transmuter</strong></td>
+                        <td>A bizarre magical projectile that scrambles all materials it touches into random new materials! Very unpredictable.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="wiki-section">
+            <h3>Levels</h3>
+            <ul class="wiki-list">
+                <li>
+                    <h4>Procedural Generation</h4>
+                    <p>The game features an infinite number of procedurally generated levels, with 35 distinct architectural styles (from floating pyramids to twin towers).</p>
+                </li>
+                <li>
+                    <h4>Win Condition</h4>
+                    <p>To win a level, you must destroy all enemy entities by crushing them under falling debris or hitting them directly with projectiles.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
