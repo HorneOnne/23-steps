@@ -1,0 +1,5380 @@
+var ITEM_CONFIGS = {
+  "ItemConfigs": [
+    {
+      "ItemID": "dirt",
+      "ItemType": "Resource",
+      "Name": "Dirt",
+      "Description": "Humble, plentiful, and surprisingly useful.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 0.0,
+      "ResourceConfig": {
+        "IsRaw": false,
+        "IsCraftingMaterial": false
+      }
+    },
+    {
+      "ItemID": "ad_key",
+      "ItemType": "Resource",
+      "Name": "Ad Key",
+      "Description": "Otherworldly key. Watch the right thing to earn entry.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 0.0,
+      "ResourceConfig": {
+        "IsRaw": false,
+        "IsCraftingMaterial": false
+      }
+    },
+    {
+      "ItemID": "rare_key",
+      "ItemType": "Resource",
+      "Name": "Rare Key",
+      "Description": "Finely crafted key for extraordinary chests.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 0.0,
+      "ResourceConfig": {
+        "IsRaw": false,
+        "IsCraftingMaterial": false
+      }
+    },
+    {
+      "ItemID": "mythic_key",
+      "ItemType": "Resource",
+      "Name": "Mythic Key",
+      "Description": "Opens a chest never found twice in the same place.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Epic",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 0.0,
+      "ResourceConfig": {
+        "IsRaw": false,
+        "IsCraftingMaterial": false
+      }
+    },
+    {
+      "ItemID": "divine_key",
+      "ItemType": "Resource",
+      "Name": "Divine Key",
+      "Description": "God-forged key for the most forbidden chests.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Legendary",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 0.0,
+      "ResourceConfig": {
+        "IsRaw": false,
+        "IsCraftingMaterial": false
+      }
+    },
+    {
+      "ItemID": "log",
+      "ItemType": "Resource",
+      "Name": "Log",
+      "Description": "Fresh-felled trunk. The backbone of early crafting.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 0.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "wooden_sword",
+      "ItemType": "Sword",
+      "Name": "Wooden Sword",
+      "Description": "4 damage\n2% critical strike chance\n1 knockback",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.5,
+      "SwordConfig": {
+        "AttackDamage": 8.0,
+        "KnockbackForce": 2.0
+      }
+    },
+    {
+      "ItemID": "copper_sword",
+      "ItemType": "Sword",
+      "Name": "Copper Sword",
+      "Description": "7 damage\n3% critical strike chance\n3.5 knockback",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 2.5,
+      "SwordConfig": {
+        "AttackDamage": 14.0,
+        "KnockbackForce": 3.5
+      }
+    },
+    {
+      "ItemID": "tin_sword",
+      "ItemType": "Sword",
+      "Name": "Tin Sword",
+      "Description": "8 damage\n4% critical strike chance\n3.6 knockback",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 3.35,
+      "SwordConfig": {
+        "AttackDamage": 8.0,
+        "KnockbackForce": 3.6
+      }
+    },
+    {
+      "ItemID": "lead_sword",
+      "ItemType": "Sword",
+      "Name": "Lead Sword",
+      "Description": "9 damage\n4.5% critical strike chance\n3.7 knockback",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 3.3,
+      "SwordConfig": {
+        "AttackDamage": 9.0,
+        "KnockbackForce": 3.7
+      }
+    },
+    {
+      "ItemID": "iron_sword",
+      "ItemType": "Sword",
+      "Name": "Iron Sword",
+      "Description": "11 damage\n5% critical strike chance\n4 knockback",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 3.2,
+      "SwordConfig": {
+        "AttackDamage": 11.0,
+        "KnockbackForce": 4.0
+      }
+    },
+    {
+      "ItemID": "silver_sword",
+      "ItemType": "Sword",
+      "Name": "Silver Sword",
+      "Description": "15 damage\n7% critical strike chance\n4.5 knockback",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 3.0,
+      "SwordConfig": {
+        "AttackDamage": 15.0,
+        "KnockbackForce": 4.5
+      }
+    },
+    {
+      "ItemID": "tungsten_sword",
+      "ItemType": "Sword",
+      "Name": "Tungsten Sword",
+      "Description": "19 damage\n8% critical strike chance\n4.8 knockback",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 2.8,
+      "SwordConfig": {
+        "AttackDamage": 19.0,
+        "KnockbackForce": 4.8
+      }
+    },
+    {
+      "ItemID": "gold_sword",
+      "ItemType": "Sword",
+      "Name": "Gold Sword",
+      "Description": "18 damage\n10% critical strike chance\n4.75 knockback",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Epic",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 3.1,
+      "SwordConfig": {
+        "AttackDamage": 18.0,
+        "KnockbackForce": 4.75
+      }
+    },
+    {
+      "ItemID": "platinum_sword",
+      "ItemType": "Sword",
+      "Name": "Platinum Sword",
+      "Description": "22 damage\n12% critical strike chance\n5 knockback",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Epic",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 2.7,
+      "SwordConfig": {
+        "AttackDamage": 22.0,
+        "KnockbackForce": 5.0
+      }
+    },
+    {
+      "ItemID": "torch",
+      "ItemType": "Utility",
+      "Name": "Torch",
+      "Description": "Gel and wood bound together \u2014 a miner's best friend.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "UtilityConfig": {
+        "IsPlaceable": false,
+        "PlaceablePrefabPath": "",
+        "HasUseEffect": false
+      }
+    },
+    {
+      "ItemID": "wooden_pickaxe",
+      "ItemType": "Pickaxe",
+      "Name": "Wooden Pickaxe",
+      "Description": "1 damage\n1 knockback\n2 mining power",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 2.0,
+      "PickaxeConfig": {
+        "MiningPower": 2,
+        "AttackDamage": 1.0,
+        "KnockbackForce": 1.0
+      }
+    },
+    {
+      "ItemID": "copper_pickaxe",
+      "ItemType": "Pickaxe",
+      "Name": "Copper Pickaxe",
+      "Description": "2 damage\n1.5 knockback\n4 mining power",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 2.5,
+      "PickaxeConfig": {
+        "MiningPower": 4,
+        "AttackDamage": 2.0,
+        "KnockbackForce": 1.5
+      }
+    },
+    {
+      "ItemID": "tin_pickaxe",
+      "ItemType": "Pickaxe",
+      "Name": "Tin Pickaxe",
+      "Description": "2.5 damage\n1.75 knockback\n5 mining power",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.5,
+      "PickaxeConfig": {
+        "MiningPower": 5,
+        "AttackDamage": 2.5,
+        "KnockbackForce": 1.75
+      }
+    },
+    {
+      "ItemID": "lead_pickaxe",
+      "ItemType": "Pickaxe",
+      "Name": "Lead Pickaxe",
+      "Description": "3.5 damage\n2.25 knockback\n7 mining power",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.5,
+      "PickaxeConfig": {
+        "MiningPower": 7,
+        "AttackDamage": 3.5,
+        "KnockbackForce": 2.25
+      }
+    },
+    {
+      "ItemID": "iron_pickaxe",
+      "ItemType": "Pickaxe",
+      "Name": "Iron Pickaxe",
+      "Description": "3 damage\n2 knockback\n6 mining power",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.5,
+      "PickaxeConfig": {
+        "MiningPower": 6,
+        "AttackDamage": 3.0,
+        "KnockbackForce": 2.0
+      }
+    },
+    {
+      "ItemID": "silver_pickaxe",
+      "ItemType": "Pickaxe",
+      "Name": "Silver Pickaxe",
+      "Description": "4 damage\n2.5 knockback\n8 mining power",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.5,
+      "PickaxeConfig": {
+        "MiningPower": 8,
+        "AttackDamage": 4.0,
+        "KnockbackForce": 2.5
+      }
+    },
+    {
+      "ItemID": "tungsten_pickaxe",
+      "ItemType": "Pickaxe",
+      "Name": "Tungsten Pickaxe",
+      "Description": "4.5 damage\n2.75 knockback\n9 mining power",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.5,
+      "PickaxeConfig": {
+        "MiningPower": 9,
+        "AttackDamage": 4.5,
+        "KnockbackForce": 2.75
+      }
+    },
+    {
+      "ItemID": "gold_pickaxe",
+      "ItemType": "Pickaxe",
+      "Name": "Gold Pickaxe",
+      "Description": "5 damage\n3 knockback\n10 mining power",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Epic",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.5,
+      "PickaxeConfig": {
+        "MiningPower": 10,
+        "AttackDamage": 5.0,
+        "KnockbackForce": 3.0
+      }
+    },
+    {
+      "ItemID": "platinum_pickaxe",
+      "ItemType": "Pickaxe",
+      "Name": "Platinum Pickaxe",
+      "Description": "5.5 damage\n3.25 knockback\n11 mining power",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Epic",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.5,
+      "PickaxeConfig": {
+        "MiningPower": 11,
+        "AttackDamage": 5.5,
+        "KnockbackForce": 3.25
+      }
+    },
+    {
+      "ItemID": "wooden_bow",
+      "ItemType": "Bow",
+      "Name": "Wooden Bow",
+      "Description": "5 damage\n2% critical strike chance\n2 knockback",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": -0.15,
+        "normalized": {
+          "x": 1.0,
+          "y": 0.0,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 0.25,
+        "sqrMagnitude": 0.0625
+      },
+      "AngleZ": 45.0,
+      "UseSpeed": 5.0,
+      "BowConfig": {
+        "AttackDamage": 5.0,
+        "ProjectileSpeed": 10.0,
+        "KnockbackForce": 2.0,
+        "Range": 10.0,
+        "GravityModifier": 1.0
+      }
+    },
+    {
+      "ItemID": "copper_bow",
+      "ItemType": "Bow",
+      "Name": "Copper Bow",
+      "Description": "7 damage\n3% critical strike chance\n2 knockback",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.25,
+        "y": 0.0,
+        "normalized": {
+          "x": 1.0,
+          "y": 0.0,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 0.25,
+        "sqrMagnitude": 0.0625
+      },
+      "AngleZ": 135.0,
+      "UseSpeed": 4.9,
+      "BowConfig": {
+        "AttackDamage": 7.0,
+        "ProjectileSpeed": 11.0,
+        "KnockbackForce": 2.0,
+        "Range": 10.0,
+        "GravityModifier": 0.9
+      }
+    },
+    {
+      "ItemID": "tin_bow",
+      "ItemType": "Bow",
+      "Name": "Tin Bow",
+      "Description": "8 damage\n4% critical strike chance\n2 knockback",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.25,
+        "y": 0.0,
+        "normalized": {
+          "x": 1.0,
+          "y": 0.0,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 0.25,
+        "sqrMagnitude": 0.0625
+      },
+      "AngleZ": 135.0,
+      "UseSpeed": 4.85,
+      "BowConfig": {
+        "AttackDamage": 8.0,
+        "ProjectileSpeed": 12.0,
+        "KnockbackForce": 2.0,
+        "Range": 10.0,
+        "GravityModifier": 0.85
+      }
+    },
+    {
+      "ItemID": "lead_bow",
+      "ItemType": "Bow",
+      "Name": "Lead Bow",
+      "Description": "9 damage\n4.5% critical strike chance\n2 knockback",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.25,
+        "y": 0.0,
+        "normalized": {
+          "x": 1.0,
+          "y": 0.0,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 0.25,
+        "sqrMagnitude": 0.0625
+      },
+      "AngleZ": 135.0,
+      "UseSpeed": 4.8,
+      "BowConfig": {
+        "AttackDamage": 9.0,
+        "ProjectileSpeed": 13.0,
+        "KnockbackForce": 2.0,
+        "Range": 10.0,
+        "GravityModifier": 0.8
+      }
+    },
+    {
+      "ItemID": "iron_bow",
+      "ItemType": "Bow",
+      "Name": "Iron Bow",
+      "Description": "11 damage\n5% critical strike chance\n2 knockback",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.25,
+        "y": 0.0,
+        "normalized": {
+          "x": 1.0,
+          "y": 0.0,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 0.25,
+        "sqrMagnitude": 0.0625
+      },
+      "AngleZ": 135.0,
+      "UseSpeed": 4.7,
+      "BowConfig": {
+        "AttackDamage": 11.0,
+        "ProjectileSpeed": 14.0,
+        "KnockbackForce": 2.0,
+        "Range": 10.0,
+        "GravityModifier": 0.75
+      }
+    },
+    {
+      "ItemID": "silver_bow",
+      "ItemType": "Bow",
+      "Name": "Silver Bow",
+      "Description": "15 damage\n7% critical strike chance\n2 knockback",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.25,
+        "y": 0.0,
+        "normalized": {
+          "x": 1.0,
+          "y": 0.0,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 0.25,
+        "sqrMagnitude": 0.0625
+      },
+      "AngleZ": 135.0,
+      "UseSpeed": 4.6,
+      "BowConfig": {
+        "AttackDamage": 15.0,
+        "ProjectileSpeed": 15.0,
+        "KnockbackForce": 2.0,
+        "Range": 10.0,
+        "GravityModifier": 0.65
+      }
+    },
+    {
+      "ItemID": "tungsten_bow",
+      "ItemType": "Bow",
+      "Name": "Tungsten Bow",
+      "Description": "19 damage\n8% critical strike chance\n2 knockback",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.25,
+        "y": 0.0,
+        "normalized": {
+          "x": 1.0,
+          "y": 0.0,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 0.25,
+        "sqrMagnitude": 0.0625
+      },
+      "AngleZ": 135.0,
+      "UseSpeed": 4.5,
+      "BowConfig": {
+        "AttackDamage": 19.0,
+        "ProjectileSpeed": 16.0,
+        "KnockbackForce": 2.0,
+        "Range": 10.0,
+        "GravityModifier": 0.55
+      }
+    },
+    {
+      "ItemID": "gold_bow",
+      "ItemType": "Bow",
+      "Name": "Gold Bow",
+      "Description": "18 damage\n10% critical strike chance\n2 knockback",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Epic",
+      "Offset": {
+        "x": 0.25,
+        "y": 0.0,
+        "normalized": {
+          "x": 1.0,
+          "y": 0.0,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 0.25,
+        "sqrMagnitude": 0.0625
+      },
+      "AngleZ": 135.0,
+      "UseSpeed": 4.55,
+      "BowConfig": {
+        "AttackDamage": 18.0,
+        "ProjectileSpeed": 15.5,
+        "KnockbackForce": 2.0,
+        "Range": 10.0,
+        "GravityModifier": 0.45
+      }
+    },
+    {
+      "ItemID": "platinum_bow",
+      "ItemType": "Bow",
+      "Name": "Platinum Bow",
+      "Description": "22 damage\n12% critical strike chance\n2 knockback",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Epic",
+      "Offset": {
+        "x": 0.25,
+        "y": 0.0,
+        "normalized": {
+          "x": 1.0,
+          "y": 0.0,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 0.25,
+        "sqrMagnitude": 0.0625
+      },
+      "AngleZ": 135.0,
+      "UseSpeed": 4.4,
+      "BowConfig": {
+        "AttackDamage": 22.0,
+        "ProjectileSpeed": 17.0,
+        "KnockbackForce": 2.0,
+        "Range": 10.0,
+        "GravityModifier": 0.35
+      }
+    },
+    {
+      "ItemID": "wooden_arrow",
+      "ItemType": "Resource",
+      "Name": "Wooden Arrow",
+      "Description": "Swift, straight, and deadly. Pack plenty.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "fire_arrow",
+      "ItemType": "Resource",
+      "Name": "Fire Arrow",
+      "Description": "An arrow tipped with blazing fire. Sets enemies ablaze.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": false,
+        "IsCraftingMaterial": false
+      }
+    },
+    {
+      "ItemID": "poison_arrow",
+      "ItemType": "Resource",
+      "Name": "Poison Arrow",
+      "Description": "An arrow coated in venom. Slowly drains the life of its target.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": false,
+        "IsCraftingMaterial": false
+      }
+    },
+    {
+      "ItemID": "coal",
+      "ItemType": "Resource",
+      "Name": "Coal",
+      "Description": "Ancient compressed wood. Burns hot and long.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "sand",
+      "ItemType": "Resource",
+      "Name": "Sand",
+      "Description": "Tiny grains, great for glass.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "copper_helmet",
+      "ItemType": "Armor",
+      "Name": "Copper Helmet",
+      "Description": "Equiptable\n3 defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ArmorConfig": {
+        "ArmorType": 0,
+        "Defense": 3.0,
+        "SetName": "copper",
+        "MagicDefense": 0.0
+      }
+    },
+    {
+      "ItemID": "copper_chestplate",
+      "ItemType": "Armor",
+      "Name": "Copper Chestplate",
+      "Description": "Equiptable\n5 defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ArmorConfig": {
+        "ArmorType": 1,
+        "Defense": 5.0,
+        "SetName": "copper",
+        "MagicDefense": 0.0
+      }
+    },
+    {
+      "ItemID": "tin_helmet",
+      "ItemType": "Armor",
+      "Name": "Tin Helmet",
+      "Description": "Equiptable\n3.5 defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ArmorConfig": {
+        "ArmorType": 0,
+        "Defense": 3.5,
+        "SetName": "tin",
+        "MagicDefense": 0.0
+      }
+    },
+    {
+      "ItemID": "tin_chestplate",
+      "ItemType": "Armor",
+      "Name": "Tin Chestplate",
+      "Description": "Equiptable\n5.5 defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ArmorConfig": {
+        "ArmorType": 1,
+        "Defense": 5.5,
+        "SetName": "tin",
+        "MagicDefense": 0.0
+      }
+    },
+    {
+      "ItemID": "lead_helmet",
+      "ItemType": "Armor",
+      "Name": "Lead Helmet",
+      "Description": "Equiptable\n4 defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ArmorConfig": {
+        "ArmorType": 0,
+        "Defense": 4.0,
+        "SetName": "lead",
+        "MagicDefense": 0.0
+      }
+    },
+    {
+      "ItemID": "lead_chestplate",
+      "ItemType": "Armor",
+      "Name": "Lead Chestplate",
+      "Description": "Equiptable\n6 defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ArmorConfig": {
+        "ArmorType": 1,
+        "Defense": 6.0,
+        "SetName": "lead",
+        "MagicDefense": 0.0
+      }
+    },
+    {
+      "ItemID": "iron_helmet",
+      "ItemType": "Armor",
+      "Name": "Iron Helmet",
+      "Description": "Equiptable\n4.5 defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ArmorConfig": {
+        "ArmorType": 0,
+        "Defense": 4.5,
+        "SetName": "iron",
+        "MagicDefense": 0.0
+      }
+    },
+    {
+      "ItemID": "iron_chestplate",
+      "ItemType": "Armor",
+      "Name": "Iron Chestplate",
+      "Description": "Equiptable\n6.5 defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ArmorConfig": {
+        "ArmorType": 1,
+        "Defense": 6.5,
+        "SetName": "iron",
+        "MagicDefense": 0.0
+      }
+    },
+    {
+      "ItemID": "amberstone_helmet",
+      "ItemType": "Armor",
+      "Name": "Amberstone Helmet",
+      "Description": "Equiptable\n5 defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ArmorConfig": {
+        "ArmorType": 0,
+        "Defense": 5.0,
+        "SetName": "amberstone",
+        "MagicDefense": 0.0
+      }
+    },
+    {
+      "ItemID": "amberstone_chestplate",
+      "ItemType": "Armor",
+      "Name": "Amberstone Chestplate",
+      "Description": "Equiptable\n7 defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ArmorConfig": {
+        "ArmorType": 1,
+        "Defense": 7.0,
+        "SetName": "amberstone",
+        "MagicDefense": 0.0
+      }
+    },
+    {
+      "ItemID": "silver_helmet",
+      "ItemType": "Armor",
+      "Name": "Silver Helmet",
+      "Description": "Equiptable\n5.5 defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ArmorConfig": {
+        "ArmorType": 0,
+        "Defense": 5.5,
+        "SetName": "silver",
+        "MagicDefense": 0.0
+      }
+    },
+    {
+      "ItemID": "silver_chestplate",
+      "ItemType": "Armor",
+      "Name": "Silver Chestplate",
+      "Description": "Equiptable\n7.5 defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ArmorConfig": {
+        "ArmorType": 1,
+        "Defense": 7.5,
+        "SetName": "silver",
+        "MagicDefense": 0.0
+      }
+    },
+    {
+      "ItemID": "tungsten_helmet",
+      "ItemType": "Armor",
+      "Name": "Tungsten Helmet",
+      "Description": "Equiptable\n6 defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ArmorConfig": {
+        "ArmorType": 0,
+        "Defense": 6.0,
+        "SetName": "tungsten",
+        "MagicDefense": 0.0
+      }
+    },
+    {
+      "ItemID": "tungsten_chestplate",
+      "ItemType": "Armor",
+      "Name": "Tungsten Chestplate",
+      "Description": "Equiptable\n8 defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ArmorConfig": {
+        "ArmorType": 1,
+        "Defense": 8.0,
+        "SetName": "tungsten",
+        "MagicDefense": 0.0
+      }
+    },
+    {
+      "ItemID": "gold_helmet",
+      "ItemType": "Armor",
+      "Name": "Gold Helmet",
+      "Description": "Equiptable\n6.5 defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Epic",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ArmorConfig": {
+        "ArmorType": 0,
+        "Defense": 6.5,
+        "SetName": "gold",
+        "MagicDefense": 0.0
+      }
+    },
+    {
+      "ItemID": "gold_chestplate",
+      "ItemType": "Armor",
+      "Name": "Gold Chestplate",
+      "Description": "Equiptable\n8.5 defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Epic",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ArmorConfig": {
+        "ArmorType": 1,
+        "Defense": 8.5,
+        "SetName": "gold",
+        "MagicDefense": 0.0
+      }
+    },
+    {
+      "ItemID": "platinum_helmet",
+      "ItemType": "Armor",
+      "Name": "Platinum Helmet",
+      "Description": "Equiptable\n7 defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Epic",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ArmorConfig": {
+        "ArmorType": 0,
+        "Defense": 7.0,
+        "SetName": "platinum",
+        "MagicDefense": 0.0
+      }
+    },
+    {
+      "ItemID": "platinum_chestplate",
+      "ItemType": "Armor",
+      "Name": "Platinum Chestplate",
+      "Description": "Equiptable\n9 defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Epic",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ArmorConfig": {
+        "ArmorType": 1,
+        "Defense": 9.0,
+        "SetName": "platinum",
+        "MagicDefense": 0.0
+      }
+    },
+    {
+      "ItemID": "gel",
+      "ItemType": "Resource",
+      "Name": "Gel",
+      "Description": "Slimy crafting material from defeated slimes.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "mushroom",
+      "ItemType": "Resource",
+      "Name": "Mushroom",
+      "Description": "Dark-grown cave fungi. An alchemist's favourite.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "copper_ore",
+      "ItemType": "Resource",
+      "Name": "Copper Ore",
+      "Description": "Reddish-brown ore near the surface.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "iron_ore",
+      "ItemType": "Resource",
+      "Name": "Iron Ore",
+      "Description": "Dense grey ore forged in the earth's depths.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "silver_ore",
+      "ItemType": "Resource",
+      "Name": "Silver Ore",
+      "Description": "Gleams softly in torchlight.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "gold_ore",
+      "ItemType": "Resource",
+      "Name": "Gold Ore",
+      "Description": "Glittering veins of fortune buried deep.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Epic",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "copper_ingot",
+      "ItemType": "Resource",
+      "Name": "Copper Ingot",
+      "Description": "Smelted copper, ready to be shaped.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "iron_ingot",
+      "ItemType": "Resource",
+      "Name": "Iron Ingot",
+      "Description": "Cold, heavy, and unyielding.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "silver_ingot",
+      "ItemType": "Resource",
+      "Name": "Silver Ingot",
+      "Description": "Pure refined silver with a faint blessing.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "gold_ingot",
+      "ItemType": "Resource",
+      "Name": "Gold Ingot",
+      "Description": "Gleaming and precious. The most coveted metal.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Epic",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "diamond",
+      "ItemType": "Resource",
+      "Name": "Diamond",
+      "Description": "Hardest stone known. Clear and twice as rare.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "ruby",
+      "ItemType": "Resource",
+      "Name": "Ruby",
+      "Description": "Deep crimson gemstone burning with inner fire.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "emerald",
+      "ItemType": "Resource",
+      "Name": "Emerald",
+      "Description": "Lush green gem forged in the cold dark below.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "sapphire",
+      "ItemType": "Resource",
+      "Name": "Sapphire",
+      "Description": "Blue as midnight sky. Mages covet this stone.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "topaz",
+      "ItemType": "Resource",
+      "Name": "Topaz",
+      "Description": "Warm golden gem that catches light like sunrise.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "aquamarine",
+      "ItemType": "Resource",
+      "Name": "Aquamarine",
+      "Description": "Pale blue translucent gem, like frozen seawater.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "spessartite_garnet",
+      "ItemType": "Resource",
+      "Name": "Spessartite Garnet",
+      "Description": "Fiery orange gem prized for volatile energy.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "amethyst",
+      "ItemType": "Resource",
+      "Name": "Amethyst",
+      "Description": "Deep violet crystal used in enchanting rituals.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "morganite",
+      "ItemType": "Resource",
+      "Name": "Morganite",
+      "Description": "Blushing pink gemstone, rare and delicate.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "onyx",
+      "ItemType": "Resource",
+      "Name": "Onyx",
+      "Description": "Pitch black and smooth as shadow.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "health_potion_i",
+      "ItemType": "Consumable",
+      "Name": "Health Potion I",
+      "Description": "Restore 50 Health",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ConsumableConfig": {
+        "HealthRestore": 50.0,
+        "StaminaRestore": 0.0,
+        "UseDuration": 1.0,
+        "HasStatusEffect": true,
+        "StatusEffectType": "HealthPotionSeal",
+        "EffectDuration": 30.0,
+        "EffectIntensity": 1.0,
+        "EffectDescription": "",
+        "ManaRestore": 0.0,
+        "EnergyRestore": 0.0
+      }
+    },
+    {
+      "ItemID": "health_potion_ii",
+      "ItemType": "Consumable",
+      "Name": "Health Potion II",
+      "Description": "Restore 100 Health",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ConsumableConfig": {
+        "HealthRestore": 100.0,
+        "StaminaRestore": 0.0,
+        "UseDuration": 1.0,
+        "HasStatusEffect": true,
+        "StatusEffectType": "HealthPotionSeal",
+        "EffectDuration": 30.0,
+        "EffectIntensity": 1.0,
+        "EffectDescription": "",
+        "ManaRestore": 0.0,
+        "EnergyRestore": 0.0
+      }
+    },
+    {
+      "ItemID": "health_potion_iii",
+      "ItemType": "Consumable",
+      "Name": "Health Potion III",
+      "Description": "Restore 150 Health",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ConsumableConfig": {
+        "HealthRestore": 150.0,
+        "StaminaRestore": 0.0,
+        "UseDuration": 1.0,
+        "HasStatusEffect": true,
+        "StatusEffectType": "HealthPotionSeal",
+        "EffectDuration": 30.0,
+        "EffectIntensity": 1.0,
+        "EffectDescription": "",
+        "ManaRestore": 0.0,
+        "EnergyRestore": 0.0
+      }
+    },
+    {
+      "ItemID": "health_potion_iv",
+      "ItemType": "Consumable",
+      "Name": "Health Potion IV",
+      "Description": "Restore 200 Health",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Epic",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ConsumableConfig": {
+        "HealthRestore": 200.0,
+        "StaminaRestore": 0.0,
+        "UseDuration": 1.0,
+        "HasStatusEffect": true,
+        "StatusEffectType": "HealthPotionSeal",
+        "EffectDuration": 30.0,
+        "EffectIntensity": 1.0,
+        "EffectDescription": "",
+        "ManaRestore": 0.0,
+        "EnergyRestore": 0.0
+      }
+    },
+    {
+      "ItemID": "health_potion_v",
+      "ItemType": "Consumable",
+      "Name": "Health Potion V",
+      "Description": "Restore 250 Health",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Legendary",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ConsumableConfig": {
+        "HealthRestore": 250.0,
+        "StaminaRestore": 0.0,
+        "UseDuration": 1.0,
+        "HasStatusEffect": true,
+        "StatusEffectType": "HealthPotionSeal",
+        "EffectDuration": 30.0,
+        "EffectIntensity": 1.0,
+        "EffectDescription": "",
+        "ManaRestore": 0.0,
+        "EnergyRestore": 0.0
+      }
+    },
+    {
+      "ItemID": "regenerate_potion_i",
+      "ItemType": "Consumable",
+      "Name": "Regeneration Potion I",
+      "Description": "Heals 2 HP/sec for 30 seconds.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ConsumableConfig": {
+        "HealthRestore": 0.0,
+        "StaminaRestore": 0.0,
+        "UseDuration": 1.0,
+        "HasStatusEffect": true,
+        "StatusEffectType": "Regeneration",
+        "EffectDuration": 30.0,
+        "EffectIntensity": 2.0,
+        "EffectDescription": "",
+        "ManaRestore": 0.0,
+        "EnergyRestore": 0.0
+      }
+    },
+    {
+      "ItemID": "regenerate_potion_ii",
+      "ItemType": "Consumable",
+      "Name": "Regeneration Potion II",
+      "Description": "Heals 4 HP/sec for 30 seconds.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ConsumableConfig": {
+        "HealthRestore": 0.0,
+        "StaminaRestore": 0.0,
+        "UseDuration": 1.0,
+        "HasStatusEffect": true,
+        "StatusEffectType": "Regeneration",
+        "EffectDuration": 30.0,
+        "EffectIntensity": 4.0,
+        "EffectDescription": "",
+        "ManaRestore": 0.0,
+        "EnergyRestore": 0.0
+      }
+    },
+    {
+      "ItemID": "regenerate_potion_iii",
+      "ItemType": "Consumable",
+      "Name": "Regeneration Potion III",
+      "Description": "Heals 6 HP/sec for 30 seconds.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ConsumableConfig": {
+        "HealthRestore": 0.0,
+        "StaminaRestore": 0.0,
+        "UseDuration": 1.0,
+        "HasStatusEffect": true,
+        "StatusEffectType": "Regeneration",
+        "EffectDuration": 30.0,
+        "EffectIntensity": 6.0,
+        "EffectDescription": "",
+        "ManaRestore": 0.0,
+        "EnergyRestore": 0.0
+      }
+    },
+    {
+      "ItemID": "regenerate_potion_iv",
+      "ItemType": "Consumable",
+      "Name": "Regeneration Potion IV",
+      "Description": "Heals 8 HP/sec for 30 seconds.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Epic",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ConsumableConfig": {
+        "HealthRestore": 0.0,
+        "StaminaRestore": 0.0,
+        "UseDuration": 1.0,
+        "HasStatusEffect": true,
+        "StatusEffectType": "Regeneration",
+        "EffectDuration": 30.0,
+        "EffectIntensity": 8.0,
+        "EffectDescription": "",
+        "ManaRestore": 0.0,
+        "EnergyRestore": 0.0
+      }
+    },
+    {
+      "ItemID": "regenerate_potion_v",
+      "ItemType": "Consumable",
+      "Name": "Regeneration Potion V",
+      "Description": "Heals 10 HP/sec for 30 seconds.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Legendary",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ConsumableConfig": {
+        "HealthRestore": 0.0,
+        "StaminaRestore": 0.0,
+        "UseDuration": 1.0,
+        "HasStatusEffect": true,
+        "StatusEffectType": "Regeneration",
+        "EffectDuration": 30.0,
+        "EffectIntensity": 10.0,
+        "EffectDescription": "",
+        "ManaRestore": 0.0,
+        "EnergyRestore": 0.0
+      }
+    },
+    {
+      "ItemID": "swiftness_potion_i",
+      "ItemType": "Consumable",
+      "Name": "Swiftness Potion I",
+      "Description": "Increases Movement Speed By 20% For 4 Minutes.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ConsumableConfig": {
+        "HealthRestore": 0.0,
+        "StaminaRestore": 0.0,
+        "UseDuration": 1.0,
+        "HasStatusEffect": true,
+        "StatusEffectType": "Speed",
+        "EffectDuration": 240.0,
+        "EffectIntensity": 0.2,
+        "EffectDescription": "",
+        "ManaRestore": 0.0,
+        "EnergyRestore": 0.0
+      }
+    },
+    {
+      "ItemID": "swiftness_potion_ii",
+      "ItemType": "Consumable",
+      "Name": "Swiftness Potion II",
+      "Description": "Increases Movement Speed By 40% For 8 Minutes.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ConsumableConfig": {
+        "HealthRestore": 0.0,
+        "StaminaRestore": 0.0,
+        "UseDuration": 1.0,
+        "HasStatusEffect": true,
+        "StatusEffectType": "Speed",
+        "EffectDuration": 480.0,
+        "EffectIntensity": 0.4,
+        "EffectDescription": "",
+        "ManaRestore": 0.0,
+        "EnergyRestore": 0.0
+      }
+    },
+    {
+      "ItemID": "cobalt_trident",
+      "ItemType": "Sword",
+      "Name": "Cobalt Trident",
+      "Description": "150 damage\n50% critical strike chance\n3 knockback",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Legendary",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "SwordConfig": {
+        "AttackDamage": 150.0,
+        "KnockbackForce": 3.0
+      }
+    },
+    {
+      "ItemID": "wooden_wand",
+      "ItemType": "Staff",
+      "Name": "Wooden Wand",
+      "Description": "A humble wand carved from knotted wood.",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "StaffConfig": {
+        "ProjectileOffset": {
+          "x": 0.175,
+          "y": 0.18
+        },
+        "MagicDamage": 8.0,
+        "ManaCost": 5.0,
+        "KnockbackForce": 1.0,
+        "Range": 8.0,
+        "ProjectileSpeed": 6.0
+      }
+    },
+    {
+      "ItemID": "stone",
+      "ItemType": "Resource",
+      "Name": "Stone",
+      "Description": "Solid, sturdy. Foundation of any structure.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "clay",
+      "ItemType": "Resource",
+      "Name": "Clay",
+      "Description": "Soft and pliable. Fire it to harden.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "gravel",
+      "ItemType": "Resource",
+      "Name": "Gravel",
+      "Description": "Loose rocks. Check beneath for flint.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "flint",
+      "ItemType": "Resource",
+      "Name": "Flint",
+      "Description": "Strike it right and it throws sparks.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "grass",
+      "ItemType": "Resource",
+      "Name": "Grass",
+      "Description": "A clump of green from near the surface.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "water_bucket",
+      "ItemType": "Utility",
+      "Name": "Water Bucket",
+      "Description": "A bucket of fresh water.",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "UtilityConfig": {
+        "IsPlaceable": true,
+        "PlaceablePrefabPath": "",
+        "HasUseEffect": true
+      }
+    },
+    {
+      "ItemID": "lava_bucket",
+      "ItemType": "Utility",
+      "Name": "Lava Bucket",
+      "Description": "Careful. Don't tip it.",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "UtilityConfig": {
+        "IsPlaceable": true,
+        "PlaceablePrefabPath": "",
+        "HasUseEffect": true
+      }
+    },
+    {
+      "ItemID": "ice",
+      "ItemType": "Resource",
+      "Name": "Ice",
+      "Description": "Frozen solid. Melts quickly above ground.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "moss",
+      "ItemType": "Resource",
+      "Name": "Moss",
+      "Description": "Soft and damp, clinging to ancient stone.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "snow",
+      "ItemType": "Resource",
+      "Name": "Snow",
+      "Description": "Cold, light, and oddly satisfying to hold.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "glass",
+      "ItemType": "Resource",
+      "Name": "Glass",
+      "Description": "Transparent, fragile, and versatile.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": false,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "oak_leaves",
+      "ItemType": "Resource",
+      "Name": "Oak Leaves",
+      "Description": "Broad, sturdy dried oak leaves.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "mangrove_leaves",
+      "ItemType": "Resource",
+      "Name": "Mangrove Leaves",
+      "Description": "Waxy resilient leaves from the swamps.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "pine_leaves",
+      "ItemType": "Resource",
+      "Name": "Pine Leaves",
+      "Description": "Sharp needles smelling of mountain air.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "cherry_blossom_leaves",
+      "ItemType": "Resource",
+      "Name": "Cherry Blossom Leaves",
+      "Description": "Delicate pink petals caught mid-fall.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "slimeling_core",
+      "ItemType": "Resource",
+      "Name": "Slimeling Core",
+      "Description": "Pulsing core from Prince Slime.",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": false,
+        "IsCraftingMaterial": false
+      }
+    },
+    {
+      "ItemID": "demon_mushroom",
+      "ItemType": "Resource",
+      "Name": "Demon Mushroom",
+      "Description": "Fungi pulsing with dark energy.",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": false,
+        "IsCraftingMaterial": false
+      }
+    },
+    {
+      "ItemID": "beech_leaves",
+      "ItemType": "Resource",
+      "Name": "Beech Leaves",
+      "Description": "Smooth oval leaves in autumn gold.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "onyx_brick",
+      "ItemType": "Resource",
+      "Name": "Onyx Brick",
+      "Description": "Polished black blocks that swallow light.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": false,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "morganite_brick",
+      "ItemType": "Resource",
+      "Name": "Morganite Brick",
+      "Description": "Soft rose bricks with a subtle glow.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": false,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "amethyst_brick",
+      "ItemType": "Resource",
+      "Name": "Amethyst Brick",
+      "Description": "Purple bricks humming with arcane energy.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": false,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "spessartitegarnet_brick",
+      "ItemType": "Resource",
+      "Name": "Spessartite Garnet Brick",
+      "Description": "Fiery orange bricks, faintly warm.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": false,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "aquamarine_brick",
+      "ItemType": "Resource",
+      "Name": "Aquamarine Brick",
+      "Description": "Sea-blue blocks like an underwater ruin.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": false,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "topaz_brick",
+      "ItemType": "Resource",
+      "Name": "Topaz Brick",
+      "Description": "Warm golden bricks that catch every ray.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": false,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "sapphire_brick",
+      "ItemType": "Resource",
+      "Name": "Sapphire Brick",
+      "Description": "Cool blue bricks radiating calm elegance.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": false,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "emerald_brick",
+      "ItemType": "Resource",
+      "Name": "Emerald Brick",
+      "Description": "Rich green bricks evoking ancient forests.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": false,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "ruby_brick",
+      "ItemType": "Resource",
+      "Name": "Ruby Brick",
+      "Description": "Deep red bricks that glow like embers.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": false,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "diamond_brick",
+      "ItemType": "Resource",
+      "Name": "Diamond Brick",
+      "Description": "Pristine white bricks that shimmer brilliantly.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": false,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "52",
+      "ItemType": "Resource",
+      "Name": "Cracked Stone Brick",
+      "Description": "Old stone bricks worn thin by time.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": false,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "smooth_sand_brick",
+      "ItemType": "Resource",
+      "Name": "Smooth Sand Brick",
+      "Description": "Pressed heated sand. Clean and uniform.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": false,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "smooth_sand",
+      "ItemType": "Resource",
+      "Name": "Smooth Sand",
+      "Description": "Refined sand compressed into a slab.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": false,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "sand_brick",
+      "ItemType": "Resource",
+      "Name": "Sand Brick",
+      "Description": "Coarse pale brick for desert builds.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": false,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "lilypad",
+      "ItemType": "Resource",
+      "Name": "Lilypad",
+      "Description": "Flat floating leaf from a still pond.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "morganite_lightstone",
+      "ItemType": "Resource",
+      "Name": "Morganite Lightstone",
+      "Description": "Morganite with a gentle pink glow.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": false,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "amethyst_lightstone",
+      "ItemType": "Resource",
+      "Name": "Amethyst Lightstone",
+      "Description": "An amethyst radiating deep violet light.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": false,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "spessartitegarnet_lightstone",
+      "ItemType": "Resource",
+      "Name": "Spessartite Garnet Lightstone",
+      "Description": "Garnet with flickering orange light.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": false,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "aquamarine_lightstone",
+      "ItemType": "Resource",
+      "Name": "Aquamarine Lightstone",
+      "Description": "An aquamarine radiating pale blue light.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": false,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "topaz_lightstone",
+      "ItemType": "Resource",
+      "Name": "Topaz Lightstone",
+      "Description": "A topaz radiating warm golden light.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": false,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "sapphire_lightstone",
+      "ItemType": "Resource",
+      "Name": "Sapphire Lightstone",
+      "Description": "A sapphire radiating cool blue light.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": false,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "emerald_lightstone",
+      "ItemType": "Resource",
+      "Name": "Emerald Lightstone",
+      "Description": "An emerald radiating lush green light.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": false,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "ruby_lightstone",
+      "ItemType": "Resource",
+      "Name": "Ruby Lightstone",
+      "Description": "A ruby radiating deep crimson light.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": false,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "hay_bale",
+      "ItemType": "Resource",
+      "Name": "Hay Bale",
+      "Description": "Bundled dried grass from the fields.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": false,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "snow_brick",
+      "ItemType": "Resource",
+      "Name": "Snow Brick",
+      "Description": "Compacted snow in solid block form.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": false,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "tin_ore",
+      "ItemType": "Resource",
+      "Name": "Tin Ore",
+      "Description": "Light silvery ore, easy to smelt.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "lead_ore",
+      "ItemType": "Resource",
+      "Name": "Lead Ore",
+      "Description": "Heavy dark ore from the deep caverns.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "amberstone",
+      "ItemType": "Resource",
+      "Name": "Amberstone",
+      "Description": "Warm amber mineral, tougher than it looks.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "tungsten_ore",
+      "ItemType": "Resource",
+      "Name": "Tungsten Ore",
+      "Description": "Incredibly dense ore, extremely hard.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "platinum_ore",
+      "ItemType": "Resource",
+      "Name": "Platinum Ore",
+      "Description": "Lustrous rare ore from the deepest veins.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Epic",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "cobalt_ore",
+      "ItemType": "Resource",
+      "Name": "Cobalt Ore",
+      "Description": "Vivid blue ore, hard as iron.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "mythril_ore",
+      "ItemType": "Resource",
+      "Name": "Mythril Ore",
+      "Description": "Legendary ore carrying traces of starlight.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "mana_potion_i",
+      "ItemType": "Consumable",
+      "Name": "Mana Potion I",
+      "Description": "Restores 50 Mana.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ConsumableConfig": {
+        "HealthRestore": 0.0,
+        "StaminaRestore": 0.0,
+        "UseDuration": 1.0,
+        "HasStatusEffect": true,
+        "StatusEffectType": "ManaPotionSeal",
+        "EffectDuration": 5.0,
+        "EffectIntensity": 1.0,
+        "EffectDescription": "",
+        "ManaRestore": 50.0,
+        "EnergyRestore": 0.0
+      }
+    },
+    {
+      "ItemID": "mana_potion_ii",
+      "ItemType": "Consumable",
+      "Name": "Mana Potion II",
+      "Description": "Restores 100 Mana.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ConsumableConfig": {
+        "HealthRestore": 0.0,
+        "StaminaRestore": 0.0,
+        "UseDuration": 1.0,
+        "HasStatusEffect": true,
+        "StatusEffectType": "ManaPotionSeal",
+        "EffectDuration": 5.0,
+        "EffectIntensity": 1.0,
+        "EffectDescription": "",
+        "ManaRestore": 100.0,
+        "EnergyRestore": 0.0
+      }
+    },
+    {
+      "ItemID": "mana_potion_iii",
+      "ItemType": "Consumable",
+      "Name": "Mana Potion III",
+      "Description": "Restores 150 Mana.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ConsumableConfig": {
+        "HealthRestore": 0.0,
+        "StaminaRestore": 0.0,
+        "UseDuration": 1.0,
+        "HasStatusEffect": true,
+        "StatusEffectType": "ManaPotionSeal",
+        "EffectDuration": 5.0,
+        "EffectIntensity": 1.0,
+        "EffectDescription": "",
+        "ManaRestore": 150.0,
+        "EnergyRestore": 0.0
+      }
+    },
+    {
+      "ItemID": "mana_potion_iv",
+      "ItemType": "Consumable",
+      "Name": "Mana Potion IV",
+      "Description": "Restores 200 Mana.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Epic",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ConsumableConfig": {
+        "HealthRestore": 0.0,
+        "StaminaRestore": 0.0,
+        "UseDuration": 1.0,
+        "HasStatusEffect": true,
+        "StatusEffectType": "ManaPotionSeal",
+        "EffectDuration": 5.0,
+        "EffectIntensity": 1.0,
+        "EffectDescription": "",
+        "ManaRestore": 200.0,
+        "EnergyRestore": 0.0
+      }
+    },
+    {
+      "ItemID": "mana_potion_v",
+      "ItemType": "Consumable",
+      "Name": "Mana Potion V",
+      "Description": "Restores 250 Mana.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Legendary",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ConsumableConfig": {
+        "HealthRestore": 0.0,
+        "StaminaRestore": 0.0,
+        "UseDuration": 1.0,
+        "HasStatusEffect": true,
+        "StatusEffectType": "ManaPotionSeal",
+        "EffectDuration": 5.0,
+        "EffectIntensity": 1.0,
+        "EffectDescription": "",
+        "ManaRestore": 250.0,
+        "EnergyRestore": 0.0
+      }
+    },
+    {
+      "ItemID": "tin_ingot",
+      "ItemType": "Resource",
+      "Name": "Tin Ingot",
+      "Description": "Light, pliable smelted tin.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "lead_ingot",
+      "ItemType": "Resource",
+      "Name": "Lead Ingot",
+      "Description": "Dense and weighty. Gets the job done.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "amberstone_ingot",
+      "ItemType": "Resource",
+      "Name": "Amberstone Ingot",
+      "Description": "Warm amber bar with a soft glow.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "tungsten_ingot",
+      "ItemType": "Resource",
+      "Name": "Tungsten Ingot",
+      "Description": "Brutally heavy, incredibly hard.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "platinum_ingot",
+      "ItemType": "Resource",
+      "Name": "Platinum Ingot",
+      "Description": "The finest refined metal.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Epic",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "strings",
+      "ItemType": "Resource",
+      "Name": "Strings",
+      "Description": "Tough twisted cord for bows and traps.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": false,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "cobweb",
+      "ItemType": "Resource",
+      "Name": "Cobweb",
+      "Description": "Silky strands from something large and eight-legged.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "cactus",
+      "ItemType": "Resource",
+      "Name": "Cactus",
+      "Description": "Prickly outside, useful inside.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": true,
+        "IsCraftingMaterial": true
+      }
+    },
+    {
+      "ItemID": "rail",
+      "ItemType": "Utility",
+      "Name": "Rail",
+      "Description": "Iron strips to guide mine carts.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "UtilityConfig": {
+        "IsPlaceable": false,
+        "PlaceablePrefabPath": "",
+        "HasUseEffect": false
+      }
+    },
+    {
+      "ItemID": "onyx_wand",
+      "ItemType": "Staff",
+      "Name": "Onyx Wand",
+      "Description": "Polished onyx wand. Spells linger darkly.",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "StaffConfig": {
+        "ProjectileOffset": {
+          "x": 0.175,
+          "y": 0.18
+        },
+        "MagicDamage": 8.0,
+        "ManaCost": 5.0,
+        "KnockbackForce": 1.0,
+        "Range": 8.0,
+        "ProjectileSpeed": 6.0
+      }
+    },
+    {
+      "ItemID": "morganite_staff",
+      "ItemType": "Staff",
+      "Name": "Morganite Staff",
+      "Description": "Warm magic from a glowing morganite.",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "StaffConfig": {
+        "ProjectileOffset": {
+          "x": 0.175,
+          "y": 0.18
+        },
+        "MagicDamage": 8.0,
+        "ManaCost": 5.0,
+        "KnockbackForce": 1.0,
+        "Range": 8.0,
+        "ProjectileSpeed": 6.0
+      }
+    },
+    {
+      "ItemID": "amethyst_staff",
+      "ItemType": "Staff",
+      "Name": "Amethyst Staff",
+      "Description": "Crackling with violet arcane energy.",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "StaffConfig": {
+        "ProjectileOffset": {
+          "x": 0.175,
+          "y": 0.18
+        },
+        "MagicDamage": 8.0,
+        "ManaCost": 5.0,
+        "KnockbackForce": 1.0,
+        "Range": 8.0,
+        "ProjectileSpeed": 10.0
+      }
+    },
+    {
+      "ItemID": "spessartite_garnet_staff",
+      "ItemType": "Staff",
+      "Name": "Spessartite Garnet Staff",
+      "Description": "Fiery staff with explosive bolts.",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "StaffConfig": {
+        "ProjectileOffset": {
+          "x": 0.175,
+          "y": 0.18
+        },
+        "MagicDamage": 8.0,
+        "ManaCost": 5.0,
+        "KnockbackForce": 1.0,
+        "Range": 8.0,
+        "ProjectileSpeed": 35.0
+      }
+    },
+    {
+      "ItemID": "aquamarine_staff",
+      "ItemType": "Staff",
+      "Name": "Aquamarine Staff",
+      "Description": "Channels the depths of the sea.",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "StaffConfig": {
+        "ProjectileOffset": {
+          "x": 0.175,
+          "y": 0.18
+        },
+        "MagicDamage": 8.0,
+        "ManaCost": 5.0,
+        "KnockbackForce": 1.0,
+        "Range": 8.0,
+        "ProjectileSpeed": 6.0
+      }
+    },
+    {
+      "ItemID": "topaz_staff",
+      "ItemType": "Staff",
+      "Name": "Topaz Staff",
+      "Description": "Radiates warm golden light.",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "StaffConfig": {
+        "ProjectileOffset": {
+          "x": 0.175,
+          "y": 0.18
+        },
+        "MagicDamage": 8.0,
+        "ManaCost": 5.0,
+        "KnockbackForce": 1.0,
+        "Range": 8.0,
+        "ProjectileSpeed": 6.0
+      }
+    },
+    {
+      "ItemID": "sapphire_staff",
+      "ItemType": "Staff",
+      "Name": "Sapphire Staff",
+      "Description": "Channels cold sapphire power.",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "StaffConfig": {
+        "ProjectileOffset": {
+          "x": 0.175,
+          "y": 0.18
+        },
+        "MagicDamage": 8.0,
+        "ManaCost": 5.0,
+        "KnockbackForce": 1.0,
+        "Range": 8.0,
+        "ProjectileSpeed": 6.0
+      }
+    },
+    {
+      "ItemID": "emerald_staff",
+      "ItemType": "Staff",
+      "Name": "Emerald Staff",
+      "Description": "Hums with natural forest energy.",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "StaffConfig": {
+        "ProjectileOffset": {
+          "x": 0.175,
+          "y": 0.18
+        },
+        "MagicDamage": 8.0,
+        "ManaCost": 5.0,
+        "KnockbackForce": 1.0,
+        "Range": 8.0,
+        "ProjectileSpeed": 6.0
+      }
+    },
+    {
+      "ItemID": "band_of_regeneration",
+      "ItemType": "Accessory",
+      "Name": "Band Of Regeneration",
+      "Description": "+0.5 Hp/Sec",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Belt",
+        "StatBonuses": [
+          {
+            "StatType": "ManaRegeneration",
+            "ModifierType": "Flat",
+            "Value": 0.5
+          }
+        ],
+        "HasSpecialEffect": false,
+        "SpecialEffectDescription": ""
+      }
+    },
+    {
+      "ItemID": "eye_of_treant",
+      "ItemType": "Accessory",
+      "Name": "Eye of Treant",
+      "Description": "A mystical eye that allows the wearer to see hostile enemies highlighted in red.",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 0.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Others",
+        "StatBonuses": [],
+        "HasSpecialEffect": true,
+        "SpecialEffectDescription": "Highlights hostile enemies"
+      }
+    },
+    {
+      "ItemID": "eye_of_demon",
+      "ItemType": "Accessory",
+      "Name": "Eye of Demon",
+      "Description": "A dark artifact that highlights hostile enemies and reveals ores and chests.",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Epic",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 0.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Others",
+        "StatBonuses": [],
+        "HasSpecialEffect": true,
+        "SpecialEffectDescription": "Highlights enemies & ores"
+      }
+    },
+    {
+      "ItemID": "wooden_shield",
+      "ItemType": "Accessory",
+      "Name": "Wooden Shield",
+      "Description": "+5 Defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Shield",
+        "StatBonuses": [
+          {
+            "StatType": "Defense",
+            "ModifierType": "Flat",
+            "Value": 5.0
+          }
+        ],
+        "HasSpecialEffect": false,
+        "SpecialEffectDescription": ""
+      }
+    },
+    {
+      "ItemID": "reinforced_wood_shield",
+      "ItemType": "Accessory",
+      "Name": "Reinforced Wood Shield",
+      "Description": "+7 Defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Shield",
+        "StatBonuses": [
+          {
+            "StatType": "Defense",
+            "ModifierType": "Flat",
+            "Value": 7.0
+          }
+        ],
+        "HasSpecialEffect": false,
+        "SpecialEffectDescription": ""
+      }
+    },
+    {
+      "ItemID": "copper_plated_guard",
+      "ItemType": "Accessory",
+      "Name": "Copper Plated Guard",
+      "Description": "+8 Defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Shield",
+        "StatBonuses": [
+          {
+            "StatType": "Defense",
+            "ModifierType": "Flat",
+            "Value": 8.0
+          }
+        ],
+        "HasSpecialEffect": false,
+        "SpecialEffectDescription": ""
+      }
+    },
+    {
+      "ItemID": "gladiators_roundshield",
+      "ItemType": "Accessory",
+      "Name": "Gladiator's Roundshield",
+      "Description": "+9 Defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Shield",
+        "StatBonuses": [
+          {
+            "StatType": "Defense",
+            "ModifierType": "Flat",
+            "Value": 9.0
+          }
+        ],
+        "HasSpecialEffect": false,
+        "SpecialEffectDescription": ""
+      }
+    },
+    {
+      "ItemID": "iron_heater_shield",
+      "ItemType": "Accessory",
+      "Name": "Iron Heater Shield",
+      "Description": "+12 Defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Shield",
+        "StatBonuses": [
+          {
+            "StatType": "Defense",
+            "ModifierType": "Flat",
+            "Value": 12.0
+          }
+        ],
+        "HasSpecialEffect": false,
+        "SpecialEffectDescription": ""
+      }
+    },
+    {
+      "ItemID": "gold_layered_bulwark",
+      "ItemType": "Accessory",
+      "Name": "Gold Layered Bulwark",
+      "Description": "+15 Defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Shield",
+        "StatBonuses": [
+          {
+            "StatType": "Defense",
+            "ModifierType": "Flat",
+            "Value": 15.0
+          }
+        ],
+        "HasSpecialEffect": false,
+        "SpecialEffectDescription": ""
+      }
+    },
+    {
+      "ItemID": "cobalt_studded_shield",
+      "ItemType": "Accessory",
+      "Name": "Cobalt Studded Shield",
+      "Description": "+18 Defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Shield",
+        "StatBonuses": [
+          {
+            "StatType": "Defense",
+            "ModifierType": "Flat",
+            "Value": 18.0
+          }
+        ],
+        "HasSpecialEffect": false,
+        "SpecialEffectDescription": ""
+      }
+    },
+    {
+      "ItemID": "royal_crest",
+      "ItemType": "Accessory",
+      "Name": "Royal Crest",
+      "Description": "+20 Defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Epic",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Shield",
+        "StatBonuses": [
+          {
+            "StatType": "Defense",
+            "ModifierType": "Flat",
+            "Value": 20.0
+          }
+        ],
+        "HasSpecialEffect": false,
+        "SpecialEffectDescription": ""
+      }
+    },
+    {
+      "ItemID": "emerald_targe",
+      "ItemType": "Accessory",
+      "Name": "Emerald Targe",
+      "Description": "+22 Defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Epic",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Shield",
+        "StatBonuses": [
+          {
+            "StatType": "Defense",
+            "ModifierType": "Flat",
+            "Value": 22.0
+          }
+        ],
+        "HasSpecialEffect": false,
+        "SpecialEffectDescription": ""
+      }
+    },
+    {
+      "ItemID": "crimson_heater",
+      "ItemType": "Accessory",
+      "Name": "Crimson Heater",
+      "Description": "+24 Defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Legendary",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Shield",
+        "StatBonuses": [
+          {
+            "StatType": "Defense",
+            "ModifierType": "Flat",
+            "Value": 24.0
+          }
+        ],
+        "HasSpecialEffect": false,
+        "SpecialEffectDescription": ""
+      }
+    },
+    {
+      "ItemID": "copper_kite_shield",
+      "ItemType": "Accessory",
+      "Name": "Copper Kite Shield",
+      "Description": "+10 Defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Shield",
+        "StatBonuses": [
+          {
+            "StatType": "Defense",
+            "ModifierType": "Flat",
+            "Value": 10.0
+          }
+        ],
+        "HasSpecialEffect": false,
+        "SpecialEffectDescription": ""
+      }
+    },
+    {
+      "ItemID": "sapphire_spark_shield",
+      "ItemType": "Accessory",
+      "Name": "Sapphire Spark Shield",
+      "Description": "+16 Defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Shield",
+        "StatBonuses": [
+          {
+            "StatType": "Defense",
+            "ModifierType": "Flat",
+            "Value": 16.0
+          }
+        ],
+        "HasSpecialEffect": false,
+        "SpecialEffectDescription": ""
+      }
+    },
+    {
+      "ItemID": "heros_heraldry",
+      "ItemType": "Accessory",
+      "Name": "Hero's Heraldry",
+      "Description": "+25 Defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Legendary",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Shield",
+        "StatBonuses": [
+          {
+            "StatType": "Defense",
+            "ModifierType": "Flat",
+            "Value": 25.0
+          }
+        ],
+        "HasSpecialEffect": false,
+        "SpecialEffectDescription": ""
+      }
+    },
+    {
+      "ItemID": "gilded_visage",
+      "ItemType": "Accessory",
+      "Name": "Gilded Visage",
+      "Description": "+17 Defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Shield",
+        "StatBonuses": [
+          {
+            "StatType": "Defense",
+            "ModifierType": "Flat",
+            "Value": 17.0
+          }
+        ],
+        "HasSpecialEffect": false,
+        "SpecialEffectDescription": ""
+      }
+    },
+    {
+      "ItemID": "molten_aegis",
+      "ItemType": "Accessory",
+      "Name": "Molten Aegis",
+      "Description": "+26 Defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Legendary",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Shield",
+        "StatBonuses": [
+          {
+            "StatType": "Defense",
+            "ModifierType": "Flat",
+            "Value": 26.0
+          }
+        ],
+        "HasSpecialEffect": false,
+        "SpecialEffectDescription": ""
+      }
+    },
+    {
+      "ItemID": "living_wood_defender",
+      "ItemType": "Accessory",
+      "Name": "Living Wood Defender",
+      "Description": "+11 Defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Shield",
+        "StatBonuses": [
+          {
+            "StatType": "Defense",
+            "ModifierType": "Flat",
+            "Value": 11.0
+          }
+        ],
+        "HasSpecialEffect": false,
+        "SpecialEffectDescription": ""
+      }
+    },
+    {
+      "ItemID": "blue_moon_crest",
+      "ItemType": "Accessory",
+      "Name": "Blue Moon Crest",
+      "Description": "+19 Defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Shield",
+        "StatBonuses": [
+          {
+            "StatType": "Defense",
+            "ModifierType": "Flat",
+            "Value": 19.0
+          }
+        ],
+        "HasSpecialEffect": false,
+        "SpecialEffectDescription": ""
+      }
+    },
+    {
+      "ItemID": "cultist_ward",
+      "ItemType": "Accessory",
+      "Name": "Cultist's Ward",
+      "Description": "+21 Defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Epic",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Shield",
+        "StatBonuses": [
+          {
+            "StatType": "Defense",
+            "ModifierType": "Flat",
+            "Value": 21.0
+          }
+        ],
+        "HasSpecialEffect": false,
+        "SpecialEffectDescription": ""
+      }
+    },
+    {
+      "ItemID": "platinum_shield",
+      "ItemType": "Accessory",
+      "Name": "Platinum Shield",
+      "Description": "+23 Defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Epic",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Shield",
+        "StatBonuses": [
+          {
+            "StatType": "Defense",
+            "ModifierType": "Flat",
+            "Value": 23.0
+          }
+        ],
+        "HasSpecialEffect": false,
+        "SpecialEffectDescription": ""
+      }
+    },
+    {
+      "ItemID": "hornet_carapace",
+      "ItemType": "Accessory",
+      "Name": "Hornet Carapace",
+      "Description": "+13 Defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Shield",
+        "StatBonuses": [
+          {
+            "StatType": "Defense",
+            "ModifierType": "Flat",
+            "Value": 13.0
+          }
+        ],
+        "HasSpecialEffect": false,
+        "SpecialEffectDescription": ""
+      }
+    },
+    {
+      "ItemID": "plague_bringer_guard",
+      "ItemType": "Accessory",
+      "Name": "Plague Bringer's Guard",
+      "Description": "+27 Defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Legendary",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Shield",
+        "StatBonuses": [
+          {
+            "StatType": "Defense",
+            "ModifierType": "Flat",
+            "Value": 27.0
+          }
+        ],
+        "HasSpecialEffect": false,
+        "SpecialEffectDescription": ""
+      }
+    },
+    {
+      "ItemID": "void_barrier",
+      "ItemType": "Accessory",
+      "Name": "Void Barrier",
+      "Description": "+28 Defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Legendary",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Shield",
+        "StatBonuses": [
+          {
+            "StatType": "Defense",
+            "ModifierType": "Flat",
+            "Value": 28.0
+          }
+        ],
+        "HasSpecialEffect": false,
+        "SpecialEffectDescription": ""
+      }
+    },
+    {
+      "ItemID": "hallowed_aegis",
+      "ItemType": "Accessory",
+      "Name": "Hallowed Aegis",
+      "Description": "+29 Defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Legendary",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Shield",
+        "StatBonuses": [
+          {
+            "StatType": "Defense",
+            "ModifierType": "Flat",
+            "Value": 29.0
+          }
+        ],
+        "HasSpecialEffect": false,
+        "SpecialEffectDescription": ""
+      }
+    },
+    {
+      "ItemID": "crimtane_tower_shield",
+      "ItemType": "Accessory",
+      "Name": "Crimtane Tower Shield",
+      "Description": "+30 Defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Legendary",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Shield",
+        "StatBonuses": [
+          {
+            "StatType": "Defense",
+            "ModifierType": "Flat",
+            "Value": 30.0
+          }
+        ],
+        "HasSpecialEffect": false,
+        "SpecialEffectDescription": ""
+      }
+    },
+    {
+      "ItemID": "vampire_count_guard",
+      "ItemType": "Accessory",
+      "Name": "Vampire Count's Guard",
+      "Description": "+31 Defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Legendary",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Shield",
+        "StatBonuses": [
+          {
+            "StatType": "Defense",
+            "ModifierType": "Flat",
+            "Value": 31.0
+          }
+        ],
+        "HasSpecialEffect": false,
+        "SpecialEffectDescription": ""
+      }
+    },
+    {
+      "ItemID": "shadow_scale_mail_piece",
+      "ItemType": "Accessory",
+      "Name": "Shadow Scale Mail Piece",
+      "Description": "+14 Defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Shield",
+        "StatBonuses": [
+          {
+            "StatType": "Defense",
+            "ModifierType": "Flat",
+            "Value": 14.0
+          }
+        ],
+        "HasSpecialEffect": false,
+        "SpecialEffectDescription": ""
+      }
+    },
+    {
+      "ItemID": "celestial_cross",
+      "ItemType": "Accessory",
+      "Name": "Celestial Cross",
+      "Description": "+32 Defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Legendary",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Shield",
+        "StatBonuses": [
+          {
+            "StatType": "Defense",
+            "ModifierType": "Flat",
+            "Value": 32.0
+          }
+        ],
+        "HasSpecialEffect": false,
+        "SpecialEffectDescription": ""
+      }
+    },
+    {
+      "ItemID": "maskofthe_saints",
+      "ItemType": "Accessory",
+      "Name": "Mask of the Saints",
+      "Description": "+33 Defense",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Legendary",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Shield",
+        "StatBonuses": [
+          {
+            "StatType": "Defense",
+            "ModifierType": "Flat",
+            "Value": 33.0
+          }
+        ],
+        "HasSpecialEffect": false,
+        "SpecialEffectDescription": ""
+      }
+    },
+    {
+      "ItemID": "serrated_scraper",
+      "ItemType": "Accessory",
+      "Name": "Serrated Scraper",
+      "Description": "+20% Mining Speed",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Others",
+        "StatBonuses": [
+          {
+            "StatType": 15,
+            "ModifierType": "Percentage",
+            "Value": 0.2
+          }
+        ],
+        "HasSpecialEffect": false,
+        "SpecialEffectDescription": ""
+      }
+    },
+    {
+      "ItemID": "rough_hewn_cleaver",
+      "ItemType": "Accessory",
+      "Name": "Rough Hewn Cleaver",
+      "Description": "+40% Mining Speed",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Others",
+        "StatBonuses": [
+          {
+            "StatType": 15,
+            "ModifierType": "Percentage",
+            "Value": 0.4
+          }
+        ],
+        "HasSpecialEffect": false,
+        "SpecialEffectDescription": ""
+      }
+    },
+    {
+      "ItemID": "pebble_pounder",
+      "ItemType": "Accessory",
+      "Name": "Pebble Pounder",
+      "Description": "+60% Mining Speed",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 5.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Others",
+        "StatBonuses": [
+          {
+            "StatType": 15,
+            "ModifierType": "Percentage",
+            "Value": 0.6
+          }
+        ],
+        "HasSpecialEffect": false,
+        "SpecialEffectDescription": ""
+      }
+    },
+    {
+      "ItemID": "rookie_certificate",
+      "ItemType": "Consumable",
+      "Name": "Rookie Certificate",
+      "Description": "Upgrade rank from Novice to Rookie.",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ConsumableConfig": {
+        "HealthRestore": 0.0,
+        "StaminaRestore": 0.0,
+        "UseDuration": 1.0,
+        "HasStatusEffect": false,
+        "StatusEffectType": "None",
+        "EffectDuration": 0.0,
+        "EffectIntensity": 0.0,
+        "EffectDescription": "",
+        "ManaRestore": 0.0,
+        "EnergyRestore": 0.0
+      }
+    },
+    {
+      "ItemID": "miner_certificate",
+      "ItemType": "Consumable",
+      "Name": "Miner Certificate",
+      "Description": "Upgrade rank from Rookie to Miner.",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ConsumableConfig": {
+        "HealthRestore": 0.0,
+        "StaminaRestore": 0.0,
+        "UseDuration": 1.0,
+        "HasStatusEffect": false,
+        "StatusEffectType": "None",
+        "EffectDuration": 0.0,
+        "EffectIntensity": 0.0,
+        "EffectDescription": "",
+        "ManaRestore": 0.0,
+        "EnergyRestore": 0.0
+      }
+    },
+    {
+      "ItemID": "scout_certificate",
+      "ItemType": "Consumable",
+      "Name": "Scout Certificate",
+      "Description": "Upgrade rank from Miner to Scout.",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ConsumableConfig": {
+        "HealthRestore": 0.0,
+        "StaminaRestore": 0.0,
+        "UseDuration": 1.0,
+        "HasStatusEffect": false,
+        "StatusEffectType": "None",
+        "EffectDuration": 0.0,
+        "EffectIntensity": 0.0,
+        "EffectDescription": "",
+        "ManaRestore": 0.0,
+        "EnergyRestore": 0.0
+      }
+    },
+    {
+      "ItemID": "hunter_certificate",
+      "ItemType": "Consumable",
+      "Name": "Hunter Certificate",
+      "Description": "Upgrade rank from Scout to Hunter.",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ConsumableConfig": {
+        "HealthRestore": 0.0,
+        "StaminaRestore": 0.0,
+        "UseDuration": 1.0,
+        "HasStatusEffect": false,
+        "StatusEffectType": "None",
+        "EffectDuration": 0.0,
+        "EffectIntensity": 0.0,
+        "EffectDescription": "",
+        "ManaRestore": 0.0,
+        "EnergyRestore": 0.0
+      }
+    },
+    {
+      "ItemID": "elite_certificate",
+      "ItemType": "Consumable",
+      "Name": "Elite Certificate",
+      "Description": "Upgrade rank from Hunter to Elite.",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ConsumableConfig": {
+        "HealthRestore": 0.0,
+        "StaminaRestore": 0.0,
+        "UseDuration": 1.0,
+        "HasStatusEffect": false,
+        "StatusEffectType": "None",
+        "EffectDuration": 0.0,
+        "EffectIntensity": 0.0,
+        "EffectDescription": "",
+        "ManaRestore": 0.0,
+        "EnergyRestore": 0.0
+      }
+    },
+    {
+      "ItemID": "veteran_certificate",
+      "ItemType": "Consumable",
+      "Name": "Veteran Certificate",
+      "Description": "Upgrade rank from Elite to Veteran.",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ConsumableConfig": {
+        "HealthRestore": 0.0,
+        "StaminaRestore": 0.0,
+        "UseDuration": 1.0,
+        "HasStatusEffect": false,
+        "StatusEffectType": "None",
+        "EffectDuration": 0.0,
+        "EffectIntensity": 0.0,
+        "EffectDescription": "",
+        "ManaRestore": 0.0,
+        "EnergyRestore": 0.0
+      }
+    },
+    {
+      "ItemID": "shadow_certificate",
+      "ItemType": "Consumable",
+      "Name": "Shadow Certificate",
+      "Description": "Upgrade rank from Veteran to Shadow.",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ConsumableConfig": {
+        "HealthRestore": 0.0,
+        "StaminaRestore": 0.0,
+        "UseDuration": 1.0,
+        "HasStatusEffect": false,
+        "StatusEffectType": "None",
+        "EffectDuration": 0.0,
+        "EffectIntensity": 0.0,
+        "EffectDescription": "",
+        "ManaRestore": 0.0,
+        "EnergyRestore": 0.0
+      }
+    },
+    {
+      "ItemID": "conqueror_certificate",
+      "ItemType": "Consumable",
+      "Name": "Conqueror Certificate",
+      "Description": "Upgrade rank from Shadow to Conqueror.",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ConsumableConfig": {
+        "HealthRestore": 0.0,
+        "StaminaRestore": 0.0,
+        "UseDuration": 1.0,
+        "HasStatusEffect": false,
+        "StatusEffectType": "None",
+        "EffectDuration": 0.0,
+        "EffectIntensity": 0.0,
+        "EffectDescription": "",
+        "ManaRestore": 0.0,
+        "EnergyRestore": 0.0
+      }
+    },
+    {
+      "ItemID": "king_certificate",
+      "ItemType": "Consumable",
+      "Name": "King Certificate",
+      "Description": "Upgrade rank from Conqueror to King.",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ConsumableConfig": {
+        "HealthRestore": 0.0,
+        "StaminaRestore": 0.0,
+        "UseDuration": 1.0,
+        "HasStatusEffect": false,
+        "StatusEffectType": "None",
+        "EffectDuration": 0.0,
+        "EffectIntensity": 0.0,
+        "EffectDescription": "",
+        "ManaRestore": 0.0,
+        "EnergyRestore": 0.0
+      }
+    },
+    {
+      "ItemID": "overlord_certificate",
+      "ItemType": "Consumable",
+      "Name": "Overlord Certificate",
+      "Description": "Upgrade rank from King to Overlord.",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ConsumableConfig": {
+        "HealthRestore": 0.0,
+        "StaminaRestore": 0.0,
+        "UseDuration": 1.0,
+        "HasStatusEffect": false,
+        "StatusEffectType": "None",
+        "EffectDuration": 0.0,
+        "EffectIntensity": 0.0,
+        "EffectDescription": "",
+        "ManaRestore": 0.0,
+        "EnergyRestore": 0.0
+      }
+    },
+    {
+      "ItemID": "eternal_certificate",
+      "ItemType": "Consumable",
+      "Name": "Eternal Certificate",
+      "Description": "Upgrade rank from Overlord to Eternal.",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ConsumableConfig": {
+        "HealthRestore": 0.0,
+        "StaminaRestore": 0.0,
+        "UseDuration": 1.0,
+        "HasStatusEffect": false,
+        "StatusEffectType": "None",
+        "EffectDuration": 0.0,
+        "EffectIntensity": 0.0,
+        "EffectDescription": "",
+        "ManaRestore": 0.0,
+        "EnergyRestore": 0.0
+      }
+    },
+    {
+      "ItemID": "carrot",
+      "ItemType": "Consumable",
+      "Name": "Carrot",
+      "Description": "Restores 10 Health",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ConsumableConfig": {
+        "HealthRestore": 10.0,
+        "StaminaRestore": 0.0,
+        "UseDuration": 1.0,
+        "HasStatusEffect": true,
+        "StatusEffectType": "FoodSeal",
+        "EffectDuration": 10.0,
+        "EffectIntensity": 1.0,
+        "EffectDescription": "",
+        "ManaRestore": 0.0,
+        "EnergyRestore": 0.0
+      }
+    },
+    {
+      "ItemID": "potato",
+      "ItemType": "Consumable",
+      "Name": "Potato",
+      "Description": "Restores 10 Health",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ConsumableConfig": {
+        "HealthRestore": 10.0,
+        "StaminaRestore": 0.0,
+        "UseDuration": 1.0,
+        "HasStatusEffect": true,
+        "StatusEffectType": "FoodSeal",
+        "EffectDuration": 10.0,
+        "EffectIntensity": 1.0,
+        "EffectDescription": "",
+        "ManaRestore": 0.0,
+        "EnergyRestore": 0.0
+      }
+    },
+    {
+      "ItemID": "tomato",
+      "ItemType": "Consumable",
+      "Name": "Tomato",
+      "Description": "Restores 10 Health",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ConsumableConfig": {
+        "HealthRestore": 10.0,
+        "StaminaRestore": 0.0,
+        "UseDuration": 1.0,
+        "HasStatusEffect": true,
+        "StatusEffectType": "FoodSeal",
+        "EffectDuration": 10.0,
+        "EffectIntensity": 1.0,
+        "EffectDescription": "",
+        "ManaRestore": 0.0,
+        "EnergyRestore": 0.0
+      }
+    },
+    {
+      "ItemID": "strawberry",
+      "ItemType": "Consumable",
+      "Name": "Strawberry",
+      "Description": "Restores 10 Health",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ConsumableConfig": {
+        "HealthRestore": 10.0,
+        "StaminaRestore": 0.0,
+        "UseDuration": 1.0,
+        "HasStatusEffect": true,
+        "StatusEffectType": "FoodSeal",
+        "EffectDuration": 10.0,
+        "EffectIntensity": 1.0,
+        "EffectDescription": "",
+        "ManaRestore": 0.0,
+        "EnergyRestore": 0.0
+      }
+    },
+    {
+      "ItemID": "corn",
+      "ItemType": "Consumable",
+      "Name": "Corn",
+      "Description": "Restores 10 Health",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ConsumableConfig": {
+        "HealthRestore": 10.0,
+        "StaminaRestore": 0.0,
+        "UseDuration": 1.0,
+        "HasStatusEffect": true,
+        "StatusEffectType": "FoodSeal",
+        "EffectDuration": 10.0,
+        "EffectIntensity": 1.0,
+        "EffectDescription": "",
+        "ManaRestore": 0.0,
+        "EnergyRestore": 0.0
+      }
+    },
+    {
+      "ItemID": "eggplant",
+      "ItemType": "Consumable",
+      "Name": "Eggplant",
+      "Description": "Restores 10 Health",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "ConsumableConfig": {
+        "HealthRestore": 10.0,
+        "StaminaRestore": 0.0,
+        "UseDuration": 1.0,
+        "HasStatusEffect": true,
+        "StatusEffectType": "FoodSeal",
+        "EffectDuration": 10.0,
+        "EffectIntensity": 1.0,
+        "EffectDescription": "",
+        "ManaRestore": 0.0,
+        "EnergyRestore": 0.0
+      }
+    },
+    {
+      "ItemID": "ring_of_swiftness",
+      "ItemType": "Accessory",
+      "Name": "Ring of Swiftness",
+      "Description": "+15% move speed",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Ring",
+        "StatBonuses": [
+          {
+            "StatType": "MoveSpeed",
+            "ModifierType": "Percentage",
+            "Value": 0.15
+          }
+        ],
+        "HasSpecialEffect": false,
+        "SpecialEffectDescription": ""
+      }
+    },
+    {
+      "ItemID": "ring_of_vitality",
+      "ItemType": "Accessory",
+      "Name": "Ring of Vitality",
+      "Description": "+20 HP",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Ring",
+        "StatBonuses": [
+          {
+            "StatType": "MaxHealth",
+            "ModifierType": "Flat",
+            "Value": 20.0
+          }
+        ],
+        "HasSpecialEffect": false,
+        "SpecialEffectDescription": ""
+      }
+    },
+    {
+      "ItemID": "ring_of_fortune",
+      "ItemType": "Accessory",
+      "Name": "Ring of Fortune",
+      "Description": "+5 Luck",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Ring",
+        "StatBonuses": [
+          {
+            "StatType": "Luck",
+            "ModifierType": "Flat",
+            "Value": 5.0
+          }
+        ],
+        "HasSpecialEffect": false,
+        "SpecialEffectDescription": ""
+      }
+    },
+    {
+      "ItemID": "pig_egg",
+      "ItemType": "Pet",
+      "Name": "Pig Egg",
+      "Description": "5 summon damage",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "PetConfig": {
+        "StatBonuses": [
+          {
+            "StatType": "SummonDamage",
+            "ModifierType": "Flat",
+            "Value": 5.0
+          }
+        ],
+        "HasSpecialEffect": false,
+        "SpecialEffectDescription": ""
+      }
+    },
+    {
+      "ItemID": "backpack",
+      "ItemType": "Backpack",
+      "Name": "Backpack",
+      "Description": "Equiptable\nAdds 8 slots to backpack and 4 to hotbar",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "BackpackConfig": {
+        "BackpackSlots": 8,
+        "HotbarSlots": 4
+      }
+    },
+    {
+      "ItemID": "miner_sack",
+      "ItemType": "Backpack",
+      "Name": "Miner's Sack",
+      "Description": "Equiptable\nAdds 8 slots to backpack and 8 to hotbar",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "BackpackConfig": {
+        "BackpackSlots": 8,
+        "HotbarSlots": 8
+      }
+    }
+  ]
+};

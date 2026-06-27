@@ -1,0 +1,770 @@
+var CRAFTING_RECIPES = {
+  "Recipes": [
+    {
+      "ResultItem": "wooden_arrow",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "log",
+          "Quantity": 1
+        },
+        {
+          "ItemID": "stone",
+          "Quantity": 1
+        }
+      ]
+    },
+    {
+      "ResultItem": "fire_arrow",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "wooden_arrow",
+          "Quantity": 1
+        },
+        {
+          "ItemID": "fire_essence",
+          "Quantity": 1
+        }
+      ]
+    },
+    {
+      "ResultItem": "poison_arrow",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "wooden_arrow",
+          "Quantity": 1
+        },
+        {
+          "ItemID": "toxic_gland",
+          "Quantity": 1
+        }
+      ]
+    },
+    {
+      "ResultItem": "wooden_shield",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "log",
+          "Quantity": 10
+        }
+      ]
+    },
+    {
+      "ResultItem": "copper_plated_guard",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "copper_ingot",
+          "Quantity": 10
+        }
+      ]
+    },
+    {
+      "ResultItem": "copper_ingot",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "copper_ore",
+          "Quantity": 1
+        },
+        {
+          "ItemID": "coal",
+          "Quantity": 1
+        }
+      ]
+    },
+    {
+      "ResultItem": "iron_ingot",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "iron_ore",
+          "Quantity": 1
+        },
+        {
+          "ItemID": "coal",
+          "Quantity": 1
+        }
+      ]
+    },
+    {
+      "ResultItem": "silver_ingot",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "silver_ore",
+          "Quantity": 1
+        },
+        {
+          "ItemID": "coal",
+          "Quantity": 1
+        }
+      ]
+    },
+    {
+      "ResultItem": "gold_ingot",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "gold_ore",
+          "Quantity": 1
+        },
+        {
+          "ItemID": "coal",
+          "Quantity": 1
+        }
+      ]
+    },
+    {
+      "ResultItem": "copper_pickaxe",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "copper_ingot",
+          "Quantity": 10
+        }
+      ]
+    },
+    {
+      "ResultItem": "iron_pickaxe",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "iron_ingot",
+          "Quantity": 10
+        }
+      ]
+    },
+    {
+      "ResultItem": "silver_pickaxe",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "silver_ingot",
+          "Quantity": 10
+        }
+      ]
+    },
+    {
+      "ResultItem": "gold_pickaxe",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "gold_ingot",
+          "Quantity": 10
+        }
+      ]
+    },
+    {
+      "ResultItem": "copper_sword",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "copper_ingot",
+          "Quantity": 10
+        }
+      ]
+    },
+    {
+      "ResultItem": "iron_sword",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "iron_ingot",
+          "Quantity": 10
+        }
+      ]
+    },
+    {
+      "ResultItem": "silver_sword",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "silver_ingot",
+          "Quantity": 10
+        }
+      ]
+    },
+    {
+      "ResultItem": "gold_sword",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "gold_ingot",
+          "Quantity": 10
+        }
+      ]
+    },
+    {
+      "ResultItem": "copper_helmet",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "copper_ingot",
+          "Quantity": 6
+        }
+      ]
+    },
+    {
+      "ResultItem": "copper_chestplate",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "copper_ingot",
+          "Quantity": 10
+        }
+      ]
+    },
+    {
+      "ResultItem": "copper_leggings",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "copper_ingot",
+          "Quantity": 8
+        }
+      ]
+    },
+    {
+      "ResultItem": "iron_helmet",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "iron_ingot",
+          "Quantity": 6
+        }
+      ]
+    },
+    {
+      "ResultItem": "iron_chestplate",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "iron_ingot",
+          "Quantity": 10
+        }
+      ]
+    },
+    {
+      "ResultItem": "iron_leggings",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "iron_ingot",
+          "Quantity": 8
+        }
+      ]
+    },
+    {
+      "ResultItem": "silver_helmet",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "silver_ingot",
+          "Quantity": 6
+        }
+      ]
+    },
+    {
+      "ResultItem": "silver_chestplate",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "silver_ingot",
+          "Quantity": 10
+        }
+      ]
+    },
+    {
+      "ResultItem": "silver_leggings",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "silver_ingot",
+          "Quantity": 8
+        }
+      ]
+    },
+    {
+      "ResultItem": "gold_helmet",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "gold_ingot",
+          "Quantity": 6
+        }
+      ]
+    },
+    {
+      "ResultItem": "gold_chestplate",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "gold_ingot",
+          "Quantity": 10
+        }
+      ]
+    },
+    {
+      "ResultItem": "gold_leggings",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "gold_ingot",
+          "Quantity": 8
+        }
+      ]
+    },
+    {
+      "ResultItem": "tin_ingot",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "tin_ore",
+          "Quantity": 1
+        },
+        {
+          "ItemID": "coal",
+          "Quantity": 1
+        }
+      ]
+    },
+    {
+      "ResultItem": "lead_ingot",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "lead_ore",
+          "Quantity": 1
+        },
+        {
+          "ItemID": "coal",
+          "Quantity": 1
+        }
+      ]
+    },
+    {
+      "ResultItem": "amberstone_ingot",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "amberstone",
+          "Quantity": 1
+        },
+        {
+          "ItemID": "coal",
+          "Quantity": 1
+        }
+      ]
+    },
+    {
+      "ResultItem": "tungsten_ingot",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "tungsten_ore",
+          "Quantity": 1
+        },
+        {
+          "ItemID": "coal",
+          "Quantity": 1
+        }
+      ]
+    },
+    {
+      "ResultItem": "platinum_ingot",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "platinum_ore",
+          "Quantity": 1
+        },
+        {
+          "ItemID": "coal",
+          "Quantity": 1
+        }
+      ]
+    },
+    {
+      "ResultItem": "tin_helmet",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "tin_ingot",
+          "Quantity": 6
+        }
+      ]
+    },
+    {
+      "ResultItem": "tin_chestplate",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "tin_ingot",
+          "Quantity": 10
+        }
+      ]
+    },
+    {
+      "ResultItem": "tin_leggings",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "tin_ingot",
+          "Quantity": 8
+        }
+      ]
+    },
+    {
+      "ResultItem": "lead_helmet",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "lead_ingot",
+          "Quantity": 6
+        }
+      ]
+    },
+    {
+      "ResultItem": "lead_chestplate",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "lead_ingot",
+          "Quantity": 10
+        }
+      ]
+    },
+    {
+      "ResultItem": "lead_leggings",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "lead_ingot",
+          "Quantity": 8
+        }
+      ]
+    },
+    {
+      "ResultItem": "amberstone_helmet",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "amberstone_ingot",
+          "Quantity": 6
+        }
+      ]
+    },
+    {
+      "ResultItem": "amberstone_chestplate",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "amberstone_ingot",
+          "Quantity": 10
+        }
+      ]
+    },
+    {
+      "ResultItem": "amberstone_leggings",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "amberstone_ingot",
+          "Quantity": 8
+        }
+      ]
+    },
+    {
+      "ResultItem": "tungsten_helmet",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "tungsten_ingot",
+          "Quantity": 6
+        }
+      ]
+    },
+    {
+      "ResultItem": "tungsten_chestplate",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "tungsten_ingot",
+          "Quantity": 10
+        }
+      ]
+    },
+    {
+      "ResultItem": "tungsten_leggings",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "tungsten_ingot",
+          "Quantity": 8
+        }
+      ]
+    },
+    {
+      "ResultItem": "platinum_helmet",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "platinum_ingot",
+          "Quantity": 6
+        }
+      ]
+    },
+    {
+      "ResultItem": "platinum_chestplate",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "platinum_ingot",
+          "Quantity": 10
+        }
+      ]
+    },
+    {
+      "ResultItem": "platinum_leggings",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "platinum_ingot",
+          "Quantity": 8
+        }
+      ]
+    },
+    {
+      "ResultItem": "tin_pickaxe",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "tin_ingot",
+          "Quantity": 10
+        }
+      ]
+    },
+    {
+      "ResultItem": "lead_pickaxe",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "lead_ingot",
+          "Quantity": 10
+        }
+      ]
+    },
+    {
+      "ResultItem": "tungsten_pickaxe",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "tungsten_ingot",
+          "Quantity": 10
+        }
+      ]
+    },
+    {
+      "ResultItem": "platinum_pickaxe",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "platinum_ingot",
+          "Quantity": 10
+        }
+      ]
+    },
+    {
+      "ResultItem": "tin_sword",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "tin_ingot",
+          "Quantity": 10
+        }
+      ]
+    },
+    {
+      "ResultItem": "lead_sword",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "lead_ingot",
+          "Quantity": 10
+        }
+      ]
+    },
+    {
+      "ResultItem": "tungsten_sword",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "tungsten_ingot",
+          "Quantity": 10
+        }
+      ]
+    },
+    {
+      "ResultItem": "platinum_sword",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "platinum_ingot",
+          "Quantity": 10
+        }
+      ]
+    },
+    {
+      "ResultItem": "strings",
+      "ResultQuantity": 2,
+      "Ingredients": [
+        {
+          "ItemID": "cobweb",
+          "Quantity": 1
+        }
+      ]
+    },
+    {
+      "ResultItem": "copper_bow",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "strings",
+          "Quantity": 5
+        },
+        {
+          "ItemID": "copper_ingot",
+          "Quantity": 10
+        }
+      ]
+    },
+    {
+      "ResultItem": "tin_bow",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "strings",
+          "Quantity": 5
+        },
+        {
+          "ItemID": "tin_ingot",
+          "Quantity": 10
+        }
+      ]
+    },
+    {
+      "ResultItem": "lead_bow",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "strings",
+          "Quantity": 5
+        },
+        {
+          "ItemID": "lead_ingot",
+          "Quantity": 10
+        }
+      ]
+    },
+    {
+      "ResultItem": "iron_bow",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "strings",
+          "Quantity": 5
+        },
+        {
+          "ItemID": "iron_ingot",
+          "Quantity": 10
+        }
+      ]
+    },
+    {
+      "ResultItem": "silver_bow",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "strings",
+          "Quantity": 5
+        },
+        {
+          "ItemID": "silver_ingot",
+          "Quantity": 10
+        }
+      ]
+    },
+    {
+      "ResultItem": "tungsten_bow",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "strings",
+          "Quantity": 5
+        },
+        {
+          "ItemID": "tungsten_ingot",
+          "Quantity": 10
+        }
+      ]
+    },
+    {
+      "ResultItem": "gold_bow",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "strings",
+          "Quantity": 5
+        },
+        {
+          "ItemID": "gold_ingot",
+          "Quantity": 10
+        }
+      ]
+    },
+    {
+      "ResultItem": "platinum_bow",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "strings",
+          "Quantity": 5
+        },
+        {
+          "ItemID": "platinum_ingot",
+          "Quantity": 10
+        }
+      ]
+    },
+    {
+      "ResultItem": "nature_wings",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "oak_leaves",
+          "Quantity": 25
+        },
+        {
+          "ItemID": "mangrove_leaves",
+          "Quantity": 25
+        },
+        {
+          "ItemID": "pine_leaves",
+          "Quantity": 25
+        },
+        {
+          "ItemID": "cherry_blossom_leaves",
+          "Quantity": 25
+        },
+        {
+          "ItemID": "beech_leaves",
+          "Quantity": 25
+        }
+      ]
+    }
+  ]
+};

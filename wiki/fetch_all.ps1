@@ -1,7 +1,7 @@
 # fetch_all.ps1
 # Copies item_configs.json, mob_configs.json, crafting_recipes.json, item_values.json, chestdata.json, tile_to_item_mapping.json, and tile_properties.json from the Unity Resources folder to the wiki folder.
 
-$sourceBase = "d:\UnityProject\1PercentGameStudio\MineAndDungeon\Assets\Resources"
+$sourceBase = "d:\UnityProject\1PercentGameStudio\MineAndDungeon\Assets\Resources_moved\DataJson"
 $dest = "d:\23-steps\wiki"
 
 $filesToCopy = @(

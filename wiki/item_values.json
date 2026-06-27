@@ -1,7 +1,7 @@
 {
   "ItemValues": [
     {
-      "itemID": "Dirt",
+      "itemID": "dirt",
       "value": {
         "BuyPrice": 2,
         "SellPrice": 1,
@@ -11,7 +11,7 @@
       }
     },
     {
-      "itemID": "Stone",
+      "itemID": "stone",
       "value": {
         "BuyPrice": 4,
         "SellPrice": 2,
@@ -21,7 +21,7 @@
       }
     },
     {
-      "itemID": "Sand",
+      "itemID": "sand",
       "value": {
         "BuyPrice": 5,
         "SellPrice": 2,
@@ -31,7 +31,7 @@
       }
     },
     {
-      "itemID": "Clay",
+      "itemID": "clay",
       "value": {
         "BuyPrice": 5,
         "SellPrice": 1,
@@ -41,7 +41,7 @@
       }
     },
     {
-      "itemID": "IronOre",
+      "itemID": "iron_ore",
       "value": {
         "BuyPrice": 160,
         "SellPrice": 80,
@@ -51,7 +51,7 @@
       }
     },
     {
-      "itemID": "Coal",
+      "itemID": "coal",
       "value": {
         "BuyPrice": 10,
         "SellPrice": 5,
@@ -61,7 +61,7 @@
       }
     },
     {
-      "itemID": "Wood",
+      "itemID": "wood",
       "value": {
         "BuyPrice": 5,
         "SellPrice": 1,
@@ -71,7 +71,7 @@
       }
     },
     {
-      "itemID": "Log",
+      "itemID": "log",
       "value": {
         "BuyPrice": 4,
         "SellPrice": 2,
@@ -81,7 +81,7 @@
       }
     },
     {
-      "itemID": "CopperOre",
+      "itemID": "copper_ore",
       "value": {
         "BuyPrice": 20,
         "SellPrice": 10,
@@ -91,7 +91,7 @@
       }
     },
     {
-      "itemID": "GoldOre",
+      "itemID": "gold_ore",
       "value": {
         "BuyPrice": 640,
         "SellPrice": 320,
@@ -101,7 +101,7 @@
       }
     },
     {
-      "itemID": "Gravel",
+      "itemID": "gravel",
       "value": {
         "BuyPrice": 3,
         "SellPrice": 1,
@@ -111,7 +111,7 @@
       }
     },
     {
-      "itemID": "Flint",
+      "itemID": "flint",
       "value": {
         "BuyPrice": 6,
         "SellPrice": 1,
@@ -121,7 +121,7 @@
       }
     },
     {
-      "itemID": "Grass",
+      "itemID": "grass",
       "value": {
         "BuyPrice": 3,
         "SellPrice": 1,
@@ -131,7 +131,7 @@
       }
     },
     {
-      "itemID": "WaterBucket",
+      "itemID": "water_bucket",
       "value": {
         "BuyPrice": 10,
         "SellPrice": 2,
@@ -141,7 +141,7 @@
       }
     },
     {
-      "itemID": "LavaBucket",
+      "itemID": "lava_bucket",
       "value": {
         "BuyPrice": 25,
         "SellPrice": 5,
@@ -151,7 +151,7 @@
       }
     },
     {
-      "itemID": "SilverOre",
+      "itemID": "silver_ore",
       "value": {
         "BuyPrice": 320,
         "SellPrice": 160,
@@ -171,7 +171,7 @@
       }
     },
     {
-      "itemID": "Ice",
+      "itemID": "ice",
       "value": {
         "BuyPrice": 5,
         "SellPrice": 1,
@@ -181,7 +181,7 @@
       }
     },
     {
-      "itemID": "Gel",
+      "itemID": "gel",
       "value": {
         "BuyPrice": 8,
         "SellPrice": 2,
@@ -191,7 +191,7 @@
       }
     },
     {
-      "itemID": "Arrow",
+      "itemID": "wooden_arrow",
       "value": {
         "BuyPrice": 8,
         "SellPrice": 4,
@@ -201,7 +201,7 @@
       }
     },
     {
-      "itemID": "CopperIngot",
+      "itemID": "fire_arrow",
       "value": {
         "BuyPrice": 20,
         "SellPrice": 10,
@@ -211,7 +211,27 @@
       }
     },
     {
-      "itemID": "IronIngot",
+      "itemID": "poison_arrow",
+      "value": {
+        "BuyPrice": 20,
+        "SellPrice": 10,
+        "DemandMultiplier": 1,
+        "CanBuy": true,
+        "CanSell": true
+      }
+    },
+    {
+      "itemID": "copper_ingot",
+      "value": {
+        "BuyPrice": 20,
+        "SellPrice": 10,
+        "DemandMultiplier": 1,
+        "CanBuy": true,
+        "CanSell": true
+      }
+    },
+    {
+      "itemID": "iron_ingot",
       "value": {
         "BuyPrice": 160,
         "SellPrice": 80,
@@ -221,7 +241,7 @@
       }
     },
     {
-      "itemID": "SilverIngot",
+      "itemID": "silver_ingot",
       "value": {
         "BuyPrice": 320,
         "SellPrice": 160,
@@ -231,7 +251,7 @@
       }
     },
     {
-      "itemID": "GoldIngot",
+      "itemID": "gold_ingot",
       "value": {
         "BuyPrice": 640,
         "SellPrice": 320,
@@ -241,7 +261,7 @@
       }
     },
     {
-      "itemID": "Diamond",
+      "itemID": "diamond",
       "value": {
         "BuyPrice": 200,
         "SellPrice": 40,
@@ -251,7 +271,7 @@
       }
     },
     {
-      "itemID": "Ruby",
+      "itemID": "ruby",
       "value": {
         "BuyPrice": 180,
         "SellPrice": 36,
@@ -261,7 +281,7 @@
       }
     },
     {
-      "itemID": "Emerald",
+      "itemID": "emerald",
       "value": {
         "BuyPrice": 190,
         "SellPrice": 38,
@@ -271,7 +291,7 @@
       }
     },
     {
-      "itemID": "Sapphire",
+      "itemID": "sapphire",
       "value": {
         "BuyPrice": 175,
         "SellPrice": 35,
@@ -281,7 +301,7 @@
       }
     },
     {
-      "itemID": "Topaz",
+      "itemID": "topaz",
       "value": {
         "BuyPrice": 160,
         "SellPrice": 32,
@@ -291,7 +311,7 @@
       }
     },
     {
-      "itemID": "Aquamarine",
+      "itemID": "aquamarine",
       "value": {
         "BuyPrice": 165,
         "SellPrice": 33,
@@ -301,7 +321,7 @@
       }
     },
     {
-      "itemID": "SpessartiteGarnet",
+      "itemID": "spessartite_garnet",
       "value": {
         "BuyPrice": 155,
         "SellPrice": 31,
@@ -311,7 +331,7 @@
       }
     },
     {
-      "itemID": "Amethyst",
+      "itemID": "amethyst",
       "value": {
         "BuyPrice": 150,
         "SellPrice": 30,
@@ -321,7 +341,7 @@
       }
     },
     {
-      "itemID": "Morganite",
+      "itemID": "morganite",
       "value": {
         "BuyPrice": 145,
         "SellPrice": 29,
@@ -331,7 +351,7 @@
       }
     },
     {
-      "itemID": "Onyx",
+      "itemID": "onyx",
       "value": {
         "BuyPrice": 140,
         "SellPrice": 28,
@@ -341,7 +361,7 @@
       }
     },
     {
-      "itemID": "Moss",
+      "itemID": "moss",
       "value": {
         "BuyPrice": 3,
         "SellPrice": 1,
@@ -351,7 +371,7 @@
       }
     },
     {
-      "itemID": "Snow",
+      "itemID": "snow",
       "value": {
         "BuyPrice": 3,
         "SellPrice": 1,
@@ -361,7 +381,7 @@
       }
     },
     {
-      "itemID": "Glass",
+      "itemID": "glass",
       "value": {
         "BuyPrice": 4,
         "SellPrice": 1,
@@ -371,7 +391,7 @@
       }
     },
     {
-      "itemID": "OakLeaves",
+      "itemID": "oak_leaves",
       "value": {
         "BuyPrice": 3,
         "SellPrice": 1,
@@ -381,7 +401,7 @@
       }
     },
     {
-      "itemID": "MangroveLeaves",
+      "itemID": "mangrove_leaves",
       "value": {
         "BuyPrice": 3,
         "SellPrice": 1,
@@ -391,7 +411,7 @@
       }
     },
     {
-      "itemID": "PineLeaves",
+      "itemID": "pine_leaves",
       "value": {
         "BuyPrice": 3,
         "SellPrice": 1,
@@ -401,7 +421,7 @@
       }
     },
     {
-      "itemID": "CherryBlossomLeaves",
+      "itemID": "cherry_blossom_leaves",
       "value": {
         "BuyPrice": 3,
         "SellPrice": 1,
@@ -411,7 +431,7 @@
       }
     },
     {
-      "itemID": "BeechLeaves",
+      "itemID": "beech_leaves",
       "value": {
         "BuyPrice": 3,
         "SellPrice": 1,
@@ -421,7 +441,7 @@
       }
     },
     {
-      "itemID": "OnyxBrick",
+      "itemID": "onyx_brick",
       "value": {
         "BuyPrice": 600,
         "SellPrice": 120,
@@ -431,7 +451,7 @@
       }
     },
     {
-      "itemID": "MorganiteBrick",
+      "itemID": "morganite_brick",
       "value": {
         "BuyPrice": 620,
         "SellPrice": 124,
@@ -441,7 +461,7 @@
       }
     },
     {
-      "itemID": "AmethystBrick",
+      "itemID": "amethyst_brick",
       "value": {
         "BuyPrice": 640,
         "SellPrice": 128,
@@ -451,7 +471,7 @@
       }
     },
     {
-      "itemID": "SpessartitegarnetBrick",
+      "itemID": "spessartitegarnet_brick",
       "value": {
         "BuyPrice": 660,
         "SellPrice": 132,
@@ -461,7 +481,7 @@
       }
     },
     {
-      "itemID": "AquamarineBrick",
+      "itemID": "aquamarine_brick",
       "value": {
         "BuyPrice": 700,
         "SellPrice": 140,
@@ -471,7 +491,7 @@
       }
     },
     {
-      "itemID": "TopazBrick",
+      "itemID": "topaz_brick",
       "value": {
         "BuyPrice": 680,
         "SellPrice": 136,
@@ -481,7 +501,7 @@
       }
     },
     {
-      "itemID": "SapphireBrick",
+      "itemID": "sapphire_brick",
       "value": {
         "BuyPrice": 740,
         "SellPrice": 148,
@@ -491,7 +511,7 @@
       }
     },
     {
-      "itemID": "EmeraldBrick",
+      "itemID": "emerald_brick",
       "value": {
         "BuyPrice": 800,
         "SellPrice": 160,
@@ -501,7 +521,7 @@
       }
     },
     {
-      "itemID": "RubyBrick",
+      "itemID": "ruby_brick",
       "value": {
         "BuyPrice": 760,
         "SellPrice": 152,
@@ -511,7 +531,7 @@
       }
     },
     {
-      "itemID": "DiamondBrick",
+      "itemID": "diamond_brick",
       "value": {
         "BuyPrice": 840,
         "SellPrice": 168,
@@ -521,7 +541,7 @@
       }
     },
     {
-      "itemID": "SmoothSandBrick",
+      "itemID": "smooth_sand_brick",
       "value": {
         "BuyPrice": 5,
         "SellPrice": 1,
@@ -531,7 +551,7 @@
       }
     },
     {
-      "itemID": "SmoothSand",
+      "itemID": "smooth_sand",
       "value": {
         "BuyPrice": 4,
         "SellPrice": 1,
@@ -541,7 +561,7 @@
       }
     },
     {
-      "itemID": "SandBrick",
+      "itemID": "sand_brick",
       "value": {
         "BuyPrice": 5,
         "SellPrice": 1,
@@ -551,7 +571,7 @@
       }
     },
     {
-      "itemID": "Lilypad",
+      "itemID": "lilypad",
       "value": {
         "BuyPrice": 10,
         "SellPrice": 2,
@@ -561,7 +581,7 @@
       }
     },
     {
-      "itemID": "MorganiteLightstone",
+      "itemID": "morganite_lightstone",
       "value": {
         "BuyPrice": 300,
         "SellPrice": 60,
@@ -571,7 +591,7 @@
       }
     },
     {
-      "itemID": "AmethystLightstone",
+      "itemID": "amethyst_lightstone",
       "value": {
         "BuyPrice": 310,
         "SellPrice": 62,
@@ -581,7 +601,7 @@
       }
     },
     {
-      "itemID": "SpessartitegarnetLightstone",
+      "itemID": "spessartitegarnet_lightstone",
       "value": {
         "BuyPrice": 320,
         "SellPrice": 64,
@@ -591,7 +611,7 @@
       }
     },
     {
-      "itemID": "AquamarineLightstone",
+      "itemID": "aquamarine_lightstone",
       "value": {
         "BuyPrice": 340,
         "SellPrice": 68,
@@ -601,7 +621,7 @@
       }
     },
     {
-      "itemID": "TopazLightstone",
+      "itemID": "topaz_lightstone",
       "value": {
         "BuyPrice": 330,
         "SellPrice": 66,
@@ -611,7 +631,7 @@
       }
     },
     {
-      "itemID": "SapphireLightstone",
+      "itemID": "sapphire_lightstone",
       "value": {
         "BuyPrice": 360,
         "SellPrice": 72,
@@ -621,7 +641,7 @@
       }
     },
     {
-      "itemID": "EmeraldLightstone",
+      "itemID": "emerald_lightstone",
       "value": {
         "BuyPrice": 380,
         "SellPrice": 76,
@@ -631,7 +651,7 @@
       }
     },
     {
-      "itemID": "RubyLightstone",
+      "itemID": "ruby_lightstone",
       "value": {
         "BuyPrice": 370,
         "SellPrice": 74,
@@ -641,7 +661,7 @@
       }
     },
     {
-      "itemID": "HayBale",
+      "itemID": "hay_bale",
       "value": {
         "BuyPrice": 15,
         "SellPrice": 3,
@@ -651,7 +671,7 @@
       }
     },
     {
-      "itemID": "SnowBrick",
+      "itemID": "snow_brick",
       "value": {
         "BuyPrice": 10,
         "SellPrice": 2,
@@ -661,7 +681,7 @@
       }
     },
     {
-      "itemID": "TinOre",
+      "itemID": "tin_ore",
       "value": {
         "BuyPrice": 40,
         "SellPrice": 20,
@@ -671,7 +691,7 @@
       }
     },
     {
-      "itemID": "LeadOre",
+      "itemID": "lead_ore",
       "value": {
         "BuyPrice": 80,
         "SellPrice": 40,
@@ -681,7 +701,7 @@
       }
     },
     {
-      "itemID": "Amberstone",
+      "itemID": "amberstone",
       "value": {
         "BuyPrice": 335,
         "SellPrice": 170,
@@ -691,7 +711,7 @@
       }
     },
     {
-      "itemID": "TungstenOre",
+      "itemID": "tungsten_ore",
       "value": {
         "BuyPrice": 1280,
         "SellPrice": 640,
@@ -701,7 +721,7 @@
       }
     },
     {
-      "itemID": "PlatinumOre",
+      "itemID": "platinum_ore",
       "value": {
         "BuyPrice": 2560,
         "SellPrice": 1280,
@@ -711,7 +731,7 @@
       }
     },
     {
-      "itemID": "CobaltOre",
+      "itemID": "cobalt_ore",
       "value": {
         "BuyPrice": 265,
         "SellPrice": 135,
@@ -721,7 +741,7 @@
       }
     },
     {
-      "itemID": "MythrilOre",
+      "itemID": "mythril_ore",
       "value": {
         "BuyPrice": 285,
         "SellPrice": 145,
@@ -731,7 +751,7 @@
       }
     },
     {
-      "itemID": "Cobweb",
+      "itemID": "cobweb",
       "value": {
         "BuyPrice": 10,
         "SellPrice": 5,
@@ -741,7 +761,7 @@
       }
     },
     {
-      "itemID": "TinIngot",
+      "itemID": "tin_ingot",
       "value": {
         "BuyPrice": 40,
         "SellPrice": 20,
@@ -751,7 +771,7 @@
       }
     },
     {
-      "itemID": "LeadIngot",
+      "itemID": "lead_ingot",
       "value": {
         "BuyPrice": 80,
         "SellPrice": 40,
@@ -761,7 +781,7 @@
       }
     },
     {
-      "itemID": "TungstenIngot",
+      "itemID": "tungsten_ingot",
       "value": {
         "BuyPrice": 1280,
         "SellPrice": 640,
@@ -771,7 +791,7 @@
       }
     },
     {
-      "itemID": "PlatinumIngot",
+      "itemID": "platinum_ingot",
       "value": {
         "BuyPrice": 2560,
         "SellPrice": 1280,
@@ -781,7 +801,7 @@
       }
     },
     {
-      "itemID": "AmberstoneIngot",
+      "itemID": "amberstone_ingot",
       "value": {
         "BuyPrice": 400,
         "SellPrice": 80,
@@ -791,7 +811,7 @@
       }
     },
     {
-      "itemID": "Strings",
+      "itemID": "strings",
       "value": {
         "BuyPrice": 10,
         "SellPrice": 5,
@@ -801,7 +821,7 @@
       }
     },
     {
-      "itemID": "WoodenPickaxe",
+      "itemID": "wooden_pickaxe",
       "value": {
         "BuyPrice": 67,
         "SellPrice": 13,
@@ -811,7 +831,7 @@
       }
     },
     {
-      "itemID": "CopperPickaxe",
+      "itemID": "copper_pickaxe",
       "value": {
         "BuyPrice": 100,
         "SellPrice": 50,
@@ -821,7 +841,7 @@
       }
     },
     {
-      "itemID": "IronPickaxe",
+      "itemID": "iron_pickaxe",
       "value": {
         "BuyPrice": 800,
         "SellPrice": 400,
@@ -831,7 +851,7 @@
       }
     },
     {
-      "itemID": "SilverPickaxe",
+      "itemID": "silver_pickaxe",
       "value": {
         "BuyPrice": 1600,
         "SellPrice": 800,
@@ -841,7 +861,7 @@
       }
     },
     {
-      "itemID": "GoldPickaxe",
+      "itemID": "gold_pickaxe",
       "value": {
         "BuyPrice": 3200,
         "SellPrice": 1600,
@@ -851,7 +871,7 @@
       }
     },
     {
-      "itemID": "TinPickaxe",
+      "itemID": "tin_pickaxe",
       "value": {
         "BuyPrice": 200,
         "SellPrice": 100,
@@ -861,7 +881,7 @@
       }
     },
     {
-      "itemID": "LeadPickaxe",
+      "itemID": "lead_pickaxe",
       "value": {
         "BuyPrice": 400,
         "SellPrice": 200,
@@ -871,7 +891,7 @@
       }
     },
     {
-      "itemID": "TungstenPickaxe",
+      "itemID": "tungsten_pickaxe",
       "value": {
         "BuyPrice": 6400,
         "SellPrice": 3200,
@@ -881,7 +901,7 @@
       }
     },
     {
-      "itemID": "PlatinumPickaxe",
+      "itemID": "platinum_pickaxe",
       "value": {
         "BuyPrice": 12800,
         "SellPrice": 6400,
@@ -891,7 +911,7 @@
       }
     },
     {
-      "itemID": "CobaltPickaxe",
+      "itemID": "cobalt_pickaxe",
       "value": {
         "BuyPrice": 1165,
         "SellPrice": 235,
@@ -901,7 +921,7 @@
       }
     },
     {
-      "itemID": "MythrilPickaxe",
+      "itemID": "mythril_pickaxe",
       "value": {
         "BuyPrice": 1335,
         "SellPrice": 265,
@@ -911,7 +931,7 @@
       }
     },
     {
-      "itemID": "WoodenSword",
+      "itemID": "wooden_sword",
       "value": {
         "BuyPrice": 83,
         "SellPrice": 17,
@@ -921,7 +941,7 @@
       }
     },
     {
-      "itemID": "CopperSword",
+      "itemID": "copper_sword",
       "value": {
         "BuyPrice": 100,
         "SellPrice": 50,
@@ -931,7 +951,7 @@
       }
     },
     {
-      "itemID": "IronSword",
+      "itemID": "iron_sword",
       "value": {
         "BuyPrice": 800,
         "SellPrice": 400,
@@ -941,7 +961,7 @@
       }
     },
     {
-      "itemID": "SilverSword",
+      "itemID": "silver_sword",
       "value": {
         "BuyPrice": 1600,
         "SellPrice": 800,
@@ -951,7 +971,7 @@
       }
     },
     {
-      "itemID": "GoldSword",
+      "itemID": "gold_sword",
       "value": {
         "BuyPrice": 3200,
         "SellPrice": 1600,
@@ -961,7 +981,7 @@
       }
     },
     {
-      "itemID": "WoodenBow",
+      "itemID": "wooden_bow",
       "value": {
         "BuyPrice": 100,
         "SellPrice": 20,
@@ -971,7 +991,7 @@
       }
     },
     {
-      "itemID": "CopperBow",
+      "itemID": "copper_bow",
       "value": {
         "BuyPrice": 200,
         "SellPrice": 100,
@@ -981,7 +1001,7 @@
       }
     },
     {
-      "itemID": "TinBow",
+      "itemID": "tin_bow",
       "value": {
         "BuyPrice": 400,
         "SellPrice": 200,
@@ -991,7 +1011,7 @@
       }
     },
     {
-      "itemID": "LeadBow",
+      "itemID": "lead_bow",
       "value": {
         "BuyPrice": 800,
         "SellPrice": 400,
@@ -1001,7 +1021,7 @@
       }
     },
     {
-      "itemID": "IronBow",
+      "itemID": "iron_bow",
       "value": {
         "BuyPrice": 1600,
         "SellPrice": 800,
@@ -1011,7 +1031,7 @@
       }
     },
     {
-      "itemID": "SilverBow",
+      "itemID": "silver_bow",
       "value": {
         "BuyPrice": 3200,
         "SellPrice": 1600,
@@ -1021,7 +1041,7 @@
       }
     },
     {
-      "itemID": "GoldBow",
+      "itemID": "gold_bow",
       "value": {
         "BuyPrice": 6400,
         "SellPrice": 3200,
@@ -1031,7 +1051,7 @@
       }
     },
     {
-      "itemID": "TungstenBow",
+      "itemID": "tungsten_bow",
       "value": {
         "BuyPrice": 12800,
         "SellPrice": 6400,
@@ -1041,7 +1061,7 @@
       }
     },
     {
-      "itemID": "PlatinumBow",
+      "itemID": "platinum_bow",
       "value": {
         "BuyPrice": 25600,
         "SellPrice": 12800,
@@ -1051,7 +1071,7 @@
       }
     },
     {
-      "itemID": "CobaltBow",
+      "itemID": "cobalt_bow",
       "value": {
         "BuyPrice": 1400,
         "SellPrice": 280,
@@ -1061,7 +1081,7 @@
       }
     },
     {
-      "itemID": "MythrilBow",
+      "itemID": "mythril_bow",
       "value": {
         "BuyPrice": 1565,
         "SellPrice": 315,
@@ -1071,7 +1091,7 @@
       }
     },
     {
-      "itemID": "TinSword",
+      "itemID": "tin_sword",
       "value": {
         "BuyPrice": 200,
         "SellPrice": 100,
@@ -1081,7 +1101,7 @@
       }
     },
     {
-      "itemID": "LeadSword",
+      "itemID": "lead_sword",
       "value": {
         "BuyPrice": 400,
         "SellPrice": 200,
@@ -1091,7 +1111,7 @@
       }
     },
     {
-      "itemID": "TungstenSword",
+      "itemID": "tungsten_sword",
       "value": {
         "BuyPrice": 6400,
         "SellPrice": 3200,
@@ -1101,7 +1121,7 @@
       }
     },
     {
-      "itemID": "PlatinumSword",
+      "itemID": "platinum_sword",
       "value": {
         "BuyPrice": 12800,
         "SellPrice": 6400,
@@ -1111,7 +1131,7 @@
       }
     },
     {
-      "itemID": "CobaltSword",
+      "itemID": "cobalt_sword",
       "value": {
         "BuyPrice": 1335,
         "SellPrice": 265,
@@ -1121,7 +1141,7 @@
       }
     },
     {
-      "itemID": "MythrilSword",
+      "itemID": "mythril_sword",
       "value": {
         "BuyPrice": 1500,
         "SellPrice": 300,
@@ -1131,7 +1151,7 @@
       }
     },
     {
-      "itemID": "Cobalt_Trident",
+      "itemID": "cobalt_trident",
       "value": {
         "BuyPrice": 3335,
         "SellPrice": 665,
@@ -1141,7 +1161,7 @@
       }
     },
     {
-      "itemID": "WoodenWand",
+      "itemID": "wooden_wand",
       "value": {
         "BuyPrice": 50,
         "SellPrice": 10,
@@ -1151,7 +1171,7 @@
       }
     },
     {
-      "itemID": "OnyxWand",
+      "itemID": "onyx_wand",
       "value": {
         "BuyPrice": 300,
         "SellPrice": 60,
@@ -1161,7 +1181,7 @@
       }
     },
     {
-      "itemID": "MorganiteStaff",
+      "itemID": "morganite_staff",
       "value": {
         "BuyPrice": 310,
         "SellPrice": 62,
@@ -1171,7 +1191,7 @@
       }
     },
     {
-      "itemID": "AmethystStaff",
+      "itemID": "amethyst_staff",
       "value": {
         "BuyPrice": 320,
         "SellPrice": 64,
@@ -1181,7 +1201,7 @@
       }
     },
     {
-      "itemID": "SpessartiteGarnetStaff",
+      "itemID": "spessartite_garnet_staff",
       "value": {
         "BuyPrice": 330,
         "SellPrice": 66,
@@ -1191,7 +1211,7 @@
       }
     },
     {
-      "itemID": "AquamarineStaff",
+      "itemID": "aquamarine_staff",
       "value": {
         "BuyPrice": 350,
         "SellPrice": 70,
@@ -1201,7 +1221,7 @@
       }
     },
     {
-      "itemID": "TopazStaff",
+      "itemID": "topaz_staff",
       "value": {
         "BuyPrice": 340,
         "SellPrice": 68,
@@ -1211,7 +1231,7 @@
       }
     },
     {
-      "itemID": "SapphireStaff",
+      "itemID": "sapphire_staff",
       "value": {
         "BuyPrice": 370,
         "SellPrice": 74,
@@ -1221,7 +1241,7 @@
       }
     },
     {
-      "itemID": "EmeraldStaff",
+      "itemID": "emerald_staff",
       "value": {
         "BuyPrice": 400,
         "SellPrice": 80,
@@ -1231,7 +1251,7 @@
       }
     },
     {
-      "itemID": "RubyStaff",
+      "itemID": "ruby_staff",
       "value": {
         "BuyPrice": 380,
         "SellPrice": 76,
@@ -1241,7 +1261,7 @@
       }
     },
     {
-      "itemID": "CopperHelmet",
+      "itemID": "copper_helmet",
       "value": {
         "BuyPrice": 60,
         "SellPrice": 30,
@@ -1251,7 +1271,7 @@
       }
     },
     {
-      "itemID": "CopperChestplate",
+      "itemID": "copper_chestplate",
       "value": {
         "BuyPrice": 100,
         "SellPrice": 50,
@@ -1261,7 +1281,7 @@
       }
     },
     {
-      "itemID": "CopperLeggings",
+      "itemID": "copper_leggings",
       "value": {
         "BuyPrice": 80,
         "SellPrice": 40,
@@ -1271,7 +1291,7 @@
       }
     },
     {
-      "itemID": "IronHelmet",
+      "itemID": "iron_helmet",
       "value": {
         "BuyPrice": 480,
         "SellPrice": 240,
@@ -1281,7 +1301,7 @@
       }
     },
     {
-      "itemID": "IronChestplate",
+      "itemID": "iron_chestplate",
       "value": {
         "BuyPrice": 800,
         "SellPrice": 400,
@@ -1291,7 +1311,7 @@
       }
     },
     {
-      "itemID": "IronLeggings",
+      "itemID": "iron_leggings",
       "value": {
         "BuyPrice": 640,
         "SellPrice": 320,
@@ -1301,7 +1321,7 @@
       }
     },
     {
-      "itemID": "SilverHelmet",
+      "itemID": "silver_helmet",
       "value": {
         "BuyPrice": 960,
         "SellPrice": 480,
@@ -1311,7 +1331,7 @@
       }
     },
     {
-      "itemID": "SilverChestplate",
+      "itemID": "silver_chestplate",
       "value": {
         "BuyPrice": 1600,
         "SellPrice": 800,
@@ -1321,7 +1341,7 @@
       }
     },
     {
-      "itemID": "SilverLeggings",
+      "itemID": "silver_leggings",
       "value": {
         "BuyPrice": 1280,
         "SellPrice": 640,
@@ -1331,7 +1351,7 @@
       }
     },
     {
-      "itemID": "GoldHelmet",
+      "itemID": "gold_helmet",
       "value": {
         "BuyPrice": 1920,
         "SellPrice": 960,
@@ -1341,7 +1361,7 @@
       }
     },
     {
-      "itemID": "GoldChestplate",
+      "itemID": "gold_chestplate",
       "value": {
         "BuyPrice": 3200,
         "SellPrice": 1600,
@@ -1351,7 +1371,7 @@
       }
     },
     {
-      "itemID": "GoldLeggings",
+      "itemID": "gold_leggings",
       "value": {
         "BuyPrice": 2560,
         "SellPrice": 1280,
@@ -1361,7 +1381,7 @@
       }
     },
     {
-      "itemID": "TinHelmet",
+      "itemID": "tin_helmet",
       "value": {
         "BuyPrice": 120,
         "SellPrice": 60,
@@ -1371,7 +1391,7 @@
       }
     },
     {
-      "itemID": "TinChestplate",
+      "itemID": "tin_chestplate",
       "value": {
         "BuyPrice": 200,
         "SellPrice": 100,
@@ -1381,7 +1401,7 @@
       }
     },
     {
-      "itemID": "TinLeggings",
+      "itemID": "tin_leggings",
       "value": {
         "BuyPrice": 160,
         "SellPrice": 80,
@@ -1391,7 +1411,7 @@
       }
     },
     {
-      "itemID": "LeadHelmet",
+      "itemID": "lead_helmet",
       "value": {
         "BuyPrice": 240,
         "SellPrice": 120,
@@ -1401,7 +1421,7 @@
       }
     },
     {
-      "itemID": "LeadChestplate",
+      "itemID": "lead_chestplate",
       "value": {
         "BuyPrice": 400,
         "SellPrice": 200,
@@ -1411,7 +1431,7 @@
       }
     },
     {
-      "itemID": "LeadLeggings",
+      "itemID": "lead_leggings",
       "value": {
         "BuyPrice": 320,
         "SellPrice": 160,
@@ -1421,7 +1441,7 @@
       }
     },
     {
-      "itemID": "TungstenHelmet",
+      "itemID": "tungsten_helmet",
       "value": {
         "BuyPrice": 3840,
         "SellPrice": 1920,
@@ -1431,7 +1451,7 @@
       }
     },
     {
-      "itemID": "TungstenChestplate",
+      "itemID": "tungsten_chestplate",
       "value": {
         "BuyPrice": 6400,
         "SellPrice": 3200,
@@ -1441,7 +1461,7 @@
       }
     },
     {
-      "itemID": "TungstenLeggings",
+      "itemID": "tungsten_leggings",
       "value": {
         "BuyPrice": 5120,
         "SellPrice": 2560,
@@ -1451,7 +1471,7 @@
       }
     },
     {
-      "itemID": "PlatinumHelmet",
+      "itemID": "platinum_helmet",
       "value": {
         "BuyPrice": 7680,
         "SellPrice": 3840,
@@ -1461,7 +1481,7 @@
       }
     },
     {
-      "itemID": "PlatinumChestplate",
+      "itemID": "platinum_chestplate",
       "value": {
         "BuyPrice": 12800,
         "SellPrice": 6400,
@@ -1471,7 +1491,7 @@
       }
     },
     {
-      "itemID": "PlatinumLeggings",
+      "itemID": "platinum_leggings",
       "value": {
         "BuyPrice": 10240,
         "SellPrice": 5120,
@@ -1481,7 +1501,7 @@
       }
     },
     {
-      "itemID": "AmberstoneHelmet",
+      "itemID": "amberstone_helmet",
       "value": {
         "BuyPrice": 700,
         "SellPrice": 140,
@@ -1491,7 +1511,7 @@
       }
     },
     {
-      "itemID": "AmberstoneChestplate",
+      "itemID": "amberstone_chestplate",
       "value": {
         "BuyPrice": 1100,
         "SellPrice": 220,
@@ -1501,7 +1521,7 @@
       }
     },
     {
-      "itemID": "AmberstoneLeggings",
+      "itemID": "amberstone_leggings",
       "value": {
         "BuyPrice": 700,
         "SellPrice": 140,
@@ -1511,7 +1531,7 @@
       }
     },
     {
-      "itemID": "NatureWings",
+      "itemID": "nature_wings",
       "value": {
         "BuyPrice": 2500,
         "SellPrice": 500,
@@ -1521,7 +1541,7 @@
       }
     },
     {
-      "itemID": "CosmicWings",
+      "itemID": "cosmic_wings",
       "value": {
         "BuyPrice": 5000,
         "SellPrice": 1000,
@@ -1531,7 +1551,7 @@
       }
     },
     {
-      "itemID": "FairyWings",
+      "itemID": "fairy_wings",
       "value": {
         "BuyPrice": 3000,
         "SellPrice": 600,
@@ -1541,7 +1561,7 @@
       }
     },
     {
-      "itemID": "BoneWings",
+      "itemID": "bone_wings",
       "value": {
         "BuyPrice": 3500,
         "SellPrice": 700,
@@ -1551,7 +1571,7 @@
       }
     },
     {
-      "itemID": "ThornwoodWings",
+      "itemID": "thornwood_wings",
       "value": {
         "BuyPrice": 2500,
         "SellPrice": 500,
@@ -1561,7 +1581,7 @@
       }
     },
     {
-      "itemID": "NightWings",
+      "itemID": "night_wings",
       "value": {
         "BuyPrice": 4000,
         "SellPrice": 800,
@@ -1571,7 +1591,7 @@
       }
     },
     {
-      "itemID": "SpiritWings",
+      "itemID": "spirit_wings",
       "value": {
         "BuyPrice": 4500,
         "SellPrice": 900,
@@ -1581,7 +1601,7 @@
       }
     },
     {
-      "itemID": "FrostWings",
+      "itemID": "frost_wings",
       "value": {
         "BuyPrice": 4500,
         "SellPrice": 900,
@@ -1591,7 +1611,7 @@
       }
     },
     {
-      "itemID": "Apple",
+      "itemID": "apple",
       "value": {
         "BuyPrice": 10,
         "SellPrice": 2,
@@ -1601,7 +1621,7 @@
       }
     },
     {
-      "itemID": "CookedMeat",
+      "itemID": "cooked_meat",
       "value": {
         "BuyPrice": 25,
         "SellPrice": 5,
@@ -1611,7 +1631,7 @@
       }
     },
     {
-      "itemID": "WaterBottle",
+      "itemID": "water_bottle",
       "value": {
         "BuyPrice": 5,
         "SellPrice": 1,
@@ -1621,7 +1641,7 @@
       }
     },
     {
-      "itemID": "Onion",
+      "itemID": "onion",
       "value": {
         "BuyPrice": 8,
         "SellPrice": 2,
@@ -1631,7 +1651,7 @@
       }
     },
     {
-      "itemID": "Garlic",
+      "itemID": "garlic",
       "value": {
         "BuyPrice": 8,
         "SellPrice": 2,
@@ -1641,7 +1661,7 @@
       }
     },
     {
-      "itemID": "Pumpkin",
+      "itemID": "pumpkin",
       "value": {
         "BuyPrice": 15,
         "SellPrice": 3,
@@ -1651,7 +1671,7 @@
       }
     },
     {
-      "itemID": "HealthPotionI",
+      "itemID": "health_potion_i",
       "value": {
         "BuyPrice": 100,
         "SellPrice": 0,
@@ -1661,7 +1681,7 @@
       }
     },
     {
-      "itemID": "HealthPotionII",
+      "itemID": "health_potion_ii",
       "value": {
         "BuyPrice": 200,
         "SellPrice": 0,
@@ -1671,7 +1691,7 @@
       }
     },
     {
-      "itemID": "HealthPotionIII",
+      "itemID": "health_potion_iii",
       "value": {
         "BuyPrice": 500,
         "SellPrice": 1,
@@ -1681,7 +1701,7 @@
       }
     },
     {
-      "itemID": "HealthPotionIV",
+      "itemID": "health_potion_iv",
       "value": {
         "BuyPrice": 1000,
         "SellPrice": 1,
@@ -1691,7 +1711,7 @@
       }
     },
     {
-      "itemID": "HealthPotionV",
+      "itemID": "health_potion_v",
       "value": {
         "BuyPrice": 2000,
         "SellPrice": 1,
@@ -1701,7 +1721,7 @@
       }
     },
     {
-      "itemID": "RegeneratePotionI",
+      "itemID": "regenerate_potion_i",
       "value": {
         "BuyPrice": 150,
         "SellPrice": 0,
@@ -1711,7 +1731,7 @@
       }
     },
     {
-      "itemID": "RegeneratePotionII",
+      "itemID": "regenerate_potion_ii",
       "value": {
         "BuyPrice": 300,
         "SellPrice": 0,
@@ -1721,7 +1741,7 @@
       }
     },
     {
-      "itemID": "RegeneratePotionIII",
+      "itemID": "regenerate_potion_iii",
       "value": {
         "BuyPrice": 600,
         "SellPrice": 1,
@@ -1731,7 +1751,7 @@
       }
     },
     {
-      "itemID": "RegeneratePotionIV",
+      "itemID": "regenerate_potion_iv",
       "value": {
         "BuyPrice": 1200,
         "SellPrice": 1,
@@ -1741,7 +1761,7 @@
       }
     },
     {
-      "itemID": "RegeneratePotionV",
+      "itemID": "regenerate_potion_v",
       "value": {
         "BuyPrice": 2500,
         "SellPrice": 1,
@@ -1751,7 +1771,7 @@
       }
     },
     {
-      "itemID": "SwiftnessPotionI",
+      "itemID": "swiftness_potion_i",
       "value": {
         "BuyPrice": 100,
         "SellPrice": 0,
@@ -1761,7 +1781,7 @@
       }
     },
     {
-      "itemID": "SwiftnessPotionII",
+      "itemID": "swiftness_potion_ii",
       "value": {
         "BuyPrice": 250,
         "SellPrice": 0,
@@ -1771,7 +1791,7 @@
       }
     },
     {
-      "itemID": "ManaPotionI",
+      "itemID": "mana_potion_i",
       "value": {
         "BuyPrice": 50,
         "SellPrice": 0,
@@ -1781,7 +1801,7 @@
       }
     },
     {
-      "itemID": "ManaPotionII",
+      "itemID": "mana_potion_ii",
       "value": {
         "BuyPrice": 100,
         "SellPrice": 0,
@@ -1791,7 +1811,7 @@
       }
     },
     {
-      "itemID": "ManaPotionIII",
+      "itemID": "mana_potion_iii",
       "value": {
         "BuyPrice": 200,
         "SellPrice": 1,
@@ -1801,7 +1821,7 @@
       }
     },
     {
-      "itemID": "ManaPotionIV",
+      "itemID": "mana_potion_iv",
       "value": {
         "BuyPrice": 400,
         "SellPrice": 1,
@@ -1811,7 +1831,7 @@
       }
     },
     {
-      "itemID": "ManaPotionV",
+      "itemID": "mana_potion_v",
       "value": {
         "BuyPrice": 800,
         "SellPrice": 1,
@@ -1821,7 +1841,7 @@
       }
     },
     {
-      "itemID": "StrengthPotion",
+      "itemID": "strength_potion",
       "value": {
         "BuyPrice": 500,
         "SellPrice": 1,
@@ -1831,7 +1851,7 @@
       }
     },
     {
-      "itemID": "ResistancePotion",
+      "itemID": "resistance_potion",
       "value": {
         "BuyPrice": 500,
         "SellPrice": 1,
@@ -1841,7 +1861,7 @@
       }
     },
     {
-      "itemID": "Torch",
+      "itemID": "torch",
       "value": {
         "BuyPrice": 10,
         "SellPrice": 2,
@@ -1851,7 +1871,7 @@
       }
     },
     {
-      "itemID": "CopperPlatedGuard",
+      "itemID": "copper_plated_guard",
       "value": {
         "BuyPrice": 120,
         "SellPrice": 60,

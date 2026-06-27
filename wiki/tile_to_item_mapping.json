@@ -1,476 +1,476 @@
 {
   "mappings": [
     {
-      "tileID": "None",
-      "itemID": "Dirt",
+      "tileID": "none",
+      "itemID": "dirt",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "dirt",
-      "itemID": "Dirt",
+      "itemID": "dirt",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "stone",
-      "itemID": "Stone",
+      "itemID": "stone",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "moss",
-      "itemID": "Moss",
+      "itemID": "moss",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "glass",
-      "itemID": "Glass",
+      "itemID": "glass",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "sand",
-      "itemID": "Sand",
+      "itemID": "sand",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "air",
-      "itemID": "None",
+      "itemID": "none",
       "dropQuantityMin": 0,
       "dropQuantityMax": 0
     },
     {
       "tileID": "snow",
-      "itemID": "Snow",
+      "itemID": "snow",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "ice",
-      "itemID": "Ice",
+      "itemID": "ice",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "torch",
-      "itemID": "Torch",
+      "itemID": "torch",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "stone_brick",
-      "itemID": "Stone",
+      "itemID": "stone",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "moss_stone_brick",
-      "itemID": "Stone",
+      "itemID": "stone",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "oak_leaves",
-      "itemID": "OakLeaves",
+      "itemID": "oak_leaves",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "mangrove_leaves",
-      "itemID": "MangroveLeaves",
+      "itemID": "mangrove_leaves",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "pine_leaves",
-      "itemID": "PineLeaves",
+      "itemID": "pine_leaves",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "cherryblossom_leaves",
-      "itemID": "CherryBlossomLeaves",
+      "itemID": "cherry_blossom_leaves",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "beech_leaves",
-      "itemID": "BeechLeaves",
+      "itemID": "beech_leaves",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "onyx_brick",
-      "itemID": "OnyxBrick",
+      "itemID": "onyx_brick",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "morganite_brick",
-      "itemID": "MorganiteBrick",
+      "itemID": "morganite_brick",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "amethyst_brick",
-      "itemID": "AmethystBrick",
+      "itemID": "amethyst_brick",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "spessartitegarnet_brick",
-      "itemID": "SpessartitegarnetBrick",
+      "itemID": "spessartitegarnet_brick",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "aquamarine_brick",
-      "itemID": "AquamarineBrick",
+      "itemID": "aquamarine_brick",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "topaz_brick",
-      "itemID": "TopazBrick",
+      "itemID": "topaz_brick",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "sapphire_brick",
-      "itemID": "SapphireBrick",
+      "itemID": "sapphire_brick",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "emerald_brick",
-      "itemID": "EmeraldBrick",
+      "itemID": "emerald_brick",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "ruby_brick",
-      "itemID": "RubyBrick",
+      "itemID": "ruby_brick",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "diamond_brick",
-      "itemID": "DiamondBrick",
+      "itemID": "diamond_brick",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "cracked_stone_brick",
-      "itemID": "Stone",
+      "itemID": "stone",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "smooth_sand_brick",
-      "itemID": "SmoothSandBrick",
+      "itemID": "smooth_sand_brick",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "smooth_sand",
-      "itemID": "SmoothSand",
+      "itemID": "smooth_sand",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "sand_brick",
-      "itemID": "SandBrick",
+      "itemID": "sand_brick",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "lilypad",
-      "itemID": "Lilypad",
+      "itemID": "lilypad",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "morganite_lightstone",
-      "itemID": "MorganiteLightstone",
+      "itemID": "morganite_lightstone",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "amethyst_lightstone",
-      "itemID": "AmethystLightstone",
+      "itemID": "amethyst_lightstone",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "spessartitegarnet_lightstone",
-      "itemID": "SpessartitegarnetLightstone",
+      "itemID": "spessartitegarnet_lightstone",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "aquamarine_lightstone",
-      "itemID": "AquamarineLightstone",
+      "itemID": "aquamarine_lightstone",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "topaz_lightstone",
-      "itemID": "TopazLightstone",
+      "itemID": "topaz_lightstone",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "sapphire_lightstone",
-      "itemID": "SapphireLightstone",
+      "itemID": "sapphire_lightstone",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "emerald_lightstone",
-      "itemID": "EmeraldLightstone",
+      "itemID": "emerald_lightstone",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "ruby_lightstone",
-      "itemID": "RubyLightstone",
+      "itemID": "ruby_lightstone",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "hay_bale",
-      "itemID": "HayBale",
+      "itemID": "hay_bale",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "snow_brick",
-      "itemID": "SnowBrick",
+      "itemID": "snow_brick",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "verdant_pine",
-      "itemID": "Log",
+      "itemID": "log",
       "dropQuantityMin": 4,
       "dropQuantityMax": 8
     },
     {
       "tileID": "oak_tree",
-      "itemID": "Log",
+      "itemID": "log",
       "dropQuantityMin": 4,
       "dropQuantityMax": 8
     },
     {
       "tileID": "mist_willow",
-      "itemID": "Log",
+      "itemID": "log",
       "dropQuantityMin": 4,
       "dropQuantityMax": 8
     },
     {
       "tileID": "ember_maple",
-      "itemID": "Log",
+      "itemID": "log",
       "dropQuantityMin": 4,
       "dropQuantityMax": 8
     },
     {
       "tileID": "sunleaf_oak",
-      "itemID": "Log",
+      "itemID": "log",
       "dropQuantityMin": 4,
       "dropQuantityMax": 8
     },
     {
       "tileID": "coal_ore",
-      "itemID": "Coal",
+      "itemID": "coal",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "copper_ore",
-      "itemID": "CopperOre",
+      "itemID": "copper_ore",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "tin_ore",
-      "itemID": "TinOre",
+      "itemID": "tin_ore",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "lead_ore",
-      "itemID": "LeadOre",
+      "itemID": "lead_ore",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "iron_ore",
-      "itemID": "IronOre",
+      "itemID": "iron_ore",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "amberstone",
-      "itemID": "Amberstone",
+      "itemID": "amberstone",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "silver_ore",
-      "itemID": "SilverOre",
+      "itemID": "silver_ore",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "tungsten_ore",
-      "itemID": "TungstenOre",
+      "itemID": "tungsten_ore",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "gold_ore",
-      "itemID": "GoldOre",
+      "itemID": "gold_ore",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "platinum_ore",
-      "itemID": "PlatinumOre",
+      "itemID": "platinum_ore",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "cobalt_ore",
-      "itemID": "CobaltOre",
+      "itemID": "cobalt_ore",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "mythril_ore",
-      "itemID": "MythrilOre",
+      "itemID": "mythril_ore",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "onyx_ore",
-      "itemID": "Onyx",
+      "itemID": "onyx",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "morganite_ore",
-      "itemID": "Morganite",
+      "itemID": "morganite",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "amethyst_ore",
-      "itemID": "Amethyst",
+      "itemID": "amethyst",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "spessartitegarnet_ore",
-      "itemID": "SpessartiteGarnet",
+      "itemID": "spessartite_garnet",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "aquamarine_ore",
-      "itemID": "Aquamarine",
+      "itemID": "aquamarine",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "topaz_ore",
-      "itemID": "Topaz",
+      "itemID": "topaz",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "sapphire_ore",
-      "itemID": "Sapphire",
+      "itemID": "sapphire",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "emerald_ore",
-      "itemID": "Emerald",
+      "itemID": "emerald",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "ruby_ore",
-      "itemID": "Ruby",
+      "itemID": "ruby",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "diamond_ore",
-      "itemID": "Diamond",
+      "itemID": "diamond",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "cactus_round",
-      "itemID": "Cactus",
+      "itemID": "cactus",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "cactus_tall",
-      "itemID": "Cactus",
+      "itemID": "cactus",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "rail",
-      "itemID": "Rail",
+      "itemID": "rail",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "carrot",
-      "itemID": "Carrot",
+      "itemID": "carrot",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "potato",
-      "itemID": "Potato",
+      "itemID": "potato",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "tomato",
-      "itemID": "Tomato",
+      "itemID": "tomato",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "strawberry",
-      "itemID": "Strawberry",
+      "itemID": "strawberry",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "corn",
-      "itemID": "Corn",
+      "itemID": "corn",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "eggplant",
-      "itemID": "Eggplant",
+      "itemID": "eggplant",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     },
     {
       "tileID": "voidstone",
-      "itemID": "Dirt",
+      "itemID": "dirt",
       "dropQuantityMin": 1,
       "dropQuantityMax": 1
     }

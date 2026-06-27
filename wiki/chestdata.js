@@ -1,0 +1,120 @@
+var CHEST_DATA = {
+  "LootTables": [
+    {
+      "ChestType": "WoodenChest",
+      "ChestName": "Wooden Chest",
+      "MinItems": 3,
+      "MaxItems": 6,
+      "LootItems": [
+        {
+          "ItemID": "coal",
+          "MinQuantity": 5,
+          "MaxQuantity": 20,
+          "Weight": 100.0
+        },
+        {
+          "ItemID": "copper_ore",
+          "MinQuantity": 5,
+          "MaxQuantity": 20,
+          "Weight": 100.0
+        },
+        {
+          "ItemID": "reinforced_wood_shield",
+          "MinQuantity": 1,
+          "MaxQuantity": 1,
+          "Weight": 100.0
+        },
+        {
+          "ItemID": "log",
+          "MinQuantity": 5,
+          "MaxQuantity": 20,
+          "Weight": 100.0
+        },
+        {
+          "ItemID": "strings",
+          "MinQuantity": 2,
+          "MaxQuantity": 4,
+          "Weight": 100.0
+        },
+        {
+          "ItemID": "wooden_shield",
+          "MinQuantity": 1,
+          "MaxQuantity": 1,
+          "Weight": 100.0
+        },
+        {
+          "ItemID": "copper_sword",
+          "MinQuantity": 1,
+          "MaxQuantity": 1,
+          "Weight": 100.0
+        },
+        {
+          "ItemID": "copper_pickaxe",
+          "MinQuantity": 1,
+          "MaxQuantity": 1,
+          "Weight": 100.0
+        },
+        {
+          "ItemID": "wooden_wand",
+          "MinQuantity": 1,
+          "MaxQuantity": 1,
+          "Weight": 100.0
+        },
+        {
+          "ItemID": "wooden_bow",
+          "MinQuantity": 1,
+          "MaxQuantity": 1,
+          "Weight": 100.0
+        },
+        {
+          "ItemID": "health_potion_i",
+          "MinQuantity": 2,
+          "MaxQuantity": 4,
+          "Weight": 100.0
+        },
+        {
+          "ItemID": "mana_potion_i",
+          "MinQuantity": 2,
+          "MaxQuantity": 4,
+          "Weight": 100.0
+        },
+        {
+          "ItemID": "ring_of_swiftness",
+          "MinQuantity": 1,
+          "MaxQuantity": 1,
+          "Weight": 100.0
+        },
+        {
+          "ItemID": "ring_of_vitality",
+          "MinQuantity": 1,
+          "MaxQuantity": 1,
+          "Weight": 100.0
+        },
+        {
+          "ItemID": "ring_of_fortune",
+          "MinQuantity": 1,
+          "MaxQuantity": 1,
+          "Weight": 100.0
+        },
+        {
+          "ItemID": "rare_key",
+          "MinQuantity": 1,
+          "MaxQuantity": 1,
+          "Weight": 45.9
+        },
+        {
+          "ItemID": "mythic_key",
+          "MinQuantity": 1,
+          "MaxQuantity": 1,
+          "Weight": 0.1
+        },
+        {
+          "ItemID": "divine_key",
+          "MinQuantity": 1,
+          "MaxQuantity": 1,
+          "Weight": 0.1
+        }
+      ]
+    }
+  ]
+};

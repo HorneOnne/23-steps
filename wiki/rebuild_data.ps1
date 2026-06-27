@@ -27,8 +27,9 @@ foreach ($html in $htmlFiles) {
     $content = Get-Content $html.FullName -Raw
     $changed = $false
     foreach ($js in $jsFiles) {
-        # Replace any existing ?v=... or bare reference
-        $newContent = $content -replace "($js)(\?v=\d+)?", "`$1?v=$ts"
+        # Escape the filename to treat dot as literal and append word boundary \b to prevent matching .json
+        $escapedJs = [regex]::Escape($js)
+        $newContent = $content -replace "($escapedJs\b)(\?v=\d+)?", "`$1?v=$ts"
         if ($newContent -ne $content) {
             $content = $newContent
             $changed = $true

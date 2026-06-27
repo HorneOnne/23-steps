@@ -1,7 +1,7 @@
 {
   "ItemConfigs": [
     {
-      "ItemID": "Dirt",
+      "ItemID": "dirt",
       "ItemType": "Resource",
       "Name": "Dirt",
       "Description": "Humble, plentiful, and surprisingly useful.",
@@ -22,7 +22,7 @@
       }
     },
     {
-      "ItemID": "AdKey",
+      "ItemID": "ad_key",
       "ItemType": "Resource",
       "Name": "Ad Key",
       "Description": "Otherworldly key. Watch the right thing to earn entry.",
@@ -43,7 +43,7 @@
       }
     },
     {
-      "ItemID": "RareKey",
+      "ItemID": "rare_key",
       "ItemType": "Resource",
       "Name": "Rare Key",
       "Description": "Finely crafted key for extraordinary chests.",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "ItemID": "MythicKey",
+      "ItemID": "mythic_key",
       "ItemType": "Resource",
       "Name": "Mythic Key",
       "Description": "Opens a chest never found twice in the same place.",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "ItemID": "DivineKey",
+      "ItemID": "divine_key",
       "ItemType": "Resource",
       "Name": "Divine Key",
       "Description": "God-forged key for the most forbidden chests.",
@@ -106,7 +106,7 @@
       }
     },
     {
-      "ItemID": "Log",
+      "ItemID": "log",
       "ItemType": "Resource",
       "Name": "Log",
       "Description": "Fresh-felled trunk. The backbone of early crafting.",
@@ -127,7 +127,7 @@
       }
     },
     {
-      "ItemID": "WoodenSword",
+      "ItemID": "wooden_sword",
       "ItemType": "Sword",
       "Name": "Wooden Sword",
       "Description": "4 damage\n2% critical strike chance\n1 knockback",
@@ -141,14 +141,14 @@
         "sqrMagnitude": 0.0
       },
       "AngleZ": 0.0,
-      "UseSpeed": 2.5,
+      "UseSpeed": 1.5,
       "SwordConfig": {
         "AttackDamage": 8.0,
-        "KnockbackForce": 1.0
+        "KnockbackForce": 2.0
       }
     },
     {
-      "ItemID": "CopperSword",
+      "ItemID": "copper_sword",
       "ItemType": "Sword",
       "Name": "Copper Sword",
       "Description": "7 damage\n3% critical strike chance\n3.5 knockback",
@@ -169,7 +169,7 @@
       }
     },
     {
-      "ItemID": "TinSword",
+      "ItemID": "tin_sword",
       "ItemType": "Sword",
       "Name": "Tin Sword",
       "Description": "8 damage\n4% critical strike chance\n3.6 knockback",
@@ -190,7 +190,7 @@
       }
     },
     {
-      "ItemID": "LeadSword",
+      "ItemID": "lead_sword",
       "ItemType": "Sword",
       "Name": "Lead Sword",
       "Description": "9 damage\n4.5% critical strike chance\n3.7 knockback",
@@ -211,7 +211,7 @@
       }
     },
     {
-      "ItemID": "IronSword",
+      "ItemID": "iron_sword",
       "ItemType": "Sword",
       "Name": "Iron Sword",
       "Description": "11 damage\n5% critical strike chance\n4 knockback",
@@ -232,7 +232,7 @@
       }
     },
     {
-      "ItemID": "SilverSword",
+      "ItemID": "silver_sword",
       "ItemType": "Sword",
       "Name": "Silver Sword",
       "Description": "15 damage\n7% critical strike chance\n4.5 knockback",
@@ -253,7 +253,7 @@
       }
     },
     {
-      "ItemID": "TungstenSword",
+      "ItemID": "tungsten_sword",
       "ItemType": "Sword",
       "Name": "Tungsten Sword",
       "Description": "19 damage\n8% critical strike chance\n4.8 knockback",
@@ -274,7 +274,7 @@
       }
     },
     {
-      "ItemID": "GoldSword",
+      "ItemID": "gold_sword",
       "ItemType": "Sword",
       "Name": "Gold Sword",
       "Description": "18 damage\n10% critical strike chance\n4.75 knockback",
@@ -295,7 +295,7 @@
       }
     },
     {
-      "ItemID": "PlatinumSword",
+      "ItemID": "platinum_sword",
       "ItemType": "Sword",
       "Name": "Platinum Sword",
       "Description": "22 damage\n12% critical strike chance\n5 knockback",
@@ -316,7 +316,7 @@
       }
     },
     {
-      "ItemID": "Torch",
+      "ItemID": "torch",
       "ItemType": "Utility",
       "Name": "Torch",
       "Description": "Gel and wood bound together \u2014 a miner's best friend.",
@@ -338,7 +338,7 @@
       }
     },
     {
-      "ItemID": "WoodenPickaxe",
+      "ItemID": "wooden_pickaxe",
       "ItemType": "Pickaxe",
       "Name": "Wooden Pickaxe",
       "Description": "1 damage\n1 knockback\n2 mining power",
@@ -352,7 +352,7 @@
         "sqrMagnitude": 0.0
       },
       "AngleZ": 0.0,
-      "UseSpeed": 2.5,
+      "UseSpeed": 2.0,
       "PickaxeConfig": {
         "MiningPower": 2,
         "AttackDamage": 1.0,
@@ -360,7 +360,7 @@
       }
     },
     {
-      "ItemID": "CopperPickaxe",
+      "ItemID": "copper_pickaxe",
       "ItemType": "Pickaxe",
       "Name": "Copper Pickaxe",
       "Description": "2 damage\n1.5 knockback\n4 mining power",
@@ -382,7 +382,7 @@
       }
     },
     {
-      "ItemID": "TinPickaxe",
+      "ItemID": "tin_pickaxe",
       "ItemType": "Pickaxe",
       "Name": "Tin Pickaxe",
       "Description": "2.5 damage\n1.75 knockback\n5 mining power",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "ItemID": "LeadPickaxe",
+      "ItemID": "lead_pickaxe",
       "ItemType": "Pickaxe",
       "Name": "Lead Pickaxe",
       "Description": "3.5 damage\n2.25 knockback\n7 mining power",
@@ -426,7 +426,7 @@
       }
     },
     {
-      "ItemID": "IronPickaxe",
+      "ItemID": "iron_pickaxe",
       "ItemType": "Pickaxe",
       "Name": "Iron Pickaxe",
       "Description": "3 damage\n2 knockback\n6 mining power",
@@ -448,7 +448,7 @@
       }
     },
     {
-      "ItemID": "SilverPickaxe",
+      "ItemID": "silver_pickaxe",
       "ItemType": "Pickaxe",
       "Name": "Silver Pickaxe",
       "Description": "4 damage\n2.5 knockback\n8 mining power",
@@ -470,7 +470,7 @@
       }
     },
     {
-      "ItemID": "TungstenPickaxe",
+      "ItemID": "tungsten_pickaxe",
       "ItemType": "Pickaxe",
       "Name": "Tungsten Pickaxe",
       "Description": "4.5 damage\n2.75 knockback\n9 mining power",
@@ -492,7 +492,7 @@
       }
     },
     {
-      "ItemID": "GoldPickaxe",
+      "ItemID": "gold_pickaxe",
       "ItemType": "Pickaxe",
       "Name": "Gold Pickaxe",
       "Description": "5 damage\n3 knockback\n10 mining power",
@@ -514,7 +514,7 @@
       }
     },
     {
-      "ItemID": "PlatinumPickaxe",
+      "ItemID": "platinum_pickaxe",
       "ItemType": "Pickaxe",
       "Name": "Platinum Pickaxe",
       "Description": "5.5 damage\n3.25 knockback\n11 mining power",
@@ -536,7 +536,7 @@
       }
     },
     {
-      "ItemID": "WoodenBow",
+      "ItemID": "wooden_bow",
       "ItemType": "Bow",
       "Name": "Wooden Bow",
       "Description": "5 damage\n2% critical strike chance\n2 knockback",
@@ -545,21 +545,28 @@
       "Rarity": "Common",
       "Offset": {
         "x": 0.0,
-        "y": 0.0,
-        "magnitude": 0.0,
-        "sqrMagnitude": 0.0
+        "y": -0.15,
+        "normalized": {
+          "x": 1.0,
+          "y": 0.0,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 0.25,
+        "sqrMagnitude": 0.0625
       },
-      "AngleZ": -10.0,
+      "AngleZ": 45.0,
       "UseSpeed": 5.0,
       "BowConfig": {
         "AttackDamage": 5.0,
         "ProjectileSpeed": 10.0,
         "KnockbackForce": 2.0,
-        "Range": 10.0
+        "Range": 10.0,
+        "GravityModifier": 1.0
       }
     },
     {
-      "ItemID": "CopperBow",
+      "ItemID": "copper_bow",
       "ItemType": "Bow",
       "Name": "Copper Bow",
       "Description": "7 damage\n3% critical strike chance\n2 knockback",
@@ -567,22 +574,29 @@
       "CanBeEnchanted": true,
       "Rarity": "Common",
       "Offset": {
-        "x": 0.0,
+        "x": 0.25,
         "y": 0.0,
-        "magnitude": 0.0,
-        "sqrMagnitude": 0.0
+        "normalized": {
+          "x": 1.0,
+          "y": 0.0,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 0.25,
+        "sqrMagnitude": 0.0625
       },
-      "AngleZ": -10.0,
+      "AngleZ": 135.0,
       "UseSpeed": 4.9,
       "BowConfig": {
         "AttackDamage": 7.0,
         "ProjectileSpeed": 11.0,
         "KnockbackForce": 2.0,
-        "Range": 10.0
+        "Range": 10.0,
+        "GravityModifier": 0.9
       }
     },
     {
-      "ItemID": "TinBow",
+      "ItemID": "tin_bow",
       "ItemType": "Bow",
       "Name": "Tin Bow",
       "Description": "8 damage\n4% critical strike chance\n2 knockback",
@@ -590,22 +604,29 @@
       "CanBeEnchanted": true,
       "Rarity": "Common",
       "Offset": {
-        "x": 0.0,
+        "x": 0.25,
         "y": 0.0,
-        "magnitude": 0.0,
-        "sqrMagnitude": 0.0
+        "normalized": {
+          "x": 1.0,
+          "y": 0.0,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 0.25,
+        "sqrMagnitude": 0.0625
       },
-      "AngleZ": -10.0,
+      "AngleZ": 135.0,
       "UseSpeed": 4.85,
       "BowConfig": {
         "AttackDamage": 8.0,
         "ProjectileSpeed": 12.0,
         "KnockbackForce": 2.0,
-        "Range": 10.0
+        "Range": 10.0,
+        "GravityModifier": 0.85
       }
     },
     {
-      "ItemID": "LeadBow",
+      "ItemID": "lead_bow",
       "ItemType": "Bow",
       "Name": "Lead Bow",
       "Description": "9 damage\n4.5% critical strike chance\n2 knockback",
@@ -613,22 +634,29 @@
       "CanBeEnchanted": true,
       "Rarity": "Uncommon",
       "Offset": {
-        "x": 0.0,
+        "x": 0.25,
         "y": 0.0,
-        "magnitude": 0.0,
-        "sqrMagnitude": 0.0
+        "normalized": {
+          "x": 1.0,
+          "y": 0.0,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 0.25,
+        "sqrMagnitude": 0.0625
       },
-      "AngleZ": -10.0,
+      "AngleZ": 135.0,
       "UseSpeed": 4.8,
       "BowConfig": {
         "AttackDamage": 9.0,
         "ProjectileSpeed": 13.0,
         "KnockbackForce": 2.0,
-        "Range": 10.0
+        "Range": 10.0,
+        "GravityModifier": 0.8
       }
     },
     {
-      "ItemID": "IronBow",
+      "ItemID": "iron_bow",
       "ItemType": "Bow",
       "Name": "Iron Bow",
       "Description": "11 damage\n5% critical strike chance\n2 knockback",
@@ -636,22 +664,29 @@
       "CanBeEnchanted": true,
       "Rarity": "Uncommon",
       "Offset": {
-        "x": 0.0,
+        "x": 0.25,
         "y": 0.0,
-        "magnitude": 0.0,
-        "sqrMagnitude": 0.0
+        "normalized": {
+          "x": 1.0,
+          "y": 0.0,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 0.25,
+        "sqrMagnitude": 0.0625
       },
-      "AngleZ": -10.0,
+      "AngleZ": 135.0,
       "UseSpeed": 4.7,
       "BowConfig": {
         "AttackDamage": 11.0,
         "ProjectileSpeed": 14.0,
         "KnockbackForce": 2.0,
-        "Range": 10.0
+        "Range": 10.0,
+        "GravityModifier": 0.75
       }
     },
     {
-      "ItemID": "SilverBow",
+      "ItemID": "silver_bow",
       "ItemType": "Bow",
       "Name": "Silver Bow",
       "Description": "15 damage\n7% critical strike chance\n2 knockback",
@@ -659,22 +694,29 @@
       "CanBeEnchanted": true,
       "Rarity": "Rare",
       "Offset": {
-        "x": 0.0,
+        "x": 0.25,
         "y": 0.0,
-        "magnitude": 0.0,
-        "sqrMagnitude": 0.0
+        "normalized": {
+          "x": 1.0,
+          "y": 0.0,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 0.25,
+        "sqrMagnitude": 0.0625
       },
-      "AngleZ": -10.0,
+      "AngleZ": 135.0,
       "UseSpeed": 4.6,
       "BowConfig": {
         "AttackDamage": 15.0,
         "ProjectileSpeed": 15.0,
         "KnockbackForce": 2.0,
-        "Range": 10.0
+        "Range": 10.0,
+        "GravityModifier": 0.65
       }
     },
     {
-      "ItemID": "TungstenBow",
+      "ItemID": "tungsten_bow",
       "ItemType": "Bow",
       "Name": "Tungsten Bow",
       "Description": "19 damage\n8% critical strike chance\n2 knockback",
@@ -682,22 +724,29 @@
       "CanBeEnchanted": true,
       "Rarity": "Rare",
       "Offset": {
-        "x": 0.0,
+        "x": 0.25,
         "y": 0.0,
-        "magnitude": 0.0,
-        "sqrMagnitude": 0.0
+        "normalized": {
+          "x": 1.0,
+          "y": 0.0,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 0.25,
+        "sqrMagnitude": 0.0625
       },
-      "AngleZ": -10.0,
+      "AngleZ": 135.0,
       "UseSpeed": 4.5,
       "BowConfig": {
         "AttackDamage": 19.0,
         "ProjectileSpeed": 16.0,
         "KnockbackForce": 2.0,
-        "Range": 10.0
+        "Range": 10.0,
+        "GravityModifier": 0.55
       }
     },
     {
-      "ItemID": "GoldBow",
+      "ItemID": "gold_bow",
       "ItemType": "Bow",
       "Name": "Gold Bow",
       "Description": "18 damage\n10% critical strike chance\n2 knockback",
@@ -705,22 +754,29 @@
       "CanBeEnchanted": true,
       "Rarity": "Epic",
       "Offset": {
-        "x": 0.0,
+        "x": 0.25,
         "y": 0.0,
-        "magnitude": 0.0,
-        "sqrMagnitude": 0.0
+        "normalized": {
+          "x": 1.0,
+          "y": 0.0,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 0.25,
+        "sqrMagnitude": 0.0625
       },
-      "AngleZ": -10.0,
+      "AngleZ": 135.0,
       "UseSpeed": 4.55,
       "BowConfig": {
         "AttackDamage": 18.0,
         "ProjectileSpeed": 15.5,
         "KnockbackForce": 2.0,
-        "Range": 10.0
+        "Range": 10.0,
+        "GravityModifier": 0.45
       }
     },
     {
-      "ItemID": "PlatinumBow",
+      "ItemID": "platinum_bow",
       "ItemType": "Bow",
       "Name": "Platinum Bow",
       "Description": "22 damage\n12% critical strike chance\n2 knockback",
@@ -728,24 +784,31 @@
       "CanBeEnchanted": true,
       "Rarity": "Epic",
       "Offset": {
-        "x": 0.0,
+        "x": 0.25,
         "y": 0.0,
-        "magnitude": 0.0,
-        "sqrMagnitude": 0.0
+        "normalized": {
+          "x": 1.0,
+          "y": 0.0,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 0.25,
+        "sqrMagnitude": 0.0625
       },
-      "AngleZ": -10.0,
+      "AngleZ": 135.0,
       "UseSpeed": 4.4,
       "BowConfig": {
         "AttackDamage": 22.0,
         "ProjectileSpeed": 17.0,
         "KnockbackForce": 2.0,
-        "Range": 10.0
+        "Range": 10.0,
+        "GravityModifier": 0.35
       }
     },
     {
-      "ItemID": "Arrow",
+      "ItemID": "wooden_arrow",
       "ItemType": "Resource",
-      "Name": "Arrow",
+      "Name": "Wooden Arrow",
       "Description": "Swift, straight, and deadly. Pack plenty.",
       "MaxStackSize": 64,
       "CanBeEnchanted": false,
@@ -764,7 +827,49 @@
       }
     },
     {
-      "ItemID": "Coal",
+      "ItemID": "fire_arrow",
+      "ItemType": "Resource",
+      "Name": "Fire Arrow",
+      "Description": "An arrow tipped with blazing fire. Sets enemies ablaze.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": false,
+        "IsCraftingMaterial": false
+      }
+    },
+    {
+      "ItemID": "poison_arrow",
+      "ItemType": "Resource",
+      "Name": "Poison Arrow",
+      "Description": "An arrow coated in venom. Slowly drains the life of its target.",
+      "MaxStackSize": 64,
+      "CanBeEnchanted": false,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 999.0,
+      "ResourceConfig": {
+        "IsRaw": false,
+        "IsCraftingMaterial": false
+      }
+    },
+    {
+      "ItemID": "coal",
       "ItemType": "Resource",
       "Name": "Coal",
       "Description": "Ancient compressed wood. Burns hot and long.",
@@ -785,7 +890,7 @@
       }
     },
     {
-      "ItemID": "Sand",
+      "ItemID": "sand",
       "ItemType": "Resource",
       "Name": "Sand",
       "Description": "Tiny grains, great for glass.",
@@ -806,7 +911,7 @@
       }
     },
     {
-      "ItemID": "CopperHelmet",
+      "ItemID": "copper_helmet",
       "ItemType": "Armor",
       "Name": "Copper Helmet",
       "Description": "Equiptable\n3 defense",
@@ -829,7 +934,7 @@
       }
     },
     {
-      "ItemID": "CopperChestplate",
+      "ItemID": "copper_chestplate",
       "ItemType": "Armor",
       "Name": "Copper Chestplate",
       "Description": "Equiptable\n5 defense",
@@ -852,30 +957,7 @@
       }
     },
     {
-      "ItemID": "CopperLeggings",
-      "ItemType": "Armor",
-      "Name": "Copper Leggings",
-      "Description": "Equiptable\n2 defense",
-      "MaxStackSize": 1,
-      "CanBeEnchanted": true,
-      "Rarity": "Common",
-      "Offset": {
-        "x": 0.0,
-        "y": 0.0,
-        "magnitude": 0.0,
-        "sqrMagnitude": 0.0
-      },
-      "AngleZ": 0.0,
-      "UseSpeed": 1.0,
-      "ArmorConfig": {
-        "ArmorType": 2,
-        "Defense": 2.0,
-        "SetName": "copper",
-        "MagicDefense": 0.0
-      }
-    },
-    {
-      "ItemID": "TinHelmet",
+      "ItemID": "tin_helmet",
       "ItemType": "Armor",
       "Name": "Tin Helmet",
       "Description": "Equiptable\n3.5 defense",
@@ -898,7 +980,7 @@
       }
     },
     {
-      "ItemID": "TinChestplate",
+      "ItemID": "tin_chestplate",
       "ItemType": "Armor",
       "Name": "Tin Chestplate",
       "Description": "Equiptable\n5.5 defense",
@@ -921,30 +1003,7 @@
       }
     },
     {
-      "ItemID": "TinLeggings",
-      "ItemType": "Armor",
-      "Name": "Tin Leggings",
-      "Description": "Equiptable\n2.5 defense",
-      "MaxStackSize": 1,
-      "CanBeEnchanted": true,
-      "Rarity": "Common",
-      "Offset": {
-        "x": 0.0,
-        "y": 0.0,
-        "magnitude": 0.0,
-        "sqrMagnitude": 0.0
-      },
-      "AngleZ": 0.0,
-      "UseSpeed": 1.0,
-      "ArmorConfig": {
-        "ArmorType": 2,
-        "Defense": 2.5,
-        "SetName": "tin",
-        "MagicDefense": 0.0
-      }
-    },
-    {
-      "ItemID": "LeadHelmet",
+      "ItemID": "lead_helmet",
       "ItemType": "Armor",
       "Name": "Lead Helmet",
       "Description": "Equiptable\n4 defense",
@@ -967,7 +1026,7 @@
       }
     },
     {
-      "ItemID": "LeadChestplate",
+      "ItemID": "lead_chestplate",
       "ItemType": "Armor",
       "Name": "Lead Chestplate",
       "Description": "Equiptable\n6 defense",
@@ -990,30 +1049,7 @@
       }
     },
     {
-      "ItemID": "LeadLeggings",
-      "ItemType": "Armor",
-      "Name": "Lead Leggings",
-      "Description": "Equiptable\n3 defense",
-      "MaxStackSize": 1,
-      "CanBeEnchanted": true,
-      "Rarity": "Uncommon",
-      "Offset": {
-        "x": 0.0,
-        "y": 0.0,
-        "magnitude": 0.0,
-        "sqrMagnitude": 0.0
-      },
-      "AngleZ": 0.0,
-      "UseSpeed": 1.0,
-      "ArmorConfig": {
-        "ArmorType": 2,
-        "Defense": 3.0,
-        "SetName": "lead",
-        "MagicDefense": 0.0
-      }
-    },
-    {
-      "ItemID": "IronHelmet",
+      "ItemID": "iron_helmet",
       "ItemType": "Armor",
       "Name": "Iron Helmet",
       "Description": "Equiptable\n4.5 defense",
@@ -1036,7 +1072,7 @@
       }
     },
     {
-      "ItemID": "IronChestplate",
+      "ItemID": "iron_chestplate",
       "ItemType": "Armor",
       "Name": "Iron Chestplate",
       "Description": "Equiptable\n6.5 defense",
@@ -1059,30 +1095,7 @@
       }
     },
     {
-      "ItemID": "IronLeggings",
-      "ItemType": "Armor",
-      "Name": "Iron Leggings",
-      "Description": "Equiptable\n3.5 defense",
-      "MaxStackSize": 1,
-      "CanBeEnchanted": true,
-      "Rarity": "Uncommon",
-      "Offset": {
-        "x": 0.0,
-        "y": 0.0,
-        "magnitude": 0.0,
-        "sqrMagnitude": 0.0
-      },
-      "AngleZ": 0.0,
-      "UseSpeed": 1.0,
-      "ArmorConfig": {
-        "ArmorType": 2,
-        "Defense": 3.5,
-        "SetName": "iron",
-        "MagicDefense": 0.0
-      }
-    },
-    {
-      "ItemID": "AmberstoneHelmet",
+      "ItemID": "amberstone_helmet",
       "ItemType": "Armor",
       "Name": "Amberstone Helmet",
       "Description": "Equiptable\n5 defense",
@@ -1105,7 +1118,7 @@
       }
     },
     {
-      "ItemID": "AmberstoneChestplate",
+      "ItemID": "amberstone_chestplate",
       "ItemType": "Armor",
       "Name": "Amberstone Chestplate",
       "Description": "Equiptable\n7 defense",
@@ -1128,30 +1141,7 @@
       }
     },
     {
-      "ItemID": "AmberstoneLeggings",
-      "ItemType": "Armor",
-      "Name": "Amberstone Leggings",
-      "Description": "Equiptable\n4 defense",
-      "MaxStackSize": 1,
-      "CanBeEnchanted": true,
-      "Rarity": "Uncommon",
-      "Offset": {
-        "x": 0.0,
-        "y": 0.0,
-        "magnitude": 0.0,
-        "sqrMagnitude": 0.0
-      },
-      "AngleZ": 0.0,
-      "UseSpeed": 1.0,
-      "ArmorConfig": {
-        "ArmorType": 2,
-        "Defense": 4.0,
-        "SetName": "amberstone",
-        "MagicDefense": 0.0
-      }
-    },
-    {
-      "ItemID": "SilverHelmet",
+      "ItemID": "silver_helmet",
       "ItemType": "Armor",
       "Name": "Silver Helmet",
       "Description": "Equiptable\n5.5 defense",
@@ -1174,7 +1164,7 @@
       }
     },
     {
-      "ItemID": "SilverChestplate",
+      "ItemID": "silver_chestplate",
       "ItemType": "Armor",
       "Name": "Silver Chestplate",
       "Description": "Equiptable\n7.5 defense",
@@ -1197,30 +1187,7 @@
       }
     },
     {
-      "ItemID": "SilverLeggings",
-      "ItemType": "Armor",
-      "Name": "Silver Leggings",
-      "Description": "Equiptable\n4.5 defense",
-      "MaxStackSize": 1,
-      "CanBeEnchanted": true,
-      "Rarity": "Rare",
-      "Offset": {
-        "x": 0.0,
-        "y": 0.0,
-        "magnitude": 0.0,
-        "sqrMagnitude": 0.0
-      },
-      "AngleZ": 0.0,
-      "UseSpeed": 1.0,
-      "ArmorConfig": {
-        "ArmorType": 2,
-        "Defense": 4.5,
-        "SetName": "silver",
-        "MagicDefense": 0.0
-      }
-    },
-    {
-      "ItemID": "TungstenHelmet",
+      "ItemID": "tungsten_helmet",
       "ItemType": "Armor",
       "Name": "Tungsten Helmet",
       "Description": "Equiptable\n6 defense",
@@ -1243,7 +1210,7 @@
       }
     },
     {
-      "ItemID": "TungstenChestplate",
+      "ItemID": "tungsten_chestplate",
       "ItemType": "Armor",
       "Name": "Tungsten Chestplate",
       "Description": "Equiptable\n8 defense",
@@ -1266,30 +1233,7 @@
       }
     },
     {
-      "ItemID": "TungstenLeggings",
-      "ItemType": "Armor",
-      "Name": "Tungsten Leggings",
-      "Description": "Equiptable\n5 defense",
-      "MaxStackSize": 1,
-      "CanBeEnchanted": true,
-      "Rarity": "Rare",
-      "Offset": {
-        "x": 0.0,
-        "y": 0.0,
-        "magnitude": 0.0,
-        "sqrMagnitude": 0.0
-      },
-      "AngleZ": 0.0,
-      "UseSpeed": 1.0,
-      "ArmorConfig": {
-        "ArmorType": 2,
-        "Defense": 5.0,
-        "SetName": "tungsten",
-        "MagicDefense": 0.0
-      }
-    },
-    {
-      "ItemID": "GoldHelmet",
+      "ItemID": "gold_helmet",
       "ItemType": "Armor",
       "Name": "Gold Helmet",
       "Description": "Equiptable\n6.5 defense",
@@ -1312,7 +1256,7 @@
       }
     },
     {
-      "ItemID": "GoldChestplate",
+      "ItemID": "gold_chestplate",
       "ItemType": "Armor",
       "Name": "Gold Chestplate",
       "Description": "Equiptable\n8.5 defense",
@@ -1335,30 +1279,7 @@
       }
     },
     {
-      "ItemID": "GoldLeggings",
-      "ItemType": "Armor",
-      "Name": "Gold Leggings",
-      "Description": "Equiptable\n5.5 defense",
-      "MaxStackSize": 1,
-      "CanBeEnchanted": true,
-      "Rarity": "Epic",
-      "Offset": {
-        "x": 0.0,
-        "y": 0.0,
-        "magnitude": 0.0,
-        "sqrMagnitude": 0.0
-      },
-      "AngleZ": 0.0,
-      "UseSpeed": 1.0,
-      "ArmorConfig": {
-        "ArmorType": 2,
-        "Defense": 5.5,
-        "SetName": "gold",
-        "MagicDefense": 0.0
-      }
-    },
-    {
-      "ItemID": "PlatinumHelmet",
+      "ItemID": "platinum_helmet",
       "ItemType": "Armor",
       "Name": "Platinum Helmet",
       "Description": "Equiptable\n7 defense",
@@ -1381,7 +1302,7 @@
       }
     },
     {
-      "ItemID": "PlatinumChestplate",
+      "ItemID": "platinum_chestplate",
       "ItemType": "Armor",
       "Name": "Platinum Chestplate",
       "Description": "Equiptable\n9 defense",
@@ -1404,82 +1325,7 @@
       }
     },
     {
-      "ItemID": "PlatinumLeggings",
-      "ItemType": "Armor",
-      "Name": "Platinum Leggings",
-      "Description": "Equiptable\n6 defense",
-      "MaxStackSize": 1,
-      "CanBeEnchanted": true,
-      "Rarity": "Epic",
-      "Offset": {
-        "x": 0.0,
-        "y": 0.0,
-        "magnitude": 0.0,
-        "sqrMagnitude": 0.0
-      },
-      "AngleZ": 0.0,
-      "UseSpeed": 1.0,
-      "ArmorConfig": {
-        "ArmorType": 2,
-        "Defense": 6.0,
-        "SetName": "platinum",
-        "MagicDefense": 0.0
-      }
-    },
-    {
-      "ItemID": "NatureWings",
-      "ItemType": "Wings",
-      "Name": "Nature Wings",
-      "Description": "Woven from living leaves and forest vines.",
-      "MaxStackSize": 1,
-      "CanBeEnchanted": true,
-      "Rarity": "Uncommon",
-      "Offset": {
-        "x": 0.0,
-        "y": 0.0,
-        "magnitude": 0.0,
-        "sqrMagnitude": 0.0
-      },
-      "AngleZ": 0.0,
-      "UseSpeed": 1.0,
-      "WingsConfig": {
-        "FlightSpeed": 5.0,
-        "FlightAcceleration": 8.0,
-        "FlightDeceleration": 12.0,
-        "MovementDifficulty": 1.2,
-        "EnergyDrainModifier": 1.1,
-        "EnergyCapacityBonus": 0.0,
-        "HasParticleEffect": false
-      }
-    },
-    {
-      "ItemID": "ThornwoodWings",
-      "ItemType": "Wings",
-      "Name": "Thornwood Wings",
-      "Description": "Ancient thornwood. Jagged, fast, and silent.",
-      "MaxStackSize": 1,
-      "CanBeEnchanted": true,
-      "Rarity": "Rare",
-      "Offset": {
-        "x": 0.0,
-        "y": 0.0,
-        "magnitude": 0.0,
-        "sqrMagnitude": 0.0
-      },
-      "AngleZ": 0.0,
-      "UseSpeed": 1.0,
-      "WingsConfig": {
-        "FlightSpeed": 7.0,
-        "FlightAcceleration": 15.0,
-        "FlightDeceleration": 20.0,
-        "MovementDifficulty": 0.7,
-        "EnergyDrainModifier": 0.8,
-        "EnergyCapacityBonus": 25.0,
-        "HasParticleEffect": false
-      }
-    },
-    {
-      "ItemID": "Gel",
+      "ItemID": "gel",
       "ItemType": "Resource",
       "Name": "Gel",
       "Description": "Slimy crafting material from defeated slimes.",
@@ -1500,7 +1346,7 @@
       }
     },
     {
-      "ItemID": "Mushroom",
+      "ItemID": "mushroom",
       "ItemType": "Resource",
       "Name": "Mushroom",
       "Description": "Dark-grown cave fungi. An alchemist's favourite.",
@@ -1521,7 +1367,7 @@
       }
     },
     {
-      "ItemID": "CopperOre",
+      "ItemID": "copper_ore",
       "ItemType": "Resource",
       "Name": "Copper Ore",
       "Description": "Reddish-brown ore near the surface.",
@@ -1542,7 +1388,7 @@
       }
     },
     {
-      "ItemID": "IronOre",
+      "ItemID": "iron_ore",
       "ItemType": "Resource",
       "Name": "Iron Ore",
       "Description": "Dense grey ore forged in the earth's depths.",
@@ -1563,7 +1409,7 @@
       }
     },
     {
-      "ItemID": "SilverOre",
+      "ItemID": "silver_ore",
       "ItemType": "Resource",
       "Name": "Silver Ore",
       "Description": "Gleams softly in torchlight.",
@@ -1584,7 +1430,7 @@
       }
     },
     {
-      "ItemID": "GoldOre",
+      "ItemID": "gold_ore",
       "ItemType": "Resource",
       "Name": "Gold Ore",
       "Description": "Glittering veins of fortune buried deep.",
@@ -1605,7 +1451,7 @@
       }
     },
     {
-      "ItemID": "CopperIngot",
+      "ItemID": "copper_ingot",
       "ItemType": "Resource",
       "Name": "Copper Ingot",
       "Description": "Smelted copper, ready to be shaped.",
@@ -1626,7 +1472,7 @@
       }
     },
     {
-      "ItemID": "IronIngot",
+      "ItemID": "iron_ingot",
       "ItemType": "Resource",
       "Name": "Iron Ingot",
       "Description": "Cold, heavy, and unyielding.",
@@ -1647,7 +1493,7 @@
       }
     },
     {
-      "ItemID": "SilverIngot",
+      "ItemID": "silver_ingot",
       "ItemType": "Resource",
       "Name": "Silver Ingot",
       "Description": "Pure refined silver with a faint blessing.",
@@ -1668,7 +1514,7 @@
       }
     },
     {
-      "ItemID": "GoldIngot",
+      "ItemID": "gold_ingot",
       "ItemType": "Resource",
       "Name": "Gold Ingot",
       "Description": "Gleaming and precious. The most coveted metal.",
@@ -1689,7 +1535,7 @@
       }
     },
     {
-      "ItemID": "Diamond",
+      "ItemID": "diamond",
       "ItemType": "Resource",
       "Name": "Diamond",
       "Description": "Hardest stone known. Clear and twice as rare.",
@@ -1710,7 +1556,7 @@
       }
     },
     {
-      "ItemID": "Ruby",
+      "ItemID": "ruby",
       "ItemType": "Resource",
       "Name": "Ruby",
       "Description": "Deep crimson gemstone burning with inner fire.",
@@ -1731,7 +1577,7 @@
       }
     },
     {
-      "ItemID": "Emerald",
+      "ItemID": "emerald",
       "ItemType": "Resource",
       "Name": "Emerald",
       "Description": "Lush green gem forged in the cold dark below.",
@@ -1752,7 +1598,7 @@
       }
     },
     {
-      "ItemID": "Sapphire",
+      "ItemID": "sapphire",
       "ItemType": "Resource",
       "Name": "Sapphire",
       "Description": "Blue as midnight sky. Mages covet this stone.",
@@ -1773,7 +1619,7 @@
       }
     },
     {
-      "ItemID": "Topaz",
+      "ItemID": "topaz",
       "ItemType": "Resource",
       "Name": "Topaz",
       "Description": "Warm golden gem that catches light like sunrise.",
@@ -1794,7 +1640,7 @@
       }
     },
     {
-      "ItemID": "Aquamarine",
+      "ItemID": "aquamarine",
       "ItemType": "Resource",
       "Name": "Aquamarine",
       "Description": "Pale blue translucent gem, like frozen seawater.",
@@ -1815,9 +1661,9 @@
       }
     },
     {
-      "ItemID": "SpessartiteGarnet",
+      "ItemID": "spessartite_garnet",
       "ItemType": "Resource",
-      "Name": "SpessartiteGarnet",
+      "Name": "Spessartite Garnet",
       "Description": "Fiery orange gem prized for volatile energy.",
       "MaxStackSize": 64,
       "CanBeEnchanted": false,
@@ -1836,7 +1682,7 @@
       }
     },
     {
-      "ItemID": "Amethyst",
+      "ItemID": "amethyst",
       "ItemType": "Resource",
       "Name": "Amethyst",
       "Description": "Deep violet crystal used in enchanting rituals.",
@@ -1857,7 +1703,7 @@
       }
     },
     {
-      "ItemID": "Morganite",
+      "ItemID": "morganite",
       "ItemType": "Resource",
       "Name": "Morganite",
       "Description": "Blushing pink gemstone, rare and delicate.",
@@ -1878,7 +1724,7 @@
       }
     },
     {
-      "ItemID": "Onyx",
+      "ItemID": "onyx",
       "ItemType": "Resource",
       "Name": "Onyx",
       "Description": "Pitch black and smooth as shadow.",
@@ -1899,7 +1745,7 @@
       }
     },
     {
-      "ItemID": "HealthPotionI",
+      "ItemID": "health_potion_i",
       "ItemType": "Consumable",
       "Name": "Health Potion I",
       "Description": "Restore 50 Health",
@@ -1928,7 +1774,7 @@
       }
     },
     {
-      "ItemID": "HealthPotionII",
+      "ItemID": "health_potion_ii",
       "ItemType": "Consumable",
       "Name": "Health Potion II",
       "Description": "Restore 100 Health",
@@ -1957,7 +1803,7 @@
       }
     },
     {
-      "ItemID": "HealthPotionIII",
+      "ItemID": "health_potion_iii",
       "ItemType": "Consumable",
       "Name": "Health Potion III",
       "Description": "Restore 150 Health",
@@ -1986,7 +1832,7 @@
       }
     },
     {
-      "ItemID": "HealthPotionIV",
+      "ItemID": "health_potion_iv",
       "ItemType": "Consumable",
       "Name": "Health Potion IV",
       "Description": "Restore 200 Health",
@@ -2015,7 +1861,7 @@
       }
     },
     {
-      "ItemID": "HealthPotionV",
+      "ItemID": "health_potion_v",
       "ItemType": "Consumable",
       "Name": "Health Potion V",
       "Description": "Restore 250 Health",
@@ -2044,7 +1890,7 @@
       }
     },
     {
-      "ItemID": "RegeneratePotionI",
+      "ItemID": "regenerate_potion_i",
       "ItemType": "Consumable",
       "Name": "Regeneration Potion I",
       "Description": "Heals 2 HP/sec for 30 seconds.",
@@ -2073,7 +1919,7 @@
       }
     },
     {
-      "ItemID": "RegeneratePotionII",
+      "ItemID": "regenerate_potion_ii",
       "ItemType": "Consumable",
       "Name": "Regeneration Potion II",
       "Description": "Heals 4 HP/sec for 30 seconds.",
@@ -2102,7 +1948,7 @@
       }
     },
     {
-      "ItemID": "RegeneratePotionIII",
+      "ItemID": "regenerate_potion_iii",
       "ItemType": "Consumable",
       "Name": "Regeneration Potion III",
       "Description": "Heals 6 HP/sec for 30 seconds.",
@@ -2131,7 +1977,7 @@
       }
     },
     {
-      "ItemID": "RegeneratePotionIV",
+      "ItemID": "regenerate_potion_iv",
       "ItemType": "Consumable",
       "Name": "Regeneration Potion IV",
       "Description": "Heals 8 HP/sec for 30 seconds.",
@@ -2160,7 +2006,7 @@
       }
     },
     {
-      "ItemID": "RegeneratePotionV",
+      "ItemID": "regenerate_potion_v",
       "ItemType": "Consumable",
       "Name": "Regeneration Potion V",
       "Description": "Heals 10 HP/sec for 30 seconds.",
@@ -2189,7 +2035,7 @@
       }
     },
     {
-      "ItemID": "SwiftnessPotionI",
+      "ItemID": "swiftness_potion_i",
       "ItemType": "Consumable",
       "Name": "Swiftness Potion I",
       "Description": "Increases Movement Speed By 20% For 4 Minutes.",
@@ -2218,7 +2064,7 @@
       }
     },
     {
-      "ItemID": "SwiftnessPotionII",
+      "ItemID": "swiftness_potion_ii",
       "ItemType": "Consumable",
       "Name": "Swiftness Potion II",
       "Description": "Increases Movement Speed By 40% For 8 Minutes.",
@@ -2247,9 +2093,9 @@
       }
     },
     {
-      "ItemID": "Cobalt_Trident",
+      "ItemID": "cobalt_trident",
       "ItemType": "Sword",
-      "Name": "Cobalt_Trident",
+      "Name": "Cobalt Trident",
       "Description": "150 damage\n50% critical strike chance\n3 knockback",
       "MaxStackSize": 1,
       "CanBeEnchanted": true,
@@ -2268,7 +2114,7 @@
       }
     },
     {
-      "ItemID": "WoodenWand",
+      "ItemID": "wooden_wand",
       "ItemType": "Staff",
       "Name": "Wooden Wand",
       "Description": "A humble wand carved from knotted wood.",
@@ -2296,7 +2142,7 @@
       }
     },
     {
-      "ItemID": "Stone",
+      "ItemID": "stone",
       "ItemType": "Resource",
       "Name": "Stone",
       "Description": "Solid, sturdy. Foundation of any structure.",
@@ -2317,7 +2163,7 @@
       }
     },
     {
-      "ItemID": "Clay",
+      "ItemID": "clay",
       "ItemType": "Resource",
       "Name": "Clay",
       "Description": "Soft and pliable. Fire it to harden.",
@@ -2338,7 +2184,7 @@
       }
     },
     {
-      "ItemID": "Gravel",
+      "ItemID": "gravel",
       "ItemType": "Resource",
       "Name": "Gravel",
       "Description": "Loose rocks. Check beneath for flint.",
@@ -2359,7 +2205,7 @@
       }
     },
     {
-      "ItemID": "Flint",
+      "ItemID": "flint",
       "ItemType": "Resource",
       "Name": "Flint",
       "Description": "Strike it right and it throws sparks.",
@@ -2380,7 +2226,7 @@
       }
     },
     {
-      "ItemID": "Grass",
+      "ItemID": "grass",
       "ItemType": "Resource",
       "Name": "Grass",
       "Description": "A clump of green from near the surface.",
@@ -2401,7 +2247,7 @@
       }
     },
     {
-      "ItemID": "WaterBucket",
+      "ItemID": "water_bucket",
       "ItemType": "Utility",
       "Name": "Water Bucket",
       "Description": "A bucket of fresh water.",
@@ -2423,7 +2269,7 @@
       }
     },
     {
-      "ItemID": "LavaBucket",
+      "ItemID": "lava_bucket",
       "ItemType": "Utility",
       "Name": "Lava Bucket",
       "Description": "Careful. Don't tip it.",
@@ -2445,7 +2291,7 @@
       }
     },
     {
-      "ItemID": "Ice",
+      "ItemID": "ice",
       "ItemType": "Resource",
       "Name": "Ice",
       "Description": "Frozen solid. Melts quickly above ground.",
@@ -2466,7 +2312,7 @@
       }
     },
     {
-      "ItemID": "Moss",
+      "ItemID": "moss",
       "ItemType": "Resource",
       "Name": "Moss",
       "Description": "Soft and damp, clinging to ancient stone.",
@@ -2487,7 +2333,7 @@
       }
     },
     {
-      "ItemID": "Snow",
+      "ItemID": "snow",
       "ItemType": "Resource",
       "Name": "Snow",
       "Description": "Cold, light, and oddly satisfying to hold.",
@@ -2508,7 +2354,7 @@
       }
     },
     {
-      "ItemID": "Glass",
+      "ItemID": "glass",
       "ItemType": "Resource",
       "Name": "Glass",
       "Description": "Transparent, fragile, and versatile.",
@@ -2529,7 +2375,7 @@
       }
     },
     {
-      "ItemID": "OakLeaves",
+      "ItemID": "oak_leaves",
       "ItemType": "Resource",
       "Name": "Oak Leaves",
       "Description": "Broad, sturdy dried oak leaves.",
@@ -2550,7 +2396,7 @@
       }
     },
     {
-      "ItemID": "MangroveLeaves",
+      "ItemID": "mangrove_leaves",
       "ItemType": "Resource",
       "Name": "Mangrove Leaves",
       "Description": "Waxy resilient leaves from the swamps.",
@@ -2571,7 +2417,7 @@
       }
     },
     {
-      "ItemID": "PineLeaves",
+      "ItemID": "pine_leaves",
       "ItemType": "Resource",
       "Name": "Pine Leaves",
       "Description": "Sharp needles smelling of mountain air.",
@@ -2592,7 +2438,7 @@
       }
     },
     {
-      "ItemID": "CherryBlossomLeaves",
+      "ItemID": "cherry_blossom_leaves",
       "ItemType": "Resource",
       "Name": "Cherry Blossom Leaves",
       "Description": "Delicate pink petals caught mid-fall.",
@@ -2613,7 +2459,7 @@
       }
     },
     {
-      "ItemID": "SlimelingCore",
+      "ItemID": "slimeling_core",
       "ItemType": "Resource",
       "Name": "Slimeling Core",
       "Description": "Pulsing core from Prince Slime.",
@@ -2634,7 +2480,7 @@
       }
     },
     {
-      "ItemID": "DemonMushroom",
+      "ItemID": "demon_mushroom",
       "ItemType": "Resource",
       "Name": "Demon Mushroom",
       "Description": "Fungi pulsing with dark energy.",
@@ -2655,7 +2501,7 @@
       }
     },
     {
-      "ItemID": "BeechLeaves",
+      "ItemID": "beech_leaves",
       "ItemType": "Resource",
       "Name": "Beech Leaves",
       "Description": "Smooth oval leaves in autumn gold.",
@@ -2676,7 +2522,7 @@
       }
     },
     {
-      "ItemID": "OnyxBrick",
+      "ItemID": "onyx_brick",
       "ItemType": "Resource",
       "Name": "Onyx Brick",
       "Description": "Polished black blocks that swallow light.",
@@ -2697,7 +2543,7 @@
       }
     },
     {
-      "ItemID": "MorganiteBrick",
+      "ItemID": "morganite_brick",
       "ItemType": "Resource",
       "Name": "Morganite Brick",
       "Description": "Soft rose bricks with a subtle glow.",
@@ -2718,7 +2564,7 @@
       }
     },
     {
-      "ItemID": "AmethystBrick",
+      "ItemID": "amethyst_brick",
       "ItemType": "Resource",
       "Name": "Amethyst Brick",
       "Description": "Purple bricks humming with arcane energy.",
@@ -2739,7 +2585,7 @@
       }
     },
     {
-      "ItemID": "SpessartitegarnetBrick",
+      "ItemID": "spessartitegarnet_brick",
       "ItemType": "Resource",
       "Name": "Spessartite Garnet Brick",
       "Description": "Fiery orange bricks, faintly warm.",
@@ -2760,7 +2606,7 @@
       }
     },
     {
-      "ItemID": "AquamarineBrick",
+      "ItemID": "aquamarine_brick",
       "ItemType": "Resource",
       "Name": "Aquamarine Brick",
       "Description": "Sea-blue blocks like an underwater ruin.",
@@ -2781,7 +2627,7 @@
       }
     },
     {
-      "ItemID": "TopazBrick",
+      "ItemID": "topaz_brick",
       "ItemType": "Resource",
       "Name": "Topaz Brick",
       "Description": "Warm golden bricks that catch every ray.",
@@ -2802,7 +2648,7 @@
       }
     },
     {
-      "ItemID": "SapphireBrick",
+      "ItemID": "sapphire_brick",
       "ItemType": "Resource",
       "Name": "Sapphire Brick",
       "Description": "Cool blue bricks radiating calm elegance.",
@@ -2823,7 +2669,7 @@
       }
     },
     {
-      "ItemID": "EmeraldBrick",
+      "ItemID": "emerald_brick",
       "ItemType": "Resource",
       "Name": "Emerald Brick",
       "Description": "Rich green bricks evoking ancient forests.",
@@ -2844,7 +2690,7 @@
       }
     },
     {
-      "ItemID": "RubyBrick",
+      "ItemID": "ruby_brick",
       "ItemType": "Resource",
       "Name": "Ruby Brick",
       "Description": "Deep red bricks that glow like embers.",
@@ -2865,7 +2711,7 @@
       }
     },
     {
-      "ItemID": "DiamondBrick",
+      "ItemID": "diamond_brick",
       "ItemType": "Resource",
       "Name": "Diamond Brick",
       "Description": "Pristine white bricks that shimmer brilliantly.",
@@ -2886,7 +2732,7 @@
       }
     },
     {
-      "ItemID": 52,
+      "ItemID": "52",
       "ItemType": "Resource",
       "Name": "Cracked Stone Brick",
       "Description": "Old stone bricks worn thin by time.",
@@ -2907,7 +2753,7 @@
       }
     },
     {
-      "ItemID": "SmoothSandBrick",
+      "ItemID": "smooth_sand_brick",
       "ItemType": "Resource",
       "Name": "Smooth Sand Brick",
       "Description": "Pressed heated sand. Clean and uniform.",
@@ -2928,7 +2774,7 @@
       }
     },
     {
-      "ItemID": "SmoothSand",
+      "ItemID": "smooth_sand",
       "ItemType": "Resource",
       "Name": "Smooth Sand",
       "Description": "Refined sand compressed into a slab.",
@@ -2949,7 +2795,7 @@
       }
     },
     {
-      "ItemID": "SandBrick",
+      "ItemID": "sand_brick",
       "ItemType": "Resource",
       "Name": "Sand Brick",
       "Description": "Coarse pale brick for desert builds.",
@@ -2970,7 +2816,7 @@
       }
     },
     {
-      "ItemID": "Lilypad",
+      "ItemID": "lilypad",
       "ItemType": "Resource",
       "Name": "Lilypad",
       "Description": "Flat floating leaf from a still pond.",
@@ -2991,7 +2837,7 @@
       }
     },
     {
-      "ItemID": "MorganiteLightstone",
+      "ItemID": "morganite_lightstone",
       "ItemType": "Resource",
       "Name": "Morganite Lightstone",
       "Description": "Morganite with a gentle pink glow.",
@@ -3012,7 +2858,7 @@
       }
     },
     {
-      "ItemID": "AmethystLightstone",
+      "ItemID": "amethyst_lightstone",
       "ItemType": "Resource",
       "Name": "Amethyst Lightstone",
       "Description": "An amethyst radiating deep violet light.",
@@ -3033,7 +2879,7 @@
       }
     },
     {
-      "ItemID": "SpessartitegarnetLightstone",
+      "ItemID": "spessartitegarnet_lightstone",
       "ItemType": "Resource",
       "Name": "Spessartite Garnet Lightstone",
       "Description": "Garnet with flickering orange light.",
@@ -3054,7 +2900,7 @@
       }
     },
     {
-      "ItemID": "AquamarineLightstone",
+      "ItemID": "aquamarine_lightstone",
       "ItemType": "Resource",
       "Name": "Aquamarine Lightstone",
       "Description": "An aquamarine radiating pale blue light.",
@@ -3075,7 +2921,7 @@
       }
     },
     {
-      "ItemID": "TopazLightstone",
+      "ItemID": "topaz_lightstone",
       "ItemType": "Resource",
       "Name": "Topaz Lightstone",
       "Description": "A topaz radiating warm golden light.",
@@ -3096,7 +2942,7 @@
       }
     },
     {
-      "ItemID": "SapphireLightstone",
+      "ItemID": "sapphire_lightstone",
       "ItemType": "Resource",
       "Name": "Sapphire Lightstone",
       "Description": "A sapphire radiating cool blue light.",
@@ -3117,7 +2963,7 @@
       }
     },
     {
-      "ItemID": "EmeraldLightstone",
+      "ItemID": "emerald_lightstone",
       "ItemType": "Resource",
       "Name": "Emerald Lightstone",
       "Description": "An emerald radiating lush green light.",
@@ -3138,7 +2984,7 @@
       }
     },
     {
-      "ItemID": "RubyLightstone",
+      "ItemID": "ruby_lightstone",
       "ItemType": "Resource",
       "Name": "Ruby Lightstone",
       "Description": "A ruby radiating deep crimson light.",
@@ -3159,7 +3005,7 @@
       }
     },
     {
-      "ItemID": "HayBale",
+      "ItemID": "hay_bale",
       "ItemType": "Resource",
       "Name": "Hay Bale",
       "Description": "Bundled dried grass from the fields.",
@@ -3180,7 +3026,7 @@
       }
     },
     {
-      "ItemID": "SnowBrick",
+      "ItemID": "snow_brick",
       "ItemType": "Resource",
       "Name": "Snow Brick",
       "Description": "Compacted snow in solid block form.",
@@ -3201,7 +3047,7 @@
       }
     },
     {
-      "ItemID": "TinOre",
+      "ItemID": "tin_ore",
       "ItemType": "Resource",
       "Name": "Tin Ore",
       "Description": "Light silvery ore, easy to smelt.",
@@ -3222,7 +3068,7 @@
       }
     },
     {
-      "ItemID": "LeadOre",
+      "ItemID": "lead_ore",
       "ItemType": "Resource",
       "Name": "Lead Ore",
       "Description": "Heavy dark ore from the deep caverns.",
@@ -3243,7 +3089,7 @@
       }
     },
     {
-      "ItemID": "Amberstone",
+      "ItemID": "amberstone",
       "ItemType": "Resource",
       "Name": "Amberstone",
       "Description": "Warm amber mineral, tougher than it looks.",
@@ -3264,7 +3110,7 @@
       }
     },
     {
-      "ItemID": "TungstenOre",
+      "ItemID": "tungsten_ore",
       "ItemType": "Resource",
       "Name": "Tungsten Ore",
       "Description": "Incredibly dense ore, extremely hard.",
@@ -3285,7 +3131,7 @@
       }
     },
     {
-      "ItemID": "PlatinumOre",
+      "ItemID": "platinum_ore",
       "ItemType": "Resource",
       "Name": "Platinum Ore",
       "Description": "Lustrous rare ore from the deepest veins.",
@@ -3306,7 +3152,7 @@
       }
     },
     {
-      "ItemID": "CobaltOre",
+      "ItemID": "cobalt_ore",
       "ItemType": "Resource",
       "Name": "Cobalt Ore",
       "Description": "Vivid blue ore, hard as iron.",
@@ -3327,7 +3173,7 @@
       }
     },
     {
-      "ItemID": "MythrilOre",
+      "ItemID": "mythril_ore",
       "ItemType": "Resource",
       "Name": "Mythril Ore",
       "Description": "Legendary ore carrying traces of starlight.",
@@ -3348,7 +3194,7 @@
       }
     },
     {
-      "ItemID": "ManaPotionI",
+      "ItemID": "mana_potion_i",
       "ItemType": "Consumable",
       "Name": "Mana Potion I",
       "Description": "Restores 50 Mana.",
@@ -3377,7 +3223,7 @@
       }
     },
     {
-      "ItemID": "ManaPotionII",
+      "ItemID": "mana_potion_ii",
       "ItemType": "Consumable",
       "Name": "Mana Potion II",
       "Description": "Restores 100 Mana.",
@@ -3406,7 +3252,7 @@
       }
     },
     {
-      "ItemID": "ManaPotionIII",
+      "ItemID": "mana_potion_iii",
       "ItemType": "Consumable",
       "Name": "Mana Potion III",
       "Description": "Restores 150 Mana.",
@@ -3435,7 +3281,7 @@
       }
     },
     {
-      "ItemID": "ManaPotionIV",
+      "ItemID": "mana_potion_iv",
       "ItemType": "Consumable",
       "Name": "Mana Potion IV",
       "Description": "Restores 200 Mana.",
@@ -3464,7 +3310,7 @@
       }
     },
     {
-      "ItemID": "ManaPotionV",
+      "ItemID": "mana_potion_v",
       "ItemType": "Consumable",
       "Name": "Mana Potion V",
       "Description": "Restores 250 Mana.",
@@ -3493,7 +3339,7 @@
       }
     },
     {
-      "ItemID": "TinIngot",
+      "ItemID": "tin_ingot",
       "ItemType": "Resource",
       "Name": "Tin Ingot",
       "Description": "Light, pliable smelted tin.",
@@ -3514,7 +3360,7 @@
       }
     },
     {
-      "ItemID": "LeadIngot",
+      "ItemID": "lead_ingot",
       "ItemType": "Resource",
       "Name": "Lead Ingot",
       "Description": "Dense and weighty. Gets the job done.",
@@ -3535,7 +3381,7 @@
       }
     },
     {
-      "ItemID": "AmberstoneIngot",
+      "ItemID": "amberstone_ingot",
       "ItemType": "Resource",
       "Name": "Amberstone Ingot",
       "Description": "Warm amber bar with a soft glow.",
@@ -3556,7 +3402,7 @@
       }
     },
     {
-      "ItemID": "TungstenIngot",
+      "ItemID": "tungsten_ingot",
       "ItemType": "Resource",
       "Name": "Tungsten Ingot",
       "Description": "Brutally heavy, incredibly hard.",
@@ -3577,7 +3423,7 @@
       }
     },
     {
-      "ItemID": "PlatinumIngot",
+      "ItemID": "platinum_ingot",
       "ItemType": "Resource",
       "Name": "Platinum Ingot",
       "Description": "The finest refined metal.",
@@ -3598,7 +3444,7 @@
       }
     },
     {
-      "ItemID": "Strings",
+      "ItemID": "strings",
       "ItemType": "Resource",
       "Name": "Strings",
       "Description": "Tough twisted cord for bows and traps.",
@@ -3619,7 +3465,7 @@
       }
     },
     {
-      "ItemID": "Cobweb",
+      "ItemID": "cobweb",
       "ItemType": "Resource",
       "Name": "Cobweb",
       "Description": "Silky strands from something large and eight-legged.",
@@ -3640,7 +3486,7 @@
       }
     },
     {
-      "ItemID": "Cactus",
+      "ItemID": "cactus",
       "ItemType": "Resource",
       "Name": "Cactus",
       "Description": "Prickly outside, useful inside.",
@@ -3661,7 +3507,7 @@
       }
     },
     {
-      "ItemID": "Rail",
+      "ItemID": "rail",
       "ItemType": "Utility",
       "Name": "Rail",
       "Description": "Iron strips to guide mine carts.",
@@ -3683,7 +3529,7 @@
       }
     },
     {
-      "ItemID": "OnyxWand",
+      "ItemID": "onyx_wand",
       "ItemType": "Staff",
       "Name": "Onyx Wand",
       "Description": "Polished onyx wand. Spells linger darkly.",
@@ -3711,7 +3557,7 @@
       }
     },
     {
-      "ItemID": "MorganiteStaff",
+      "ItemID": "morganite_staff",
       "ItemType": "Staff",
       "Name": "Morganite Staff",
       "Description": "Warm magic from a glowing morganite.",
@@ -3739,7 +3585,7 @@
       }
     },
     {
-      "ItemID": "AmethystStaff",
+      "ItemID": "amethyst_staff",
       "ItemType": "Staff",
       "Name": "Amethyst Staff",
       "Description": "Crackling with violet arcane energy.",
@@ -3767,7 +3613,7 @@
       }
     },
     {
-      "ItemID": "SpessartiteGarnetStaff",
+      "ItemID": "spessartite_garnet_staff",
       "ItemType": "Staff",
       "Name": "Spessartite Garnet Staff",
       "Description": "Fiery staff with explosive bolts.",
@@ -3795,7 +3641,7 @@
       }
     },
     {
-      "ItemID": "AquamarineStaff",
+      "ItemID": "aquamarine_staff",
       "ItemType": "Staff",
       "Name": "Aquamarine Staff",
       "Description": "Channels the depths of the sea.",
@@ -3823,7 +3669,7 @@
       }
     },
     {
-      "ItemID": "TopazStaff",
+      "ItemID": "topaz_staff",
       "ItemType": "Staff",
       "Name": "Topaz Staff",
       "Description": "Radiates warm golden light.",
@@ -3851,7 +3697,7 @@
       }
     },
     {
-      "ItemID": "SapphireStaff",
+      "ItemID": "sapphire_staff",
       "ItemType": "Staff",
       "Name": "Sapphire Staff",
       "Description": "Channels cold sapphire power.",
@@ -3879,7 +3725,7 @@
       }
     },
     {
-      "ItemID": "EmeraldStaff",
+      "ItemID": "emerald_staff",
       "ItemType": "Staff",
       "Name": "Emerald Staff",
       "Description": "Hums with natural forest energy.",
@@ -3907,7 +3753,7 @@
       }
     },
     {
-      "ItemID": "BandOfRegeneration",
+      "ItemID": "band_of_regeneration",
       "ItemType": "Accessory",
       "Name": "Band Of Regeneration",
       "Description": "+0.5 Hp/Sec",
@@ -3936,7 +3782,53 @@
       }
     },
     {
-      "ItemID": "WoodenShield",
+      "ItemID": "eye_of_treant",
+      "ItemType": "Accessory",
+      "Name": "Eye of Treant",
+      "Description": "A mystical eye that allows the wearer to see hostile enemies highlighted in red.",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 0.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Others",
+        "StatBonuses": [],
+        "HasSpecialEffect": true,
+        "SpecialEffectDescription": "Highlights hostile enemies"
+      }
+    },
+    {
+      "ItemID": "eye_of_demon",
+      "ItemType": "Accessory",
+      "Name": "Eye of Demon",
+      "Description": "A dark artifact that highlights hostile enemies and reveals ores and chests.",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": true,
+      "Rarity": "Epic",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 0.0,
+      "AccessoryConfig": {
+        "AccessoryType": "Others",
+        "StatBonuses": [],
+        "HasSpecialEffect": true,
+        "SpecialEffectDescription": "Highlights enemies & ores"
+      }
+    },
+    {
+      "ItemID": "wooden_shield",
       "ItemType": "Accessory",
       "Name": "Wooden Shield",
       "Description": "+5 Defense",
@@ -3965,7 +3857,7 @@
       }
     },
     {
-      "ItemID": "ReinforcedWoodShield",
+      "ItemID": "reinforced_wood_shield",
       "ItemType": "Accessory",
       "Name": "Reinforced Wood Shield",
       "Description": "+7 Defense",
@@ -3994,7 +3886,7 @@
       }
     },
     {
-      "ItemID": "CopperPlatedGuard",
+      "ItemID": "copper_plated_guard",
       "ItemType": "Accessory",
       "Name": "Copper Plated Guard",
       "Description": "+8 Defense",
@@ -4023,7 +3915,7 @@
       }
     },
     {
-      "ItemID": "GladiatorsRoundshield",
+      "ItemID": "gladiators_roundshield",
       "ItemType": "Accessory",
       "Name": "Gladiator's Roundshield",
       "Description": "+9 Defense",
@@ -4052,7 +3944,7 @@
       }
     },
     {
-      "ItemID": "IronHeaterShield",
+      "ItemID": "iron_heater_shield",
       "ItemType": "Accessory",
       "Name": "Iron Heater Shield",
       "Description": "+12 Defense",
@@ -4081,7 +3973,7 @@
       }
     },
     {
-      "ItemID": "GoldLayeredBulwark",
+      "ItemID": "gold_layered_bulwark",
       "ItemType": "Accessory",
       "Name": "Gold Layered Bulwark",
       "Description": "+15 Defense",
@@ -4110,7 +4002,7 @@
       }
     },
     {
-      "ItemID": "CobaltStuddedShield",
+      "ItemID": "cobalt_studded_shield",
       "ItemType": "Accessory",
       "Name": "Cobalt Studded Shield",
       "Description": "+18 Defense",
@@ -4139,7 +4031,7 @@
       }
     },
     {
-      "ItemID": "RoyalCrest",
+      "ItemID": "royal_crest",
       "ItemType": "Accessory",
       "Name": "Royal Crest",
       "Description": "+20 Defense",
@@ -4168,7 +4060,7 @@
       }
     },
     {
-      "ItemID": "EmeraldTarge",
+      "ItemID": "emerald_targe",
       "ItemType": "Accessory",
       "Name": "Emerald Targe",
       "Description": "+22 Defense",
@@ -4197,7 +4089,7 @@
       }
     },
     {
-      "ItemID": "CrimsonHeater",
+      "ItemID": "crimson_heater",
       "ItemType": "Accessory",
       "Name": "Crimson Heater",
       "Description": "+24 Defense",
@@ -4226,7 +4118,7 @@
       }
     },
     {
-      "ItemID": "CopperKiteShield",
+      "ItemID": "copper_kite_shield",
       "ItemType": "Accessory",
       "Name": "Copper Kite Shield",
       "Description": "+10 Defense",
@@ -4255,7 +4147,7 @@
       }
     },
     {
-      "ItemID": "SapphireSparkShield",
+      "ItemID": "sapphire_spark_shield",
       "ItemType": "Accessory",
       "Name": "Sapphire Spark Shield",
       "Description": "+16 Defense",
@@ -4284,7 +4176,7 @@
       }
     },
     {
-      "ItemID": "HerosHeraldry",
+      "ItemID": "heros_heraldry",
       "ItemType": "Accessory",
       "Name": "Hero's Heraldry",
       "Description": "+25 Defense",
@@ -4313,7 +4205,7 @@
       }
     },
     {
-      "ItemID": "GildedVisage",
+      "ItemID": "gilded_visage",
       "ItemType": "Accessory",
       "Name": "Gilded Visage",
       "Description": "+17 Defense",
@@ -4342,7 +4234,7 @@
       }
     },
     {
-      "ItemID": "MoltenAegis",
+      "ItemID": "molten_aegis",
       "ItemType": "Accessory",
       "Name": "Molten Aegis",
       "Description": "+26 Defense",
@@ -4371,7 +4263,7 @@
       }
     },
     {
-      "ItemID": "LivingWoodDefender",
+      "ItemID": "living_wood_defender",
       "ItemType": "Accessory",
       "Name": "Living Wood Defender",
       "Description": "+11 Defense",
@@ -4400,7 +4292,7 @@
       }
     },
     {
-      "ItemID": "BlueMoonCrest",
+      "ItemID": "blue_moon_crest",
       "ItemType": "Accessory",
       "Name": "Blue Moon Crest",
       "Description": "+19 Defense",
@@ -4429,7 +4321,7 @@
       }
     },
     {
-      "ItemID": "CultistWard",
+      "ItemID": "cultist_ward",
       "ItemType": "Accessory",
       "Name": "Cultist's Ward",
       "Description": "+21 Defense",
@@ -4458,7 +4350,7 @@
       }
     },
     {
-      "ItemID": "PlatinumShield",
+      "ItemID": "platinum_shield",
       "ItemType": "Accessory",
       "Name": "Platinum Shield",
       "Description": "+23 Defense",
@@ -4487,7 +4379,7 @@
       }
     },
     {
-      "ItemID": "HornetCarapace",
+      "ItemID": "hornet_carapace",
       "ItemType": "Accessory",
       "Name": "Hornet Carapace",
       "Description": "+13 Defense",
@@ -4516,7 +4408,7 @@
       }
     },
     {
-      "ItemID": "PlagueBringerGuard",
+      "ItemID": "plague_bringer_guard",
       "ItemType": "Accessory",
       "Name": "Plague Bringer's Guard",
       "Description": "+27 Defense",
@@ -4545,7 +4437,7 @@
       }
     },
     {
-      "ItemID": "VoidBarrier",
+      "ItemID": "void_barrier",
       "ItemType": "Accessory",
       "Name": "Void Barrier",
       "Description": "+28 Defense",
@@ -4574,7 +4466,7 @@
       }
     },
     {
-      "ItemID": "HallowedAegis",
+      "ItemID": "hallowed_aegis",
       "ItemType": "Accessory",
       "Name": "Hallowed Aegis",
       "Description": "+29 Defense",
@@ -4603,7 +4495,7 @@
       }
     },
     {
-      "ItemID": "CrimtaneTowerShield",
+      "ItemID": "crimtane_tower_shield",
       "ItemType": "Accessory",
       "Name": "Crimtane Tower Shield",
       "Description": "+30 Defense",
@@ -4632,7 +4524,7 @@
       }
     },
     {
-      "ItemID": "VampireCountGuard",
+      "ItemID": "vampire_count_guard",
       "ItemType": "Accessory",
       "Name": "Vampire Count's Guard",
       "Description": "+31 Defense",
@@ -4661,7 +4553,7 @@
       }
     },
     {
-      "ItemID": "ShadowScaleMailPiece",
+      "ItemID": "shadow_scale_mail_piece",
       "ItemType": "Accessory",
       "Name": "Shadow Scale Mail Piece",
       "Description": "+14 Defense",
@@ -4690,7 +4582,7 @@
       }
     },
     {
-      "ItemID": "CelestialCross",
+      "ItemID": "celestial_cross",
       "ItemType": "Accessory",
       "Name": "Celestial Cross",
       "Description": "+32 Defense",
@@ -4719,7 +4611,7 @@
       }
     },
     {
-      "ItemID": "MaskoftheSaints",
+      "ItemID": "maskofthe_saints",
       "ItemType": "Accessory",
       "Name": "Mask of the Saints",
       "Description": "+33 Defense",
@@ -4748,7 +4640,7 @@
       }
     },
     {
-      "ItemID": "SerratedScraper",
+      "ItemID": "serrated_scraper",
       "ItemType": "Accessory",
       "Name": "Serrated Scraper",
       "Description": "+20% Mining Speed",
@@ -4777,7 +4669,7 @@
       }
     },
     {
-      "ItemID": "RoughHewnCleaver",
+      "ItemID": "rough_hewn_cleaver",
       "ItemType": "Accessory",
       "Name": "Rough Hewn Cleaver",
       "Description": "+40% Mining Speed",
@@ -4806,7 +4698,7 @@
       }
     },
     {
-      "ItemID": "PebblePounder",
+      "ItemID": "pebble_pounder",
       "ItemType": "Accessory",
       "Name": "Pebble Pounder",
       "Description": "+60% Mining Speed",
@@ -4835,7 +4727,7 @@
       }
     },
     {
-      "ItemID": "RookieCertificate",
+      "ItemID": "rookie_certificate",
       "ItemType": "Consumable",
       "Name": "Rookie Certificate",
       "Description": "Upgrade rank from Novice to Rookie.",
@@ -4864,7 +4756,7 @@
       }
     },
     {
-      "ItemID": "MinerCertificate",
+      "ItemID": "miner_certificate",
       "ItemType": "Consumable",
       "Name": "Miner Certificate",
       "Description": "Upgrade rank from Rookie to Miner.",
@@ -4893,7 +4785,7 @@
       }
     },
     {
-      "ItemID": "ScoutCertificate",
+      "ItemID": "scout_certificate",
       "ItemType": "Consumable",
       "Name": "Scout Certificate",
       "Description": "Upgrade rank from Miner to Scout.",
@@ -4922,7 +4814,7 @@
       }
     },
     {
-      "ItemID": "HunterCertificate",
+      "ItemID": "hunter_certificate",
       "ItemType": "Consumable",
       "Name": "Hunter Certificate",
       "Description": "Upgrade rank from Scout to Hunter.",
@@ -4951,7 +4843,7 @@
       }
     },
     {
-      "ItemID": "EliteCertificate",
+      "ItemID": "elite_certificate",
       "ItemType": "Consumable",
       "Name": "Elite Certificate",
       "Description": "Upgrade rank from Hunter to Elite.",
@@ -4980,7 +4872,7 @@
       }
     },
     {
-      "ItemID": "VeteranCertificate",
+      "ItemID": "veteran_certificate",
       "ItemType": "Consumable",
       "Name": "Veteran Certificate",
       "Description": "Upgrade rank from Elite to Veteran.",
@@ -5009,7 +4901,7 @@
       }
     },
     {
-      "ItemID": "ShadowCertificate",
+      "ItemID": "shadow_certificate",
       "ItemType": "Consumable",
       "Name": "Shadow Certificate",
       "Description": "Upgrade rank from Veteran to Shadow.",
@@ -5038,7 +4930,7 @@
       }
     },
     {
-      "ItemID": "ConquerorCertificate",
+      "ItemID": "conqueror_certificate",
       "ItemType": "Consumable",
       "Name": "Conqueror Certificate",
       "Description": "Upgrade rank from Shadow to Conqueror.",
@@ -5067,7 +4959,7 @@
       }
     },
     {
-      "ItemID": "KingCertificate",
+      "ItemID": "king_certificate",
       "ItemType": "Consumable",
       "Name": "King Certificate",
       "Description": "Upgrade rank from Conqueror to King.",
@@ -5096,7 +4988,7 @@
       }
     },
     {
-      "ItemID": "OverlordCertificate",
+      "ItemID": "overlord_certificate",
       "ItemType": "Consumable",
       "Name": "Overlord Certificate",
       "Description": "Upgrade rank from King to Overlord.",
@@ -5125,7 +5017,7 @@
       }
     },
     {
-      "ItemID": "EternalCertificate",
+      "ItemID": "eternal_certificate",
       "ItemType": "Consumable",
       "Name": "Eternal Certificate",
       "Description": "Upgrade rank from Overlord to Eternal.",
@@ -5154,7 +5046,7 @@
       }
     },
     {
-      "ItemID": "Carrot",
+      "ItemID": "carrot",
       "ItemType": "Consumable",
       "Name": "Carrot",
       "Description": "Restores 10 Health",
@@ -5183,7 +5075,7 @@
       }
     },
     {
-      "ItemID": "Potato",
+      "ItemID": "potato",
       "ItemType": "Consumable",
       "Name": "Potato",
       "Description": "Restores 10 Health",
@@ -5212,7 +5104,7 @@
       }
     },
     {
-      "ItemID": "Tomato",
+      "ItemID": "tomato",
       "ItemType": "Consumable",
       "Name": "Tomato",
       "Description": "Restores 10 Health",
@@ -5241,7 +5133,7 @@
       }
     },
     {
-      "ItemID": "Strawberry",
+      "ItemID": "strawberry",
       "ItemType": "Consumable",
       "Name": "Strawberry",
       "Description": "Restores 10 Health",
@@ -5270,7 +5162,7 @@
       }
     },
     {
-      "ItemID": "Corn",
+      "ItemID": "corn",
       "ItemType": "Consumable",
       "Name": "Corn",
       "Description": "Restores 10 Health",
@@ -5299,7 +5191,7 @@
       }
     },
     {
-      "ItemID": "Eggplant",
+      "ItemID": "eggplant",
       "ItemType": "Consumable",
       "Name": "Eggplant",
       "Description": "Restores 10 Health",
@@ -5328,7 +5220,7 @@
       }
     },
     {
-      "ItemID": "RingOfSwiftness",
+      "ItemID": "ring_of_swiftness",
       "ItemType": "Accessory",
       "Name": "Ring of Swiftness",
       "Description": "+15% move speed",
@@ -5357,7 +5249,7 @@
       }
     },
     {
-      "ItemID": "RingOfVitality",
+      "ItemID": "ring_of_vitality",
       "ItemType": "Accessory",
       "Name": "Ring of Vitality",
       "Description": "+20 HP",
@@ -5386,7 +5278,7 @@
       }
     },
     {
-      "ItemID": "RingOfFortune",
+      "ItemID": "ring_of_fortune",
       "ItemType": "Accessory",
       "Name": "Ring of Fortune",
       "Description": "+5 Luck",
@@ -5412,6 +5304,76 @@
         ],
         "HasSpecialEffect": false,
         "SpecialEffectDescription": ""
+      }
+    },
+    {
+      "ItemID": "pig_egg",
+      "ItemType": "Pet",
+      "Name": "Pig Egg",
+      "Description": "5 summon damage",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Uncommon",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "PetConfig": {
+        "StatBonuses": [
+          {
+            "StatType": "SummonDamage",
+            "ModifierType": "Flat",
+            "Value": 5.0
+          }
+        ],
+        "HasSpecialEffect": false,
+        "SpecialEffectDescription": ""
+      }
+    },
+    {
+      "ItemID": "backpack",
+      "ItemType": "Backpack",
+      "Name": "Backpack",
+      "Description": "Equiptable\nAdds 8 slots to backpack and 4 to hotbar",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Common",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "BackpackConfig": {
+        "BackpackSlots": 8,
+        "HotbarSlots": 4
+      }
+    },
+    {
+      "ItemID": "miner_sack",
+      "ItemType": "Backpack",
+      "Name": "Miner's Sack",
+      "Description": "Equiptable\nAdds 8 slots to backpack and 8 to hotbar",
+      "MaxStackSize": 1,
+      "CanBeEnchanted": false,
+      "Rarity": "Rare",
+      "Offset": {
+        "x": 0.0,
+        "y": 0.0,
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
+      },
+      "AngleZ": 0.0,
+      "UseSpeed": 1.0,
+      "BackpackConfig": {
+        "BackpackSlots": 8,
+        "HotbarSlots": 8
       }
     }
   ]

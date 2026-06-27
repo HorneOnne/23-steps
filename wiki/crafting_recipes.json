@@ -1,739 +1,767 @@
 {
   "Recipes": [
     {
-      "ResultItem": "Arrow",
+      "ResultItem": "wooden_arrow",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "Log",
+          "ItemID": "log",
           "Quantity": 1
         },
         {
-          "ItemID": "Stone",
+          "ItemID": "stone",
           "Quantity": 1
         }
       ]
     },
     {
-      "ResultItem": "WoodenShield",
+      "ResultItem": "fire_arrow",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "Log",
-          "Quantity": 10
-        }
-      ]
-    },
-    {
-      "ResultItem": "CopperPlatedGuard",
-      "ResultQuantity": 1,
-      "Ingredients": [
-        {
-          "ItemID": "CopperIngot",
-          "Quantity": 10
-        }
-      ]
-    },
-    {
-      "ResultItem": "CopperIngot",
-      "ResultQuantity": 1,
-      "Ingredients": [
-        {
-          "ItemID": "CopperOre",
+          "ItemID": "wooden_arrow",
           "Quantity": 1
         },
         {
-          "ItemID": "Coal",
+          "ItemID": "fire_essence",
           "Quantity": 1
         }
       ]
     },
     {
-      "ResultItem": "IronIngot",
+      "ResultItem": "poison_arrow",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "IronOre",
-          "Quantity": 1
-        },
-        {
-          "ItemID": "Coal",
-          "Quantity": 1
-        }
-      ]
-    },
-    {
-      "ResultItem": "SilverIngot",
-      "ResultQuantity": 1,
-      "Ingredients": [
-        {
-          "ItemID": "SilverOre",
+          "ItemID": "wooden_arrow",
           "Quantity": 1
         },
         {
-          "ItemID": "Coal",
+          "ItemID": "toxic_gland",
           "Quantity": 1
         }
       ]
     },
     {
-      "ResultItem": "GoldIngot",
+      "ResultItem": "wooden_shield",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "GoldOre",
+          "ItemID": "log",
+          "Quantity": 10
+        }
+      ]
+    },
+    {
+      "ResultItem": "copper_plated_guard",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "copper_ingot",
+          "Quantity": 10
+        }
+      ]
+    },
+    {
+      "ResultItem": "copper_ingot",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "copper_ore",
           "Quantity": 1
         },
         {
-          "ItemID": "Coal",
+          "ItemID": "coal",
           "Quantity": 1
         }
       ]
     },
     {
-      "ResultItem": "CopperPickaxe",
+      "ResultItem": "iron_ingot",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "CopperIngot",
+          "ItemID": "iron_ore",
+          "Quantity": 1
+        },
+        {
+          "ItemID": "coal",
+          "Quantity": 1
+        }
+      ]
+    },
+    {
+      "ResultItem": "silver_ingot",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "silver_ore",
+          "Quantity": 1
+        },
+        {
+          "ItemID": "coal",
+          "Quantity": 1
+        }
+      ]
+    },
+    {
+      "ResultItem": "gold_ingot",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "gold_ore",
+          "Quantity": 1
+        },
+        {
+          "ItemID": "coal",
+          "Quantity": 1
+        }
+      ]
+    },
+    {
+      "ResultItem": "copper_pickaxe",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "copper_ingot",
           "Quantity": 10
         }
       ]
     },
     {
-      "ResultItem": "IronPickaxe",
+      "ResultItem": "iron_pickaxe",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "IronIngot",
+          "ItemID": "iron_ingot",
           "Quantity": 10
         }
       ]
     },
     {
-      "ResultItem": "SilverPickaxe",
+      "ResultItem": "silver_pickaxe",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "SilverIngot",
+          "ItemID": "silver_ingot",
           "Quantity": 10
         }
       ]
     },
     {
-      "ResultItem": "GoldPickaxe",
+      "ResultItem": "gold_pickaxe",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "GoldIngot",
+          "ItemID": "gold_ingot",
           "Quantity": 10
         }
       ]
     },
     {
-      "ResultItem": "CopperSword",
+      "ResultItem": "copper_sword",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "CopperIngot",
+          "ItemID": "copper_ingot",
           "Quantity": 10
         }
       ]
     },
     {
-      "ResultItem": "IronSword",
+      "ResultItem": "iron_sword",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "IronIngot",
+          "ItemID": "iron_ingot",
           "Quantity": 10
         }
       ]
     },
     {
-      "ResultItem": "SilverSword",
+      "ResultItem": "silver_sword",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "SilverIngot",
+          "ItemID": "silver_ingot",
           "Quantity": 10
         }
       ]
     },
     {
-      "ResultItem": "GoldSword",
+      "ResultItem": "gold_sword",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "GoldIngot",
+          "ItemID": "gold_ingot",
           "Quantity": 10
         }
       ]
     },
     {
-      "ResultItem": "CopperHelmet",
+      "ResultItem": "copper_helmet",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "CopperIngot",
+          "ItemID": "copper_ingot",
           "Quantity": 6
         }
       ]
     },
     {
-      "ResultItem": "CopperChestplate",
+      "ResultItem": "copper_chestplate",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "CopperIngot",
+          "ItemID": "copper_ingot",
           "Quantity": 10
         }
       ]
     },
     {
-      "ResultItem": "CopperLeggings",
+      "ResultItem": "copper_leggings",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "CopperIngot",
+          "ItemID": "copper_ingot",
           "Quantity": 8
         }
       ]
     },
     {
-      "ResultItem": "IronHelmet",
+      "ResultItem": "iron_helmet",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "IronIngot",
+          "ItemID": "iron_ingot",
           "Quantity": 6
         }
       ]
     },
     {
-      "ResultItem": "IronChestplate",
+      "ResultItem": "iron_chestplate",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "IronIngot",
+          "ItemID": "iron_ingot",
           "Quantity": 10
         }
       ]
     },
     {
-      "ResultItem": "IronLeggings",
+      "ResultItem": "iron_leggings",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "IronIngot",
+          "ItemID": "iron_ingot",
           "Quantity": 8
         }
       ]
     },
     {
-      "ResultItem": "SilverHelmet",
+      "ResultItem": "silver_helmet",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "SilverIngot",
+          "ItemID": "silver_ingot",
           "Quantity": 6
         }
       ]
     },
     {
-      "ResultItem": "SilverChestplate",
+      "ResultItem": "silver_chestplate",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "SilverIngot",
+          "ItemID": "silver_ingot",
           "Quantity": 10
         }
       ]
     },
     {
-      "ResultItem": "SilverLeggings",
+      "ResultItem": "silver_leggings",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "SilverIngot",
+          "ItemID": "silver_ingot",
           "Quantity": 8
         }
       ]
     },
     {
-      "ResultItem": "GoldHelmet",
+      "ResultItem": "gold_helmet",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "GoldIngot",
+          "ItemID": "gold_ingot",
           "Quantity": 6
         }
       ]
     },
     {
-      "ResultItem": "GoldChestplate",
+      "ResultItem": "gold_chestplate",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "GoldIngot",
+          "ItemID": "gold_ingot",
           "Quantity": 10
         }
       ]
     },
     {
-      "ResultItem": "GoldLeggings",
+      "ResultItem": "gold_leggings",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "GoldIngot",
+          "ItemID": "gold_ingot",
           "Quantity": 8
         }
       ]
     },
     {
-      "ResultItem": "TinIngot",
+      "ResultItem": "tin_ingot",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "TinOre",
+          "ItemID": "tin_ore",
           "Quantity": 1
         },
         {
-          "ItemID": "Coal",
+          "ItemID": "coal",
           "Quantity": 1
         }
       ]
     },
     {
-      "ResultItem": "LeadIngot",
+      "ResultItem": "lead_ingot",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "LeadOre",
-          "Quantity": 1
-        },
-        {
-          "ItemID": "Coal",
-          "Quantity": 1
-        }
-      ]
-    },
-    {
-      "ResultItem": "AmberstoneIngot",
-      "ResultQuantity": 1,
-      "Ingredients": [
-        {
-          "ItemID": "Amberstone",
+          "ItemID": "lead_ore",
           "Quantity": 1
         },
         {
-          "ItemID": "Coal",
+          "ItemID": "coal",
           "Quantity": 1
         }
       ]
     },
     {
-      "ResultItem": "TungstenIngot",
+      "ResultItem": "amberstone_ingot",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "TungstenOre",
-          "Quantity": 1
-        },
-        {
-          "ItemID": "Coal",
-          "Quantity": 1
-        }
-      ]
-    },
-    {
-      "ResultItem": "PlatinumIngot",
-      "ResultQuantity": 1,
-      "Ingredients": [
-        {
-          "ItemID": "PlatinumOre",
+          "ItemID": "amberstone",
           "Quantity": 1
         },
         {
-          "ItemID": "Coal",
+          "ItemID": "coal",
           "Quantity": 1
         }
       ]
     },
     {
-      "ResultItem": "TinHelmet",
+      "ResultItem": "tungsten_ingot",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "TinIngot",
+          "ItemID": "tungsten_ore",
+          "Quantity": 1
+        },
+        {
+          "ItemID": "coal",
+          "Quantity": 1
+        }
+      ]
+    },
+    {
+      "ResultItem": "platinum_ingot",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "platinum_ore",
+          "Quantity": 1
+        },
+        {
+          "ItemID": "coal",
+          "Quantity": 1
+        }
+      ]
+    },
+    {
+      "ResultItem": "tin_helmet",
+      "ResultQuantity": 1,
+      "Ingredients": [
+        {
+          "ItemID": "tin_ingot",
           "Quantity": 6
         }
       ]
     },
     {
-      "ResultItem": "TinChestplate",
+      "ResultItem": "tin_chestplate",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "TinIngot",
+          "ItemID": "tin_ingot",
           "Quantity": 10
         }
       ]
     },
     {
-      "ResultItem": "TinLeggings",
+      "ResultItem": "tin_leggings",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "TinIngot",
+          "ItemID": "tin_ingot",
           "Quantity": 8
         }
       ]
     },
     {
-      "ResultItem": "LeadHelmet",
+      "ResultItem": "lead_helmet",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "LeadIngot",
+          "ItemID": "lead_ingot",
           "Quantity": 6
         }
       ]
     },
     {
-      "ResultItem": "LeadChestplate",
+      "ResultItem": "lead_chestplate",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "LeadIngot",
+          "ItemID": "lead_ingot",
           "Quantity": 10
         }
       ]
     },
     {
-      "ResultItem": "LeadLeggings",
+      "ResultItem": "lead_leggings",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "LeadIngot",
+          "ItemID": "lead_ingot",
           "Quantity": 8
         }
       ]
     },
     {
-      "ResultItem": "AmberstoneHelmet",
+      "ResultItem": "amberstone_helmet",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "AmberstoneIngot",
+          "ItemID": "amberstone_ingot",
           "Quantity": 6
         }
       ]
     },
     {
-      "ResultItem": "AmberstoneChestplate",
+      "ResultItem": "amberstone_chestplate",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "AmberstoneIngot",
+          "ItemID": "amberstone_ingot",
           "Quantity": 10
         }
       ]
     },
     {
-      "ResultItem": "AmberstoneLeggings",
+      "ResultItem": "amberstone_leggings",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "AmberstoneIngot",
+          "ItemID": "amberstone_ingot",
           "Quantity": 8
         }
       ]
     },
     {
-      "ResultItem": "TungstenHelmet",
+      "ResultItem": "tungsten_helmet",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "TungstenIngot",
+          "ItemID": "tungsten_ingot",
           "Quantity": 6
         }
       ]
     },
     {
-      "ResultItem": "TungstenChestplate",
+      "ResultItem": "tungsten_chestplate",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "TungstenIngot",
+          "ItemID": "tungsten_ingot",
           "Quantity": 10
         }
       ]
     },
     {
-      "ResultItem": "TungstenLeggings",
+      "ResultItem": "tungsten_leggings",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "TungstenIngot",
+          "ItemID": "tungsten_ingot",
           "Quantity": 8
         }
       ]
     },
     {
-      "ResultItem": "PlatinumHelmet",
+      "ResultItem": "platinum_helmet",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "PlatinumIngot",
+          "ItemID": "platinum_ingot",
           "Quantity": 6
         }
       ]
     },
     {
-      "ResultItem": "PlatinumChestplate",
+      "ResultItem": "platinum_chestplate",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "PlatinumIngot",
+          "ItemID": "platinum_ingot",
           "Quantity": 10
         }
       ]
     },
     {
-      "ResultItem": "PlatinumLeggings",
+      "ResultItem": "platinum_leggings",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "PlatinumIngot",
+          "ItemID": "platinum_ingot",
           "Quantity": 8
         }
       ]
     },
     {
-      "ResultItem": "TinPickaxe",
+      "ResultItem": "tin_pickaxe",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "TinIngot",
+          "ItemID": "tin_ingot",
           "Quantity": 10
         }
       ]
     },
     {
-      "ResultItem": "LeadPickaxe",
+      "ResultItem": "lead_pickaxe",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "LeadIngot",
+          "ItemID": "lead_ingot",
           "Quantity": 10
         }
       ]
     },
     {
-      "ResultItem": "TungstenPickaxe",
+      "ResultItem": "tungsten_pickaxe",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "TungstenIngot",
+          "ItemID": "tungsten_ingot",
           "Quantity": 10
         }
       ]
     },
     {
-      "ResultItem": "PlatinumPickaxe",
+      "ResultItem": "platinum_pickaxe",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "PlatinumIngot",
+          "ItemID": "platinum_ingot",
           "Quantity": 10
         }
       ]
     },
     {
-      "ResultItem": "TinSword",
+      "ResultItem": "tin_sword",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "TinIngot",
+          "ItemID": "tin_ingot",
           "Quantity": 10
         }
       ]
     },
     {
-      "ResultItem": "LeadSword",
+      "ResultItem": "lead_sword",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "LeadIngot",
+          "ItemID": "lead_ingot",
           "Quantity": 10
         }
       ]
     },
     {
-      "ResultItem": "TungstenSword",
+      "ResultItem": "tungsten_sword",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "TungstenIngot",
+          "ItemID": "tungsten_ingot",
           "Quantity": 10
         }
       ]
     },
     {
-      "ResultItem": "PlatinumSword",
+      "ResultItem": "platinum_sword",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "PlatinumIngot",
+          "ItemID": "platinum_ingot",
           "Quantity": 10
         }
       ]
     },
     {
-      "ResultItem": "Strings",
+      "ResultItem": "strings",
       "ResultQuantity": 2,
       "Ingredients": [
         {
-          "ItemID": "Cobweb",
+          "ItemID": "cobweb",
           "Quantity": 1
         }
       ]
     },
     {
-      "ResultItem": "CopperBow",
+      "ResultItem": "copper_bow",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "Strings",
+          "ItemID": "strings",
           "Quantity": 5
         },
         {
-          "ItemID": "CopperIngot",
+          "ItemID": "copper_ingot",
           "Quantity": 10
         }
       ]
     },
     {
-      "ResultItem": "TinBow",
+      "ResultItem": "tin_bow",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "Strings",
+          "ItemID": "strings",
           "Quantity": 5
         },
         {
-          "ItemID": "TinIngot",
+          "ItemID": "tin_ingot",
           "Quantity": 10
         }
       ]
     },
     {
-      "ResultItem": "LeadBow",
+      "ResultItem": "lead_bow",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "Strings",
+          "ItemID": "strings",
           "Quantity": 5
         },
         {
-          "ItemID": "LeadIngot",
+          "ItemID": "lead_ingot",
           "Quantity": 10
         }
       ]
     },
     {
-      "ResultItem": "IronBow",
+      "ResultItem": "iron_bow",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "Strings",
+          "ItemID": "strings",
           "Quantity": 5
         },
         {
-          "ItemID": "IronIngot",
+          "ItemID": "iron_ingot",
           "Quantity": 10
         }
       ]
     },
     {
-      "ResultItem": "SilverBow",
+      "ResultItem": "silver_bow",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "Strings",
+          "ItemID": "strings",
           "Quantity": 5
         },
         {
-          "ItemID": "SilverIngot",
+          "ItemID": "silver_ingot",
           "Quantity": 10
         }
       ]
     },
     {
-      "ResultItem": "TungstenBow",
+      "ResultItem": "tungsten_bow",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "Strings",
+          "ItemID": "strings",
           "Quantity": 5
         },
         {
-          "ItemID": "TungstenIngot",
+          "ItemID": "tungsten_ingot",
           "Quantity": 10
         }
       ]
     },
     {
-      "ResultItem": "GoldBow",
+      "ResultItem": "gold_bow",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "Strings",
+          "ItemID": "strings",
           "Quantity": 5
         },
         {
-          "ItemID": "GoldIngot",
+          "ItemID": "gold_ingot",
           "Quantity": 10
         }
       ]
     },
     {
-      "ResultItem": "PlatinumBow",
+      "ResultItem": "platinum_bow",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "Strings",
+          "ItemID": "strings",
           "Quantity": 5
         },
         {
-          "ItemID": "PlatinumIngot",
+          "ItemID": "platinum_ingot",
           "Quantity": 10
         }
       ]
     },
     {
-      "ResultItem": "NatureWings",
+      "ResultItem": "nature_wings",
       "ResultQuantity": 1,
       "Ingredients": [
         {
-          "ItemID": "OakLeaves",
+          "ItemID": "oak_leaves",
           "Quantity": 25
         },
         {
-          "ItemID": "MangroveLeaves",
+          "ItemID": "mangrove_leaves",
           "Quantity": 25
         },
         {
-          "ItemID": "PineLeaves",
+          "ItemID": "pine_leaves",
           "Quantity": 25
         },
         {
-          "ItemID": "CherryBlossomLeaves",
+          "ItemID": "cherry_blossom_leaves",
           "Quantity": 25
         },
         {
-          "ItemID": "BeechLeaves",
+          "ItemID": "beech_leaves",
           "Quantity": 25
         }
       ]

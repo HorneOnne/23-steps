@@ -1,10 +1,10 @@
 # sync_icons.ps1
 # Copies all .png item, mob, and tile icons from the Unity project to the wiki assets folders.
 
-$itemSource = "d:\UnityProject\1PercentGameStudio\MineAndDungeon\Assets\Resources\Items"
+$itemSource = "d:\UnityProject\1PercentGameStudio\MineAndDungeon\Assets\Resources_moved\Items"
 $itemDest   = "d:\23-steps\wiki\assets\items"
 
-$mobSource = "d:\UnityProject\1PercentGameStudio\MineAndDungeon\Assets\Resources\MobIcons"
+$mobSource = "d:\UnityProject\1PercentGameStudio\MineAndDungeon\Assets\Resources_moved\MobIcons"
 $mobDest   = "d:\23-steps\wiki\assets\mobs"
 
 $tileSource = "d:\UnityProject\1PercentGameStudio\MineAndDungeon\Assets\Sprites\Icons\tiles"
