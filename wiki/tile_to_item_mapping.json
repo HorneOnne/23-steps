@@ -1,477 +1,603 @@
 {
   "mappings": [
     {
-      "tileID": "none",
-      "itemID": "dirt",
-      "dropQuantityMin": 1,
+      "itemID": "dirt", 
+      "dropQuantityMin": 1, 
+      "tileID": "none", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "dirt",
-      "itemID": "dirt",
-      "dropQuantityMin": 1,
+      "itemID": "dirt", 
+      "dropQuantityMin": 1, 
+      "tileID": "dirt", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "stone",
-      "itemID": "stone",
-      "dropQuantityMin": 1,
+      "itemID": "stone", 
+      "dropQuantityMin": 1, 
+      "tileID": "stone", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "moss",
-      "itemID": "moss",
-      "dropQuantityMin": 1,
+      "itemID": "moss", 
+      "dropQuantityMin": 1, 
+      "tileID": "moss", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "glass",
-      "itemID": "glass",
-      "dropQuantityMin": 1,
+      "itemID": "glass", 
+      "dropQuantityMin": 1, 
+      "tileID": "glass", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "sand",
-      "itemID": "sand",
-      "dropQuantityMin": 1,
+      "itemID": "sand", 
+      "dropQuantityMin": 1, 
+      "tileID": "sand", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "air",
-      "itemID": "none",
-      "dropQuantityMin": 0,
+      "itemID": "none", 
+      "dropQuantityMin": 0, 
+      "tileID": "air", 
       "dropQuantityMax": 0
-    },
+    }, 
     {
-      "tileID": "snow",
-      "itemID": "snow",
-      "dropQuantityMin": 1,
+      "itemID": "snow", 
+      "dropQuantityMin": 1, 
+      "tileID": "snow", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "ice",
-      "itemID": "ice",
-      "dropQuantityMin": 1,
+      "itemID": "ice", 
+      "dropQuantityMin": 1, 
+      "tileID": "ice", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "torch",
-      "itemID": "torch",
-      "dropQuantityMin": 1,
+      "itemID": "torch", 
+      "dropQuantityMin": 1, 
+      "tileID": "torch", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "stone_brick",
-      "itemID": "stone",
-      "dropQuantityMin": 1,
+      "itemID": "stone", 
+      "dropQuantityMin": 1, 
+      "tileID": "stone_brick", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "moss_stone_brick",
-      "itemID": "stone",
-      "dropQuantityMin": 1,
+      "itemID": "stone", 
+      "dropQuantityMin": 1, 
+      "tileID": "moss_stone_brick", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "oak_leaves",
-      "itemID": "oak_leaves",
-      "dropQuantityMin": 1,
+      "itemID": "oak_leaves", 
+      "dropQuantityMin": 1, 
+      "tileID": "oak_leaves", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "mangrove_leaves",
-      "itemID": "mangrove_leaves",
-      "dropQuantityMin": 1,
+      "itemID": "mangrove_leaves", 
+      "dropQuantityMin": 1, 
+      "tileID": "mangrove_leaves", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "pine_leaves",
-      "itemID": "pine_leaves",
-      "dropQuantityMin": 1,
+      "itemID": "pine_leaves", 
+      "dropQuantityMin": 1, 
+      "tileID": "pine_leaves", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "cherryblossom_leaves",
-      "itemID": "cherry_blossom_leaves",
-      "dropQuantityMin": 1,
+      "itemID": "cherry_blossom_leaves", 
+      "dropQuantityMin": 1, 
+      "tileID": "cherryblossom_leaves", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "beech_leaves",
-      "itemID": "beech_leaves",
-      "dropQuantityMin": 1,
+      "itemID": "beech_leaves", 
+      "dropQuantityMin": 1, 
+      "tileID": "beech_leaves", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "onyx_brick",
-      "itemID": "onyx_brick",
-      "dropQuantityMin": 1,
+      "itemID": "onyx_brick", 
+      "dropQuantityMin": 1, 
+      "tileID": "onyx_brick", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "morganite_brick",
-      "itemID": "morganite_brick",
-      "dropQuantityMin": 1,
+      "itemID": "morganite_brick", 
+      "dropQuantityMin": 1, 
+      "tileID": "morganite_brick", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "amethyst_brick",
-      "itemID": "amethyst_brick",
-      "dropQuantityMin": 1,
+      "itemID": "amethyst_brick", 
+      "dropQuantityMin": 1, 
+      "tileID": "amethyst_brick", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "spessartitegarnet_brick",
-      "itemID": "spessartitegarnet_brick",
-      "dropQuantityMin": 1,
+      "itemID": "spessartitegarnet_brick", 
+      "dropQuantityMin": 1, 
+      "tileID": "spessartitegarnet_brick", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "aquamarine_brick",
-      "itemID": "aquamarine_brick",
-      "dropQuantityMin": 1,
+      "itemID": "aquamarine_brick", 
+      "dropQuantityMin": 1, 
+      "tileID": "aquamarine_brick", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "topaz_brick",
-      "itemID": "topaz_brick",
-      "dropQuantityMin": 1,
+      "itemID": "topaz_brick", 
+      "dropQuantityMin": 1, 
+      "tileID": "topaz_brick", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "sapphire_brick",
-      "itemID": "sapphire_brick",
-      "dropQuantityMin": 1,
+      "itemID": "sapphire_brick", 
+      "dropQuantityMin": 1, 
+      "tileID": "sapphire_brick", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "emerald_brick",
-      "itemID": "emerald_brick",
-      "dropQuantityMin": 1,
+      "itemID": "emerald_brick", 
+      "dropQuantityMin": 1, 
+      "tileID": "emerald_brick", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "ruby_brick",
-      "itemID": "ruby_brick",
-      "dropQuantityMin": 1,
+      "itemID": "ruby_brick", 
+      "dropQuantityMin": 1, 
+      "tileID": "ruby_brick", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "diamond_brick",
-      "itemID": "diamond_brick",
-      "dropQuantityMin": 1,
+      "itemID": "diamond_brick", 
+      "dropQuantityMin": 1, 
+      "tileID": "diamond_brick", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "cracked_stone_brick",
-      "itemID": "stone",
-      "dropQuantityMin": 1,
+      "itemID": "stone", 
+      "dropQuantityMin": 1, 
+      "tileID": "cracked_stone_brick", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "smooth_sand_brick",
-      "itemID": "smooth_sand_brick",
-      "dropQuantityMin": 1,
+      "itemID": "smooth_sand_brick", 
+      "dropQuantityMin": 1, 
+      "tileID": "smooth_sand_brick", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "smooth_sand",
-      "itemID": "smooth_sand",
-      "dropQuantityMin": 1,
+      "itemID": "smooth_sand", 
+      "dropQuantityMin": 1, 
+      "tileID": "smooth_sand", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "sand_brick",
-      "itemID": "sand_brick",
-      "dropQuantityMin": 1,
+      "itemID": "sand_brick", 
+      "dropQuantityMin": 1, 
+      "tileID": "sand_brick", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "lilypad",
-      "itemID": "lilypad",
-      "dropQuantityMin": 1,
+      "itemID": "lilypad", 
+      "dropQuantityMin": 1, 
+      "tileID": "lilypad", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "morganite_lightstone",
-      "itemID": "morganite_lightstone",
-      "dropQuantityMin": 1,
+      "itemID": "morganite_lightstone", 
+      "dropQuantityMin": 1, 
+      "tileID": "morganite_lightstone", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "amethyst_lightstone",
-      "itemID": "amethyst_lightstone",
-      "dropQuantityMin": 1,
+      "itemID": "amethyst_lightstone", 
+      "dropQuantityMin": 1, 
+      "tileID": "amethyst_lightstone", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "spessartitegarnet_lightstone",
-      "itemID": "spessartitegarnet_lightstone",
-      "dropQuantityMin": 1,
+      "itemID": "spessartitegarnet_lightstone", 
+      "dropQuantityMin": 1, 
+      "tileID": "spessartitegarnet_lightstone", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "aquamarine_lightstone",
-      "itemID": "aquamarine_lightstone",
-      "dropQuantityMin": 1,
+      "itemID": "aquamarine_lightstone", 
+      "dropQuantityMin": 1, 
+      "tileID": "aquamarine_lightstone", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "topaz_lightstone",
-      "itemID": "topaz_lightstone",
-      "dropQuantityMin": 1,
+      "itemID": "topaz_lightstone", 
+      "dropQuantityMin": 1, 
+      "tileID": "topaz_lightstone", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "sapphire_lightstone",
-      "itemID": "sapphire_lightstone",
-      "dropQuantityMin": 1,
+      "itemID": "sapphire_lightstone", 
+      "dropQuantityMin": 1, 
+      "tileID": "sapphire_lightstone", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "emerald_lightstone",
-      "itemID": "emerald_lightstone",
-      "dropQuantityMin": 1,
+      "itemID": "emerald_lightstone", 
+      "dropQuantityMin": 1, 
+      "tileID": "emerald_lightstone", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "ruby_lightstone",
-      "itemID": "ruby_lightstone",
-      "dropQuantityMin": 1,
+      "itemID": "ruby_lightstone", 
+      "dropQuantityMin": 1, 
+      "tileID": "ruby_lightstone", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "hay_bale",
-      "itemID": "hay_bale",
-      "dropQuantityMin": 1,
+      "itemID": "hay_bale", 
+      "dropQuantityMin": 1, 
+      "tileID": "hay_bale", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "snow_brick",
-      "itemID": "snow_brick",
-      "dropQuantityMin": 1,
+      "itemID": "snow_brick", 
+      "dropQuantityMin": 1, 
+      "tileID": "snow_brick", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "verdant_pine",
-      "itemID": "log",
-      "dropQuantityMin": 4,
+      "itemID": "log", 
+      "dropQuantityMin": 4, 
+      "tileID": "verdant_pine", 
       "dropQuantityMax": 8
-    },
+    }, 
     {
-      "tileID": "oak_tree",
-      "itemID": "log",
-      "dropQuantityMin": 4,
+      "itemID": "log", 
+      "dropQuantityMin": 4, 
+      "tileID": "oak_tree", 
       "dropQuantityMax": 8
-    },
+    }, 
     {
-      "tileID": "mist_willow",
-      "itemID": "log",
-      "dropQuantityMin": 4,
+      "itemID": "log", 
+      "dropQuantityMin": 4, 
+      "tileID": "mist_willow", 
       "dropQuantityMax": 8
-    },
+    }, 
     {
-      "tileID": "ember_maple",
-      "itemID": "log",
-      "dropQuantityMin": 4,
+      "itemID": "log", 
+      "dropQuantityMin": 4, 
+      "tileID": "ember_maple", 
       "dropQuantityMax": 8
-    },
+    }, 
     {
-      "tileID": "sunleaf_oak",
-      "itemID": "log",
-      "dropQuantityMin": 4,
+      "itemID": "log", 
+      "dropQuantityMin": 4, 
+      "tileID": "sunleaf_oak", 
       "dropQuantityMax": 8
-    },
+    }, 
     {
-      "tileID": "coal_ore",
-      "itemID": "coal",
-      "dropQuantityMin": 1,
+      "itemID": "coal", 
+      "dropQuantityMin": 1, 
+      "tileID": "coal_ore", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "copper_ore",
-      "itemID": "copper_ore",
-      "dropQuantityMin": 1,
+      "itemID": "copper_ore", 
+      "dropQuantityMin": 1, 
+      "tileID": "copper_ore", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "tin_ore",
-      "itemID": "tin_ore",
-      "dropQuantityMin": 1,
+      "itemID": "tin_ore", 
+      "dropQuantityMin": 1, 
+      "tileID": "tin_ore", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "lead_ore",
-      "itemID": "lead_ore",
-      "dropQuantityMin": 1,
+      "itemID": "lead_ore", 
+      "dropQuantityMin": 1, 
+      "tileID": "lead_ore", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "iron_ore",
-      "itemID": "iron_ore",
-      "dropQuantityMin": 1,
+      "itemID": "iron_ore", 
+      "dropQuantityMin": 1, 
+      "tileID": "iron_ore", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "amberstone",
-      "itemID": "amberstone",
-      "dropQuantityMin": 1,
+      "itemID": "amberstone", 
+      "dropQuantityMin": 1, 
+      "tileID": "amberstone", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "silver_ore",
-      "itemID": "silver_ore",
-      "dropQuantityMin": 1,
+      "itemID": "silver_ore", 
+      "dropQuantityMin": 1, 
+      "tileID": "silver_ore", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "tungsten_ore",
-      "itemID": "tungsten_ore",
-      "dropQuantityMin": 1,
+      "itemID": "tungsten_ore", 
+      "dropQuantityMin": 1, 
+      "tileID": "tungsten_ore", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "gold_ore",
-      "itemID": "gold_ore",
-      "dropQuantityMin": 1,
+      "itemID": "gold_ore", 
+      "dropQuantityMin": 1, 
+      "tileID": "gold_ore", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "platinum_ore",
-      "itemID": "platinum_ore",
-      "dropQuantityMin": 1,
+      "itemID": "platinum_ore", 
+      "dropQuantityMin": 1, 
+      "tileID": "platinum_ore", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "cobalt_ore",
-      "itemID": "cobalt_ore",
-      "dropQuantityMin": 1,
+      "itemID": "cobalt_ore", 
+      "dropQuantityMin": 1, 
+      "tileID": "cobalt_ore", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "mythril_ore",
-      "itemID": "mythril_ore",
-      "dropQuantityMin": 1,
+      "itemID": "mythril_ore", 
+      "dropQuantityMin": 1, 
+      "tileID": "mythril_ore", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "onyx_ore",
-      "itemID": "onyx",
-      "dropQuantityMin": 1,
+      "itemID": "onyx", 
+      "dropQuantityMin": 1, 
+      "tileID": "onyx_ore", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "morganite_ore",
-      "itemID": "morganite",
-      "dropQuantityMin": 1,
+      "itemID": "morganite", 
+      "dropQuantityMin": 1, 
+      "tileID": "morganite_ore", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "amethyst_ore",
-      "itemID": "amethyst",
-      "dropQuantityMin": 1,
+      "itemID": "amethyst", 
+      "dropQuantityMin": 1, 
+      "tileID": "amethyst_ore", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "spessartitegarnet_ore",
-      "itemID": "spessartite_garnet",
-      "dropQuantityMin": 1,
+      "itemID": "spessartite_garnet", 
+      "dropQuantityMin": 1, 
+      "tileID": "spessartitegarnet_ore", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "aquamarine_ore",
-      "itemID": "aquamarine",
-      "dropQuantityMin": 1,
+      "itemID": "aquamarine", 
+      "dropQuantityMin": 1, 
+      "tileID": "aquamarine_ore", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "topaz_ore",
-      "itemID": "topaz",
-      "dropQuantityMin": 1,
+      "itemID": "topaz", 
+      "dropQuantityMin": 1, 
+      "tileID": "topaz_ore", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "sapphire_ore",
-      "itemID": "sapphire",
-      "dropQuantityMin": 1,
+      "itemID": "sapphire", 
+      "dropQuantityMin": 1, 
+      "tileID": "sapphire_ore", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "emerald_ore",
-      "itemID": "emerald",
-      "dropQuantityMin": 1,
+      "itemID": "emerald", 
+      "dropQuantityMin": 1, 
+      "tileID": "emerald_ore", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "ruby_ore",
-      "itemID": "ruby",
-      "dropQuantityMin": 1,
+      "itemID": "ruby", 
+      "dropQuantityMin": 1, 
+      "tileID": "ruby_ore", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "diamond_ore",
-      "itemID": "diamond",
-      "dropQuantityMin": 1,
+      "itemID": "diamond", 
+      "dropQuantityMin": 1, 
+      "tileID": "diamond_ore", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "cactus_round",
-      "itemID": "cactus",
-      "dropQuantityMin": 1,
+      "itemID": "cactus", 
+      "dropQuantityMin": 1, 
+      "tileID": "cactus_round", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "cactus_tall",
-      "itemID": "cactus",
-      "dropQuantityMin": 1,
+      "itemID": "cactus", 
+      "dropQuantityMin": 1, 
+      "tileID": "cactus_tall", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "rail",
-      "itemID": "rail",
-      "dropQuantityMin": 1,
+      "itemID": "rail", 
+      "dropQuantityMin": 1, 
+      "tileID": "rail", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "carrot",
-      "itemID": "carrot",
-      "dropQuantityMin": 1,
+      "itemID": "carrot", 
+      "dropQuantityMin": 1, 
+      "tileID": "carrot", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "potato",
-      "itemID": "potato",
-      "dropQuantityMin": 1,
+      "itemID": "potato", 
+      "dropQuantityMin": 1, 
+      "tileID": "potato", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "tomato",
-      "itemID": "tomato",
-      "dropQuantityMin": 1,
+      "itemID": "tomato", 
+      "dropQuantityMin": 1, 
+      "tileID": "tomato", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "strawberry",
-      "itemID": "strawberry",
-      "dropQuantityMin": 1,
+      "itemID": "strawberry", 
+      "dropQuantityMin": 1, 
+      "tileID": "strawberry", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "corn",
-      "itemID": "corn",
-      "dropQuantityMin": 1,
+      "itemID": "corn", 
+      "dropQuantityMin": 1, 
+      "tileID": "corn", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "eggplant",
-      "itemID": "eggplant",
-      "dropQuantityMin": 1,
+      "itemID": "eggplant", 
+      "dropQuantityMin": 1, 
+      "tileID": "eggplant", 
       "dropQuantityMax": 1
-    },
+    }, 
     {
-      "tileID": "voidstone",
-      "itemID": "dirt",
-      "dropQuantityMin": 1,
+      "itemID": "dirt", 
+      "dropQuantityMin": 1, 
+      "tileID": "voidstone", 
+      "dropQuantityMax": 1
+    }, 
+    {
+      "itemID": "log", 
+      "dropQuantityMin": 1, 
+      "tileID": "wood_1_up", 
+      "dropQuantityMax": 1
+    }, 
+    {
+      "itemID": "log", 
+      "dropQuantityMin": 1, 
+      "tileID": "wood_1_side", 
+      "dropQuantityMax": 1
+    }, 
+    {
+      "itemID": "log", 
+      "dropQuantityMin": 1, 
+      "tileID": "wood_2_up", 
+      "dropQuantityMax": 1
+    }, 
+    {
+      "itemID": "log", 
+      "dropQuantityMin": 1, 
+      "tileID": "wood_2_side", 
+      "dropQuantityMax": 1
+    }, 
+    {
+      "itemID": "log", 
+      "dropQuantityMin": 1, 
+      "tileID": "g_plank_1", 
+      "dropQuantityMax": 1
+    }, 
+    {
+      "itemID": "log", 
+      "dropQuantityMin": 1, 
+      "tileID": "g_plank_2", 
+      "dropQuantityMax": 1
+    }, 
+    {
+      "itemID": "log", 
+      "dropQuantityMin": 1, 
+      "tileID": "pine_wall", 
+      "dropQuantityMax": 1
+    }, 
+    {
+      "itemID": "log", 
+      "dropQuantityMin": 1, 
+      "tileID": "wooden_sign", 
+      "dropQuantityMax": 1
+    }, 
+    {
+      "itemID": "log", 
+      "dropQuantityMin": 1, 
+      "tileID": "workbench", 
+      "dropQuantityMax": 1
+    }, 
+    {
+      "itemID": "log", 
+      "dropQuantityMin": 1, 
+      "tileID": "crafting_table", 
+      "dropQuantityMax": 1
+    }, 
+    {
+      "itemID": "log", 
+      "dropQuantityMin": 1, 
+      "tileID": "wooden_chair_up", 
+      "dropQuantityMax": 1
+    }, 
+    {
+      "itemID": "log", 
+      "dropQuantityMin": 1, 
+      "tileID": "wooden_chair_down", 
+      "dropQuantityMax": 1
+    }, 
+    {
+      "itemID": "log", 
+      "dropQuantityMin": 1, 
+      "tileID": "wooden_chair_left", 
+      "dropQuantityMax": 1
+    }, 
+    {
+      "itemID": "log", 
+      "dropQuantityMin": 1, 
+      "tileID": "wooden_chair_right", 
+      "dropQuantityMax": 1
+    }, 
+    {
+      "itemID": "log", 
+      "dropQuantityMin": 1, 
+      "tileID": "wooden_table", 
+      "dropQuantityMax": 1
+    }, 
+    {
+      "itemID": "log", 
+      "dropQuantityMin": 1, 
+      "tileID": "red_bed", 
+      "dropQuantityMax": 1
+    }, 
+    {
+      "itemID": "log", 
+      "dropQuantityMin": 1, 
+      "tileID": "blue_bed", 
+      "dropQuantityMax": 1
+    }, 
+    {
+      "itemID": "log", 
+      "dropQuantityMin": 1, 
+      "tileID": "green_bed", 
+      "dropQuantityMax": 1
+    }, 
+    {
+      "itemID": "log", 
+      "dropQuantityMin": 1, 
+      "tileID": "yellow_bed", 
+      "dropQuantityMax": 1
+    }, 
+    {
+      "itemID": "log", 
+      "dropQuantityMin": 1, 
+      "tileID": "training_dummy", 
+      "dropQuantityMax": 1
+    }, 
+    {
+      "itemID": "log", 
+      "dropQuantityMin": 1, 
+      "tileID": "wooden_chest", 
       "dropQuantityMax": 1
     }
   ]

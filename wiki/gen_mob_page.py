@@ -251,6 +251,9 @@ MOB_HTML = r'''<!DOCTYPE html>
       combatHtml += stat('Attack Speed', fmt(c.AttackSpeed) + 'x', '');
       combatHtml += stat('Attack Range', fmt(c.AttackRange), '');
       combatHtml += stat('Move Speed', fmt(c.MoveSpeed) + 'x', 'yellow');
+      if (mv && mv.MoveType) {
+        combatHtml += stat('Move Type', mv.MoveType, 'yellow');
+      }
       combatHtml += stat('Knockback', fmt(c.KnockbackForce), '');
       combatHtml += stat('KB Resistance', fmt(c.KnockbackResistance), '');
 

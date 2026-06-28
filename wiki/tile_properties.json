@@ -1,1260 +1,1899 @@
 {
   "tileProperties": [
     {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "air",
-      "hardness": 0,
-      "lightOpacity": 1
-    },
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "walkable": true, 
+      "tileID": "air", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 0
+    }, 
     {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "water",
-      "hardness": -1,
-      "lightOpacity": 1
-    },
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "walkable": false, 
+      "tileID": "water", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
     {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "lava",
-      "hardness": -1,
-      "lightOpacity": 1
-    },
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "walkable": false, 
+      "tileID": "lava", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
     {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "dirt",
-      "hardness": 3,
-      "lightOpacity": 4
-    },
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "dirt", 
+      "walkable": false, 
+      "tileID": "dirt", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 0, 
+      "hardness": 3
+    }, 
     {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "sand",
-      "hardness": 3,
-      "lightOpacity": 4
-    },
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "sand", 
+      "walkable": false, 
+      "tileID": "sand", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 0, 
+      "hardness": 3
+    }, 
     {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "moss",
-      "hardness": 3,
-      "lightOpacity": 4
-    },
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "moss", 
+      "walkable": false, 
+      "tileID": "moss", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 0, 
+      "hardness": 3
+    }, 
     {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "snow",
-      "hardness": 3,
-      "lightOpacity": 4
-    },
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "snow", 
+      "walkable": false, 
+      "tileID": "snow", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 0, 
+      "hardness": 3
+    }, 
     {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "ice",
-      "hardness": 3,
-      "lightOpacity": 4
-    },
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "ice", 
+      "walkable": false, 
+      "tileID": "ice", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 0, 
+      "hardness": 3
+    }, 
     {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "glass",
-      "hardness": 3,
-      "lightOpacity": 1
-    },
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "glass", 
+      "walkable": false, 
+      "tileID": "glass", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 3
+    }, 
     {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "torch",
-      "hardness": 1,
-      "lightOpacity": 1,
       "lightColor": {
-        "Red": 15,
-        "Green": 15,
-        "Blue": 10,
-        "Intensity": 1
-      }
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "lilypad",
-      "hardness": 1,
-      "lightOpacity": 1
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "hay_bale",
-      "hardness": 2,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 1,
-      "tileID": "stone",
-      "hardness": 5,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": -1,
-      "tileID": "voidstone",
-      "hardness": -1,
-      "lightOpacity": 5
-    },
-    {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "empty",
-      "hardness": 0,
-      "lightOpacity": 1
-    },
-    {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "carrot",
-      "hardness": 1,
-      "lightOpacity": 1
-    },
-    {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "potato",
-      "hardness": 1,
-      "lightOpacity": 1
-    },
-    {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "tomato",
-      "hardness": 1,
-      "lightOpacity": 1
-    },
-    {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "strawberry",
-      "hardness": 1,
-      "lightOpacity": 1
-    },
-    {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "corn",
-      "hardness": 1,
-      "lightOpacity": 1
-    },
-    {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "eggplant",
-      "hardness": 1,
-      "lightOpacity": 1
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "wood_1_side",
-      "hardness": 5,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "wood_1_up",
-      "hardness": 5,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "wood_2_side",
-      "hardness": 5,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "wood_2_up",
-      "hardness": 5,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "verdant_pine",
-      "hardness": 10,
-      "lightOpacity": 1
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "oak_tree",
-      "hardness": 10,
-      "lightOpacity": 1
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "mist_willow",
-      "hardness": 10,
-      "lightOpacity": 1
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "ember_maple",
-      "hardness": 10,
-      "lightOpacity": 1
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "sunleaf_oak",
-      "hardness": 10,
-      "lightOpacity": 1
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 2,
-      "tileID": "stone_brick",
-      "hardness": 6,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 2,
-      "tileID": "moss_stone_brick",
-      "hardness": 6,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 1,
-      "tileID": "cracked_stone_brick",
-      "hardness": 5,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 1,
-      "tileID": "smooth_sand_brick",
-      "hardness": 4,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 1,
-      "tileID": "smooth_sand",
-      "hardness": 4,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 1,
-      "tileID": "sand_brick",
-      "hardness": 4,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 1,
-      "tileID": "snow_brick",
-      "hardness": 4,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 4,
-      "tileID": "onyx_brick",
-      "hardness": 8,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 4,
-      "tileID": "morganite_brick",
-      "hardness": 8,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 4,
-      "tileID": "amethyst_brick",
-      "hardness": 8,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 5,
-      "tileID": "spessartitegarnet_brick",
-      "hardness": 8,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 5,
-      "tileID": "aquamarine_brick",
-      "hardness": 8,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 5,
-      "tileID": "topaz_brick",
-      "hardness": 8,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 6,
-      "tileID": "sapphire_brick",
-      "hardness": 8,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 6,
-      "tileID": "emerald_brick",
-      "hardness": 8,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 7,
-      "tileID": "ruby_brick",
-      "hardness": 8,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 8,
-      "tileID": "diamond_brick",
-      "hardness": 10,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 1,
-      "tileID": "coal_ore",
-      "hardness": 4,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 2,
-      "tileID": "copper_ore",
-      "hardness": 5,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 2,
-      "tileID": "tin_ore",
-      "hardness": 5,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 3,
-      "tileID": "lead_ore",
-      "hardness": 6,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 3,
-      "tileID": "iron_ore",
-      "hardness": 6,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 3,
-      "tileID": "amberstone",
-      "hardness": 5,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 3,
-      "tileID": "silver_ore",
-      "hardness": 6,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 5,
-      "tileID": "tungsten_ore",
-      "hardness": 8,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 4,
-      "tileID": "gold_ore",
-      "hardness": 7,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 5,
-      "tileID": "platinum_ore",
-      "hardness": 8,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 6,
-      "tileID": "cobalt_ore",
-      "hardness": 9,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 6,
-      "tileID": "mythril_ore",
-      "hardness": 9,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 4,
-      "tileID": "onyx_ore",
-      "hardness": 8,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 4,
-      "tileID": "morganite_ore",
-      "hardness": 8,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 4,
-      "tileID": "amethyst_ore",
-      "hardness": 8,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 5,
-      "tileID": "spessartitegarnet_ore",
-      "hardness": 8,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 5,
-      "tileID": "aquamarine_ore",
-      "hardness": 8,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 5,
-      "tileID": "topaz_ore",
-      "hardness": 8,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 6,
-      "tileID": "sapphire_ore",
-      "hardness": 9,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 6,
-      "tileID": "emerald_ore",
-      "hardness": 9,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 7,
-      "tileID": "ruby_ore",
-      "hardness": 10,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 8,
-      "tileID": "diamond_ore",
-      "hardness": 10,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "wooden_chest",
-      "hardness": -1,
-      "lightOpacity": 1
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "copper_chest",
-      "hardness": -1,
-      "lightOpacity": 1
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "silver_chest",
-      "hardness": -1,
-      "lightOpacity": 1
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "gold_chest",
-      "hardness": -1,
-      "lightOpacity": 1
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "emerald_chest",
-      "hardness": -1,
-      "lightOpacity": 1
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "sapphire_chest",
-      "hardness": -1,
-      "lightOpacity": 1
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "ruby_chest",
-      "hardness": -1,
-      "lightOpacity": 1
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "ancient_chest",
-      "hardness": -1,
-      "lightOpacity": 1
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "voidchest",
-      "hardness": -1,
-      "lightOpacity": 1
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "workbench",
-      "hardness": -1,
-      "lightOpacity": 1
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": -1,
-      "tileID": "g_dirt",
-      "hardness": -1,
-      "lightOpacity": 0
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": -1,
-      "tileID": "g_cobblestone",
-      "hardness": -1,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": -1,
-      "tileID": "g_snow",
-      "hardness": -1,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": -1,
-      "tileID": "g_moss",
-      "hardness": -1,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": -1,
-      "tileID": "g_cobblestone_moss",
-      "hardness": -1,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": -1,
-      "tileID": "g_sand",
-      "hardness": -1,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": -1,
-      "tileID": "g_stone",
-      "hardness": -1,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": -1,
-      "tileID": "g_swamp_dirt",
-      "hardness": -1,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": -1,
-      "tileID": "g_coast_sand",
-      "hardness": -1,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": -1,
-      "tileID": "g_mud",
-      "hardness": -1,
-      "lightOpacity": 4
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 500,
-      "tileID": "downstair",
-      "hardness": -1,
-      "lightOpacity": 1
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 500,
-      "tileID": "upstair",
-      "hardness": -1,
-      "lightOpacity": 1
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "wooden_sign",
-      "hardness": -1,
-      "lightOpacity": 1
-    },
-    {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "portal",
-      "hardness": -1,
-      "lightOpacity": 1,
+        "Blue": 10, 
+        "Intensity": 1, 
+        "Green": 15, 
+        "Red": 15
+      }, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "torch", 
+      "walkable": true, 
+      "tileID": "torch", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "dropQuantityMin": 1, 
+      "hardness": 1
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "lilypad", 
+      "walkable": false, 
+      "tileID": "lilypad", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 1
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "hay_bale", 
+      "walkable": false, 
+      "tileID": "hay_bale", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 0, 
+      "hardness": 2
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "stone", 
+      "walkable": false, 
+      "tileID": "stone", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 1, 
+      "hardness": 5
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "dirt", 
+      "walkable": false, 
+      "tileID": "voidstone", 
+      "lightOpacity": 5, 
+      "minPickaxePower": -1, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "walkable": true, 
+      "tileID": "empty", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 0
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "carrot", 
+      "walkable": true, 
+      "tileID": "carrot", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 1
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "potato", 
+      "walkable": true, 
+      "tileID": "potato", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 1
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "tomato", 
+      "walkable": true, 
+      "tileID": "tomato", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 1
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "strawberry", 
+      "walkable": true, 
+      "tileID": "strawberry", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 1
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "corn", 
+      "walkable": true, 
+      "tileID": "corn", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 1
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "eggplant", 
+      "walkable": true, 
+      "tileID": "eggplant", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 1
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "log", 
+      "walkable": false, 
+      "tileID": "wood_1_side", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 0, 
+      "hardness": 5
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "log", 
+      "walkable": false, 
+      "tileID": "wood_1_up", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 0, 
+      "hardness": 5
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "log", 
+      "walkable": false, 
+      "tileID": "wood_2_side", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 0, 
+      "hardness": 5
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "log", 
+      "walkable": false, 
+      "tileID": "wood_2_up", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 0, 
+      "hardness": 5
+    }, 
+    {
+      "dropQuantityMin": 4, 
+      "dropQuantityMax": 8, 
+      "dropItemID": "log", 
+      "walkable": false, 
+      "tileID": "verdant_pine", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 10
+    }, 
+    {
+      "dropQuantityMin": 4, 
+      "dropQuantityMax": 8, 
+      "dropItemID": "log", 
+      "walkable": false, 
+      "tileID": "oak_tree", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 10
+    }, 
+    {
+      "dropQuantityMin": 4, 
+      "dropQuantityMax": 8, 
+      "dropItemID": "log", 
+      "walkable": false, 
+      "tileID": "mist_willow", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 10
+    }, 
+    {
+      "dropQuantityMin": 4, 
+      "dropQuantityMax": 8, 
+      "dropItemID": "log", 
+      "walkable": false, 
+      "tileID": "ember_maple", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 10
+    }, 
+    {
+      "dropQuantityMin": 4, 
+      "dropQuantityMax": 8, 
+      "dropItemID": "log", 
+      "walkable": false, 
+      "tileID": "sunleaf_oak", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 10
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "stone", 
+      "walkable": false, 
+      "tileID": "stone_brick", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 2, 
+      "hardness": 6
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "stone", 
+      "walkable": false, 
+      "tileID": "moss_stone_brick", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 2, 
+      "hardness": 6
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "stone", 
+      "walkable": false, 
+      "tileID": "cracked_stone_brick", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 1, 
+      "hardness": 5
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "smooth_sand_brick", 
+      "walkable": false, 
+      "tileID": "smooth_sand_brick", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 1, 
+      "hardness": 4
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "smooth_sand", 
+      "walkable": false, 
+      "tileID": "smooth_sand", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 1, 
+      "hardness": 4
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "sand_brick", 
+      "walkable": false, 
+      "tileID": "sand_brick", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 1, 
+      "hardness": 4
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "snow_brick", 
+      "walkable": false, 
+      "tileID": "snow_brick", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 1, 
+      "hardness": 4
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "onyx_brick", 
+      "walkable": false, 
+      "tileID": "onyx_brick", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 4, 
+      "hardness": 8
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "morganite_brick", 
+      "walkable": false, 
+      "tileID": "morganite_brick", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 4, 
+      "hardness": 8
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "amethyst_brick", 
+      "walkable": false, 
+      "tileID": "amethyst_brick", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 4, 
+      "hardness": 8
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "spessartitegarnet_brick", 
+      "walkable": false, 
+      "tileID": "spessartitegarnet_brick", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 5, 
+      "hardness": 8
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "aquamarine_brick", 
+      "walkable": false, 
+      "tileID": "aquamarine_brick", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 5, 
+      "hardness": 8
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "topaz_brick", 
+      "walkable": false, 
+      "tileID": "topaz_brick", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 5, 
+      "hardness": 8
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "sapphire_brick", 
+      "walkable": false, 
+      "tileID": "sapphire_brick", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 6, 
+      "hardness": 8
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "emerald_brick", 
+      "walkable": false, 
+      "tileID": "emerald_brick", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 6, 
+      "hardness": 8
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "ruby_brick", 
+      "walkable": false, 
+      "tileID": "ruby_brick", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 7, 
+      "hardness": 8
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "diamond_brick", 
+      "walkable": false, 
+      "tileID": "diamond_brick", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 8, 
+      "hardness": 10
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "coal", 
+      "walkable": false, 
+      "tileID": "coal_ore", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 1, 
+      "hardness": 4
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "copper_ore", 
+      "walkable": false, 
+      "tileID": "copper_ore", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 2, 
+      "hardness": 5
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "tin_ore", 
+      "walkable": false, 
+      "tileID": "tin_ore", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 2, 
+      "hardness": 5
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "lead_ore", 
+      "walkable": false, 
+      "tileID": "lead_ore", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 3, 
+      "hardness": 6
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "iron_ore", 
+      "walkable": false, 
+      "tileID": "iron_ore", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 3, 
+      "hardness": 6
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "amberstone", 
+      "walkable": false, 
+      "tileID": "amberstone", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 3, 
+      "hardness": 5
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "silver_ore", 
+      "walkable": false, 
+      "tileID": "silver_ore", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 3, 
+      "hardness": 6
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "tungsten_ore", 
+      "walkable": false, 
+      "tileID": "tungsten_ore", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 5, 
+      "hardness": 8
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "gold_ore", 
+      "walkable": false, 
+      "tileID": "gold_ore", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 4, 
+      "hardness": 7
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "platinum_ore", 
+      "walkable": false, 
+      "tileID": "platinum_ore", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 5, 
+      "hardness": 8
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "cobalt_ore", 
+      "walkable": false, 
+      "tileID": "cobalt_ore", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 6, 
+      "hardness": 9
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "mythril_ore", 
+      "walkable": false, 
+      "tileID": "mythril_ore", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 6, 
+      "hardness": 9
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "onyx", 
+      "walkable": false, 
+      "tileID": "onyx_ore", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 4, 
+      "hardness": 8
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "morganite", 
+      "walkable": false, 
+      "tileID": "morganite_ore", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 4, 
+      "hardness": 8
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "amethyst", 
+      "walkable": false, 
+      "tileID": "amethyst_ore", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 4, 
+      "hardness": 8
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "spessartite_garnet", 
+      "walkable": false, 
+      "tileID": "spessartitegarnet_ore", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 5, 
+      "hardness": 8
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "aquamarine", 
+      "walkable": false, 
+      "tileID": "aquamarine_ore", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 5, 
+      "hardness": 8
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "topaz", 
+      "walkable": false, 
+      "tileID": "topaz_ore", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 5, 
+      "hardness": 8
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "sapphire", 
+      "walkable": false, 
+      "tileID": "sapphire_ore", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 6, 
+      "hardness": 9
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "emerald", 
+      "walkable": false, 
+      "tileID": "emerald_ore", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 6, 
+      "hardness": 9
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "ruby", 
+      "walkable": false, 
+      "tileID": "ruby_ore", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 7, 
+      "hardness": 10
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "diamond", 
+      "walkable": false, 
+      "tileID": "diamond_ore", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 8, 
+      "hardness": 10
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "log", 
+      "walkable": false, 
+      "tileID": "wooden_chest", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "walkable": false, 
+      "tileID": "copper_chest", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "walkable": false, 
+      "tileID": "silver_chest", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "walkable": false, 
+      "tileID": "gold_chest", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "walkable": false, 
+      "tileID": "emerald_chest", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "walkable": false, 
+      "tileID": "sapphire_chest", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "walkable": false, 
+      "tileID": "ruby_chest", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "walkable": false, 
+      "tileID": "ancient_chest", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "walkable": false, 
+      "tileID": "voidchest", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "log", 
+      "walkable": false, 
+      "tileID": "workbench", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 6
+    }, 
+    {
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "groundPriority": 10, 
+      "walkable": false, 
+      "tileID": "g_dirt_road", 
+      "lightOpacity": 4, 
+      "minPickaxePower": -1, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "groundPriority": 12, 
+      "walkable": false, 
+      "tileID": "g_ice", 
+      "lightOpacity": 4, 
+      "minPickaxePower": -1, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "walkable": false, 
+      "tileID": "downstair", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 500, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "walkable": false, 
+      "tileID": "upstair", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 500, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "log", 
+      "walkable": false, 
+      "tileID": "wooden_sign", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 6
+    }, 
+    {
       "lightColor": {
-        "Red": 15,
-        "Green": 15,
-        "Blue": 10,
-        "Intensity": 1
-      }
-    },
+        "Blue": 10, 
+        "Intensity": 1, 
+        "Green": 15, 
+        "Red": 15
+      }, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "walkable": true, 
+      "tileID": "portal", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "dropQuantityMin": 0, 
+      "hardness": -1
+    }, 
     {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "g_grass_1",
-      "hardness": 0,
-      "lightOpacity": 1
-    },
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "walkable": true, 
+      "tileID": "grass_1", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 0
+    }, 
     {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "g_grass_2",
-      "hardness": 0,
-      "lightOpacity": 1
-    },
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "walkable": true, 
+      "tileID": "grass_2", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 0
+    }, 
     {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "g_grass_3",
-      "hardness": 0,
-      "lightOpacity": 1
-    },
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "walkable": true, 
+      "tileID": "grass_3", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 0
+    }, 
     {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "g_grass_4",
-      "hardness": 0,
-      "lightOpacity": 1
-    },
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "walkable": true, 
+      "tileID": "grass_4", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 0
+    }, 
     {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "grass_1",
-      "hardness": 0,
-      "lightOpacity": 1
-    },
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "walkable": true, 
+      "tileID": "grass_5", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 0
+    }, 
     {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "grass_2",
-      "hardness": 0,
-      "lightOpacity": 1
-    },
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "walkable": true, 
+      "tileID": "grass_6", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 0
+    }, 
     {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "grass_3",
-      "hardness": 0,
-      "lightOpacity": 1
-    },
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "walkable": true, 
+      "tileID": "grass_7", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 0
+    }, 
     {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "grass_4",
-      "hardness": 0,
-      "lightOpacity": 1
-    },
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "walkable": true, 
+      "tileID": "grass_8", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 0
+    }, 
     {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "grass_5",
-      "hardness": 0,
-      "lightOpacity": 1
-    },
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "walkable": true, 
+      "tileID": "grass_9", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 0
+    }, 
     {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "grass_6",
-      "hardness": 0,
-      "lightOpacity": 1
-    },
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "walkable": true, 
+      "tileID": "grass_10", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 0
+    }, 
     {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "grass_7",
-      "hardness": 0,
-      "lightOpacity": 1
-    },
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "walkable": true, 
+      "tileID": "blue_rose", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 0
+    }, 
     {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "grass_8",
-      "hardness": 0,
-      "lightOpacity": 1
-    },
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "walkable": true, 
+      "tileID": "red_rose", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 0
+    }, 
     {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "grass_9",
-      "hardness": 0,
-      "lightOpacity": 1
-    },
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "walkable": true, 
+      "tileID": "moon_flower", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 0
+    }, 
     {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "grass_10",
-      "hardness": 0,
-      "lightOpacity": 1
-    },
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "walkable": true, 
+      "tileID": "wild_flower", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 0
+    }, 
     {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "blue_rose",
-      "hardness": 0,
-      "lightOpacity": 1
-    },
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "walkable": true, 
+      "tileID": "amber_bloom", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 0
+    }, 
     {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "red_rose",
-      "hardness": 0,
-      "lightOpacity": 1
-    },
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "walkable": true, 
+      "tileID": "sand_grass_small", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 0
+    }, 
     {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "moon_flower",
-      "hardness": 0,
-      "lightOpacity": 1
-    },
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "walkable": true, 
+      "tileID": "sand_grass_patch", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 0
+    }, 
     {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "wild_flower",
-      "hardness": 0,
-      "lightOpacity": 1
-    },
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "rail", 
+      "walkable": true, 
+      "tileID": "rail", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 0
+    }, 
     {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "amber_bloom",
-      "hardness": 0,
-      "lightOpacity": 1
-    },
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "cactus", 
+      "walkable": false, 
+      "tileID": "cactus_round", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
     {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "g_white_carpet",
-      "hardness": 0,
-      "lightOpacity": 1
-    },
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "cactus", 
+      "walkable": false, 
+      "tileID": "cactus_tall", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
     {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "g_gray_carpet",
-      "hardness": 0,
-      "lightOpacity": 1
-    },
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "oak_leaves", 
+      "walkable": false, 
+      "tileID": "oak_leaves", 
+      "lightOpacity": 2, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
     {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "g_black_carpet",
-      "hardness": 0,
-      "lightOpacity": 1
-    },
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "mangrove_leaves", 
+      "walkable": false, 
+      "tileID": "mangrove_leaves", 
+      "lightOpacity": 2, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
     {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "g_blue_carpet",
-      "hardness": 0,
-      "lightOpacity": 1
-    },
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "pine_leaves", 
+      "walkable": false, 
+      "tileID": "pine_leaves", 
+      "lightOpacity": 2, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
     {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "g_lightBlue_carpet",
-      "hardness": 0,
-      "lightOpacity": 1
-    },
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "cherry_blossom_leaves", 
+      "walkable": false, 
+      "tileID": "cherryblossom_leaves", 
+      "lightOpacity": 2, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
     {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "g_green_carpet",
-      "hardness": 0,
-      "lightOpacity": 1
-    },
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "beech_leaves", 
+      "walkable": false, 
+      "tileID": "beech_leaves", 
+      "lightOpacity": 2, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
     {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "g_red_carpet",
-      "hardness": 0,
-      "lightOpacity": 1
-    },
-    {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "g_orange_carpet",
-      "hardness": 0,
-      "lightOpacity": 1
-    },
-    {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "g_yellow_carpet",
-      "hardness": 0,
-      "lightOpacity": 1
-    },
-    {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "g_brown_carpet",
-      "hardness": 0,
-      "lightOpacity": 1
-    },
-    {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "sand_grass_small",
-      "hardness": 0,
-      "lightOpacity": 1
-    },
-    {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "sand_grass_patch",
-      "hardness": 0,
-      "lightOpacity": 1
-    },
-    {
-      "walkable": true,
-      "minPickaxePower": 0,
-      "tileID": "rail",
-      "hardness": 0,
-      "lightOpacity": 1
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "cactus_round",
-      "hardness": -1,
-      "lightOpacity": 1
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "cactus_tall",
-      "hardness": -1,
-      "lightOpacity": 1
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "oak_leaves",
-      "hardness": -1,
-      "lightOpacity": 2
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "mangrove_leaves",
-      "hardness": -1,
-      "lightOpacity": 2
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "pine_leaves",
-      "hardness": -1,
-      "lightOpacity": 2
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "cherryblossom_leaves",
-      "hardness": -1,
-      "lightOpacity": 2
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "beech_leaves",
-      "hardness": -1,
-      "lightOpacity": 2
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "morganite_lightstone",
-      "hardness": -1,
-      "lightOpacity": 1,
       "lightColor": {
-        "Red": 15,
-        "Green": 10,
-        "Blue": 13,
-        "Intensity": 1
-      }
-    },
+        "Blue": 13, 
+        "Intensity": 1, 
+        "Green": 10, 
+        "Red": 15
+      }, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "morganite_lightstone", 
+      "walkable": false, 
+      "tileID": "morganite_lightstone", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "dropQuantityMin": 1, 
+      "hardness": -1
+    }, 
     {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "amethyst_lightstone",
-      "hardness": -1,
-      "lightOpacity": 1,
       "lightColor": {
-        "Red": 12,
-        "Green": 8,
-        "Blue": 15,
-        "Intensity": 1
-      }
-    },
+        "Blue": 15, 
+        "Intensity": 1, 
+        "Green": 8, 
+        "Red": 12
+      }, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "amethyst_lightstone", 
+      "walkable": false, 
+      "tileID": "amethyst_lightstone", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "dropQuantityMin": 1, 
+      "hardness": -1
+    }, 
     {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "spessartitegarnet_lightstone",
-      "hardness": -1,
-      "lightOpacity": 1,
       "lightColor": {
-        "Red": 15,
-        "Green": 8,
-        "Blue": 4,
-        "Intensity": 1
-      }
-    },
+        "Blue": 4, 
+        "Intensity": 1, 
+        "Green": 8, 
+        "Red": 15
+      }, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "spessartitegarnet_lightstone", 
+      "walkable": false, 
+      "tileID": "spessartitegarnet_lightstone", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "dropQuantityMin": 1, 
+      "hardness": -1
+    }, 
     {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "aquamarine_lightstone",
-      "hardness": -1,
-      "lightOpacity": 1,
       "lightColor": {
-        "Red": 8,
-        "Green": 15,
-        "Blue": 15,
-        "Intensity": 1
-      }
-    },
+        "Blue": 15, 
+        "Intensity": 1, 
+        "Green": 15, 
+        "Red": 8
+      }, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "aquamarine_lightstone", 
+      "walkable": false, 
+      "tileID": "aquamarine_lightstone", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "dropQuantityMin": 1, 
+      "hardness": -1
+    }, 
     {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "topaz_lightstone",
-      "hardness": -1,
-      "lightOpacity": 1,
       "lightColor": {
-        "Red": 15,
-        "Green": 15,
-        "Blue": 4,
-        "Intensity": 1
-      }
-    },
+        "Blue": 4, 
+        "Intensity": 1, 
+        "Green": 15, 
+        "Red": 15
+      }, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "topaz_lightstone", 
+      "walkable": false, 
+      "tileID": "topaz_lightstone", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "dropQuantityMin": 1, 
+      "hardness": -1
+    }, 
     {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "sapphire_lightstone",
-      "hardness": -1,
-      "lightOpacity": 1,
       "lightColor": {
-        "Red": 6,
-        "Green": 10,
-        "Blue": 15,
-        "Intensity": 1
-      }
-    },
+        "Blue": 15, 
+        "Intensity": 1, 
+        "Green": 10, 
+        "Red": 6
+      }, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "sapphire_lightstone", 
+      "walkable": false, 
+      "tileID": "sapphire_lightstone", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "dropQuantityMin": 1, 
+      "hardness": -1
+    }, 
     {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "emerald_lightstone",
-      "hardness": -1,
-      "lightOpacity": 1,
       "lightColor": {
-        "Red": 6,
-        "Green": 15,
-        "Blue": 8,
-        "Intensity": 1
-      }
-    },
+        "Blue": 8, 
+        "Intensity": 1, 
+        "Green": 15, 
+        "Red": 6
+      }, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "emerald_lightstone", 
+      "walkable": false, 
+      "tileID": "emerald_lightstone", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "dropQuantityMin": 1, 
+      "hardness": -1
+    }, 
     {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "ruby_lightstone",
-      "hardness": -1,
-      "lightOpacity": 1,
       "lightColor": {
-        "Red": 15,
-        "Green": 4,
-        "Blue": 6,
-        "Intensity": 1
+        "Blue": 6, 
+        "Intensity": 1, 
+        "Green": 4, 
+        "Red": 15
+      }, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "ruby_lightstone", 
+      "walkable": false, 
+      "tileID": "ruby_lightstone", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "dropQuantityMin": 1, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "log", 
+      "groundPriority": 100, 
+      "walkable": false, 
+      "tileID": "g_plank_1", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "log", 
+      "groundPriority": 100, 
+      "walkable": false, 
+      "tileID": "g_plank_2", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "groundPriority": 90, 
+      "walkable": false, 
+      "tileID": "g_white_carpet", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "groundPriority": 90, 
+      "walkable": false, 
+      "tileID": "g_gray_carpet", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "groundPriority": 90, 
+      "walkable": false, 
+      "tileID": "g_black_carpet", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "groundPriority": 90, 
+      "walkable": false, 
+      "tileID": "g_blue_carpet", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "groundPriority": 90, 
+      "walkable": false, 
+      "tileID": "g_lightBlue_carpet", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "groundPriority": 90, 
+      "walkable": false, 
+      "tileID": "g_green_carpet", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "groundPriority": 90, 
+      "walkable": false, 
+      "tileID": "g_red_carpet", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "groundPriority": 90, 
+      "walkable": false, 
+      "tileID": "g_orange_carpet", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "groundPriority": 90, 
+      "walkable": false, 
+      "tileID": "g_yellow_carpet", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "groundPriority": 90, 
+      "walkable": false, 
+      "tileID": "g_brown_carpet", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "groundPriority": 35, 
+      "walkable": false, 
+      "tileID": "g_sand", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "groundPriority": 35, 
+      "walkable": false, 
+      "tileID": "g_coast_sand", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "groundPriority": 30, 
+      "walkable": false, 
+      "tileID": "g_mud", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "groundPriority": 5, 
+      "walkable": false, 
+      "tileID": "g_dirt", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "groundPriority": 20, 
+      "walkable": false, 
+      "tileID": "g_swamp_dirt", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "groundPriority": 15, 
+      "walkable": false, 
+      "tileID": "g_grass_1", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "groundPriority": 15, 
+      "walkable": false, 
+      "tileID": "g_grass_2", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "groundPriority": 15, 
+      "walkable": false, 
+      "tileID": "g_grass_3", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "groundPriority": 15, 
+      "walkable": false, 
+      "tileID": "g_grass_4", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "groundPriority": 15, 
+      "walkable": false, 
+      "tileID": "g_plains_grass", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "groundPriority": 15, 
+      "walkable": false, 
+      "tileID": "g_moss", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "groundPriority": 10, 
+      "walkable": false, 
+      "tileID": "g_stone", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "groundPriority": 10, 
+      "walkable": false, 
+      "tileID": "g_cobblestone", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "groundPriority": 10, 
+      "walkable": false, 
+      "tileID": "g_cobblestone_moss", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "groundPriority": 17, 
+      "walkable": false, 
+      "tileID": "g_snow", 
+      "lightOpacity": 4, 
+      "minPickaxePower": 0, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 0, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "groundPriority": 5, 
+      "walkable": false, 
+      "tileID": "g_pine_flooring_planks", 
+      "lightOpacity": 4, 
+      "minPickaxePower": -1, 
+      "hardness": -1
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "log", 
+      "groundPriority": 0, 
+      "walkable": false, 
+      "tileID": "wooden_chair_left", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 20
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "log", 
+      "groundPriority": 0, 
+      "walkable": false, 
+      "tileID": "wooden_chair_right", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 20
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "log", 
+      "groundPriority": 0, 
+      "walkable": false, 
+      "tileID": "wooden_chair_up", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 20
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "log", 
+      "groundPriority": 0, 
+      "walkable": false, 
+      "tileID": "wooden_chair_down", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 20
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "log", 
+      "groundPriority": 0, 
+      "walkable": false, 
+      "tileID": "wooden_table", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 20
+    }, 
+    {
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "log", 
+      "groundPriority": 0, 
+      "walkable": false, 
+      "tileID": "red_bed", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 15, 
+      "size": {
+        "y": 2, 
+        "x": 1
       }
-    },
+    }, 
     {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "g_plank_1",
-      "hardness": -1,
-      "lightOpacity": 4,
-      "groundPriority": 100
-    },
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "log", 
+      "groundPriority": 0, 
+      "walkable": false, 
+      "tileID": "blue_bed", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 15, 
+      "size": {
+        "y": 2, 
+        "x": 1
+      }
+    }, 
     {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "g_plank_2",
-      "hardness": -1,
-      "lightOpacity": 4,
-      "groundPriority": 100
-    },
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "log", 
+      "groundPriority": 0, 
+      "walkable": false, 
+      "tileID": "green_bed", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 15, 
+      "size": {
+        "y": 2, 
+        "x": 1
+      }
+    }, 
     {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "g_white_carpet",
-      "hardness": -1,
-      "lightOpacity": 4,
+      "dropQuantityMin": 1, 
+      "dropQuantityMax": 1, 
+      "dropItemID": "log", 
+      "groundPriority": 0, 
+      "walkable": false, 
+      "tileID": "yellow_bed", 
+      "lightOpacity": 1, 
+      "minPickaxePower": 0, 
+      "hardness": 15, 
+      "size": {
+        "y": 2, 
+        "x": 1
+      }
+    }, 
+    {
+      "walkable": true, 
+      "tileID": "cobweb", 
+      "lightOpacity": 1, 
+      "dropItemID": "cobweb", 
+      "minPickaxePower": 0, 
+      "dropQuantityMin": 1, 
+      "hardness": 1, 
+      "dropQuantityMax": 1
+    }, 
+    {
+      "walkable": false, 
+      "tileID": "cherryblossom_tree", 
+      "lightOpacity": 1, 
+      "dropItemID": "log", 
+      "minPickaxePower": 0, 
+      "dropQuantityMin": 4, 
+      "hardness": 10, 
+      "dropQuantityMax": 8
+    }, 
+    {
+      "walkable": false, 
+      "tileID": "pine_wall", 
+      "lightOpacity": 4, 
+      "dropItemID": "log", 
+      "minPickaxePower": 0, 
+      "dropQuantityMin": 1, 
+      "hardness": 5, 
+      "dropQuantityMax": 1
+    }, 
+    {
+      "walkable": false, 
+      "tileID": "training_dummy", 
+      "lightOpacity": 1, 
+      "dropItemID": "log", 
+      "minPickaxePower": 0, 
+      "dropQuantityMin": 1, 
+      "hardness": 10, 
+      "dropQuantityMax": 1
+    }, 
+    {
+      "walkable": false, 
+      "tileID": "crafting_table", 
+      "lightOpacity": 1, 
+      "dropItemID": "log", 
+      "minPickaxePower": 0, 
+      "dropQuantityMin": 1, 
+      "hardness": 6, 
+      "dropQuantityMax": 1
+    }, 
+    {
+      "walkable": false, 
+      "tileID": "multi_tile_part", 
+      "lightOpacity": 1, 
+      "dropItemID": "none", 
+      "minPickaxePower": -1, 
+      "dropQuantityMin": 0, 
+      "hardness": -1, 
+      "dropQuantityMax": 0
+    }, 
+    {
+      "walkable": true, 
+      "tileID": "crack_1", 
+      "lightOpacity": 1, 
+      "dropItemID": "none", 
+      "minPickaxePower": -1, 
+      "dropQuantityMin": 0, 
+      "hardness": -1, 
+      "dropQuantityMax": 0
+    }, 
+    {
+      "walkable": true, 
+      "tileID": "crack_2", 
+      "lightOpacity": 1, 
+      "dropItemID": "none", 
+      "minPickaxePower": -1, 
+      "dropQuantityMin": 0, 
+      "hardness": -1, 
+      "dropQuantityMax": 0
+    }, 
+    {
+      "walkable": true, 
+      "tileID": "crack_3", 
+      "lightOpacity": 1, 
+      "dropItemID": "none", 
+      "minPickaxePower": -1, 
+      "dropQuantityMin": 0, 
+      "hardness": -1, 
+      "dropQuantityMax": 0
+    }, 
+    {
+      "walkable": true, 
+      "tileID": "crack_4", 
+      "lightOpacity": 1, 
+      "dropItemID": "none", 
+      "minPickaxePower": -1, 
+      "dropQuantityMin": 0, 
+      "hardness": -1, 
+      "dropQuantityMax": 0
+    }, 
+    {
+      "walkable": true, 
+      "tileID": "crack_5", 
+      "lightOpacity": 1, 
+      "dropItemID": "none", 
+      "minPickaxePower": -1, 
+      "dropQuantityMin": 0, 
+      "hardness": -1, 
+      "dropQuantityMax": 0
+    }, 
+    {
+      "walkable": true, 
+      "tileID": "crack_6", 
+      "lightOpacity": 1, 
+      "dropItemID": "none", 
+      "minPickaxePower": -1, 
+      "dropQuantityMin": 0, 
+      "hardness": -1, 
+      "dropQuantityMax": 0
+    }, 
+    {
+      "walkable": false, 
+      "tileID": "g_onyx_floor", 
+      "lightOpacity": 4, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "minPickaxePower": 0, 
+      "dropQuantityMin": 0, 
+      "hardness": -1, 
       "groundPriority": 90
-    },
+    }, 
     {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "g_gray_carpet",
-      "hardness": -1,
-      "lightOpacity": 4,
+      "walkable": false, 
+      "tileID": "g_morganite_floor", 
+      "lightOpacity": 4, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "minPickaxePower": 0, 
+      "dropQuantityMin": 0, 
+      "hardness": -1, 
       "groundPriority": 90
-    },
+    }, 
     {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "g_black_carpet",
-      "hardness": -1,
-      "lightOpacity": 4,
+      "walkable": false, 
+      "tileID": "g_amethyst_floor", 
+      "lightOpacity": 4, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "minPickaxePower": 0, 
+      "dropQuantityMin": 0, 
+      "hardness": -1, 
       "groundPriority": 90
-    },
+    }, 
     {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "g_blue_carpet",
-      "hardness": -1,
-      "lightOpacity": 4,
+      "walkable": false, 
+      "tileID": "g_spessartitegarnet_floor", 
+      "lightOpacity": 4, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "minPickaxePower": 0, 
+      "dropQuantityMin": 0, 
+      "hardness": -1, 
       "groundPriority": 90
-    },
+    }, 
     {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "g_lightBlue_carpet",
-      "hardness": -1,
-      "lightOpacity": 4,
+      "walkable": false, 
+      "tileID": "g_aquamarine_floor", 
+      "lightOpacity": 4, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "minPickaxePower": 0, 
+      "dropQuantityMin": 0, 
+      "hardness": -1, 
       "groundPriority": 90
-    },
+    }, 
     {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "g_green_carpet",
-      "hardness": -1,
-      "lightOpacity": 4,
+      "walkable": false, 
+      "tileID": "g_topaz_floor", 
+      "lightOpacity": 4, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "minPickaxePower": 0, 
+      "dropQuantityMin": 0, 
+      "hardness": -1, 
       "groundPriority": 90
-    },
+    }, 
     {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "g_red_carpet",
-      "hardness": -1,
-      "lightOpacity": 4,
+      "walkable": false, 
+      "tileID": "g_sapphire_floor", 
+      "lightOpacity": 4, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "minPickaxePower": 0, 
+      "dropQuantityMin": 0, 
+      "hardness": -1, 
       "groundPriority": 90
-    },
+    }, 
     {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "g_orange_carpet",
-      "hardness": -1,
-      "lightOpacity": 4,
+      "walkable": false, 
+      "tileID": "g_emerald_floor", 
+      "lightOpacity": 4, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "minPickaxePower": 0, 
+      "dropQuantityMin": 0, 
+      "hardness": -1, 
       "groundPriority": 90
-    },
+    }, 
     {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "g_yellow_carpet",
-      "hardness": -1,
-      "lightOpacity": 4,
+      "walkable": false, 
+      "tileID": "g_ruby_floor", 
+      "lightOpacity": 4, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "minPickaxePower": 0, 
+      "dropQuantityMin": 0, 
+      "hardness": -1, 
       "groundPriority": 90
-    },
+    }, 
     {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "g_brown_carpet",
-      "hardness": -1,
-      "lightOpacity": 4,
+      "walkable": false, 
+      "tileID": "g_diamond_floor", 
+      "lightOpacity": 4, 
+      "dropQuantityMax": 0, 
+      "dropItemID": "none", 
+      "minPickaxePower": 0, 
+      "dropQuantityMin": 0, 
+      "hardness": -1, 
       "groundPriority": 90
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "g_sand",
-      "hardness": -1,
-      "lightOpacity": 4,
-      "groundPriority": 35
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "g_coast_sand",
-      "hardness": -1,
-      "lightOpacity": 4,
-      "groundPriority": 35
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "g_mud",
-      "hardness": -1,
-      "lightOpacity": 4,
-      "groundPriority": 30
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "g_dirt",
-      "hardness": -1,
-      "lightOpacity": 4,
-      "groundPriority": 20
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "g_swamp_dirt",
-      "hardness": -1,
-      "lightOpacity": 4,
-      "groundPriority": 20
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "g_grass_1",
-      "hardness": -1,
-      "lightOpacity": 4,
-      "groundPriority": 10
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "g_grass_2",
-      "hardness": -1,
-      "lightOpacity": 4,
-      "groundPriority": 10
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "g_grass_3",
-      "hardness": -1,
-      "lightOpacity": 4,
-      "groundPriority": 10
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "g_grass_4",
-      "hardness": -1,
-      "lightOpacity": 4,
-      "groundPriority": 10
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "g_plains_grass",
-      "hardness": -1,
-      "lightOpacity": 4,
-      "groundPriority": 10
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "g_moss",
-      "hardness": -1,
-      "lightOpacity": 4,
-      "groundPriority": 10
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "g_stone",
-      "hardness": -1,
-      "lightOpacity": 4,
-      "groundPriority": 10
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "g_cobblestone",
-      "hardness": -1,
-      "lightOpacity": 4,
-      "groundPriority": 10
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "g_cobblestone_moss",
-      "hardness": -1,
-      "lightOpacity": 4,
-      "groundPriority": 10
-    },
-    {
-      "walkable": false,
-      "minPickaxePower": 0,
-      "tileID": "g_snow",
-      "hardness": -1,
-      "lightOpacity": 4,
-      "groundPriority": 10
     }
   ]
 }

@@ -339,6 +339,9 @@ SCRIPT = '''  <script id="mob-data" type="application/json">''' + json_blob + ''
       combatHtml += stat('Attack Speed', fmt(c.AttackSpeed) + 'x', '');
       combatHtml += stat('Attack Range', fmt(c.AttackRange), '');
       combatHtml += stat('Move Speed', fmt(c.MoveSpeed) + 'x', 'yellow');
+      if (mv && mv.MoveType) {
+        combatHtml += stat('Move Type', mv.MoveType, 'yellow');
+      }
       if (c.FlightSpeedMultiplier && c.FlightSpeedMultiplier !== 1.0) {
         combatHtml += stat('Flight Speed', fmt(c.FlightSpeedMultiplier) + 'x', 'yellow');
       }

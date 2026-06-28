@@ -531,9 +531,38 @@
         font-size: 0.8rem;
       }
 
-      .pickaxe-link .pickaxe-name {
+      .pickaxe-link .pickaxe-name,
+      .drop-item-link .drop-item-name {
         display: none;
       }
+    }
+
+    .drop-item-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      color: var(--wiki-text);
+      padding: 2px 4px;
+      border-radius: 4px;
+      transition: background .15s;
+    }
+
+    .drop-item-link:hover {
+      background: var(--wiki-card-hover-bg);
+      text-decoration: underline;
+    }
+
+    .drop-item-link img {
+      width: 32px;
+      height: 32px;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+    }
+
+    .drop-item-link .drop-item-name {
+      font-size: 0.85em;
+      font-weight: 500;
     }
   </style>
 <script src="wiki-data.js"></script>
@@ -609,12 +638,13 @@
     <a href="../terms-of-service.html">Terms of Service</a> |
     <a href="../delete-account.html">Delete Account</a>
   </footer>
-  <script src="icon_map.js?v=1782537290"></script>
+  <script src="icon_map.js?v=1782661122"></script>
 
   <script>
     // ── Pickaxes sorted by MiningPower (ascending) ───────────────────────────────
     // Will be populated from item_configs.json
     let PICKAXES = [];
+    let ITEM_MAP = {};
 
     // ── Helpers ──────────────────────────────────────────────────────────────────
     function tileDisplayName(tileID) {
@@ -643,6 +673,29 @@
         return '<span class="val-dash">–</span>';
       }
       return val;
+    }
+
+    function buildDropItemCell(dropItemID, itemMap) {
+      if (!dropItemID || dropItemID === 'none' || dropItemID === 'None') {
+        return '<span class="none-label">None</span>';
+      }
+      const item = itemMap[dropItemID.toLowerCase()];
+      const name = item ? item.Name : tileDisplayName(dropItemID);
+      const url = iconUrl(item ? item.ItemID : dropItemID);
+      return `<a class="drop-item-link" href="item.html?id=${encodeURIComponent(item ? item.ItemID : dropItemID)}" title="${name}">
+        <img src="${url}" alt="${name}" onerror="this.style.display='none'" />
+        <span class="drop-item-name">${name}</span>
+      </a>`;
+    }
+
+    function fmtQuantity(min, max) {
+      if (min === 0 && max === 0) {
+        return '<span class="val-dash">–</span>';
+      }
+      if (min === max) {
+        return min;
+      }
+      return `${min}–${max}`;
     }
 
     // ── Sort state ───────────────────────────────────────────────────────────────
@@ -706,6 +759,18 @@
             vb = vb === undefined ? 999 : vb.power;
             return sortAsc ? va - vb : vb - va;
           }
+          if (sortCol === 'dropItemID') {
+            const itemA = ITEM_MAP[a.dropItemID.toLowerCase()];
+            const itemB = ITEM_MAP[b.dropItemID.toLowerCase()];
+            const nameA = a.dropItemID === 'none' ? 'zzz' : (itemA ? itemA.Name : tileDisplayName(a.dropItemID)).toLowerCase();
+            const nameB = b.dropItemID === 'none' ? 'zzz' : (itemB ? itemB.Name : tileDisplayName(b.dropItemID)).toLowerCase();
+            return sortAsc ? nameA.localeCompare(nameB) : nameB.localeCompare(nameA);
+          }
+          if (sortCol === 'dropQuantity') {
+            const va = a.dropQuantityMax * 1000 + a.dropQuantityMin;
+            const vb = b.dropQuantityMax * 1000 + b.dropQuantityMin;
+            return sortAsc ? va - vb : vb - va;
+          }
           if (sortCol === 'walkable') {
             va = va ? 1 : 0;
             vb = vb ? 1 : 0;
@@ -731,6 +796,8 @@
         tr.dataset.name = row.name.toLowerCase();
 
         const pickaxeHtml = buildPickaxeCell(row.pickaxe);
+        const dropItemHtml = buildDropItemCell(row.dropItemID, ITEM_MAP);
+        const dropQtyHtml = fmtQuantity(row.dropQuantityMin, row.dropQuantityMax);
         const walkableHtml = row.walkable 
           ? `<i class="fas fa-check" style="color: #2ec4b6; font-size: 1.1em;" title="Walkable"></i>` 
           : `<span class="val-dash">–</span>`;
@@ -753,6 +820,8 @@
           <td>${fmt(row.hardness)}</td>
           <td>${fmt(row.minPickaxePower)}</td>
           <td>${pickaxeHtml}</td>
+          <td>${dropItemHtml}</td>
+          <td>${dropQtyHtml}</td>
           <td>${walkableHtml}</td>
           <td>${opacityHtml}</td>
           <td>${lightHtml}</td>
@@ -798,6 +867,14 @@
       const tiles = tileData.tileProperties || [];
       const configs = itemData.ItemConfigs || itemData;
 
+      // Build ITEM_MAP
+      ITEM_MAP = {};
+      configs.forEach(c => {
+        if (c.ItemID) {
+          ITEM_MAP[c.ItemID.toLowerCase()] = c;
+        }
+      });
+
       // Build pickaxe list from item configs
       PICKAXES = configs
         .filter(c => c.ItemType === 'Pickaxe' && c.PickaxeConfig)
@@ -818,6 +895,9 @@
           hardness: t.hardness,
           minPickaxePower: t.minPickaxePower,
           pickaxe: findRequiredPickaxe(t.minPickaxePower),
+          dropItemID: t.dropItemID || 'none',
+          dropQuantityMin: t.dropQuantityMin !== undefined ? t.dropQuantityMin : 0,
+          dropQuantityMax: t.dropQuantityMax !== undefined ? t.dropQuantityMax : 0,
           walkable: t.walkable,
           lightOpacity: t.lightOpacity,
           lightColor: t.lightColor,
@@ -846,6 +926,8 @@
                 <th data-col="hardness" onclick="sortTable('hardness')">Hardness <span class="sort-icon">⇅</span></th>
                 <th data-col="minPickaxePower" onclick="sortTable('minPickaxePower')">Min Pickaxe Power <span class="sort-icon">⇅</span></th>
                 <th data-col="pickaxe" onclick="sortTable('pickaxe')">Required Pickaxe <span class="sort-icon">⇅</span></th>
+                <th data-col="dropItemID" onclick="sortTable('dropItemID')">Drop Item <span class="sort-icon">⇅</span></th>
+                <th data-col="dropQuantity" onclick="sortTable('dropQuantity')">Drop Qty <span class="sort-icon">⇅</span></th>
                 <th data-col="walkable" onclick="sortTable('walkable')">Walkable <span class="sort-icon">⇅</span></th>
                 <th data-col="lightOpacity" onclick="sortTable('lightOpacity')">Opacity <span class="sort-icon">⇅</span></th>
                 <th data-col="lightColor" onclick="sortTable('lightColor')">Light <span class="sort-icon">⇅</span></th>

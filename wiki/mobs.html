@@ -950,7 +950,7 @@
               <th onclick="sortBy('as')" id="th-as">Attack Speed</th>
               <th onclick="sortBy('ar')" id="th-ar">Attack Range</th>
               <th onclick="sortBy('ms')" id="th-ms">Move Speed</th>
-
+              <th onclick="sortBy('mt')" id="th-mt">Move Type</th>
             </tr>
           </thead>
           <tbody id="mobGrid">
@@ -1002,7 +1002,7 @@
     }
 
     function updateSortHeaders() {
-      var keys = ['name', 'type', 'hp', 'dmg', 'as', 'ar', 'ms', 'crit'];
+      var keys = ['name', 'type', 'hp', 'dmg', 'as', 'ar', 'ms', 'mt'];
       keys.forEach(function (k) {
         var th = document.getElementById('th-' + k);
         if (!th) return;
@@ -1019,7 +1019,7 @@
       var typeTag = hostile
         ? '<span class="tag-hostile">TL</span>'
         : '<span class="tag-neutral">TN</span>';
-      var c = m.CombatConfig, h = m.HealthConfig;
+      var c = m.CombatConfig, h = m.HealthConfig, mv = m.MovementConfig || {};
       var ed = WikiAdmin.isAdmin() ? ' data-mob="' + m.MobID + '"' : '';
       return [
         '<tr class="' + rowCls + '"' + (ed ? '' : ' onclick="location.href=\'mob.html?id=' + m.MobID + '\'"') + '>',
@@ -1035,6 +1035,7 @@
         '<td' + (ed ? ' data-field="AttackSpeed"' + ed : '') + '>' + fmt(c.AttackSpeed) + 'x</td>',
         '<td' + (ed ? ' data-field="AttackRange"' + ed : '') + '>' + fmt(c.AttackRange) + '</td>',
         '<td' + (ed ? ' data-field="MoveSpeed"' + ed : '') + '>' + fmt(c.MoveSpeed) + 'x</td>',
+        '<td>' + (mv.MoveType || '—') + '</td>',
         '</tr>'
       ].join('');
     }
@@ -1094,7 +1095,10 @@
           case 'as': return dir * (a.CombatConfig.AttackSpeed - b.CombatConfig.AttackSpeed);
           case 'ar': return dir * (a.CombatConfig.AttackRange - b.CombatConfig.AttackRange);
           case 'ms': return dir * (a.CombatConfig.MoveSpeed - b.CombatConfig.MoveSpeed);
-
+          case 'mt':
+            var mtA = (a.MovementConfig && a.MovementConfig.MoveType) || '';
+            var mtB = (b.MovementConfig && b.MovementConfig.MoveType) || '';
+            return dir * mtA.localeCompare(mtB);
           case 'type': return dir * (a.AIConfig.IsHostileToPlayer === b.AIConfig.IsHostileToPlayer ? 0 : a.AIConfig.IsHostileToPlayer ? -1 : 1);
           default: return dir * a.MobName.localeCompare(b.MobName);
         }
