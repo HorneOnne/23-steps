@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Block Builder - Official Game Page &amp; Privacy Policy | Pink Hornet (23-Steps)</title>
+
+    <link rel="icon" type="image/png" href="icon2.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="site-theme.css" />
+    <script src="site-theme.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        .game-detail {
+            max-width: 960px;
+            margin: 40px auto;
+            padding: 28px;
+            background-color: var(--site-panel-bg);
+            border: 1px solid var(--site-panel-border);
+            border-radius: 10px;
+            color: var(--site-text-muted);
+            box-shadow: var(--site-panel-shadow);
+        }
+
+        .game-detail h2 {
+            color: var(--site-accent);
+            font-size: 1.8em;
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
+        .game-detail h3 {
+            color: var(--site-accent);
+            margin-top: 24px;
+            margin-bottom: 10px;
+        }
+
+        .hero-banner {
+            width: 100%;
+            max-height: 460px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid var(--site-panel-border);
+        }
+
+        .game-detail p {
+            font-size: 0.95em;
+            line-height: 1.65;
+            margin-bottom: 1em;
+        }
+
+        .quick-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: var(--site-btn-bg);
+            color: var(--site-btn-text);
+            padding: 10px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.92em;
+            transition: background-color 0.2s ease;
+        }
+
+        .action-btn:hover {
+            background-color: var(--site-btn-hover);
+        }
+
+        .google-play-badge img {
+            height: 44px;
+            width: auto;
+            vertical-align: middle;
+            transition: transform 0.2s ease;
+        }
+
+        .google-play-badge img:hover {
+            transform: scale(1.04);
+        }
+
+        .feature-box {
+            background-color: var(--site-accent-bg, rgba(255, 255, 255, 0.05));
+            border: 1px solid var(--site-accent-border, var(--site-panel-border));
+            border-radius: 8px;
+            padding: 18px 22px;
+            margin: 20px 0;
+        }
+
+        .feature-box ul {
+            margin: 8px 0 0;
+            padding-left: 22px;
+            line-height: 1.75;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 1px solid var(--site-panel-border);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 14px;
+            margin: 20px 0 30px;
+        }
+
+        .screenshot-grid img {
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid var(--site-panel-border);
+            object-fit: cover;
+        }
+
+        .policy-section {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid var(--site-panel-border);
+        }
+
+        .entity-box {
+            background-color: var(--site-accent-bg, rgba(255, 255, 255, 0.05));
+            border-left: 4px solid var(--site-accent);
+            padding: 16px 20px;
+            border-radius: 6px;
+            margin: 18px 0;
+        }
+
+        .entity-box p {
+            margin: 6px 0;
+        }
+
+        .policy-section ul {
+            line-height: 1.7;
+            padding-left: 22px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 24px;
+            background-color: var(--site-btn-bg);
+            color: var(--site-btn-text);
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            background-color: var(--site-btn-hover);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>
+            <a href="index.html">
+                <img src="images/logo.png" alt="23-Steps" class="logo" />
+                <span class="sr-only">23-Steps (Pink Hornet)</span>
+            </a>
+        </h1>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="games.html" class="active">GAMES</a>
+            <a href="wiki/index.html">WIKI</a>
+            <button class="theme-toggle" title="Toggle light/dark mode" aria-label="Toggle theme">
+                <i class="fas fa-sun icon-sun"></i>
+                <i class="fas fa-moon icon-moon"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <div class="game-detail">
+            <h2><i class="fas fa-cubes"></i> Block Builder</h2>
+            <img src="images/block-builder.png" alt="Block Builder Banner" class="hero-banner" />
+
+            <div class="quick-links">
+                <a href="https://play.google.com/store/apps/details?id=com.TwentyThreeSteps.BlockBuilder"
+                    target="_blank" rel="noopener" class="google-play-badge">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                        alt="Get Block Builder on Google Play" />
+                </a>
+                <a href="#privacy-policy" class="action-btn">
+                    <i class="fas fa-user-shield"></i> Block Builder Privacy Policy
+                </a>
+                <a href="#account-deletion" class="action-btn">
+                    <i class="fas fa-user-slash"></i> Account &amp; Data Deletion
+                </a>
+            </div>
+
+            <p><strong>Block Builder</strong> (Package ID: <code>com.TwentyThreeSteps.BlockBuilder</code>), developed and published by <strong>Pink Hornet</strong> (operating as <strong>23-Steps</strong> / <strong>TwentyThreeSteps</strong>), is a 3D voxel building puzzle and competitive ghost-racing game for Android.</p>
+
+            <p>Follow the 3D blueprint layer by layer, test your spatial recall in Memory Mode, collect 18 animated voxel companion pets, customize your floating Skyblock island across 11 biomes, and race head-to-head against real player ghosts in Ranked 1v1 matches!</p>
+
+            <div class="feature-box">
+                <h3 style="margin-top: 0;"><i class="fas fa-star"></i> Key Features</h3>
+                <ul>
+                    <li><strong>1,000+ Handcrafted 3D Voxel Levels:</strong> Progress from cozy cottages and red mushrooms to grand castles, pirate ships, lighthouses, and floating temples.</li>
+                    <li><strong>18 Collectible Animated Voxel Pets:</strong> Hatch and equip Dragon, Panda, Fox, Penguin, Frog, Bee, Axolotl, Capybara, Unicorn, Phoenix, Shiba, Turtle, Cat, Dog, Bunny, Chicken, Pig, and Sheep companions that roam your island!</li>
+                    <li><strong>11 Custom Skyblock Islands &amp; 7 Dynamic Skies:</strong> Customize your floating island with Classic Grass, Sakura Blossom, Autumn Maple, Desert Oasis, Snowy Taiga, Volcanic Obsidian, Amethyst Crystal, Candyland, Nether Fortress, Mushroom Mycelium, and Deep Ocean themes.</li>
+                    <li><strong>Guided &amp; Memory Puzzle Modes:</strong> Build step-by-step with layer slices or memorize the 3D structure before recreating it from scratch.</li>
+                    <li><strong>Live 1v1 Ranked Ghost Races:</strong> Compete against real players' recorded ghost builds in real time, climb ELO tiers, and set new world records.</li>
+                </ul>
+            </div>
+
+            <h3><i class="fas fa-play-circle"></i> Official Gameplay Trailer</h3>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/yUAg634iors"
+                    title="Block Builder - Official Gameplay Trailer"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+
+            <h3><i class="fas fa-images"></i> Screenshots</h3>
+            <div class="screenshot-grid">
+                <img src="images/block-builder-1.png" alt="Block Builder - Skyblock &amp; Pets" />
+                <img src="images/block-builder-2.png" alt="Block Builder - Guided 3D Voxel Building" />
+                <img src="images/block-builder-3.png" alt="Block Builder - 18 Collectible Voxel Pets" />
+                <img src="images/block-builder-4.png" alt="Block Builder - Live 1v1 Ghost Race" />
+            </div>
+
+            <!-- PRIVACY POLICY SECTION FOR BLOCK BUILDER -->
+            <section id="privacy-policy" class="policy-section">
+                <h2><i class="fas fa-shield-alt"></i> Privacy Policy — Block Builder</h2>
+                <p><strong>Effective Date:</strong> January 1, 2026 &nbsp;|&nbsp; <strong>Last Updated:</strong> October 31, 2026</p>
+
+                <div class="entity-box">
+                    <p><strong>Application Name:</strong> Block Builder (Google Play Package ID: <code>com.TwentyThreeSteps.BlockBuilder</code>)</p>
+                    <p><strong>Developer Name:</strong> Pink Hornet / 23-Steps (TwentyThreeSteps)</p>
+                    <p><strong>Contact Email:</strong> <a href="mailto:ngcognpal@gmail.com">ngcognpal@gmail.com</a></p>
+                </div>
+
+                <p>This Privacy Policy governs the collection, use, storage, and disclosure of user data by <strong>Pink Hornet</strong> (operating as <strong>23-Steps</strong> / <strong>TwentyThreeSteps</strong>, referred to as "Pink Hornet", "23-Steps", "we", "us", or "our") when you install, access, or play the mobile application <strong>Block Builder</strong> (<code>com.TwentyThreeSteps.BlockBuilder</code>) on Google Play.</p>
+
+                <h3>1. Information We Collect in Block Builder</h3>
+                <ul>
+                    <li><strong>Device &amp; Diagnostic Information:</strong> Device model, Android OS version, screen resolution, language/country setting, crash logs, and performance diagnostics used to maintain game stability and fix bugs.</li>
+                    <li><strong>Gameplay &amp; Cloud Progress Data:</strong> Completed level records, best build times, unlocked voxel pets, unlocked Skyblock island themes, block palettes, coin and shard balances, ELO rating, and recorded ghost placement sequences for asynchronous 1v1 Ghost Races.</li>
+                    <li><strong>Player &amp; Account Identifiers:</strong> Anonymous PlayFab Player ID, in-game display name/nickname, and optional Google Play Games Services ID (if linked).</li>
+                    <li><strong>In-App Purchase Data:</strong> When you purchase Shard packs (<code>gems_100</code>, <code>gems_550</code>, <code>gems_1200</code>, <code>gems_2600</code>) or <code>remove_ads</code> in <strong>Block Builder</strong> via Google Play Billing, we process the purchase token and receipt ID via Unity IAP and PlayFab solely to verify and grant your purchased items. We never receive or store your credit card or payment details.</li>
+                    <li><strong>Advertising Identifiers:</strong> When ads are shown via Google AdMob or Unity Ads, the Google Advertising ID (AAID) and coarse ad interaction metrics may be collected by those ad providers for ad serving, frequency capping, and fraud prevention.</li>
+                </ul>
+
+                <h3>2. How We Use Your Information</h3>
+                <ul>
+                    <li>To operate <strong>Block Builder</strong> (<code>com.TwentyThreeSteps.BlockBuilder</code>), synchronize your progress and unlocked pets/islands, and run 1v1 Ghost Races and leaderboards.</li>
+                    <li>To validate Google Play Billing in-app purchase receipts and deliver purchased Shards or ad-removal entitlements.</li>
+                    <li>To display advertisements in the free version of the game (unless disabled via the "Remove Ads" purchase).</li>
+                    <li>To monitor stability, resolve technical issues, and prevent leaderboard cheating or unauthorized transactions.</li>
+                </ul>
+
+                <h3>3. Third-Party Services &amp; SDKs Used by Block Builder</h3>
+                <p><strong>Block Builder</strong> does not sell your personal information. The app integrates the following third-party service providers, each governed by its own privacy policy:</p>
+                <ul>
+                    <li><strong>Google Play Services &amp; Google Play Billing:</strong> App distribution and in-app billing (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>).</li>
+                    <li><strong>Microsoft Azure PlayFab:</strong> Anonymous player authentication, leaderboards, ghost race storage, and receipt validation (<a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener">Microsoft Privacy Statement</a>).</li>
+                    <li><strong>Google AdMob:</strong> Banner, interstitial, and rewarded ad delivery (<a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google Ads Policy</a>).</li>
+                    <li><strong>Unity Engine, Unity IAP &amp; Unity Ads:</strong> Game engine runtime, purchasing integration, and ad mediation (<a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">Unity Privacy Policy</a>).</li>
+                </ul>
+
+                <h3>4. Data Security &amp; Retention</h3>
+                <p>All network traffic between <strong>Block Builder</strong> and our backend providers (Google Play and Microsoft PlayFab) is encrypted in transit via HTTPS/TLS. We retain anonymous gameplay records and account data only as long as necessary to provide the game service or until you request deletion.</p>
+
+                <h3 id="account-deletion">5. Your Privacy Rights &amp; Account / Data Deletion for Block Builder</h3>
+                <p>Users of <strong>Block Builder</strong> (<code>com.TwentyThreeSteps.BlockBuilder</code>) may request access to or permanent deletion of their account and all associated cloud data (including PlayFab Player ID, leaderboard entries, ghost race recordings, and saved progress) at any time:</p>
+                <ul>
+                    <li><strong>Via Our Deletion Page:</strong> Visit <a href="delete-account.html">https://23-steps.com/delete-account.html</a> for step-by-step instructions.</li>
+                    <li><strong>Via Direct Email Request:</strong> Send an email to <a href="mailto:ngcognpal@gmail.com">ngcognpal@gmail.com</a> with the subject <code>Account Deletion - Block Builder</code> and your in-game nickname or Player ID. All associated data is permanently deleted within 30 days (typically within 3–5 business days).</li>
+                    <li><strong>Advertising Opt-Out:</strong> You may reset or delete your Google Advertising ID at any time in your Android device settings (<em>Settings &gt; Google &gt; Ads</em>).</li>
+                </ul>
+
+                <h3>6. Children's Privacy</h3>
+                <p><strong>Block Builder</strong> does not knowingly collect personal data from children under 13 years of age. If we discover that personal data from a child under 13 has been inadvertently collected, we will delete it immediately upon notification at <a href="mailto:ngcognpal@gmail.com">ngcognpal@gmail.com</a>.</p>
+
+                <h3>7. Changes to This Policy</h3>
+                <p>We may update this Privacy Policy for <strong>Block Builder</strong> periodically. Updates will be posted on this page (<a href="https://23-steps.com/game-block-builder.html#privacy-policy">https://23-steps.com/game-block-builder.html#privacy-policy</a>) and on our general <a href="privacy-policy.html">Privacy Policy page</a> with a revised "Last Updated" date.</p>
+
+                <h3>8. Contact Us</h3>
+                <p>If you have any questions or requests regarding your privacy, contact us at:</p>
+                <p><strong>Email:</strong> <a href="mailto:ngcognpal@gmail.com">ngcognpal@gmail.com</a></p>
+            </section>
+
+            <a href="games.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Games</a>
+        </div>
+    </main>
+
+    <footer>
+        &copy;2026 23-Steps. All rights reserved |
+        <a href="privacy-policy.html">Privacy Policy</a> |
+        <a href="terms-of-service.html">Terms of Service</a> |
+        <a href="delete-account.html">Delete Account</a>
+    </footer>
+</body>
+
+</html>

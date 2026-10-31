@@ -54,7 +54,8 @@
             color: var(--site-accent);
         }
 
-        .game-info button {
+        .game-info button,
+        .game-info .page-btn {
             margin-top: 10px;
             padding: 8px 16px;
             background-color: var(--site-btn-bg);
@@ -64,9 +65,13 @@
             font-weight: bold;
             cursor: pointer;
             width: fit-content;
+            text-decoration: none;
+            font-size: 0.9em;
+            display: inline-block;
         }
 
-        .game-info button:hover {
+        .game-info button:hover,
+        .game-info .page-btn:hover {
             background-color: var(--site-btn-hover);
         }
 
@@ -152,19 +157,72 @@
 
     <main>
         <div class="game-list">
+            <!-- Block Builder Game -->
+            <div class="game-item">
+                <div class="game-header">
+                    <img src="images/block-builder.png" alt="Block Builder" />
+                    <div class="game-info">
+                        <h2>Block Builder</h2>
+                        <p>Build 1,000+ 3D voxel worlds, collect 18 animated voxel pets, customize 11 Skyblock islands, and race 1v1 against real player ghosts!</p>
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                            <button onclick="toggleDetails(this)">View Details</button>
+                            <a href="game-block-builder.html" class="page-btn"><i class="fas fa-external-link-alt"></i> Game Page &amp; Privacy Policy</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-details">
+                    <div style="margin-bottom: 1em;">
+                        <p style="margin: 0 0 10px;"><strong>Block Builder</strong> (<code>com.TwentyThreeSteps.BlockBuilder</code>) is a <span
+                                style="color: var(--site-accent);">3D voxel building puzzle &amp; competitive ghost-racing game</span>
+                            published by <strong>Pink Hornet (23-Steps)</strong>. Follow the blueprint layer by layer in Guided Mode, test your spatial recall in Memory Mode, and race live 1v1 against recorded player ghosts.</p>
+                    </div>
+
+                    <div
+                        style="background-color: var(--site-accent-bg); border: 1px solid var(--site-accent-border); border-radius: 8px; padding: 15px; margin-bottom: 1em;">
+                        <h3 style="color: var(--site-accent); margin-top: 0; font-size: 1.1em;"><i
+                                class="fas fa-cubes"></i>
+                            Features</h3>
+                        <ul style="padding-left: 20px; margin: 0;">
+                            <li>1,000+ handcrafted 3D voxel levels</li>
+                            <li>18 collectible animated voxel pets (Dragon, Panda, Fox, Penguin, Axolotl &amp; more)</li>
+                            <li>11 custom Skyblock island themes &amp; 7 dynamic skies</li>
+                            <li>Guided Blueprint Mode &amp; Brain-Training Memory Mode</li>
+                            <li>Live 1v1 Ranked Ghost Races &amp; global leaderboards</li>
+                        </ul>
+                    </div>
+
+                    <div style="margin-bottom: 1.2em;">
+                        <strong>Platforms:</strong>
+                        <span
+                            style="background-color: var(--site-tag-bg); color: var(--site-tag-text); padding: 4px 10px; border-radius: 5px; margin-left: 8px;">Android</span>
+                    </div>
+
+                    <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: center;">
+                        <a href="https://play.google.com/store/apps/details?id=com.TwentyThreeSteps.BlockBuilder"
+                            target="_blank" rel="noopener" class="google-play-badge">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                                alt="Get it on Google Play" />
+                        </a>
+                        <a href="game-block-builder.html" class="store-button" style="margin-top: 0;">
+                            <i class="fas fa-shield-alt"></i> Game Page &amp; Privacy Policy
+                        </a>
+                    </div>
+                </div>
+            </div>
+
             <!-- Mine & Dungeon Game -->
             <div class="game-item">
                 <div class="game-header">
                     <img src="images/mine-dungeon.png" alt="Mine & Dungeon" />
                     <div class="game-info">
-                        <h2>Mine & Dungeon</h2>
+                        <h2>Mine &amp; Dungeon</h2>
                         <p>Mine resources and explore dangerous dungeons in this voxel adventure RPG.</p>
                         <button onclick="toggleDetails(this)">View Details</button>
                     </div>
                 </div>
                 <div class="game-details">
                     <div style="margin-bottom: 1em;">
-                        <p style="margin: 0 0 10px;"><strong>Mine & Dungeon</strong> combines <span
+                        <p style="margin: 0 0 10px;"><strong>Mine &amp; Dungeon</strong> combines <span
                                 style="color: var(--site-accent);">mining mechanics with dungeon crawling action</span>.
                             Gather
                             resources by day, fight monsters by night, and craft legendary equipment to survive
@@ -274,7 +332,7 @@
                         <ul style="padding-left: 20px; margin: 0;">
                             <li>Voxel-inspired pixel art</li>
                             <li>Enchanted tool system</li>
-                            <li>Offline earnings & automation</li>
+                            <li>Offline earnings &amp; automation</li>
                             <li>Upgrade system for pickaxes and workers</li>
                             <li>Multiplayer mining events <em>(coming soon)</em></li>
                         </ul>
